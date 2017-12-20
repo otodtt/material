@@ -1,0 +1,219 @@
+.example-headers-align .mat-expansion-panel-header-title, 
+.example-headers-align .mat-expansion-panel-header-description {
+    flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+}
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.example-icon {
+    padding: 0 14px;
+}
+
+/*================================
+    NAVIGATION 
+=================================*/
+$nav-background: rgba(140, 195, 74, 0.25);
+$drop-background: rgb(254, 255, 255);
+$top-link-color: rgb(254, 255, 255);
+$bottom-link-color: rgb(100, 100, 100);
+
+$nav-list-hover: rgb(254, 255, 255);
+$top-link-hover: rgb(17, 200, 0);
+
+.mat-toolbar {
+    height: 70px;
+    background: $nav-background;
+}
+.a-top {
+    color: $top-link-color;
+    font-size: 14px;
+}
+
+.nav-list {
+    float: left;
+    position: relative;
+    .mat-icon-button {
+        color: $top-link-color;
+        padding: inherit;
+    }
+   
+    .nav-dropdown {
+        display: none;
+        position: absolute;
+        top:48px;
+        left: 0;
+        padding: 5px 10px 0;
+        background: $drop-background;
+        border-top: 1px solid rgb(190, 190, 190);
+        .sub-menu {
+            height: 40px;
+            border-bottom: 1px solid rgb(190, 190, 190);
+            .a-bottom {
+                color: $bottom-link-color;
+                font-size: 13px;
+            }
+            .a-bottom:hover {
+                color: $top-link-hover;
+            }
+        }
+        .sub-menu:last-child {
+            border-bottom: none;
+        }
+    }
+}
+.nav-list:hover {
+    background: $nav-list-hover;
+    .a-top {
+        color: $top-link-hover
+    }
+    .mat-icon-button {
+        color: $top-link-hover
+    }
+}
+.nav-list:hover .nav-dropdown {
+    display: block;
+}
+/*================================
+    КРАЙ NAVIGATION 
+=================================*/
+
+
+/*================================
+    HEADER AND LOGO
+=================================*/
+.p-in-header {
+    display: inline;
+    color: rgb(255, 255, 255)
+}
+#aa-header {
+    height: 220px;
+    background-size: cover;
+    padding-bottom: 0 !important;
+    font: 500 20px/32px Roboto,"Helvetica Neue",sans-serif;
+}
+#header-email {
+    width: 100%;
+    border-bottom: 1px solid white;
+    color: white;
+    height: 30px;
+    padding-top: 0  !important;
+    padding-left: 5%;
+    justify-content: left;
+}
+.bredacrumb {
+    padding-top: 10px;
+    max-height: 90px;
+    text-align: center;
+}
+.p-up {
+    font-size: 1.3em
+}
+.p-down {
+    font-size: 0.8em
+}
+/*================================
+    END HEADER AND LOGO
+=================================*/
+
+/*================================
+   RESPONSIVE DESIGN
+=================================*/
+/*-------------------------------
+    Shift NAV BAR SMALL BUTTIN
+ -------------------------------*/
+@media (min-width: 971px) {
+    #navigation-button {
+        display: none;
+    }
+    #aa-header {
+        background-image: url('../../../assets/img/header-bg/header-bg.jpg');
+    }
+}
+@media (max-width: 970px) {
+    #navigation-top {
+        display: none;
+    }
+    #aa-header {
+        background-image: url('../../../assets/img/header-bg/header-bg-955px.jpg');
+    }
+}
+/*-------------------------------
+    END Shift NAV BAR SMALL BUTTIN
+-------------------------------*/
+/* ##Device = Most of the Smartphones Mobiles (Portrait) ##Screen = B/w 320px to 479px*/
+@media (max-width: 320px){
+    #aa-header {
+        background-image: url('../../../assets/img/header-bg/header-bg-320px.jpg');
+    }
+    // .parent {
+    //     position:relative;
+    //     overflow:hidden;
+    // }
+    .small-menu {
+        position:absolute; 
+        width: 95%;
+    }
+    #header-email {
+        font-size: 0.8em;
+    }
+    .logo-span {
+        display: none;
+        font-size: 2em;
+    }
+    .p-in-header {
+        font-size: .9em;
+    }
+    .mat-button.accordion {
+        font-size: 14px;
+    }
+    .small-button-in {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 12px;
+        line-height: 20px;
+        white-space: initial;
+        // word-wrap: break-word;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    #aa-header {
+        background-image: url('../../../assets/img/header-bg/header-bg-320px.jpg');
+    }
+}
+
+/* ##Device = Low Resolution Tablets, Mobiles (Landscape) ##Screen = B/w 481px to 767px*/
+@media (min-width: 481px) and (max-width: 767px) {
+    #aa-header {
+        background-image: url('../../../assets/img/header-bg/header-bg-481px.jpg');
+    }
+}
+
+/* ##Device = Tablets, Ipads (landscape) ##Screen = B/w 768px to 1024px*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    #aa-header {
+        background-image: url('../../../assets/img/header-bg/header-bg-768px.jpg');
+    }
+}
+
+/* ##Device = Tablets, Ipads (portrait) ##Screen = B/w 768px to 1024px*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    #aa-header {
+        background-image: url('../../../assets/img/header-bg/header-bg-768px.jpg');
+    }
+}
+
+/* ##Device = Laptops, Desktops ##Screen = B/w 1025px to 1280px*/
+@media (min-width: 1025px) and (max-width: 1280px) {}
+
+/* ##Device = Desktops ##Screen = 1281px to higher resolution desktops */
+@media (min-width: 1281px) {}
+

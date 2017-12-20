@@ -1,0 +1,47 @@
+<nav>
+    <div class="nav-mobile" >
+        <!-- <a id="nav-toggle" href="#!"><span></span></a> -->
+    </div>
+    <ul class="nav-list">
+        <li *ngFor="let page of pages">
+            <a mat-button routerLink=".">{{page.name | uppercase}}</a>
+            
+            <ul *ngIf="page.subPage !== null" class="nav-dropdown">
+                <div class="test">
+                    <li *ngFor="let psp of page.subPage">
+                        <a mat-button  routerLink=".">{{psp.subName | uppercase}}</a>
+                    </li>
+                </div>
+            </ul>
+            
+        </li>
+    </ul>
+  </nav>
+
+
+
+
+
+<!-- <nav>
+    <span>МЕНЮ</span>
+    <button id="navigation-button" mat-icon-button ><mat-icon>menu</mat-icon></button>
+        
+    <mat-toolbar color="primary">
+            
+            <mat-nav-list id="navigation-top">
+                <mat-list-item *ngFor="let page of pages" class="nav-list">
+                    <a matLine href="..." class="a-top">{{ page.name | uppercase }}</a>
+                    <button mat-icon-button *ngIf="page.subPage !== null">
+                        <mat-icon>expand_more</mat-icon>
+                    </button>
+                    <div *ngIf="page.subPage !== null" class="nav-dropdown">
+                        <mat-list-item class="sub-menu" *ngFor="let sp of page.subPage">
+                            <a class="a-bottom" matLine href="...">{{ sp.subName | uppercase }}</a>
+                        </mat-list-item>
+                    </div>
+                    
+                </mat-list-item>
+            </mat-nav-list>
+            
+    </mat-toolbar>
+</nav> -->
