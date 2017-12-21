@@ -1,13 +1,7 @@
 /*================================
     NAVIGATION TEST
 =================================*/
-$nav-background: rgba(140, 195, 74, 0.25);
-$drop-background: rgb(254, 255, 255);
-$top-link-color: rgb(254, 255, 255);
-$bottom-link-color: rgb(100, 100, 100);
 
-$nav-list-hover: rgb(254, 255, 255);
-$top-link-hover: rgb(17, 200, 0);
 
 
 .example-headers-align .mat-expansion-panel-header-title, 
@@ -33,23 +27,36 @@ $button-height: 45px;
 /*=======================
     For Large navbar
 ========================*/ 
-$link-hover-a: rgb(0, 220, 60);
+$nav-background: rgba(140, 195, 74, 0.25);
+$sub-background: #C5E1A5;
+$drop-background: rgb(254, 255, 255);
+$top-link-color: rgb(254, 255, 255);
+$bottom-link-color: rgb(100, 100, 100);
 
-$nav-background: rgba(255, 255, 255, 0.1);
-$nav-hover-background: rgba(255, 255, 255, 1);
-$link-hover-background: rgba(255, 255, 255, 0.2);
-$nav-bottom-hover: rgb(235, 235, 235);
-
-
-
-$nav-font-color: rgb(255, 255, 255);
-
-
-
-
+$nav-list-hover: rgb(254, 255, 255);
+$top-link-hover: rgb(17, 200, 0);
+$border-color: rgb(11, 110, 0);
 $nav-mat-color: rgb(85, 85, 85);
 
-$link-hover-color: rgb(255, 255, 255);
+
+
+// $link-hover-a: rgb(0, 220, 60);
+
+// $nav-background: rgba(255, 255, 255, 0.1);
+// $nav-hover-background: rgba(255, 255, 255, 1);
+// $link-hover-background: rgba(255, 255, 255, 0.2);
+// $nav-bottom-hover: rgb(235, 235, 235);
+
+
+
+// $nav-font-color: rgb(255, 255, 255);
+
+
+
+
+
+
+// $link-hover-color: rgb(255, 255, 255);
 
 
 // $nav-background-small: rgb(255, 255, 255);
@@ -84,52 +91,87 @@ $link-hover-color: rgb(255, 255, 255);
 //         }
 //     }
 // }
-// nav {
-//     float: right;
-//     ul {
-//         list-style: none;
-//         margin: 0;
-//         padding: 0;
-//         li {
-//             float: left;
-//             position: relative;
-//             a {
-//                 display: block;
-//                 padding: 0 15px;
-//                 line-height: $nav-height;
-//                 font-size: 16px;
-//                 // background: $nav-hover-background;
-//                 color: $nav-font-color;
-//                 text-decoration: none;
-//                 &:hover {
-//                     background: $nav-hover-background;
-//                     color: $link-hover-a;
-//                 }
-//                 // &:not(:only-child):after {
-//                 //     padding-left: 4px;
-//                 //     content: ' ▾';
-//                 // } 
-//             }
-//             ul li {
-//                 min-width: 100%;
-                
-//                 & a {
-//                     padding: 15px;
-//                     line-height: 20px;
-//                     z-index: 1;
-//                     color: $nav-mat-color;
-//                     text-align: left;
-//                     font-size: 14px;
-//                     background: $nav-hover-background;
-//                 }
-//                 & a:hover {
-//                     background: $nav-bottom-hover;
-//                     color: $link-hover-a;
-//                 }
-//             }
-//         }
-//     }
+
+// .link-name {
+//     text-align: right;
 // }
+
+#close-btn {
+    margin: 0;
+    padding: 0;
+    vertical-align: initial;
+}
+nav {
+    // float: right;
+    min-width: 220px;
+    margin: 0 10px;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            // float: left;
+            // position: relative;
+            border-bottom: 1px solid $border-color;
+            padding: 0;
+            // width: 150px;
+            a {
+                // float: left;
+                display: inline-block;
+                padding: 0;
+                padding-left: 15px;
+                // padding: 0;
+                line-height: 50px;
+                font-size: 16px;
+                width: 100%;
+                // background: $nav-hover-background;
+                color: $drop-background;
+                text-decoration: none;
+                text-align: left;
+                
+                // .material-icons {
+                //     text-align: left;
+                // }
+                // .link-name {
+                //     text-align: right;
+                // }
+                &:hover {
+                    background: $drop-background;
+                    color: $top-link-hover;
+                }
+                
+            }
+            
+            ul li {
+                // display: none;
+                min-width: 100%;
+                border-bottom: none;
+                & a {
+                    padding: 15px;
+                    line-height: 10px;
+                    z-index: 1;
+                    color: $nav-mat-color;
+                    text-align: left;
+                    font-size: 14px;
+                    background: $nav-background;
+                    border-bottom: 1px solid $sub-background;
+                }
+                & a:hover {
+                    // background: $nav-bottom-hover;
+                    color: $top-link-hover;
+                }
+            }
+        }
+    }
+}
+.material-icons {
+    float: right;
+    margin-top: 10px;
+}
+.nav-dropdown {
+    padding: 10px 10px !important;
+    background: $sub-background;
+}
 
 
 // .nav-dropdown {
@@ -266,99 +308,7 @@ $link-hover-color: rgb(255, 255, 255);
 //     }
 // }
 
-@media only screen and (max-width: $breakpoint) {
-    .nav-mobile {
-        display: block;
-    }
-    nav {
-        width: 100%;
-        padding: $nav-height 0 15px;
-        ul {
-            display: none;
-            // /*Намаляне на 40% и позициониране в дясно*/
-            // width: 80%;
-            // float: right;
-            width: 45%;
-            right: 0;
-            top: 0;
-            height: 100%;
-            position: fixed;
-            background: rgb(230, 230, 230);
-            overflow-y: auto;
-            animation: open-menu .5s ease-out forwards;
-            li {
-                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-                float: none;
-                a {
-                    background: $link-hover-color;
-                    padding: 15px;
-                    line-height: 20px;
-                    color: $nav-mat-color;
-                    // text-align: left;
-                    text-align: right;
-                    &:not(:only-child):before {
-                        float: left;
-                        font-size: 16px;
-                        content: '+ ';
-                    } 
-                }
-                &:hover {
-                    color: $link-hover-a;
-                    
-                }
-                ul {
-                    margin-bottom: 5px;
-                    margin-top: 5px;
-                }
-                // ul div {
-                //     /*Показване извън менюто*/
-                //     position: absolute;
-                //     left: -85%;
-                //     top: -5px;
-                //     background: white;
-                // }
-                ul li a {
-                    padding: 12px;
-                    padding-left: 30px;
-                    line-height: 15px;
-                    white-space: initial;
-                    margin-top: 5px;
-                    /* Само когато е извън менюто*/
-                    // margin-top: 5px;
-                    // margin: 0;
-                }
-            }
-        }
-    }
-    nav {
-        .nav-dropdown {
-            width: 98%;
-            margin: 0 auto;
-            box-shadow: initial;
-           
-        }
-    }
-    .nav-dropdown {
-        position: static;
-        width: 98%;
-    }
-    .nav-list {
-        background: $nav-font-color;
-        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
-        border: 1px solid rgb(197, 197, 197);
-        border-top: none;
-        border-left: rgb(200, 200, 200);
-        border-right: rgb(200, 200, 200);
-        border-bottom: rgb(200, 200, 200);
-        border-bottom-right-radius: 3px;
-        border-bottom-left-radius: 3px;
-        li {
-            .mat-button {
-                line-height: 10px;
-            }
-        }
-    }
-}
+
 @keyframes open-menu {
     0%{
         transform: translateX(100%);
@@ -379,72 +329,31 @@ $link-hover-color: rgb(255, 255, 255);
         display: block;
     }
 }
-@media screen and (min-width: $breakpoint) {
-    .nav-list {
-        display: block !important;
-    }
-    .navbar-fixed-top {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        margin: 0 auto;
-        background: $nav-font-color !important;
-        transition: all .5s;
-        ul {
-            li {
-                a {
-                    color: $nav-mat-color;
-                }
-            }
-        }
-        .brand {
-            a,
-            a:visited {
-                color: $nav-mat-color;
-            }
-        }
-    }
 
-    nav {
-        float: right;
-        ul {
-            li {
-                a {
-                    &:not(:only-child):after {
-                        padding-left: 4px;
-                        content: ' ▾';
-                    } 
-                }
-            }
-        }
-    }
-}
+// .navigation {
+//     height: $nav-height;
+//     background: $nav-background;
+// }
 
-.navigation {
-    height: $nav-height;
-    background: $nav-background;
-}
-
-.nav-container {
-    max-width: $content-width;
-    margin: 0 auto;
-}
+// .nav-container {
+//     max-width: $content-width;
+//     margin: 0 auto;
+// }
 
 
-.brand {
-    position: absolute;
-    padding-left: 20px;
-    float: left;
-    line-height: $nav-height;
-    text-transform: uppercase;
-    font-size: 1.4em;
-    a,
-    a:visited {
-        color: $nav-font-color;
-        text-decoration: none;
-    }
-}
+// .brand {
+//     position: absolute;
+//     padding-left: 20px;
+//     float: left;
+//     line-height: $nav-height;
+//     text-transform: uppercase;
+//     font-size: 1.4em;
+//     a,
+//     a:visited {
+//         color: $nav-font-color;
+//         text-decoration: none;
+//     }
+// }
 
 
 
@@ -794,22 +703,7 @@ $link-hover-color: rgb(255, 255, 255);
 /*-------------------------------
     Shift NAV BAR SMALL BUTTIN
  -------------------------------*/
-@media (min-width: 971px) {
-    // #navigation-button, #small-menu {
-    //     display: none;
-    // }
-    // #aa-header {
-    //     background-image: url('../../../assets/img/header-bg/header-bg.jpg');
-    // }
-}
-@media (max-width: 970px) {
-    // #navigation-top {
-    //     display: none;
-    // }
-    // #aa-header {
-    //     background-image: url('../../../assets/img/header-bg/header-bg-955px.jpg');
-    // }
-}
+
 /*-------------------------------
     END Shift NAV BAR SMALL BUTTIN
 -------------------------------*/

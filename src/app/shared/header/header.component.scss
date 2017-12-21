@@ -127,6 +127,9 @@ $top-link-hover: rgb(17, 200, 0);
 /*-------------------------------
     Shift NAV BAR SMALL BUTTIN
  -------------------------------*/
+#menu-icon {
+    vertical-align: initial;
+}
 @media (min-width: 971px) {
     #navigation-button {
         display: none;

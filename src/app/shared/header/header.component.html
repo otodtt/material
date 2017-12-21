@@ -9,7 +9,9 @@
             <mat-toolbar-row>
                 <span>MyMaterial</span>
                 <span class="example-spacer"></span>
-                <button id="navigation-button" mat-icon-button (click)="navOpen()"><mat-icon>menu</mat-icon></button>
+                <button id="navigation-button" mat-mini-fab color="primary" (click)="navOpen()">
+                    <mat-icon id="menu-icon">menu</mat-icon>
+                </button>
                 <mat-nav-list id="navigation-top">
                     <mat-list-item *ngFor="let page of pages" class="nav-list">
                         <a matLine href="..." class="a-top">{{ page.name | uppercase }}</a>
