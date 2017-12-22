@@ -4,15 +4,15 @@
 
 
 
-.example-headers-align .mat-expansion-panel-header-title, 
-.example-headers-align .mat-expansion-panel-header-description {
-    flex-basis: 0;
-}
+// .example-headers-align .mat-expansion-panel-header-title, 
+// .example-headers-align .mat-expansion-panel-header-description {
+//     flex-basis: 0;
+// }
 
-.example-headers-align .mat-expansion-panel-header-description {
-    justify-content: space-between;
-    align-items: center;
-}
+// .example-headers-align .mat-expansion-panel-header-description {
+//     justify-content: space-between;
+//     align-items: center;
+// }
 .example-spacer {
     flex: 1 1 auto;
 }
@@ -103,7 +103,8 @@ $nav-mat-color: rgb(85, 85, 85);
 }
 nav {
     // float: right;
-    min-width: 220px;
+    // min-width: 250px;
+    width: 220px;
     margin: 0 10px;
     ul {
         list-style: none;
@@ -146,15 +147,19 @@ nav {
                 // display: none;
                 min-width: 100%;
                 border-bottom: none;
+                // white-space: nowrap;
+                // overflow: hidden; 
+                // text-overflow: ellipsis !important;
                 & a {
                     padding: 15px;
-                    line-height: 10px;
+                    line-height: 15px;
                     z-index: 1;
                     color: $nav-mat-color;
                     text-align: left;
                     font-size: 14px;
                     background: $nav-background;
                     border-bottom: 1px solid $sub-background;
+                    white-space: inherit;
                 }
                 & a:hover {
                     // background: $nav-bottom-hover;

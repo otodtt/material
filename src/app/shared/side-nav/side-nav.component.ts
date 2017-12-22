@@ -23,7 +23,6 @@ export class SideNavComponent implements OnInit {
         } else {
             this.fillerShow = index;
         }
-        // console.log(this.fillerShow + '--->' + index);
     }
 
     onCloseMenu() {

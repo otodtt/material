@@ -7,10 +7,9 @@ import {ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnDestroy {
-    public events = [];
+    addRemoveContainer = false;
+    // public events = [];
     mobileQuery: MediaQueryList;
-
-    fillerNav = Array(50).fill(0).map((_, i) => `Nav Item ${i + 1}`);
 
     private _mobileQueryListener: () => void;
     constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
@@ -18,8 +17,14 @@ export class AppComponent implements OnDestroy {
         this._mobileQueryListener = () => changeDetectorRef.detectChanges();
         this.mobileQuery.addListener(this._mobileQueryListener);
     }
+    addContainer() {
+        this.addRemoveContainer = true;
+    }
+    removeContainer() {
+        this.addRemoveContainer = false;
+    }
 
     ngOnDestroy(): void {
-        this.mobileQuery.removeListener(this._mobileQueryListener);
+        // this.mobileQuery.removeListener(this._mobileQueryListener);
     }
 }

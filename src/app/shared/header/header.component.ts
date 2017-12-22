@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, HostListener, ElementRef } from '@angular/core';
 
 import pages from '../Pages';
 
@@ -9,16 +9,25 @@ import pages from '../Pages';
 })
 export class HeaderComponent implements OnInit {
     public pages = pages;
+    public isScrollTop: number;
 
     @Output() navToggle = new EventEmitter<boolean>();
 
-    constructor() { }
-
-    ngOnInit() {
+    @HostListener('window:scroll', [])
+    onWindowScroll() {
+        this.onScroll();
     }
+
+    constructor(private el: ElementRef) { }
+
+    ngOnInit() {}
 
     navOpen() {
         this.navToggle.emit(true);
+    }
+
+    onScroll() {
+        this.isScrollTop = this.el.nativeElement.getBoundingClientRect().top * -1;
     }
 
 }
