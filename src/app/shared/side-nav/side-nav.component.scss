@@ -1,6 +1,9 @@
 /*================================
     NAVIGATION TEST
 =================================*/
+#menu-wrap {
+    position: relative;
+}
 
 
 
@@ -101,82 +104,152 @@ $nav-mat-color: rgb(85, 85, 85);
     padding: 0;
     vertical-align: initial;
 }
+#menu-shown {
+    // display: none;
+    display: inline-block; 
+    position: absolute;
+    width: 100%
+}
+#menu-hidden {
+    // display: none;
+    display: inline-block; 
+    position: absolute;
+}
+
+
 nav {
     // float: right;
     // min-width: 250px;
-    width: 220px;
+    min-width: 220px;
     margin: 0 10px;
-    ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        li {
-            // float: left;
-            // position: relative;
-            border-bottom: 1px solid $border-color;
+    #menu-shown {
+        ul {
+            list-style: none;
+            margin: 0;
             padding: 0;
-            // width: 150px;
-            a {
+            li {
                 // float: left;
-                display: inline-block;
+                // position: relative;
+                border-bottom: 1px solid $border-color;
                 padding: 0;
-                padding-left: 15px;
-                // padding: 0;
-                line-height: 50px;
-                font-size: 16px;
-                width: 100%;
-                // background: $nav-hover-background;
-                color: $drop-background;
-                text-decoration: none;
-                text-align: left;
-                
-                // .material-icons {
-                //     text-align: left;
-                // }
-                // .link-name {
-                //     text-align: right;
-                // }
-                &:hover {
-                    background: $drop-background;
-                    color: $top-link-hover;
+                // width: 150px;
+                a {
+                    // float: left;
+                    display: inline-block;
+                    padding: 0;
+                    padding-left: 15px;
+                    // padding: 0;
+                    line-height: 50px;
+                    font-size: 16px;
+                    width: 100%;
+                    // background: $nav-hover-background;
+                    color: $drop-background;
+                    text-decoration: none;
+                    text-align: left;
+                    
+                    // .material-icons {
+                    //     text-align: left;
+                    // }
+                    // .link-name {
+                    //     text-align: right;
+                    // }
+                    &:hover {
+                        background: $drop-background;
+                        color: $top-link-hover;
+                    }
+                    
                 }
                 
+                // ul li {
+                //     // display: none;
+                //     min-width: 100%;
+                //     border-bottom: none;
+                //     // white-space: nowrap;
+                //     // overflow: hidden; 
+                //     // text-overflow: ellipsis !important;
+                //     & a {
+                //         padding: 15px;
+                //         line-height: 15px;
+                //         z-index: 1;
+                //         color: $nav-mat-color;
+                //         text-align: left;
+                //         font-size: 14px;
+                //         background: $nav-background;
+                //         border-bottom: 1px solid $sub-background;
+                //         white-space: inherit;
+                //     }
+                //     & a:hover {
+                //         // background: $nav-bottom-hover;
+                //         color: $top-link-hover;
+                //     }
+                // }
             }
-            
-            ul li {
-                // display: none;
+        }
+    }
+    #menu-hidden {
+        .returnButton {
+            font-size: 16px;
+            font-weight: bolder;
+            padding: 0;
+            #mat-icon-chevron_left {
+                float: left;
+                margin-top: 6px;
+                transform: rotate(90deg)
+            }
+            // color: blue;
+        }
+        width: 100%;
+        ul {
+            list-style: none;
+            // margin: 0;
+            padding: 0;
+            li {
+                border-bottom: 1px solid $border-color;
+                padding: 0;
                 min-width: 100%;
-                border-bottom: none;
-                // white-space: nowrap;
-                // overflow: hidden; 
-                // text-overflow: ellipsis !important;
-                & a {
-                    padding: 15px;
-                    line-height: 15px;
+                color: $drop-background;
+                a {
+                    width: 100%;
+                    padding: 10px;
+                    line-height: 20px;
                     z-index: 1;
-                    color: $nav-mat-color;
+                    color: $drop-background;
                     text-align: left;
                     font-size: 14px;
                     background: $nav-background;
                     border-bottom: 1px solid $sub-background;
                     white-space: inherit;
+                    text-decoration: none;
                 }
                 & a:hover {
-                    // background: $nav-bottom-hover;
+                    background: $drop-background;
                     color: $top-link-hover;
                 }
+                
             }
         }
+       
+    
+        
+        //     ul li {
+        //         // display: none;
+        //         // min-width: 100%;
+        //         border-bottom: none;
+        //         // white-space: nowrap;
+        //         // overflow: hidden; 
+        //         // text-overflow: ellipsis !important;
+               
+        // }
     }
 }
 .material-icons {
     float: right;
     margin-top: 10px;
 }
-.nav-dropdown {
-    padding: 10px 10px !important;
-    background: $sub-background;
-}
+// .nav-dropdown {
+//     padding: 10px 10px !important;
+//     background: $sub-background;
+// }
 
 
 // .nav-dropdown {
@@ -359,41 +432,6 @@ nav {
 //         text-decoration: none;
 //     }
 // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

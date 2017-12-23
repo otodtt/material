@@ -6,29 +6,63 @@
     <span color="primary" class="bold">МЕНЮ</span>
 </mat-toolbar>
 <mat-nav-list>
-    <a mat-button (click)="rotate()">SHOW</a>
+    
     <nav>
-        <ul class="nav-list"
-            
-        >
-            <li *ngFor="let page of pages; let i = index"
-                (@rotatedState.done)="animationDone($event, i)"
-                [@rotatedState]='state'
-            >
-                <div class="proba" >
-                    <a *ngIf="page.subPage !== null" mat-button 
-                        
-                        (click)="rotate(i)"   
-                    >
-                    <!-- <a mat-button (click)="isHide = !isHide"> -->
-                        <i *ngIf="page.subPage !== null && (fillerShow === null || fillerShow !== page.id)" class="material-icons my-mat-icon">add_box</i>
-                        <i *ngIf="page.subPage !== null && fillerShow === page.id" class="material-icons my-mat-icon">indeterminate_check_box</i>
-                        {{ page.name | uppercase}}
-                    </a>
-                    <a *ngIf="page.subPage === null" (click)="showFiller(i)" mat-button>
-                        {{ page.name | uppercase}}
-                    </a>
-                </div>
+        <div id="menu-wrap" >
+            <div id="menu-shown" [@rotatedState]='state' >
+                <ul class="nav-list">
+                    <li *ngFor="let page of pages; let i = index">
+                        <a mat-button *ngIf="page.subPage !== null" 
+                            (click)="rotate(i)"
+                        >
+                            <i class="material-icons">chevron_right</i>
+                            <!-- <i *ngIf="page.subPage !== null && (fillerShow === null || fillerShow !== page.id)" class="material-icons my-mat-icon">add_box</i> -->
+                            <!-- <i *ngIf="page.subPage !== null && fillerShow === page.id" class="material-icons my-mat-icon">indeterminate_check_box</i> -->
+                            {{ page.name | uppercase}}
+                        </a>
+                        <a mat-button *ngIf="page.subPage === null"  >
+                            {{ page.name | uppercase}}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="menu-hidden"  [@rotatedState]='stateSub'  >
+                <button mat-button *ngIf="isClicked" (click)="returnDefaultMenu()" class="returnButton">
+                    <!-- <i class="material-icons">chevron_left</i> -->
+                    <!-- <span class="example-spacer"></span> -->
+                    <!-- <mat-icon id="mat-icon-chevron_left">chevron_left</mat-icon> -->
+                    <i class="material-icons" id="mat-icon-chevron_left">arrow_drop_down_circle</i>
+                    <span > НАЗАД</span>
+                    
+                </button>
+                <ul class="nav-list" >
+                    <li  *ngFor="let psp of subPages">
+                        <a mat-button  routerLink=".">{{psp.subName | uppercase}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</mat-nav-list>
+
+<!-- [@returnState]='return' -->
+<!-- [@returnState]='returnSub' -->
+
+
+<!-- [@returnState]='return' -->
+<!-- *ngIf="isClicked" -->
+
+<!-- ========== OK ============ -->
+<!-- <mat-nav-list>
+    <nav>
+        <ul class="nav-list">
+            <li *ngFor="let page of pages; let i = index">
+                <a mat-button (click)="showFiller(i)">
+                    <i *ngIf="page.subPage !== null && (fillerShow === null || fillerShow !== page.id)" class="material-icons my-mat-icon">add_box</i>
+                    <i *ngIf="page.subPage !== null && fillerShow === page.id" class="material-icons my-mat-icon">indeterminate_check_box</i>
+                    {{ page.name | uppercase}}
+                </a>
+                
                 <ul *ngIf="page.subPage !== null && fillerShow === page.id" class="nav-dropdown">
                     <li *ngFor="let psp of page.subPage">
                         <a mat-button  routerLink=".">{{psp.subName | uppercase}}</a>
@@ -38,11 +72,15 @@
             </li>
         </ul>
     </nav>
-</mat-nav-list>
+</mat-nav-list> -->
+<!-- ========== OK ============ -->
 
+<!-- (click)="showFiller(i)" -->
 <!-- (click)="showFiller(i)" -->
 <!-- (click)="rotate(i)" -->
 <!-- (@rotatedState.done)="animationDone($event)" -->
 <!-- [@menuState]="isHide ? 'show' : 'hide'" -->
+
+<!-- (@rotatedState.done)="animationDone($event)" -->
 
 
