@@ -1,0 +1,102 @@
+// /*================================
+//     NAVIGATION 
+// =================================*/
+// $green-transparent: rgba(140, 195, 74, 0.25);
+// $green: rgb(17, 200, 0);
+
+// $white: rgb(255, 255, 255);
+// $gray: rgb(100, 100, 100);
+// /*================================
+//     HEADER AND LOGO
+// =================================*/
+// .p-in-header {
+//     display: inline;
+//     color: rgb(255, 255, 255)
+// }
+// #aa-header {
+//     height: 220px;
+//     background-size: cover;
+//     padding-bottom: 0 !important;
+//     font: 500 20px/32px Roboto,"Helvetica Neue",sans-serif;
+// }
+// .bredacrumb {
+//     padding-top: 10px;
+//     max-height: 90px;
+//     text-align: center;
+// }
+// .p-up {
+//     font-size: 1.3em
+// }
+// .p-down {
+//     font-size: 0.8em
+// }
+// /*================================
+//     END HEADER AND LOGO
+// =================================*/
+
+// /*================================
+//    RESPONSIVE DESIGN
+// =================================*/
+// /*-------------------------------
+//     Shift NAV BAR SMALL BUTTIN
+//  -------------------------------*/
+// @media (min-width: 951px) {
+//     #aa-header {
+//         background-image: url('../../../assets/img/header-bg/header-bg.jpg');
+//     }
+// }
+// @media (max-width: 950px) {
+//     #aa-header {
+//         background-image: url('../../../assets/img/header-bg/header-bg-955px.jpg');
+//     }
+// }
+// /*-------------------------------
+//     END Shift NAV BAR SMALL BUTTIN
+// -------------------------------*/
+// /* ##Device = Desktops ##Screen = 1281px to higher resolution desktops */
+// @media (min-width: 1281px) {}
+
+// /* ##Device = Laptops, Desktops ##Screen = B/w 1025px to 1280px*/
+// @media (min-width: 1025px) and (max-width: 1280px) {}
+
+// /* ##Device = Tablets, Ipads (portrait) ##Screen = B/w 768px to 1024px*/
+// @media (min-width: 768px) and (max-width: 1024px) {
+//     #aa-header {
+//         background-image: url('../../../assets/img/header-bg/header-bg-768px.jpg');
+//     }
+// }
+
+// /* ##Device = Tablets, Ipads (landscape) ##Screen = B/w 768px to 1024px*/
+// @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+//     #aa-header {
+//         background-image: url('../../../assets/img/header-bg/header-bg-768px.jpg');
+//     }
+// }
+
+// /* ##Device = Low Resolution Tablets, Mobiles (Landscape) ##Screen = B/w 481px to 767px*/
+// @media (min-width: 481px) and (max-width: 767px) {
+//     #aa-header {
+//         background-image: url('../../../assets/img/header-bg/header-bg-481px.jpg');
+//     }
+// }
+
+// /* ##Device = Most of the Smartphones Mobiles (Portrait) ##Screen = B/w 320px to 479px*/
+// @media (max-width: 320px){
+//     #aa-header {
+//         background-image: url('../../../assets/img/header-bg/header-bg-320px.jpg');
+//         height: 190px;
+//     }
+//     .p-in-header {
+//         font-size: .9em;
+//     }
+// }
+
+// @media (min-width: 320px) and (max-width: 480px) {
+//     #aa-header {
+//         background-image: url('../../../assets/img/header-bg/header-bg-320px.jpg');
+//         height: 190px;
+//     }
+//     .p-in-header {
+//         font-size: .9em;
+//     }
+// }

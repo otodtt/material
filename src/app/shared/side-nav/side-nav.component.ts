@@ -1,4 +1,7 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, AfterViewInit } from '@angular/core';
+
+// Services
+import { ChangeBreadcrumbService } from '../../common/services/changeBreadcrumb.service';
 
 import pages from '../Pages';
 import { MenuButtonAnimation } from './animations';
@@ -9,40 +12,25 @@ import { MenuButtonAnimation } from './animations';
     styleUrls: ['./side-nav.component.scss'],
     animations: [ MenuButtonAnimation ]
 })
-export class SideNavComponent implements OnInit {
-    public state = 'default';
-    public stateSub = 'default-sub';
-
-    // public return = 'return-default';
-    // public returnMenu = '';
-    // public returnSub = 'default-sub';
-    public isClicked = false;
-
-    // public done: number;
-    // public id: number;
-
-
-
-
+export class SideNavComponent implements AfterViewInit {
     public pages = pages;
     public subPages: any;
-    public fillerShow = null;
+
+    public state = 'default';
+    public stateSub = 'default-sub';
+    public isClicked = false;
+    public isActiveClass = false;
 
     @Output() navClose = new EventEmitter<boolean>();
-    constructor() { }
+    constructor(private changeBreadcrumb: ChangeBreadcrumbService) { }
 
-    ngOnInit() {
-        // console.log(this.return);
+    ngAfterViewInit() {
+        this.changeBreadcrumb.changeClass$.subscribe(
+            text => {
+                this.isActiveClass = text;
+            }
+        );
     }
-
-    // showFiller(index: number) {
-    //     if (this.fillerShow === index) {
-    //         this.fillerShow = null;
-    //     } else {
-    //         this.fillerShow = index;
-    //     }
-    //     // console.log(event);
-    // }
 
     onCloseMenu() {
         this.navClose.emit(false);
@@ -51,26 +39,19 @@ export class SideNavComponent implements OnInit {
     rotate(index?) {
         this.state = (this.state === 'default' ? 'hidden' : 'default');
         this.stateSub = (this.stateSub === 'default-sub' ? 'shown' : 'default-sub');
-        // this.returnSub = 'default-sub';
         this.isClicked = true;
         this.subPages = this.pages[index].subPage;
-        // console.log(this.returnMenu + ' ---> up <---- ' + this.state);
-        // console.log(this.stateSub + ' ---> up <---- ' );
     }
 
     returnDefaultMenu() {
         this.state = (this.state === 'default' ? 'hidden' : 'default');
         this.stateSub = (this.stateSub === 'default-sub' ? 'shown' : 'default-sub');
-        // this.returnMenu = (this.returnMenu === 'return-default' ? 'hide' : 'return-default');
-        // this.returnSub = (this.returnSub === 'default-sub' ? 'hide' : 'default-sub');
-        // this.state = 'default';
         this.isClicked = false;
-        // console.log(this.returnMenu + ' ---> down <---- ' + this.state);
-        // console.log(this.returnSub + ' ---> down <---- ');
     }
-    animationDone(event, index) {
-        // this.done = 1;
-        // console.log('done');
+    addClass() {
+        this.isActiveClass = true;
     }
-
+    removeClass() {
+        this.isActiveClass = false;
+    }
 }

@@ -11,20 +11,18 @@
 /*================================
     NAVIGATION 
 =================================*/
-$nav-background: rgba(140, 195, 74, 0.25);
-$drop-background: rgb(254, 255, 255);
-$top-link-color: rgb(254, 255, 255);
-$bottom-link-color: rgb(100, 100, 100);
+$green-transparent: rgba(140, 195, 74, 0.25);
+$green: rgb(17, 200, 0);
 
-$nav-list-hover: rgb(254, 255, 255);
-$top-link-hover: rgb(17, 200, 0);
+$white: rgb(255, 255, 255);
+$gray: rgb(100, 100, 100);
 
 .mat-toolbar {
     height: 70px;
-    background: $nav-background;
+    background: $green-transparent;
 }
 .a-top {
-    color: $top-link-color;
+    color: $white;
     font-size: 14px;
 }
 
@@ -32,27 +30,29 @@ $top-link-hover: rgb(17, 200, 0);
     float: left;
     position: relative;
     .mat-icon-button {
-        color: $top-link-color;
+        color: $white;
         padding: inherit;
     }
-   
     .nav-dropdown {
         display: none;
         position: absolute;
         top:48px;
         left: 0;
         padding: 5px 10px 0;
-        background: $drop-background;
+        background: $white;
         border-top: 1px solid rgb(190, 190, 190);
         .sub-menu {
             height: 40px;
             border-bottom: 1px solid rgb(190, 190, 190);
             .a-bottom {
-                color: $bottom-link-color;
+                color: $gray;
                 font-size: 13px;
             }
             .a-bottom:hover {
-                color: $top-link-hover;
+                color: $green;
+            }
+            .bottom-active {
+                color: $green;
             }
         }
         .sub-menu:last-child {
@@ -61,32 +61,47 @@ $top-link-hover: rgb(17, 200, 0);
     }
 }
 .nav-list:hover {
-    background: $nav-list-hover;
+    background: $white;
     .a-top {
-        color: $top-link-hover
+        color: $green
     }
     .mat-icon-button {
-        color: $top-link-hover
+        color: $green
     }
 }
 .nav-list:hover .nav-dropdown {
     display: block;
+}
+.nav-list-active {
+    background: $white;
+    .active-non-link, .btn-active {
+        color: $green
+    }
+}
+.nav-list-active .active {
+    color: $green;
+}
+
+
+#navigation-button {
+    background: #33691E !important;
+    color: #000000;
 }
 /*----------- ФИКСИРАНА НАВИГАЦИЯ ------------*/ 
 .navbar-fixed-top {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgb(255, 255, 255);
+    background-color: $white;
     transition: all .5s;
     .a-top {
-        color: $bottom-link-color;
+        color: $gray;
+    }
+    #navigation-button {
+        background-color: #8bc34a !important;
     }
 
 }
-// .navbar-fixed-top > .logo-span {
-//     color: rgb(115, 115, 115);
-// }
 /*================================
     КРАЙ NAVIGATION 
 =================================*/
@@ -98,28 +113,36 @@ $top-link-hover: rgb(17, 200, 0);
     display: inline;
     color: rgb(255, 255, 255)
 }
-#aa-header {
+#aa-practices, #aa-documents, #aa-products, #aa-crops, #aa-contacts, #aa-management  {
     height: 220px;
     background-size: cover;
     padding-bottom: 0 !important;
     font: 500 20px/32px Roboto,"Helvetica Neue",sans-serif;
 }
 #header-email {
-    width: 100%;
     border-bottom: 1px solid white;
     color: white;
     height: 30px;
     padding-top: 0  !important;
-    padding-left: 5%;
     justify-content: left;
+    .email {
+        margin-left: 16px;
+        font-size: 17px;
+    }
 }
+
 .bredacrumb {
     padding-top: 10px;
     max-height: 90px;
     text-align: center;
+    .bredacrumb-link {
+        text-decoration: none;
+        color: $white;
+    }
 }
+
 .p-up {
-    font-size: 1.3em
+    font-size: 1.3em;
 }
 .p-down {
     font-size: 0.8em
@@ -134,31 +157,148 @@ $top-link-hover: rgb(17, 200, 0);
 /*-------------------------------
     Shift NAV BAR SMALL BUTTIN
  -------------------------------*/
-
-@media (min-width: 971px) {
+@media (min-width: 951px) {
     #navigation-button {
         display: none;
     }
-    #aa-header {
-        background-image: url('../../../assets/img/header-bg/header-bg.jpg');
+    #aa-practices {
+        background-image: url('../../../assets/img/header-bg/practices-bg.jpg');
+    }
+    #aa-documents {
+        background-image: url('../../../assets/img/header-bg/documents-bg.jpg');
+    }
+    #aa-products {
+        background-image: url('../../../assets/img/header-bg/products-bg.jpg');
+    }
+    #aa-crops {
+        background-image: url('../../../assets/img/header-bg/crops-bg.jpg');
+    }
+    #aa-contacts {
+        background-image: url('../../../assets/img/header-bg/contacts-bg.jpg');
+    }
+    #aa-management {
+        background-image: url('../../../assets/img/header-bg/management-bg.jpg');
     }
 }
-@media (max-width: 970px) {
+@media (max-width: 950px) {
     #navigation-top {
         display: none;
     }
-    #aa-header {
-        background-image: url('../../../assets/img/header-bg/header-bg-955px.jpg');
+    #aa-practices {
+        background-image: url('../../../assets/img/header-bg/practices-bg-955px.jpg');
+    }
+    #aa-documents {
+        background-image: url('../../../assets/img/header-bg/documents-bg-955px.jpg');
+    }
+    #aa-products {
+        background-image: url('../../../assets/img/header-bg/products-bg-955px.jpg');
+    }
+    #aa-crops {
+        background-image: url('../../../assets/img/header-bg/crops-bg-955px.jpg');
+    }
+    #aa-contacts {
+        background-image: url('../../../assets/img/header-bg/contacts-bg-955px.jpg');
+    }
+    #aa-management {
+        background-image: url('../../../assets/img/header-bg/management-bg-955px.jpg');
     }
 }
 /*-------------------------------
     END Shift NAV BAR SMALL BUTTIN
 -------------------------------*/
+/* ##Device = Desktops ##Screen = 1281px to higher resolution desktops */
+@media (min-width: 1281px) {}
+
+/* ##Device = Laptops, Desktops ##Screen = B/w 1025px to 1280px*/
+@media (min-width: 1025px) and (max-width: 1280px) {}
+
+/* ##Device = Tablets, Ipads (portrait) ##Screen = B/w 768px to 1024px*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    #aa-practices {
+        background-image: url('../../../assets/img/header-bg/practices-bg-768px.jpg');
+    }
+    #aa-documents {
+        background-image: url('../../../assets/img/header-bg/documents-bg-768px.jpg');
+    }
+    #aa-products {
+        background-image: url('../../../assets/img/header-bg/products-bg-768px.jpg');
+    }
+    #aa-crops {
+        background-image: url('../../../assets/img/header-bg/crops-bg-768px.jpg');
+    }
+    #aa-contacts {
+        background-image: url('../../../assets/img/header-bg/contacts-bg-768px.jpg');
+    }
+    #aa-management {
+        background-image: url('../../../assets/img/header-bg/management-bg-768px.jpg');
+    }
+}
+
+/* ##Device = Tablets, Ipads (landscape) ##Screen = B/w 768px to 1024px*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    #aa-practices {
+        background-image: url('../../../assets/img/header-bg/practices-bg-768px.jpg');
+    }
+    #aa-documents {
+        background-image: url('../../../assets/img/header-bg/documents-bg-768px.jpg');
+    }
+    #aa-products {
+        background-image: url('../../../assets/img/header-bg/products-bg-768px.jpg');
+    }
+    #aa-crops {
+        background-image: url('../../../assets/img/header-bg/crops-bg-768px.jpg');
+    }
+    #aa-contacts {
+        background-image: url('../../../assets/img/header-bg/contacts-bg-768px.jpg');
+    }
+    #aa-management {
+        background-image: url('../../../assets/img/header-bg/management-bg-768px.jpg');
+    }
+}
+
+/* ##Device = Low Resolution Tablets, Mobiles (Landscape) ##Screen = B/w 481px to 767px*/
+@media (min-width: 481px) and (max-width: 767px) {
+    #aa-practices {
+        background-image: url('../../../assets/img/header-bg/practices-bg-481px.jpg');
+    }
+    #aa-documents {
+        background-image: url('../../../assets/img/header-bg/documents-bg-481px.jpg');
+    }
+    #aa-products {
+        background-image: url('../../../assets/img/header-bg/products-bg-481px.jpg');
+    }
+    #aa-crops {
+        background-image: url('../../../assets/img/header-bg/crops-bg-481px.jpg');
+    }
+    #aa-contacts {
+        background-image: url('../../../assets/img/header-bg/contacts-bg-481px.jpg');
+    }
+    #aa-management {
+        background-image: url('../../../assets/img/header-bg/management-bg-481px.jpg');
+    }
+}
+
 /* ##Device = Most of the Smartphones Mobiles (Portrait) ##Screen = B/w 320px to 479px*/
 @media (max-width: 320px){
-    #aa-header {
-        background-image: url('../../../assets/img/header-bg/header-bg-320px.jpg');
+    #aa-practices {
+        background-image: url('../../../assets/img/header-bg/practices-bg-320px.jpg');
         height: 190px;
+    }
+    #aa-documents {
+        background-image: url('../../../assets/img/header-bg/documents-bg-320px.jpg');
+        height: 190px;
+    }
+    #aa-products {
+        background-image: url('../../../assets/img/header-bg/products-bg-320px.jpg');
+    }
+    #aa-crops {
+        background-image: url('../../../assets/img/header-bg/crops-bg-320px.jpg');
+    }
+    #aa-contacts {
+        background-image: url('../../../assets/img/header-bg/contacts-bg-320px.jpg');
+    }
+    #aa-management {
+        background-image: url('../../../assets/img/header-bg/management-bg-320px.jpg');
     }
     #header-email {
         display: none;
@@ -169,9 +309,25 @@ $top-link-hover: rgb(17, 200, 0);
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-    #aa-header {
-        background-image: url('../../../assets/img/header-bg/header-bg-320px.jpg');
+    #aa-practices {
+        background-image: url('../../../assets/img/header-bg/practices-bg-320px.jpg');
         height: 190px;
+    }
+    #aa-documents {
+        background-image: url('../../../assets/img/header-bg/documents-bg-320px.jpg');
+        height: 190px;
+    }
+    #aa-products {
+        background-image: url('../../../assets/img/header-bg/products-bg-320px.jpg');
+    }
+    #aa-crops {
+        background-image: url('../../../assets/img/header-bg/crops-bg-320px.jpg');
+    }
+    #aa-contacts {
+        background-image: url('../../../assets/img/header-bg/contacts-bg-320px.jpg');
+    }
+    #aa-management {
+        background-image: url('../../../assets/img/header-bg/management-bg-320px.jpg');
     }
     #header-email {
         display: none;
@@ -180,31 +336,3 @@ $top-link-hover: rgb(17, 200, 0);
         font-size: .9em;
     }
 }
-
-/* ##Device = Low Resolution Tablets, Mobiles (Landscape) ##Screen = B/w 481px to 767px*/
-@media (min-width: 481px) and (max-width: 767px) {
-    #aa-header {
-        background-image: url('../../../assets/img/header-bg/header-bg-481px.jpg');
-    }
-}
-
-/* ##Device = Tablets, Ipads (landscape) ##Screen = B/w 768px to 1024px*/
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    #aa-header {
-        background-image: url('../../../assets/img/header-bg/header-bg-768px.jpg');
-    }
-}
-
-/* ##Device = Tablets, Ipads (portrait) ##Screen = B/w 768px to 1024px*/
-@media (min-width: 768px) and (max-width: 1024px) {
-    #aa-header {
-        background-image: url('../../../assets/img/header-bg/header-bg-768px.jpg');
-    }
-}
-
-/* ##Device = Laptops, Desktops ##Screen = B/w 1025px to 1280px*/
-@media (min-width: 1025px) and (max-width: 1280px) {}
-
-/* ##Device = Desktops ##Screen = 1281px to higher resolution desktops */
-@media (min-width: 1281px) {}
-

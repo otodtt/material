@@ -1,0 +1,16 @@
+<aside>
+    <mat-nav-list>
+        <nav>
+            <ul>
+                <li *ngFor="let page of pages; let i = index">
+                    <a href="#">{{ page.name | uppercase}}</a>
+                    <ul>
+                        <li *ngFor="let sp of  page.subPage">
+                            <a href="">{{ sp.subName}}</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </mat-nav-list>
+</aside>
