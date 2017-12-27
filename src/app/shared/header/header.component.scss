@@ -90,6 +90,7 @@ $gray: rgb(100, 100, 100);
 /*----------- ФИКСИРАНА НАВИГАЦИЯ ------------*/ 
 .navbar-fixed-top {
     position: fixed;
+    z-index: 9;
     top: 0;
     left: 0;
     background-color: $white;

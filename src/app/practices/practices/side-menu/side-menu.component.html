@@ -1,12 +1,38 @@
 <aside>
     <mat-nav-list>
         <nav>
-            <ul>
-                <li *ngFor="let page of pages; let i = index">
-                    <a href="#">{{ page.name | uppercase}}</a>
-                    <ul>
-                        <li *ngFor="let sp of  page.subPage">
-                            <a href="">{{ sp.subName}}</a>
+            <ul class="nav" id="side-menu">
+                <li *ngFor="let page of pages; let i = index" 
+                [ngClass]="isActiveClass && checkPage === i ? 'active-group': '' "
+                >
+                    <a mat-button
+                        *ngIf="page.subPage === null"
+                        [routerLink]="page.link"
+                        (click)="addRemoveClass(i)"
+                        (click)="openClosePanel(i, page.id)"
+                        class="list-group-item">
+                            {{ page.name | uppercase }}
+                    </a>
+                    <a mat-button
+                        *ngIf="page.subPage !== null"
+                        (click)="openClosePanel(i, page.id)"
+                        class="list-group-item">
+                            <span class="example-spacer"></span>
+                            <mat-icon *ngIf="(!isOpenPanel || panelCheck !== page.id) && page.subPage !== null" class="example-icon">add</mat-icon>
+                            <mat-icon *ngIf="isOpenPanel && panelCheck === page.id && page.subPage !== null" class="example-icon open-panel">expand_less</mat-icon>
+                            {{ page.name | uppercase }}
+                    </a>
+                    <ul class="nav-second-level"
+                    *ngIf="isOpenPanel && panelCheck === page.id">
+                        <li *ngFor="let sp of  page.subPage; let is = index" 
+                        [ngClass]="checkSPIndex === is && checkPage === i ? 'active': '' ">
+                            <a mat-button 
+                                [routerLink]="sp.link" 
+                                class="list-group-item"
+                                (click)="addClass(i, is)">
+                                <mat-icon class="example-icon-sub">navigate_next</mat-icon>
+                                {{ sp.subName }}
+                            </a>
                         </li>
                     </ul>
                 </li>
@@ -14,3 +40,9 @@
         </nav>
     </mat-nav-list>
 </aside>
+<!-- routerLinkActive="active-group"  -->
+<!-- [ngClass]="isActiveClass ? 'active-group': '' " -->
+<!-- *ngIf="page.subPage === null" -->
+
+<!-- [ngClass]="isActiveClass && index === page.id ? 'active-group': '' " -->
+

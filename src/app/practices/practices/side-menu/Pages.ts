@@ -8,7 +8,7 @@ const pages = [
     {
         id: 1,
         name: 'зърненожитни',
-        link: 'grainy',
+        link: null,
         subPage: [
             {
                 subName: 'Пшеница',
@@ -39,7 +39,7 @@ const pages = [
     {
         id: 2,
         name: 'бобови',
-        link: 'legumes',
+        link: null,
         subPage: [
             {
                 subName: 'Фасул',
@@ -70,7 +70,7 @@ const pages = [
     {
         id: 3,
         name: 'технически култури',
-        link: 'technical',
+        link: null,
         subPage: [
             {
                 subName: 'Тютюн',
@@ -101,92 +101,92 @@ const pages = [
     {
         id: 4,
         name: 'зеленчуци',
-        link: 'vegetables',
+        link: null,
         subPage: [
             {
                 subName: 'Домати, пипер, патладжан',
-                link: ''
+                link: '#'
             },
             {
                 subName: 'Картофи',
-                link: ''
+                link: '#'
             },
             {
                 subName: 'Лукви култури',
-                link: ''
+                link: '#'
             },
             {
                 subName: 'Зелеви култури',
-                link: ''
+                link: '#'
             },
             {
                 subName: 'Тиквови култури',
-                link: ''
+                link: '#'
             },
             {
                 subName: 'Листни зеленчуци',
-                link: ''
+                link: '#'
             },
         ],
     },
     {
         id: 5,
         name: 'зеленчуци в съоражения',
-        link: 'vegetables',
+        link: null,
         subPage: [
             {
                 subName: 'Домати в съоражения',
-                link: ''
+                link: '#'
             },
             {
                 subName: 'Тиквови култури',
-                link: ''
+                link: '#'
             },
             {
                 subName: 'Украсни култури',
-                link: ''
+                link: '#'
             },
             {
                 subName: 'Пипер в съоражения',
-                link: ''
+                link: '#'
             },
             {
                 subName: 'Листни зеленчуци',
-                link: ''
+                link: '#'
             }
         ],
     },
     {
         id: 6,
         name: 'овощни култури',
-        link: 'fruit',
+        link: null,
         subPage: [
             {
                 subName: 'Семкови овощни видове',
-                link: ''
+                link: '#'
             },
             {
                 subName: 'Костилкови овощни видове',
-                link: ''
+                link: '#'
             }
         ],
     },
     {
         id: 7,
         name: 'ягодоплодни',
-        link: 'strawberries',
+        link: null,
         subPage: [
             {
                 subName: 'Ягода',
-                link: ''
+                link: '#'
             },
             {
                 subName: 'Малина',
-                link: ''
+                link: '#'
             },
             {
                 subName: 'Касис',
-                link: ''
+                link: '#'
             }
         ],
     },
