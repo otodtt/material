@@ -1,3 +1,16 @@
+// #navigation-top {
+//     .mat-list-item {
+//         .mat-list-item-content {
+//             padding: 0 !important;
+//         }
+//     }
+//     padding: 0 !important;
+// }
+
+// .mat-toolbar > .mat-toolbar-row > .mat-nav-list > .mat-list-item > .mat-list-item-content {
+//     padding: 0 !important;
+// }
+
 .example-spacer {
     flex: 1 1 auto;
 }
@@ -31,7 +44,7 @@ $gray: rgb(100, 100, 100);
     position: relative;
     .mat-icon-button {
         color: $white;
-        padding: inherit;
+        // padding: inherit;
     }
     .nav-dropdown {
         display: none;

@@ -1,4 +1,13 @@
+.header-menu {
+    background: #8bc34a;
+    margin-top: 8px;
+    height: 36px;
+}
 
+.mat-nav-list {
+    padding: 0;
+    // padding-right: 8px;
+}
 
 .example-spacer {
     flex: 1 1 auto;
@@ -13,9 +22,6 @@
     font-size: 20px;
     vertical-align: middle;
 }
-// .open-panel {
-//     color: #de9d62;
-// }
 
 /*===============================================================
   за МЕНЮ
@@ -25,6 +31,7 @@
     // font-weight: normal;
     padding-left: 0;
     margin-bottom: 0;
+    margin-top: 0;
     list-style: none;
     font-size: 14px;
     li {
@@ -50,13 +57,6 @@
         }
     }
 }
-// .nav>li, .nav>li>a {
-//     position: relative;
-//     display: block;
-// }
-// .nav>li>a {
-//     padding: 10px 15px;
-// }
 #side-menu .list-group-item {
     font-weight: normal;
     text-align: left;
@@ -71,9 +71,6 @@
     border-bottom: 7px solid #97b568;
     color: #fff;
 }
-
-
-
 #side-menu .list-group-item:hover {
     background-color: #527532;
 }
@@ -83,12 +80,9 @@
     padding-left: 6px;
 }
 #side-menu .active-group .list-group-item .example-icon {
-/* #side-menu .active-group .list-group-item .my-double-fa { */
-    color: #de9d62;
-    // font-weight: bold;
+    color: #fb7902;
 }
-
-  
+ 
 /*------ в падащото меню -----*/
 #side-menu {
     ul {
@@ -118,7 +112,7 @@
     color: #333;
 }
 #side-menu .nav-second-level .active .list-group-item .example-icon-sub {
-    color: #de9d62;
+    color: #fb7902;
 }
 /*------ в падащото меню -----*/
 /*===============================================================

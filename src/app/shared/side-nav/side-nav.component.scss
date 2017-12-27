@@ -65,6 +65,8 @@ nav {
                     padding-left: 15px;
                     line-height: 50px;
                     font-size: 16px;
+                    font-weight: normal;
+                    font-style: normal;
                     width: 100%;
                     color: $white;
                     text-decoration: none;
@@ -109,7 +111,9 @@ nav {
                     z-index: 1;
                     color: $white;
                     text-align: left;
-                    font-size: 14px;
+                    font-size: 16px;
+                    font-weight: normal;
+                    font-style: normal;
                     background: $green-transparent;
                     border-bottom: 1px solid $green-ligth;
                     white-space: inherit;

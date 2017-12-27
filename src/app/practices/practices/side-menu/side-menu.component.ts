@@ -10,10 +10,8 @@ import pages from './Pages';
 export class SideMenuComponent implements OnInit {
     public pages = pages;
     public isOpenPanel = false;
-    // public isActiveClass = false;
     public isActiveClass = true;
     public panelCheck = 0;
-    // public checkPage = null;
     public checkPage = 0;
     public checkSPIndex = null;
 

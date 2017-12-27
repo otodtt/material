@@ -8,6 +8,7 @@ import { AppRoutingModul } from './app-routing.module';
 
 // Services
 import { ChangeBreadcrumbService } from './common/services/changeBreadcrumb.service';
+import { ResizeService } from './common/services/ResizeService';
 
 // Modules
 import { MaterialModule } from './common/material/material.module';
@@ -48,7 +49,7 @@ import { ContactsComponent } from './contacts/contacts.component';
         AppRoutingModul,
         PracticesModule
     ],
-    providers: [ChangeBreadcrumbService],
+    providers: [ChangeBreadcrumbService, ResizeService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

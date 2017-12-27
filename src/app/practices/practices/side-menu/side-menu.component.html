@@ -1,6 +1,8 @@
 <aside>
+    
     <mat-nav-list>
         <nav>
+            <mat-toolbar class="header-menu">ДРЗП</mat-toolbar>
             <ul class="nav" id="side-menu">
                 <li *ngFor="let page of pages; let i = index" 
                 [ngClass]="isActiveClass && checkPage === i ? 'active-group': '' "
@@ -40,9 +42,3 @@
         </nav>
     </mat-nav-list>
 </aside>
-<!-- routerLinkActive="active-group"  -->
-<!-- [ngClass]="isActiveClass ? 'active-group': '' " -->
-<!-- *ngIf="page.subPage === null" -->
-
-<!-- [ngClass]="isActiveClass && index === page.id ? 'active-group': '' " -->
-
