@@ -1,12 +1,11 @@
 .header-menu {
     background: #8bc34a;
     margin-top: 8px;
-    height: 36px;
+    height: 50px;
 }
 
 .mat-nav-list {
     padding: 0;
-    // padding-right: 8px;
 }
 
 .example-spacer {
@@ -118,4 +117,8 @@
 /*===============================================================
   КРАЙ за МЕНЮ
 =================================================================*/
-  
+@media (min-width: 768px) {
+   #close-btn-side-menu {
+        display: none
+   }
+}

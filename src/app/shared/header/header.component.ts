@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
     newBreadcrumbTitle: string;
     newBreadcrumbName: string;
     public isActiveClass: boolean;
+    public isCloseDrawer = false;
 
     public isScrollTop: number;
 
@@ -52,7 +53,9 @@ export class HeaderComponent implements OnInit {
     navOpen() {
         this.navToggle.emit(true);
     }
-
+    closeDrawerMenu() {
+        this.changeBreadcrumb.emitCloseDrawer(this.isCloseDrawer);
+    }
     onScroll() {
         this.isScrollTop = this.el.nativeElement.getBoundingClientRect().top * -1;
     }

@@ -10,12 +10,14 @@ export class ChangeBreadcrumbService {
     private emitBreadcrumbName = new Subject<any>();
     private emitIdName = new Subject<any>();
     private removeClass = new Subject<any>();
+    private closeDrawerMenu = new Subject<any>();
 
     // Observable string streams
     changeTitle$ = this.emitBreadcrumbTitle.asObservable();
     changeName$ = this.emitBreadcrumbName.asObservable();
     changeId$ = this.emitIdName.asObservable();
     changeClass$ = this.removeClass.asObservable();
+    closeDrawer$ = this.closeDrawerMenu.asObservable();
 
     // Service message commands
     emitTitle(change: any) {
@@ -29,5 +31,8 @@ export class ChangeBreadcrumbService {
     }
     emitClass(change: any) {
         this.removeClass.next(change);
+    }
+    emitCloseDrawer(change: any) {
+        this.closeDrawerMenu.next(change);
     }
 }

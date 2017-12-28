@@ -1,16 +1,3 @@
-// #navigation-top {
-//     .mat-list-item {
-//         .mat-list-item-content {
-//             padding: 0 !important;
-//         }
-//     }
-//     padding: 0 !important;
-// }
-
-// .mat-toolbar > .mat-toolbar-row > .mat-nav-list > .mat-list-item > .mat-list-item-content {
-//     padding: 0 !important;
-// }
-
 .example-spacer {
     flex: 1 1 auto;
 }
@@ -98,7 +85,7 @@ $gray: rgb(100, 100, 100);
 
 #navigation-button {
     background: #33691E !important;
-    color: #000000;
+    color: $white;
 }
 /*----------- ФИКСИРАНА НАВИГАЦИЯ ------------*/ 
 .navbar-fixed-top {
@@ -113,6 +100,7 @@ $gray: rgb(100, 100, 100);
     }
     #navigation-button {
         background-color: #8bc34a !important;
+        color: #000000;
     }
 
 }

@@ -8,3 +8,13 @@
     width: 290px;
     padding-right: 8px;
 }
+article {
+    overflow: hidden;
+}
+
+@media (max-width: 481px) {
+    .mat-drawer {
+        width: initial;
+        padding-right: 8px;
+    }
+ }

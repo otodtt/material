@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter, ChangeDetectorRef, OnDestroy, AfterViewInit } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
+import {MediaMatcher} from '@angular/cdk/layout';
 
 import { ChangeBreadcrumbService } from '../../common/services/changeBreadcrumb.service';
 import { ResizeService } from '../../common/services/ResizeService';
@@ -13,30 +14,34 @@ export class PracticesComponent implements OnInit, OnDestroy, AfterViewInit {
     breadcrumbTitle = 'ДРЗП';
 
     mode = 'side';
-    opened: boolean;
-    size: string;
-    mobWidth: any;
+    openedQuery: MediaQueryList;
+    mediumQuery: MediaQueryList;
+    smallQuery: MediaQueryList;
     private resizeSubscription: Subscription;
+
+    private _mobileQueryListener: () => void;
 
     constructor(
         private changeBreadcrumb: ChangeBreadcrumbService,
-        private resizeService: ResizeService
+        private resizeService: ResizeService,
+        changeDetectorRef: ChangeDetectorRef, media: MediaMatcher
     ) {
-        this.resizeSubscription = this.resizeService.onResize$
-            // .subscribe(size => console.log(size.innerWidth));
-            .subscribe(size => {
-                if (size.innerWidth > 768) {
-                    // this.size = '< 700';
-                    this.opened = true;
-                }
-                if (size.innerWidth < 768) {
-                    // this.size = '< 700';
-                    this.opened = false;
-                }
-                // this.opened = true;
-                console.log(this.size);
-                // console.log(this.mobWidth);
-            });
+        this._mobileQueryListener = () => changeDetectorRef.detectChanges();
+        this.openedQuery = media.matchMedia('(max-width: 850px)');
+        this.openedQuery.addListener(this._mobileQueryListener);
+
+        this.mediumQuery = media.matchMedia('(max-width: 768px)');
+        this.mediumQuery.addListener(this._mobileQueryListener);
+
+        this.smallQuery = media.matchMedia('(max-width: 481px)');
+        this.smallQuery.addListener(this._mobileQueryListener);
+
+        if (this.mediumQuery.matches === true && this.smallQuery.matches === false) {
+            this.mode = 'push';
+        }
+        if (this.mediumQuery.matches === true && this.smallQuery.matches === true) {
+            this.mode = 'over';
+        }
     }
 
     ngOnInit() {
@@ -45,9 +50,24 @@ export class PracticesComponent implements OnInit, OnDestroy, AfterViewInit {
     }
 
     ngAfterViewInit() {
+        this.resizeSubscription = this.resizeService.onResize$
+        .subscribe(size => {
+            if (size.innerWidth > 768) {
+                this.mode = 'side';
+            }
+            if (size.innerWidth < 768) {
+                this.mode = 'push';
+            }
+            if (size.innerWidth < 481) {
+                this.mode = 'over';
+            }
+        });
     }
 
     ngOnDestroy() {
+        this.openedQuery.removeListener(this._mobileQueryListener);
+        this.mediumQuery.removeListener(this._mobileQueryListener);
+        this.smallQuery.removeListener(this._mobileQueryListener);
         if (this.resizeSubscription) {
           this.resizeSubscription.unsubscribe();
         }

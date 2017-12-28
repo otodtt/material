@@ -1,15 +1,13 @@
 <mat-drawer-container class="example-container">
-    <mat-drawer #sidenav [mode]="mode" [opened]="opened">
-        <prz-side-menu ></prz-side-menu>
+    <mat-drawer
+        #sidenav
+        [mode]="mode" 
+        [opened]="!openedQuery.matches">
+        <prz-side-menu (navClose)="sidenav.close()"></prz-side-menu>
     </mat-drawer>
     <mat-drawer-content>
         <mat-card class="example-header">
             <button mat-raised-button color="primary" (click)="sidenav.toggle()">МЕНЮ</button>
-            <!-- <button mat-mini-fab color="warn" (click)="onCloseMenu()">
-                <mat-icon id="close-btn" >close</mat-icon>
-            </button>
-            <span class="example-spacer"></span>
-            <span color="primary" class="bold">МЕНЮ</span> -->
         </mat-card>
         <article style="height: 1200px">
             <router-outlet></router-outlet>
