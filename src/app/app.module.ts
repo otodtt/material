@@ -16,10 +16,10 @@ import { ShareComponentsModule } from './common/share.components.module';
 import { PracticesModule } from './practices/practices.module';
 
 import { AppComponent } from './app.component';
-// import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { SideNavComponent } from './shared/side-nav/side-nav.component';
 import { NotFoundComponent } from './shared/not-found/not-found.component';
+import { ScrollButtonComponent } from './shared/scroll-button/scroll-button.component';
 
 // Pages
 import { HomeComponent } from './home/home.component';
@@ -34,12 +34,13 @@ import { ContactsComponent } from './contacts/contacts.component';
         AppComponent,
         FooterComponent,
         SideNavComponent,
+        ScrollButtonComponent,
         HomeComponent,
         ProductsComponent,
         CropsComponent,
         DocumentsComponent,
         ContactsComponent,
-        NotFoundComponent
+        NotFoundComponent,
     ],
     imports: [
         BrowserModule,
