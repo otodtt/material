@@ -20,21 +20,24 @@
                         [routerLink]="page.link"
                         (click)="onCloseSideMenu()"
                         (click)="addRemoveClass(i)"
-                        (click)="openClosePanel(i, page.id)"
+                        (click)="openClosePanel(page.id)"
                         class="list-group-item">
                             {{ page.name | uppercase }}
                     </a>
                     <a mat-button
                         *ngIf="page.subPage !== null"
-                        (click)="openClosePanel(i, page.id)"
+                        (click)="openClosePanel(page.id)"
                         class="list-group-item">
                             <span class="example-spacer"></span>
                             <mat-icon *ngIf="(!isOpenPanel || panelCheck !== page.id) && page.subPage !== null" class="example-icon">add</mat-icon>
                             <mat-icon *ngIf="isOpenPanel && panelCheck === page.id && page.subPage !== null" class="example-icon open-panel">expand_less</mat-icon>
                             {{ page.name | uppercase }}
                     </a>
-                    <ul class="nav-second-level"
-                    *ngIf="isOpenPanel && panelCheck === page.id">
+                    <ul 
+                        id="panel{{page.id}}"
+                        class="nav-second-level"
+                        *ngIf="isOpenPanel && panelCheck === page.id"
+                    >
                         <li *ngFor="let sp of  page.subPage; let is = index" 
                         [ngClass]="checkSPIndex === is && checkPage === i ? 'active': '' ">
                             <a mat-button 

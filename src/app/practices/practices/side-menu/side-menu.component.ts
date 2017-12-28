@@ -32,10 +32,23 @@ export class SideMenuComponent implements OnInit  {
         this.navClose.emit(false);
     }
 
-    openClosePanel(index: number, id: any) {
-        this.isOpenPanel = true;
+    // openClosePanel(index: number, id: any) {
+    //     this.isOpenPanel = true;
+    //     this.panelCheck = index;
+    // }
+    openClosePanel(index: number) {
         this.panelCheck = index;
+        this.isOpenPanel = !this.isOpenPanel;
+        const x = document.getElementById('panel' + index);
+        if (x === null) {
+            this.isOpenPanel = true;
+            // this.checkPage = 0;
+        }
+        // else {
+        //     // this.checkPage = 1;
+        // }
     }
+
     addClass(index: number, spIndex: number) {
         this.isActiveClass = true;
         this.checkPage = index;
