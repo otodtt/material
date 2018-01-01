@@ -1,15 +1,32 @@
 import { Component, OnInit } from '@angular/core';
+import { SeoService } from '../../../../../common/services/SeoService';
+import { ChangeBreadcrumbService } from '../../../../../common/services/changeBreadcrumb.service';
 
 @Component({
-  selector: 'prz-triticum',
   templateUrl: './triticum.component.html',
-  styleUrls: ['./triticum.component.scss']
+  styleUrls: ['../../pages.scss']
 })
 export class TriticumComponent implements OnInit {
+    private title = 'ДРЗП - Пшеница';
+    private description = 'Добра Растителнозащитна Пракатика при пшеница. Борба с болести, неприятели и плевели при пшеницата';
+    private keywords = 'пшеница, болести, неприятели, плевели, ПРЗ, ПИВ';
 
-  constructor() { }
+    breadcrumbName = 'Пшеница';
 
-  ngOnInit() {
-  }
+    showHide: number;
 
+    constructor(
+        private seoService: SeoService,
+        private changeBreadcrumbService: ChangeBreadcrumbService,
+    ) {
+        this.seoService.addTitle(this.title);
+        this.seoService.setMeta(this.description, this.keywords);
+    }
+
+    ngOnInit() {
+        this.changeBreadcrumbService.emitName(this.breadcrumbName);
+    }
+    pivShowHide(index) {
+
+    }
 }

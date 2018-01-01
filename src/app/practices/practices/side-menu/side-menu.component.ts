@@ -1,14 +1,17 @@
-import { Component, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter, OnInit, ChangeDetectorRef, AfterViewInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs/Subscription';
+import {MediaMatcher} from '@angular/cdk/layout';
 
 import pages from './Pages';
 import { ChangeBreadcrumbService } from '../../../common/services/changeBreadcrumb.service';
+import { ResizeService } from '../../../common/services/ResizeService';
 
 @Component({
     selector: 'prz-side-menu',
     templateUrl: './side-menu.component.html',
     styleUrls: ['./side-menu.component.scss']
 })
-export class SideMenuComponent implements OnInit  {
+export class SideMenuComponent implements OnInit, AfterViewInit, OnDestroy  {
     public pages = pages;
     public isOpenPanel = false;
     public isActiveClass = true;
@@ -16,9 +19,24 @@ export class SideMenuComponent implements OnInit  {
     public checkPage = 0;
     public checkSPIndex = null;
 
+    mode = false;
+    openedQuery: MediaQueryList;
+
+    private resizeSubscription: Subscription;
+    private _mobileQueryListener: () => void;
+
     @Output() navClose = new EventEmitter<boolean>();
 
-    constructor(private changeBreadcrumb: ChangeBreadcrumbService) { }
+    constructor(
+        private changeBreadcrumb: ChangeBreadcrumbService,
+        private resizeService: ResizeService,
+        changeDetectorRef: ChangeDetectorRef,
+        media: MediaMatcher
+    ) {
+        this._mobileQueryListener = () => changeDetectorRef.detectChanges();
+        this.openedQuery = media.matchMedia('(max-width: 850px)');
+        this.openedQuery.addListener(this._mobileQueryListener);
+    }
 
     ngOnInit() {
         this.changeBreadcrumb.closeDrawer$.subscribe(
@@ -27,26 +45,28 @@ export class SideMenuComponent implements OnInit  {
             }
         );
     }
-
-    onCloseSideMenu() {
-        this.navClose.emit(false);
+    ngAfterViewInit() {
+        this.resizeSubscription = this.resizeService.onResize$
+        .subscribe(size => {
+            if (size.innerWidth < 850) {
+                this.mode = true;
+            }
+        });
     }
 
-    // openClosePanel(index: number, id: any) {
-    //     this.isOpenPanel = true;
-    //     this.panelCheck = index;
-    // }
+    onCloseSideMenu() {
+        if (this.mode === true || this.openedQuery.matches === true) {
+            this.navClose.emit(false);
+        }
+    }
+
     openClosePanel(index: number) {
         this.panelCheck = index;
         this.isOpenPanel = !this.isOpenPanel;
         const x = document.getElementById('panel' + index);
         if (x === null) {
             this.isOpenPanel = true;
-            // this.checkPage = 0;
         }
-        // else {
-        //     // this.checkPage = 1;
-        // }
     }
 
     addClass(index: number, spIndex: number) {
@@ -58,5 +78,12 @@ export class SideMenuComponent implements OnInit  {
         this.isActiveClass = true;
         this.checkPage = index;
         this.checkSPIndex = null;
+    }
+
+    ngOnDestroy() {
+        this.openedQuery.removeListener(this._mobileQueryListener);
+        if (this.resizeSubscription) {
+          this.resizeSubscription.unsubscribe();
+        }
     }
 }

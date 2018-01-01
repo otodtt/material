@@ -17,14 +17,15 @@ export class PracticesComponent implements OnInit, OnDestroy, AfterViewInit {
     openedQuery: MediaQueryList;
     mediumQuery: MediaQueryList;
     smallQuery: MediaQueryList;
-    private resizeSubscription: Subscription;
 
+    private resizeSubscription: Subscription;
     private _mobileQueryListener: () => void;
 
     constructor(
         private changeBreadcrumb: ChangeBreadcrumbService,
         private resizeService: ResizeService,
-        changeDetectorRef: ChangeDetectorRef, media: MediaMatcher
+        changeDetectorRef: ChangeDetectorRef,
+        media: MediaMatcher
     ) {
         this._mobileQueryListener = () => changeDetectorRef.detectChanges();
         this.openedQuery = media.matchMedia('(max-width: 850px)');

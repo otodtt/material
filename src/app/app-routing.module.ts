@@ -15,8 +15,7 @@ export const routes: Routes = [
     { path: 'crops', component: CropsComponent },
     { path: 'practices', loadChildren: './practices/practices.module#PracticesModule'},
     { path: 'documents', component: DocumentsComponent },
-    { path: 'contacts', component: ContactsComponent },
-
+    { path: 'contacts', component: ContactsComponent }
 ];
 
 

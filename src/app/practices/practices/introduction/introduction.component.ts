@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ChangeBreadcrumbService } from '../../../common/services/changeBreadcrumb.service';
+import { SeoService } from '../../../common/services/SeoService';
 
 @Component({
   selector: 'prz-introduction',
@@ -8,13 +9,20 @@ import { ChangeBreadcrumbService } from '../../../common/services/changeBreadcru
   styleUrls: ['./introduction.component.scss']
 })
 export class IntroductionComponent implements OnInit {
-    // breadcrumbTitle = 'ДРЗП';
+    private title = 'Правила и Принципи на ДРЗП';
+    private description = 'Правила и Принципи за Добри Растителнозащитни Пракатики в земеделието.';
+    private keywords = 'култура, култури, растителнозащитни, пракатики, ДРЗП';
     breadcrumbName = 'Правила';
 
-    constructor( private changeBreadcrumb: ChangeBreadcrumbService ) { }
+    constructor(
+        private seoService: SeoService,
+        private changeBreadcrumb: ChangeBreadcrumbService,
+    ) {
+        this.seoService.addTitle(this.title);
+        this.seoService.setMeta(this.description, this.keywords);
+    }
 
     ngOnInit() {
-        // this.changeBreadcrumb.emitTitle(this.breadcrumbTitle);
         this.changeBreadcrumb.emitName(this.breadcrumbName);
     }
 }

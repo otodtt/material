@@ -18,7 +18,6 @@ $white: rgb(255, 255, 255);
 $gray: rgb(100, 100, 100);
 
 .mat-toolbar {
-    // height: 70px;
     background: $green-transparent;
 }
 .a-top {
@@ -31,7 +30,6 @@ $gray: rgb(100, 100, 100);
     position: relative;
     .mat-icon-button {
         color: $white;
-        // padding: inherit;
     }
     .nav-dropdown {
         display: none;
@@ -117,10 +115,10 @@ $gray: rgb(100, 100, 100);
     color: rgb(255, 255, 255)
 }
 #aa-practices, #aa-documents, #aa-products, #aa-crops, #aa-contacts, #aa-management  {
-    height: 220px;
+    height: 200px;
     background-size: cover;
     padding-bottom: 0 !important;
-    font: 20px/32px Roboto,"Helvetica Neue",sans-serif;
+    // font: 20px/32px Roboto,"Helvetica Neue",sans-serif;
     font-weight: normal;
 }
 #header-email {

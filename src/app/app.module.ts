@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 
 // Router
@@ -9,6 +9,10 @@ import { AppRoutingModul } from './app-routing.module';
 // Services
 import { ChangeBreadcrumbService } from './common/services/changeBreadcrumb.service';
 import { ResizeService } from './common/services/ResizeService';
+import { SeoService } from './common/services/SeoService';
+
+// Directives
+// import { AnchorToDirective } from './common/directives/AnchorToDirective';
 
 // Modules
 import { MaterialModule } from './common/material/material.module';
@@ -50,7 +54,11 @@ import { ContactsComponent } from './contacts/contacts.component';
         AppRoutingModul,
         PracticesModule
     ],
-    providers: [ChangeBreadcrumbService, ResizeService],
+    providers: [
+        ChangeBreadcrumbService,
+        ResizeService,
+        SeoService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

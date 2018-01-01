@@ -1,9 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LazyLoadModule } from '@greg-md/ng-lazy-load';
 
 
 // Routing
 import { PracticesRoutingModul } from './practices-routing.module';
+
+// Directives
+import { AnchorToDirective } from '../common/directives/AnchorToDirective';
 
 // Header and Footer Module
 import { ShareComponentsModule } from '../common/share.components.module';
@@ -19,9 +23,6 @@ import { AvenaComponent } from './practices/pages/grains/avena/avena.component';
 import { SecaleComponent } from './practices/pages/grains/secale/secale.component';
 import { ZeaComponent } from './practices/pages/grains/zea/zea.component';
 import { RodentiaComponent } from './practices/pages/grains/rodentia/rodentia.component';
-
-// Management
-import { ManagementComponent } from './management/management/management.component';
 import { PhaseolusComponent } from './practices/pages/beans/phaseolus/phaseolus.component';
 import { CicerComponent } from './practices/pages/beans/cicer/cicer.component';
 import { GlycineComponent } from './practices/pages/beans/glycine/glycine.component';
@@ -35,15 +36,21 @@ import { GossypiumComponent } from './practices/pages/technical/gossypium/gossyp
 import { HelianthusComponent } from './practices/pages/technical/helianthus/helianthus.component';
 import { NicotianaComponent } from './practices/pages/technical/nicotiana/nicotiana.component';
 
+// Management
+import { ManagementComponent } from './management/management/management.component';
+
+
 
 @NgModule({
   imports: [
     CommonModule,
     PracticesRoutingModul,
     ShareComponentsModule,
-    MaterialModule
+    MaterialModule,
+    LazyLoadModule
   ],
   declarations: [
+    AnchorToDirective,
     PracticesComponent,
     IntroductionComponent,
     SideMenuComponent,

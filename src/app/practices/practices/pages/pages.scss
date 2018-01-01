@@ -1,0 +1,965 @@
+:host {
+    display: block;
+}
+// body {
+//     margin: 0 auto; 
+// }
+/* =======================================================
+    Нулиране на row класа и добавяне на margin и pading
+========================================================= */
+#wrap_lmenu_txt {
+    background-color: #F8F8F8;
+    margin: 0;
+    padding: 0;
+    // margin-top: 5px;
+    // padding-top: 5px;
+}
+// #wrap_lmenu_txt .row {
+//     margin-left: 0;
+//     margin-right: 0;
+//     padding-left: 15px;
+//     padding-right: 15px;
+// }
+
+/* =======================================================
+  КРАЙ Нулиране на row класа и добавня на margin pading
+========================================================= */
+/*=================
+  Общи за всички
+=================*/
+#prz-loader {
+    height: 800px;
+}
+// .bold{
+//     font-weight: bold;
+// }
+h1, h2, h3, h4 {
+    color: #008000;
+}
+h4 {
+    margin-bottom: 5px;
+}
+h3 {
+    margin-bottom: 10px;
+}
+// a {
+//     text-decoration: none;
+// }
+p {
+    margin: 0;
+    margin-bottom: 1em;
+}
+.row {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding-left: 2%;
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.text-indent {
+    text-indent: 1.5em;
+}
+.italic {
+    font-style: italic;
+}
+h4.my_class_h4 {
+    text-decoration: underline;
+    margin-bottom: 5px;
+}
+.underline{
+    text-decoration: underline;
+}
+.italic{
+    font-style: italic;
+}
+.latin_name, .active-substance {
+    font-style: italic;
+}
+.text-indent{
+    text-indent: 1.5em;
+}
+
+
+.phases_link {
+    color: #0815b4;
+}
+.phase{
+    margin: 0;
+}
+.phase_bottom{
+    margin-bottom: 0;
+}
+.back_link_bottom{
+    color: #d19c3e;
+}
+.back_link_bottom:hover{
+    color: #0815b4;
+}
+/*=======================
+    КРАЙ Общи за всички
+========================*/
+/*======================
+    Горе Лого МЗХ и НСРЗ
+ =======================*/
+ .name-header{
+    margin-bottom: 40px;
+    h2 {
+        color: initial;
+        font-size: 2em
+    }
+}
+.plant-protect, .forest {
+    margin: 10px 0;
+    padding: 0;
+    color: initial;
+}
+#content-logo{
+    display: block;
+    margin: 0;
+    h4 {
+        margin: 0;
+        margin-bottom: 8px
+    }
+    #plant-protect{
+        color: #343434;
+        font-weight: 700
+    }
+    #forest{
+        color: #343434;
+        font-weight: 500
+    }
+}
+
+.number-eppo {
+    margin: 0;
+}
+
+#authors-wrap{
+    padding-left: 35%;
+    .authors{
+        text-decoration: underline;
+    }
+    .doctor {
+        border: 1px solid #343434;
+    }
+}
+
+
+// #plant-protect{
+//     color: #343434;
+// }
+// #forest{
+//     color: #343434;
+// }
+
+/*===========================
+    КРАЙ Горе Лого МЗХ и НСРЗ 
+ ============================*/
+ /*================================
+    Изтегляне на Приложения
+=================================*/
+.my_addendum {
+    margin-top: 20px;
+    
+    .span_addendum {
+        border-top: 1px solid black;
+        font-weight: bolder;
+        .href_addendum {
+            font-style: italic;
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.87);
+        }
+    }
+}
+/*================================
+    КРАЙ Изтегляне на Приложения
+=================================*/
+
+/*=======================
+ ЗА ИЗБОР НА НЕПРИЯТЕЛ
+========================*/
+#pest_menu_links  {
+    position: relative;
+    padding: 0 15px;
+    text-decoration: none;
+    #menu_a {
+        padding: 0;
+        li {
+            margin: 8px 0;
+            list-style: none;
+            a {
+                display: block;
+                mat-icon {
+                    vertical-align: middle;
+                    font-size: 1.2em;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+#pest_menu_links a:hover mat-icon {
+    transform: translateX(2px);
+    color: #d19c3e;
+}
+#pest_menu_links li:hover a{
+    color: #028102;
+    text-decoration: underline;
+}
+/*============================
+   КРАЙ ЗА ИЗБОР НА НЕПРИЯТЕЛ
+=============================*/
+
+.aa-title{
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+/* =======================
+  ЗЕЛЕНАТА ЛИНИЯ
+==========================*/
+/* .aa-title {
+    display: inline;
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.aa-title p {
+    font-size: 18px;
+    padding: 0 50px;
+}
+.aa-title span {
+    width: 2px;
+    height: 15px;
+    display: inline-block;
+    position: relative;
+}
+.aa-title span:before {
+    content: '';
+    right: 4px;
+    top: 7px;
+    position: absolute;
+    width: 100px;
+    height: 2px;
+}
+.aa-title span:after {
+    content: '';
+    left: 4px;
+    top: 7px;
+    position: absolute;
+    width: 100px;
+    height: 2px;
+} */
+/*========================
+  КРАЙ ЗЕЛЕНАТА ЛИНИЯ
+===========================*/
+
+
+
+/*=======================
+    За малките снимки
+ ========================*/
+ /* .pest-image-container {
+     margin-left: 10px;
+ } */
+//  .products{
+//     display: flex;
+// }
+// .products li{
+//     margin: auto;
+//     flex-direction: column;
+//     justify-content: center;
+//     vertical-align: middle;
+//     flex-grow: 1;
+// }
+.row {
+    .pest-description-container {
+        display: table-cell;
+        vertical-align: top;
+        padding-right: 1%;
+    }
+    .pest-image-container{
+        display: table-cell;
+        vertical-align: top;
+        padding-right: 1%;
+        width: 18%;
+        // margin-top: 20px;
+        .products{
+            overflow: hidden;
+            padding: 15px;
+            text-align: center;
+            background: white;
+            box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+            li {
+                list-style: none;
+                margin: 0 0 20px 0;
+                a {
+                    text-decoration: none;
+                    color: #666766;
+                    img {
+                        border: 4px solid #c0c0c0;
+                        max-width: 100%;
+                    }
+                    img:hover {
+                        color: #40c360;
+                        border-color: #40c360;
+                    }
+                    .title_thumb {
+                        font-size: 0.8em;
+                    }
+                }
+            }
+        }
+        .products *:last-child{
+            margin: 0 0 5px 0;
+        }
+    }
+}
+
+
+
+// .products li{
+//     list-style: none;
+//     margin: 0 0 20px 0;
+//     // display: inline-block;
+// }
+// .products *:last-child{
+//     margin: 0 0 5px 0;
+// }
+// .products li a{
+//     text-decoration: none;
+//     color: #666766;
+//     // font-size: 0.8em;
+// }
+// .products li a img{
+//     // max-width: 100%;
+//     border: 4px solid #c0c0c0;
+//     // display: inline-block;
+// }
+// .products li a img:hover{
+//     color: #40c360;
+//     border-color: #40c360;
+// }
+
+/*=======================
+   КРАЙ За малките снимки
+ ========================*/
+
+
+/*==========================
+  Презаписване на темплейта
+============================*/
+// #good-practice, #h-good-practice{
+//     color: #008000;
+// }
+/*=================================
+    КРАЙ Презаписване на темплейта
+==================================*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* .fancybox-custom .fancybox-skin {
+    box-shadow: 0 0 50px #222; } */
+
+
+
+// @font-face {
+//     font-family: "My Custom Font";
+//     src: url(../../../assets/fonts/A_SAO___.ttf) format("truetype"); }
+// h2.customfont {
+//     font-family: "My Custom Font", Verdana, Tahoma;
+//     font-size: 3em;
+//     text-align: center;
+//     font-weight: bold;
+    
+//     color: #333333;
+// }
+
+
+
+
+/*=====================================
+    Използва се смо в интродукшъна
+ =====================================*/
+
+
+/*================== ВЪНШЕН ЛИНК ====================*/
+// .external_link{
+//     color: #0000ff;
+// }
+// .external_link:hover{
+//     text-decoration: underline;
+// }
+/*================== ВЪНШЕН ЛИНК ====================*/
+/*=====================================
+   КРАЙ Използва се смо в интродукшъна
+ =====================================*/
+
+/* ===================
+    АВТОРИ НА СНИМКИ
+====================== */
+.my_panel-body {
+    /* background-color: #F8F8F8; */
+    font-size: 0.6em;
+}
+.my_panel-body p {
+    margin: 0 0 3px;
+}
+// .authors-panel-title {
+//     font-size: 0.7em;
+// }
+/* ======================
+    КРАЙ АВТОРИ НА СНИМКИ
+====================== */
+
+
+/*=================================================
+ Панелите за БАК ЛИНК и ПИВ и таблицата за ПИВ
+=================================================*/
+.panel-warning {
+    margin-top: 20px;
+    margin-bottom: 0;
+} 
+.panel-success {
+    margin-top: 20px;
+    margin-bottom: 3px;
+}
+.panel-heading {
+    padding: 5px 15px;
+}
+.panel-success .panel-heading a {
+    color: #028102;
+}
+
+.panel-back-link {
+    border: none;
+    box-shadow: none;
+    border-bottom: 2px solid #d19c3e8f;
+}
+.panel-back-link > .panel-heading-back-link {
+    color: #F8F8F8;
+    background-color: #F8F8F8;
+    border: none;
+}
+.table-threshold {
+    margin-top: 0;
+}
+.table-threshold .panel-body {
+    padding: 5px;
+}
+.table-threshold .col-md-12 {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.piv_table {
+    // font-size: 14px;
+    border: 1px solid #8f9e82;
+}
+.piv_table td {
+    border: 1px solid #8f9e82;
+}
+.piv_table thead {
+    background-color: #dff0d8;
+}
+.piv_table th {
+    text-align: center;
+}
+.piv_table td {
+    text-align: left;
+    padding-left: 5px;
+    vertical-align: middle;
+}
+.piv_table>tbody>tr>td {
+    vertical-align: middle !important;
+}
+.piv_table .tr_name td {
+    text-align: center;
+    background-color: #f7f4d1;
+    font-weight: bolder;
+    color: #028102;
+}
+.piv_table .tr_name_pest td {
+    text-align: center;
+    background-color: #f7f4d1;
+    font-weight: bolder;
+    color: #3366FF;
+}
+.tr_hordeum {
+    font-weight: bolder;
+    background-color: #f0ffff;
+}
+/*=====================================================
+    КРАЙ Панелите за БАК ЛИНК и ПИВ и таблицата за ПИВ
+=======================================================*/
+
+
+
+/*================================
+    Таблица BBCH
+=================================*/
+.wrap_table {
+    padding-left: 25px;
+    padding-right: 15px;
+}
+/*================================
+    КРАЙ Таблица BBCH
+=================================*/
+
+
+
+/*==================
+ RESPONSIVE DESIGN
+====================*/
+// #left-nav-my{
+//     padding: 0;
+//     margin: 0;
+// }
+/*#nav_content{*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+    /*width: 240px;*/
+/*}*/
+.affix {
+    position: fixed;
+    top: 80px;
+    width: 240px;
+    z-index: 1;
+}
+
+@media (max-width: 1200px){
+    /*======= OK ======= */
+    /* #myScrollspy{
+        padding: 0;
+    } */
+}
+@media (max-width: 993px){
+    /*======= OK ======= */
+    .title_thumb{
+        display: none;
+    }
+}
+@media (max-width: 992px){
+    .pest-description-container {
+        display: block !important;
+        // display: table-cell;
+        // vertical-align: top;
+        // padding-right: 1%;
+    }
+    .pest-image-container{
+        // display: block !important;
+        // width: 100%;
+        .products{
+            display: flex;
+            padding: 15px !important;
+            // padding-right: 20px !important;;
+            li {
+                margin: 0 !important;
+                margin-right: 3px !important;
+                padding-right: 10px !important;
+                flex-direction: column;
+                justify-content: center;
+                vertical-align: middle;
+                flex-grow: 1;
+                // a {
+                //     // text-decoration: none;
+                //     // text-align: match-parent;
+                //     img {
+                //         // max-width: 100%;
+                //         // margin-right: 3px !important;
+                //     }
+                // }
+            }
+        }
+        .products *:last-child{
+            margin: 0 !important;
+            margin-right: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
+    // .products{
+    //     display: flex;
+    // }
+    // .products li{
+    //     margin: auto;
+    //     flex-direction: column;
+    //     justify-content: center;
+    //     vertical-align: middle;
+    //     flex-grow: 1;
+    // }
+    // .products *:last-child{
+    //     margin: auto;
+    // }
+    // .products li a{
+    //     text-decoration: none;
+    //     text-align: match-parent;
+    //     // font-size: 0.8em;
+    // }
+    // .products li a img{
+    //     max-width: 100%;
+    // }
+    /*======= OK ======= */
+    
+    // .pest-description-container{
+    //     width: 100%;
+    // }
+    // .pest-image-container{
+    //     width: 100%;
+    //     margin-top: 5px;
+    // }
+    
+    /*.toggle-btn{*/
+        /*display: none;*/
+    /*}*/
+    /*.title_thumb{*/
+        /*display: none;*/
+    /*}*/
+    /*.affix{*/
+        /*display: none;*/
+        /*/!*width: 100%;*!/*/
+    /*}*/
+    /* #myScrollspy{
+        padding: 0 15px;
+    } */
+    /*.aa-title{*/
+        /*padding-top: 50px;*/
+        /*margin-top: -50px;*/
+    /*}*/
+}
+@media (max-width: 991px){
+    /*======= OK ======= */
+    // .affix{
+    //     /*position: relative;;*/
+    //     display: none;
+    // }
+
+}
+@media (max-width: 767px){
+    // .products li{
+    //     margin: 3px;
+    // }
+    /*======= OK ======= */
+}
+@media (max-width: 690px){
+    /*======= OK ======= */
+    // #plant-protect{
+    //     font-size: 14px;
+    // }
+    // #forest{
+    //     font-size: 14px;
+    // }
+    // #good-practice{
+    //     font-size: 30px;
+    // }
+    // #h-good-practice{
+    //     font-size: 26px;
+    // }
+    #stamp{
+        max-width: 90%;
+    }
+
+}
+@media (max-width: 580px){
+    #stamp{
+        max-width: 75%;
+    }
+    #authors-wrap {
+        padding-left: 25%;
+    }
+    /*======= OK ======= */
+    // .-single . p {
+    //     font-size: 13px;
+    // }
+    // #plant-protect{
+    //     font-size: 12px;
+    // }
+    // #forest{
+    //     font-size: 12px;
+    // }
+    // #good-practice{
+    //     font-size: 20px;
+    // }
+    // #h-good-practice{
+    //     font-size: 18px;
+    // }
+    // .-single . h3 {
+    //     font-size: 15px;
+    //     margin-bottom: 5px;
+    // }
+    // h2.customfont {
+    //     font-size: 2em;
+    // }
+    
+    // #logo-image{
+    //     width: 60px;
+    // }
+    // .logo-top {
+    //     margin-top: 30px;
+    //     margin-bottom: 10px;
+    // }
+    // .logo {
+    //     margin-top: 30px;
+    //     margin-bottom: 10px;
+    // }
+    // .back_link_bottom {
+    //     font-size: 14px;
+    // }
+    
+
+}
+@media (max-width: 460px){
+    .products li a img{
+        border: 2px solid #c0c0c0;
+    }
+    #stamp{
+        max-width: 60%;
+    }
+    #authors-wrap {
+        padding-left: 0;
+    }
+    /*======= OK ======= */
+    // .-single . p {
+    //     font-size: 13px;
+    // }
+    // h2.customfont {
+    //     font-size: 1.4em;
+    // }
+    // #good-practice{
+    //     font-size: 15px;
+    // }
+    // #h-good-practice{
+    //     font-size: 14px;
+    // }
+    // .-single . h3 {
+    //     font-size: 14px;
+    //     margin-bottom: 5px;
+    // }
+    // .-single . h4 {
+    //     font-size: 13px;
+    //     margin-bottom: 5px;
+    // }
+    // #plant-protect{
+    //     font-size: 11px;
+    // }
+    // #forest{
+    //     font-size: 11px;
+    // }
+    // #logo-image{
+    //     width: 50px;
+    // }
+    
+    // .logo-top {
+    //     margin-top: 20px;
+    //     margin-bottom: 10px;
+    // }
+    // .logo {
+    //     margin-top: 20px;
+    //     margin-bottom: 10px;
+    // }
+    
+    
+    // .back_link_bottom {
+    //     font-size: 16px;
+    // }
+    // .back_link_wrap{
+    //     margin-top: 20px;
+    // }
+    // .table > tbody > tr > td {
+    //     padding: 4px;
+    // }
+    // #menu_a li a {
+    //     // font-size: 13px;
+    //     margin: 0 12px;
+    // }
+    // .aa-title{
+    //     margin-top: 20px;
+    //     margin-bottom: 60px;
+    // }
+    // h2.customfont{
+    //     font-family: "Poppins", sans-serif;
+    // }
+    // .scrollToTop{
+    //     line-height: 35px;
+    //     width: 40px;
+    //     height: 40px;
+    //     right: 15px;
+    // }
+
+}
+@media (max-width: 360px){
+    #stamp{
+        max-width: 60%;
+    }
+    #authors-wrap {
+        padding-left: 0;
+        font-size: 12px;
+    }
+    .number-eppo {
+        font-size: 12px;
+    }
+    .pest-image-container{
+        .products{
+            
+            li {
+                a {
+                    img {
+                        border: 2px solid #c0c0c0 !important;
+                    }
+                }
+            }
+        }
+        .products *:last-child{
+            margin: 0 !important;
+        }
+    }
+    /*======= OK ======= */
+    // .-single . p {
+    //     font-size: 12px;
+    // }
+    // .-details h2 {
+    //     line-height: 20px;
+    // }
+    // h2.customfont {
+    //     font-size: 1em;
+    // }
+    // #good-practice{
+    //     font-size: 15px;
+    // }
+    // #h-good-practice{
+    //     font-size: 12px;
+    // }
+    // .-single . h3 {
+    //     font-size: 12px;
+    //     margin-bottom: 2px;
+    // }
+    // .-single . h4 {
+    //     // font-size: 11px;
+    //     margin-bottom: 5px;
+    // }
+    // #aa-property-header .aa-property-header-inner h2 {
+    //     margin-top: 40px;
+    //     // font-size: 23px;
+    // }
+    // #plant-protect{
+    //     font-size: 10px;
+    // }
+    // #forest{
+    //     font-size: 10px;
+    // }
+    // #logo-image{
+    //     width: 30px;
+    // }
+    
+    // .logo-top {
+    //     margin-top: 10px;
+    //     margin-bottom: 5px;
+    // }
+    // .logo {
+    //     margin-top: 10px;
+    //     margin-bottom: 5px;
+    // }
+    
+    // .products li{
+    //     float: none;
+    //     margin: 3px;
+    //     padding: 0 0 0 15%;
+    //     width: 100%;
+    // } 
+    // .back_link_bottom {
+    //     font-size: 16px;
+    // }
+    // .back_link_wrap{
+    //     margin-top: 20px;
+    // }
+    // #article_content{
+    //     padding: 0.7px;
+    // }
+    /* #myScrollspy{
+        padding: 0;
+    } */
+
+}
+@media (max-width: 320px){
+    #authors-wrap {
+        padding-left: 0;
+    }
+    h1, h2 {
+        font-size: 1.3em;
+    }
+    .customfont {
+        font-size: 1.7em !important;
+    }
+    #stamp{
+        max-width: 60%;
+    }
+    /*======= OK ======= */
+    // .-single . p {
+    //     font-size: 10px;
+    // }
+    // .-details h2 {
+    //     /*font-size: 25px;*/
+    //     line-height: 20px;
+    // }
+    // h2.customfont {
+    //     font-size: 1em;
+    // }
+    // #good-practice{
+    //     font-size: 14px;
+    // }
+    // #h-good-practice{
+    //     font-size: 11px;
+    // }
+    // .-single . h3 {
+    //     // font-size: 11px;
+    //     margin-bottom: 2px;
+    // }
+    // .-single . h4 {
+    //     // font-size: 10px;
+    //     margin-bottom: 5px;
+    // }
+    // #aa-property-header .aa-property-header-inner h2 {
+    //     margin-top: 40px;
+    //     // font-size: 23px;
+    // }
+    // #plant-protect{
+    //     font-size: 9px;
+    // }
+    // #forest{
+    //     font-size: 9px;
+    // }
+    // #logo-image{
+    //     width: 30px;
+    // }
+    // #stamp{
+    //     max-width: 40%;
+    // }
+    // .logo-top {
+    //     margin-top: 10px;
+    //     margin-bottom: 5px;
+    // }
+    // .logo {
+    //     margin-top: 10px;
+    //     margin-bottom: 5px;
+    // }
+    
+
+    /* .products li{
+        float: none;
+        margin: 3px;
+        padding: 0 0 0 6%;
+        width: 100%;
+    } */
+    // .back_link_bottom {
+    //     font-size: 14px;
+    // }
+    // .back_link_wrap{
+    //     margin-top: 20px;
+    // }
+}
+
