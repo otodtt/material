@@ -14,6 +14,7 @@ export class TriticumComponent implements OnInit {
     breadcrumbName = 'Пшеница';
 
     showHide: number;
+    panelOpenState = false;
 
     constructor(
         private seoService: SeoService,

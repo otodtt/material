@@ -1,4 +1,4 @@
-import { trigger, state, style, transition, animate, keyframes } from '@angular/core';
+import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
 
 
 // export const MenuButtonAnimation = trigger('menuState', [
@@ -25,7 +25,6 @@ export const MenuButtonAnimation = trigger('rotatedState', [
     state('default-sub', style({
         transform: 'translateX(120%)',
         opacity: 0,
-        // position: 'absolute'
         display: 'none'
     })),
     state('shown', style({
