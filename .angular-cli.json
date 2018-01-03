@@ -20,9 +20,13 @@
       "prefix": "prz",
       "styles": [
         "styles.scss",
-        "theme.scss"
+        "theme.scss",
+		    "../node_modules/lightbox2/dist/css/lightbox.min.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.js",
+        "../node_modules/lightbox2/dist/js/lightbox.min.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

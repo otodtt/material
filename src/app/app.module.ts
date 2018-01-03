@@ -52,7 +52,7 @@ import { ContactsComponent } from './contacts/contacts.component';
         BrowserAnimationsModule,
         ShareComponentsModule,
         AppRoutingModul,
-        PracticesModule
+        PracticesModule,
     ],
     providers: [
         ChangeBreadcrumbService,
