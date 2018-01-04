@@ -14,6 +14,9 @@ import { AnchorToDirective } from '../common/directives/AnchorToDirective';
 import { ShareComponentsModule } from '../common/share.components.module';
 import { MaterialModule } from '../common/material/material.module';
 
+// Shared
+import { DialogComponent } from './practices/shared/dialog/dialog.component';
+
 // Practices
 import { PracticesComponent } from './practices/practices.component';
 import { SideMenuComponent } from './practices/side-menu/side-menu.component';
@@ -52,6 +55,7 @@ import { ManagementComponent } from './management/management/management.componen
   ],
   declarations: [
     AnchorToDirective,
+    DialogComponent,
     PracticesComponent,
     IntroductionComponent,
     SideMenuComponent,
@@ -75,6 +79,6 @@ import { ManagementComponent } from './management/management/management.componen
     HelianthusComponent,
     NicotianaComponent,
   ],
-  entryComponents: [SideMenuComponent],
+  entryComponents: [SideMenuComponent, DialogComponent],
 })
 export class PracticesModule { }

@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import {MatDialog} from '@angular/material';
+
 import { SeoService } from '../../../../../common/services/SeoService';
 import { ChangeBreadcrumbService } from '../../../../../common/services/changeBreadcrumb.service';
+
+import { DialogComponent } from '../../../shared/dialog/dialog.component';
 
 @Component({
   templateUrl: './triticum.component.html',
@@ -14,11 +18,12 @@ export class TriticumComponent implements OnInit {
     breadcrumbName = 'Пшеница';
 
     showHide: number;
-    panelOpenState = false;
+    panelOpenState = 'test';
 
     constructor(
         private seoService: SeoService,
         private changeBreadcrumbService: ChangeBreadcrumbService,
+        public dialog: MatDialog
     ) {
         this.seoService.addTitle(this.title);
         this.seoService.setMeta(this.description, this.keywords);
@@ -26,6 +31,12 @@ export class TriticumComponent implements OnInit {
 
     ngOnInit() {
         this.changeBreadcrumbService.emitName(this.breadcrumbName);
+    }
+
+    openDialog() {
+        this.dialog.open(DialogComponent, {
+            data: { test: this.panelOpenState }
+        });
     }
     pivShowHide(index) {
 

@@ -446,33 +446,26 @@
     </div>
     <div class="row-back">
         <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
-                    <a  class="back_link_bottom"
-                        przAnchorTo target="#pest_menu"
-                        
-                        title="към всички неприятели"
-                        >
-                        
-                        виж друг неприятел
-                    </a>
+            <div 
+                class="panel-success text-center" >
+                <div class="panel-heading">
+                    <button mat-button class="piv-button" (click)="openDialog()">
+                        <span class="full-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                        <span class="small-piv">ВИЖ ПИВ</span>
+                    </button>
                 </div>
             </div>
         </div>
         <div class="col-md-6">
-            <div 
-                class="panel panel-success text-center" 
-                style="cursor: pointer;"
-                (click)="pivShowHide(1)"
-            >
-                <div class="panel-heading">
-                    <a> ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</a>
+            <div class="panel-warning text-center">
+                <div class="panel-heading ">
+                    <a mat-button class="back_link_bottom" przAnchorTo target="#pest_menu" title="към всички неприятели"> виж друг неприятел</a>
                 </div>
             </div>
         </div>
     </div>
     <div class="col-md-12" >
-        <div class="panel panel-success table-threshold text-center">
+        <div class="panel-success table-threshold text-center">
             <div class="panel-body">
                 <div class="col-md-12">
                     <table class="piv_table" style="width:100%" border="1">
@@ -480,7 +473,10 @@
                             <tr>
                                 <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
                                 <th>ВРЕДИТЕЛ / СТАДИЙ</th>
-                                <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                                <th>
+                                    <span class="full-name-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                                    <span class="small-name-piv">ПРАГ НА ВРЕДНИОСТ</span>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -600,32 +596,24 @@
     </div>
     <div class="row-back">
         <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
-                    <a  class="back_link_bottom"
-                        przAnchorTo target="#pest_menu"
-                        
-                        title="към всички неприятели">
-                        
+            <div class="panel-warning text-center">
+                <div class="panel-heading">
+                    <a  class="back_link_bottom" przAnchorTo target="#pest_menu" title="към всички неприятели">
                         виж друг неприятел
                     </a>
                 </div>
             </div>
         </div>
         <div class="col-md-6">
-            <div 
-                class="panel panel-success text-center" 
-                style="cursor: pointer;"
-                (click)="pivShowHide(2)"
-            >
+            <div class="panel-success text-center">
                 <div class="panel-heading">
-                    <a> ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</a>
+                    <button mat-button class="piv-button" (click)="openDialog()">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</button>
                 </div>
             </div>
         </div>
     </div>
     <div class="col-md-12" >
-        <div class="panel panel-success table-threshold text-center">
+        <div class="panel-success table-threshold text-center">
             <div class="panel-body">
                 <div class="col-md-12">
                     <table class="piv_table" style="width:100%" border="1">
@@ -633,7 +621,10 @@
                             <tr>
                                 <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
                                 <th>ВРЕДИТЕЛ / СТАДИЙ</th>
-                                <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                                <th>
+                                    <span class="full-name-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                                    <span class="small-name-piv">ПРАГ НА ВРЕДНИОСТ</span>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -657,7 +648,10 @@
                             <tr>
                                 <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
                                 <th>ВРЕДИТЕЛ / СТАДИЙ</th>
-                                <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                                <th>
+                                    <span class="full-name-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                                    <span class="small-name-piv">ПРАГ НА ВРЕДНИОСТ</span>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -681,7 +675,10 @@
                             <tr>
                                 <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
                                 <th>ВРЕДИТЕЛ / СТАДИЙ</th>
-                                <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                                <th>
+                                    <span class="full-name-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                                    <span class="small-name-piv">ПРАГ НА ВРЕДНИОСТ</span>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -776,8 +773,8 @@
     </div>
     <div class="row-back">
         <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
+            <div class="panel-warning text-center">
+                <div class="panel-heading ">
                     <a  class="back_link_bottom"
                         przAnchorTo target="#pest_menu"
                         
@@ -828,8 +825,8 @@
     </div>
     <div class="row-back">
         <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
+            <div class="panel-warning text-center">
+                <div class="panel-heading ">
                     <a  class="back_link_bottom"
                         przAnchorTo target="#pest_menu"
                         
@@ -843,7 +840,7 @@
         </div>
         <div class="col-md-6">
             <div 
-                class="panel panel-success text-center" 
+                class="panel-success text-center" 
                 style="cursor: pointer;"
                 (click)="pivShowHide(3)"
             >
@@ -854,7 +851,7 @@
         </div>
     </div>
     <div class="col-md-12" >
-        <div class="panel panel-success table-threshold text-center">
+        <div class="panel-success table-threshold text-center">
             <div class="panel-body">
                 <div class="col-md-12">
                     <table class="piv_table" style="width:100%" border="1">
@@ -862,7 +859,10 @@
                             <tr>
                                 <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
                                 <th>ВРЕДИТЕЛ / СТАДИЙ</th>
-                                <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                                <th>
+                                    <span class="full-name-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                                    <span class="small-name-piv">ПРАГ НА ВРЕДНИОСТ</span>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -923,8 +923,8 @@
     </div>
     <div class="row-back">
         <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
+            <div class="panel-warning text-center">
+                <div class="panel-heading ">
                     <a  class="back_link_bottom"
                         przAnchorTo target="#pest_menu"
                         
@@ -989,8 +989,8 @@
     </div>
     <div class="row-back">
         <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
+            <div class="panel-warning text-center">
+                <div class="panel-heading ">
                     <a  class="back_link_bottom"
                         przAnchorTo target="#pest_menu"
                         
@@ -1059,8 +1059,8 @@
     </div>
     <div class="row-back">
         <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
+            <div class="panel-warning text-center">
+                <div class="panel-heading ">
                     <a  class="back_link_bottom"
                         przAnchorTo target="#pest_menu"
                         
@@ -1116,8 +1116,8 @@
     </div>
     <div class="row-back">
         <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
+            <div class="panel-warning text-center">
+                <div class="panel-heading ">
                     <a  class="back_link_bottom"
                         przAnchorTo target="#pest_menu"
                         
@@ -1131,7 +1131,7 @@
         </div>
         <div class="col-md-6">
             <div 
-                class="panel panel-success text-center" 
+                class="panel-success text-center" 
                 style="cursor: pointer;"
                 (click)="pivShowHide(4)"
             >
@@ -1147,7 +1147,10 @@
             <tr>
                 <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
                 <th>ВРЕДИТЕЛ / СТАДИЙ</th>
-                <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                <th>
+                    <span class="full-name-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                    <span class="small-name-piv">ПРАГ НА ВРЕДНИОСТ</span>
+                </th>
             </tr>
             </thead>
             <tbody>
@@ -1211,8 +1214,8 @@
     </div>
     <div class="row-back">
         <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
+            <div class="panel-warning text-center">
+                <div class="panel-heading ">
                     <a  class="back_link_bottom"
                         przAnchorTo target="#pest_menu"
                         
@@ -1268,8 +1271,8 @@
     </div>
     <div class="row-back">
         <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
+            <div class="panel-warning text-center">
+                <div class="panel-heading ">
                     <a  class="back_link_bottom"
                         przAnchorTo target="#pest_menu"
                         
@@ -1317,8 +1320,8 @@
     </div>
     <div class="row-back">
         <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
+            <div class="panel-warning text-center">
+                <div class="panel-heading ">
                     <a  class="back_link_bottom"
                         przAnchorTo target="#pest_menu"
                         
@@ -1473,8 +1476,8 @@
     </div>
     <div class="row-back">
         <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
+            <div class="panel-warning text-center">
+                <div class="panel-heading ">
                     <a  class="back_link_bottom"
                         przAnchorTo target="#pest_menu"
                         
@@ -1488,7 +1491,7 @@
         </div>
         <div class="col-md-6">
             <div 
-                class="panel panel-success text-center" 
+                class="panel-success text-center" 
                 style="cursor: pointer;"
                 (click)="pivShowHide(5)"
             >
@@ -1499,7 +1502,7 @@
         </div>
     </div>
     <div class="col-md-12" >
-        <div class="panel panel-success table-threshold text-center">
+        <div class="panel-success table-threshold text-center">
             <div class="panel-body">
                 <div class="col-md-12">
                     <table class="piv_table" style="width:100%" border="1">
@@ -1507,7 +1510,10 @@
                             <tr>
                                 <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
                                 <th>ВРЕДИТЕЛ / СТАДИЙ</th>
-                                <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                                <th>
+                                    <span class="full-name-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                                    <span class="small-name-piv">ПРАГ НА ВРЕДНИОСТ</span>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1628,8 +1634,8 @@
     </div>
     <div class="row-back">
         <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
+            <div class="panel-warning text-center">
+                <div class="panel-heading ">
                     <a  class="back_link_bottom"
                         przAnchorTo target="#pest_menu"
                         
@@ -1643,7 +1649,7 @@
         </div>
         <div class="col-md-6">
             <div 
-                class="panel panel-success text-center" 
+                class="panel-success text-center" 
                 style="cursor: pointer;"
                 (click)="pivShowHide(6)"
             >
@@ -1654,7 +1660,7 @@
         </div>
     </div>
     <div class="col-md-12" >
-        <div class="panel panel-success table-threshold text-center">
+        <div class="panel-success table-threshold text-center">
             <div class="panel-body">
                 <div class="col-md-12">
                     <table class="piv_table" style="width:100%" border="1">
@@ -1662,7 +1668,10 @@
                             <tr>
                                 <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
                                 <th>ВРЕДИТЕЛ / СТАДИЙ</th>
-                                <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                                <th>
+                                    <span class="full-name-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                                    <span class="small-name-piv">ПРАГ НА ВРЕДНИОСТ</span>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1738,8 +1747,8 @@
     </div>
     <div class="row-back">
         <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
+            <div class="panel-warning text-center">
+                <div class="panel-heading ">
                     <a  class="back_link_bottom"
                         przAnchorTo target="#pest_menu"
                         
@@ -1753,7 +1762,7 @@
         </div>
         <div class="col-md-6">
             <div 
-                class="panel panel-success text-center" 
+                class="panel-success text-center" 
                 style="cursor: pointer;"
                 (click)="pivShowHide(7)"
             >
@@ -1764,7 +1773,7 @@
         </div>
     </div>
     <div class="col-md-12" >
-        <div class="panel panel-success table-threshold text-center">
+        <div class="panel-success table-threshold text-center">
             <div class="panel-body">
                 <div class="col-md-12">
                     <table class="piv_table" style="width:100%" border="1">
@@ -1772,7 +1781,10 @@
                         <tr>
                             <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
                             <th>ВРЕДИТЕЛ / СТАДИЙ</th>
-                            <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                            <th>
+                                <span class="full-name-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                                <span class="small-name-piv">ПРАГ НА ВРЕДНИОСТ</span>
+                            </th>
                         </tr>
                         </thead>
                         <tbody>
@@ -1881,8 +1893,8 @@
     </div>
     <div class="row-back">
         <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
+            <div class="panel-warning text-center">
+                <div class="panel-heading ">
                     <a  class="back_link_bottom"
                         przAnchorTo target="#pest_menu"
                         
@@ -1896,7 +1908,7 @@
         </div>
         <div class="col-md-6">
             <div 
-                class="panel panel-success text-center" 
+                class="panel-success text-center" 
                 style="cursor: pointer;"
                 (click)="pivShowHide(8)"
             >
@@ -1907,7 +1919,7 @@
         </div>
     </div>
     <div class="col-md-12" >
-        <div class="panel panel-success table-threshold text-center">
+        <div class="panel-success table-threshold text-center">
             <div class="panel-body">
                 <div class="col-md-12">
                     <table class="piv_table" style="width:100%" border="1">
@@ -1915,7 +1927,10 @@
                             <tr>
                                 <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
                                 <th>ВРЕДИТЕЛ / СТАДИЙ</th>
-                                <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                                <th>
+                                    <span class="full-name-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                                    <span class="small-name-piv">ПРАГ НА ВРЕДНИОСТ</span>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -2053,8 +2068,8 @@
     </div>
     <div class="row-back">
         <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
+            <div class="panel-warning text-center">
+                <div class="panel-heading ">
                     <a  class="back_link_bottom"
                         przAnchorTo target="#pest_menu"
                         
@@ -2068,7 +2083,7 @@
         </div>
         <div class="col-md-6">
             <div 
-                class="panel panel-success text-center" 
+                class="panel-success text-center" 
                 style="cursor: pointer;"
                 (click)="pivShowHide(9)"
             >
@@ -2079,7 +2094,7 @@
         </div>
     </div>
     <div class="col-md-12" >
-        <div class="panel panel-success table-threshold text-center">
+        <div class="panel-success table-threshold text-center">
             <div class="panel-body">
                 <div class="col-md-12">
                     <table class="piv_table" style="width:100%" border="1">
@@ -2087,7 +2102,10 @@
                             <tr>
                                 <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
                                 <th>ВРЕДИТЕЛ / СТАДИЙ</th>
-                                <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                                <th>
+                                    <span class="full-name-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                                    <span class="small-name-piv">ПРАГ НА ВРЕДНИОСТ</span>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -2109,7 +2127,10 @@
                             <tr>
                                 <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
                                 <th>ВРЕДИТЕЛ / СТАДИЙ</th>
-                                <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                                <th>
+                                    <span class="full-name-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                                    <span class="small-name-piv">ПРАГ НА ВРЕДНИОСТ</span>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -2131,7 +2152,10 @@
                             <tr>
                                 <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
                                 <th>ВРЕДИТЕЛ / СТАДИЙ</th>
-                                <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                                <th>
+                                    <span class="full-name-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                                    <span class="small-name-piv">ПРАГ НА ВРЕДНИОСТ</span>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -2157,7 +2181,10 @@
                             <tr>
                                 <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
                                 <th>ВРЕДИТЕЛ / СТАДИЙ</th>
-                                <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                                <th>
+                                    <span class="full-name-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                                    <span class="small-name-piv">ПРАГ НА ВРЕДНИОСТ</span>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -2179,7 +2206,10 @@
                             <tr>
                                 <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
                                 <th>ВРЕДИТЕЛ / СТАДИЙ</th>
-                                <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                                <th>
+                                    <span class="full-name-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                                    <span class="small-name-piv">ПРАГ НА ВРЕДНИОСТ</span>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -2203,7 +2233,10 @@
                             <tr>
                                 <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
                                 <th>ВРЕДИТЕЛ / СТАДИЙ</th>
-                                <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                                <th>
+                                    <span class="full-name-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                                    <span class="small-name-piv">ПРАГ НА ВРЕДНИОСТ</span>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -2294,8 +2327,8 @@
     </div>
     <div class="row-back">
         <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
+            <div class="panel-warning text-center">
+                <div class="panel-heading ">
                     <a  class="back_link_bottom"
                         przAnchorTo target="#pest_menu"
                         
@@ -2309,7 +2342,7 @@
         </div>
         <div class="col-md-6">
             <div 
-                class="panel panel-success text-center" 
+                class="panel-success text-center" 
                 style="cursor: pointer;"
                 (click)="pivShowHide(10)"
             >
@@ -2320,7 +2353,7 @@
         </div>
     </div>
     <div class="col-md-12" >
-        <div class="panel panel-success table-threshold text-center">
+        <div class="panel-success table-threshold text-center">
             <div class="panel-body">
                 <div class="col-md-12">
                     <table class="piv_table" style="width:100%" border="1">
@@ -2328,7 +2361,10 @@
                             <tr>
                                 <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
                                 <th>ВРЕДИТЕЛ / СТАДИЙ</th>
-                                <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                                <th>
+                                    <span class="full-name-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                                    <span class="small-name-piv">ПРАГ НА ВРЕДНИОСТ</span>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -2350,7 +2386,10 @@
                             <tr>
                                 <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
                                 <th>ВРЕДИТЕЛ / СТАДИЙ</th>
-                                <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                                <th>
+                                    <span class="full-name-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                                    <span class="small-name-piv">ПРАГ НА ВРЕДНИОСТ</span>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -2433,8 +2472,8 @@
     </div>
     <div class="row-back">
         <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
+            <div class="panel-warning text-center">
+                <div class="panel-heading ">
                     <a  class="back_link_bottom"
                         przAnchorTo target="#pest_menu"
                         
@@ -2448,7 +2487,7 @@
         </div>
         <div class="col-md-6">
             <div 
-                class="panel panel-success text-center" 
+                class="panel-success text-center" 
                 style="cursor: pointer;"
                 (click)="pivShowHide(11)"
             >
@@ -2459,7 +2498,7 @@
         </div>
     </div>
     <div class="col-md-12" >
-        <div class="panel panel-success table-threshold text-center">
+        <div class="panel-success table-threshold text-center">
             <div class="panel-body">
                 <div class="col-md-12">
                     <table class="piv_table" style="width:100%" border="1">
@@ -2467,7 +2506,10 @@
                             <tr>
                                 <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
                                 <th>ВРЕДИТЕЛ / СТАДИЙ</th>
-                                <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                                <th>
+                                    <span class="full-name-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                                    <span class="small-name-piv">ПРАГ НА ВРЕДНИОСТ</span>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -2566,8 +2608,8 @@
     </div>
     <div class="row-back">
         <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
+            <div class="panel-warning text-center">
+                <div class="panel-heading ">
                     <a  class="back_link_bottom"
                         przAnchorTo target="#pest_menu"
                         
@@ -2581,7 +2623,7 @@
         </div>
         <div class="col-md-6">
             <div 
-                class="panel panel-success text-center" 
+                class="panel-success text-center" 
                 style="cursor: pointer;"
                 (click)="pivShowHide(12)"
             >
@@ -2592,7 +2634,7 @@
         </div>
     </div>
     <div class="col-md-12" >
-        <div class="panel panel-success table-threshold text-center">
+        <div class="panel-success table-threshold text-center">
             <div class="panel-body">
                 <div class="col-md-12">
                     <table class="piv_table" style="width:100%" border="1">
@@ -2600,7 +2642,10 @@
                             <tr>
                                 <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
                                 <th>ВРЕДИТЕЛ / СТАДИЙ</th>
-                                <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                                <th>
+                                    <span class="full-name-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                                    <span class="small-name-piv">ПРАГ НА ВРЕДНИОСТ</span>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -2669,8 +2714,8 @@
     </div>
     <div class="row-back">
         <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
+            <div class="panel-warning text-center">
+                <div class="panel-heading ">
                     <a  class="back_link_bottom"
                         przAnchorTo target="#pest_menu"
                         
@@ -2684,7 +2729,7 @@
         </div>
         <div class="col-md-6">
             <div 
-                class="panel panel-success text-center" 
+                class="panel-success text-center" 
                 style="cursor: pointer;"
                 (click)="pivShowHide(13)"
             >
@@ -2695,7 +2740,7 @@
         </div>
     </div>
     <div class="col-md-12">
-        <div class="panel panel-success table-threshold text-center">
+        <div class="panel-success table-threshold text-center">
             <div class="panel-body">
                 <div class="col-md-12">
                     <table class="piv_table" style="width:100%" border="1">
@@ -2703,7 +2748,10 @@
                             <tr>
                                 <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
                                 <th>ВРЕДИТЕЛ / СТАДИЙ</th>
-                                <th>ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</th>
+                                <th>
+                                    <span class="full-name-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                                    <span class="small-name-piv">ПРАГ НА ВРЕДНИОСТ</span>
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -2759,8 +2807,8 @@
     </div>
     <div class="row-back">
         <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
+            <div class="panel-warning text-center">
+                <div class="panel-heading ">
                     <a  class="back_link_bottom"
                         przAnchorTo target="#pest_menu"
                         
@@ -2994,8 +3042,8 @@
     </div>
     <div class="row-back">
         <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
+            <div class="panel-warning text-center">
+                <div class="panel-heading ">
                     <a  class="back_link_bottom"
                         przAnchorTo target="#pest_menu"
                         
@@ -3056,8 +3104,8 @@
     </div>
     <div class="row-back">
         <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
+            <div class="panel-warning text-center">
+                <div class="panel-heading ">
                     <a  class="back_link_bottom"
                         przAnchorTo target="#pest_menu"
                         
@@ -3078,8 +3126,8 @@
     <div class="row-back">
         <div class="col-md-4"></div>
         <div class="col-md-4">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
+            <div class="panel-warning text-center">
+                <div class="panel-heading ">
                     <a  class="back_link_bottom"
                         przAnchorTo target="#pest_menu"
                         

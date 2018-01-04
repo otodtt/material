@@ -1,7 +1,6 @@
 .example-spacer {
     flex: 1 1 auto;
 }
-
 .example-icon {
     padding: 0 14px;
 }
@@ -24,7 +23,6 @@ $gray: rgb(100, 100, 100);
     color: $white;
     font-size: 14px;
 }
-
 .nav-list {
     float: left;
     position: relative;
@@ -32,12 +30,14 @@ $gray: rgb(100, 100, 100);
         color: $white;
     }
     .nav-dropdown {
+        z-index: 999;
         display: none;
         position: absolute;
         top:48px;
         left: 0;
         padding: 5px 10px 0;
-        background: $white;
+        // background: $white;
+        background: #fafafa;
         border-top: 1px solid rgb(190, 190, 190);
         .sub-menu {
             height: 40px;
@@ -101,7 +101,6 @@ $gray: rgb(100, 100, 100);
         background-color: #8bc34a !important;
         color: #000000;
     }
-
 }
 /*================================
     КРАЙ NAVIGATION 
