@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
+import { HttpModule } from '@angular/http';
 
 // Router
 import { AppRoutingModul } from './app-routing.module';
@@ -49,6 +50,7 @@ import { ContactsComponent } from './contacts/contacts.component';
     imports: [
         BrowserModule,
         MaterialModule,
+        HttpModule,
         BrowserAnimationsModule,
         ShareComponentsModule,
         AppRoutingModul,

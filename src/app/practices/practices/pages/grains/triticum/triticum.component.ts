@@ -6,6 +6,9 @@ import { ChangeBreadcrumbService } from '../../../../../common/services/changeBr
 
 import { DialogComponent } from '../../../shared/dialog/dialog.component';
 
+import { Practice } from '../../../shared/models/practice.model';
+import { PracticesService } from '../../../shared/services/practices.services';
+
 @Component({
   templateUrl: './triticum.component.html',
   styleUrls: ['../../pages.scss']
@@ -17,13 +20,16 @@ export class TriticumComponent implements OnInit {
 
     breadcrumbName = 'Пшеница';
 
+    practices: Practice[] = [];
+
     showHide: number;
     panelOpenState = 'test';
 
     constructor(
         private seoService: SeoService,
         private changeBreadcrumbService: ChangeBreadcrumbService,
-        public dialog: MatDialog
+        public dialog: MatDialog,
+        private practicesService: PracticesService
     ) {
         this.seoService.addTitle(this.title);
         this.seoService.setMeta(this.description, this.keywords);
@@ -31,6 +37,18 @@ export class TriticumComponent implements OnInit {
 
     ngOnInit() {
         this.changeBreadcrumbService.emitName(this.breadcrumbName);
+        // this.practicesService.getCategories()
+        // .subscribe((practices: Practice[]) => {
+        //     this.practices = practices;
+        //     console.log(this.practices);
+        //     // this.isLoaded = true;
+        // });
+        this.practicesService.getPractices('practices')
+        .subscribe((practices: Practice[]) => {
+            this.practices = practices;
+            console.log(this.practices);
+            // this.isLoaded = true;
+        });
     }
 
     openDialog() {

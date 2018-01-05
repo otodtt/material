@@ -7,6 +7,9 @@ import { LazyLoadModule } from '@greg-md/ng-lazy-load';
 // Routing
 import { PracticesRoutingModul } from './practices-routing.module';
 
+// Services
+import { PracticesService } from './practices/shared/services/practices.services';
+
 // Directives
 import { AnchorToDirective } from '../common/directives/AnchorToDirective';
 
@@ -79,6 +82,7 @@ import { ManagementComponent } from './management/management/management.componen
     HelianthusComponent,
     NicotianaComponent,
   ],
+  providers: [PracticesService],
   entryComponents: [SideMenuComponent, DialogComponent],
 })
 export class PracticesModule { }
