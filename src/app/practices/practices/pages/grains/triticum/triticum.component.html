@@ -159,8 +159,7 @@
                 <li>
                     <a class="back_link"  przAnchorTo target="#puccinia-recondita"   title="към текста">
                         <mat-icon>chevron_right</mat-icon>
-                        Кафява (листна) ръжда (<span class="latin_name">
-                            P. reconditа Rob. ex Desm. f. sp. tritici</span>)
+                        Кафява (листна) ръжда (<span class="latin_name"> P. reconditа Rob. ex Desm. f. sp. tritici</span>)
                     </a>
                 </li>
                 <li>
@@ -329,13 +328,41 @@
                 използват само продукти, регистрирани в страната за дадена цел.</p>
         </div>
     </div>
+
+
+    <div *ngFor="let practice of practices; let i = index">
+        <div class="aa-title" id="{{practice.linkId}}"></div>
+        <div class="row" >
+            <div class="pest-description-container text-indent" [innerHTML]="practice.text  | safeHtml"></div>
+        </div>
+        <div class="row-back">
+            <div class="col-md-6" *ngIf="practice.tablePiv !== null">
+                <div class="panel-success text-center" >
+                    <div class="panel-heading">
+                        <button mat-button class="piv-button" (click)="openDialog(practice.tablePiv)">
+                            <span class="full-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                            <span class="small-piv">ВИЖ ПИВ</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel-warning text-center">
+                    <div class="panel-heading ">
+                        <a mat-button class="back_link_bottom" przAnchorTo target="#pest_menu" title="към всички неприятели"> виж друг неприятел</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <!-- МАНА -->
-    <div class="aa-title" id="erysiphe-graminis">
+    <!-- <div class="aa-title" id="erysiphe-graminis">
         <span></span>
     </div>
     <div class="row" >
         <div class="pest-description-container text-indent">
+
             <h3 >Брашнеста мана по пшеницата – <span class="latin_name">Erysiphe graminis f. sp. tritici</span></h3>
             <h4 class="my_class_h4">Описание на болестта</h4>
             <p>
@@ -353,7 +380,7 @@
                 млади растения, а по-късната форма намалява активната повърхност на листата, вследствие на което
                 добивът на зърно е редуциран. Умерената степен на нападение от брашнеста мана е допустима.
                 Във фенофаза от поява на лигулата на флагелния лист до края на цъфтежа
-                (<a class="phases_link"  przAnchorTo target="#table_bbch"  title="към фенофазите">фенофази 39 – 65</a>),
+                (<a class="phases_link test-click" (click)="doScroll()" target="#table_bbch"  title="към фенофазите">фенофази 39 – 65</a>),
                 върху застаряващия мицел могат да се появят клейстотеции (плодни тела) под формата на черни точици.</p>
 
             <h4 class="my_class_h4">Стратегия за борба</h4>
@@ -369,20 +396,20 @@
             <p>
                 Критичните моменти от развитието на пшеницата по отношение на заразяването с
                 брашнеста мана е периодът братене до появата на класа
-                (<a class="phases_link"  przAnchorTo target="#table_bbch"  title="към фенофазите">фенофази 21 – 59</a>)
+                (<a class="phases_link"  (click)="doScroll()" target="#table_bbch"  title="към фенофазите">фенофази 21 – 59</a>)
                 и особено от появата на първия осил до пълната поява на класа
-                (<a class="phases_link"  przAnchorTo target="#table_bbch"  title="към фенофазите">фенофази 49 – 59</a>).</p>
+                (<a class="phases_link"  (click)="doScroll()" target="#table_bbch"  title="към фенофазите">фенофази 49 – 59</a>).</p>
             <p class="phase_bottom">
                 Сигнал за третиране срещу брашнестата мана се дава при достигане
                 на икономическия праг на вредност, който е както следва:</p>
             <p class="phase">
-                <a class="phases_link"  przAnchorTo target="#table_bbch"  title="към фенофазите">Фенофази – 31–32</a> 30%
+                <a class="phases_link"  (click)="doScroll()" target="#table_bbch"  title="към фенофазите">Фенофази – 31–32</a> 30%
                 степен на нападение на листната маса;</p>
             <p class="phase">
-                <a class="phases_link"  przAnchorTo target="#table_bbch"  title="към фенофазите">Фенофаза – 39</a> 30%
+                <a class="phases_link"  (click)="doScroll()" target="#table_bbch"  title="към фенофазите">Фенофаза – 39</a> 30%
                 степен на нападение на листната маса и първи пустули върху предпоследния лист;</p>
             <p class="phase">
-                <a class="phases_link"  przAnchorTo target="#table_bbch"  title="към фенофазите">Фенофази – 55–69</a> 30%
+                <a class="phases_link"  (click)="doScroll()" target="#table_bbch"  title="към фенофазите">Фенофази – 55–69</a> 30%
                 степен на нападение на листната маса и първи пустули върху флагелния лист.</p>
             <p>
                 Ако брашнестата мана се среща заедно с други болести, добра растителнозащитна практика е
@@ -394,7 +421,7 @@
                 триазоловите фунгициди, постепенно загубват своята ефикасност. От друга страна, не е ДРЗП и
                 ползването на фунгициди от групата на бензимидазола, които са ефективни срещу <span class="latin_name">E. graminis</span>,
                 но създават проблеми с резистентността при <span class="latin_name">Pseudocercosporella herpotrichoides.<br/></span>
-                (<a class="back_link_bottom"   przAnchorTo target="#pseudocercosporella-herpotrichoides" title="към Pseudocercosporella herpotrichoides">виж по-долу</a>)</p>
+                (<a class="back_link_bottom"   (click)="doScroll()" target="#pseudocercosporella-herpotrichoides" title="към Pseudocercosporella herpotrichoides">виж по-долу</a>)</p>
             <h4 class="my_class_h4">Активни вещества</h4>
             <p><span class="active-substance">Карбендазим + флузиазол, крезоксиметил + епоксиконазол,
                     ципроконазол + пропиконазол, тридимефон, триадименол, пропиконазол,
@@ -423,8 +450,6 @@
                             <span class="title_thumb">Бр. мана по пшеница</span>
                     </a>
                 </li>
-
-
                 <li>
                     <a data-lightbox="image" href="../../../../../assets/diseases/Erysiphe_graminis_leaf.jpg" 
                     data-title="Брашнеста мана по листа">
@@ -497,16 +522,20 @@
                 </div>
             </div>
         </div>
+    </div> -->
+    <!-- КРАЙ МАНА -->
+
+    <div class="aa-title" #structure  id="table_bbch">
+        <div class="row">TABLE</div>
     </div>
     
-    <!-- КРАЙ МАНА -->
-    
     <!-- РЪЖДИ -->
-    <div class="aa-title" id="puccinia-recondita">
+    <!-- <div class="aa-title" id="puccinia-recondita">
         <span></span>
     </div>
     <div class="row">
         <div class="pest-description-container text-indent">
+
             <h3 >Кафява ръжда по пшеницата – <span class="latin_name">Puccinia recondita f. sp. tritici</span></h3>
             <h4 class="my_class_h4">Описание на болестта</h4>
             <p>
@@ -542,36 +571,37 @@
             <p class="phase_bottom">
                 Критичният период от развитието на пшеницатапо отношение на кафявата ръжда е времето
                 от появата на флагелния лист до края на цъфтежа
-                (<a class="phases_link"  przAnchorTo target="#table_bbch"  title="към фенофазите">фенофази 39 – 69</a>)
+                (<a class="phases_link"  (click)="doScroll()" target="#table_bbch"  title="към фенофазите">фенофази 39 – 69</a>)
                 и особено от появата на първия осил до края на изкласяването
-                (<a class="phases_link"  przAnchorTo target="#table_bbch"  title="към фенофазите">фенофази 49 – 59</a>).
+                (<a class="phases_link"  (click)="doScroll()" target="#table_bbch"  title="към фенофазите">фенофази 49 – 59</a>).
             </p>
             <p class="phase">
                 Праговете на икономическа вредност при кафявата ръжда са:
             </p>
             <p class="phase">
-                <a class="phases_link"  przAnchorTo target="#table_bbch"  title="към фенофазите">Фенофази – 31-32</a>
+                <a class="phases_link"  (click)="doScroll()" target="#table_bbch"  title="към фенофазите">Фенофази – 31-32</a>
                 – 10% степен на нападение на листната маса;
             </p>
             <p class="phase">
-                <a class="phases_link"  przAnchorTo target="#table_bbch"  title="към фенофазите">Фенофази – 39</a>
+                <a class="phases_link"  (click)="doScroll()" target="#table_bbch"  title="към фенофазите">Фенофази – 39</a>
                 – 10% степен на нападение на листната маса и първи спори по предпоследния лист;</p>
             <p class="phase">
-                <a class="phases_link"  przAnchorTo target="#table_bbch"  title="към фенофазите">Фенофаза 55</a>
+                <a class="phases_link"  (click)="doScroll()" target="#table_bbch"  title="към фенофазите">Фенофаза 55</a>
                 – 10-20% степен на нападение на листната маса и първи сори върху предпоследния
                 лист;</p>
             <p class="phase">
-                <a class="phases_link"  przAnchorTo target="#table_bbch"  title="към фенофазите">Фенофаза 69</a>
+                <a class="phases_link"  (click)="doScroll()" target="#table_bbch"  title="към фенофазите">Фенофаза 69</a>
                 – 30% степен на нападение на листната маса и първи сори по флагелния лист.</p>
             <p>
                 Друга възможност е да се следват съветите на регионалните служби за растителна защита.
                 Ако ръждите заедно с други болести се откриват в периода от поява лигулата на флагелен лист
                 до средата на цъфтежа
-                (<a class="phases_link"  przAnchorTo target="#table_bbch"  title="към фенофазите">фенофаза 39-65</a>)
+                (<a class="phases_link"  (click)="doScroll()" target="#table_bbch"  title="към фенофазите">фенофаза 39-65</a>)
                 , добра практика е да се използват фунгициди срещу целия комплекс от болести.</p>
             <h4 class="my_class_h4">Активни вещества</h4>
             <p><span class="active-substance">Крезоксиметил + епоксиконазол, триадименол, пропиконазол, пропиконазол + прохлораз,
                                 метконазол, епоксиконазол + тридеморф, флутриафол</span></p>
+
         </div>
         <div class="pest-image-container" >
             <ul class="products">
@@ -695,11 +725,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!--КРАЙ РЪЖДИ -->
     
     <!-- ГЛАВНИ -->
-    <div class="aa-title" id="tilletia-and-ustilago">
+    <!-- <div class="aa-title" id="tilletia-and-ustilago">
         <span></span>
     </div>
     <div class="row">
@@ -786,11 +816,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ ГЛАВНИ -->
     
     <!-- ГНИЕНЕ -->
-    <div class="aa-title" id="fusarium-culmorum">
+    <!-- <div class="aa-title" id="fusarium-culmorum">
         <span></span>
     </div>
     <div class="row">
@@ -879,11 +909,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ ГНИЕНЕ -->
     
     <!-- ПЛЕСЕН -->
-    <div class="aa-title" id="monographella-nivalis">
+    <!-- <div class="aa-title" id="monographella-nivalis">
         <span></span>
     </div>
     <div class="row">
@@ -917,7 +947,14 @@
         </div>
         <div class="pest-image-container" >
             <ul class="products">
-                <li><a data-lightbox="image" href="../../../../../assets/diseases/Monographella_nivalis.jpg" data-title="Снежна плесен"><img  threshold="200" lazy-load="../../../../../assets/diseases/Monographella_nivalis_thumb.jpg" alt="Monographella nivalis" title="Monographella nivalis"/><span class="title_thumb">Снежна плесен</span></a></li>
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/diseases/Monographella_nivalis.jpg" 
+                    data-title="Снежна плесен">
+                    <img  threshold="200" lazy-load="../../../../../assets/diseases/Monographella_nivalis_thumb.jpg" 
+                    alt="Monographella nivalis" title="Monographella nivalis"/>
+                    <span class="title_thumb">Снежна плесен</span>
+                </a>
+            </li>
             </ul>
         </div>
     </div>
@@ -936,11 +973,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ ПЛЕСЕН -->
     
     <!-- ГНИЕНЕ НА КЛАСОВЕТЕ -->
-    <div class="aa-title" id="gibberella-zeae">
+    <!-- <div class="aa-title" id="gibberella-zeae">
         <span></span>
     </div>
     <div class="row">
@@ -955,9 +992,9 @@
                 произхождащи от растителните остатъци в почвата, пренасяни по време на дъжд.
                 Заразяването се благоприятства от влажно време (относителна влажност на въздуха над 75%)
                 след фенофаза изкласяване – цъфтеж
-                (<a class="phases_link"  przAnchorTo target="#table_bbch"  title="към фенофазите">61–69</a>).
+                (<a class="phases_link"  (click)="doScroll()" target="#table_bbch"  title="към фенофазите">61–69</a>).
                 Във фенофаза млечна или восъчна зрелост
-                (<a class="phases_link"  przAnchorTo target="#table_bbch"  title="към фенофазите">75–85</a>)
+                (<a class="phases_link"  (click)="doScroll()" target="#table_bbch"  title="към фенофазите">75–85</a>)
                 класчетата постепенно избледняват, стават кремави до розови и ясно личат между здравите
                 зелени класчета. Силно нападнатите класове остават стерилни, а по-слабо нападнатите
                 образуват спаружени и набръчкани семена. При влажно време се образува розов плесенов налеп.
@@ -983,7 +1020,14 @@
         </div>
         <div class="pest-image-container" >
             <ul class="products">
-                <li><a data-lightbox="image" href="../../../../../assets/diseases/Gibberella_zeae.jpg" data-title="Гниене на класовете"><img  threshold="200" lazy-load="../../../../../assets/diseases/Gibberella_zeae_thumb.jpg" alt="Gibberella zeae" title="Gibberella zeae"/><span class="title_thumb">Гниене на класовете</span></a></li>
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/diseases/Gibberella_zeae.jpg" 
+                    data-title="Гниене на класовете">
+                    <img  threshold="200" lazy-load="../../../../../assets/diseases/Gibberella_zeae_thumb.jpg" 
+                    alt="Gibberella zeae" title="Gibberella zeae"/>
+                    <span class="title_thumb">Гниене на класовете</span>
+                </a>
+            </li>
             </ul>
         </div>
     </div>
@@ -1002,11 +1046,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ ГНИЕНЕ НА КЛАСОВЕТЕ -->
     
     <!-- ПРИГОР -->
-    <div class="aa-title" id="mycosphaerella-graminicola">
+    <!-- <div class="aa-title" id="mycosphaerella-graminicola">
         <span></span>
     </div>
     <div class="row">
@@ -1027,16 +1071,16 @@
             <p>
                 Рано засятите посеви се нападат по-силно. Критичният момент от развитието на пшеницата
                 по отношение на първичните заразявания със септориоза започва от фенофаза 1-и – 2-и
-                възел (<a class="phases_link"  przAnchorTo target="#table_bbch"  title="към фенофазите">31–32</a>).
+                възел (<a class="phases_link"  (click)="doScroll()" target="#table_bbch"  title="към фенофазите">31–32</a>).
                 След това болестта се разпространява по следващите листни етажи, като
                 най-голяма опасност представлява по време на появата на флагелния лист и появата на
-                лигулата на флагелния лист (<a class="phases_link"  przAnchorTo target="#table_bbch"  title="към фенофазите">37–39</a>).
+                лигулата на флагелния лист (<a class="phases_link"  (click)="doScroll()" target="#table_bbch"  title="към фенофазите">37–39</a>).
                 Важно е да се предотврати инфектирането на по-горните
                 листа. По отношение на септориозата у нас няма утвърден праг на икономическа вредност.
                 Конкретна информация относно сигнала за третиране и подходящия продукт за всеки район в
                 страната може да се получи от регионалните служби по растителна защита. При необходимост
                 третирането с фунгициди се извършва в периода от появата на флагелния лист до средата на
-                цъфтежа (<a class="phases_link"  przAnchorTo target="#table_bbch"  title="към фенофазите">39–55</a>).
+                цъфтежа (<a class="phases_link"  (click)="doScroll()" target="#table_bbch"  title="към фенофазите">39–55</a>).
                 При нужда се извършва и второ третиране 2–3 седмици след първото.
                 Ако листните петна се срещат заедно с други болести, добра практика е да се ползват
                 фунгициди срещу целия комплекс от болести.</p>
@@ -1072,10 +1116,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     
     <!-- ПЕТНОСВАНЕ НА КЛАСОВЕТЕ -->
-    <div class="aa-title" id="leptosphaeria-nodorum">
+    <!-- <div class="aa-title" id="leptosphaeria-nodorum">
         <span></span>
     </div>
     <div class="row">
@@ -1098,9 +1142,9 @@
                 ефект, ако степента на заразеност е ниска. При силна степен на зараза на семената
                 вероятно ще са необходими третирания през вегетацията. Първото третиране трябва да се
                 извърши при поява на флагелния лист
-                (<a class="phases_link"  przAnchorTo target="#table_bbch"  title="към фенофазите">фенофаза 39</a>),
+                (<a class="phases_link"  (click)="doScroll()" target="#table_bbch"  title="към фенофазите">фенофаза 39</a>),
                 а следващо третиране може да е необходимо при поява на класа
-                (<a class="phases_link"  przAnchorTo target="#table_bbch"  title="към фенофазите">фенофаза 51</a>),
+                (<a class="phases_link"  (click)="doScroll()" target="#table_bbch"  title="към фенофазите">фенофаза 51</a>),
                 ако условията са благоприятни. Целта на
                 борбата е да се предпазят от заразяване класът и флагелният лист. Ако болестта се среща
                 заедно с други болести, добра практика е да се прилагат фунгициди, ефективни срещу целия
@@ -1110,7 +1154,14 @@
         </div>
         <div class="pest-image-container" >
             <ul class="products">
-                <li><a data-lightbox="image" href="../../../../../assets/diseases/Leptosphaeria_nodorum.jpg" data-title="Петносване на класовете"><img  threshold="200" lazy-load="../../../../../assets/diseases/Leptosphaeria_nodorum_thumb.jpg" alt="Leptosphaeria nodorum" title="Leptosphaeria nodorum"/><span class="title_thumb">Петносване на класовете</span></a></li>
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/diseases/Leptosphaeria_nodorum.jpg" 
+                    data-title="Петносване на класовете">
+                    <img  threshold="200" lazy-load="../../../../../assets/diseases/Leptosphaeria_nodorum_thumb.jpg" 
+                    alt="Leptosphaeria nodorum" title="Leptosphaeria nodorum"/>
+                    <span class="title_thumb">Петносване на класовете</span>
+                </a>
+            </li>
             </ul>
         </div>
     </div>
@@ -1168,11 +1219,11 @@
             </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ ПЕТНОСВАНЕ НА КЛАСОВЕТЕ -->
     
     <!-- ХЕЛМИНОСПОРОЗА -->
-    <div class="aa-title" id="helminosporioza-sativum">
+    <!-- <div class="aa-title" id="helminosporioza-sativum">
         <span></span>
     </div>
     <div class="row">
@@ -1184,7 +1235,7 @@
                 различни типове повреди – кафяви петна, черен зародиш или кореново гниене. Загниването
                 на корените и основата на растенията води до появата на хармани в посева от ниски
                 растения, които преждевременно загиват или дават слабо развити класове. По време на
-                изкласяване (<a class="phases_link"  przAnchorTo target="#table_bbch"  title="към фенофазите">фенофаза 51–59</a>)
+                изкласяване (<a class="phases_link"  (click)="doScroll()" target="#table_bbch"  title="към фенофазите">фенофаза 51–59</a>)
                 по листата се появяват различно големи, елиптични,
                 тъмнокафяви петна, които водят до прегаряне на петурите и съответно намаляване на добива.
                 По плевите на класовете се образуват дребни, тъмнокафяви петна, а зародишният край на
@@ -1227,11 +1278,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ ХЕЛМИНОСПОРОЗА -->
     
     <!-- ГНИЕНЕ НА ОСНОВАТА -->
-    <div class="aa-title" id="pseudocercosporella-herpotrichoides">
+    <!-- <div class="aa-title" id="pseudocercosporella-herpotrichoides">
         <span></span>
     </div>
     <div class="row">
@@ -1243,7 +1294,7 @@
                 пролетта, са първоначалният инокулум. Растенията се заразяват в основата на стъблото,
                 където се образуват сравнително едри, жълто-кафяви петна с удължена елипсовидна форма и
                 тъмен венец. Ако повредите се появят преди фенофаза 1-и – 2-и възел
-                (<a class="phases_link"  przAnchorTo target="#table_bbch"  title="към фенофазите">31–32</a>), има голяма
+                (<a class="phases_link"  (click)="doScroll()" target="#table_bbch"  title="към фенофазите">31–32</a>), има голяма
                 опасност от загниване на основите и полягане на растенията. Вторично заразяване
                 обикновено не се среща, така че основната цел е да се води борба срещу първичната
                 инфекция.</p>
@@ -1255,7 +1306,7 @@
                 на болестта.</p>
             <p>
                 Прагът на икономическа вредност във фенофаза видим първи-втори възел
-                (<a class="phases_link"  przAnchorTo target="#table_bbch"  title="към фенофазите">31–32</a>)
+                (<a class="phases_link"  (click)="doScroll()" target="#table_bbch"  title="към фенофазите">31–32</a>)
                 е 30% разпространение по братята и 10% по главното стъбло, което налага прилагането на
                 фунгициди. Трябва да се следват съветите на РСРЗ. Използването на растежни регулатори за
                 намаляване дължината на стъблото и намаляване на полягането може да ограничи последствията
@@ -1265,7 +1316,14 @@
         </div>
         <div class="pest-image-container" >
             <ul class="products">
-                <li><a data-lightbox="image" href="../../../../../assets/diseases/Pseudocercosporella_herpotrichoides.jpg" data-title="Гниене на основите"><img  threshold="200" lazy-load="../../../../../assets/diseases/Pseudocercosporella_herpotrichoides_thums.jpg" alt="Pseudocercosporella herpotrichoides" title="Pseudocercosporella herpotrichoides"/><span class="title_thumb">Гниене на основите</span></a></li>
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/diseases/Pseudocercosporella_herpotrichoides.jpg" 
+                    data-title="Гниене на основите">
+                    <img  threshold="200" lazy-load="../../../../../assets/diseases/Pseudocercosporella_herpotrichoides_thums.jpg" 
+                    alt="Pseudocercosporella herpotrichoides" title="Pseudocercosporella herpotrichoides"/>
+                    <span class="title_thumb">Гниене на основите</span>
+                </a>
+            </li>
             </ul>
         </div>
     </div>
@@ -1284,11 +1342,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ ГНИЕНЕ НА ОСНОВАТА -->
     
     <!-- ЧЕРНО КОРЕНОВО ГНИЕНЕ -->
-    <div class="aa-title" id="gaeumannomyces-graminis">
+    <!-- <div class="aa-title" id="gaeumannomyces-graminis">
         <span></span>
     </div>
     <div class="row">
@@ -1314,7 +1372,14 @@
         </div>
         <div class="pest-image-container" >
             <ul class="products">
-                <li><a data-lightbox="image" href="../../../../../assets/diseases/Gaeumannomyces_graminis.jpg" data-title="Черно кореново гниене"><img  threshold="200" lazy-load="../../../../../assets/diseases/Gaeumannomyces_graminis_thumb.jpg" alt="Gaeumannomyces graminiss" title="Gaeumannomyces graminis"/><span class="title_thumb">Черно кореново гниене</span></a></li>
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/diseases/Gaeumannomyces_graminis.jpg" 
+                    data-title="Черно кореново гниене">
+                    <img  threshold="200" lazy-load="../../../../../assets/diseases/Gaeumannomyces_graminis_thumb.jpg" 
+                    alt="Gaeumannomyces graminis" title="Gaeumannomyces graminis"/>
+                    <span class="title_thumb">Черно кореново гниене</span>
+                </a>
+            </li>
             </ul>
         </div>
     </div>
@@ -1333,13 +1398,13 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ ЧЕРНО КОРЕНОВО ГНИЕНЕ -->
     
     <!-- НЕПРИЯТЕЛИ -->
     
     <!-- ДЪРВЕНИЦИ -->
-    <div class="aa-title" id="eurygaster-integriceps">
+    <!-- <div class="aa-title" id="eurygaster-integriceps">
         <span></span>
     </div>
     <div class="row">
@@ -1452,9 +1517,6 @@
                         <span class="title_thumb">Вредна житна дървеница</span>
                     </a>
                 </li>
-                <!-- 
-                    <li><a data-lightbox="image" href="../../../../../assets/insects/Eurygaster_austriaca.jpg" data-title="Австрийска дървеница"><img  threshold="200" lazy-load="../../../../../assets/insects/Eurygaster_austriaca_thumb.jpg" alt="Eurygaster austriaca" title="Eurygaster austriaca"/><span class="title_thumb">Австрийска дървеница</span></a></li> 
-                -->
                 <li>
                     <a data-lightbox="image" href="../../../../../assets/insects/Eurygaster_maura1.jpg" 
                         data-title="Мавърска дървеница">
@@ -1547,11 +1609,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ ДЪРВЕНИЦИ -->
     
     <!-- БЕГАЧ -->
-    <div class="aa-title" id="zabrus-tenebrioides">
+    <!-- <div class="aa-title" id="zabrus-tenebrioides">
         <span></span>
     </div>
     <div class="row">
@@ -1691,11 +1753,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ БЕГАЧ -->
     
     <!-- ТРИПС -->
-    <div class="aa-title" id="haplothrips-tritici">
+    <!-- <div class="aa-title" id="haplothrips-tritici">
         <span></span>
     </div>
     <div class="row">
@@ -1741,7 +1803,14 @@
         </div>
         <div class="pest-image-container" >
             <ul class="products">
-                <li><a data-lightbox="image" href="../../../../../assets/insects/Haplothrips_tritici.jpg" data-title="Пшеничен трипс"><img  threshold="200" lazy-load="../../../../../assets/insects/Haplothrips_tritici_thumb.jpg" alt="Haplothrips tritici Kurd" title="Пшеничен трипс"/><span class="title_thumb">Пшеничен трипс</span></a></li>
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/insects/Haplothrips_tritici.jpg" 
+                    data-title="Пшеничен трипс">
+                    <img  threshold="200" lazy-load="../../../../../assets/insects/Haplothrips_tritici_thumb.jpg" 
+                    alt="Haplothrips tritici Kurd" title="Пшеничен трипс"/>
+                    <span class="title_thumb">Пшеничен трипс</span>
+                </a>
+            </li>
             </ul>
         </div>
     </div>
@@ -1810,11 +1879,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ ТРИПС -->
     
     <!-- ВЪШКИ -->
-    <div class="aa-title" id="sitobion-avenae">
+    <!-- <div class="aa-title" id="sitobion-avenae">
         <span></span>
     </div>
     <div class="row">
@@ -1955,11 +2024,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ ВЪШКИ -->
     
     <!-- МУХИ -->
-    <div class="aa-title" id="mayetiola-destructor">
+    <!-- <div class="aa-title" id="mayetiola-destructor">
         <span></span>
     </div>
     <div class="row">
@@ -2253,11 +2322,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ МУХИ -->
     
     <!-- ОСИ -->
-    <div class="aa-title" id="cephus-pygmaeus">
+    <!-- <div class="aa-title" id="cephus-pygmaeus">
         <span></span>
     </div>
     <div class="row">
@@ -2408,11 +2477,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ ОСИ -->
         
     <!-- ЖИТАР -->
-    <div class="aa-title" id="anisoplia-austriaca">
+    <!-- <div class="aa-title" id="anisoplia-austriaca">
         <span></span>
     </div>
     <div class="row">
@@ -2530,11 +2599,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ ЖИТАР -->
     
     <!-- Пиявица -->
-    <div class="aa-title" id="lema-melanopus">
+    <!-- <div class="aa-title" id="lema-melanopus">
         <span></span>
     </div>
     <div class="row">
@@ -2598,7 +2667,8 @@
                 </li>
                 <li>
                     <a data-lightbox="image" href="../../../../../assets/insects/Lema_lichenis.jpg" 
-                    data-title="Синя житна пиявица"><img  threshold="200" lazy-load="../../../../../assets/insects/Lema_lichenis_thumb.jpg" 
+                    data-title="Синя житна пиявица">
+                        <img  threshold="200" lazy-load="../../../../../assets/insects/Lema_lichenis_thumb.jpg" 
                         alt="Lema lichenis Voet" title="Синя житна пиявица"/>
                         <span class="title_thumb">Синя житна пиявица</span>
                     </a>
@@ -2673,11 +2743,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Пиявица -->
     
     <!-- ЦИКАДИ -->
-    <div class="aa-title" id="psammotettix-provincialis">
+    <!-- <div class="aa-title" id="psammotettix-provincialis">
         <span></span>
     </div>
     <div class="row">
@@ -2779,11 +2849,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ ЦИКАДИ -->
     
     <!-- НЕМАТОДИ -->
-    <div class="aa-title" id="heterodera-avenae">
+    <!-- <div class="aa-title" id="heterodera-avenae">
         <span></span>
     </div>
     <div class="row">
@@ -2820,11 +2890,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ НЕМАТОДИ -->
     
     <!-- ПЛЕВЕЛИ -->
-    <div class="aa-title" id="weed">
+    <!-- <div class="aa-title" id="weed">
         <span></span>
     </div>
     <div class="row">
@@ -3055,11 +3125,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ ПЛЕВЕЛИ -->
     
     <!-- ПОЛЯГАНЕ -->
-    <div class="aa-title" id="underlay">
+    <!-- <div class="aa-title" id="underlay">
         <span></span>
     </div>
     <div class="row">
@@ -3090,11 +3160,11 @@
             <p>
                 Растежните регулатори, използвани за ограничаване на полягането, се прилагат основно
                 чрез третиране в началото на вретененето –
-                <a class="phases_link"  przAnchorTo target="#table_bbch"  title="към фенофазите">фенофаза на развитие 20–32</a>,
+                <a class="phases_link"  (click)="doScroll()" target="#table_bbch"  title="към фенофазите">фенофаза на развитие 20–32</a>,
                 като еднократно или разделно прилагане на дозата, с цел да се скъсят или заздравят междувъзлията от
                 долните етажи. Третиранията могат също така да бъдат извършени по-късно, по време на
                 фенофаза вретенене
-                (<a class="phases_link"  przAnchorTo target="#table_bbch"  title="към фенофазите">фенофаза на развитие 32–45)</a>
+                (<a class="phases_link"  (click)="doScroll()" target="#table_bbch"  title="към фенофазите">фенофаза на развитие 32–45)</a>
                 за скъсяване на връхните междувъзлия, като това ще спомогне за намаляване общата височина на стъблото.
                 Трябва да се избегне използването на растежни регулатори, ако посевите са подложени на стрес
                 (екстремни условия – напр. суша), за да не се затрудни изкласяването.</p>
@@ -3117,7 +3187,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ ПОЛЯГАНЕ -->
     
     <!-- ТАБЛИЦА BBCH -->

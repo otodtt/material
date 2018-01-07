@@ -3,15 +3,15 @@ import { CommonModule } from '@angular/common';
 import { LazyLoadModule } from '@greg-md/ng-lazy-load';
 
 
-
 // Routing
 import { PracticesRoutingModul } from './practices-routing.module';
 
 // Services
 import { PracticesService } from './practices/shared/services/practices.services';
 
-// Directives
+// Directives and Pipes
 import { AnchorToDirective } from '../common/directives/AnchorToDirective';
+// import { SanitizeHtmlPipe } from './practices/shared/pipes/keep-html.pipe';
 
 // Header and Footer Module
 import { ShareComponentsModule } from '../common/share.components.module';

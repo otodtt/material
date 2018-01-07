@@ -6,8 +6,8 @@ import 'rxjs/add/operator/map';
 @Injectable()
 
 export class BaseApi {
-    private baseUrl = 'http://localhost/database/';
-    private baseUrlLocalhost = 'http://localhost/database?title=';
+    // private baseUrl = 'http://localhost/database/';
+    private baseUrlLocalhost = 'http://localhost/database/?title=';
 
     constructor(public http: Http) {}
 
