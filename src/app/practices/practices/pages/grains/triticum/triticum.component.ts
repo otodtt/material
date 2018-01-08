@@ -52,15 +52,14 @@ export class TriticumComponent implements OnInit, AfterViewInit {
         this.practicesService.getPractices('practices')
             .subscribe((practices: Practice[]) => {
                 this.practices = practices;
-                // console.log(this.practices);
+                console.log(this.practices);
                 // this.isLoaded = true;
             });
 
-            // console.log(this.pest);
+            // console.log(this.practices);
     }
 
     openDialog(table: string) {
-        console.log(table);
         this.dialog.open(DialogComponent, {
             data: { table: table}
         });

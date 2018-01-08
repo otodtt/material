@@ -331,15 +331,15 @@
 
 
     <div *ngFor="let practice of practices; let i = index">
-        <div class="aa-title" id="{{practice.linkId}}"></div>
+        <div class="aa-title" id="{{practice.body.linkId}}"></div>
         <div class="row" >
-            <div class="pest-description-container text-indent" [innerHTML]="practice.text  | safeHtml"></div>
+            <div class="pest-description-container text-indent" [innerHTML]="practice.body.text  | safeHtml"></div>
         </div>
         <div class="row-back">
-            <div class="col-md-6" *ngIf="practice.tablePiv !== null">
+            <div class="col-md-6" *ngIf="practice.body.tablePiv !== null">
                 <div class="panel-success text-center" >
                     <div class="panel-heading">
-                        <button mat-button class="piv-button" (click)="openDialog(practice.tablePiv)">
+                        <button mat-button class="piv-button" (click)="openDialog(practice.body.tablePiv)">
                             <span class="full-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
                             <span class="small-piv">ВИЖ ПИВ</span>
                         </button>

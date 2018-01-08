@@ -1,13 +1,55 @@
 export class Practice {
     constructor(
-        public id: number,
-        public groupId: number,
-        public cultureId: number,
-        public linkId: string,
-        public name: string,
-        public text: string,
-        public fullName: string,
-        public imgPath?: string,
-        public tablePiv?: string,
+
+        id: number,
+        linkId: string,
+        name: string,
+        text: string,
+        fullName: string,
+        tablePiv?: string,
+        images?: [
+            {
+                imgPath: string,
+                imgTitle: string,
+                thumbPath: string,
+                thumbAlt: string,
+                thumbTitle: string,
+                bgName: string
+            }
+        ]
+        // public id: number,
+        // public linkId: string,
+        // public name: string,
+        // public text: string,
+        // public fullName: string,
+        // public tablePiv?: string,
+        // public images?: [
+        //         {
+        //             imgPath: string,
+        //             imgTitle: string,
+        //             thumbPath: string,
+        //             thumbAlt: string,
+        //             thumbTitle: string,
+        //             bgName: string
+        //         }
+        //     ]
+
+
+        // public images?: [
+        //     {
+        //         imgPath: string,
+        //         imgTitle: string,
+        //         thumbPath: string,
+        //         thumbAlt: string,
+        //         thumbTitle: string,
+        //         bgName: string
+        //     }
+        // ]
     ) {}
 }
+// imgPath: string,
+// imgTitle: string,
+// thumbPath: string,
+// thumbAlt: string,
+// thumbTitle: string,
+// bgName: string,
