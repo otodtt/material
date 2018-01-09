@@ -55,7 +55,6 @@ export class TriticumComponent implements OnInit, AfterViewInit {
         this.practicesService.getPractices('triticum')
             .subscribe((practices: Practice[]) => {
                 this.practices = practices;
-                // this.arrayOfKeys = Object.keys(this.practices = practices);
                 console.log(this.practices);
                 // this.isLoaded = true;
             });

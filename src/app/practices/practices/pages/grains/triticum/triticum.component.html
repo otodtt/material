@@ -331,7 +331,6 @@
 
 
     <div *ngFor="let practice of practices">
-    <!-- <div *ngFor="let key of arrayOfKeys; let i = index"> -->
         <div class="aa-title" id="{{practice.linkId}}"></div>
         <div class="row" >
             <div class="pest-description-container text-indent" [innerHTML]="practice.text  | safeHtml"></div>
