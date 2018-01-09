@@ -4,6 +4,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 
+import { AngularFireModule } from 'angularfire2';
+// import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireDatabase } from 'angularfire2/database-deprecated/';
+import { environment } from '../environments/environment';
+
 // Router
 import { AppRoutingModul } from './app-routing.module';
 
@@ -34,6 +39,7 @@ import { DocumentsComponent } from './documents/documents.component';
 import { ContactsComponent } from './contacts/contacts.component';
 
 
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -55,11 +61,13 @@ import { ContactsComponent } from './contacts/contacts.component';
         ShareComponentsModule,
         AppRoutingModul,
         PracticesModule,
+        AngularFireModule.initializeApp(environment.firebase),
     ],
     providers: [
         ChangeBreadcrumbService,
         ResizeService,
-        SeoService
+        SeoService,
+        AngularFireDatabase
     ],
     bootstrap: [AppComponent]
 })

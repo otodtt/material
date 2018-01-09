@@ -7,27 +7,28 @@ import 'rxjs/add/operator/map';
 
 export class BaseApi {
     // private baseUrl = 'http://localhost/database/';
-    private baseUrlLocalhost = 'http://localhost/database/?title=';
+    // private baseUrlLocalhost = 'http://template.dev/database/';
+    private baseUrl = 'https://prz-test.firebaseio.com/';
 
     constructor(public http: Http) {}
 
-    private getUrlLocalhost(url: string = ''): string {
-        return this.baseUrlLocalhost + url;
-    }
-
-    public getLocalhost(url: string = ''): Observable<any> {
-        return this.http.get(this.getUrlLocalhost(url))
-        .map((response: Response) => response.json());
-    }
-
-    // private getUrl(url: string = ''): string {
-    //     return this.baseUrl + url;
+    // private getUrlLocalhost(url: string = ''): string {
+    //     return this.baseUrlLocalhost + url;
     // }
 
-    // public get(url: string = ''): Observable<any> {
-    //     return this.http.get(this.getUrl(url))
+    // public getLocalhost(url: string = ''): Observable<any> {
+    //     return this.http.get(this.getUrlLocalhost(url))
     //     .map((response: Response) => response.json());
     // }
+
+    private getUrl(url: string = ''): string {
+        return this.baseUrl + url;
+    }
+
+    public get(url: string = ''): Observable<any> {
+        return this.http.get(this.getUrl(url))
+        .map((response: Response) => response.json());
+    }
 
     // public post(url: string = '', data: any = {}): Observable<any> {
     //     return this.http.post(this.getUrl(url), data)

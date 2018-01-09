@@ -34,7 +34,6 @@ export class TriticumComponent implements OnInit, AfterViewInit {
 
     @HostListener('click', ['$event'])
     onClick($event: MouseEvent) {
-        // console.log(event.srcElement.getAttribute('target'));
         if (event.srcElement.getAttribute('target') === '#table_bbch') {
             this.doScroll();
         }
@@ -53,11 +52,11 @@ export class TriticumComponent implements OnInit, AfterViewInit {
 
     ngOnInit() {
         this.changeBreadcrumbService.emitName(this.breadcrumbName);
-        this.practicesService.getPractices('practices')
+        this.practicesService.getPractices('triticum')
             .subscribe((practices: Practice[]) => {
                 this.practices = practices;
                 // this.arrayOfKeys = Object.keys(this.practices = practices);
-                console.log(practices);
+                console.log(this.practices);
                 // this.isLoaded = true;
             });
 
