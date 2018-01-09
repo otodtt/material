@@ -6,17 +6,16 @@ export class Practice {
         name: string,
         text: string,
         fullName: string,
+        images: {
+            imgPath: string,
+            imgTitle: string,
+            thumbPath: string,
+            thumbAlt: string,
+            thumbTitle: string,
+            bgName: string
+        },
         tablePiv?: string,
-        images?: [
-            {
-                imgPath: string,
-                imgTitle: string,
-                thumbPath: string,
-                thumbAlt: string,
-                thumbTitle: string,
-                bgName: string
-            }
-        ]
+
         // public id: number,
         // public linkId: string,
         // public name: string,

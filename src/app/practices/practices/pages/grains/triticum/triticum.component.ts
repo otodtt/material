@@ -26,6 +26,10 @@ export class TriticumComponent implements OnInit, AfterViewInit {
     showHide: number;
     panelOpenState = 'test';
 
+
+
+    public arrayOfKeys;
+
     @ViewChild('structure') public structure: ElementRef;
 
     @HostListener('click', ['$event'])
@@ -52,7 +56,8 @@ export class TriticumComponent implements OnInit, AfterViewInit {
         this.practicesService.getPractices('practices')
             .subscribe((practices: Practice[]) => {
                 this.practices = practices;
-                console.log(this.practices);
+                // this.arrayOfKeys = Object.keys(this.practices = practices);
+                console.log(practices);
                 // this.isLoaded = true;
             });
 
