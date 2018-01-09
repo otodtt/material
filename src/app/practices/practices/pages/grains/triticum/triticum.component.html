@@ -330,30 +330,29 @@
     </div>
 
 
-    <div *ngFor="let practice of practices; let i = index">
+    <div *ngFor="let practice of practices">
     <!-- <div *ngFor="let key of arrayOfKeys; let i = index"> -->
-        <div class="aa-title" id="{{practices.linkId}}"></div>
+        <div class="aa-title" id="{{practice.linkId}}"></div>
         <div class="row" >
-            <div class="pest-description-container text-indent" [innerHTML]="practices.text  | safeHtml"></div>
-            <!-- <div class="pest-image-container" *ngIf="practices.images.imgPath !== null">
-                <h2>TEST</h2>
+            <div class="pest-description-container text-indent" [innerHTML]="practice.text  | safeHtml"></div>
+            <div class="pest-image-container" *ngIf="practice.images?.length > 0">
                 <ul class="products">
-                    <li >
-                        <a data-lightbox="image" href="../../../../../assets/diseases/Erysiphe_graminis.jpg" 
-                            data-title="Erysiphe graminis f. sp. tritici">
-                            <img threshold="200" lazy-load="../../../../../assets/diseases/Erysiphe_graminis_thums.jpg" 
-                                alt="Erysiphe graminis f. sp. tritici" title="Erysiphe graminis f. sp. tritici"/>
-                                <span class="title_thumb">Брашнеста мана</span>
+                    <li *ngFor="let image of practice.images">
+                        <a data-lightbox="image" href="{{image.imgPath}}" 
+                            data-title="{{image.imgTitle}}">
+                            <img threshold="200" lazy-load="{{image.thumbPath}}" 
+                                alt="{{image.thumbAlt}}" title="{{image.thumbTitle}}"/>
+                                <span class="title_thumb">{{image.bgName}}</span>
                         </a>
                     </li>
                 </ul>
-            </div> -->
+            </div>
         </div>
         <div class="row-back">
-            <div class="col-md-6" *ngIf="practices.tablePiv !== null">
+            <div class="col-md-6" *ngIf="practice.tablePiv !== null">
                 <div class="panel-success text-center" >
                     <div class="panel-heading">
-                        <button mat-button class="piv-button" (click)="openDialog(practice.body.tablePiv)">
+                        <button mat-button class="piv-button" (click)="openDialog(practice.tablePiv)">
                             <span class="full-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
                             <span class="small-piv">ВИЖ ПИВ</span>
                         </button>

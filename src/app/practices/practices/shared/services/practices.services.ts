@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database-deprecated/';
 import { Http } from '@angular/http';
 import { Observable} from 'rxjs/Observable';
 
@@ -12,23 +11,17 @@ import { Practice } from '../models/practice.model';
 @Injectable()
 
 export class PracticesService extends BaseApi {
-    practice: FirebaseListObservable<any[]>;
 
-    constructor(public http: Http, public af: AngularFireDatabase) {
+    constructor(public http: Http) {
         super(http);
-        // this.practice = this.af.list('/clients') as FirebaseListObservable<Practice[]>;
-        // this.practice = db.collection('items').valueChanges();
     }
 
     // FOR LOCAL DB
-    // getPractices(param: string): Observable<Practice[]> {
-    //     return this.get(param);
-    // }
-
-    // FOR FIREBASE
     getPractices(param: string): Observable<Practice[]> {
-        return this.practice = this.af.list('/' + param) as FirebaseListObservable<Practice[]>;
+        return this.get(param);
     }
+
+
 
     // addCategory(category: Practice): Observable<Practice> {
     //     return this.post('categories', category);

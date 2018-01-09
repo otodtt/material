@@ -6,9 +6,8 @@ import 'rxjs/add/operator/map';
 @Injectable()
 
 export class BaseApi {
-    // private baseUrl = 'http://localhost/database/';
-    // private baseUrlLocalhost = 'http://template.dev/database/';
-    private baseUrl = 'https://prz-test.firebaseio.com/';
+    // private baseUrl = 'http://localhost/database/?title=';
+    private baseUrl = 'http://drzp.tmp/';
 
     constructor(public http: Http) {}
 

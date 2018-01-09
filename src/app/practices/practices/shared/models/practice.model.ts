@@ -1,16 +1,19 @@
 export interface Practice {
     id: number;
+    groupId: number;
     linkId: string;
     name: string;
     text: string;
     fullName: string;
-    images: {
-        imgPath: string
-        imgTitle: string
-        thumbPath: string
-        thumbAlt: string
-        thumbTitle: string
-        bgName: string
-    };
+    images: [
+        {
+            imgPath: string,
+            imgTitle: string,
+            thumbPath: string
+            thumbTitle: string
+            thumbAlt: string
+            bgName: string
+        }
+    ];
     tablePiv?: string;
 }

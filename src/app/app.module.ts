@@ -4,10 +4,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 
-import { AngularFireModule } from 'angularfire2';
-// import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { AngularFireDatabase } from 'angularfire2/database-deprecated/';
-import { environment } from '../environments/environment';
 
 // Router
 import { AppRoutingModul } from './app-routing.module';
@@ -60,14 +56,12 @@ import { ContactsComponent } from './contacts/contacts.component';
         BrowserAnimationsModule,
         ShareComponentsModule,
         AppRoutingModul,
-        PracticesModule,
-        AngularFireModule.initializeApp(environment.firebase),
+        PracticesModule
     ],
     providers: [
         ChangeBreadcrumbService,
         ResizeService,
-        SeoService,
-        AngularFireDatabase
+        SeoService
     ],
     bootstrap: [AppComponent]
 })
