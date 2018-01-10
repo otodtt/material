@@ -125,9 +125,7 @@
     <!-- КРАЙ Изтегляне на Приложения -->
 
     <!-- Избор на Вредител -->
-    <div class="aa-title" id="pest_menu">
-        <span></span>
-    </div>
+    <div class="aa-title" id="pest_menu"></div>
     <div class="row">
         <div id="pest_menu_links">
             <h3 >Основни вредители по еченика са:</h3>
@@ -269,44 +267,46 @@
     </div>
 
     <div *ngFor="let practice of practices">
-            <div class="aa-title" id="{{practice.linkId}}"></div>
-            <div class="row" >
-                <div class="pest-description-container text-indent" [innerHTML]="practice.text  | safeHtml"></div>
-                <div class="pest-image-container" *ngIf="practice.images?.length > 0">
-                    <ul class="products">
-                        <li *ngFor="let image of practice.images">
-                            <a data-lightbox="image" href="{{image.imgPath}}" 
-                                data-title="{{image.imgTitle}}">
-                                <img threshold="200" lazy-load="{{image.thumbPath}}" 
-                                    alt="{{image.thumbAlt}}" title="{{image.thumbTitle}}"/>
-                                    <span class="title_thumb">{{image.bgName}}</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+        <div class="aa-title" id="{{practice.linkId}}"></div>
+        <div class="row" >
+            <div class="pest-description-container text-indent" [innerHTML]="practice.text  | safeHtml">
             </div>
-            <div class="row-back">
-                <div class="col-md-6" *ngIf="practice.tablePiv !== null">
-                    <div class="panel-success text-center" >
-                        <div class="panel-heading">
-                            <button mat-button class="piv-button" (click)="openDialog(practice.tablePiv)">
-                                <span class="full-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
-                                <span class="small-piv">ВИЖ ПИВ</span>
-                            </button>
-                        </div>
+            <div class="pest-image-container" *ngIf="practice.images?.length > 0">
+                <ul class="products">
+                    <li *ngFor="let image of practice.images">
+                        <a data-lightbox="image" href="{{image.imgPath}}" 
+                            data-title="{{image.imgTitle}}">
+                            <img threshold="200" lazy-load="{{image.thumbPath}}" 
+                                alt="{{image.thumbAlt}}" title="{{image.thumbTitle}}"/>
+                                <span class="title_thumb">{{image.bgName}}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row-back">
+            <div class="col-md-6" *ngIf="practice.tablePiv !== null">
+                <div class="panel-success text-center" >
+                    <div class="panel-heading">
+                        <button mat-button class="piv-button" (click)="openDialog(practice.tablePiv)">
+                            <span class="full-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                            <span class="small-piv">ВИЖ ПИВ</span>
+                        </button>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="panel-warning text-center">
-                        <div class="panel-heading ">
-                            <a mat-button class="back_link_bottom" przAnchorTo target="#pest_menu" title="към всички неприятели"> виж друг неприятел</a>
-                        </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel-warning text-center">
+                    <div class="panel-heading ">
+                        <a mat-button class="back_link_bottom" przAnchorTo target="#pest_menu" title="към всички неприятели"> виж друг неприятел</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
     <!-- ТАБЛИЦА BBCH -->
+    <div class="aa-title" #structure id="table_bbch"></div>
     <prz-table></prz-table>
     <!-- КРАЙ ТАБЛИЦА BBCH -->
 
@@ -319,15 +319,17 @@
             </div>
         </div>
     </div>
-
+    
     <!-- Автори на снимки -->
     <br><br>
     <div class="row">
-        <div class="col-mg-12">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h5 class="panel-title authors-panel-title">Използвани са снимки от:</h5>
-                </div>
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Използвани са снимки от:
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
                 <div class="panel-body my_panel-body">
                     <p>
                         <span class="bold">Снимка 2:</span>
@@ -402,8 +404,8 @@
                         <span>By John Tann from Sydney, Australia - Johnson Grass, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=38234408</span>
                     </p>
                 </div>
-            </div>
-        </div>
+            </mat-expansion-panel>
+        </mat-accordion>
     </div>
     <!-- КРАЙ Автори на снимки -->
 </div>

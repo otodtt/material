@@ -71,8 +71,6 @@
     .text-indent{
         text-indent: 1.5em;
     }
-
-
     .phases_link {
         color: #0815b4;
     }
@@ -151,7 +149,6 @@
     /*================================
         КРАЙ Изтегляне на Приложения
     =================================*/
-
     /*=======================
     ЗА ИЗБОР НА НЕПРИЯТЕЛ
     ========================*/
@@ -246,15 +243,16 @@
     /*=======================
     КРАЙ За малките снимки
     ========================*/
-
     /* ===================
         АВТОРИ НА СНИМКИ
     ====================== */
     .mat-expansion-panel {
         margin-right: 2%;
         margin-bottom: 40px !important;
+        .mat-expansion-panel-header {
+            background-color: rgb(211, 210, 210);
+        }
         .my_panel-body {
-            // background-color: #F8F8F8;
             font-size: 0.6em;
         }
         .my_panel-body p {
@@ -318,6 +316,7 @@
         Таблица BBCH
     =================================*/
     .wrap_table {
+        margin-top: 80px;
         padding-left: 25px;
         padding-right: 15px;
     }
