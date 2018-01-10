@@ -134,8 +134,7 @@
         Изтегляне на Приложения
     =================================*/
     .my_addendum {
-        margin-top: 20px;
-        
+        margin-top: 20px;       
         .span_addendum {
             border-top: 1px solid black;
             font-weight: bolder;
@@ -262,7 +261,6 @@
     /* ======================
         КРАЙ АВТОРИ НА СНИМКИ
     ====================== */
-
     /*==================================
     КРАЙ Панелите за БАК ЛИНК и ПИВ
     ====================================*/
@@ -284,11 +282,12 @@
                     background-color: #F8F8F8;
                     border: none;
                     .back_link_bottom{
-                        color: #ca7b00;
+                        color: #804f00;
                         width: 100%;
+                        font-size: 1em;
                     }
                     .back_link_bottom:hover{
-                        color: #0815b4;
+                        color: #33691E;
                     }
                 }
             }
@@ -311,7 +310,6 @@
     /*==================================
     КРАЙ Панелите за БАК ЛИНК и ПИВ
     ====================================*/
-
     /*================================
         Таблица BBCH
     =================================*/
@@ -323,14 +321,11 @@
     /*================================
         КРАЙ Таблица BBCH
     =================================*/
-
     /*==================
     RESPONSIVE DESIGN
     ====================*/
-
     @media (max-width: 1200px){}
     @media (max-width: 993px){
-        /*======= OK ======= */
         .title_thumb{
             display: none;
         }
@@ -368,9 +363,6 @@
                 padding-right: 0 !important;
             }
         }
-
-
-
         .row-back {
             display: block;
             margin-left: 2%;
@@ -390,7 +382,6 @@
         #stamp{
             max-width: 90%;
         }
-        /*======= OK ======= */
     }
     @media (max-width: 580px){
         #stamp{
@@ -399,8 +390,6 @@
         #authors-wrap {
             padding-left: 25%;
         }
-        /*======= OK ======= */
-        
     }
     @media (max-width: 460px){
         .products li a img{
@@ -471,7 +460,6 @@
         #stamp{
             max-width: 60%;
         }
-        /*======= OK ======= */
     }
 
 }

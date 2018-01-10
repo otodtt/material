@@ -5,7 +5,7 @@ export interface Practice {
     name: string;
     text: string;
     fullName: string;
-    images: [
+    images?: [
         {
             imgPath: string,
             imgTitle: string,
