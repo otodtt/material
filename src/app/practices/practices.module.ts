@@ -45,6 +45,7 @@ import { NicotianaComponent } from './practices/pages/technical/nicotiana/nicoti
 
 // Management
 import { ManagementComponent } from './management/management/management.component';
+import { TableComponent } from './practices/shared/table/table.component';
 
 
 
@@ -81,6 +82,7 @@ import { ManagementComponent } from './management/management/management.componen
     GossypiumComponent,
     HelianthusComponent,
     NicotianaComponent,
+    TableComponent,
   ],
   providers: [PracticesService],
   entryComponents: [SideMenuComponent, DialogComponent],

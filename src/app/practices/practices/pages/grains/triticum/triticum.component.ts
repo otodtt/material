@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, HostListener } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, HostListener, OnDestroy } from '@angular/core';
 import { MatDialog } from '@angular/material';
+import { Subscription } from 'rxjs/Subscription';
 
 import { SeoService } from '../../../../../common/services/SeoService';
 import { ChangeBreadcrumbService } from '../../../../../common/services/changeBreadcrumb.service';
@@ -14,21 +15,17 @@ import { PracticesService } from '../../../shared/services/practices.services';
     templateUrl: './triticum.component.html',
     styleUrls: ['../../pages.scss']
 })
-export class TriticumComponent implements OnInit, AfterViewInit {
+export class TriticumComponent implements OnInit, OnDestroy {
     private title = 'ДРЗП - Пшеница';
     private description = 'Добра Растителнозащитна Пракатика при пшеница. Борба с болести, неприятели и плевели при пшеницата';
     private keywords = 'пшеница, болести, неприятели, плевели, ПРЗ, ПИВ';
 
     breadcrumbName = 'Пшеница';
 
+    isLoaded = false;
     practices: Practice[] = [];
+    subscription: Subscription;
 
-    showHide: number;
-    panelOpenState = 'test';
-
-
-
-    public arrayOfKeys;
 
     @ViewChild('structure') public structure: ElementRef;
 
@@ -52,14 +49,11 @@ export class TriticumComponent implements OnInit, AfterViewInit {
 
     ngOnInit() {
         this.changeBreadcrumbService.emitName(this.breadcrumbName);
-        this.practicesService.getPractices('triticum')
+        this.subscription = this.practicesService.getPractices('triticum')
             .subscribe((practices: Practice[]) => {
                 this.practices = practices;
-                console.log(this.practices);
-                // this.isLoaded = true;
+                this.isLoaded = true;
             });
-
-            // console.log(this.practices);
     }
 
     openDialog(table: string) {
@@ -67,14 +61,15 @@ export class TriticumComponent implements OnInit, AfterViewInit {
             data: { table: table}
         });
     }
-    ngAfterViewInit() {
-        // this.elRef.nativeElement.querySelector('').addEventHandler('click', this.doScroll.bind(this);
-        // console.log(this.elRef.nativeElement);
-        // this.elRef.nativeElement.querySelector('').addEventHandler('click', this.doScroll.bind(this);
-    }
 
     doScroll(): void {
         // this.structure.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'start' });
         this.structure.nativeElement.scrollIntoView();
+    }
+
+    ngOnDestroy() {
+        if (this.subscription) {
+          this.subscription.unsubscribe();
+        }
     }
 }

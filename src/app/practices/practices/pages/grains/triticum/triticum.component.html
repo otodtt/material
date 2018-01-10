@@ -1,8 +1,8 @@
-<!-- ToDo Да махна тайм аута-->
-<!-- <div class="row text-center" id="prz-loader" *ngIf="!isLoaded"><prz-loader></prz-loader></div> -->
-<!-- ToDo Да махна тайм аута-->
+<div class="row text-center" id="prz-loader" *ngIf="!isLoaded">
+    <mat-spinner aria-label="Спинър до зареждането на страницата"></mat-spinner>
+</div>
 
-<div id="wrap_lmenu_txt">
+<div id="wrap_lmenu_txt" *ngIf="isLoaded">
     <div class="text-center name-header">
         <h2 class="customfont">ЗЪРНЕНОЖИТНИ КУЛТУРИ</h2>
     </div>
@@ -149,7 +149,7 @@
             <h3 >Основни вредители по пшеницата са:</h3>
             <ul id="menu_a">
                 <li>
-                    <a class="back_link"  przAnchorTo target="#erysiphe-graminis"   title="към текста">
+                    <a class="back_link"  przAnchorTo target="#erysiphe-graminis" title="към текста">
                         <mat-icon>chevron_right</mat-icon>
                         Брашнеста мана 
                         (<span class="latin_name">Erysiphe graminis De Condolle. f. sp. tritici 
@@ -329,7 +329,6 @@
         </div>
     </div>
 
-
     <div *ngFor="let practice of practices">
         <div class="aa-title" id="{{practice.linkId}}"></div>
         <div class="row" >
@@ -367,6 +366,161 @@
             </div>
         </div>
     </div>
+
+    <!-- ТАБЛИЦА BBCH -->
+    <div class="aa-title" #structure id="table_bbch"></div>
+    <prz-table></prz-table>
+    <!-- КРАЙ ТАБЛИЦА BBCH -->
+
+    <div class="row-back">
+        <div class="col-md-6" style="margin: 0 auto; padding-top: 50px;">
+            <div class="panel-warning text-center">
+                <div class="panel-heading ">
+                    <a mat-button class="back_link_bottom" przAnchorTo target="#pest_menu" title="към всички неприятели"> към всички неприятели</a>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <!-- Автори на снимки -->
+    <br><br>
+    <div class="row">
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Използвани са снимки от:
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="panel-body my_panel-body">
+                    <p>
+                        <span class="bold">Снимка 1:</span>
+                        <span>https://agriculture.basf.com/gb/en/Crop-Protection/Powdery-mildew-wheat.html</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 2:</span>
+                        <span>By Agronom (Own work) [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC BY-SA 4.0-3.0-2.5-2.0-1.0 (https://creativecommons.org/licenses/by-sa/4.0-3.0-2.5-2.0-1.0)], via Wikimedia Commons</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 3: </span>
+                        <span>CC BY 3.0 us, https://commons.wikimedia.org/w/index.php?curid=2893007</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 5:</span>
+                        <span >By Rasbak (Own work) [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 8:</span>
+                        <span>Av Agronom - Eget arbete, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=21310865</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 9:</span>
+                        <span>http://www.agroatlas.ru/en/content/diseases/Hordei/Hordei_Fusarium_sp/index.html</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 11:</span>
+                        <span >Public Domain, https://commons.wikimedia.org/w/index.php?curid=1214930</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 12:</span>
+                        <span >By Maccheek - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=5087504</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 13:</span>
+                        <span >http://www.pflanzenkrankheiten.ch/de/krankheiten-an-kulturpflanzen/getreide-mais/weizen/174-septoria-nodorum</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 15:</span>
+                        <span >http://www.cropscience.bayer.bg/BCSWeb/www/BCS_BG_Internet.nsf/id/BG_Pseudocercosporella_herpotrichoides?open&skey=BG_Wheat&ccm=100020</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 16:</span>
+                        <span >https://www.plantmanagementnetwork.org/pub/php/diagnosticguide/take-all/</span>
+                    </p>
+                    <!-- НАСЕКОМИ -->
+                    <p>
+                        <span class="bold">Снимка 17:</span>
+                        <span >Автор: Michael J. Raupach, Lars Hendrich, Stefan M. Kuchler, Fabian Deister, Jérome Moriniére, Martin M. Gossner - Building-Up of a DNA Barcode Library for True Bugs (Insecta: Hemiptera: Heteroptera) of Germany Reveals Taxonomic Uncertainties and Surprises Plos One Sept. 2014, DOI: 10.1371/journal.pone.0106940, CC BY 4.0, https://commons.wikimedia.org/w/index.php?curid=38893744</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 18:</span>
+                        <span >Göran Liljeberg [CC BY 3.0 (http://creativecommons.org/licenses/by/3.0)], via Wikimedia Commons</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 19:</span>
+                        <span >By Didier Descouens - Praca własna, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=27646467</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 20:</span>
+                        <span >By Udo Schmidt from Deutschland - Zabrus tenebrionides (Goeze, 1777)Uploaded by Magnus Manske, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=22950234</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 21:</span>
+                        <span >By Emil Hochdanz - Carl Gustav Calwer; Gustav Jäger (1876) Käferbuch. Naturgeschichte der Käfer Europas., Stuttgart: Julius Hoffmann [1]www.biolib.de, Public Domain, https://commons.wikimedia.org/w/index.php?curid=4972261</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 22:</span>
+                        <span >http://hitagro.ru/pshenichnyj-trips/</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 23:</span>
+                        <span >http://www.agroatlas.ru/en/content/pests/Sitobion_avenae/index.html</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 24:</span>
+                        <span >By Kent Loeffler - http://www.ars.usda.gov/is/graphics/photos/apr12/d2458-1.htm, Public Domain, https://commons.wikimedia.org/w/index.php?curid=52753821</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 25:</span>
+                        <span >By Transferred from en.wikipedia to Commons.This image was released by the Agricultural Research Service, the research agency of the United States Department of Agriculture, with the ID k4193-19 (next).This tag does not indicate the copyright status of the attached work. A normal copyright tag is still required. See Commons:Licensing for more information.English | français | македонски | +/−, Public Domain, https://commons.wikimedia.org/w/index.php?curid=1877782</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 26:</span>
+                        <span >By Hectonichus - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=24712567</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 27:</span>
+                        <span >Av James Lindsey at Ecology of Commanster, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=3512576</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 28:</span>
+                        <span >http://www.agroatlas.ru/en/content/pests/Cephus_pygmaeus/</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 30:</span>
+                        <span >By Siga - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=11212006</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 31:</span>
+                        <span >By ©entomart, Attribution, https://commons.wikimedia.org/w/index.php?curid=394574</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 32:</span>
+                        <span >By Udo Schmidt from Deutschland [CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0)], via Wikimedia Commons</span>
+                    </p>
+                    <!-- ПЛЕВЕЛИ -->
+                    <p>
+                        <span class="bold">Снимка 33:</span>
+                        <span >By Stefan.lefnaer (Own work) [CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 34:</span>
+                        <span >By Kurt Stüber [1] [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC-BY-SA-3.0 (http://creativecommons.org/licenses/by-sa/3.0/)], via Wikimedia Commons</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 35:</span>
+                        <span >By Kurt Stueber - www.biolib.de, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=6294</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 36:</span>
+                        <span >By 4028mdk09 - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=11746444</span>
+                    </p>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+    <!-- КРАЙ Автори на снимки -->
+</div>
     
     <!-- МАНА -->
     <!-- <div class="aa-title" id="erysiphe-graminis">
@@ -537,9 +691,7 @@
     </div> -->
     <!-- КРАЙ МАНА -->
 
-    <div class="aa-title" #structure  id="table_bbch">
-        <div class="row">TABLE</div>
-    </div>
+    
     
     <!-- РЪЖДИ -->
     <!-- <div class="aa-title" id="puccinia-recondita">
@@ -1421,10 +1573,10 @@
     </div>
     <div class="row">
         <div class="pest-description-container text-indent">
-            <h3 class="my_class_h3 phase_bottom">Вредна житна дървеница – <span class="latin_name">Eurygaster integriceps Put.</span>;</h3>
-            <h3 class="my_class_h3 phase">Австрийска дървеница – <span class="latin_name">E. austriaca Schr.</span>;</h3>
-            <h3 class="my_class_h3 phase">Мавърска дървеница – <span class="latin_name">E. maura L.</span>;</h3>
-            <h3 class="my_class_h3 phase">Остроглави дървеници - <span class="latin_name">Aelia acuminata L.; A. rostrata Boh.</span></h3>
+            <h3>Вредна житна дървеница – <span class="latin_name">Eurygaster integriceps Put.</span>;</h3>
+            <h3>Австрийска дървеница – <span class="latin_name">E. austriaca Schr.</span>;</h3>
+            <h3>Мавърска дървеница – <span class="latin_name">E. maura L.</span>;</h3>
+            <h3>Остроглави дървеници - <span class="latin_name">Aelia acuminata L.; A. rostrata Boh.</span></h3>
             <h4 class="my_class_h4">Описание на неприятеля</h4>
             <p>
                 Възрастните дървеници от род <span class="latin_name">Eurygaster</span> имат
@@ -1631,7 +1783,7 @@
     <div class="row">
         <div class="pest-description-container text-indent">
             <h3 >Обикновен житен бегач – <span class="latin_name">Zabrus tenebrioides Goeze;</span></h3>
-            <h3 class="my_class_h3 phase">Голям житен бегач – <span class="latin_name">Z. spinipes F.</span></h3>
+            <h3 >Голям житен бегач – <span class="latin_name">Z. spinipes F.</span></h3>
             <h4 class="my_class_h4">Описание на неприятеля</h4>
             <p>
                 Възрастните на обикновения житен бегач са бръмбари с продълговато, смолисто черно тяло,
@@ -1901,7 +2053,7 @@
     <div class="row">
         <div class="pest-description-container text-indent">
             <h3 >Овесена листна въшка – <span class="latin_name">Sitobion avenae L.;</span></h3>
-            <h3 class="my_class_h3 phase">Обикновена житна въшка – <span class="latin_name">Schizaphis graminum Rond.</span></h3>
+            <h3 >Обикновена житна въшка – <span class="latin_name">Schizaphis graminum Rond.</span></h3>
             <h4 class="my_class_h4">Описание на неприятеля</h4>
             <p>
                 <span class="bold">Овесената листна въшка</span> е най-масово разпространения, многочислен и вреден вид по
@@ -2045,10 +2197,10 @@
     </div>
     <div class="row">
         <div class="pest-description-container text-indent">
-            <h3 class="my_class_h3 phase">Хесенска муха – <span class="latin_name">Mayetiola destructor Say;</span></h3>
-            <h3 class="my_class_h3 phase">Житна тревна муха – <span class="latin_name">Opomyza florum Fab;</span></h3>
-            <h3 class="my_class_h3 phase">Черна пшеничена муха – <span class="latin_name">Phorbia fumigata Meigen (синоним Phorbia securis Tien);</span></h3>
-            <h3 class="my_class_h3 phase">Черна пролетна пшеничена муха – <span class="latin_name">Phorbia haberlandti Schiner (синоним Phorbia penicillifera Jermy).</span></h3>
+            <h3>Хесенска муха – <span class="latin_name">Mayetiola destructor Say;</span></h3>
+            <h3 >Житна тревна муха – <span class="latin_name">Opomyza florum Fab;</span></h3>
+            <h3 >Черна пшеничена муха – <span class="latin_name">Phorbia fumigata Meigen (синоним Phorbia securis Tien);</span></h3>
+            <h3 >Черна пролетна пшеничена муха – <span class="latin_name">Phorbia haberlandti Schiner (синоним Phorbia penicillifera Jermy).</span></h3>
             <h4 class="my_class_h4">Описание на неприятеля</h4>
             <p>
                 <span class="bold">Хесенска муха:</span> Възрастните насекоми са дребни, ръждивосиви
@@ -2343,8 +2495,8 @@
     </div>
     <div class="row">
         <div class="pest-description-container text-indent">
-            <h3 class="my_class_h3 phase">Житна стъблена оса – <span class="latin_name">Cephus pygmaeus L.;</span></h3>
-            <h3 class="my_class_h3 phase">Черна житна стъблена оса – <span class="latin_name">Cephus (Trachelus) tabidus F.</span></h3>
+            <h3 >Житна стъблена оса – <span class="latin_name">Cephus pygmaeus L.;</span></h3>
+            <h3 >Черна житна стъблена оса – <span class="latin_name">Cephus (Trachelus) tabidus F.</span></h3>
             <h4 class="my_class_h4">Описание на неприятеля</h4>
             <p>
                 Житните стъблени оси имат едно поколение годишно, което обхваща две календарни години и
@@ -2620,8 +2772,8 @@
     </div>
     <div class="row">
         <div class="pest-description-container text-indent" >
-            <h3 class="my_class_h3 phase">Обикновена житна пиявица – <span class="latin_name">Lema melanopus L.;</span></h3>
-            <h3 class="my_class_h3 phase">Синя житна пиявица – <span class="latin_name">Lema lichenis Voet.</span></h3>
+            <h3 >Обикновена житна пиявица – <span class="latin_name">Lema melanopus L.;</span></h3>
+            <h3 >Синя житна пиявица – <span class="latin_name">Lema lichenis Voet.</span></h3>
             <h4 class="my_class_h4">Описание на неприятеля</h4>
             <p>
                 Възрастните насекоми на обикновената житна пиявица имат продълговато, почти цилиндрично
@@ -3202,164 +3354,5 @@
     </div> -->
     <!-- КРАЙ ПОЛЯГАНЕ -->
     
-    <!-- ТАБЛИЦА BBCH -->
-    <!-- <prz-table></prz-table> -->
-    <!-- КРАЙ ТАБЛИЦА BBCH -->
-    <div class="row-back">
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
-            <div class="panel-warning text-center">
-                <div class="panel-heading ">
-                    <a  class="back_link_bottom"
-                        przAnchorTo target="#pest_menu"
-                        
-                        title="към всички неприятели"
-                        >
-                        
-                        към всички неприятели
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4"></div>
-    </div>
     
-    <!-- Автори на снимки -->
-    <br><br>
-    <div class="row">
-        <mat-accordion>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        Използвани са снимки от:
-                    </mat-panel-title>
-                </mat-expansion-panel-header>
-                <div class="panel-body my_panel-body">
-                    <p>
-                        <span class="bold">Снимка 1:</span>
-                        <span>https://agriculture.basf.com/gb/en/Crop-Protection/Powdery-mildew-wheat.html</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 2:</span>
-                        <span>By Agronom (Own work) [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC BY-SA 4.0-3.0-2.5-2.0-1.0 (https://creativecommons.org/licenses/by-sa/4.0-3.0-2.5-2.0-1.0)], via Wikimedia Commons</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 3: </span>
-                        <span>CC BY 3.0 us, https://commons.wikimedia.org/w/index.php?curid=2893007</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 5:</span>
-                        <span >By Rasbak (Own work) [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0)], via Wikimedia Commons</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 8:</span>
-                        <span>Av Agronom - Eget arbete, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=21310865</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 9:</span>
-                        <span>http://www.agroatlas.ru/en/content/diseases/Hordei/Hordei_Fusarium_sp/index.html</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 11:</span>
-                        <span >Public Domain, https://commons.wikimedia.org/w/index.php?curid=1214930</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 12:</span>
-                        <span >By Maccheek - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=5087504</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 13:</span>
-                        <span >http://www.pflanzenkrankheiten.ch/de/krankheiten-an-kulturpflanzen/getreide-mais/weizen/174-septoria-nodorum</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 15:</span>
-                        <span >http://www.cropscience.bayer.bg/BCSWeb/www/BCS_BG_Internet.nsf/id/BG_Pseudocercosporella_herpotrichoides?open&skey=BG_Wheat&ccm=100020</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 16:</span>
-                        <span >https://www.plantmanagementnetwork.org/pub/php/diagnosticguide/take-all/</span>
-                    </p>
-                    <!-- НАСЕКОМИ -->
-                    <p>
-                        <span class="bold">Снимка 17:</span>
-                        <span >Автор: Michael J. Raupach, Lars Hendrich, Stefan M. Kuchler, Fabian Deister, Jérome Moriniére, Martin M. Gossner - Building-Up of a DNA Barcode Library for True Bugs (Insecta: Hemiptera: Heteroptera) of Germany Reveals Taxonomic Uncertainties and Surprises Plos One Sept. 2014, DOI: 10.1371/journal.pone.0106940, CC BY 4.0, https://commons.wikimedia.org/w/index.php?curid=38893744</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 18:</span>
-                        <span >Göran Liljeberg [CC BY 3.0 (http://creativecommons.org/licenses/by/3.0)], via Wikimedia Commons</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 19:</span>
-                        <span >By Didier Descouens - Praca własna, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=27646467</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 20:</span>
-                        <span >By Udo Schmidt from Deutschland - Zabrus tenebrionides (Goeze, 1777)Uploaded by Magnus Manske, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=22950234</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 21:</span>
-                        <span >By Emil Hochdanz - Carl Gustav Calwer; Gustav Jäger (1876) Käferbuch. Naturgeschichte der Käfer Europas., Stuttgart: Julius Hoffmann [1]www.biolib.de, Public Domain, https://commons.wikimedia.org/w/index.php?curid=4972261</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 22:</span>
-                        <span >http://hitagro.ru/pshenichnyj-trips/</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 23:</span>
-                        <span >http://www.agroatlas.ru/en/content/pests/Sitobion_avenae/index.html</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 24:</span>
-                        <span >By Kent Loeffler - http://www.ars.usda.gov/is/graphics/photos/apr12/d2458-1.htm, Public Domain, https://commons.wikimedia.org/w/index.php?curid=52753821</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 25:</span>
-                        <span >By Transferred from en.wikipedia to Commons.This image was released by the Agricultural Research Service, the research agency of the United States Department of Agriculture, with the ID k4193-19 (next).This tag does not indicate the copyright status of the attached work. A normal copyright tag is still required. See Commons:Licensing for more information.English | français | македонски | +/−, Public Domain, https://commons.wikimedia.org/w/index.php?curid=1877782</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 26:</span>
-                        <span >By Hectonichus - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=24712567</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 27:</span>
-                        <span >Av James Lindsey at Ecology of Commanster, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=3512576</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 28:</span>
-                        <span >http://www.agroatlas.ru/en/content/pests/Cephus_pygmaeus/</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 30:</span>
-                        <span >By Siga - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=11212006</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 31:</span>
-                        <span >By ©entomart, Attribution, https://commons.wikimedia.org/w/index.php?curid=394574</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 32:</span>
-                        <span >By Udo Schmidt from Deutschland [CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0)], via Wikimedia Commons</span>
-                    </p>
-                    <!-- ПЛЕВЕЛИ -->
-                    <p>
-                        <span class="bold">Снимка 33:</span>
-                        <span >By Stefan.lefnaer (Own work) [CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 34:</span>
-                        <span >By Kurt Stüber [1] [GFDL (http://www.gnu.org/copyleft/fdl.html) or CC-BY-SA-3.0 (http://creativecommons.org/licenses/by-sa/3.0/)], via Wikimedia Commons</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 35:</span>
-                        <span >By Kurt Stueber - www.biolib.de, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=6294</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 36:</span>
-                        <span >By 4028mdk09 - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=11746444</span>
-                    </p>
-                </div>
-            </mat-expansion-panel>
-        </mat-accordion>
-    </div>
-    <!-- КРАЙ Автори на снимки -->
-</div>
+    
