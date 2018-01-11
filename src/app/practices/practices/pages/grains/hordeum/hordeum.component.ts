@@ -61,7 +61,6 @@ export class HordeumComponent implements OnInit, OnDestroy {
     }
 
     doScroll(): void {
-        // this.structure.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'start' });
         this.structure.nativeElement.scrollIntoView();
     }
 
