@@ -17,7 +17,7 @@ import { PracticesService } from '../../../shared/services/practices.services';
 })
 export class TriticumComponent implements OnInit, OnDestroy {
     private title = 'ДРЗП - Пшеница';
-    private description = 'Добра Растителнозащитна Пракатика при пшеница. Борба с болести, неприятели и плевели при пшеницата';
+    private description = 'Добра Растителнозащитна Пракатика при пшеница. Борба с болести, неприятели и плевели при пшеницата.';
     private keywords = 'пшеница, болести, неприятели, плевели, ПРЗ, ПИВ';
 
     breadcrumbName = 'Пшеница';
@@ -40,8 +40,7 @@ export class TriticumComponent implements OnInit, OnDestroy {
         private seoService: SeoService,
         private changeBreadcrumbService: ChangeBreadcrumbService,
         public dialog: MatDialog,
-        private practicesService: PracticesService,
-        private elRef: ElementRef
+        private practicesService: PracticesService
     ) {
         this.seoService.addTitle(this.title);
         this.seoService.setMeta(this.description, this.keywords);

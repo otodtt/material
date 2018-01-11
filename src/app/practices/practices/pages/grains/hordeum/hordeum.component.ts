@@ -16,7 +16,7 @@ import { PracticesService } from '../../../shared/services/practices.services';
 })
 export class HordeumComponent implements OnInit, OnDestroy {
     private title = 'ДРЗП - Ечемик';
-    private description = 'Добра Растителнозащитна Пракатика при ечемик. Борба с болести, неприятели и плевели при ечемика';
+    private description = 'Добра Растителнозащитна Пракатика при ечемик. Борба с болести, неприятели и плевели при ечемика.';
     private keywords = 'ечемик, болести, неприятели, плевели, ПРЗ, ПИВ';
 
     breadcrumbName = 'Ечемик';
@@ -39,8 +39,7 @@ export class HordeumComponent implements OnInit, OnDestroy {
         private seoService: SeoService,
         private changeBreadcrumbService: ChangeBreadcrumbService,
         public dialog: MatDialog,
-        private practicesService: PracticesService,
-        private elRef: ElementRef
+        private practicesService: PracticesService
     ) {
         this.seoService.addTitle(this.title);
         this.seoService.setMeta(this.description, this.keywords);
