@@ -1,9 +1,7 @@
 :host ::ng-deep {
     display: block;
 
-    // .as {
-    //     display: none;
-    // }
+    //  class="as"
 // }
     /* =======================================================
         Нулиране на row класа и добавяне на margin и pading
@@ -280,7 +278,7 @@
                 margin-bottom: 0;
                 border: none;
                 box-shadow: none;
-                border-bottom: 2px solid #d19c3e8f;
+                border-bottom: 2px solid rgba(209, 156, 62, 0.561);
                 .panel-heading {
                     color: #F8F8F8;
                     background-color: #F8F8F8;
