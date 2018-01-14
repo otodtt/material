@@ -6,19 +6,10 @@ import 'rxjs/add/operator/map';
 @Injectable()
 
 export class BaseApi {
-    // private baseUrl = 'http://localhost/database/?title=';
+
     private baseUrl = 'http://drzp.tmp/';
 
     constructor(public http: Http) {}
-
-    // private getUrlLocalhost(url: string = ''): string {
-    //     return this.baseUrlLocalhost + url;
-    // }
-
-    // public getLocalhost(url: string = ''): Observable<any> {
-    //     return this.http.get(this.getUrlLocalhost(url))
-    //     .map((response: Response) => response.json());
-    // }
 
     private getUrl(url: string = ''): string {
         return this.baseUrl + url;
