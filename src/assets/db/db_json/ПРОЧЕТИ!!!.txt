@@ -1,0 +1,5 @@
+В phpstorm в TemplateController -> show_culture() се пуска dd($json);
+от браузера се копира всичко и се поставя във фала codebeautify.json за да се запази бг кодировката
+Във файла се махат в началото и в края кавичките " Трябва да започва и да свършва с []
+
+Качва се в сайта https://codebeautify.org/jsonviewer като там с обработва
