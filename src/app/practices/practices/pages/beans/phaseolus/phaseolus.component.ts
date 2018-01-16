@@ -55,5 +55,4 @@ export class PhaseolusComponent implements OnInit, OnDestroy {
           this.subscription.unsubscribe();
         }
     }
-
 }
