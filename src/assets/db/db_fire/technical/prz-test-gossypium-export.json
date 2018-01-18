@@ -1,0 +1,150 @@
+[ {
+  "cultureId" : 14,
+  "groupId" : 3,
+  "id" : 202,
+  "linkId" : "fusarium-ssp",
+  "name" : "Кореново гниене",
+  "text" : "<h3 >Кореново гниене – <span class=\"latin_name\">Fusarium sp.; Rhizoctonia sp.; Pythium sp.)</span></h3>\r\n            <h4 class=\"my_class_h4\">Описание на болестта</h4>\r\n            <p>\r\n                Болестта е разпространена повсеместно. Причинява се от почвообитаващите микроорганизми от родовете\r\n                <span class=\"latin_name\">Fusarium, Pythium u Rhizoctonia</span>. Те предизвикват загниване на семената,\r\n                кълновете, основата на стъблото. Има икономическо значение до появата на 3-4 същински лист. Развитието\r\n                на болестта се благоприятства от хладна и дъждовна пролет, когато се забавя поникването на памука, а\r\n                младите растения са с понижена жизненост.\r\n            </p>\r\n            <h4 class=\"my_class_h4\">Стратегия за борба</h4>\r\n            <p>\r\n                Борбата с болестта е насочена към създаване на благоприятни условия за растеж и развитие на младите\r\n                памукови растения. Спазване на сеитбообращения, качествена предсеитбена обработка, оптимални срокове\r\n                на сеитба, оптимална дълбочина на сеитба - 4-5 cm, своевременно разрохкване на почвената кора, подхранване\r\n                с азотни торове и др. За директна борба с кореновото гниене се препоръчва дилентиране на семената със\r\n                сярна киселина и обеззаразяването им.\r\n            </p>\r\n            <h4 class=\"my_class_h4 as\">Активни вещества</h4>\r\n            <p class=\"as\"><span class=\"active-substance\">Каптан, манкоцеб, металоксил-М, тритиконазол + ипродион.</span></p>"
+}, {
+  "cultureId" : 14,
+  "groupId" : 3,
+  "id" : 203,
+  "images" : [ {
+    "bgName" : "Телени червеи",
+    "created_at" : "2018-01-18 14:38:40",
+    "imgPath" : "../../../../../assets/insects/Click_beetle_larva.jpg",
+    "imgTitle" : "Телени червеи - ларва",
+    "practices_id" : 203,
+    "thumbAlt" : "Elateridae",
+    "thumbPath" : "../../../../../assets/insects/Click_beetle_larva_thumb.jpg",
+    "thumbTitle" : "Телени червеи - ларва",
+    "updated_at" : "2018-01-18 14:38:40"
+  } ],
+  "linkId" : "elateridae",
+  "name" : "Телени и лъжетелени черве",
+  "tablePiv" : "<table class=\"piv_table\">\r\n                            <thead>\r\n                                <tr>\r\n                                    <th>ФЕНОФАЗА НА КУЛТУРАТА</th>\r\n                                    <th>ВРЕДИТЕЛ / СТАДИЙ</th>\r\n                                    <th>\r\n                                        <span class=\"full-name-piv\">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>\r\n                                        <span class=\"small-name-piv\">ПРАГ НА ВРЕДНИОСТ</span>\r\n                                    </th>\r\n                                </tr>\r\n                            </thead>\r\n                            <tbody>\r\n                                <tr class=\"tr_name_pest\">\r\n                                    <td colspan=\"3\" class=\"tr_latin\">ТЕЛЕНИ ЧЕРВЕИ <span class=\"latin_name\">сем. Elateridae</span></td>\r\n                                </tr>\r\n                                <tr>\r\n                                    <td>преди третиране на семената</td>\r\n                                    <td rowspan=\"2\">ларви</td>\r\n                                    <td>5-8 бр./кв.м</td>\r\n                                </tr>\r\n                                <tr>\r\n                                    <td>преди внасяне на гранулат</td>\r\n                                    <td>8-10 бр./кв.м</td>\r\n                                </tr>\r\n                            </tbody>\r\n                        </table>",
+  "text" : "<h3 >Телени и лъжетелени червеи – <span class=\"latin_name\">сем. Elateridae, сем. Tenebrionidae и сем. Alleculidae</span></h3>\r\n            <h4 class=\"my_class_h4\">Описание на неприятелите</h4>\r\n            <p>\r\n                Неприятелите нанасят сериозни повреди от сеитбата на памука до 1-2 същински лист. Нагризват семената,\r\n                кълновете и правят ходове в надземната част на младите растения. Тези повреди са по-силно изразени при\r\n                ранна сеитба и хладна пролет, което води до удължаване на този период от вегетацията на памука. В\r\n                комбинация с кореновото гниене тези повреди водят до прореждането на посевите.\r\n            </p>\r\n            <h4 class=\"my_class_h4\">Стратегия за борба</h4>\r\n            <p>\r\n                Необходимо е да се установи плътността на почвообитаващите неприятели още през есента, като тези проучвания\r\n                продължават и през пролетта, преди сеитбата на културата. Основната стратегия цели установяване на\r\n                потенциалната и реална опасност от тези неприятели за културата. При наличие на висока плътност е необходимо\r\n                да се проведе двуслойна оран (10-15; 15-30 cm) и се третират предсеитбено семената.\r\n            </p>\r\n            <h4 class=\"my_class_h4 as\">Активни вещества</h4>\r\n            <p class=\"as\">Обеззаразяване на семената: <span class=\"active-substance\">тиодикарб.</span></p>"
+}, {
+  "cultureId" : 14,
+  "groupId" : 3,
+  "id" : 204,
+  "images" : [ {
+    "bgName" : "Трипси",
+    "created_at" : "2018-01-18 14:41:37",
+    "imgPath" : "../../../../../../assets/insects/Thrips_tabaci3.jpg",
+    "imgTitle" : "Thrips tabaci Lind",
+    "practices_id" : 204,
+    "thumbAlt" : "Thrips tabaci Lind",
+    "thumbPath" : "../../../../../../assets/insects/Thrips_tabaci3_thumb.jpg",
+    "thumbTitle" : "Трипси",
+    "updated_at" : "2018-01-18 14:41:37"
+  } ],
+  "linkId" : "thrips",
+  "name" : "Трипси",
+  "tablePiv" : "<table class=\"piv_table\">\r\n                            <thead>\r\n                                <tr>\r\n                                    <th>ФЕНОФАЗА НА КУЛТУРАТА</th>\r\n                                    <th>ВРЕДИТЕЛ / СТАДИЙ</th>\r\n                                    <th>\r\n                                        <span class=\"full-name-piv\">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>\r\n                                        <span class=\"small-name-piv\">ПРАГ НА ВРЕДНИОСТ</span>\r\n                                    </th>\r\n                                </tr>\r\n                            </thead>\r\n                            <tbody>\r\n                                <tr class=\"tr_name_pest\">\r\n                                    <td colspan=\"3\" class=\"tr_latin\">ТЮТЮНЕВ ТРИПС <span class=\"latin_name\">Thrips tabaci</span></td>\r\n                                </tr>\r\n                                <tr>\r\n                                    <td>1-10 април</td>\r\n                                    <td rowspan=\"4\">\r\n                                        при очаквано силно\r\n                                        нападение през\r\n                                        вегетацията\r\n                                    </td>\r\n                                    <td>1 бр./плевел</td>\r\n                                </tr>\r\n                                <tr>\r\n                                    <td>11-30 април</td>\r\n                                    <td>3-4 бр./плевел</td>\r\n                                </tr>\r\n                                <tr>\r\n                                    <td>15-30 май</td>\r\n                                    <td>над 9 бр./плевел</td>\r\n                                </tr>\r\n                                <tr>\r\n                                    <td>3-ти – 4-ти същ. лист</td>\r\n                                    <td>1 бр./1 памуково растение</td>\r\n                                </tr>\r\n                            </tbody>\r\n                        </table>",
+  "text" : "<h3 >Трипси – <span class=\"latin_name\">Thrips tabaci Lind; Thrips flavus Schane.</span></h3>\r\n            <h4 class=\"my_class_h4\">Описание на неприятеля</h4>\r\n            <p>\r\n                Непосредствено след поникването на памука върху нето от плевелната растителност преминават трипсите -\r\n                тютюнев трипс (<span class=\"latin_name\">Thrips tabaci</span> Lind.) и\r\n                <span class=\"latin_name\">Thrips flavus</span> Schanc. Те се намножават при топло и сухо време, като\r\n                нападат най-младите и нежни листа и вегетационния връх на растенията. Повредените растения се разклоняват\r\n                вилообразно, а листата се деформират и накъсват. Трипсите се срещат през целия вегетационен период, но\r\n                пораженията им имат икономическо значение от поникване до бутонизацията на памука.\r\n            </p>\r\n            <h4 class=\"my_class_h4\">Стратегия на борба</h4>\r\n            <p>\r\n                Появата и опасността от намножаване на трипсите може да бъде прогнозирана чрез плевелната растителност\r\n                около блоковете.\r\n            </p>\r\n            <p>\r\n                Основно борбата се извежда чрез третиране с инсектициди, като при плътност 1 бр. на растение се извършва\r\n                едно третиране, а при наличие над 3 бр. - две третирания през 10-12 дни.\r\n            </p>\r\n            <h4 class=\"my_class_h4 as\">Активни вещества</h4>\r\n            <p class=\"as\"><span class=\"active-substance\">Хлорпирифос-етил, циперметрин + хлорпирифос-етил, фипронил, бифентрин,\r\n                    тиодикарб, карбофуран.</span></p>"
+}, {
+  "cultureId" : 14,
+  "groupId" : 3,
+  "id" : 205,
+  "images" : [ {
+    "bgName" : "Aphis gossypi",
+    "created_at" : "2018-01-18 14:44:54",
+    "imgPath" : "../../../../../../assets/insects/Aphis_gossypii01.jpg",
+    "imgTitle" : "Памукова листна въшка",
+    "practices_id" : 205,
+    "thumbAlt" : "Aphis gossypi",
+    "thumbPath" : "../../../../../../assets/insects/Aphis_gossypii01_thumb.jpg",
+    "thumbTitle" : "Памукова листна въшка",
+    "updated_at" : "2018-01-18 14:44:54"
+  } ],
+  "linkId" : "aphis-gossypii",
+  "name" : "Памукова листна въшка",
+  "tablePiv" : "<table class=\"piv_table\">\r\n                            <thead>\r\n                                <tr>\r\n                                    <th>ФЕНОФАЗА НА КУЛТУРАТА</th>\r\n                                    <th>ВРЕДИТЕЛ / СТАДИЙ</th>\r\n                                    <th>\r\n                                        <span class=\"full-name-piv\">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>\r\n                                        <span class=\"small-name-piv\">ПРАГ НА ВРЕДНИОСТ</span>\r\n                                    </th>\r\n                                </tr>\r\n                            </thead>\r\n                            <tbody>\r\n                                <tr class=\"tr_name_pest\">\r\n                                    <td colspan=\"3\" class=\"tr_latin\">ПАМУКОВА ЛИСТНА ВЪШКА <span class=\"latin_name\">Aphis gossypii</span></td>\r\n                                </tr>\r\n                                <tr>\r\n                                    <td>3-ти – 4-ти същ. лист през вегетацията</td>\r\n                                    <td >възрастни</td>\r\n                                    <td>5-8 бр./кв.м</td>\r\n                                </tr>\r\n                            </tbody>\r\n                        </table>",
+  "text" : "<h3 >Памукова листна въшка – <span class=\"latin_name\">Aphis gossypii Glov.</span></h3>\r\n            <h4 class=\"my_class_h4\">Описание на неприятеля</h4>\r\n            <p>\r\n                Най-осезателни поражения по памука нанася памуковата листна въшка\r\n                <span class=\"latin_name\">Aphis gosswpii</span> Glov. Нейното намножаване по памука започва непосредствено\r\n                след поникването и продължава до плодообразуването. Възрастните и ларвите се развиват по долната страна\r\n                на листата и по връхната част на стъблата. Смучат сок и отделят медена роса. Нападнатите растения са\r\n                с набръчкана повърхност на листата и депресиран растеж.\r\n            </p>\r\n            <h4 class=\"my_class_h4\">Стратегия за борба</h4>\r\n            <p>\r\n                Борбата се провежда по химичен път чрез третиране, като второто третиране след трипсите съвпада с първото\r\n                третиране срещу памуковата листна въшка. Важно е да се определи плътността на неприятеля и процентът\r\n                на нападнатите растения.\r\n            </p>\r\n\r\n            <h4 class=\"my_class_h4 as\">Активни вещества</h4>\r\n            <p class=\"as\"><span class=\"active-substance\">Хлорпирифос-етил, хлорпирифос-етил + циперметрин, фипронил, бета цифлутрин,\r\n                    есфилвалерат, пиримикарб, тербуфос, тиодикарб, карбофуран.</span></p>"
+}, {
+  "cultureId" : 14,
+  "groupId" : 3,
+  "id" : 206,
+  "images" : [ {
+    "bgName" : "Памукова нощенка",
+    "created_at" : "2018-01-18 14:47:30",
+    "imgPath" : "../../../../../assets/insects/Helicoverpa_armigera_dorsal.jpg",
+    "imgTitle" : "Памукова нощенка",
+    "practices_id" : 206,
+    "thumbAlt" : "Helicoverpa armigera",
+    "thumbPath" : "../../../../../assets/insects/Helicoverpa_armigera_dorsal_thumb.jpg",
+    "thumbTitle" : "Памукова нощенка",
+    "updated_at" : "2018-01-18 14:47:30"
+  }, {
+    "bgName" : "Памукова нощенка - ларва",
+    "created_at" : "2018-01-18 14:48:24",
+    "imgPath" : "../../../../../assets/insects/Helicoverpa_armigera_larva.jpg",
+    "imgTitle" : "Памукова нощенка - ларва",
+    "practices_id" : 206,
+    "thumbAlt" : "Helicoverpa armigera larva",
+    "thumbPath" : "../../../../../assets/insects/Helicoverpa_armigera_larva_thumb.jpg",
+    "thumbTitle" : "Памукова нощенка - ларва",
+    "updated_at" : "2018-01-18 14:48:24"
+  } ],
+  "linkId" : "helicoverpa-armigera",
+  "name" : "Памукова нощенка",
+  "tablePiv" : "<table class=\"piv_table\">\r\n                            <thead>\r\n                                <tr>\r\n                                    <th>ФЕНОФАЗА НА КУЛТУРАТА</th>\r\n                                    <th>ВРЕДИТЕЛ / СТАДИЙ</th>\r\n                                    <th>\r\n                                        <span class=\"full-name-piv\">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>\r\n                                        <span class=\"small-name-piv\">ПРАГ НА ВРЕДНИОСТ</span>\r\n                                    </th>\r\n                                </tr>\r\n                            </thead>\r\n                            <tbody>\r\n                                <tr class=\"tr_name_pest\">\r\n                                    <td colspan=\"3\" class=\"tr_latin\">ПАМУКОВА НОЩЕНКА <span class=\"latin_name\">Helicoverpa armigera</span></td>\r\n                                </tr>\r\n                                <tr>\r\n                                    <td rowspan=\"2\">І-во поколение бутонизация</td>\r\n                                    <td rowspan=\"4\">яйца и гъсеници</td>\r\n                                    <td>20 яйца или 10 гъсеници/100 растения</td>\r\n                                </tr>\r\n                                <tr>\r\n                                    <td>25 повредени бутона /100 растения</td>\r\n                                </tr>\r\n                                <tr>\r\n                                    <td rowspan=\"2\">ІІ-во ІІІ-то поколение плодообразуване</td>\r\n                                    <td>30 яйца или 15 гъсеници/100 растения</td>\r\n                                </tr>\r\n                                <tr>\r\n                                    <td>40 повредени бутона /100 растения</td>\r\n                                </tr>\r\n                            </tbody>\r\n                        </table>",
+  "text" : "<h3 >Памукова нощенка – <span class=\"latin_name\">Helicoverpa armigera</span></h3>\r\n            <h4 class=\"my_class_h4\">Описание на неприятеля</h4>\r\n            <p>\r\n                Гъсениците повреждат кутийките по памука. Те предпочитат младите кутийки, като се втризват в тях и се\r\n                хранят със семената и неузрялото влакно. Привличането на неприятеля по памука започва след бутонизация,\r\n                поради което се срещат главно представители от втората генерация.\r\n            </p>\r\n            <h4 class=\"my_class_h4\">Стратегия за борба</h4>\r\n            <p>\r\n                Борбата се извежда чрез третиране, като плътността на вида се следи от бутонизация на памука до средата на август.\r\n            </p>\r\n            <h4 class=\"my_class_h4 as\">Активни вещества</h4>\r\n            <p class=\"as\"><span class=\"active-substance\">Няма разрешени.</span></p>"
+}, {
+  "cultureId" : 14,
+  "groupId" : 3,
+  "id" : 207,
+  "linkId" : "tetranychus-urticae",
+  "name" : "Паяжинообразуващи акари",
+  "tablePiv" : "<table class=\"piv_table\">\r\n                            <thead>\r\n                                <tr>\r\n                                    <th>ФЕНОФАЗА НА КУЛТУРАТА</th>\r\n                                    <th>ВРЕДИТЕЛ / СТАДИЙ</th>\r\n                                    <th>\r\n                                        <span class=\"full-name-piv\">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>\r\n                                        <span class=\"small-name-piv\">ПРАГ НА ВРЕДНИОСТ</span>\r\n                                    </th>\r\n                                </tr>\r\n                            </thead>\r\n                            <tbody>\r\n                                <tr class=\"tr_name_pest\">\r\n                                    <td colspan=\"3\" class=\"tr_latin\">ТЕТРАНИХОВИ АКАРИ <span class=\"latin_name\">Tetranychus spp.</span></td>\r\n                                </tr>\r\n                                <tr>\r\n                                    <td >от бутонизация до края на формиране</td>\r\n                                    <td rowspan=\"2\">възрастни</td>\r\n                                    <td>3-5 % нападнати растения;<br> 150 бр./100</td>\r\n                                </tr>\r\n                                <tr>\r\n                                    <td>нападнати растения на кутийте</td>\r\n                                    <td>10-12% почервенели листа</td>\r\n                                </tr>\r\n                                \r\n                            </tbody>\r\n                        </table>\r\n                        <br>\r\n                        <table class=\"piv_table\">\r\n                            <thead>\r\n                                <tr>\r\n                                    <th>ФЕНОФАЗА НА КУЛТУРАТА</th>\r\n                                    <th>ВРЕДИТЕЛ / СТАДИЙ</th>\r\n                                    <th>\r\n                                        <span class=\"full-name-piv\">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>\r\n                                        <span class=\"small-name-piv\">ПРАГ НА ВРЕДНИОСТ</span>\r\n                                    </th>\r\n                                </tr>\r\n                            </thead>\r\n                            <tbody>\r\n                                <tr class=\"tr_name_pest\">\r\n                                    <td colspan=\"3\" class=\"tr_latin\">ОБИКНОВЕН ПАЯЖИНООБРАЗУВАЩ АКАР <span class=\"latin_name\">Tetranychus urticae</span></td>\r\n                                </tr>\r\n                                <tr>\r\n                                    <td >до края на август</td>\r\n                                    <td >ларви-възрастни</td>\r\n                                    <td>5 % нападнати растения</td>\r\n                                </tr>\r\n                            </tbody>\r\n                        </table>",
+  "text" : "<h3 >Паяжинообразуващи акари – <span class=\"latin_name\">Tetranychus urticae Koch, Tetranychus atlanticus Mc. Greg.</span></h3>\r\n            <h4 class=\"my_class_h4\">Описание на неприятеля</h4>\r\n            <p>\r\n                От началото на цъфтежа до узряването на памука сериозни поражения мотат да нанесат пояжинообразуващите\r\n                акари - <span class=\"latin_name\">Tetranychus urticae</span> Koch. и\r\n                <span class=\"latin_name\">Tetranychus atlanticus</span> Mc. Greg. Възрастните, ларвите и нимфите се\r\n                развиват по долната страна на листата. Смучат сок и хлорофилни зърна, в резултат на което листата\r\n                просветляват (при някои сортове памук се наблюдава и почервеняване на тъканта между жилките), изсъхват\r\n                и окапват. При силно нападение листата, стъблата и вегетационният връх са обвити с паяжинни нишки.\r\n                Повредите в посевите са на хармани.\r\n            </p>\r\n            <h4 class=\"my_class_h4\">Стратегия на борба</h4>\r\n            <p>\r\n                По памука паяжинообразуващите акари се приселват обикновено през юли. Степента на нанесените поражения\r\n                зависят от фенофазата на културата и плътността на нападението. Икономическо значение тези неприятели\r\n                имат до средата на август - началото на узряване на памука. Борбата с тях се извежда чрез директни\r\n                третирания с акарициди.\r\n            </p>\r\n            <h4 class=\"my_class_h4 as\">Активни вещества</h4>\r\n            <p class=\"as\"><span class=\"active-substance\">Няма разрешени.</span></p>"
+}, {
+  "cultureId" : 14,
+  "groupId" : 3,
+  "id" : 208,
+  "images" : [ {
+    "bgName" : "Щир",
+    "created_at" : "2018-01-18 14:53:12",
+    "imgPath" : "../../../../../assets/weeds/Amaranthus_retroflexus_bgiu.jpg",
+    "imgTitle" : "Щир",
+    "practices_id" : 208,
+    "thumbAlt" : "Amaranthus sp.",
+    "thumbPath" : "../../../../../assets/weeds/Amaranthus_retroflexus_bgiu_thumb.jpg",
+    "thumbTitle" : "Щир",
+    "updated_at" : "2018-01-18 14:53:12"
+  }, {
+    "bgName" : "Бяла куча лобода",
+    "created_at" : "2018-01-18 14:54:00",
+    "imgPath" : "../../../../../assets/weeds/ChenopodiumAlbum001.jpg",
+    "imgTitle" : "Бяла куча лобода",
+    "practices_id" : 208,
+    "thumbAlt" : "Chenopodium album",
+    "thumbPath" : "../../../../../assets/weeds/ChenopodiumAlbum001_thumb.jpg",
+    "thumbTitle" : "Бяла куча лобода",
+    "updated_at" : "2018-01-18 14:54:00"
+  }, {
+    "bgName" : "Черно куче грозде",
+    "created_at" : "2018-01-18 14:55:08",
+    "imgPath" : "../../../../../assets/weeds/Solanum_nigrum_leafs_flowers_fruits.jpg",
+    "imgTitle" : "Черно куче грозде",
+    "practices_id" : 208,
+    "thumbAlt" : "Solanum nigrum",
+    "thumbPath" : "../../../../../assets/weeds/Solanum_nigrum_leafs_flowers_fruits_thumb.jpg",
+    "thumbTitle" : "Черно куче грозде",
+    "updated_at" : "2018-01-18 14:55:08"
+  }, {
+    "bgName" : "Абутилон /Просфорник/",
+    "created_at" : "2018-01-18 14:56:26",
+    "imgPath" : "../../../../../assets/weeds/Abutilon_theophrasti_2015-08-29_5732.jpg",
+    "imgTitle" : "Абутилон /Просфорник/",
+    "practices_id" : 208,
+    "thumbAlt" : "Abutilon theophrasti",
+    "thumbPath" : "../../../../../assets/weeds/Abutilon_theophrasti_2015-08-29_5732_thumb.jpg",
+    "thumbTitle" : "Абутилон",
+    "updated_at" : "2018-01-18 14:56:26"
+  } ],
+  "linkId" : "weed",
+  "name" : "Плевели",
+  "text" : "<h3 >Плевели</h3>\r\n            <h4 class=\"my_class_h4\">Описание на плевелите</h4>\r\n            <p>\r\n                Памукът е особено чувствителен към заплевеляването в началния етап от развитието си. Критичен период\r\n                е междуфазният период - втори същински лист - бутонизация. Плевелите потискат растежа на културата,\r\n                забавят развитието и, увеличават процента на окапване на плодните кутийки, благоприятстват разпространението\r\n                на трипса и листните въшки, силно влошават условията за механизираното му прибиране, а също и добива.\r\n                Най-разпространените плевели в посевите на памука са късните пролетни видове:\r\n                <span class=\"latin_name\">Amaranthus retroflexus, Chenopodium album, Solanum nigrum, Hibiscus trionum,\r\n                    Setaria spp., Echinochloa crus-galli</span>. През последните години нарасна заплевеляването с\r\n                <span class=\"latin_name\">Abutilon theophrasti, Xanthium strumarium, Datura stramonium</span>.\r\n                От многогодишните плевели най-разпространен е упоритият кореново-издънков вид\r\n                <span class=\"latin_name\">Convolvulus arvensis</span>. Съотношението едногодишни, многогодишни плевели\r\n                в памуковите посеви на страната е 1,6:1.\r\n            </p>\r\n            <h4 class=\"my_class_h4\">Стратегия за борба</h4>\r\n            <p>\r\n                Според ДРЗП борбата с плевелите в памуковите посеви трябва да бъде научно - обоснована и да се води\r\n                чрез правилно съчетаване на агротехническите мероприятия с химичната борба. От агротехническите мероприятия\r\n                особено значение има правилната обработка на почвата, извършена в оптимални срокове. След ранен\r\n                предшественик (пшеница, ечемик) обикновено се извършват подметка на стърнището, дълбока оран и 1-2\r\n                допълнителни обработки през есента.\r\n            </p>\r\n            <p>\r\n                Чрез пролетните предсеитбени обработки се подобрява структурата на почвата и се унищожават поникналите\r\n                плевели. През вегетацията на памука се извършват 2 механизирани и 1-2 ръчни окопавания. Първото\r\n                окопаване трябва да се извършва след изчерпване на хербицидния ефект, а следващите - в зависимост от\r\n                заплевеляването на почвата и образуването на почвена кора.\r\n            </p>\r\n            <p>\r\n                Други важни агротехнически мероприятия са: изборът на чисти от плевели площи, подходящи сеитбообръщения\r\n                с житни култури, диференцирано торене и т. н. Изборът на хербициди трябва да е диференциран, в зависимост\r\n                от заплевеляването. За тази цел трябва да се извърши предварително картиране на площите.\r\n            </p>\r\n            <h4 class=\"my_class_h4 as\">Активни вещества.</h4>\r\n            <p class=\"as\">\r\n                На площи, заплевелени предимно с едногодишни житни плевели и някои широколистни:\r\n            </p>\r\n            <p class=\"as\">\r\n                - преди сеитба с инкорпориране <span class=\"active-substance\">трифлуралин</span>.\r\n            </p>\r\n            <p class=\"as\">\r\n                - след сеитба преди поникване <span class=\"active-substance\"> - алахлор, ацетохлор, пендиметалин,\r\n                    S-метолахлор, тиобенкарб, пропизохлор</span>.\r\n            </p>\r\n            <p class=\"as\">\r\n                През вегетацията на памука, във фаза 3-5-и лист на едногодишните житни или 15-20 cm височина на\r\n                многогодишните житни плевели:\r\n                <span class=\"active-substance\">квизалофоп-П-етил, флуазифоп-П-бутил, халоксифоп-R-метил, пропаквизафоп + сърфактант, сетоксидим + масло + сърфактант.</span>.\r\n            </p>\r\n            <p class=\"as\">\r\n                На площи, заплевелени с едногодишни двусемеделни плевели -\r\n                <span class=\"active-substance\">прометрин, оксифлуорфен, флуометурон, цианазин</span>.\r\n            </p>\r\n            <p class=\"as\">\r\n                При смесено заплевеляване с едногодишни житни и широколистни -\r\n                <span class=\"active-substance\">изоксафлутол, оксидиаржил</span>.\r\n            </p>\r\n            <p class=\"as\">\r\n                Срещу едногодишни и многогодишни едносемеделни и двусемеделни плевели преди сеитба на културата, при\r\n                поникнали плевели -\r\n                <span class=\"active-substance\">глифозат.</span>.\r\n            </p>\r\n            <h4 class=\"my_class_h4\">Дефолианти</h4>\r\n            <p>Главното предназначение на химичната дефолиация е чрез обезлистване на памуковите растения да се засили\r\n                процесът на узряването, като кутийките се развиват по-бързо, а също да се създаде възможност за\r\n                механизирано прибиране на суровия памук.</p>\r\n            <h4 class=\"my_class_h4 as\">Активни вещества.</h4>\r\n            <p class=\"as\">\r\n                Като дефолианти при памука се използват:\r\n                <span class=\"active-substance\">дикват, диметипин, етофен + цикланилид, глюфозинат.</span>.\r\n            </p>"
+} ]
