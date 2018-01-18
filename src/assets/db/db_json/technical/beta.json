@@ -112,9 +112,9 @@
 		"images": [
 			{
 				"practices_id": 191,
-				"imgPath": "../../../../../../assets/insects/Agrotis_segetum01.jpg",
+				"imgPath": "../../../../../assets/insects/Agrotis_segetum01.jpg",
 				"imgTitle": "Agrostis segetum - възрастно",
-				"thumbPath": "../../../../../../assets/insects/Agrotis_segetum01_thumb.jpg",
+				"thumbPath": "../../../../../assets/insects/Agrotis_segetum01_thumb.jpg",
 				"thumbAlt": "Agrostis segetum",
 				"thumbTitle": "Сиви червеи",
 				"bgName": "Сиви червеи",
@@ -123,9 +123,9 @@
 			},
 			{
 				"practices_id": 191,
-				"imgPath": "../../../../../../assets/insects/Agrotis_segetum_larva.jpg",
+				"imgPath": "../../../../../assets/insects/Agrotis_segetum_larva.jpg",
 				"imgTitle": "Agrostis segetum - ларва",
-				"thumbPath": "../../../../../../assets/insects/Agrotis_segetum_larva_thumb.jpg",
+				"thumbPath": "../../../../../assets/insects/Agrotis_segetum_larva_thumb.jpg",
 				"thumbAlt": "Agrostis segetum",
 				"thumbTitle": "Сиви червеи",
 				"bgName": "Сиви червеи - ларва",
@@ -145,7 +145,7 @@
 		"images": [
 			{
 				"practices_id": 192,
-				"imgPath": "../../../../../../assets/insects/Tanymecus_dilaticollis.jpg",
+				"imgPath": "../../../../../assets/insects/Tanymecus_dilaticollis.jpg",
 				"imgTitle": "Сив цвеклов хоботник",
 				"thumbPath": "../../../../../assets/insects/Tanymecus_palliatus_thumb.jpg",
 				"thumbAlt": "Tanymecus palliatus",
@@ -239,9 +239,9 @@
 		"images": [
 			{
 				"practices_id": 199,
-				"imgPath": "../../../../../../assets/insects/Cassida_nebulosa.jpg",
+				"imgPath": "../../../../../assets/insects/Cassida_nebulosa.jpg",
 				"imgTitle": "Цвеклова щитовка - Cassida nebulosa",
-				"thumbPath": "../../../../../../assets/insects/Cassida_nebulosa_thumb.jpg",
+				"thumbPath": "../../../../../assets/insects/Cassida_nebulosa_thumb.jpg",
 				"thumbAlt": "Cassida nebulosa",
 				"thumbTitle": "Цвеклова щитовка",
 				"bgName": "Цвеклова щитовка",

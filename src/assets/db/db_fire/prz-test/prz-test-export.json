@@ -291,21 +291,21 @@
     "images" : [ {
       "bgName" : "Сиви червеи",
       "created_at" : "2018-01-18 12:16:37",
-      "imgPath" : "../../../../../../assets/insects/Agrotis_segetum01.jpg",
+      "imgPath" : "../../../../../assets/insects/Agrotis_segetum01.jpg",
       "imgTitle" : "Agrostis segetum - възрастно",
       "practices_id" : 191,
       "thumbAlt" : "Agrostis segetum",
-      "thumbPath" : "../../../../../../assets/insects/Agrotis_segetum01_thumb.jpg",
+      "thumbPath" : "../../../../../assets/insects/Agrotis_segetum01_thumb.jpg",
       "thumbTitle" : "Сиви червеи",
       "updated_at" : "2018-01-18 12:16:37"
     }, {
       "bgName" : "Сиви червеи - ларва",
       "created_at" : "2018-01-18 12:18:13",
-      "imgPath" : "../../../../../../assets/insects/Agrotis_segetum_larva.jpg",
+      "imgPath" : "../../../../../assets/insects/Agrotis_segetum_larva.jpg",
       "imgTitle" : "Agrostis segetum - ларва",
       "practices_id" : 191,
       "thumbAlt" : "Agrostis segetum",
-      "thumbPath" : "../../../../../../assets/insects/Agrotis_segetum_larva_thumb.jpg",
+      "thumbPath" : "../../../../../assets/insects/Agrotis_segetum_larva_thumb.jpg",
       "thumbTitle" : "Сиви червеи",
       "updated_at" : "2018-01-18 12:18:13"
     } ],
@@ -320,7 +320,7 @@
     "images" : [ {
       "bgName" : "Сив цвеклов хоботник",
       "created_at" : "2018-01-18 12:22:18",
-      "imgPath" : "../../../../../../assets/insects/Tanymecus_dilaticollis.jpg",
+      "imgPath" : "../../../../../assets/insects/Tanymecus_dilaticollis.jpg",
       "imgTitle" : "Сив цвеклов хоботник",
       "practices_id" : 192,
       "thumbAlt" : "Tanymecus palliatus",
@@ -396,11 +396,11 @@
     "images" : [ {
       "bgName" : "Цвеклова щитовка",
       "created_at" : "2018-01-18 12:44:22",
-      "imgPath" : "../../../../../../assets/insects/Cassida_nebulosa.jpg",
+      "imgPath" : "../../../../../assets/insects/Cassida_nebulosa.jpg",
       "imgTitle" : "Цвеклова щитовка - Cassida nebulosa",
       "practices_id" : 199,
       "thumbAlt" : "Cassida nebulosa",
-      "thumbPath" : "../../../../../../assets/insects/Cassida_nebulosa_thumb.jpg",
+      "thumbPath" : "../../../../../assets/insects/Cassida_nebulosa_thumb.jpg",
       "thumbTitle" : "Цвеклова щитовка",
       "updated_at" : "2018-01-18 12:44:22"
     } ],
@@ -914,11 +914,11 @@
     "images" : [ {
       "bgName" : "Трипси",
       "created_at" : "2018-01-18 14:41:37",
-      "imgPath" : "../../../../../../assets/insects/Thrips_tabaci3.jpg",
+      "imgPath" : "../../../../../assets/insects/Thrips_tabaci3.jpg",
       "imgTitle" : "Thrips tabaci Lind",
       "practices_id" : 204,
       "thumbAlt" : "Thrips tabaci Lind",
-      "thumbPath" : "../../../../../../assets/insects/Thrips_tabaci3_thumb.jpg",
+      "thumbPath" : "../../../../../assets/insects/Thrips_tabaci3_thumb.jpg",
       "thumbTitle" : "Трипси",
       "updated_at" : "2018-01-18 14:41:37"
     } ],
@@ -933,11 +933,11 @@
     "images" : [ {
       "bgName" : "Aphis gossypi",
       "created_at" : "2018-01-18 14:44:54",
-      "imgPath" : "../../../../../../assets/insects/Aphis_gossypii01.jpg",
+      "imgPath" : "../../../../../assets/insects/Aphis_gossypii01.jpg",
       "imgTitle" : "Памукова листна въшка",
       "practices_id" : 205,
       "thumbAlt" : "Aphis gossypi",
-      "thumbPath" : "../../../../../../assets/insects/Aphis_gossypii01_thumb.jpg",
+      "thumbPath" : "../../../../../assets/insects/Aphis_gossypii01_thumb.jpg",
       "thumbTitle" : "Памукова листна въшка",
       "updated_at" : "2018-01-18 14:44:54"
     } ],

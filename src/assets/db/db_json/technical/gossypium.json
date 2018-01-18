@@ -42,9 +42,9 @@
 		"images": [
 			{
 				"practices_id": 204,
-				"imgPath": "../../../../../../assets/insects/Thrips_tabaci3.jpg",
+				"imgPath": "../../../../../assets/insects/Thrips_tabaci3.jpg",
 				"imgTitle": "Thrips tabaci Lind",
-				"thumbPath": "../../../../../../assets/insects/Thrips_tabaci3_thumb.jpg",
+				"thumbPath": "../../../../../assets/insects/Thrips_tabaci3_thumb.jpg",
 				"thumbAlt": "Thrips tabaci Lind",
 				"thumbTitle": "Трипси",
 				"bgName": "Трипси",
@@ -64,9 +64,9 @@
 		"images": [
 			{
 				"practices_id": 205,
-				"imgPath": "../../../../../../assets/insects/Aphis_gossypii01.jpg",
+				"imgPath": "../../../../../assets/insects/Aphis_gossypii01.jpg",
 				"imgTitle": "Памукова листна въшка",
-				"thumbPath": "../../../../../../assets/insects/Aphis_gossypii01_thumb.jpg",
+				"thumbPath": "../../../../../assets/insects/Aphis_gossypii01_thumb.jpg",
 				"thumbAlt": "Aphis gossypi",
 				"thumbTitle": "Памукова листна въшка",
 				"bgName": "Aphis gossypi",
