@@ -11,6 +11,7 @@
 
     .piv_table {
         border: 1px solid #8f9e82;
+        width: 100%;
         th {
             border: 1px solid #8f9e82;
         }
@@ -24,6 +25,7 @@
     .piv_table th {
         text-align: center;
         font-weight: 600 !important;
+        padding: 2px 2px !important;
         .small-name-piv {
             display: none
         }
