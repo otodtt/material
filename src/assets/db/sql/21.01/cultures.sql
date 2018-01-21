@@ -56,7 +56,13 @@ INSERT INTO `cultures` (`id`, `group_id`, `name`, `latin_name`, `created_at`, `u
 (14, 3, 'Памук', 'gossypium', '2017-03-25 21:19:10', '2017-03-25 21:19:10'),
 (15, 3, 'Слънчоглед', 'helianthus-annuus', '2017-03-25 21:20:33', '2017-03-25 21:20:33'),
 (16, 3, 'Рапица', 'brassica-napus', '2017-03-25 21:21:29', '2017-03-25 21:21:29'),
-(17, 3, 'Фъстъци', 'arachis-hypogaea', '2017-03-25 21:24:11', '2017-03-25 21:24:11');
+(17, 3, 'Фъстъци', 'arachis-hypogaea', '2017-03-25 21:24:11', '2017-03-25 21:24:11'),
+(18, 4, 'Домати, Пипер, Патладжан', 'vegetables', '2018-01-21 09:00:41', '2018-01-21 09:00:41'),
+(19, 4, 'Картофи', 'potatoes', '2018-01-21 09:01:28', '2018-01-21 09:01:44'),
+(20, 4, 'Лукови култури', 'onion', '2018-01-21 09:03:43', '2018-01-21 09:03:43'),
+(21, 4, 'Зелеви култури', 'cabbage', '2018-01-21 09:05:08', '2018-01-21 09:05:08'),
+(22, 4, 'Тиквови култури', 'pumpkin', '2018-01-21 09:06:20', '2018-01-21 09:06:20'),
+(23, 4, 'Листни зеленчуци', 'leafy', '2018-01-21 09:08:05', '2018-01-21 09:08:05');
 
 --
 -- Indexes for dumped tables
@@ -76,7 +82,7 @@ ALTER TABLE `cultures`
 -- AUTO_INCREMENT for table `cultures`
 --
 ALTER TABLE `cultures`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
