@@ -124,32 +124,32 @@ const pages = [
             {
                 id: 0,
                 subName: 'Домати, пипер, патладжан',
-                link: '#'
+                link: 'vegetables'
             },
             {
                 id: 1,
                 subName: 'Картофи',
-                link: '#'
+                link: 'solanum-tuberosum'
             },
             {
                 id: 2,
                 subName: 'Лукви култури',
-                link: '#'
+                link: 'onion-crops'
             },
             {
                 id: 3,
                 subName: 'Зелеви култури',
-                link: '#'
+                link: 'cabbage-crops'
             },
             {
                 id: 4,
                 subName: 'Тиквови култури',
-                link: '#'
+                link: 'pumpkin-crops'
             },
             {
                 id: 5,
                 subName: 'Листни зеленчуци',
-                link: '#'
+                link: 'leafy-vegetables'
             },
         ],
     },

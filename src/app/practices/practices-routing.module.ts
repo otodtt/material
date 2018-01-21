@@ -25,6 +25,13 @@ import { GossypiumComponent } from './practices/pages/technical/gossypium/gossyp
 import { HelianthusComponent } from './practices/pages/technical/helianthus/helianthus.component';
 import { BrassicaComponent } from './practices/pages/technical/brassica/brassica.component';
 import { ArachisComponent } from './practices/pages/technical/arachis/arachis.component';
+// Vegetables
+import { VegetablesComponent } from './practices/pages/vegetables/vegetables/vegetables.component';
+import { PotatoesComponent } from './practices/pages/vegetables/potatoes/potatoes.component';
+import { OnionComponent } from './practices/pages/vegetables/onion/onion.component';
+import { CabbageComponent } from './practices/pages/vegetables/cabbage/cabbage.component';
+import { PumpkinComponent } from './practices/pages/vegetables/pumpkin/pumpkin.component';
+import { LeafyComponent } from './practices/pages/vegetables/leafy/leafy.component';
 
 // Management
 import { ManagementComponent } from './management/management/management.component';
@@ -51,6 +58,12 @@ export const routes: Routes = [
         { path: 'helianthus-annuus', component: HelianthusComponent},
         { path: 'brassica-napus', component: BrassicaComponent},
         { path: 'arachis-hypogaea', component: ArachisComponent},
+        { path: 'vegetables', component: VegetablesComponent},
+        { path: 'solanum-tuberosum', component: PotatoesComponent},
+        { path: 'onion-crops', component: OnionComponent},
+        { path: 'cabbage-crops', component: CabbageComponent},
+        { path: 'pumpkin-crops', component: PumpkinComponent},
+        { path: 'leafy-vegetables', component: LeafyComponent},
     ]},
     { path: 'management', component: ManagementComponent }
 ];

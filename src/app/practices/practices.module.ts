@@ -42,10 +42,17 @@ import { BrassicaComponent } from './practices/pages/technical/brassica/brassica
 import { GossypiumComponent } from './practices/pages/technical/gossypium/gossypium.component';
 import { HelianthusComponent } from './practices/pages/technical/helianthus/helianthus.component';
 import { NicotianaComponent } from './practices/pages/technical/nicotiana/nicotiana.component';
+import { VegetablesComponent } from './practices/pages/vegetables/vegetables/vegetables.component';
+import { PotatoesComponent } from './practices/pages/vegetables/potatoes/potatoes.component';
+import { OnionComponent } from './practices/pages/vegetables/onion/onion.component';
+import { CabbageComponent } from './practices/pages/vegetables/cabbage/cabbage.component';
+import { PumpkinComponent } from './practices/pages/vegetables/pumpkin/pumpkin.component';
+import { LeafyComponent } from './practices/pages/vegetables/leafy/leafy.component';
 
 // Management
 import { ManagementComponent } from './management/management/management.component';
 import { TableComponent } from './practices/shared/table/table.component';
+
 
 
 
@@ -83,6 +90,12 @@ import { TableComponent } from './practices/shared/table/table.component';
     HelianthusComponent,
     NicotianaComponent,
     TableComponent,
+    VegetablesComponent,
+    PotatoesComponent,
+    OnionComponent,
+    CabbageComponent,
+    PumpkinComponent,
+    LeafyComponent,
   ],
   providers: [PracticesService],
   entryComponents: [SideMenuComponent, DialogComponent],
