@@ -1,3 +1,745 @@
-<p>
-  arachis works!
-</p>
+<div class="row text-center" id="prz-loader" *ngIf="!isLoaded">
+    <mat-spinner aria-label="Спинър до зареждането на страницата"></mat-spinner>
+</div>
+
+<div *ngIf="isLoaded" id="wrap_lmenu_txt">
+    <div class="text-center name-header">
+        <h2 class="customfont">ТЕХНИЧЕСКИ КУЛТУРИ</h2>
+    </div>
+    <div class="row logo-top">
+        <div class="text-center " id="content-logo">
+            <h4 id="forest">МИНИСТЕРСТВО НА ЗЕМЕДЕЛИЕТО И ГОРИТЕ</h4>
+            <h4 id="plant-protect">НАЦИОНАЛНА СЛУЖБА ЗА РАСТИТЕЛНА ЗАЩИТА</h4>
+        </div>
+    </div>
+    <div class="row text-right">
+        <img id="stamp" src="../../../../../assets/img/my_images/stamp_director.png" alt="печат и подпис на директор" />
+    </div>
+    <div class="row text-center">
+        <h1 >ДОБРА РАСТИТЕЛНОЗАЩИТНА ПРАКТИКА ПРИ ФЪСТЪЦИ</h1>
+    </div>
+    <div class="row text-right">
+        <p class="number-eppo">№ на НСРЗ ДРЗП 2/039(1)</p>
+    </div>
+    <div class="row">
+        <div id="authors-wrap">
+            <p ><span class="bold authors">Авторски колектив :</span><br/>
+                ст.н.с.I ст. д.с.н Асен Димов<br/>
+                д-р Петър Николов – НСРЗ<br/>
+                Екатерина Томева - НСРЗ
+            </p>
+        </div>
+    </div>
+    <div class="row text-center">
+        <span class="year bold">СОФИЯ 2006 г.</span>
+    </div>
+    <div class="row text-center">
+        <h2 >ДОБРА РАСТИТЕЛНОЗАЩИТНА ПРАКТИКА (ДРЗП) ПРИ ФЪСТЪЦИ*</h2>
+    </div>
+
+    <!--Специфична сфера на действие-->
+    <div class="row">
+        <div class="text-indent">
+            <h3 >Специфична сфера на действие</h3>
+            <p>Този стандарт очертава принципите на Добрата растителнозащитна практика при фъстъци.</p>
+            <h3 >Специфично одобрение и поправка</h3>
+            <p >Първоначално одобрена през септември 2005 г. от НСРЗ</p>
+            <br/>
+
+            <p >
+                Фъстъците са една от най-разпространените маслодайни култури в света, но у нас се отглеждат предимно
+                за семената, които се консумират печени или като съставка на различни захарни изделия. Стъблата и
+                листата са ценен фураж. В сеитбообръщението фъстъците са отличен предшественик и обогатяват почвата
+                с азот. Те са топлолюбива култура и завършват вегетацията си при обща темпратурна сума около 3400 <sup>o</sup>С.
+                Отглеждат се предимно в районите на Пловдив и Благоевград където се засяват наши сортове с къс
+                вегетационен период. При наличие на влага в почвата фъстъците покълват при температура над 12<sup>o</sup>С
+                и никнат обикновено за 2-3 седмици. При ниски температури и изобилни валежи след сеитбата поникването
+                се забавя, не настъпва едновременно, а част от кълновете загиват. Затова семената преди сеитба се
+                третират с фунгицид (предимно с карбоксин+тирам). По своята природа фъстъците са светлолюбиви растения
+                и реагират силно на заплевеляването, особено в началните фази от развитието им. Те се изтеглят на
+                височина и образуват малко цветове и плодове. Нуждата на фъстъците от вода през отделните фази от
+                развитието им е различна. Най-много вода е необходима по време на цъфтежа и плодообразуването, които
+                протичат през юли и началото на август. По-късните поливки и дъждове удължават вегетацията и са причина
+                за нападение на листата и плодовете от причинители на сиво гниене, фузариоза, кафяви листни петна и др.
+                Фъстъците, засети на тежки черноземни почви, развиват по-голяма вегетативна маса, по-слабо плододаване
+                и са благоприятна среда за развитието на гъбни болести. Не трябва да се допуска отглеждането им на
+                почви, заплевелени с коренищни плевели - троскот, балур, паламида и др. Отглеждането на фъстъците в
+                сеитбообращение повишава добива от 20 до 60% и намалява риска от загуби от болести, насекомни и
+                ненасекомни вредители. В зависимост от запасеността на почвата е необходимо да се внасят различни
+                количества азотни, фосфорни и калиеви торове. Освен тези основни хранителни елементи фъстъците се
+                нуждаят от калций, магнезий, цинк, мед, молибден и др. Недостигът на някой от тези микроелементи
+                води до поява на хлорози. Особено силни те са на карбонатни почви, където добивът се намалява
+                силно - понякога десетократно.
+            </p>
+            <p >
+                Загубите от болести, неприятели, плевели и физиологични хлорози мотат да бъдат значителни. Налага се
+                внимателен мониторинг и комбиниране на различните методи за борба. ДРЗП препоръчва разумно използване
+                на химични средства, когато такива се налагат, и предлага начин за достигане на максимален ефект при
+                минимум въздействие върху полезни организми и околна среда. Спазването най-малко на двегодишно
+                сеитбообращение - в зърнопроизводителните райони след, житен предшественик, в памуковите - след памук,
+                в тютюневите - след тютюн, и др., намалява употребата на продукти за растителна защита. В борбата с
+                плевелите се използват агротехнически и химически методи.
+            </p>
+        </div>
+    </div>
+    <!--КРАЙ Специфична сфера на действие-->
+
+    <!-- Изтегляне на Приложения -->
+    <div class="row">
+        <div class="my_addendum text-justifysss text-indent">
+            <span class="span_addendum">
+                <a  class="href_addendum" 
+                    rel="noopener noreferrer" target="_blank"
+                    href="../../../../../assets/practices/4-tehnicheski-prilojenie.pdf"
+                >
+                    * Виж приложение 3
+                </a>
+            </span>
+        </div>
+    </div>
+    <!-- КРАЙ Изтегляне на Приложения -->
+
+    <!-- Избор на Вредител -->
+    <!-- -->
+    <div class="aa-title" id="pest_menu"></div>
+    <div class="row">
+        <div id="pest_menu_links">
+            <h3 >Основни вредители при фъстъиите са:</h3>
+            <ul id="menu_a">
+                <li>
+                    <a class="back_link" przAnchorTo target="#fusarium" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Фузариоза по фъстъци - <span class="latin_name">род Fusarium</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#sclerotinia-arachidis" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Сиво гниене - <span class="latin_name">Sclerotinia arachidis</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#phylosticta-arachidis" title="към текста">
+                    <mat-icon>chevron_right</mat-icon>
+                        Кафяви листни петна - <span class="latin_name">Phylosticta arachidis</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#oidium-arachidis" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Брашнеста мана - <span class="latin_name">Oidium arachidis</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#chlorosis" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Неинфекциозна хлороза
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#elateridae-and-tenebrionidae" title="към текста">
+                    <mat-icon>chevron_right</mat-icon>
+                        Телени червеи – <span class="latin_name">сем. Elateridae (Agriotes spp)</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#elateridae-and-tenebrionidae" title="към текста">
+                    <mat-icon>chevron_right</mat-icon>
+                        Лъжетелени червеи – <span class="latin_name">сем.Tenebrionidaе</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#euxoa" title="към текста">
+                    <mat-icon>chevron_right</mat-icon>
+                        Нощенки – <span class="latin_name">род Euxoa, Agreotis, Laphygma, Phytometra и др.</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#aphis" title="към текста">
+                    <mat-icon>chevron_right</mat-icon>
+                        Листни въшки
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#acariformes" title="към текста">
+                    <mat-icon>chevron_right</mat-icon>
+                        Акари
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#weed" title="към текста">
+                    <mat-icon>chevron_right</mat-icon>
+                        Плевели
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <!-- КРАЙ Избор на Вредител -->
+
+    <div *ngFor="let practice of practices">
+        <div class="aa-title" id="{{practice.linkId}}"></div>
+        <div class="row" >
+            <div class="pest-description-container text-indent" [innerHTML]="practice.text  | safeHtml"></div>
+            <div class="pest-image-container" *ngIf="practice.images?.length > 0">
+                <ul class="products">
+                    <li *ngFor="let image of practice.images">
+                        <a data-lightbox="image" href="{{image.imgPath}}" 
+                            data-title="{{image.imgTitle}}">
+                            <img threshold="200" lazy-load="{{image.thumbPath}}" 
+                                alt="{{image.thumbAlt}}" title="{{image.thumbTitle}}"/>
+                                <span class="title_thumb">{{image.bgName}}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row-back">
+            <div class="col-md-6" *ngIf="practice.tablePiv !== null">
+                <div class="panel-success text-center" >
+                    <div class="panel-heading">
+                        <button mat-button class="piv-button" (click)="openDialog(practice.tablePiv)">
+                            <span class="full-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                            <span class="small-piv">ВИЖ ПИВ</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel-warning text-center">
+                    <div class="panel-heading ">
+                        <a mat-button class="back_link_bottom" przAnchorTo target="#pest_menu" title="към всички неприятели"> виж друг неприятел</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Автори на снимки -->
+    <br><br>
+    <div class="row">
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Използвани са снимки от:
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="panel-body my_panel-body">
+                    <p>
+                        <span class="bold">Снимка 1:</span>
+                        <span>By Gilles San Martin - originally posted to Flickr as Tetranychus urticae with silk threads, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=11208762</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 2:</span>
+                        <span>By John Tann from Sydney, Australia - Johnson Grass, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=38234408</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 3:</span>
+                        <span>By Bidgee - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=9792633</span>
+                    </p>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+    <!-- КРАЙ Автори на снимки -->
+</div>
+
+    <!-- Фузариоза по фъстъци -->
+    <!-- <div class="aa-title" id="fusarium">
+        <span></span>
+    </div>
+    <div class="row" >
+        <div class="pest-description-container col-md-10 text-justifysss text-indent">
+            <h3 >Фузариоза по фъстъци – <span class="latin_name">род Fusarium</span></h3>
+            <h4 class="my_class_h4">Описание на болестта</h4>
+            <p>
+                Причинителите на болестта са гъби от <span class="active-substance">род Fusarium</span>. Те предизвикват
+                фузарийно увяхване, сухо кореново и стъблено гниене, сухо гниене на тенофори, плодове и семена.
+                Първите симптоми се наблюдават във фенофаза „масов цъфтеж“. Във фенофаза „плодообразуване“ болните
+                растения са най-много. Фузарийното увяхване се причинява предимно от вида
+                <span class="active-substance">Fusarium oxysporum</span>, който прониква през корените и се развива
+                в проводящата система и причинява типична трахиомикоза. Първоначално растенията завяхват в горещите
+                часове на деня, а по-късно то става трайно и необратимо. Други видове от
+                <span class="active-substance">род Fusarium</span> причиняват сухи локални некрози в основата на
+                стъблото, на корените и плодовете.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Отглеждане на фъстъците в 3-4-тодишно сеитбообръщение.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">За обеззаразяване на семена: <span class="active-substance">карбоксин + тирам</span></p>
+        </div>
+        <div class="pest-image-container col-md-2 img-thumbnail" >
+           
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-warning panel-back-link text-center">
+                <div class="panel-heading panel-heading-back-link">
+                    <a  class="back_link_bottom"
+                        href="#pest_menu"
+                        target="_self"
+                        title="към всички неприятели"
+                        >
+                        <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                        виж друг неприятел
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- КРАЙ Фузариоза по фъстъци -->
+
+    <!-- Сиво гниене -->
+    <!-- <div class="aa-title" id="sclerotinia-arachidis">
+        <span></span>
+    </div>
+    <div class="row">
+        <div class="pest-description-container col-md-10 text-justifysss text-indent" >
+            <h3 >Сиво гниене – <span class="latin_name">Sclerotinia arachidis</span></h3>
+            <h4 class="my_class_h4">Описание на болестта</h4>
+            <p>
+                Тази тъбна болест предизвиква гниене по всички части на растението, което външно се проявява с големи
+                жълтеникаво-кафяви петна по листата и потъмняване на стъблото. Листата и клонките над затнилата част
+                увяхват и изсъхват. При влага се покриват със сив спорообразуващ налеп. По плодовете и вътре в тях се
+                образуват черни склероции. Болестта се развива силно при чести летни валежи. Късните поливки и дъждовете
+                през есента допринасят за масовото им развитие.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Спазване на правилно сеитбообращение, унищожаване на всички фъстъкови остатъци и да се избягват тежките,
+                влатозадържащи и непропускливи площи.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">Няма разрешени.</p>
+        </div>
+        <div class="pest-image-container col-md-2 img-thumbnail" >
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-warning panel-back-link text-center">
+                <div class="panel-heading panel-heading-back-link">
+                    <a  class="back_link_bottom"
+                        href="#pest_menu"
+                        target="_self"
+                        title="към всички неприятели"
+                        >
+                        <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                        виж друг неприятел
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- КРАЙ Сиво гниене -->
+
+    <!-- Кафяви листни петна -->
+    <!-- <div class="aa-title" id="phylosticta-arachidis">
+        <span></span>
+    </div>
+    <div class="row">
+        <div class="pest-description-container col-md-10 text-justifysss text-indent">
+            <h3 >Кафяви листни петна – <span class="latin_name">Phylosticta arachidis</span></h3>
+            <h4 class="my_class_h4">Описание на болестта</h4>
+            <p>
+                Характерни признаци са многобройните закръглени кафяви петна по листата, ограничени от тъмен виолетово-кафяв
+                венец. По-късно в средната част на петното се появяват черни плодни телца. Паразитът зимува като пикнидии
+                в остатъците от заразените растения. Болестта се развива по-силно през дъждовни периоди.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Събиране и унищожаване на остатъците от заразените растения. Спазване на сеитбообращение и пространствена
+                изолация от миналогодишни посеви. Прилагане на фунгициди само в случай на дъждовно лято.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">Няма разрешени.</p>
+        </div>
+        <div class="pest-image-container col-md-2 img-thumbnail" >
+           
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-warning panel-back-link text-center">
+                <div class="panel-heading panel-heading-back-link">
+                    <a  class="back_link_bottom"
+                        href="#pest_menu"
+                        target="_self"
+                        title="към всички неприятели"
+                        >
+                        <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                        виж друг неприятел
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!--КРАЙ Кафяви листни петна -->
+
+    <!-- Брашнеста мана -->
+    <!-- <div class="aa-title" id="oidium-arachidis">
+        <span></span>
+    </div>
+    <div class="row">
+        <div class="pest-description-container col-md-10 text-justifysss text-indent" >
+            <h3 >Брашнеста мана – <span class="latin_name">Oidium arachidis</span></h3>
+            <h4 class="my_class_h4">Описание на болестта</h4>
+            <p>
+                Причинителят образува сравнително слаб брашнест налеп по листата, обикновено в края на вегетацията,
+                и загубите са незначителни.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Отглеждане на по-устойчиви и ранозрели сортове.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">Няма разрешени.</p>
+        </div>
+        <div class="pest-image-container col-md-2 img-thumbnail" >
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-warning panel-back-link text-center">
+                <div class="panel-heading panel-heading-back-link">
+                    <a  class="back_link_bottom"
+                        href="#pest_menu"
+                        target="_self"
+                        title="към всички неприятели"
+                        >
+                        <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                        виж друг неприятел
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- КРАЙ Брашнеста мана -->
+
+    <!-- Неинфекциозна хлороза -->
+    <!-- <div class="aa-title" id="chlorosis">
+        <span></span>
+    </div>
+    <div class="row">
+        <div class="pest-description-container col-md-10 text-justifysss text-indent">
+            <h3 >Неинфекциозна хлороза</h3>
+            <h4 class="my_class_h4">Описание на болестта</h4>
+            <p>
+                Болестта се проявява по нарастващите млади леторасти и листа. Листните петури първоначално избледняват
+                и по-късно пожълтяват и по периферията им се появяват некрози. Силно нападнатите растения не дават плодове.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Да не се сеят фъстъци на алкални почви с високо съдържание на калциеви карбонати.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">Няма разрешени.</p>
+        </div>
+        <div class="pest-image-container col-md-2 img-thumbnail" >
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-warning panel-back-link text-center">
+                <div class="panel-heading panel-heading-back-link">
+                    <a  class="back_link_bottom"
+                        href="#pest_menu"
+                        target="_self"
+                        title="към всички неприятели"
+                        >
+                        <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                        виж друг неприятел
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!--КРАЙ Неинфекциозна хлороза -->
+
+    <!-- НЕПРИЯТЕЛИ -->
+    <!-- Телени червеи -->
+    <!-- <div class="aa-title" id="elateridae-and-tenebrionidae">
+        <span></span>
+    </div>
+    <div class="row">
+        <div class="pest-description-container col-md-10 text-justifysss text-indent" >
+            <h3 >Телени червеи – <span class="latin_name">сем. Elateridae (Agriotes spp)</span></h3>
+            <h3 >Лъжливи телени червеи – <span class="latin_name">сем. Tenebrionidaе</span></h3>
+            <h4 class="my_class_h4">Описание на неприятеля</h4>
+            <p>
+                Ларвите на различни видове от семейство <span class="latin_name">Elateridae</span>
+                (<span class="latin_name">Agreotis spp.</span>) и от семейство <span class="latin_name">Tenebrionidae</span>,
+                които си приличат твърде много, нападат семената в почвата, кълновете и поникващите посеви. Те повреждат
+                семената или преяждат подземната част на стъблото. Развитието на ларвите протича в няколко години и
+                затова в почвата те са с различен размер.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Правилно сеитбообръщение и определяне плътността на ларвите е основа за вземане на правилното решение.
+                На площи с ларви над прага на вредност (у нас не е установен, но може да се приеме - над 5 броя на кв.м)
+                да се извежда борба с подходящ инсектицид.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">Няма разрешени.</p>
+        </div>
+        <div class="pest-image-container col-md-2 img-thumbnail" >
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-warning panel-back-link text-center">
+                <div class="panel-heading panel-heading-back-link">
+                    <a  class="back_link_bottom"
+                        href="#pest_menu"
+                        target="_self"
+                        title="към всички неприятели"
+                        >
+                        <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                        виж друг неприятел
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- КРАЙ Телени червеи -->
+
+    <!-- Нощенки -->
+    <!-- <div class="aa-title" id="euxoa">
+        <span></span>
+    </div>
+    <div class="row">
+        <div class="pest-description-container col-md-10 text-justifysss text-indent" >
+            <h3 >Нощенки (сиви червеи)  – <span class="latin_name">род Euxoa, Agreotis, Laphygma, Phytometra и др.</span></h3>
+            <h4 class="my_class_h4">Описание на неприятелите</h4>
+            <p>
+                Ларвите на нощенките са дебели, сиво-кафяви, с тъмни петна и обикновено се завиват, когато ти открият
+                в почвата. В зависимост от вида те достигат до дължина 30-35 мм. Последно появилите се ларви остават
+                да зимуват в почвата и какавидират напролет. Пеперудите се появяват от май до юли, а ларвите се излюпват
+                от яйца, положени в почвата, и нагризват стъблата при кореновата шийка или ти преяждат изцяло по време
+                на поникването близо до почвената повърхност и по-ниско. Хранят се обикновено през нощта. През деня
+                сивите червеи се крият в остатъците от повредените листа или непосредствено под почвената повърхност,
+                в близост до последно повредените растения. Изсъхналите или загинали растения са индикатори за наличие
+                на сиви червеи.
+            </p>
+            <h4 class="my_class_h4">Стратегия на борба</h4>
+            <p>
+                Борбата със сивите червеи се извежда трудно. Чувствителните към инсектициди фази в развитието на ларвите
+                често вече са преминали до момента на повреда и щетите мотат да бъдат сериозни. Прогнозирането
+                числеността на популациите са най-често неуспешни. При някои видове освен светлинни уловки с успех
+                мотат да бъдат използвани и феромонови уловки. Вземането на почвени проби в близост до повредени растения
+                за намиране на ларвите, след редовно обследване на полето е основа за вземане на решение за прилагане
+                на подходящ инсектицид. Най-успешно се извежда борбата със сивите червеи, когато ларвите се хранят с
+                листната маса и са в началните фази от развитието си.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">Няма разрешени.</p>
+        </div>
+        <div class="pest-image-container col-md-2 img-thumbnail" >
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-warning panel-back-link text-center">
+                <div class="panel-heading panel-heading-back-link">
+                    <a  class="back_link_bottom"
+                        href="#pest_menu"
+                        target="_self"
+                        title="към всички неприятели"
+                        >
+                        <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                        виж друг неприятел
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- КРАЙ Нощенки -->
+
+    <!-- Листни въшки -->
+    <!-- <div class="aa-title" id="aphis">
+        <span></span>
+    </div>
+    <div class="row">
+        <div class="pest-description-container col-md-10 text-justifysss text-indent" >
+            <h3 >Листни въшки</h3>
+            <h4 class="my_class_h4">Описание на неприятелите</h4>
+            <p>
+                Няколко вида листни въшки се хранят върху фъстъците, като нанасят не само директни повреди, но пренасят
+                и вируси. При засушаване във фазите цъфтеж и плодообразуване листните въшки мотат да покрият на гъсти
+                колонии долната страна на листата и да причинят изоставане в развитието на растенията и набръчкване
+                на листата. Обикновено те нападат фъстъците на хармани, край пътища и обрасли с плевели напоителни канали.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Обследване на посевите и при 15-20% нападнати растение до фенофази „цъфтеж“ и „начало на плодообразуване“
+                да се третира с инсектицид. В по-късните фенофази от развитието на растенията е безпредметно да се води борба.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">Няма разрешени.</p>
+        </div>
+        <div class="pest-image-container col-md-2 img-thumbnail" >
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-warning panel-back-link text-center">
+                <div class="panel-heading panel-heading-back-link">
+                    <a  class="back_link_bottom"
+                        href="#pest_menu"
+                        target="_self"
+                        title="към всички неприятели"
+                        >
+                        <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                        виж друг неприятел
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- КРАЙ Листни въшки -->
+
+    <!-- Акари -->
+    <!-- <div class="aa-title" id="acariformes">
+        <span></span>
+    </div>
+    <div class="row">
+        <div class="pest-description-container col-md-10 text-justifysss text-indent" >
+            <h3 >Акари</h3>
+            <h4 class="my_class_h4">Описание на неприятелите</h4>
+            <p>
+                Предимно два вида акари - обикновен паяжинообразуващ акар (<span class="latin_name">Tetranychus urticae</span>)
+                и атлантически акар (<span class="latin_name">Tetranychus atlanticus</span>), се срещат по фъстъците
+                и при висока плътност причиняват значително намаление на добивите. Благоприятни условия за развитието
+                на акарите са температура 28-30<sup>o</sup>С и относителна влажност 50-60%. Такива условия във фъстъковите площи
+                в България се създават обикновено през втората половина на юли и август. Акарите вредят, като смучат
+                клетъчен сок, и на мястото на убождането се наблюдават светли петна, които постепенно некротират,
+                листата засъхват и окапват. Нападнатите растения изостават и добивите намаляват значително.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Редовно обследване на посевите през месеците юли и август и при 5-10% заселени растения да се приложи
+                подходящ акарицид.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as"><span class="active-substance">Пропаргид</span></p>
+        </div>
+        <div class="pest-image-container col-md-2 img-thumbnail" >
+            <ul class="products">
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/insects/Tetranychus_urticae_with_silk_threads.jpg" 
+                        data-title="Акари - Tetranychus urticae">
+                        <img src="../../../../../assets/insects/Tetranychus_urticae_with_silk_threads_thumb.jpg" 
+                            alt="Tetranychus urticae" title="Акари"/>
+                            <span class="title_thumb">Tetranychus urticae</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-warning panel-back-link text-center">
+                <div class="panel-heading panel-heading-back-link">
+                    <a  class="back_link_bottom"
+                        href="#pest_menu"
+                        target="_self"
+                        title="към всички неприятели"
+                        >
+                        <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+                        виж друг неприятел
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- КРАЙ Акари -->
+
+    <!-- ПЛЕВЕЛИ -->
+    <!-- <div class="aa-title" id="weed">
+        <span></span>
+    </div>
+    <div class="row">
+        <div class="pest-description-container col-md-10 text-justifysss text-indent">
+            <h3 >Плевели</h3>
+            <h4 class="my_class_h4">Описание на плевелите</h4>
+            <p>
+                В условията на България фъстъците се отглеждат като късно пролетна култура при сравнително широки
+                междуредия и гравитачно напояване. При тези условия поникват и се развиват много плевели.
+                Конкурентоспособността на фъстъците е слаба. Семената на фъстъците поникват сравнително бавно - за 10-15
+                дни, а при ранна сеитба и хладна пролет за 20-30 дни. Тогава плевелите изпреварват поникването на
+                фъстъците и силно ти конкурират още в началните фази на развитие. В заплевелените посеви фъстъците силно
+                етиолират, цъфтят слабо и дават малко и лошокачествени плодове. Особено опасни са коренищните плевели
+                (балур, троскот и др.). При изваждането на фъстъците плевелите пречат на нормалната работа на нож-скобата,
+                получава се изрязване на част от плодовете.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Най-ефикасно борбата с плевелите се извежда чрез добра система от културно-стопански и химични методи.
+                За да бъде предотвратен рискът от потенциална заплевеленост, предшествениците на фъстъците трябва да
+                оставят чисти площи. фъстъците се отглеждат най-често след житен предшественик. Лятната дълбока оран
+                трябва да се извърши непосредствено след прибирането на предшественика. При заплевеляване след
+                дълбоката оран се извършва култивиране или преораване на 15-18 см дълбочина. На места, където има
+                коренищни многогодишни плевели, веднага след дълбоката оран се извършва култивиране или брануване, за
+                да се изкарат коренищата на повърхността. Предсеитбената обработка на почвата започва още през март,
+                а последната непосредствено преди сеитбата. Механичната борба срещу пле¬велите може да продължи и
+                през вегетацията. Когато площите са по-големи и борбата с плевелите не може да се проведе с агротехнически
+                мероприятия, се използват хербициди.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества.</h4>
+            <p class="as"><span class="bold">След сеитбата преди поникването на фъстъците:</span></p>
+            <p class="as">Срещу едногодишни житни плевели и някои широколистни:
+                <span class="active-substance">алахлор, ацетохлор, пропизохлор, трифлуралин, глифозат + сърфактант, оксидиаржил.</span>
+            </p>
+            <p class="as">
+                След сеитба, преди поникване
+                <span class="active-substance">оксидиар¬жил</span> срещу едногодишни и житни плевели
+            </p>
+            <p class="as">
+                Срещу широколистни плевели:
+                <span class="active-substance">оксифлуорфен, пендиметалин.</span>.
+            </p>
+            <p class="as"><span class="bold">След поникването на фъстъците, във фаза 3-5 лист на плевелите и фъстъците:</span></p>
+            <p class="as">
+                <span class="active-substance">бентазон</span> - срещу широколистни плевели
+            </p>
+            <p class="as">
+                <span class="active-substance">флуазифоп-П-бутил</span> - срещу едногодишни и многогодишни плевели,
+                в т.ч. балур от коренище при 10-20 см височина.
+            </p>
+
+        </div>
+        <div class="pest-image-container col-md-2 img-thumbnail" >
+            <ul class="products">
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/weeds/Sorghum_halepensis1.jpg" 
+                        data-title="Балур">
+                        <img src="../../../../../assets/weeds/Sorghum_halepensis1_thumb.jpg" 
+                            alt="Sorghum halepensis" title="Балур"/>
+                            <span class="title_thumb">Балур</span>
+                    </a>
+                </li>
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/weeds/Cynodon_dactylon.jpg" 
+                    data-title="Троскот">
+                        <img src="../../../../../assets/weeds/Cynodon_dactylon_thumb.jpg" 
+                        alt="Cynodon-dactylon" title="Троскот"/>
+                        <span class="title_thumb">Троскот</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div> -->
+    <!-- КРАЙ ПЛЕВЕЛИ -->
+
+    
