@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'prz-vegetables',
-  templateUrl: './vegetables.component.html',
-  styleUrls: ['./vegetables.component.scss']
+    templateUrl: './vegetables.component.html',
+    styleUrls: ['../../pages.scss']
 })
 export class VegetablesComponent implements OnInit {
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }
