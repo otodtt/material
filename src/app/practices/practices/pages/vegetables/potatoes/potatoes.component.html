@@ -1,3 +1,1327 @@
-<p>
-  potatoes works!
-</p>
+<div class="row text-center" id="prz-loader" *ngIf="!isLoaded">
+    <mat-spinner aria-label="Спинър до зареждането на страницата"></mat-spinner>
+</div>
+
+<div *ngIf="isLoaded" id="wrap_lmenu_txt">
+    <div class="text-center name-header">
+        <h2 class="customfont">ЗЕЛЕНЧУЦИ НА ОТКРИТО</h2>
+    </div>
+    <div class="row-top">
+        <div class="text-center" id="content-logo">
+            <h4 id="forest">МИНИСТЕРСТВО НА ЗЕМЕДЕЛИЕТО И ГОРИТЕ</h4>
+            <h4 id="plant-protect">НАЦИОНАЛНА СЛУЖБА ЗА РАСТИТЕЛНА ЗАЩИТА</h4>
+        </div>
+    </div>
+    <div class="row text-right">
+        <img id="stamp" src="../../../../../assets/img/my_images/stamp_director.png" alt="печат и подпис на директор" />
+    </div>
+    <div class="row text-center">
+        <h1 >ДОБРА РАСТИТЕЛНОЗАЩИТНА ПРАКТИКА ПРИ КАРТОФИТЕ</h1>
+    </div>
+    <div class="row text-right">
+        <p class="number-eppo">№ на НСРЗ ДРЗП 2/044(1)</p>
+        <p class="number-eppo">№ на БРРО РР 2/2(2)</p>
+    </div>
+    <div class="row">
+        <div id="authors-wrap">
+            <p ><span class="bold authors">Авторски колектив :</span><br/>
+                ст.н.с.II ст. д-р Никола Николов<br/>
+                ст.н.с.II ст. д-р Димитринка Христова<br/>
+                ст.н.с.II ст. д-р Оля Караджова<br/>
+                ст.н.с.II ст. д-р Василка Николова<br/>
+                н.с.I ст. д-р Ваньо Иванов<br/>
+                д-р Петър Николов - НСРЗ<br/>
+                Екатерина Томева - НСРЗ
+            </p>
+        </div>
+    </div>
+    <div class="row text-center">
+        <span class="year bold">СОФИЯ 2006 г.</span>
+    </div>
+    <div class="row text-center">
+        <h2 >ДОБРА РАСТИТЕЛНОЗАЩИТНА ПРАКТИКА ПРИ КАРТОФИ*</h2>
+    </div>
+
+    <!--Специфична сфера на действие-->
+    <div class="row">
+        <div class="text-indent">
+            <h3 >Специфична сфера на действие</h3>
+            <p>Този стандарт очертава принципите на Добрата растителнозащитна практика при картофи.</p>
+            <h3 >Специфично одобрение и поправка</h3>
+            <p >Първоначално одобрена през септември 2005 г. от НСРЗ</p>
+            <br/>
+
+            <p >
+                Това ръководство за добра растителнозащитна практика се отнася за картофи полско 
+                производство, предназначени за консумация и преработка. ДРЗП при картофите за 
+                семепроизводство е строго специфична и не е включена тук. Ръководството съдържа методи за 
+                борба с икономически важни болести, неприятели и плевели. Качеството на посадъчния материал 
+                има най-съществено значение при отглеждането на картофи. Той трябва да е придружен от 
+                сертификат, удостоверяващ, че произхожда от семепроизводни площи, незаразени с вирусни и 
+                бактериални болести, от цистообразуващи нематоди, и отговаря на определени стандарти за 
+                толерантност спрямо други вредители. Площите за отглеждане на картофи трябва да бъдат 
+                обследвани за наличието на почвени неприятели, нематоди и почвени патогени, които се 
+                запазват в почвата. Ако няма чисти площи от тези болести и неприятели, то преди засаждане на 
+                картофите трябва да се извърши третиране на почвата с подходящ препарат. Преди засаждане се 
+                провежда и третиране с хербициди. Третирането на почвата може да се извършва с гранулирани 
+                продукти за растителна защита или течни формулации. През вегетацията също може да се наложи 
+                третиране на растенията срещу вредители, появили се над критичната плътност, степен на 
+                заразеност и заплевеленост.
+            </p>
+            <p >
+                Прибирането на картофите трябва да става навреме, растителните остатъци да се унищожават, след 
+                което да се извърши дълбока оран. С тези мероприятия се унищожава част от вредителите и се 
+                намалява опасността за следващия вегетационен период. Спазването на четиригодишно 
+                сеитбообращение, както и редовното унищожаване на плевелите имат значение за опазване на 
+                картофите от болести и неприятели.
+            </p>
+            <p >
+                Характерна особеност при картофи производството е извършване на десикация на надземните 
+                части през определена финофаза, без това да се отрази на добива, с цел предпазване от вирусни 
+                болели и да се намали заразяването на глобените от мана. Преди съхранението на клубените те 
+                трябва да бъдат третирани с продукти, за растителна защита предпазващи ги от вредители през 
+                този период, и с продукти, за растителна защита потискащи прорастването.
+                    
+            </p>
+            <p >
+                Основните вредители, имащи стопанско значение при отглеждането на картофи полско производство, 
+                са дадени по-долу.
+            </p>
+        </div>
+    </div>
+    <!--КРАЙ Специфична сфера на действие-->
+
+    <!-- Изтегляне на Приложения -->
+    <div class="row">
+        <div class="my_addendum text-indent">
+            <span class="span_addendum">
+                <a  class="href_addendum" 
+                    rel="noopener noreferrer" target="_blank"
+                    href="../../../../../assets/practices/5-zelenchuci_otkrito-prilojenie.pdf"
+                >
+                    * Виж приложение 4
+                </a>
+            </span>
+        </div>
+    </div>
+    <!-- КРАЙ Изтегляне на Приложения -->
+    
+
+    <!-- Избор на Вредител -->
+    <div class="aa-title" id="pest_menu"></div>
+    <div class="row">
+        <div id="pest_menu_links">
+            <h3 >Основни вредители при картофите са:</h3>
+            <ul id="menu_a">
+                <li>
+                    <a class="back_link" przAnchorTo target="#phytophthora-infestans" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Мана по картофите - <span class="latin_name">Phytophthora infestans</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#alternaria-porri" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Кафяви листни петна - <span class="latin_name">Alternaria porri f. sp. Solani</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#thanatephorus-cucumeris" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Струпясване, ризоктониоза - <span class="latin_name">Thanatephorus cucumeris</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#storage" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Болести по време на съхранението
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#viruses" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Листното завиване по картофите - <span class="latin_name">Potato leaf roll virus - PLRV</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#viruses" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Ипсилон вирус по картофите - <span class="latin_name">Potato Y potyvirus - PW</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#viruses" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Хикс вирус по картофите - <span class="latin_name">Potato X potexvirus - PVX</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#viruses" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        A вирус по картофите - <span class="latin_name">Potato A virus - PVA</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#viruses" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        S вирус по картофите - <span class="latin_name">Potato virus S - PVS</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#viruses" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        М вирус по картофите - <span class="latin_name">Potato virus M</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#leptinotarsa-decemlineata" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Колорадски бръмбар - <span class="latin_name">Leptinotarsa decemlineata</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#aphis" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Листни въшки
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#elateridae " title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Телени червеи
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#agrotis" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Подгризващи нощенки - <span class="latin_name">Agrotis ipsilon, A.segetum, A-exclamationis</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#globodera" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Картофена нематода - <span class="latin_name">Globodera spp</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#limacidae" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Голи охлюви - <span class="latin_name">Limacidae</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#weed" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Плевели
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <!-- КРАЙ Избор на Вредител -->
+
+    <div *ngFor="let practice of practices">
+        <div class="aa-title" id="{{practice.linkId}}"></div>
+        <div class="row" >
+            <div class="pest-description-container text-indent" [innerHTML]="practice.text  | safeHtml"></div>
+            <div class="pest-image-container" *ngIf="practice.images?.length > 0">
+                <ul class="products">
+                    <li *ngFor="let image of practice.images">
+                        <a data-lightbox="image" href="{{image.imgPath}}" 
+                            data-title="{{image.imgTitle}}">
+                            <img threshold="200" lazy-load="{{image.thumbPath}}" 
+                                alt="{{image.thumbAlt}}" title="{{image.thumbTitle}}"/>
+                                <span class="title_thumb">{{image.bgName}}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row-back">
+            <div class="col-md-6" *ngIf="practice.tablePiv !== null">
+                <div class="panel-success text-center" >
+                    <div class="panel-heading">
+                        <button mat-button class="piv-button" (click)="openDialog(practice.tablePiv)">
+                            <span class="full-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                            <span class="small-piv">ВИЖ ПИВ</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel-warning text-center">
+                    <div class="panel-heading ">
+                        <a mat-button class="back_link_bottom" przAnchorTo target="#pest_menu" title="към всички неприятели"> виж друг неприятел</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Автори на снимки -->
+    <br><br>
+    <div class="row">
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Използвани са снимки от:
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="panel-body my_panel-body">
+                    <p>
+                        <span class="bold">Снимка 1:</span>
+                        <span>By Rasbak - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=15906311</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 2:</span>
+                        <span>http://www.entofito.com/images/2014/02/</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 3:</span>
+                        <span>By William M. Brown Jr., Bugwood.org - This image is Image Number 5356842 at IPM Images, a source for agricultural and pest management pictures operated by the Center for Invasive Species and Ecosystem Health, Colorado State University, USDA CSREES and the Southern Plant Diagnostic Network., CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=16493206</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 4:</span>
+                        <span>By Jose Luis Cernadas Iglesias - originally posted to Flickr as 336-Menage a trois, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=9493442</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 5:</span>
+                        <span>https://wiki.bugwood.org/File:Click_beetle_larva.jpg</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 6:</span>
+                        <span>By Caroline Harding, MAF - This image is found here at PaDIL, a source of images designed for Biosecurity and Biodiversity.This tag does not indicate the copyright status of the attached work. A normal copyright tag is still required. See Commons:Licensing for more information.PaDIL, CC BY 3.0 au, https://commons.wikimedia.org/w/index.php?curid=16228320</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 7:</span>
+                        <span>By Hectonichus - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=40008798</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 8:</span>
+                        <span>By Michael Becker - taken by Michael Becker, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=1205664</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 9:</span>
+                        <span>By Mick Talbot from Lincoln (U.K.), England - Wildflowers - Hemlock - Conium maculatum, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=20583724</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 10:</span>
+                        <span>By John Tann from Sydney, Australia - Johnson Grass, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=38234408</span>
+                    </p>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+    <!-- КРАЙ Автори на снимки -->
+</div>
+
+
+    <!-- Мана по картофите -->
+    <!-- <div class="aa-title" id="phytophthora-infestans"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Мана по картофите - <span class="latin_name">Phytophthora infestans</span></h3>
+            <h4 class="my_class_h4">Описание на болестта</h4>
+            <p>
+                Първоначално по долните листа се наблюдават неправилни до закръглени кафяви петна с по-светъл 
+                ореол, като при влажно време по долната страна се появява сиво-бял спорообразуващ налеп. 
+                При силно напетняване листата прегарят. Заразата преминава към стъблата, които стават кафяви 
+                до черно-кафяви. По нападнатите клубени се появяват сиво-кафяви твърди петна, които навлизат в 
+                месото като „езици“. Клубените могат да се заразят на полето от падащите с дъждовната вода в 
+                почвата спори или при контакт с болните листа и стъбла при изваждането им.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                1. Унищожаване на първоначалната зараза: болни клубени, оставени на купчинки на полето или 
+                в стопанството, самосевки от картофи, заразени клубени, използвани за посевен материал.
+            </p>
+            <p>
+                2. Изборът на срока за първото третиране може да се основава на: фенофазата на културата 
+                или на системата за прогноза и сигнализация. фазата, която се препоръчва за начало на 
+                третиране, е допиране на растенията от съседните редове. При рискови ситуации първото 
+                третиране може да стане преди допиране на листната маса вътре в реда. Подобно третиране е 
+                оправдано за посеви, намиращи се в съседство със заразени такива. Борбата и първото 
+                третиране трябва да се извеждат по сигнал, даден от регионалните служби за растителна защита. 
+                Системата за прогноза се основава на проследяването на връзката между температурата, 
+                относителната влажност на въздуха и количеството на валежите. Първото третиране според 
+                системата за прогноза е по-късно от това, определено на база фаза на развитие на културата.
+            </p>
+            <p>
+                3. Определяне на времето и интервалите на по-късните пръскания. Основната насока в борбата е 
+                да се защити растението от болестта, а не да се лекува. Предпазните средства са ефективни 
+                7-8 дни. фунгицидите с проникващо действие могат да бъдат използвани до 2 дни след 
+                заразяването, така че комбинацията проникващ + предпазен продукт може да бъде използвана, 
+                ако не е било извършено редовното предпазно третиране. Поради наличие на чувствителни към 
+                системните фунгициди раси на <span class="latin_name">Phytophthora infestans</span> те 
+                са подходящи, когато растенията не могат да бъдат предпазени по друг начин. Рискът от 
+                поява на устойчивост към гъбата и поради това, че са по-скъпи, препоръчително е да се 
+                намали броят на прилагането им. Те могат да се използват само в най-критичните моменти.
+            </p>
+            <p>
+                На основата на правилата, прилагани в някои европейски страни, е разработена примерна схема за третиране:
+            </p>
+            <p>
+                - до цъфтежа-третиране с предпазни фунициди всеки 7-10 дни;
+            </p>
+            <p>
+                - по време на интензивния растеж на картофите-максимум две пръскания със системни фунгициди през 14 дни;
+            </p>
+            <p>
+                - след цъфтежа-при подходящи климатични условия за развитие на гъбата, третиране през 7-10 
+                дни с продукти за растителна зашита с контактно и проникващо действие;
+            </p>
+            <p>
+                - след цъфтежа-при климатични условия, неподходящи за развитието на гъбата, третиране с 
+                контактни фунгициди през 10 дни;
+            </p>
+            <p>
+                4. При необходимост от предпазване на клубените от заразяване с патогена листната маса в 
+                края на вегетацията трябва да се унищожи с десиканти.
+            </p>
+            <p>
+                5. Да се засаждат сортове, които са слабо чувствителни към гъбата.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                <span class="active-substance">Алуминиев фозетил, манкоцеб, хлороталонил, диметоморф, меденоксихлорид, 
+                    фенамидон, фамоксидон, мефеноксам, металаксил, цинеб, симоксанил, меден сулфат, ипроваликар, 
+                    метирам, фолпет.</span>
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            <ul class="products">
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/diseases/Phytophthora_infestans_potato.jpg"  
+                    data-title="Мана по картофите - Phytophthora infestans">
+                    <img  threshold="200" lazy-load="../../../../../assets/diseases/Phytophthora_infestans_potato_thumb.jpg" 
+                        alt="Phytophtora infestans" title="Мана по картофите"/>
+                        <span class="title_thumb">Мана по картофите</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div> -->
+    <!-- КРАЙ Мана по картофите -->
+
+    <!-- Кафяви листни петна -->
+    <!-- <div class="aa-title" id="alternaria-porri"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Кафяви листни петна - <span class="latin_name">Alternaria porri f. sp. Solani</span></h3>
+            <h4 class="my_class_h4">Описание на болестта</h4>
+            <p>
+                По листата се образуват кафяви закръглени петна с вписани един в друг концентрични кръгове. 
+                Силно нападнатите листа се деформират и изсъхват. По листните дръжки и стъблата петната са 
+                продълговати, кафяви и сухи. По клубените петната са закръглени, тъмнокафяви и хлътнали. 
+                Патогенът презимува по растителните остатъци и клубените като мицел и конидиоспори. 
+                Развитието му се благоприятства от температура 22-26°С и относителна влажност на въздуха 
+                над 80% (наличие на обилни роси или чести превалявания).
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Подходящо сеитбообръщение. Дълбоко заораване на растителните остатъци. Използване на здрав 
+                посадъчен материал. Балансирано торене и напояване. Десикация на листната маса преди 
+                изваждане на клубените. Използване на устойчиви сортове. Да се извършват третирания с 
+                фунгициди при откриване на първи симптоми на болестта по листата. Повечето продукти, за 
+                растителна защита прилагани за борба с картофената мана, са ефективни и срещу кафявите 
+                листни петна.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                <span class="active-substance">Манкоцеб, мефеноксам, симоксанил, метирам, фолпет, хлороталонил, дифеноконазол.</span>
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div> -->
+    <!-- КРАЙ Кафяви листни петна -->
+
+    <!-- Струпясване -->
+    <!-- <div class="aa-title" id="thanatephorus-cucumeris"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Струпясване - <span class="latin_name">Thanatephorus cucumeris</span></h3>
+            <h4 class="my_class_h4">Описание на болестта</h4>
+            <p>
+                По кълновете, в основата на стъблото, столоните и корените се наблюдават червено-кафяви 
+                петна, които се превръщат в раковини. Болестта може да унищожи голяма част от кълновете. 
+                Заразените растения имат потиснат растеж. По повърхността на клубените се образуват черни 
+                склероции, които наподобяват полепнали почвени частици. Причинителят зимува като 
+                псевдосклероции по клубените, растителните остатъци и в почвата. Гъбата се развива при 
+                температура 17-20°С и висока влажност на почвата. 
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Спазване на 6-8-годишно сеитбообръщение. Заораване на растителните остатъци. Използване на 
+                здрав посадъчен материал. Третиране на глобените преди засаждане. Използването на фунгициди 
+                през вегетацията не е ефективно.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                Третиране на посадъчния материал: <span class="active-substance">ипродион</span>.
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            <ul class="products">
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/diseases/thanatephorus-cucumeris.jpg"  
+                    data-title="Струпясване - Thanatephorus cucumeris">
+                    <img  threshold="200" lazy-load="../../../../../assets/diseases/thanatephorus-cucumeris_thumb.jpg" 
+                        alt="Thanatephorus cucumeris" title="Струпясване"/>
+                        <span class="title_thumb">Струпясване</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div> -->
+    <!-- КРАЙ Струпясване -->
+
+    <!-- Болести по време на съхранението -->
+    <!-- <div class="aa-title" id="storage"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >
+                Болести по време на съхранението - 
+                <span class="latin_name">Fusarium coeruleum, F.sambucinum, F.solani, F. oxysporum, Phoma exiqua var.exiqua, 
+                Phoma exiqua var.foveata, Rhizoctonia solani, Spongospora subterranea</span>
+            </h3>
+            <h4 class="my_class_h4">Описание на болестта</h4>
+            <p>
+                При сухото гниене (причинено от 
+                <span class="latin_name">Fusarium coeruleum, F. sambucium, F. solani, F. oxysporum</span> и 
+                др.) кожицата около мястото на повредата се набръчква във вид на концентрични кръгове. 
+                Във вътрешността се образуват кухини, в които се развива белезникав или розов налеп. 
+                Клубените олекват. При фомозата (причинена от 
+                <span class="latin_name">Phoma exiqua var. exiqua</span> и 
+                <span class="latin_name">Phoma exiqua var.foveata</span>) петната са закръглени, леко 
+                хлътнали, като натиснати с палец. За разлика от фузарийното гниене загиналата тъкан е рязко 
+                ограничена от здравата. Тези патогени са почвообитаващи гъби, които проникват в глобените 
+                главно през лунички. Инкубационните им периоди са дълги. Най-често гниенето се проявява 
+                няколко месеца след инфектирането, когато температурата в складовете се повиши. 
+                Повърхността на глобените може да бъде повредена и разрушена и от гъбните натопени: 
+                <span class="latin_name">Rhizoctonia solani, Spongospora subterranea</span>. 
+                Заразяването с такива слаби причинители улеснява гниенето и намалява търговската стойност 
+                на клубените.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Спазване на 5-6-годишно сеитбообръщение. Използване на здрав посадъчен материал или 
+                обеззаразяването му. Балансирано торене и напояване. Навременно изваждане на клубените, 
+                когато са налице следните условия: кожицата е втвърдена, почвата е суха и надземната маса 
+                е изсъхнала или е била унищожена с десиканти. Болните и наранени клубени да се отстраняват 
+                преди съхранението. Да се поддържа оптимален температурен и влагов режим и редовно 
+                проветрение на хранилищата. Помещенията и инвентарът да се обеззаразяват. Засаждане на 
+                слабо чувствителни сортове. Преди съхранението клубените да се третират с фунгициди.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                <span class="active-substance">Беномил.</span>
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div> -->
+    <!-- КРАЙ Болести по време на съхранението -->
+
+    <!-- Вируси -->
+    <!-- <div class="aa-title" id="viruses"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Листното завиване по картофите - <span class="latin_name">Potato leaf roll virus - PLRV</span></h3>
+            <h3 >Ипсилон вирус по картофите - <span class="latin_name">Potato Y potyvirus - PW</span></h3>
+            <h3 >Хикс вирус по картофите - <span class="latin_name">Potato X potexvirus - PVX</span></h3>
+            <h3 >A вирус по картофите - <span class="latin_name">Potato A virus - PVA</span></h3>
+            <h3 >S вирус по картофите - <span class="latin_name">Potato virus S - PVS</span></h3>
+            <h3 >М вирус по картофите - <span class="latin_name">Potato virus M</span></h3>
+            <h4 class="my_class_h4">Описание на болестта</h4>
+            <p>
+                Вирусите са строги паразити, което означава, че те не могат да се развиват извън клетката. За да 
+                бъдат унищожени, трябва заедно с патогена да загине и самата клетка, а това би довело до загиване 
+                и на самото растение. За разлика от гъбите и бактериите борбата срещу вирусите се провежда 
+                косвено, насочена е срещу преносителите им. Освен това тя се извежда превантивно.
+            </p>
+            <p>
+                Вирусните болести по картофите причиняват икономически загуби и водят до бързото им израждане. 
+                Много често те се срещат в смесени вирусни инфекции и щетите са още по-големи. Обикновено 
+                симптомите се изразяват в мозаичност по листата. Един щам на ипсилон вирус продуцира некротични 
+                пръстени по клубените. Вирусът на листното завиване индуцира извиване на листата нагоре, те са 
+                крехки и при чупене хрущят. Основна част от вирусите по картофите се пренасят от листни въшки по 
+                неперзистентен начин. Вирусът на листното завиване се разпространява по перзистентен начин от 
+                листните въшки.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Добра растителнозащитна практика е засаждането на сертифициран посадъчен материал от картофи.
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            <ul class="products">
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/viruses/Potato_Leaf_Roll_Virus_UGA5356842.jpg"  
+                    data-title="Potato leaf roll virus - PLRV">
+                    <img  threshold="200" lazy-load="../../../../../assets/viruses/Potato_Leaf_Roll_Virus_UGA5356842_thumb.jpg" 
+                        alt="Potato leaf roll virus" title="Листно завиване по картофите"/>
+                        <span class="title_thumb">Листно завиване - PLRV</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div> -->
+    <!-- КРАЙ Вируси -->
+
+    <!-- Колорадски бръмбар -->
+    <!-- <div class="aa-title" id="leptinotarsa-decemlineata"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Колорадски бръмбар - <span class="latin_name">Leptinotarsa decemlineata</span></h3>
+            <h4 class="my_class_h4">Описание на неприятеля</h4>
+            <p>
+                Колорадският бръмбар е основен неприятел по картофите у нас. Той е разпространен в цялата 
+                страна и има решаващо значение при производството на картофи за храна и преработка. Без 
+                провеждане на борба с него е немислимо получаване на нормални добиви. Вредят ларвите и 
+                бръмбарите, които се хранят с листата на растенията, а при масово нападение ги обезлистват 
+                напълно. Количеството на консумираната храна зависи от температурата и влажността на 
+                средата и от фенофазата на растенията. Най-опасни за растенията са повредите, причинени по 
+                време на цъфтеж и клубенообразуване. Колорадският бръмбар е най-вреден за ранните картофи, 
+                понеже късият вегетационен период не дава възможност на повредените растения да възстановят 
+                загубената листна маса. Годишно той развива три поколения. 
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Борбата с колорадския бръмбар започва с появята на зимувалите бръмбари. На малки площи и 
+                при ниска плътност те могат да бъдат събирани ръчно и унищожавани, преди да са снесли яйцата 
+                си. Третирането с инсектициди да се извършва при откриване на първите млади ларви. 
+                Поради разтегнат период на поява на презимувалите възрастни може да се наложи второ 
+                третиране срещу ларвите на I поколение. Необходимостта от третиране срещу другите поколения 
+                се определя конкретно за всяка площ в зависимост от числеността на неприятеля и фенофазата на 
+                картофите. При ранните картофи третиране срещу бръмбарите се провежда, ако е унищожена 20% 
+                от листната маса, при средноранните 35-40% и при късните 45-50%. Борба с ларвите на I поколение 
+                се извършва при установени 10-15 ларви, при второто 20 ларви от III възраст на 1 растение. 
+                Ежегодното провеждане на химическа борба с колорадския бръмбар е предпоставка за формиране на 
+                резистентност спрямо някои инсектициди. Това налага смяна на продукти за растителна защита. 
+                Има много изследвания за приложение на ефективни паразити и хищници, но все още те не са 
+                намерили широко приложение. През последните няколко години в много страни вече се засаждат 
+                сортове, създадени по метода на генното инженерство, които не се нападат от този неприятел. 
+                Въпросът с тях все още е дискусионен.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                Третиране на клубените преди засаждане с: <span class="active-substance">имидаклоприд</span>,
+            </p>
+            <p class="as">
+                Внасяне в почвата на гранулирани инсектициди: <span class="active-substance">тербуфос, етопрофос</span>
+            </p>
+            <p class="as">
+                Третиране с: <span class="active-substance">бенсултап, алфацитерметрин, зетациперметрин, делтаметрин, фенпропатрин, 
+                ламбда цихалотрин, карбосулфан, ацетамиприд, тефлубензурон, бифетрин, есфенвалерат</span>
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            <ul class="products">
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/insects/Leptinotarsa_decemlineata.jpg"
+                    data-title="Колорадски бръмбар">
+                        <img src="../../../../../assets/insects/Leptinotarsa_decemlineata_thumb.jpg" 
+                        alt="Leptinotarsa decemlineata" title="Колорадски бръмбар"/>
+                        <span class="title_thumb">Колорадски бръмбар</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <table class="piv_table">
+            <thead>
+                
+                <tr>
+                    <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
+                    <th>ВРЕДИТЕЛ / СТАДИЙ</th>
+                    <th>
+                        <span class="full-name-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                        <span class="small-name-piv">ПРАГ НА ВРЕДНИОСТ</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tr_name_pest">
+                    <td colspan="3" class="tr_latin">КОЛОРАДСКИ БРЪМБАР <span class="latin_name">Leptinotarsa decеmlineata</span></td>
+                </tr>
+                <tr>
+                    <td>поникване до 10-15 см височина на растенията</td>
+                    <td>възрастни</td>
+                    <td>10% заселени гнезда</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">15-25 см височина на растенията</td>
+                    <td>възрастни</td>
+                    <td>5 бр./100 растения</td>
+                </tr>
+                <tr>
+                    <td>яйчни купчинки</td>
+                    <td>10 бр./10 растения</td>
+                </tr>
+                <tr>
+                    <td>ларви</td>
+                    <td>150 бр./100 растения</td>
+                </tr>
+                <tr>
+                    <td>бутонизация</td>
+                    <td rowspan="3">ларви</td>
+                    <td>10% нападнати растения</td>
+                </tr>
+                <tr>
+                    <td>цъфтеж</td>
+                    <td>15% нападнати растения</td>
+                </tr>
+                <tr>
+                    <td>след цъфтеж</td>
+                    <td>20% нападнати растения</td>
+                </tr>
+                <tr>
+                    <td>след цъфтеж при семепроизводство</td>
+                    <td>ларви и възрастни</td>
+                    <td>
+                        20% нападнати растения; <br/> 
+                        5-10 бр. ларви и възрастни/100 растения
+                    </td>
+                </tr>
+                <tr>
+                    <td>масов цъфтеж</td>
+                    <td rowspan="2">ларви</td>
+                    <td>50% обезлистване</td>
+                </tr>
+                <tr>
+                    <td>пълно развитие</td>
+                    <td>75% обезлистване</td>
+                </tr>
+                <tr>
+                    <td>ранни картофи</td>
+                    <td rowspan="2">възрастни</td>
+                    <td>20% унищожена листна маса</td>
+                </tr>
+                <tr>
+                    <td>средно ранни картофи</td>
+                    <td>35-40% унищожена листна маса</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+    <!-- КРАЙ Колорадски бръмбар -->
+
+    <!-- Листни въшки -->
+    <!-- <div class="aa-title" id="aphis"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Листни въшки</h3>
+            <h4 class="my_class_h4">Описание на неприятелите</h4>
+            <p>
+                Листните въшки заемат основен дял в структурата на надземната вредна ентомофауна по 
+                картофите. Те са лимитиращ фактор за семепроизводните посеви. Поради високата си 
+                размножителна способност и многогенерационност, за кратко време те обхващат цялата площ. 
+                При картофите за масово производство листните въшки имат по-ограничено стопанско значение. 
+                Нападнатите растения са с пожълтели, леко деформирани и с некроза листа. Повредите могат да 
+                се отразят и върху добива, ако времето и степента на нападение е в критични фенофази. 
+                Ако е необходимо, се провежда борба с тези неприятели. Стопанска значимост за картофите 
+                имат следните видове листни въшки: 
+                <span class="latin_name">Myzus persicae, Macrosiphum euphorbiae, Aphis gossypii, Aphis nasturtii, 
+                Aphis fabae, Aulacrоtumm solani</span>.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                За разлика от семепроизводните картофи, при които е наложително третиране с афицидни 
+                средства, то при картофите за храна и преработка борба се провежда само при доказана 
+                необходимост - многочислени популации от листни въшки, развиващи се в началото на 
+                вегетацията и по време на образуване на клубените. Необоснованото често третиране е 
+                предпоставка за формиране на резистентност при някой от посочените видове въшки. 
+                Редуването на продукти за растителна защита с различни активни вещества забавя този процес. 
+                Обикновено 1 третиране е достатъчно. Трябва да се има предвид, че при провеждане на борба 
+                с различните поколения на колорадския бръмбар се унищожават и листните въшки. Химическа 
+                борба не се провежда, ако няма опасност от вирусни болести и афидофагите са в съотношение 
+                спрямо листните въшки под 1:100. При нападения на огнища да се третират само тези места.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                Третиране с: <span class="active-substance">пиримикарб, хептенофос, ламбдацихалотрин, алфациперметрин, меомил, ацетомиприд, мин. масло.</span>
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div>
+    <div class="row">
+        <table class="piv_table">
+            <thead>
+                <tr>
+                    <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
+                    <th>ВРЕДИТЕЛ / СТАДИЙ</th>
+                    <th>
+                        <span class="full-name-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                        <span class="small-name-piv">ПРАГ НА ВРЕДНИОСТ</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tr_name_pest">
+                    <td colspan="3" class="tr_latin">ЛИСТНИ ВЪШКИ <span class="latin_name">сем. Aphididae</span></td>
+                </tr>
+                <tr>
+                    <td >семепроизводство</td>
+                    <td>възрастни</td>
+                    <td>единични екземпляри в началото на вегетацията</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+    <!-- КРАЙ Листни въшки -->
+
+    <!-- Телени червеи -->
+    <!-- <div class="aa-title" id="elateridae"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Телени червеи</h3>
+            <h4 class="my_class_h4">Описание на неприятеля</h4>
+            <p>
+                Ларвите на някои видове от сем. 
+                <span class="latin_name">Elateridae</span> (
+                Обикновен полски ковач – <span class="latin_name">Agriotis lineatus</span>;
+                Тъмен полски ковач - <span class="latin_name">А. obscurus</span>; 
+                Малък полски ковач - <span class="latin_name">А. sputator</span>; 
+                Западен полски ковач - <span class="latin_name">А. ustulatus</span>) 
+                повреждат значително клубените на картофите, в които прогризват ходове. Такива клубени 
+                са без пазарна стойност. В ходовете навлизат патогени, причиняващи загниването им. 
+                Бръмбарите се хранят с цветовете на различни растения. Развитието на телените червеи 
+                продължава 3-5 години.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Тревни, люцернови и необработваеми площи не трябва да се използват като предшественици за 
+                картофите. Добрата обработка на почвата, унищожаването на плевелите, балансираното торене с 
+                азотни и калиеви торове, включване в сеитбооборота на култури като грах, лен, просо и др. 
+                спомагат за по- добро опазване на растенията от телени червеи. Химическата борба с тези 
+                неприятели трябва да се предшества от установяване плътността на ларвите през есента или 
+                рано напролет чрез почвени разкопки, триъгълни житни примамки или примамки от пластмасови 
+                саксии (диаметър 11 см) с дренирано дъно, в които са засети семена от царевица и пшеница и 
+                заровени в почвата на дълбочина 5 см. Примамките се проверяват през две седмици. Ако 
+                установената плътност е над 2 -	4 ларви на м2, трябва да се внесат гранулирани продукти 
+                за растителна зашита при разход 4-5 кг/дка по време на засаждане или - 2 кг/дка в браздите, 
+                гнездата Вегетационните обработки на почвата принуждават телените червеи да мигрират 
+                по-дълбоко в почвата.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                Гранулати - <span class="active-substance">тербуфос, етопрофос, тиодикарб</span>
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            <ul class="products">
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/insects/Click_beetle_larva.jpg"
+                    data-title="Телени червеи - ларва">
+                        <img src="../../../../../assets/insects/Click_beetle_larva_thumb.jpg" 
+                        alt="Elateridae" title="Телени червеи - ларва"/>
+                        <span class="title_thumb">Телени червеи</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <table class="piv_table">
+            <thead>
+                <tr>
+                    <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
+                    <th>ВРЕДИТЕЛ / СТАДИЙ</th>
+                    <th>
+                        <span class="full-name-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                        <span class="small-name-piv">ПРАГ НА ВРЕДНИОСТ</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tr_name_pest">
+                    <td colspan="3" class="tr_latin">ТЕЛЕНИ ЧЕРВЕИ <span class="latin_name">сем. Elateridae</span></td>
+                </tr>
+                <tr>
+                    <td >преди засаждане и през вегетацията</td>
+                    <td>ларви</td>
+                    <td>4-6 бр./кв.м</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+    <!-- КРАЙ Телени червеи -->
+
+    <!-- Нощенки -->
+    <!-- <div class="aa-title" id="agrotis"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Нощенки</h3>
+            <h4 class="my_class_h4">Обши сведения</h4>
+            <p>
+                Картофите се нападат от следните многоядни нощенки: а) подгризващи 
+                (<span class="latin_name">Agrotis ipsilon, A. segetum, A. exclamationis</span>), 
+                чиито гъсеници от I и II възраст скелетират листата, а следващите възрасти прегризват 
+                младите растения на нивото на почвата или нагризват клубените; б) надземни 
+                (<span class="latin_name">Mamestra brassicae, M. oleracea, Autographa gamma</span>), 
+                гъсениците на които скелетират листата, изгризват отвори с различни големини, а при 
+                висока плътност унищожават листата. Ипсилоновата и гамозначната нощенки развиват 
+                3 поколения у нас, а останалите по две. Гъсениците на подгизващите нощенки са пепелявосиви 
+                и се намират плитко в почвата около растенията, а тези от надземните значително варират в 
+                оцветяването - от тревистозелени до тъмнозелено и се намират върху растенията.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Основните агротехнически мероприятия имат важно значение при отглеждането на картофи. 
+                Чрез тях се създават благоприятните условия за развитието на растенията, а същевременно 
+                се унищожава значителна част от популациите на нощенките, влошават се условията за хранене 
+                и яйцеснасяне. Срещу тези неприятели трябва да се провежда интегрирана борба, която се 
+                основава на праговете на икономическа вредност за отделните видове. Използването на 
+                яйчния паразит трихограма, хищната дървеница 
+                <span class="latin_name">Podisus maculiventris</span> и бактериални продукти за растителна 
+                зашита на база <span class="latin_name">Bacillus thuringiensis</span> са една добра 
+                алтернатива на инсектицидните продукти за растителна зашита. Необходимостта от борба се 
+                определя въз основа на летежа на пеперудите, проследяван с феромонови и светлинни уловки. 
+                Химическата борба е най-ефективна, когато е насочена срещу младите гъсеници.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                Третиране с: <span class="active-substance">ацефат, хлорпирифосетил, тиодикарб, бифетрин</span>
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            <ul class="products">
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/insects/Agrotis_ipsilon_aneituma.jpg"
+                    data-title="Нощенки - Agrotis ipsilon">
+                        <img src="../../../../../assets/insects/Agrotis_ipsilon_aneituma_thumb.jpg" 
+                        alt="Agrotis ipsilon" title="Agrotis ipsilon"/>
+                        <span class="title_thumb">Agrotis ipsilon</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <table class="piv_table">
+            <thead>
+                <tr>
+                    <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
+                    <th>ВРЕДИТЕЛ / СТАДИЙ</th>
+                    <th>
+                        <span class="full-name-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                        <span class="small-name-piv">ПРАГ НА ВРЕДНИОСТ</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tr_name_pest">
+                    <td colspan="3" class="tr_latin">ПОДГРИЗВАЩИ НОЩЕНКИ <span class="latin_name">Agrotis sp.</span></td>
+                </tr>
+                <tr>
+                    <td >от поникване до образуване на 1-ви клубени</td>
+                    <td>гъсеници</td>
+                    <td>5 бр./кв.м</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+    <!-- КРАЙ Нощенки -->
+
+    <!-- нематоди -->
+    <!-- <div class="aa-title" id="globodera"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Картофени цистообразуващи нематоди - <span class="latin_name">Globodera spp</span></h3>
+            <h4 class="my_class_h4">Описание на неприятелите</h4>
+            <p>
+                По картофите вредят два вида цистообразуващи нематоди, 
+                <span class="latin_name">Globodera rostochiensis</span> и <span class="latin_name">Globodera pallida</span>. 
+                Цистообразуващите нематоди се хранят върху корените на картофите. Нападнатите растения са 
+                със забавен растеж и добивите намаляват значително. 
+                <span class="latin_name">G. rostochiensis</span> и <span class="latin_name">G. pallida</span> 
+                са специализирани неприятели по картофите и доматите. Въпреки че когато липсват растенията 
+                гостоприемници, популациионата плътност на цистобразуващите нематоди в почвата спада значително, то 
+                тяхната жизненост се запазва в продължение на много години след отглеждане на картофи върху 
+                дадена площ. Естественото разпространение на тези неприятели е бавно и ограничено.
+            </p>
+            <p>
+                Картофените цистообразуващи нематоди са карантинни неприятели в голям брой европейски 
+                страни и фитосанитарните наредби изискват да се извършва третиране на почвата, което е 
+                задължително при картофите за семепроизводство. В някои страни има създаден регистър на 
+                полетата, в които са установени картофените цистообразуващи нематоди, и в зависимост 
+                него фитосанитарните власти са издали разпоредби, чрез които се определят площите, върху 
+                които могат да се отглеждат картофи. В момента се води дебат дали прилагането на тези 
+                ограничения при картофите за консумация и преработка са добра растителнозащитна практика.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Основната стратегия на борбата с цистообразуващите нематоди при картофите за консумация и 
+                преработка е определена чрез наредби в повечето страни (това се отнася за площите за 
+                семепроизводство, при които стандартите за борба са по-високи). Основната цел на борбата е 
+                да се предотврати разпространението на нематодите върху нови площи и да се намали 
+                популационната им плътност в нападнатите. Картофените клубени, предназначени за семе, 
+                трябва да бъдат напълно свободни от 
+                <span class="latin_name">Globodera spp.</span> Необходимо е да се спазва най-малко 
+                3-годишно сеитбообращение. Ранното прибиране на картофите, преди узряването на цистите 
+                спомага за намаляване плътността на нематодите. Площите, върху които ще се отглеждат 
+                картофи, е необходимо да се обследват, за да се определи популационната плътност на 
+                вредителите (те трябва да бъдат под възприетия праг на икономическа вредност) и техния 
+                патотип. Ако патотипът е известен, може да бъде избран подходящ устойчив сорт. 
+                Спазването на тези изисквания е добра практика, независимо дали е или не е официално 
+                утвърдена.
+            </p>
+            <p>
+                Стратегията може да бъде приложена при третиране на почвата чрез фумигация в края на 
+                вегетацията или чрез инкорпориране на нематоциди - гранулати, преди засаждането. 
+                Третирането с нематоциди определено не е добра практика, и поради това в много случаи се 
+                забранява. В области с интензивно картофопроизводство такова ограничение понастоящем не 
+                се определя като икономически приемливо и се прилага третиране с нематоциди. 
+                Химичната борба трябва да бъде ограничена и да се прилага само когато е абсолютно 
+                необходима. Борбата с <span class="latin_name">G. pallida</span> е трудна, тъй като 
+                това е преобладаващият вид в много области, което се дължи на употребата на сортове, 
+                резистентни спрямо <span class="latin_name">G. rostochiensis</span>.
+            </p>
+            <p>
+                Друг елемент на стратегия за борба е извършване на контрол върху самосевките от картофи в 
+                площите с други култури (те позволяват популациите на <span class="latin_name">Globodera spp.</span> 
+                да се запазят). Възприетият праг е 4 бр. самосевки/кв.м.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                Фумигация: <span class="active-substance">дазомет</span>
+            </p>
+            <p class="as">
+                Гранулати: <span class="active-substance">етопрофос, оксамил</span>
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div> -->
+    <!-- КРАЙ нематоди -->
+
+    <!-- Голи охлюви -->
+    <!-- <div class="aa-title" id="limacidae"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Голи охлюви - <span class="latin_name">Limacidae</span></h3>
+            <h4 class="my_class_h4">Описание на неприятелите</h4>
+            <p>
+                Голите охлюви са многоядни. Те нагризват листата и клубените на картофите. Особено опасни 
+                са в години с повече валежи през летните месеци. Влажните и по-лесно затоплящи се почви 
+                благоприятстват по-висока активност на голите охлюви. Засушаването води до намаляване 
+                популационната плътност на тези неприятели. От познатите 25 вида у нас стопанско значение 
+                имат 2-3 вида. Голите охлюви живеят 1-3 години, зимуват яйца, млади ларви и възрастни. 
+                Развиват няколко поколения годишно. При придвижването си по растенията и почвата те 
+                оставят бяла диря от слуз, което е показател за присъствието им.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Агротехническите мероприятия като редовна обработка на почвата, разтрошаване на буците, 
+                почистване на площите от растителни остатъци, просушаване на заблатените участъци 
+                създават неблагоприятни условия за намножаването на тези неприятели. На малки площи 
+                може да се проведе механична борба с ловни пояси, примамки от различни материали, 
+                като събраните охлюви се посипват с минерален тор или се заливат с гореща вода. 
+                При масова намножаване се прилага напрашване с праховиден суперфосфат, негасена вар или 
+                калиева селитра.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                Гранулати: <span class="active-substance">дазомет, металдехид, тиодикарб</span>
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            <ul class="products">
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/rodents/Limacidae.jpg"
+                    data-title="Гол охлюв">
+                        <img src="../../../../../assets/rodents/Limacidae_thumb.jpg" 
+                        alt="Limacidae" title="Гол охлюв"/>
+                        <span class="title_thumb">Гол охлюв</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div> -->
+    <!-- КРАЙ Голи охлюви -->
+
+    <!-- Плевели -->
+    <!-- <div class="aa-title" id="weed"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Плевели</h3>
+            <p>
+                Борбата срещу плевелите при картофите е необходима, за да се гарантират качеството и 
+                добивът. У нас картофите се отглеждат в райони с различни почвено-климатични условия. 
+                Площите им са основно в планинските райони, с по-висока почвена и въздушна влажност, където 
+                преобладават кафяви и сиви горски почви. Значителна част от тях, предимно за ранно и средно 
+                ранно производство, са около консумативните центрове и се отглеждат при полски условия, на 
+                алувиално-ливадна почва и по-ограничено на карбонати и в различна степен излужени черноземи. 
+                Това са едни от причините за различия в степента и във видовото заплевеляване, което изисква и 
+                конкретен подход при провеждането на борбата срещу плевелите.
+            </p>
+            <p>
+                От едногодишните плевели се срещат основно късните пролетни. Те поникват основно през 
+                втората половина на пролетта и началото на лятото. Поради много разтегнатия период на 
+                поникване създават проблеми по време на всички фенофази от развитието на културите. 
+                Образуват голямо количество семена и притежават способност да се приспособяват към 
+                промените на екологичните условия. Особено силно нараства заплевеляването с видове, които 
+                са по-топлолюбиви и най-вече по-издръжливи на засушаване. Много от късните пролетни 
+                плевели поникват и през втората половина на лятото и създават проблема с вторичното 
+                /късно/ заплевеляване.
+            </p>
+            <p class="latin_name italic bold underline" style="margin: 0; padding: 0">Едногодишни житни плевели </p>
+            <p>
+                Ветрушка (<span class="latin_name">Apera spicaventi</span>); 
+                Кокоше просо (<span class="latin_name">Echinochloa crusgalli</span>); 
+                Кокоше просо оризово (<span class="latin_name">Echinochloa phyllopogon</span>); 
+                Кощрява зелена (<span class="latin_name">Setaria viridis</span>); 
+                Кощрява сива (<span class="latin_name">Setaria glauca</span>); 
+                Кръвно просо (<span class="latin_name">Panicum sanguinale</span>) 
+                Лисича опашка полска (<span class="latin_name">Alopecurus myosuroides</span>) 
+                Овес див (<span class="latin_name">Avena fatua</span>); 
+                Пиявица (<span class="latin_name">Lolium temulentum</span>)</p>
+            <p class="latin_name italic bold underline" style="margin: 0; padding: 0">Едногодишни широколистни плевели </p>
+            <p>
+                Бударица петниста (<span class="latin_name">Galeopsis tetrahit</span>); 
+                Бучиниш (<span class="latin_name">Conium maculatum</span>); 
+                Бял щир (<span class="latin_name">Amaranthus albus</span>); 
+                Бяла лобода (<span class="latin_name">Chenopodium album</span>); 
+                Великденче бръшлянолистно (<span class="latin_name">Veronica ederifolia</span>); 
+                Врабчово семе (<span class="latin_name">Lithospermum arvensis</span>); 
+                Галинзога дребноцветна (<span class="latin_name">Galnisoga parviflora</span>); 
+                Глушина вълнеста (<span class="latin_name">Vicia villosa</span>); 
+                Градински кострец (<span class="latin_name">Sonchus oleraceus</span>); 
+                Дива ряпа (<span class="latin_name">Raphanus raphanistus</span>); 
+                Звездица (<span class="latin_name">Stellaria media</span>); 
+                Злолетница (<span class="latin_name">Erigeron canadensis</span>); 
+                Казашки бодил (<span class="latin_name">Xanthium spinosum</span>); 
+                Клопачка едра (<span class="latin_name">Rhinanthus major</span>); 
+                Колянка едросеменна (<span class="latin_name">Spergula maxima</span>); 
+                Колянка обикновена (<span class="latin_name">Spergula vulgaris</span>); 
+                Компасна салата (<span class="latin_name">Lactuca serriola</span>); 
+                Куче грозде черно (<span class="latin_name">Solanum nigrum</span>); 
+                Лепка трирога (<span class="latin_name">Galium tricorne</span>); 
+                Лечебна лайка (<span class="latin_name">Matricaria chamomilla</span>); 
+                Лечебен росопас (<span class="latin_name">Fumaria officinalis</span>); 
+                Лобода разтлана (<span class="latin_name">Atriplex patula</span>); 
+                Обикновено грънче (<span class="latin_name">Hibiscus trionum</span>); 
+                Овчарска торбичка (<span class="latin_name">Capsella bursa-pasoris</span>); 
+                Пача трева (<span class="latin_name">Poligonum aviculare</span>); 
+                Пипериче лападоволистно (<span class="latin_name">Poligonum lapathifolium</span>); 
+                Подрумче полско (<span class="latin_name">Anthemis arvensis</span>); 
+                Полска попова лъжичка (<span class="latin_name">Thlaspi arvense</span>); 
+                Просфорник (<span class="latin_name">Abutilon theophrasti</span>); 
+                Свиница (<span class="latin_name">Xanthium strumarium</span>); 
+                Синап полски (<span class="latin_name">Sinapis arvensis</span>);
+                 Слети коса (<span class="latin_name">Adonis aestivalis</span>); 
+                 Спореж обикновен (<span class="latin_name">Senecio vulgaris</span>); 
+                 Теменуга трицветна (<span class="latin_name">Viola tricolor</span>); 
+                 Татул (<span class="latin_name">Datura stramonium</span>); 
+                 Тученица обикновена (<span class="latin_name">Portulata oleracea</span>); 
+                 Фасулче (<span class="latin_name">Polygonum convolvulus</span>); 
+                 Щир обикновен (<span class="latin_name">Amaranthus retroflexus</span>); 
+                 Щир растлан (<span class="latin_name">Amaranthus blitoides</span>)
+            </p>
+            <p>
+                По-ограничено са разпространени: ранните пролетни плевели, които поникват масово през 
+                пролетта, цъфтят и плодоносят през май - юни, а някои ефемери, които поникват през 
+                различни периоди и почти през цялата вегетация на културата, се срещат в различни фази 
+                на развитие; зимно - пролетните плевели, семената на които покълват основно през есента 
+                и узряват преди или по време на прибирането на картофите.
+            </p>
+            <p>
+                Картофите се заплевеляват и с многогодишни плевели - коренищни и кореново-издънкови.
+            </p>
+            <p>
+                <span class="latin_name italic bold underline">Коренищните плевели</span> образуват подземни стъбла (коренища), в които през вегетационния 
+                период се натрупват запасни хранителни вещества, необходими за прорастване и развитие 
+                на нови растения. Тези плевели се размножават главно с коренища, на които са 
+                разположени спящи пъпки. Някои от тях се размножават и чрез семена. Причина за 
+                намножаването им са късно извършената дълбока оран, шаблонно използване на дискови 
+                оръдия, неспазване на сеитбообръщения, ограничена употреба на ефективни хербициди и др.
+            </p>
+            <p class="latin_name italic bold underline" style="margin: 0; padding: 0">Многогодишни коренищни плевели</p>
+            <p>
+                Балур (<span class="latin_name">Sorghum halepensis</span>); 
+                Папрат орлова (<span class="latin_name">Pteridium aqulinum</span>); 
+                Пирей пълзяш (<span class="latin_name">Agropyrum repens</span>); 
+                Троскот обикновен (<span class="latin_name">Cynodon dаctylon</span>); 
+                Вълча ябълка (<span class="latin_name">Aristolochia clematitis</span>);
+            </p>
+            <p>
+                На силно заплевелени с коренищни плвели площи спящите пъпки достигат до стотици хиляди 
+                на декар. При достатъчно влага в почвата те прорастват през целия вегетационен период. 
+                Нарязването на коренищата при някои почва обработки стимулира допълнителното им 
+                прорастване. Периодът, в който издънките все още не са вкоренени добре (до 2-3 седмици 
+                след нарязването), е най-подходящ за унищожаването им чрез подрязване.
+            </p>
+            <p>
+                <span class="latin_name italic bold underline">Кореновоиздънковите плевели</span> се 
+                размножават еднакво добре както чрез семена, така и вегетативно. Органи за вегетативно 
+                размножаване са корените, върху които са разположени спящи пъпки, от които се развиват 
+                издънки. Отрязък дори с една спяща пъпка може да даде начало на ново растение. 
+                Прорастването на спящите пъпки започва рано напролет и продължава през целия вегетационен 
+                период, като за вкореняването им е необходима благоприятна почвена влажност.
+            </p>
+            <p class="latin_name italic bold underline" style="margin: 0; padding: 0">Многогодишни кореновоиздънкови плевели</p>
+            <p>
+                Горуха (<span class="latin_name">Cardaria draba</span>); 
+                Млечок (<span class="latin_name">Sonchus arvensis</span>); 
+                Паламида полска (<span class="latin_name">Cirsium arvense</span>); 
+                Поветица полска (<span class="latin_name">Convolvulus arvensis</span>)
+            </p>
+            <p>
+                В сухо и горещо време голяма част от спящите пъпки загиват. Най-подходящият период за 
+                провеждане на обработка, с която не се позволява вкореняване на издънките и образуване 
+                на нови органи за вегетативно размножаване, е през първите 2-3 седмици след поникването 
+                на издънките от кореновите отрязъци.
+            </p>
+            <p>
+                По-важните причини за намножаване на кореновоиздънковите плевели са: ненавременните, 
+                плитките и лошокачествени почвообработки, прилагането на дискови оръдия и фрези на площи, 
+                заплевелени с тях, употребата на недостатъчно ефективни хербициди срещу тях и др.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Агротехническите мероприятия за намаляване на заплевеляването при картофите са: правилното 
+                сеитбообръщение, диференцираната и висококачествена основна и предсеитбена обработка на 
+                почвата, засаждането в биологично най-благоприятните срокове и др.
+            </p>
+            <p>
+                В планинските и някои полски райони площите с картофи се включват в полските 
+                сеитбообръщения, а край големите консумативни центрове - в зеленчукови. Най-добри 
+                предшественици за картофите са зимните житни и фуражни бобови култури - 
+                фасул (полски и градински), грах, соя, подходящи са ранното зеле и лукът. След тези 
+                предшественици се създава възможност да се проведат обработки или химическа борба 
+                срещу едногодишните и многогодишни плевели.
+            </p>
+            <p>
+                На площи, заплевелени с многогодишни плевели в години с горещи и сухи лета, се извършват 
+                обработки за изкарване на коренищата на повърхността и тяхното изсушаване, а при влажни 
+                условия в този период с неколкократни обработки се постига значително изтощаване на 
+                многогодишните плевели.
+            </p>
+            <p>
+                Ако не се използват хербициди, площта се обработва според преобладаващите многогодишни 
+                плевели. Когато заплевеляването е предимно с коренищни видове, основната дълбока оран 
+                се извършва веднага. Ако преобладават кореновоиздънковите плевели, най-напред се 
+                извършва плитка оран (подмятане) и след развитие на нов подраст - дълбока оран. 
+                За по-ефикасна борба срещу плевелите дълбоката оран се извършва колкото е възможно 
+                по-дълбоко и по-рано.
+            </p>
+            <p>
+                За провеждане на химическа борба срещу многогодишните плевели, след прибиране на 
+                предшественика се изчаква около 3-4 седмици, докато тези плевели нараснат интензивно и 
+                се третира с хербицида <span class="active-substance">глифозат</span>.
+            </p>
+            <p>
+                При ранните и средноранни картофи и на почви, които не са склонни към уплътняване, 
+                обработката срещу плевелите може да се проведе по следния начин: след поникване на 
+                картофите - във фаза розетка, се извършва загърляне така, че да се покрие с почва листната 
+                маса. Няколко дни преди повторното показване на картофите на повърхността на тировете се 
+                третира с хербициди.
+            </p>
+            <p>
+                При късните картофи на почви, които са склонни към уплътняване след засаждане и начало 
+                на поникване на картофите, се загърля по описания начин. Няколко дни след загърлянето 
+                се третира с хербициди. Пръска се само в редовете - ивица около 35 см. През вегетацията, 
+                в началото на заплевеляване на нетретираната част се прави обработка на междуредията. 
+                По-късно се извършва втора обработка за повторно загърляне в основата на растенията. 
+                По този начин с две междуредови обработки се унищожават повечето от плевелите, 
+                които са устойчиви на някои от използваните хербициди. Постига се икономия до 50% от 
+                по два хербицида за предпоникващо и евентуално вегетационно третиране.
+            </p>
+            <h4 class="my_class_h4">Основни хербициди</h4>
+            <p>
+                При картофи се използват хербициди с почвено и листно действие. Почвените се прилагат 
+                преди разсаждане (след сеитба преди поникване при безразсадово производство, преди 
+                поникване на плевелите) на културите. За добрият си ефект почвените хербициди изискват 
+                добре подготвена без буци и растителни остатъци почва и добра почвена влага.
+            </p>
+            <p>
+                За осигуряване на добър хербициден ефект при използване на листните противожитни 
+                хербициди третирането с тях се провежда при спазване на следните изисквания:
+            </p>
+            <p>
+                - да се третира през най-подходящата фенофаза на плевелите, тази, в която те са максимално 
+                чувствителни - за едногодишните житни във фаза 3-4 лист и за многогодишните, когато са 
+                в активен растеж с добре развита листна маса.
+            </p>
+            <p>
+                - да не се използват, когато плевелите са потиснати (например при силно продължително 
+                засушаване)
+            </p>
+            <p>
+                - ефектът се понижава, ако третирането се проведе при температура над 25°С и особено при 
+                съчетаване на факторите интензивно осветление, висока температура и ниска атмосферна влажност. 
+                При такива условия се намалява и селективността спрямо културата.
+            </p>
+            <p>
+                - да се спазват определените карантинни срокове.
+            </p>
+            <p>
+                При ДРЗП, за да се избегнат компенсационни процеси в намножаването на някои видове и 
+                възможности за възникване на резистентни популации плевели, е редуване на продукти 
+                за растителна защита с различен механизъм и спектър на действие.
+            </p>
+            <p class="underline as" style="margin: 0; padding: 0">Преди засаждане:</p>
+            <p class="as">
+                Срещу едногодишни житни, в т.ч. балур от семе - ЕПТЦ+антидот (с инкорпориране)
+            </p>
+            <p class="underline as" style="margin: 0; padding: 0">Преди поникване:</p>
+            <p class="as">
+                Срещу едногодишни широколистни - <span class="active-substance">линурон прометрин, тербутрин, флурохлоридон, метрибузин</span>.
+            </p>
+            <p class="as">
+                Срещу едногодишни житни - <span class="active-substance">алахлор, ацетохлор</span>.
+            </p>
+            <p class="as">
+                Срещу едногодишни житни и някои широколистни - 
+                <span class="active-substance">диметенамид, изоксафлутол, оксадиазон, s-метолахлор, оксадиаржил, пендиметалин, пропизохлор</span>.
+            </p>
+            <p class="underline as" style="margin: 0; padding: 0">През вегетацията:</p>
+            <p>
+                Срещу едногодишни широколистни плевели - <span class="active-substance">метрибузин</span> (не при всички сортове картофи).
+            </p>
+            <p>
+                Срещу едногодишни и многогодишни житни плевели - 
+                <span class="active-substance">квизалофоп-П-етил, клетдим, римсулфурон, 
+                феноксапроп-П-етил, флуазифоп-П-бутил, халоксифоп-П-метил</span>. 
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            <ul class="products">
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/weeds/Echinochloa_crus-galli_2006.08.27_15.00.29-p8270054.jpg" 
+                    data-title="Кокоше просо">
+                        <img src="../../../../../assets/weeds/Echinochloa_crus-galli_2006.08.27_15.00.29-p8270054_thumb.jpg" 
+                        alt="Echinochloa crus-galli" title="Кокоше просо"/>
+                        <span class="title_thumb">Кокоше просо</span>
+                    </a>
+                </li>
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/weeds/Conium_maculatum.jpg" 
+                    data-title="Бучиниш">
+                        <img src="../../../../../assets/weeds/Conium_maculatum_thumb.jpg" 
+                        alt="Conium_maculatum" title="Бучиниш"/>
+                        <span class="title_thumb">Бучиниш</span>
+                    </a>
+                </li>
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/weeds/Sorghum_halepensis1.jpg" 
+                    data-title="Балур">
+                        <img src="../../../../../assets/weeds/Sorghum_halepensis1_thumb.jpg" 
+                        alt="Sorghum halepensis" title="Балур"/>
+                        <span class="title_thumb">Балур</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div> -->
+    <!-- КРАЙ Плевели -->
+      

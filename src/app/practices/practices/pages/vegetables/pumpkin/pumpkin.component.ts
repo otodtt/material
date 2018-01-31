@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'prz-pumpkin',
-  templateUrl: './pumpkin.component.html',
-  styleUrls: ['./pumpkin.component.scss']
+    templateUrl: './pumpkin.component.html',
+    styleUrls: ['../../pages.scss', '../../../shared/dialog/dialog.component.scss']
 })
 export class PumpkinComponent implements OnInit {
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }

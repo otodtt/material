@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'prz-leafy',
   templateUrl: './leafy.component.html',
-  styleUrls: ['./leafy.component.scss']
+  styleUrls: ['../../pages.scss', '../../../shared/dialog/dialog.component.scss']
 })
 export class LeafyComponent implements OnInit {
 

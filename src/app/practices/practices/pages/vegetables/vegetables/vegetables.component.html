@@ -1,8 +1,8 @@
-<!-- <div class="row text-center" id="prz-loader" *ngIf="!isLoaded">
+<div class="row text-center" id="prz-loader" *ngIf="!isLoaded">
     <mat-spinner aria-label="Спинър до зареждането на страницата"></mat-spinner>
-</div> -->
-<!-- *ngIf="isLoaded" -->
-<div  id="wrap_lmenu_txt">
+</div>
+
+<div *ngIf="isLoaded" id="wrap_lmenu_txt">
     <div class="text-center name-header">
         <h2 class="customfont">ЗЕЛЕНЧУЦИ НА ОТКРИТО</h2>
     </div>
@@ -123,7 +123,7 @@
     <div class="aa-title" id="pest_menu"></div>
     <div class="row">
         <div id="pest_menu_links">
-            <h3 >Основните вредители при тютюна са:</h3>
+            <h3 >Основни вредители при домати, пипер, патладжан  са:</h3>
             <ul id="menu_a">
                 <li>
                     <a class="back_link" przAnchorTo target="#phytophtora-infestans" title="към текста">
@@ -324,7 +324,7 @@
     </div>
     <!-- КРАЙ Избор на Вредител -->
 
-    <!-- <div *ngFor="let practice of practices">
+    <div *ngFor="let practice of practices">
         <div class="aa-title" id="{{practice.linkId}}"></div>
         <div class="row" >
             <div class="pest-description-container text-indent" [innerHTML]="practice.text  | safeHtml"></div>
@@ -360,10 +360,100 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
+
+    <!-- Автори на снимки -->
+    <br><br>
+    <div class="row">
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Използвани са снимки от:
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="panel-body my_panel-body">
+                    <p>
+                        <span class="bold">Снимка 1:</span>
+                        <span>By Goldlocki - This is of my own making, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=1661841</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 2:</span>
+                        <span>By Clemson University - USDA Cooperative Extension Slide Series - http://www.forestryimages.org/browse/detail.cfm?imgnum=1233052, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=17504911</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 3:</span>
+                        <span>By Netty4299 - Took a picture, CC0, https://en.wikipedia.org/w/index.php?curid=37875289</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 4:</span>
+                        <span>Par William M. Brown Jr., Bugwood.org — http://www.ipmimages.org/browse/detail.cfm?imgnum=5357042, CC BY 3.0 us, https://commons.wikimedia.org/w/index.php?curid=16509895</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 5:</span>
+                        <span>http://gardener.wikia.com/wiki/Tomato_spotted_wilt_virus</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 6:</span>
+                        <span>https://alchetron.com/Tomato-mosaic-virus</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 7:</span>
+                        <span>De Image: UF/IFAS Pest Alert Web site/Pamela Roberts - Thriving Community of Pathogenic Plant Viruses Found in the Human Gut. PLoS Biology Vol. 4/1/2006, e15 https://dx.doi.org/10.1371/journal.pbio.0040015, CC BY 2.5, https://commons.wikimedia.org/w/index.php?curid=1433618</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 8:</span>
+                        <span>By Amy Carmichael, Queensland University of Technology - This image is found here at PaDIL, a source of images designed for Biosecurity and Biodiversity.This tag does not indicate the copyright status of the attached work. A normal copyright tag is still required. See Commons:Licensing for more information.PaDIL, CC BY 3.0 au, https://commons.wikimedia.org/w/index.php?curid=15352877</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 9:</span>
+                        <span>By Michael F. Schönitzer, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=5142870</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 10:</span>
+                        <span>By ©entomart, Attribution, https://commons.wikimedia.org/w/index.php?curid=866190</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 11:</span>
+                        <span>By Keith Weller - Transferred from en.wikipedia to Commons.This image was released by the Agricultural Research Service, the research agency of the United States Department of Agriculture, with the ID k7834-3 (next).This tag does not indicate the copyright status of the attached work. A normal copyright tag is still required. See Commons:Licensing for more information.English | français | македонски | +/−, Public Domain, https://commons.wikimedia.org/w/index.php?curid=1876649</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 12:</span>
+                        <span>https://wiki.bugwood.org/File:Click_beetle_larva.jpg</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 13:</span>
+                        <span>By Frank Peairs, Colorado State University, Bugwood.org - This image is Image Number 5364132 at Invasive.org, a source for images of invasive and exotic species operated by The Bugwood Network at the University of Georgia and the USDA APHIS Plant Protection and Quarantine program., CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=11272182</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 14:</span>
+                        <span>By Jose Luis Cernadas Iglesias - originally posted to Flickr as 336-Menage a trois, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=9493442</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 15:</span>
+                        <span>By No machine-readable author provided. Bogdan assumed (based on copyright claims). - No machine-readable source provided. Own work assumed (based on copyright claims)., CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=209764</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 16:</span>
+                        <span>By Rasbak - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=998959</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 17:</span>
+                        <span>By Bidgee - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=9792633</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 18:</span>
+                        <span >By 4028mdk09 - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=11746444</span>
+                    </p>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+    <!-- КРАЙ Автори на снимки -->
+</div>
 
     <!-- Картофена мана по доматите -->
-    <div class="aa-title" id="phytophtora-infestans"></div>
+    <!-- <div class="aa-title" id="phytophtora-infestans"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Картофена мана по доматите – <span class="latin_name">Phytophtora infestans</span></h3>
@@ -408,11 +498,11 @@
                 </li>
             </ul> 
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Бактерийно струпясване -->
 
     <!-- Вертицилийно увяхване -->
-    <div class="aa-title" id="verticillium-dahliae"></div>
+    <!-- <div class="aa-title" id="verticillium-dahliae"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Вертицилийно увяхване – <span class="latin_name">Verticillium dahliae</span></h3>
@@ -439,11 +529,11 @@
         <div class="pest-image-container col-md-2 img-thumbnail" >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Вертицилийно увяхване -->
 
     <!-- Кафяви листни петна по доматите  -->
-    <div class="aa-title" id="alternaria-solani"></div>
+    <!-- <div class="aa-title" id="alternaria-solani"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Кафяви листни петна по доматите – <span class="latin_name">Alternaria solani</span></h3>
@@ -481,11 +571,11 @@
                 </li>
             </ul> 
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Кафяви листни петна по доматите  -->
 
     <!-- Фитофторни коренови гниения -->
-    <div class="aa-title" id="phytophthora-capsici"></div>
+    <!-- <div class="aa-title" id="phytophthora-capsici"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Фитофторни коренови гниения - <span class="latin_name">Phytophthora capsici, Phytophthora parasitica</span></h3>
@@ -526,11 +616,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Фитофторни коренови гниения -->
 
     <!-- Сечене по разсада -->
-    <div class="aa-title" id="pythium-aphanidermatum"></div>
+    <!-- <div class="aa-title" id="pythium-aphanidermatum"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >
@@ -565,22 +655,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
-                    <a  class="back_link_bottom">
-                        виж друг неприятел
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Сечене по разсада  -->
 
     <!-- Коренови гниения -->
-    <div class="aa-title" id="sclerotinia-sclerotiorum"></div>
+    <!-- <div class="aa-title" id="sclerotinia-sclerotiorum"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >
@@ -638,22 +717,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
-                    <a  class="back_link_bottom">
-                        виж друг неприятел
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Коренови гниения -->
 
     <!-- Брашнеста мана -->
-    <div class="aa-title" id="leveillula-taurica"></div>
+    <!-- <div class="aa-title" id="leveillula-taurica"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Брашнеста мана - <span class="latin_name">Leveillula taurica; Sphaerotheca fuliginea</span></h3>
@@ -678,22 +746,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
-                    <a  class="back_link_bottom">
-                        виж друг неприятел
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Брашнеста мана -->
 
     <!-- Сиво гниене -->
-    <div class="aa-title" id="botrytis-cinerea"></div>
+    <!-- <div class="aa-title" id="botrytis-cinerea"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Сиво гниене - <span class="latin_name">Botrytis cinerea</span></h3>
@@ -720,22 +777,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
-                    <a  class="back_link_bottom">
-                        виж друг неприятел
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Сиво гниене -->
 
     <!-- Антракноза -->
-    <div class="aa-title" id="colletotrichum-coccodes"></div>
+    <!-- <div class="aa-title" id="colletotrichum-coccodes"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Антракноза - <span class="latin_name">Colletotrichum coccodes</span></h3>
@@ -761,22 +807,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
-                    <a  class="back_link_bottom">
-                        виж друг неприятел
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Антракноза -->
 
     <!-- Черно бактерийно струпясване -->
-    <div class="aa-title" id="pseudomonas-syringae"></div>
+    <!-- <div class="aa-title" id="pseudomonas-syringae"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Черно бактерийно струпясване - <span class="latin_name">Pseudomonas syringae pv. Tomato</span></h3>
@@ -857,11 +892,11 @@
                 </li>
             </ul> 
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Черно бактерийно струпясване -->
 
     <!-- viruses -->
-    <div class="aa-title" id="viruses"></div>
+    <!-- <div class="aa-title" id="viruses"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Вирус на краставичната мозайка - <span class="latin_name">Cucumber mosaic cucumovirus (CMV)</span></h3>
@@ -997,11 +1032,11 @@
                 </li>
             </ul> 
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ viruses -->
 
     <!-- Листни въшки -->
-    <div class="aa-title" id="aphis-gossypii"></div>
+    <!-- <div class="aa-title" id="aphis-gossypii"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Листни въшки - <span class="latin_name">Aphis gossypii, Myzus persicae, Marosiphum euphorbiae</span></h3>
@@ -1108,11 +1143,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Листни въшки -->
 
     <!-- Нощенки -->
-    <div class="aa-title" id="cutworms"></div>
+    <!-- <div class="aa-title" id="cutworms"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Нощенки - <span class="latin_name">Cutworms, Helycoverpa armigera, Mamestra brassicae, M. oleracea</span></h3>
@@ -1256,11 +1291,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ  -->
 
     <!-- Цикади -->
-    <div class="aa-title" id="hialestes-obsoletus"></div>
+    <!-- <div class="aa-title" id="hialestes-obsoletus"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Цикади - <span class="latin_name">Hialestes obsoletus</span></h3>
@@ -1378,11 +1413,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Цикади -->
 
     <!-- Царевичен пробивач -->
-    <div class="aa-title" id="ostrinia-nubilalis"></div>
+    <!-- <div class="aa-title" id="ostrinia-nubilalis"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Царевичен пробивач - <span class="latin_name">Ostrinia nubilalis</span></h3>
@@ -1464,11 +1499,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Царевичен пробивач -->
 
     <!-- Телени червеи -->
-    <div class="aa-title" id="elateridae"></div>
+    <!-- <div class="aa-title" id="elateridae"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Телени червеи</h3>
@@ -1549,11 +1584,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Телени червеи -->
 
     <!-- Акари -->
-    <div class="aa-title" id="tetranychus-urticae"></div>
+    <!-- <div class="aa-title" id="tetranychus-urticae"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Акари</h3>
@@ -1599,7 +1634,7 @@
             </p>
             <h4 class="my_class_h4 as">Активни вещества</h4>
             <p class="as">
-                    За третиране: <span class="active-substance">абамектин, амитраз, бифнтрин, клофентезин, фенпропатрин, флуфеноксурон.</span>
+                За третиране: <span class="active-substance">абамектин, амитраз, бифнтрин, клофентезин, фенпропатрин, флуфеноксурон.</span>
             </p>
         </div>
         <div class="pest-image-container " >
@@ -1684,11 +1719,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
-    <!-- КРАЙ  -->
+    </div> -->
+    <!-- КРАЙ Акари -->
 
     <!-- Трипси -->
-    <div class="aa-title" id="thrips-tabaci"></div>
+    <!-- <div class="aa-title" id="thrips-tabaci"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Трипси</h3>
@@ -1825,11 +1860,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Трипси -->
 
     <!-- Колорадски бръмбар -->
-    <div class="aa-title" id="leptinotarsa-decemlineata"></div>
+    <!-- <div class="aa-title" id="leptinotarsa-decemlineata"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Колорадски бръмбар - <span class="latin_name">Leptinotarsa decemlineata</span></h3>
@@ -1900,11 +1935,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Колорадски бръмбар -->
 
     <!-- Оранжерийна белокрилка -->
-    <div class="aa-title" id="trialeurodes-vaporariorum"></div>
+    <!-- <div class="aa-title" id="trialeurodes-vaporariorum"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Оранжерийна белокрилка - <span class="latin_name">Trialeurodes vaporariorum</span></h3>
@@ -1970,11 +2005,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Оранжерийна белокрилка -->
 
     <!-- Галови нематоди -->
-    <div class="aa-title" id="meloidogyne"></div>
+    <!-- <div class="aa-title" id="meloidogyne"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Галови нематоди</h3>
@@ -2014,22 +2049,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
-                    <a  class="back_link_bottom">
-                        виж друг неприятел
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Галови нематоди -->
 
     <!-- Голи охлюви -->
-    <div class="aa-title" id="limacidae"></div>
+    <!-- <div class="aa-title" id="limacidae"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Голи охлюви – <span class="latin_name">Limacidae</span></h3>
@@ -2056,22 +2080,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
-                    <a  class="back_link_bottom">
-                        виж друг неприятел
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Голи охлюви -->
 
     <!-- Попово прасе -->
-    <div class="aa-title" id="grylotalpa-grylotalpa"></div>
+    <!-- <div class="aa-title" id="grylotalpa-grylotalpa"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Попово прасе - <span class="latin_name">Grylotalpa grylotalpa</span></h3>
@@ -2103,22 +2116,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
-                    <a  class="back_link_bottom">
-                        виж друг неприятел
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Попово прасе -->
 
     <!-- Плевели -->
-    <div class="aa-title" id="weed"></div>
+    <!-- <div class="aa-title" id="weed"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Плевели</h3>
@@ -2426,145 +2428,6 @@
                 </li>
             </ul>
         </div>
-    </div>
-    <!-- КРАЙ Плевели -->
-
-    <!--  -->
-    <!-- <div class="aa-title" id=""></div>
-    <div class="row" >
-        <div class="pest-description-container text-indent">
-            <h3 > – <span class="latin_name"></span></h3>
-            <h4 class="my_class_h4">Описание на неприятеля</h4>
-            <p>
-                
-            </p>
-            <h4 class="my_class_h4">Стратегия за борба</h4>
-            <p>
-                
-            </p>
-            <p>
-                
-            </p>
-            <p>
-                
-            </p>
-            <h4 class="my_class_h4 as">Активни вещества</h4>
-            <p class="as">
-                <span class="active-substance"></span>
-            </p>
-            <p>
-                
-            </p>
-        </div>
-        <div class="pest-image-container " >
-            
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="panel panel-warning panel-back-link text-center">
-                <div class="panel-heading panel-heading-back-link">
-                    <a  class="back_link_bottom">
-                        виж друг неприятел
-                    </a>
-                </div>
-            </div>
-        </div>
     </div> -->
-    <!-- КРАЙ  -->
-
-    <!-- Автори на снимки -->
-    <br><br>
-    <div class="row">
-        <mat-accordion>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        Използвани са снимки от:
-                    </mat-panel-title>
-                </mat-expansion-panel-header>
-                <div class="panel-body my_panel-body">
-                    <p>
-                        <span class="bold">Снимка 1:</span>
-                        <span>By Goldlocki - This is of my own making, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=1661841</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 2:</span>
-                        <span>By Clemson University - USDA Cooperative Extension Slide Series - http://www.forestryimages.org/browse/detail.cfm?imgnum=1233052, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=17504911</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 3:</span>
-                        <span>By Netty4299 - Took a picture, CC0, https://en.wikipedia.org/w/index.php?curid=37875289</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 4:</span>
-                        <span>Par William M. Brown Jr., Bugwood.org — http://www.ipmimages.org/browse/detail.cfm?imgnum=5357042, CC BY 3.0 us, https://commons.wikimedia.org/w/index.php?curid=16509895</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 5:</span>
-                        <span>http://gardener.wikia.com/wiki/Tomato_spotted_wilt_virus</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 6:</span>
-                        <span>https://alchetron.com/Tomato-mosaic-virus</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 7:</span>
-                        <span>De Image: UF/IFAS Pest Alert Web site/Pamela Roberts - Thriving Community of Pathogenic Plant Viruses Found in the Human Gut. PLoS Biology Vol. 4/1/2006, e15 https://dx.doi.org/10.1371/journal.pbio.0040015, CC BY 2.5, https://commons.wikimedia.org/w/index.php?curid=1433618</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 8:</span>
-                        <span>By Amy Carmichael, Queensland University of Technology - This image is found here at PaDIL, a source of images designed for Biosecurity and Biodiversity.This tag does not indicate the copyright status of the attached work. A normal copyright tag is still required. See Commons:Licensing for more information.PaDIL, CC BY 3.0 au, https://commons.wikimedia.org/w/index.php?curid=15352877</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 9:</span>
-                        <span>By Michael F. Schönitzer, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=5142870</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 10:</span>
-                        <span>By ©entomart, Attribution, https://commons.wikimedia.org/w/index.php?curid=866190</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 11:</span>
-                        <span>By Keith Weller - Transferred from en.wikipedia to Commons.This image was released by the Agricultural Research Service, the research agency of the United States Department of Agriculture, with the ID k7834-3 (next).This tag does not indicate the copyright status of the attached work. A normal copyright tag is still required. See Commons:Licensing for more information.English | français | македонски | +/−, Public Domain, https://commons.wikimedia.org/w/index.php?curid=1876649</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 12:</span>
-                        <span>https://wiki.bugwood.org/File:Click_beetle_larva.jpg</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 13:</span>
-                        <span>By Frank Peairs, Colorado State University, Bugwood.org - This image is Image Number 5364132 at Invasive.org, a source for images of invasive and exotic species operated by The Bugwood Network at the University of Georgia and the USDA APHIS Plant Protection and Quarantine program., CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=11272182</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 14:</span>
-                        <span>By Jose Luis Cernadas Iglesias - originally posted to Flickr as 336-Menage a trois, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=9493442</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 15:</span>
-                        <span>By No machine-readable author provided. Bogdan assumed (based on copyright claims). - No machine-readable source provided. Own work assumed (based on copyright claims)., CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=209764</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 16:</span>
-                        <span>By Rasbak - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=998959</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 17:</span>
-                        <span>By Bidgee - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=9792633</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 18:</span>
-                        <span >By 4028mdk09 - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=11746444</span>
-                    </p>
-                </div>
-            </mat-expansion-panel>
-        </mat-accordion>
-    </div>
-    <!-- КРАЙ Автори на снимки -->
-</div>
-
-    
-
-
-
+    <!-- КРАЙ Плевели -->
     

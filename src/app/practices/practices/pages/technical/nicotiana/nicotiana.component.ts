@@ -55,5 +55,4 @@ export class NicotianaComponent implements OnInit, OnDestroy {
           this.subscription.unsubscribe();
         }
     }
-
 }

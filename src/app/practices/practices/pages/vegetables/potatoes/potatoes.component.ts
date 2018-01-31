@@ -1,15 +1,59 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { MatDialog } from '@angular/material';
+import { Subscription } from 'rxjs/Subscription';
+
+import { SeoService } from '../../../../../common/services/SeoService';
+import { ChangeBreadcrumbService } from '../../../../../common/services/changeBreadcrumb.service';
+
+import { DialogComponent } from '../../../shared/dialog/dialog.component';
+
+import { Practice } from '../../../shared/models/practice.model';
+import { PracticesService } from '../../../shared/services/practices.services';
 
 @Component({
-  selector: 'prz-potatoes',
-  templateUrl: './potatoes.component.html',
-  styleUrls: ['./potatoes.component.scss']
+    templateUrl: './potatoes.component.html',
+    styleUrls: ['../../pages.scss']
 })
-export class PotatoesComponent implements OnInit {
+export class PotatoesComponent implements OnInit, OnDestroy {
 
-  constructor() { }
+    private title = 'ДРЗП - Картофи';
+    private description =   'Добра Растителнозащитна Пракатика при картофи. Борба с болести, неприятели и плевели при картофите.';
+    private keywords = 'картофи болести, неприятели, плевели, ПРЗ, ПИВ';
 
-  ngOnInit() {
-  }
+    breadcrumbName = 'Картофи';
 
+    isLoaded = false;
+    practices: Practice[] = [];
+    subscription: Subscription;
+
+    constructor(
+        private seoService: SeoService,
+        private changeBreadcrumbService: ChangeBreadcrumbService,
+        public dialog: MatDialog,
+        private practicesService: PracticesService
+    ) {
+        this.seoService.addTitle(this.title);
+        this.seoService.setMeta(this.description, this.keywords);
+    }
+
+    ngOnInit() {
+        this.changeBreadcrumbService.emitName(this.breadcrumbName);
+        this.subscription = this.practicesService.getPractices('potatoes')
+            .subscribe((practices: Practice[]) => {
+                this.practices = practices;
+                this.isLoaded = true;
+            });
+    }
+
+    openDialog(table: string) {
+        this.dialog.open(DialogComponent, {
+            data: { table: table}
+        });
+    }
+
+    ngOnDestroy() {
+        if (this.subscription) {
+          this.subscription.unsubscribe();
+        }
+    }
 }

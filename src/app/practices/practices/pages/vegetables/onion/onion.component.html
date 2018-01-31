@@ -1,3 +1,1404 @@
-<p>
-  onion works!
-</p>
+<div class="row text-center" id="prz-loader" *ngIf="!isLoaded">
+    <mat-spinner aria-label="Спинър до зареждането на страницата"></mat-spinner>
+</div>
+
+<div *ngIf="isLoaded" id="wrap_lmenu_txt">
+    <div class="text-center name-header">
+        <h2 class="customfont">ЗЕЛЕНЧУЦИ НА ОТКРИТО</h2>
+    </div>
+    <div class="row-top">
+        <div class="text-center" id="content-logo">
+            <h4 id="forest">МИНИСТЕРСТВО НА ЗЕМЕДЕЛИЕТО И ГОРИТЕ</h4>
+            <h4 id="plant-protect">НАЦИОНАЛНА СЛУЖБА ЗА РАСТИТЕЛНА ЗАЩИТА</h4>
+        </div>
+    </div>
+    <div class="row text-right">
+        <img id="stamp" src="../../../../../assets/img/my_images/stamp_director.png" alt="печат и подпис на директор" />
+    </div>
+    <div class="row text-center">
+        <h1 >ДОБРА РАСТИТЕЛНОЗАЩИТНА ПРАКТИКА ПРИ ЛУКОВИ КУЛТУРИ</h1>
+    </div>
+    <div class="row text-right">
+        <p class="number-eppo">№ на НСРЗ ДРЗП 2/045(1)</p>
+        <p class="number-eppo">№ на БРРО РР 2/4(2)</p>
+    </div>
+    <div class="row">
+        <div id="authors-wrap">
+            <p ><span class="bold authors">Авторски колектив :</span><br/>
+                ст.н.с.II ст. д-р Никола Николов<br/>
+                ст.н.с. I ст. д.с.н. Невена Богацевска<br/>
+                ст.н.с.II ст. д-р Димитринка Христова<br/>
+                ст.н.с.II ст. д-р Оля Караджова<br/>
+                ст.н.с.II ст. д-р Василка Николова<br/>
+                н.с.I ст. д-р Ваньо Иванов<br/>
+                д-р Петър Николов - НСРЗ<br/>
+                Екатерина Томева - НСРЗ<br/>
+            </p>
+        </div>
+    </div>
+    <div class="row text-center">
+        <span class="year bold">СОФИЯ 2006 г.</span>
+    </div>
+    <div class="row text-center">
+        <h2 >ДОБРА РАСТИТЕЛНОЗАЩИТНА ПРАКТИКА ПРИ ЛУКОВИ КУЛТУРИ*</h2>
+    </div>
+
+    <!--Специфична сфера на действие-->
+    <div class="row">
+        <div class="text-indent">
+            <h3 >Специфична сфера на действие</h3>
+            <p>Този стандарт очертава принципите на Добрата растителнозащитна практика при лукови култури (чесън, лук, праз)</p>
+            <h3 >Специфично одобрение и поправка</h3>
+            <p >Първоначално одобрена през септември 2005 г. от НСРЗ</p>
+            <br/>
+
+            <p >
+                Ръководството за добрата растителнозащитна практика при луковите култури представлява част 
+                от ЕСОРЗ програмата за всички основни култури в ЕСОРЗ-региона. То е съобразено с 
+                ЕСОРЗ-стандартите РР 2/1(2) - общи Принципи за добра растителнозащитна практика. 
+                Ръководството съдържа методи за борба с вредителите при тези култури. Ръководството не 
+                обхваща лукови култури, предназначени за семепроизводство или за посадъчен материал. 
+            </p>
+            <p >
+                Луковите култури се отглеждат чрез семена (лук, праз), с разсад (праз) и вегетативно чрез 
+                арпаджик и скилидки (лук и чесън). Според сроковете и начина на прибиране луковите култури 
+                могат да бъдат разделени допълнително на лук за зелено и на лук за глави. У нас основно 
+                се отглежда лук и чесън за глави, а в по-малки количества праз, лук и чесън за зелено. 
+                Основа за ДРЗП е спазване на подходящо сеитбообращение и добра хигиена, в т.ч. 
+                унищожаване на растителните остатъци. Третирането на луковите култури се извършва в 
+                зависимост от начина на засаждане: обеззаразяване на семената или луковиците, 
+                третиране на разсада преди засаждане на постоянно място или третиране на растенията. 
+                Третирането на посадъчния материал е за предпочитане. Насажденията се обследват през 
+                вегетацията за нападение от вредители по листата и луковиците. Третира се, когато степента 
+                на нападение е над допустимите прагове на икономическа вредност. Има разработени прагове 
+                за вредност за някои вредители по луковите култури и ДРЗП изисква те да бъдат прилагани. 
+                Познати са и сортове с известна степен на устойчивост спрямо някои вредители. Понастоящем 
+                няма подходящи средства за биологична борба срещу вредители по луковите култури.
+            </p>
+        </div>
+    </div>
+    <!--КРАЙ Специфична сфера на действие-->
+
+    <!-- Изтегляне на Приложения -->
+    <div class="row">
+        <div class="my_addendum text-indent">
+            <span class="span_addendum">
+                <a  class="href_addendum" 
+                    rel="noopener noreferrer" target="_blank"
+                    href="../../../../../assets/practices/5-zelenchuci_otkrito-prilojenie.pdf"
+                >
+                    * Виж приложение 4
+                </a>
+            </span>
+        </div>
+    </div>
+    <!-- КРАЙ Изтегляне на Приложения -->
+    
+    <!-- Избор на Вредител -->
+    <div class="aa-title" id="pest_menu"></div>
+    <div class="row">
+        <div id="pest_menu_links">
+            <h3 >Основни вредители при луковите култури са: </h3>
+            <ul id="menu_a">
+                <li>
+                    <a class="back_link" przAnchorTo target="#peronospora-destructor" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Мана по лука - <span class="latin_name">Peronospora destructor</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#sclerotium-cepivorum" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Бяло гниене по чесън, лук и праз - <span class="latin_name">Sclerotium cepivorum</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#botrytis-allii" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Шийно гниене по лука - <span class="latin_name">Botrytis allii, Botrytis byssoidea, Botrytis squamosa</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#botrytis-porri" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Сиво гниене по чесъна - <span class="latin_name">Botrytis porri</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#puccinia-alli" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Ръжди по лук и праз - <span class="latin_name">Puccinia alli, Puccinia porri</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#burkholderia-gladiol" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Сипкаво меко гниене - <span class="latin_name">Burkholderia gladioli pv. Allicolas</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#viruses" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Жълто вджуджаване по лука - <span class="latin_name">Onion yellow dwarf potyvirus-OYDV</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#viruses" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Доматена бронзовост по лука - <span class="latin_name">Tomato spotted wilt tospovirus - TSWV</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#delia-antiqua" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Лукова муха - <span class="latin_name">Delia antiqua</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#suilia-lurida" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Чеснова муха - <span class="latin_name">Suilia lurida</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#napomyza-gymnostoma" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Минираща муха по луковите култури - <span class="latin_name">Napomyza gymnostoma</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#thrips-tabaci" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Тютюнев трипс - <span class="latin_name">Thrips tabaci</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#cutworms" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Нощенки - <span class="latin_name">Cutworms, Helycoverpa armigera, Mamestra brassicae, M.oleracea), Autographa gamma</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#ditylenchus-allii" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Стъблена (лукова) нематода - <span class="latin_name">Ditylenchus allii (dipsaci)</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#galeruca-tanaceti" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Голям луков листояд - <span class="latin_name">Galeruca tanaceti</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#acrolepia-assectella" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Луков молец - <span class="latin_name">Acrolepia assectella</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#ceuthorrynchus" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Луков скритохоботник - <span class="latin_name">Ceuthorrynchus jakovlev</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#molluska" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Голи охлюви - <span class="latin_name">Molluska</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#grylotalpa-grylotalpa" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Попово прасе - <span class="latin_name">Grylotalpa grylotalpa</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#weed" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Плевели
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- КРАЙ Избор на Вредител -->
+
+    <div *ngFor="let practice of practices">
+        <div class="aa-title" id="{{practice.linkId}}"></div>
+        <div class="row" >
+            <div class="pest-description-container text-indent" [innerHTML]="practice.text  | safeHtml"></div>
+            <div class="pest-image-container" *ngIf="practice.images?.length > 0">
+                <ul class="products">
+                    <li *ngFor="let image of practice.images">
+                        <a data-lightbox="image" href="{{image.imgPath}}" 
+                            data-title="{{image.imgTitle}}">
+                            <img threshold="200" lazy-load="{{image.thumbPath}}" 
+                                alt="{{image.thumbAlt}}" title="{{image.thumbTitle}}"/>
+                                <span class="title_thumb">{{image.bgName}}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row-back">
+            <div class="col-md-6" *ngIf="practice.tablePiv !== null">
+                <div class="panel-success text-center" >
+                    <div class="panel-heading">
+                        <button mat-button class="piv-button" (click)="openDialog(practice.tablePiv)">
+                            <span class="full-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                            <span class="small-piv">ВИЖ ПИВ</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel-warning text-center">
+                    <div class="panel-heading ">
+                        <a mat-button class="back_link_bottom" przAnchorTo target="#pest_menu" title="към всички неприятели"> виж друг неприятел</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Автори на снимки -->
+    <br><br>
+    <div class="row">
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Използвани са снимки от:
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="panel-body my_panel-body">
+                    <p>
+                        <span class="bold">Снимка 1:</span>
+                        <span>By Howard F. Schwartz, Colorado State University, Bugwood.org - http://www.ipmimages.org/browse/detail.cfm?imgnum=5364057, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=10520404</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 2:</span>
+                        <span>Av Rasbak - Eget arbete, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=358054</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 3:</span>
+                        <span>By Rasbak at Dutch Wikipedia, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=3219061</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 4:</span>
+                        <span>By Udo Schmidt - Flickr: Galeruca tanaceti (Linné, 1758), CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=20014224</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 5:</span>
+                        <span>By No machine-readable author provided. Bogdan assumed (based on copyright claims). - No machine-readable source provided. Own work assumed (based on copyright claims)., CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=209764</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 6:</span>
+                        <span>By Rasbak - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=998959</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 7:</span>
+                        <span>By Bidgee - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=9792633</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 8:</span>
+                        <span >By 4028mdk09 - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=11746444</span>
+                    </p>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+    <!-- КРАЙ Автори на снимки -->
+</div>
+
+    <!-- Мана по лука -->
+    <!-- <div class="aa-title" id="peronospora-destructor"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Мана по лука - <span class="latin_name">Peronospora destructor</span></h3>
+            <h4 class="my_class_h4">Описание на болестта</h4>
+            <p>
+                От заразени луковици израстват растения с депресиран растеж и с дъговидно извити листа, 
+                които при влажно време се покриват с виолетов налеп. През вегетацията по листата се 
+                появяват хлоротични до светлозелени, елипсовидни петна, които при влажно време се покриват 
+                със спороносен налеп. Гъбата зимува като ооспори в почвата и мицел в заразените луковици. 
+                Спорите прорастват при наличие на капка вода и температура 10-12°С.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Унищожаване на растителните остатъци. Прилагане на четиригодишно сеитбообръщение. 
+                Производство на здрав посадъчен материал. Обеззаразяване на луковиците, използвани за 
+                посадъчен материал. Спазване на оптимални торови норми и гъстота на посева. Прилагане на 
+                гравитачно напояване. Засаждане на устойчиви сортове. Борбата с нея се извежда по сигнали 
+                от регионалните служби за растителна защита. В районите, където болеста се появява редовно, 
+                се извършват предпазни пръскания през 10-14 дни. След откриване на огнища на заразяване 
+                третиранията с фунгицид да се извършват всяка седмица. В районите, където нападението е 
+                рядко, пръсканията трябва да започнат при откриване на първи симптоми на болестта. В 
+                периоди със сухо време третиранията могат да се извършват много рядко. Изваждането на 
+                лука трябва да става в сухо и горещо време и той задължително трябва да се просушава на 
+                слънце за 10-15 дни.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                <span class="active-substance">Меден оксихлорид, манкоцеб, металаксил, диметоморф, 
+                    алуминиев фозетил, фенамидон, цинеб, мефеноксам.</span>
+            </p>
+            <p class="as">
+                Потапяне на луковичките: <span class="active-substance">металаксил</span>.
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            <ul class="products">
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/diseases/Peronospora_destructor.jpg"  
+                    data-title="Мана по лука - Peronospora destructor">
+                    <img  threshold="200" lazy-load="../../../../../assets/diseases/Peronospora_destructor_thumb.jpg" 
+                        alt="Peronospora destructor" title="Мана по лука"/>
+                        <span class="title_thumb">Мана по лука</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div> -->
+    <!-- КРАЙ Мана по лука -->
+
+    <!-- Бяло гниене -->
+    <!-- <div class="aa-title" id="sclerotium-cepivorum"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Бяло гниене по чесън, лук и праз - <span class="latin_name">Sclerotium cepivorum</span></h3>
+            <h4 class="my_class_h4">Описание на болестта</h4>
+            <p>
+                Бялото гниене се явява на хармани на полето. По младите растения се наблюдава жълтеене и 
+                увяхване на листата, разпространяващо се от старите към младите листа. Луковиците загниват 
+                воднисто и се покриват с бял памуковиден налеп с черни склероции. След формиране на 
+                луковиците при чесъна се констатират подобни симптоми по листата, съчетани с гниене на 
+                корените и същинското стъбло. Болните растения се изскубват лесно, като загнилите им 
+                части остават в почвата. Гъбата се запазва като склероции в почвата (до 10 години) и като 
+                мицел и склероции по заразените луковици. Благоприятните условия за патогена са: 
+                температура 17-20°С и почвена влага.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Дълбоко заораване на растителните остатъци. Прилагане на подходящо сеитбообръщение. 
+                Използване на здрав посадъчен материал. Луковичките или скилидите да бъдат обеззаразени с 
+                фунгициди. Склероциите на гъбата могат да се запазят до 10 години в почвата. Поради това 
+                ефективността на третирането на почвата с фунгицид е ниска.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                Няма регистрирани.
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div> -->
+    <!-- КРАЙ Бяло гниене -->
+
+    <!-- Склеротийно гниене -->
+    <!-- <div class="aa-title" id="botrytis-allii"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Склеротийно гниене по лука - <span class="latin_name">(Botrytis allii. Botrytis bvssoidea. Botrytis squamosa)</span></h3>
+            <h4 class="my_class_h4">Описание на болестта</h4>
+            <p>
+                На полето по листата се появяват елипсовидни, некротични напетнявания, причиняващи увяхване 
+                и загниване на връхните им части. Около шийката на луковиците при съхранение се установява 
+                меко гниене. Заразените тъкани са воднисти, ограничени от здравата тъкан с тесен венец. 
+                Инокулумът се запазва като мицел и склероции в луковиците и почвата. Оптималните условия 
+                за патогена на полето са висока относителна влажност - 100% и температура-27°С, а в 
+                хранилищата-температура 15-20°С, липса на добро проветрение и висока относителна влажност. 
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Унищожаване на растителните остатъци и болните луковици. Спазване на 3-4-годишно 
+                сеитбообръщение. Засаждане на здрав посадъчен материал или обеззаразяването му. Гъстотата 
+                на посева да е оптимална. Да се избягва обилното азотно торене. Да се ограничи напояването 
+                след достигане на оптималните размери на луковиците. Полски пръскания с фунгициди. 
+                Изваждането на лука да се извършва, когато луковиците са добре узрели в сухо и топло 
+                време. Хранилищата да се проветряват, да се поддържа температура 1-2° и ниска относителна 
+                влажност.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                Няма регистрирани.
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div> -->
+    <!-- КРАЙ Склеротийно гниене -->
+
+    <!-- Сиво гниене -->
+    <!-- <div class="aa-title" id="botrytis-porri"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Сиво гниене по чесъна - <span class="latin_name">Botrytis porri</span></h3>
+            <h4 class="my_class_h4">Описание на болестта</h4>
+            <p>
+                Гъбата напада праза и в редки случаи лука. Старите листа на растенията, израстнали от 
+                заразени скилиди, жълтеят и изсъхват. Основата на изсъхналите листа се покрива със сив 
+                налеп. Болните растения при изскубване се късат в областта на шийката. При съхранение по 
+                нападнатите скилиди се наблюдават вдлъбнати, жълтеникави петна, които при влага се покриват 
+                със сивкав налеп от мицела и спороношението на гъбата. Впоследствие скилидите загниват или 
+                се мумифицират. Гъбата презимува като склероции по растителните остатъци и почвата, като 
+                развитието и се благоприятства от високата почвена влажност.
+                    
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Унищожаване на растителните остатъци. Подходящо сеитбообръщение. Използване на здрав 
+                посадъчен материал или обеззаразяването му. Поддържане на висока агротехника. Добро 
+                просушаване на скилидите и съхраняването им при проветриви и хладни условия.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                Няма регистрирани.
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div> -->
+    <!-- КРАЙ Сиво гниене -->
+
+    <!-- Ръжди -->
+    <!-- <div class="aa-title" id="puccinia-alli"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Ръжди по лук и праз - <span class="latin_name">Puccinia alli, Puccinia porri</span></h3>
+            <h4 class="my_class_h4">Описание на болестта</h4>
+            <p>
+                Рано напролет по листата се образуват жълти петна с оранжево-до ръждивочервени купчинки от 
+                уредосорите на гъбата <span class="latin_name">Puccinia allii</span>. По листата се явяват 
+                наредени в линии ръждивочервени купчинки от уредосорите на гъбата 
+                <span class="latin_name">Puccinia porri</span>. Двата патогена презимуват като уредосори 
+                по многогодишните гостоприемници и като телиоспори по остатъците от болните растения. 
+                Развитието им се благоприятства от прохладното и влажно време. 
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Унищожаване на растителните остатъци. Дълбоко изораване на площта. Прилагане на подходящо 
+                сеитбообращение. Балансирано торене с минерални торове. Да се унищожават самосевките. 
+                При откриване на първи симптоми от болестта да започне третиране с фунгицид.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                Няма регистрирани.
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            <ul class="products">
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/diseases/Prei_winter_roest_(Puccinia_allii_on_Allium_porrum).jpg"  
+                    data-title="Ръжди по лук и праз - Puccinia alli">
+                    <img  threshold="200" lazy-load="../../../../../assets/diseases/Prei_winter_roest_(Puccinia_allii_on_Allium_porrum)_thumb.jpg" 
+                        alt="Puccinia alli" title="Ръжда по лука"/>
+                        <span class="title_thumb">Ръжда</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div> -->
+    <!-- КРАЙ Ръжди -->
+
+    <!-- Сипкаво гниене -->
+    <!-- <div class="aa-title" id="burkholderia-gladiol"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Сипкаво меко гниене - <span class="latin_name">Burkholderia gladioli pv. Allicolas</span></h3>
+            <h4 class="my_class_h4">Описание на болестта</h4>
+            <p>
+                Симптоми: луковиците са воднисти, кремави до кафяви, месестите люспи се разпадат, мацерират 
+                без мокро гниене. Болните луковици са меки и прорастват преждевременно.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Получаването на здрава продукция е затруднено от биологичната особеност на патогена: да се 
+                запазва в растителни остатъци, почва и в луковиците; да прониква в растителните тъкани 
+                през рани от механични повреди (градушки, силен вятър), от насекоми (трипс, ларви на 
+                нощенки), при силно нападение от мана. Системата за борба е комплексна: сеитбообръщение-5 г; 
+                използване на устойчиви сортове; борба с маната по лука и неприятелите; използване на 
+                здрав посевен материал.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                Няма регистрирани.
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div> -->
+    <!-- КРАЙ Сипкаво гниене -->
+
+    <!-- viruses -->
+    <!-- <div class="aa-title" id="viruses"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Жълто вджуджаване по лука - <span class="latin_name">Onion yellow dwarf potyvirus</span> (OYDV)</h3>
+            <h3 >Доматена бронзовост по лука - <span class="latin_name">Tomato spotted wilt tospovirus - TSWV</span></h3>
+            <h4 class="my_class_h4">Описание на болестта</h4>
+            <p>
+                Растенията от сем. Лукови страдат от много вирусни болести, които се предават при 
+                вегетативното им размножаване.
+            </p>
+            <p>
+                У нас вирусните болести по луковите са слабо проучени. С най-голямо икономическо значение 
+                е жълтото вджуджаване по лука 
+                (<span class="latin_name">Onion yellow dwarf potyvirus - OYDV</span>). По листата на 
+                растенията, получени от заразени луковици, се наблюдават ясно очертани къси жълти ивици. 
+                Листата са деформирани и обърнати надолу. Вирусът се пренасят от различни видове листни 
+                въшки по неперзистентен начин, което означава, че листните въшки след хранене върху болни 
+                растения са способни да заразяват здрави растения, но за сравнително кратко време 
+                (около 2 часа).
+            </p>
+            <p>
+                В райони, където се отглежда тютюн, лукът се напада от вируса на доматената бронзовост 
+                (<span class="latin_name">Тоmato spotted wilt tospovirus - TSWV</span>). По цветоносните 
+                стъбла се образуват жълтеникави петна, които по-късно некротират и се вдлъбват. Стъблата 
+                се прегъват и увисват. Вирусът се пренася по перзистентен начин от 
+                <span class="latin_name">Thrips tabaci</span>.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Добра растителнозащитна практика е използването на сертифициран посадъчен материал. 
+                През вегетацията е наложително провеждане на редовни прегледи за откриване и унищожаване 
+                на болните растения. Химическата борба срещу листни въшки и рипса ограничава 
+                разпространението на векторите и респективно болестта в посева. 
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div> -->
+    <!-- КРАЙ viruses -->
+
+    <!-- Лукова муха -->
+    <!-- <div class="aa-title" id="delia-antiqua"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Лукова муха - <span class="latin_name">Delia antiqua</span></h3>
+            <h4 class="my_class_h4">Описание на неприятеля</h4>
+            <p>
+                Луковата муха поврежда основно лука и в по-слаба степен чесъна. Ларвите се вгризват в 
+                стъблото на младите растения и правят надлъжни ходове към луковицата. Нападнатите растения 
+                лесно се познават по спираловидно завития централен лист, който впоследствие изсъхва, 
+                по-слабия растеж на растенията, които са по-бледи, и по неприятната миризма. В една 
+                луковица могат да се наблюдават до 70 ларви. След унищожаване на едно растение ларвите 
+                преминават по съседните. В нападнатите стъбла и луковици навлизат патогени, причиняващи 
+                гниене. Луковата муха развива 2-3 поколения и зимува като какавида в почвата. Мухите от 
+                I поколение летят по време на цъфтежа на вишните, а от II в началото на юни. Последното 
+                е без практическо значение.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                За засаждане да се използва здрав и качествен посадъчен материал. Лукът да не се отглежда 
+                продължително време на едно и също място. Унищожаване на нападнатите растения и плевелите. 
+                Своевременно торене и напояване за получаване на силни и здрави растения. Да не се оставят 
+                неизвадени луковици, а самораслият лук да се унищожава, тъй като в тях продължава 
+                развитието на мухата. Летежът на мухите се отчита чрез бели или сини водни уловки или 
+                сини лепливи плътна. В райони с ежегодно нападение третирането на посевния материал е 
+                оправдано. Химическата борба през вегетацията е ефективна, ако тя се проведе срещу 
+                възрастните, преди яйцеснасяне. Това е периодът на масов летеж (цъфтеж на вишня и глухарче). 
+                Прагът на икономическа вредност е 5 мухи на 10 откоса с ентомологичен сак или 50 мухи в 
+                бяла уловка. Срещу ларвите могат да се приложат гранулирани или течни инсектициди в реда 
+                преди навлизането им в стъблата. <span class="underline">Лукът, предназначен за 
+                консумация на зелено, не трябва да се третира с инсектициди</span>. При техническа възможност 
+                може да се приложи методът на стерилизация на мъжките като алтернатива на третирането с 
+                инсектициди.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                Внасяне в почвата на: <span class="active-substance">тиодикарб</span>
+            </p>
+            <p class="as">
+                Третиране срещу мухите с: <span class="active-substance">метимил, ламбда цихалотрин, фозалон+циперметрин, тиодикарб</span>.
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            <ul class="products">
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/insects/Uienvlieg_maden.jpg"
+                    data-title="Лукова муха - Delia antiqua">
+                        <img src="../../../../../assets/insects/Uienvlieg_maden_thumb.jpg" 
+                        alt="Delia antiqua" title="Лукова муха - Delia antiqua"/>
+                        <span class="title_thumb">Лукова муха - ларви</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <table class="piv_table">
+            <thead>
+                <tr>
+                    <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
+                    <th>ВРЕДИТЕЛ / СТАДИЙ</th>
+                    <th>
+                        <span class="full-name-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                        <span class="small-name-piv">ПРАГ НА ВРЕДНИОСТ</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tr_name_pest">
+                    <td colspan="3" class="tr_latin">ЛУКОВА МУХА <span class="latin_name">Delia antiqua</span></td>
+                </tr>
+                <tr>
+                    <td>3-ти - 4-ти лист (април)</td>
+                    <td>възрастни</td>
+                    <td>5 бр./10 откоса със сак</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+    <!-- КРАЙ Лукова муха -->
+
+    <!-- Чеснова муха -->
+    <!-- <div class="aa-title" id="suilia-lurida"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Чеснова муха - <span class="latin_name">Suilia lurida</span></h3>
+            <h4 class="my_class_h4">Описание на неприятеля</h4>
+            <p>
+                Напада чесъна и лука, засадени през есента или предзимно. Вреди ларвата, която се вгризва 
+                в стъблото, след което се придвижва към луковицата, където продължава да се храни. 
+                Нападнатите растения спират развитието си, листата им пожълтяват и увяхват, а стъблата 
+                са кухи, луковиците меки. Чесновата муха има 1 поколение годишно и зимува като възрастно. 
+                Мухите започват да летят твърде рано - към средата на февруари, и продължават летежа до април.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Аналогична с тази посочена при луковата муха. Борбата се провежда през февруари-март при 
+                установени 5 мухи на 10 откоса със сак. Освен това да се избягва торенето на чесъна с 
+                оборски тор, който силно привлича мухите за снасяне.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                Внасяне в почвата на: <span class="active-substance">тиодикарб</span>
+            </p>
+            <p class="as">
+                    Третиране срещу възрастното с: <span class="active-substance">метимил, ламбда цихалотрин, фозалон+циперметрин, тиодикарб</span>.
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div>
+    <div class="row">
+        <table class="piv_table">
+            <thead>
+                <tr>
+                    <th>ФЕНОФАЗА НА КУЛТУРАТА</th>
+                    <th>ВРЕДИТЕЛ / СТАДИЙ</th>
+                    <th>
+                        <span class="full-name-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                        <span class="small-name-piv">ПРАГ НА ВРЕДНИОСТ</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tr_name_pest">
+                    <td colspan="3" class="tr_latin">ЧЕСНОВА МУХА <span class="latin_name">Suillia lurida</span></td>
+                </tr>
+                <tr>
+                    <td>3-ти - 4-ти лист (февруари-март)</td>
+                    <td>възрастни</td>
+                    <td>5 бр./10 откоса със сак</td>
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+    <!-- КРАЙ Чеснова муха -->
+
+    <!-- Минираща муха -->
+    <!-- <div class="aa-title" id="napomyza-gymnostoma"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Минираща муха по луковите култури - <span class="latin_name">Napomyza gymnostoma</span></h3>
+            <h4 class="my_class_h4">Описание на неприятеля</h4>
+            <p>
+                Тази муха е сериозен неприятел по лука, чесъна и праза в много райони на страната. 
+                Вреди ларвата, която изгризва мини (5-6 мм) в листата, от основата на стъблото до височина 
+                15-20 см. При праза и чесъна ларвите навлизат и до по-вътрешните обвивни листа. Централният 
+                лист на лука и чесъна силно се завива. В сравнение с луковата и чесновата мухи тази е 
+                твърде дребна - едва 3 мм. Тя има 2 поколения. Презимуват основно какавиди и ларви от 
+                по-късно снесени яйца в стъблата на праза. Мухите летят от края на март до края на април. 
+                Ларвите от 1 поколение се развиват от края на април до края на юни по зимния чесън и лук, 
+                по лука от семе и арпаджик. Второто поколение се развива изцяло по праза до късна есен.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Както при луковата муха. Борбата се води срещу двете поколения. За първото се пръска 
+                лукът и чесънът от началото до средата на април, а за второто при праза от началото на юли. 
+                За всяко поколение се извършват по две третирания през 8-10 дни.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                Третиране срещу мухите преди яйцеснасяне с: <span class="active-substance">метомил, тиодикарб</span>
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div> -->
+    <!-- КРАЙ Минираща муха -->
+
+    <!-- Тютюнев трипс -->
+    <!-- <div class="aa-title" id="thrips-tabaci"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Тютюнев трипс - <span class="latin_name">Thrips tabaci</span></h3>
+            <h4 class="my_class_h4">Описание на неприятеля</h4>
+            <p>
+                Тютюневият трипс нанася най-големи поражения по лука и праза. Той се заселва главно в 
+                пазвите на листата, а по-късно и в съцветията, където смуче сок. Вследствие на нанесените 
+                повреди по листата се образуват белезникави сребристи петна, които при силно нападение 
+                се сливат. Повредените листа се изкривяват, пожълтяват и засъхват откъм върха. По тях се 
+                забелязват малки, дребни черни точки - екскрементите на насекомото. При висока плътност 
+                на неприятеля съцветията на лука, оставени за семе, засъхват, а получените семена са 
+                дребни и с ниска кълняемост. Неприятелят развива няколко поколения годишно, като 
+                максимумът на нападение е в периода от юни до август. Сухото и горещ време благоприятства 
+                развитието на неприятеля.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Нападението от <span class="latin_name">Th. tabaci</span> води до намаляване на добивите 
+                или до пропадане на посевите, затова ефикасната борба с него е от особено значение. 
+                Сеитбообръщeнието и дълбоката оран спомагат за ограничаване числеността на трипсите. 
+                Интензивното напояване води до намаляване плътността му. През вегетацията площите с 
+                лукови култури трябва да се обследват редовно за наличие на тринки. За проследяване 
+                началото на появата на <span class="latin_name">Th. tabaci</span> могат да се използват 
+                бели водни уловки (бели купи, пълни с вода) или сини и жълти лепливи табла. Третирането 
+                с инсектициди трябва да започне при установяване на първите повреди от неприятеля. 
+                <span class="underline">При лука за консумация на зелено не се води химична борба</span>.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                Третиране: <span class="active-substance">ацефат, делтаметрин, метиокарб, ламбда-цихалотрин.</span>
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div> -->
+    <!-- КРАЙ Тютюнев трипс -->
+
+    <!-- Нощенки -->
+    <!-- <div class="aa-title" id="cutworms"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Нощенки</h3>
+            <h4 class="my_class_h4">Описание на неприятелите</h4>
+            <p>
+                Луковите култури се нападат от подгризващите нощенки 
+                <span class="latin_name">Agrotis ipsilon, A. segetum, A. exclamationis</span>, чиито 
+                гъсеници от I и II възраст скелетират листата, а следващите възрасти прегризват младите 
+                растения на нивото на почвата или се сгризват в стъблата и луковиците; и от надземните 
+                нощенки 
+                <span class="latin_name">Mamestra brassicae, M. oleracea, Autographa gamma, Helycoverpa armigem</span>, 
+                гъсениците на които повреждат листата Ипсилоновата, гамозначната и памуковата нощенка развиват 3 
+                поколения у нас, а останалите по две. Гъсениците на подгризващите нощенки са пепелявосиви и се 
+                намират плитко в почвата около растенията, а тези от надземните значително варират в 
+                оцветяването - от тревистозелени до тъмносивокафяви и се намират върху растенията.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Агротехническите мероприятия имат важно значение като растителнозащитни средства в 
+                зеленчуковите градини. Те осигуряват благоприятни условия за развитието на растенията, 
+                а също спомагат за унищожаване на значителна част от популациите на нощенките, влошават 
+                се условията за тяхното хранене и яйцеснасяне. Срещу тези неприятели трябва да се провежда 
+                интегрирана борба, която се основава на праговете на икономическа вредност за отделните 
+                видове. Използването на яйчния паразит трихограма, и бактериални продукти за растителна 
+                защита на база <span class="latin_name">Bacillus thuringiensis</span> е Добра 
+                растителнозащитна практика срещу нощенките. За определяне необходимостта от борба се 
+                проследява летежът на пеперудите с феромонови и светлинни уловки. Химическата борба е 
+                най-ефективна, когато е насочена срещу младите гъсеници.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                Третиране с: <span class="active-substance">делтаметрин, хлорпирифос, ацефат, бифетрин.</span>
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div> -->
+    <!-- КРАЙ Нощенки -->
+
+    <!-- Стъблена нематода -->
+    <!-- <div class="aa-title" id="ditylenchus-allii"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Стъблена (лукова) нематода - <span class="latin_name">Ditylenchus allii (dipsaci)</span></h3>
+            <h4 class="my_class_h4">Описание на неприятеля</h4>
+            <p>
+                <span class="latin_name">D. dipsaci</span> e разпространена в цялата страна и загубите 
+                от нея могат да достигнат значителни размери. Напада лука, чесъна и праза. Луковата 
+                нематода се развива непрекъснато в тъканите на растенията, без да ги напуска, и вреди 
+                както на полето, така и в складовете. При полски условия нематодата поврежда поникващите 
+                семена и развивщите се растения. При по-късно заразяване листата се деформират, а 
+                стъблата се нацепват. Нападнатите растения изостават в развитието си, имат жълтеникав 
+                цвят и са със скъсени стъбла и листа. При чесъна отделните скилидки са силно раздалечени, 
+                с жълтеникав цвят и неприятна миризма. При лука обвивните люспи са удебелени и напукани. 
+                Размножаването на <span class="latin_name">Ditylenchus dipsaci</span> в листните тъкани 
+                води до типични симптоми - образуване на подутини. Растенията се изкривяват.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Най-важните мероприятия за борба с луковата нематода са използване на здрав посевен и 
+                посадъчен материал и спазване на сеитбообръщение. Тъй като 
+                <span class="latin_name">D. dipsaci</span> напада повече от 400 вида растения, ДРЗП 
+                включва успешното извеждане на борбата срещу плевелите и отстраняване от полето на всички 
+                нападнати лукови растения. В сеитбообръщението да се включат култури като спанак, зелеви, 
+                салата или зърнени култури (изборът на културата зависи от расата на нематодата). 
+                За унищожаване на този неприятел се извършва третиране на арпаджика с топла вода (3 часа 
+                при 45°С), а за скилидките на чесъна трябват 20 минути при 49°С. Необходимо е луковите 
+                семена да са изследвани в лаборатория за наличие на 
+                <span class="latin_name">D. dipsaci</span>. При основните лукови култури се използват 
+                гранулирани нематоциди, които се внасят в браздите по време на засаждане. 
+                Обеззаразяването на заразените полета не е ДРЗП, не е икономически изгодно, а 
+                препоръчваните нематоциди често не са регистрирани за употреба.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                Третиране: <span class="active-substance">оксамил</span>
+            </p>
+            <p class="as">
+                Третиране на семената:  <span class="active-substance">дазомет, оксамил</span>
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div> -->
+    <!-- КРАЙ Стъблена нематода -->
+
+    <!-- Голям луков листояд -->
+    <!-- <div class="aa-title" id="galeruca-tanaceti"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Голям луков листояд - <span class="latin_name">Galeruca tanaceti</span></h3>
+            <h4 class="my_class_h4">Описание на неприятеля</h4>
+            <p>
+                Големият луков листояд поврежда лука, чесъна и праза. Възрастното насекомо е бръмбар с 
+                продълговато овално тяло и черен цвят. Има едно поколение годишно и зимува като яйце. 
+                Ларвите се излюпват към средата на април и започват да нагризват листата и стъблата на 
+                растенията. Неприятелят е особено опасен за младите растения. Възрастните от новото 
+                поколение се появяват през юни.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Прилагането на висока агротехника, която включва спазване на пространствена изолация, 
+                борба с плевелите, обработка на почвата, торене, допринася на намаляване на плътността на 
+                големия луков листояд. Срещу <span class="latin_name">G. tanaceti</span> се води 
+                химична борба само при висока численост. Продуктите за растителна защита срещу трипсите 
+                и нощенките са ефективни и срещу големия луков листояд.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                Третиране: <span class="active-substance">делтаметрин, хлорпирифос, ацефат, бифетрин.</span>
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            <ul class="products">
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/insects/Galeruca_tanaceti.jpg"
+                    data-title="Голям луков листояд - Galeruca tanaceti">
+                        <img src="../../../../../assets/insects/Galeruca_tanaceti_thumb.jpg" 
+                        alt="Galeruca tanaceti" title="Голям луков листояд"/>
+                        <span class="title_thumb">Голям луков листояд</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div> -->
+    <!-- КРАЙ Голям луков листояд -->
+
+    <!-- Луков молец -->
+    <!-- <div class="aa-title" id="acrolepia-assectella"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Луков молец - <span class="latin_name">Acrolepia assectella</span></h3>
+            <h4 class="my_class_h4">Описание на неприятеля</h4>
+            <p>
+                През отделни години луковият молец се намножава във висока численост и нанася значителни 
+                повреди по луковите култури. Вреди по лука, праза, чесъна и в насажденията за 
+                семепроизводство. Възрастното насекомо е тъмнокафява пеперуда с бели петна. Неприятелят 
+                развива 2 поколения годишно и зимува като възрастно или като какавида в растителните 
+                участъци. Пеперудите от I поколение се появяват през май-юни. Гъсениците правят отвори 
+                по листата или по цветоносните стъбла. Те навлизат в тях и в началото изгризват тесни, 
+                вълнисти ивици, а след това проникват в кухите листа на лука или в цветоносните стъбла и 
+                изгризват паренхимната тъкан във вид на надлъжни ивици, без да засягат горния епидермис. 
+                По листата на чесъна и праза гъсениците прогризват надлъжни ходове под епидермиса. 
+                При нарастване на растенията върху епидермиса се образуват отвори. Гъсениците навлизат в 
+                съцветията, прогризват цветчетата и възпрепятстват образуването на семена. Нападнатите 
+                растения загниват и загиват.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Луковият молец е един от основните неприятели по луковите, срещу които често се налага 
+                провеждане на борба. Летежът на възрастните индивиди може да се проследи чрез светлинни 
+                или феромонови уловки. Когато степента на нападение е много висока или когато гъсениците 
+                преминават в луковиците, се налага провеждане на химична борба. Третиранията трябва да 
+                бъдат съобразени със степента на нападение, която се определят по процента на заразяване 
+                върху 50 растения за площ до 1 дка. Приетият праг на вредност при праза е над 5% нападнати 
+                растения. Необходимо е да се проведат две третирания. Много важно е работният разтвор 
+                да достигне до вътрешността на растенията. Борбата срещу младите гъсеници може да се 
+                проведе с продукти за растителна защита на базата на 
+                <span class="latin_name">Bacillus thuringiensis</span>.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                Третиране: <span class="active-substance">Bacillus thuringiensis, делтаметрин, ламбда-цихалотрин</span>.
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div> -->
+    <!-- КРАЙ Луков молец -->
+
+    <!-- Луков скритохоботник -->
+    <!-- <div class="aa-title" id="ceuthorrynchus"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Луков скритохоботник - <span class="latin_name">Ceuthorrynchus jakovlev</span></h3>
+            <h4 class="my_class_h4">Описание на неприятеля</h4>
+            <p>
+                Луковият скритохоботник причинява повреди по лука за зелено, за глави и в семепроизводните 
+                участъци. По чесъна вредят само възрастните индивиди. Възрастното насекомо е дребен 
+                хоботник с дължина на тялото - 2.27 мм. <span class="latin_name">С. jakovlei</span> има 
+                едно поколение годишно. Зимува като възрастно. Бръмбарите се появяват рано през април и 
+                се хранят по листата, като изгризват малки отвори само в паренхима. Те снасят яйцата си 
+                в листата. Ларвите се хранят с паренхима на листата, без да засягат епидермиса, като 
+                правят ходове с неправилна продълговата форма. Какавидират в землиста камерка в почвата.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Спазването на 3-4-годишно сеитбообръщение спомага за предпазване на насажденията от 
+                луковия скритохоботник. През вегетацията е необходимо да се извършват редовни обследвания 
+                за установяване появата на възрастните индивиди и на ларвите. Пръскания с инсектициди се 
+                препоръчват при плътност над допустимите прагове на вредност (2-4 бръмбара или 5-10 
+                ларви/растение).
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                Третиране: <span class="active-substance">диметоат, делтаметрин, ламбда-цихалотрин</span>.
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div> -->
+    <!-- КРАЙ Луков скритохоботник -->
+
+    <!-- Голи охлюви -->
+    <!-- <div class="aa-title" id="molluska"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Голи охлюви - <span class="latin_name">Molluska</span></h3>
+            <h4 class="my_class_h4">Описание на неприятеля</h4>
+            <p>
+                Голите охлюви са многоядни. Вредят на полето, в оранжериите, складовите помещения и в 
+                жилищата. Особено опасни са в години с повече валежи през летните месеци. От познатите 25 
+                вида у нас стопанско значение имат 2-3 вида. Голите охлюви живеят 1-3 години, зимуват като 
+                яйце, млади ларви и възрастни. Развиват няколко поколения годишно. При придвижването си 
+                по растенията и почвата те оставят бяла диря от слуз, което е показател за присъствието им.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Мероприятия като редовна обработка на почвата, разтрошаване на буците, почистване на 
+                площите от растителни остатъци, просушаване на заблатените участъци създават неблагоприятни 
+                условия за намножаване на тези неприятели. На малки площи може да се проведе механична 
+                борба с ловни пояси, примамки от различни материали, като събраните охлюви се посипват с 
+                минерален тор или се заливат с гореща вода. При масово намножаване се прилага напрашване с 
+                праховиден суперфосфат, негасена вар или калиева селитра.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                Гранулати: <span class="active-substance">дазомет, металдехид, метиодикарб</span>
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div> -->
+    <!-- КРАЙ Голи охлюви -->
+
+    <!-- Попово прасе -->
+    <!-- <div class="aa-title" id="grylotalpa-grylotalpa"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Попово прасе - <span class="latin_name">Grylotalpa grylotalpa</span></h3>
+            <h4 class="my_class_h4">Описание на неприятеля</h4>
+            <p>
+                Поповото прасе напада всички зеленчукови култури у нас. Ларвите и възрастните прегризват 
+                младите кълнове, прекъсват младите корени, хранят се с подземните части на растенията. 
+                Обитава добре обработени и наторени с оборски тор влажни почви. Поповото прасе развива 1 
+                поколение годишно и зимува като ларва, нимфа и възрастно в почвата, в парниците и в 
+                куповете с оборски тор. Води нощен живот. Мъжките прелитат на къси разстояния.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Борбата с този неприятел е насочена основно през пролетта срещу презимувалите индивиди. 
+                Обработката на почвата спомага за разрушаване ходовете и гнездата на това насекомо, както 
+                и унищожаване на различните му стадии. На малки площи могат да бъдат използвани водни 
+                капани, заровени в почвата до горния ръб на съда. Разхвърляне на купчини оборски тор, в 
+                които се събира поповото прасе. Събраните в капаните и оборския тор насекоми се унищожават. 
+                Борбата с поповото прасе се извършва основно с отровни примамки от зърно (пшеница, ечемик, 
+                царевица или ярма от тях), примесено с инсектицид и растителна мазнина. Доза 4-5 г./м<sup>2</sup>. 
+                При нападение на по-големи площи се прилага внасяне на гранулирани инсектициди.
+                    
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                Примамки: <span class="active-substance">метомил, пиримифосмтил, фенвалерат, хлорпирифосетил, фенитротион</span>
+            </p>
+            <p class="as">
+                Гранулати: <span class="active-substance">метиодикарб</span>
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div> -->
+    <!-- КРАЙ Попово прасе -->
+
+    <!-- Плевели -->
+    <!-- <div class="aa-title" id="weed"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Плевели</h3>
+            <p>
+                Вредното влияние на плевелите върху луковите култури се изразява в намаляване на добива и 
+                влошаване качеството на луковиците Луковите култури са със слаба конкурентна способност и 
+                особена чувствителност при заплевеляване в ранните фази от развитието си. Борбата с 
+                плевелите освен като мероприятие за осигуряване на нормален добив е и агротехническо, 
+                което е важно звено в системата от мерки срещу болестите и неприятелите.
+            </p>
+            <p>
+                <span class="underline">Лукът за глави</span> се отглежда като едногодишна култура от 
+                семена (директен) или като двегодишна с предварително производство на арпаджик. Разполага 
+                се и на неполивни площи, подходящи за полски и за зеленчукови култури. Това обуславя 
+                различията в степента и вида на заплевеляване.
+            </p>
+            <p>
+                <span class="underline">Празът</span> също може да се отглежда по два начина - чрез 
+                предварително производство на разсад или директно безразсадово производство.
+            </p>
+            <p>
+                За резултатното отглеждане на едногодишния лук и безразсадния (директен) праз е необходимо 
+                да се осигурят поливни площи и почви с добра структура, водно-физични свойства и 
+                запасеност с органични вещества. Това създава предпоставки за по-силно заплевеляване на 
+                посевите, което е и един от основните фактори, ограничаващи по-широкото приложение на 
+                технологията за безразсадово производство.
+            </p>
+            <p>
+                <span class="underline">Чесънът</span> се отглежда чрез есенно засаждане (зимен чесън) и с 
+                ранно пролетно засаждане (пролетен чесън).
+            </p>
+            <p>
+                При луковите култури от едногодишните плевели се срещат най-вече късните пролетни.
+            </p>
+            <p class="bold" style="margin: 0; padding: 0">Едногодишни широколистни</p>
+            <p>
+                Обикновен щир (<span class="latin_name">Amaranthus retroflexus</span>);
+                Разстлан щир (<span class="latin_name">Amaranthus blitoides</span>);
+                Бял щир (<span class="latin_name">Amaranthus albus</span>);
+                Бяла лобода (<span class="latin_name">Chenopodium album</span>);
+                Пача трева (<span class="latin_name">Poligonum aviculare</span>);
+                Лападоволистно пипериче (<span class="latin_name">Poligonum lapathifolium</span>);
+                Тученица обикновена (<span class="latin_name">тлъстига) (Portulata oleracea</span>);
+                Лубеничник (<span class="latin_name">Hibiscus trionum</span>);
+                Свиница (<span class="latin_name">Xanthium strumarium</span>);
+                Канадска злолетница (<span class="latin_name">Erigeron canadensis</span>);
+                Галинзога дребноцветна (<span class="latin_name">Galinsoga parviflora</span>);
+                Черно куче грозде (<span class="latin_name">Solanum nigrum</span>);
+                Татул (<span class="latin_name">Datura stramonium</span>);
+                Просфорник (<span class="latin_name">Abutilon theophrasti</span>);
+                Синап полски (<span class="latin_name">Sinapis arvensis</span>);
+                Фасулче (<span class="latin_name">Polygonum convolvulus</span>);
+                Врабчови чревца (<span class="latin_name">Stellaria media</span>);
+                Лечебен росопас (<span class="latin_name">Fumaria officinalis</span>);
+                Великденче бръшлянолистно (<span class="latin_name">Veronica hederifolia</span>);
+                Овчарска торбичка (<span class="latin_name">Capsella bursa-pastoris</span>);
+                Полско подрумче (<span class="latin_name">Anthemis arvensis</span>)
+            </p>
+            <p class="bold" style="margin: 0; padding: 0">Едногодишни житни</p>
+            <p>
+                Кощрява зелена (<span class="latin_name">Setaria viridis</span>);
+                Кощрява сива (<span class="latin_name">Setaria glauca</span>);
+                Прешленеста кощрява (<span class="latin_name">Setaria verticillata</span>);
+                Кокоше просо (<span class="latin_name">Echinochloa crus-galli</span>);
+                Кръвно просо (<span class="latin_name">Panicum sanguinale</span>);
+                Див овес (<span class="latin_name">Avena fatua</span>);
+                Полска лисича опашка (<span class="latin_name">Alopecurus myosuroides</span>)
+            </p>
+            <p>
+                Те поникват през втората половина на пролетта и началото на лятото, а много от тях и през 
+                втората половина на лятото. Поради много разтегнатия период на поникване създават проблеми 
+                по време на всички фенофази от развитието на културите включително и с вторичното (късно) 
+                заплевеляване.
+            </p>
+            <p>
+                Образуват голямо количество семена и притежават способност да се приспособяват към 
+                промените на екологичните условия. Силно нараства заплевеляването с видове, които са 
+                по-топлолюбиви и най-вече по-издръжливи на засушаване. По-ограничено са разпространени 
+                ранните пролетни плевели, които поникват масово през пролетта и цъфтят и плодоносят през 
+                май-юни, и някои ефемери, които поникват през различни периоди и почти през цялата 
+                вегетация се срещат в различни фази на развитие.
+            </p>
+            <p>
+                Луковите култури се заплевеляват и с многогодишни плевели - коренищни и кореновоиздънкови.
+            </p>
+            <p>
+                <span class="underline">Коренищтните плевели</span> образуват подземни стъбла (коренища), 
+                в които през вегетационния период се натрупват запасни хранителни вещества, необходими за 
+                прорастване и развитие на нови растения. Тези плевели се размножават главно с коренища, 
+                на които са разположени спящи пъпки. Някои от тях се размножават и чрез семена. Причина 
+                за намножаването им са късно извършената дълбока оран, шаблонно използване на дискови 
+                оръдия, неспазване на сеитбообръщения, ограничена употреба на ефективни хербициди и др.
+            </p>
+            <p>
+                На силно заплевелени с коренищни плевели площи спящите пъпки достигат до стотици хиляди на 
+                декар. При достатъчно влага в почвата те прорастват през целия вегетационен период. 
+                Нарязването на коренищата при някои почвообработки стимулира допълнителното им прорастване. 
+                Периодът, в който издънките все още не са вкоренени добре (до 2-3 седмици след нарязването), 
+                е най-подходящ за унищожаването им чрез подрязване.
+            </p>
+            <p class="bold" style="margin: 0; padding: 0">Многогодишни коренищни плевели</p>
+            <p>
+                Троскот (<span class="latin_name">Cynodon dactylon</span>); 
+                Пирей (<span class="latin_name">Agropyrum repens</span>); 
+                Балур (<span class="latin_name">Sorghum halepensis</span>)
+            </p>
+            <p>
+                <span class="underline">Кореновоиздънковите плевели</span> се размножават еднакво добре 
+                както чрез семена, така и вегетативно. Органи за вегетативно размножаване са корените, 
+                върху които са разположени спящи пъпки, от които се развиват издънки. Отрязък дори с една 
+                спяща пъпка може да даде начало на ново растение. Прорастването на спящите пъпки започва 
+                рано напролет и продължава през целия вегетационен период, като за вкореняването им е 
+                необходима благоприятна почвена влажност.
+            </p>
+            <p class="bold" style="margin: 0; padding: 0">Многогодишни кореновоиздънкови плевели</p>
+            <p>
+                Паламида полска (<span class="latin_name">Cirsium arvense</span>);
+                Поветица полска (<span class="latin_name">Convolvulus arvensis</span>);
+                Млечок (S<span class="latin_name">onchus arvensis</span>);
+                Горуха (<span class="latin_name">Cardaria draba</span>)
+            </p>
+            <p>
+                В сухо и горещо време голяма част от спящите пъпки загиват. Най-подходящият период за 
+                провеждане на обработка, с която не се позволява вкореняване на издънките и образуване 
+                на нови органи за вегетативно размножаване, е през първите 2-3 седмици след поникването 
+                на издънките от кореновите отрязъци.
+            </p>
+            <p>
+                По-важните причини за намножаване на кореновоиздънковите плевели са: ненавременните, 
+                плитките и лошокачествени почвообработки, прилагането на дискови оръдия и фрези на 
+                площи, заплевелени с тях, употребата на недостатъчно ефективни хербициди срещу тях и др.
+            </p>
+            <p>
+                Постепенно се засилва процентното участие на късните пролетни видове татул, свиница, 
+                черно куче грозде, галинзога, просфорник, лубеничник. Значителни затруднения създава и 
+                увеличаването на многогодишните двусемеделни плевели и на многогодишните 
+                едносемеделни - най-вече балур.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                В борбата с плевелите в площите с лукови култури ДРЗП включва прилагане на различни 
+                мероприятия - използване на ефикасни хербициди или механизирани обработки; всички 
+                превантивни и агротехнически мероприятия, които допринасят за ограничаване на 
+                заплевеляването - подходящ предшественик, целенасочена основна и предсеитбена подготовка, 
+                напояване с чиста от плевелни семена вода, засаждане (засяване) в биологично най-подходящи 
+                срокове и др.
+            </p>
+            <p>
+                Най-добри предшественици са културите със слята повърхност, фуражният грах, фасулът и 
+                други, които са с по-кратък вегетационен период. Зелето не е добър предшественик, тъй 
+                като се прибира късно и силно изтощава почвата. Като предкултури могат да се отглеждат 
+                спанак, репички, маруля и салата.
+            </p>
+            <p>
+                Основната и предсеитбената обработка на почвата са съобразени с предшественика, със 
+                степента и вида на заплевеляването и изискванията на културата. Луковите култури изискват 
+                дълбоки и добре обработени почви, а при директно производство важно условие е почвата да 
+                се доведе до градинско състояние още през есента и да се осигури твърдо легло за семената.
+            </p>
+            <p>
+                Когато се отглеждат след растения със слята повърхност, след прибиране на предшественика, 
+                площта се изорава на 8-10 см дълбочина. Пет-шест седмици след като стърнището се подметне, 
+                мястото се изорава на дълбочина 25-28 см. Почви с дълбок орен пласт се изорават 
+                по-дълбоко - 35-40 см, при което семената попадат по-дълбоко и заплевеляването намалява.
+            </p>
+            <p>
+                Когато се отглеждат след окопни култури, дълбоката есенна оран се извършва веднага след 
+                прибиране на предшественика.
+            </p>
+            <p>
+                До настъпване на зимата, в зависимост от степента на заплевеляването след есенната оран, 
+                площта се култивира 1-2 пъти, за да се унищожат поникналите плевели. Дълбоката оран и 
+                култивирането се провеждат така, че почвената повърхност да остане относително равна.
+            </p>
+            <p>
+                Тъй като борбата срещу многогодишните плевели (най-вече срещу многогодишните двусемеделни) 
+                при луковите култури е много трудна, то тя се провежда още при предшественика. За целта 
+                при заплевеляване с многогодишни кореновоиздънкови и коренищни плевели след прибиране 
+                на предшественика почвата се обработва няколко пъти за изсушаване и изтощаване на тези 
+                плевели или се използват хербициди на база глифозат.
+            </p>
+            <h4 class="my_class_h4">Активни вещества</h4>
+            <p>
+                При луковите култури се използват хербициди с почвено и листно действие. Почвените се 
+                прилагат преди разсаждане (след сеитба преди поникване при безрасадово производство, 
+                преди поникване на плевелите) на културите. За добрия си ефект почвените хербициди 
+                изискват добре подготвена почва и добра почвена влага.
+            </p>
+            <p>
+                За осигуряване на добър хербициден ефект при използване на листните противожитни 
+                хербициди третирането с тях се провежда при спазване на следните изисквания:
+            </p>
+            <p>
+                - да се третира през най-подходящата фенофаза на плевелите, тази, в която те са 
+                максимално чувствителни - за едногодишните житни във фаза 3-4 лист и за многогодишните, 
+                когато са в активен растеж с добре развита листна маса
+            </p>
+            <p>
+                - да не се използват, когато плевелите са потиснати (например при силно продължително 
+                засушаване)
+            </p>
+            <p>
+                - ефектът се понижава, ако третирането се проведе при температура над 25°С и особено при 
+                съчетаване на факторите интензивно осветление, висока температура и ниска 
+                атмосферна влажност. При такива условия се намалява и селективността спрямо културата.
+            </p>
+            <p>
+                - да се спазват определените карантинни срокове
+            </p>
+            <p>
+                При ДРЗП, за да се избегнат компенсационни процеси в намножаването на някои видове и 
+                възможности за възникване на резистентни популации плевели, се редуват продукти за 
+                растителна защита с различен механизъм и спектър на действие.
+            </p>
+            <p class="as underline" style="margin: 0; padding: 0">Едногодишен (директен) лук от семена за производство на глави</p>
+            <p class="as">
+                След сеитба преди поникване на лука, при поникнали плевели - срещу едногодишни и 
+                многогодишни житни и широколистни - <span class="active-substance">глюфозинат амониум</span>
+            </p>
+            <p class="as">
+                След сеитба преди поникване на лука и плевелите - срещу едногодишни житни и някои 
+                широколистни <span class="active-substance">етофумезот, пендиметалин, s-метолахлор</span>.
+            </p>
+            <p class="as" style="margin: 0; padding: 0">През вегетацията</p>
+            <p class="as">
+            - срещу едногодишни широколистни - <span class="active-substance">линурон, бентазин, оксадиазон, оксифлуорфен</span>
+            </p>
+            <p class="as">
+                - срещу вторично заплевеляване с едногодишни и многогодишни житни видове: пропаквизафоп, квизалофоп-П-етил, клетодим, флуазифоп-П-бутил, халоксифоп-П-метил, сетоксидим
+            </p>
+            <p class="as underline" style="margin: 0; padding: 0">Лук за глави от арпараджик</p>
+            <p class="as">
+                След засаждане преди поникване на лука при поникнали плевели - срещу едногодишни и 
+                многогодишни житни и широколистни - <span class="active-substance">глюфозинат амониум</span>
+            </p>
+            <p class="as">
+                След засаждане преди поникване на лука и плевелите - срещу едногодишни житни и някои 
+                широколистни - <span class="active-substance">етофумезот, пендиметалин, s-метолахлор, оксадиаржил, пропизохлор, 
+                    оксадиазон</span>оксадиазон; 
+                срещу едногодишни широколистни - <span class="active-substance">оксифлуорфен</span>.
+            </p>
+            <p class="as" style="margin: 0; padding: 0">През вегетацията</p>
+            <p class="as">
+                - срещу едногодишни широколистни - 
+                <span class="active-substance">линурон, бентазон, оксифлуорфен</span>; 
+                при смесено заплевеляване - <span class="active-substance">оксадиаржил оксадиазон</span>,
+            </p>
+            <p class="as">
+                - срещу едногодишни и многогодишни житни видове - както при директния лук.
+            </p>
+            <p class="as underline" style="margin: 0; padding: 0">Лук от семе за производство на арпаджик</p>
+            <p class="as">
+                Хербицидите, използвани срещу плевелите при този лук, са както при едногодишен лук за 
+                производство на глави.
+            </p>
+            <p class="as underline" style="margin: 0; padding: 0">Праз</p>
+            <p class="as">
+                След сеитба преди поникване на директния праз и преди разсаждане на полето - 
+                срещу едногодишни житни и някои широколистни - 
+                <span class="active-substance">етофумезот, пендиметалин, s-метолахлор</span>.
+            </p>
+            <p class="as">
+                Преди разсаждане - срещу едногодишни широколистни - <span class="active-substance">прометрин</span>.
+            </p>
+            <p class="as">
+                През вегетацията - срещу едногодишни двусемеделни - <span class="active-substance">метазахлор, линурон, бентазон</span>.
+            </p>
+            <p class="as">
+                През вегетацията - срещу едногодишни и многогодишни житни - както при лук за глави.
+            </p>
+            <p class="as underline" style="margin: 0; padding: 0">Чесън</p>
+            <p class="as">
+                След засаждане преди поникване - срещу едногодишни житни и някои широколистни
+                - <span class="active-substance">s-метолахлор</span>; 
+                срещу едногодишни широколистни - <span class="active-substance">прометрин</span>.
+            </p>
+            <p class="as">
+                Във фаза 2-и-3-и лист на чесъна срещу едногодишни двусемеделни - 
+                <span class="active-substance">линурон</span>, 
+                и по- късно през вегетацията - <span class="active-substance">бентазон</span>.
+            </p>
+            <p class="as">
+                Срещу житни плевели през вегетацията същите хербициди както при основните лукови култури.
+            </p>
+            <p class="as">
+                При отглеждане на лук и чесън за зелено не се препоръчва използване на хербициди. Само 
+                при крайна необходимост да се използват някои от посочените хербициди преди поникване на 
+                културите.
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            <ul class="products">
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/weeds/Amaranthus_retroflexus_bgiu.jpg" 
+                    data-title="Щир">
+                        <img src="../../../../../assets/weeds/Amaranthus_retroflexus_bgiu_thumb.jpg" 
+                        alt="Amaranthus sp." title="Щир"/>
+                        <span class="title_thumb">Щир</span>
+                    </a>
+                </li>
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/weeds/Setaria_sp.jpg" 
+                    data-title="Кощрява">
+                        <img src="../../../../../assets/weeds/Setaria_sp_thumb.jpg" 
+                        alt="Setaria sp." title="Кощрява"/>
+                        <span class="title_thumb">Кощрява</span>
+                    </a>
+                </li>
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/weeds/Cynodon_dactylon.jpg" 
+                    data-title="Троскот">
+                        <img src="../../../../../assets/weeds/Cynodon_dactylon_thumb.jpg" 
+                        alt="Cynodon-dactylon" title="Троскот"/>
+                        <span class="title_thumb">Троскот</span>
+                    </a>
+                </li>
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/weeds/Cirsium_arvense2.jpg" 
+                        data-title="Паламида">
+                        <img  threshold="200" lazy-load="../../../../../assets/weeds/Cirsium_arvense2_thumb.jpg" 
+                        alt="Cirsium arvense" title="Паламида"/>
+                        <span class="title_thumb">Паламида</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div> -->
+    <!-- КРАЙ Плевели -->
+    
+ 
