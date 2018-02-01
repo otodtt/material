@@ -1,8 +1,8 @@
-<!-- <div class="row text-center" id="prz-loader" *ngIf="!isLoaded">
+<div class="row text-center" id="prz-loader" *ngIf="!isLoaded">
     <mat-spinner aria-label="Спинър до зареждането на страницата"></mat-spinner>
-</div> -->
-<!-- *ngIf="isLoaded" -->
-<div  id="wrap_lmenu_txt">
+</div>
+
+<div *ngIf="isLoaded" id="wrap_lmenu_txt">
     <div class="text-center name-header">
         <h2 class="customfont">ЗЕЛЕНЧУЦИ НА ОТКРИТО</h2>
     </div>
@@ -47,8 +47,8 @@
     <div class="row">
         <div class="text-indent">
             <h3 >Специфична сфера на действие</h3>
-            <p></p>
-            <h3 >Този стандарт очертава принципите на Добрата растителнозащитна практика при тиквови култури (краставици, тиквички, тикви, дини, пъпеши)</h3>
+            <p>Този стандарт очертава принципите на Добрата растителнозащитна практика при тиквови култури (краставици, тиквички, тикви, дини, пъпеши)</p>
+            <h3 >Специфично одобрение и поправка</h3>
             <p >Първоначално одобрена през септември 2005 г. от НСРЗ</p>
             <br/>
             <p >
@@ -266,7 +266,7 @@
     </div>
     <!-- КРАЙ Избор на Вредител -->
 
-    <!-- <div *ngFor="let practice of practices">
+    <div *ngFor="let practice of practices">
         <div class="aa-title" id="{{practice.linkId}}"></div>
         <div class="row" >
             <div class="pest-description-container text-indent" [innerHTML]="practice.text  | safeHtml"></div>
@@ -302,10 +302,49 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
+
+    <!-- Автори на снимки -->
+    <br><br>
+    <div class="row">
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Използвани са снимки от:
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="panel-body my_panel-body">
+                    <p>
+                        <span class="bold">Снимка 1:</span>
+                        <span>By Christian Hummert (Ixitixel) - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=4600566</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 2:</span>
+                        <span>By Pollinator at the English language Wikipedia, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=1293306</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 3:</span>
+                        <span>https://wiki.bugwood.org/File:Click_beetle_larva.jpg</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 4:</span>
+                        <span>By Caroline Harding, MAF - This image is found here at PaDIL, a source of images designed for Biosecurity and Biodiversity.This tag does not indicate the copyright status of the attached work. A normal copyright tag is still required. See Commons:Licensing for more information.PaDIL, CC BY 3.0 au, https://commons.wikimedia.org/w/index.php?curid=16228320</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 5:</span>
+                        <span>By Frank Peairs, Colorado State University, Bugwood.org - This image is Image Number 5364132 at Invasive.org, a source for images of invasive and exotic species operated by The Bugwood Network at the University of Georgia and the USDA APHIS Plant Protection and Quarantine program., CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=11272182</span>
+                    </p>
+                    
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+    <!-- КРАЙ Автори на снимки -->
+</div>
 
     <!-- Мана по тиквовите -->
-    <div class="aa-title" id="pseudoperonospora"></div>
+    <!-- <div class="aa-title" id="pseudoperonospora"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Мана по тиквовите - <span class="latin_name">Pseudoperonospora cubensis</span></h3>
@@ -333,13 +372,22 @@
             </p>
         </div>
         <div class="pest-image-container " >
-            
+            <ul class="products">
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/diseases/Falscher_Mehltau.jpg"  
+                    data-title="Мана - Pseudoperonospora cubensis">
+                    <img  threshold="200" lazy-load="../../../../../assets/diseases/Falscher_Mehltau_thumb.jpg" 
+                        alt="Pseudoperonospora cubensis" title="Мана"/>
+                        <span class="title_thumb">Мана</span>
+                    </a>
+                </li>
+            </ul> 
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Мана по тиквовите -->
 
     <!-- Брашнеста мана -->
-    <div class="aa-title" id="erysiphe-cichoracearum"></div>
+    <!-- <div class="aa-title" id="erysiphe-cichoracearum"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Брашнеста мана - <span class="latin_name">Erysiphe cichoracearum, Sphaerotheca fuliginea</span></h3>
@@ -366,13 +414,22 @@
             </p>
         </div>
         <div class="pest-image-container " >
-            
+            <ul class="products">
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/diseases/Powdery_mildew.jpg"  
+                    data-title="Брашнеста мана - Erysiphe cichoracearum">
+                    <img  threshold="200" lazy-load="../../../../../assets/diseases/Powdery_mildew_thumb.jpg" 
+                        alt="Erysiphe cichoracearum" title="Брашнеста ман"/>
+                        <span class="title_thumb">Брашнеста ман</span>
+                    </a>
+                </li>
+            </ul> 
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Брашнеста мана -->
 
     <!-- Антракноза -->
-    <div class="aa-title" id="colletotrichum"></div>
+    <!-- <div class="aa-title" id="colletotrichum"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Антракноза по тиквови - <span class="latin_name">Colletotrichum lagenarium</span></h3>
@@ -402,11 +459,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Антракноза -->
 
     <!-- Листен пригор -->
-    <div class="aa-title" id="corynespora"></div>
+    <!-- <div class="aa-title" id="corynespora"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Листен пригор по краставиците – <span class="latin_name">Corynespora melonis</span></h3>
@@ -432,11 +489,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Листен пригор -->
 
     <!-- Краста -->
-    <div class="aa-title" id="cladosporium"></div>
+    <!-- <div class="aa-title" id="cladosporium"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Краста - <span class="latin_name">Cladosporium cucumerinum</span></h3>
@@ -465,11 +522,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Краста -->
 
     <!-- Кореново гниене -->
-    <div class="aa-title" id="pythium"></div>
+    <!-- <div class="aa-title" id="pythium"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Кореново и базично гниене на краставиците - <span class="latin_name">Pythium, Phytophthora; Rhizoctonia, Fusarium</span></h3>
@@ -496,11 +553,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Кореново гниен -->
 
     <!-- Фузарийно увяхване -->
-    <div class="aa-title" id="fusarium-oxysporum"></div>
+    <!-- <div class="aa-title" id="fusarium-oxysporum"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Фузарийно увяхване - <span class="latin_name">Fusarium oxysporum f. sp. Cucurbitacearum</span></h3>
@@ -526,11 +583,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Фузарийно увяхване -->
     
     <!-- Бактериен пригор -->
-    <div class="aa-title" id="pseudomonas-syringae"></div>
+    <!-- <div class="aa-title" id="pseudomonas-syringae"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Бактериен пригор-ъгловати петна - <span class="latin_name">Pseudomonas syringae pv. lachrymans</span></h3>
@@ -563,11 +620,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Бактериен пригор -->
 
     <!-- Вируси -->
-    <div class="aa-title" id="viruses"></div>
+    <!-- <div class="aa-title" id="viruses"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Вирус на краставичната мозайка - <span class="latin_name">Cucumber mosaic cucumovirus virus </span>(CMV)</h3>
@@ -644,11 +701,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Вируси -->
 
     <!-- Листни въшки -->
-    <div class="aa-title" id="aphis"></div>
+    <!-- <div class="aa-title" id="aphis"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Листни въшки</h3>
@@ -750,11 +807,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Листни въшки -->
 
     <!-- Телени червеи -->
-    <div class="aa-title" id="elateridae"></div>
+    <!-- <div class="aa-title" id="elateridae"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Телени червеи</h3>
@@ -795,13 +852,22 @@
             </p>
         </div>
         <div class="pest-image-container " >
-            
+            <ul class="products">
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/insects/Click_beetle_larva.jpg"
+                    data-title="Телени червеи - ларва">
+                        <img src="../../../../../assets/insects/Click_beetle_larva_thumb.jpg" 
+                        alt="Elateridae" title="Телени червеи - ларва"/>
+                        <span class="title_thumb">Телени червеи</span>
+                    </a>
+                </li>
+            </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Телени червеи -->
 
     <!-- Нощенки -->
-    <div class="aa-title" id="agrotis"></div>
+    <!-- <div class="aa-title" id="agrotis"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Нощенки</h3>
@@ -842,13 +908,22 @@
             </p>
         </div>
         <div class="pest-image-container " >
-            
+            <ul class="products">
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/insects/Agrotis_ipsilon_aneituma.jpg"
+                    data-title="Нощенки - Agrotis ipsilon">
+                        <img src="../../../../../assets/insects/Agrotis_ipsilon_aneituma_thumb.jpg" 
+                        alt="Agrotis ipsilon" title="Agrotis ipsilon"/>
+                        <span class="title_thumb">Agrotis ipsilon</span>
+                    </a>
+                </li>
+            </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Нощенки -->
 
     <!-- Трипси -->
-    <div class="aa-title" id="thrips"></div>
+    <!-- <div class="aa-title" id="thrips"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Трипси</h3>
@@ -886,7 +961,16 @@
             </p>
         </div>
         <div class="pest-image-container " >
-            
+            <ul class="products">
+                <li>
+                    <a data-lightbox="image" href="../../../../../assets/insects/Frankliniella_occidentalis.jpg"
+                    data-title="Калифорнийски трипс">
+                        <img src="../../../../../assets/insects/Frankliniella_occidentalis_thumb.jpg" 
+                        alt="Frankliniella occidentalis" title="Калифорнийски трипс"/>
+                        <span class="title_thumb">Калифорнийски трипс</span>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
     <div class="row">
@@ -918,11 +1002,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Трипси -->
 
     <!-- Оранжерийна белокрилка -->
-    <div class="aa-title" id="trialeurodes"></div>
+    <!-- <div class="aa-title" id="trialeurodes"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Оранжерийна белокрилка - <span class="latin_name">Trialeurodes vaporariorum</span></h3>
@@ -964,11 +1048,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Оранжерийна белокрилка -->
 
     <!-- Акари -->
-    <div class="aa-title" id="tetranychus"></div>
+    <!-- <div class="aa-title" id="tetranychus"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Акари</h3>
@@ -1065,11 +1149,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Акари -->
 
     <!-- Голи охлюви -->
-    <div class="aa-title" id="limacidae"></div>
+    <!-- <div class="aa-title" id="limacidae"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Голи охлюви – <span class="latin_name">Limacidae</span></h3>
@@ -1098,11 +1182,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Голи охлюви -->
 
     <!-- Нематоди -->
-    <div class="aa-title" id="meloidogyne"></div>
+    <!-- <div class="aa-title" id="meloidogyne"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Нематоди</h3>
@@ -1149,11 +1233,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Нематоди -->
 
     <!-- Попово прасе -->
-    <div class="aa-title" id="gryllotalpa-gryllotalpa"></div>
+    <!-- <div class="aa-title" id="gryllotalpa-gryllotalpa"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Попово прасе - <span class="latin_name">Grillotalpa gryllotalpa</span></h3>
@@ -1188,11 +1272,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Попово прасе -->
 
     <!-- Плевели -->
-    <div class="aa-title" id="weed"></div>
+    <!-- <div class="aa-title" id="weed"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Плевели</h3>
@@ -1328,55 +1412,7 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Плевели -->
 
-    <!-- Автори на снимки -->
-    <br><br>
-    <div class="row">
-        <mat-accordion>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        Използвани са снимки от:
-                    </mat-panel-title>
-                </mat-expansion-panel-header>
-                <div class="panel-body my_panel-body">
-                    <p>
-                        <span class="bold">Снимка 1:</span>
-                        <span>By Howard F. Schwartz, Colorado State University, Bugwood.org - http://www.ipmimages.org/browse/detail.cfm?imgnum=5364057, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=10520404</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 2:</span>
-                        <span>Av Rasbak - Eget arbete, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=358054</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 3:</span>
-                        <span>By Rasbak at Dutch Wikipedia, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=3219061</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 4:</span>
-                        <span>By Udo Schmidt - Flickr: Galeruca tanaceti (Linné, 1758), CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=20014224</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 5:</span>
-                        <span>By No machine-readable author provided. Bogdan assumed (based on copyright claims). - No machine-readable source provided. Own work assumed (based on copyright claims)., CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=209764</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 6:</span>
-                        <span>By Rasbak - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=998959</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 7:</span>
-                        <span>By Bidgee - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=9792633</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 8:</span>
-                        <span >By 4028mdk09 - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=11746444</span>
-                    </p>
-                </div>
-            </mat-expansion-panel>
-        </mat-accordion>
-    </div>
-    <!-- КРАЙ Автори на снимки -->
-</div>
+    
