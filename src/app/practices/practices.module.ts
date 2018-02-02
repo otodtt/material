@@ -48,56 +48,64 @@ import { OnionComponent } from './practices/pages/vegetables/onion/onion.compone
 import { CabbageComponent } from './practices/pages/vegetables/cabbage/cabbage.component';
 import { PumpkinComponent } from './practices/pages/vegetables/pumpkin/pumpkin.component';
 import { LeafyComponent } from './practices/pages/vegetables/leafy/leafy.component';
+import { SolanumComponent } from './practices/pages/facilities/solanum/solanum.component';
+import { CucurbitaComponent } from './practices/pages/facilities/cucurbita/cucurbita.component';
+import { DecorateComponent } from './practices/pages/facilities/decorate/decorate.component';
+import { CapsicumComponent } from './practices/pages/facilities/capsicum/capsicum.component';
+import { LeafyFacilitiesComponent } from './practices/pages/facilities/leafy-facilities/leafy-facilities.component';
 
 // Management
 import { ManagementComponent } from './management/management/management.component';
 import { TableComponent } from './practices/shared/table/table.component';
 
 
-
-
 @NgModule({
-  imports: [
+    imports: [
     CommonModule,
     PracticesRoutingModul,
     ShareComponentsModule,
     MaterialModule,
     LazyLoadModule,
-  ],
-  declarations: [
-    AnchorToDirective,
-    DialogComponent,
-    PracticesComponent,
-    IntroductionComponent,
-    SideMenuComponent,
-    ManagementComponent,
-    TriticumComponent,
-    HordeumComponent,
-    AvenaComponent,
-    SecaleComponent,
-    ZeaComponent,
-    RodentiaComponent,
-    PhaseolusComponent,
-    CicerComponent,
-    GlycineComponent,
-    LensComponent,
-    MedicagoComponent,
-    PisumComponent,
-    ArachisComponent,
-    BetaComponent,
-    BrassicaComponent,
-    GossypiumComponent,
-    HelianthusComponent,
-    NicotianaComponent,
-    TableComponent,
-    VegetablesComponent,
-    PotatoesComponent,
-    OnionComponent,
-    CabbageComponent,
-    PumpkinComponent,
-    LeafyComponent,
-  ],
-  providers: [PracticesService],
-  entryComponents: [SideMenuComponent, DialogComponent],
+    ],
+    declarations: [
+        AnchorToDirective,
+        DialogComponent,
+        PracticesComponent,
+        IntroductionComponent,
+        SideMenuComponent,
+        ManagementComponent,
+        TriticumComponent,
+        HordeumComponent,
+        AvenaComponent,
+        SecaleComponent,
+        ZeaComponent,
+        RodentiaComponent,
+        PhaseolusComponent,
+        CicerComponent,
+        GlycineComponent,
+        LensComponent,
+        MedicagoComponent,
+        PisumComponent,
+        ArachisComponent,
+        BetaComponent,
+        BrassicaComponent,
+        GossypiumComponent,
+        HelianthusComponent,
+        NicotianaComponent,
+        TableComponent,
+        VegetablesComponent,
+        PotatoesComponent,
+        OnionComponent,
+        CabbageComponent,
+        PumpkinComponent,
+        LeafyComponent,
+        SolanumComponent,
+        CucurbitaComponent,
+        DecorateComponent,
+        CapsicumComponent,
+        LeafyFacilitiesComponent,
+    ],
+    providers: [PracticesService],
+    entryComponents: [SideMenuComponent, DialogComponent],
 })
 export class PracticesModule { }

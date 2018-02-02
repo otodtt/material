@@ -11,8 +11,8 @@ import { Practice } from '../../../shared/models/practice.model';
 import { PracticesService } from '../../../shared/services/practices.services';
 
 @Component({
-  templateUrl: './leafy.component.html',
-  styleUrls: ['../../pages.scss']
+    templateUrl: './leafy.component.html',
+    styleUrls: ['../../pages.scss']
 })
 export class LeafyComponent implements OnInit, OnDestroy {
     private title = 'ДРЗП - Листни зеленчуци';

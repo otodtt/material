@@ -33,6 +33,13 @@ import { CabbageComponent } from './practices/pages/vegetables/cabbage/cabbage.c
 import { PumpkinComponent } from './practices/pages/vegetables/pumpkin/pumpkin.component';
 import { LeafyComponent } from './practices/pages/vegetables/leafy/leafy.component';
 
+// Facilities
+import { SolanumComponent } from './practices/pages/facilities/solanum/solanum.component';
+import { CucurbitaComponent } from './practices/pages/facilities/cucurbita/cucurbita.component';
+import { DecorateComponent } from './practices/pages/facilities/decorate/decorate.component';
+import { CapsicumComponent } from './practices/pages/facilities/capsicum/capsicum.component';
+import { LeafyFacilitiesComponent } from './practices/pages/facilities/leafy-facilities/leafy-facilities.component';
+
 // Management
 import { ManagementComponent } from './management/management/management.component';
 
@@ -64,6 +71,11 @@ export const routes: Routes = [
         { path: 'cabbage-crops', component: CabbageComponent},
         { path: 'pumpkin-crops', component: PumpkinComponent},
         { path: 'leafy-vegetables', component: LeafyComponent},
+        { path: 'solanum-lycopersicum', component: SolanumComponent},
+        { path: 'cucurbita', component: CucurbitaComponent},
+        { path: 'decorate', component: DecorateComponent},
+        { path: 'capsicum-annuum', component: CapsicumComponent},
+        { path: 'leafy-facilities', component: LeafyFacilitiesComponent},
     ]},
     { path: 'management', component: ManagementComponent }
 ];

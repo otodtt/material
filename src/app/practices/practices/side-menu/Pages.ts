@@ -161,27 +161,27 @@ const pages = [
             {
                 id: 0,
                 subName: 'Домати в съоражения',
-                link: '#'
+                link: 'solanum-lycopersicum'
             },
             {
                 id: 1,
                 subName: 'Тиквови култури',
-                link: '#'
+                link: 'cucurbita'
             },
             {
                 id: 2,
                 subName: 'Украсни култури',
-                link: '#'
+                link: 'decorate'
             },
             {
                 id: 3,
                 subName: 'Пипер в съоражения',
-                link: '#'
+                link: 'capsicum-annuum'
             },
             {
                 id: 4,
                 subName: 'Листни зеленчуци',
-                link: '#'
+                link: 'leafy-facilities'
             }
         ],
     },
