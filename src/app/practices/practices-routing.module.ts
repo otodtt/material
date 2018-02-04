@@ -72,7 +72,7 @@ export const routes: Routes = [
         { path: 'pumpkin-crops', component: PumpkinComponent},
         { path: 'leafy-vegetables', component: LeafyComponent},
         { path: 'solanum-lycopersicum', component: SolanumComponent},
-        { path: 'cucurbita', component: CucurbitaComponent},
+        { path: 'cucurbitaceae', component: CucurbitaComponent},
         { path: 'decorate', component: DecorateComponent},
         { path: 'capsicum-annuum', component: CapsicumComponent},
         { path: 'leafy-facilities', component: LeafyFacilitiesComponent},

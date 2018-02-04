@@ -166,7 +166,7 @@ const pages = [
             {
                 id: 1,
                 subName: 'Тиквови култури',
-                link: 'cucurbita'
+                link: 'cucurbitaceae'
             },
             {
                 id: 2,

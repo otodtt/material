@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'prz-decorate',
-  templateUrl: './decorate.component.html',
-  styleUrls: ['./decorate.component.scss']
+    templateUrl: './decorate.component.html',
+    styleUrls: ['../../pages.scss', '../../../shared/dialog/dialog.component.scss']
 })
 export class DecorateComponent implements OnInit {
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }

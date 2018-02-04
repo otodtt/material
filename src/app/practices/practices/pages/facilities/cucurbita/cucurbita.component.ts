@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'prz-cucurbita',
-  templateUrl: './cucurbita.component.html',
-  styleUrls: ['./cucurbita.component.scss']
+    templateUrl: './cucurbita.component.html',
+    styleUrls: ['../../pages.scss', '../../../shared/dialog/dialog.component.scss']
 })
+
 export class CucurbitaComponent implements OnInit {
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }
