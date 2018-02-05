@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'prz-leafy-facilities',
-  templateUrl: './leafy-facilities.component.html',
-  styleUrls: ['./leafy-facilities.component.scss']
+    templateUrl: './leafy-facilities.component.html',
+    styleUrls: ['../../pages.scss', '../../../shared/dialog/dialog.component.scss']
 })
 export class LeafyFacilitiesComponent implements OnInit {
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }
