@@ -22,7 +22,7 @@ export class CucurbitaComponent implements OnInit, OnDestroy {
                             'Борба с болести, неприятели и плевели при краставици, пъпеши и тиквички в оранжерии.';
     private keywords = 'краставици, пъпеши, тиквички, болести, неприятели, плевели, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Тиквови култури в съоражения';
+    breadcrumbName = 'Тиквови';
 
     isLoaded = false;
     practices: Practice[] = [];

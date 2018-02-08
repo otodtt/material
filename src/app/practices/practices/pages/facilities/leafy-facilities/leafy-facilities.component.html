@@ -1,8 +1,8 @@
-<!-- <div class="row text-center" id="prz-loader" *ngIf="!isLoaded">
+<div class="row text-center" id="prz-loader" *ngIf="!isLoaded">
     <mat-spinner aria-label="Спинър до зареждането на страницата"></mat-spinner>
-</div> -->
-<!-- *ngIf="isLoaded" -->
-<div  id="wrap_lmenu_txt">
+</div>
+
+<div *ngIf="isLoaded" id="wrap_lmenu_txt">
     <div class="text-center name-header">
         <h2 class="customfont">ЗЕЛЕНЧУЦИ В КУЛТИВАЦИОННИ СЪОРАЖЕНИЯ</h2>
     </div>
@@ -186,7 +186,7 @@
     </div>
     <!-- КРАЙ Избор на Вредител -->
 
-    <!-- <div *ngFor="let practice of practices">
+    <div *ngFor="let practice of practices">
         <div class="aa-title" id="{{practice.linkId}}"></div>
         <div class="row" >
             <div class="pest-description-container text-indent" [innerHTML]="practice.text  | safeHtml"></div>
@@ -222,11 +222,40 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     
+    <!-- Автори на снимки -->
+    <br><br>
+    <div class="row">
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Използвани са снимки от:
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="panel-body my_panel-body">
+                    <p>
+                        <span class="bold">Снимка 1:</span>
+                        <span>By Rasbak - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=1196322</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 2:</span>
+                        <span>By Caroline Harding, MAF - This image is found here at PaDIL, a source of images designed for Biosecurity and Biodiversity.This tag does not indicate the copyright status of the attached work. A normal copyright tag is still required. See Commons:Licensing for more information.PaDIL, CC BY 3.0 au, https://commons.wikimedia.org/w/index.php?curid=16228320</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 3:</span>
+                        <span>By Hectonichus - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=40008798</span>
+                    </p>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+    <!-- КРАЙ Автори на снимки -->
+</div>
 
     <!-- Мана по салатата -->
-    <div class="aa-title" id="bremia-lactucae"></div>
+    <!-- <div class="aa-title" id="bremia-lactucae"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Мана по салатата - <span class="latin_name">Bremia lactucae</span></h3>
@@ -262,11 +291,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Мана по салатата -->   
 
     <!-- Мана по спанака -->
-    <div class="aa-title" id="peronospora"></div>
+    <!-- <div class="aa-title" id="peronospora"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Мана по спанака - <span class="latin_name">Peronospora effusa</span></h3>
@@ -286,17 +315,17 @@
             </p>
             <h4 class="my_class_h4 as">Активни вещества</h4>
             <p class="as">
-                    Няма регистрирани препарати.
+                Няма регистрирани препарати.
             </p>
         </div>
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Мана по спанака -->   
 
     <!-- Вируси -->
-    <div class="aa-title" id="viruses"></div>
+    <!-- <div class="aa-title" id="viruses"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Мозайка по салатата - <span class="latin_name">Lettuce mosaic virus (LMV)</span></h3>
@@ -329,11 +358,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Вируси -->   
 
     <!-- Листни въшки -->
-    <div class="aa-title" id="dysaphis-crataegi"></div>
+    <!-- <div class="aa-title" id="dysaphis-crataegi"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Листни въшки - <span class="latin_name">Dysaphis crataegi, Pemphigus bursarius</span></h3>
@@ -364,11 +393,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Листни въшки -->   
 
     <!-- Нощенки -->
-    <div class="aa-title" id="agrotis-ipsilon"></div>
+    <!-- <div class="aa-title" id="agrotis-ipsilon"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Нощенки</h3>
@@ -414,11 +443,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Нощенки -->   
 
     <!-- Голи охлюви -->
-    <div class="aa-title" id="limacidae"></div>
+    <!-- <div class="aa-title" id="limacidae"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Голи охлюви - <span class="latin_name">Limacidae</span></h3>
@@ -459,11 +488,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Голи охлюви -->   
 
     <!-- Попово прасе -->
-    <div class="aa-title" id="grylotalpa"></div>
+    <!-- <div class="aa-title" id="grylotalpa"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Попово прасе - <span class="latin_name">Grylotalpa grylotalpa</span></h3>
@@ -494,43 +523,10 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Попово прасе -->
     
-
-    <!-- Автори на снимки -->
-    <br><br>
-    <div class="row">
-        <mat-accordion>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        Използвани са снимки от:
-                    </mat-panel-title>
-                </mat-expansion-panel-header>
-                <div class="panel-body my_panel-body">
-                    <p>
-                        <span class="bold">Снимка 1:</span>
-                        <span>By Rasbak - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=1196322</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 2:</span>
-                        <span>By Caroline Harding, MAF - This image is found here at PaDIL, a source of images designed for Biosecurity and Biodiversity.This tag does not indicate the copyright status of the attached work. A normal copyright tag is still required. See Commons:Licensing for more information.PaDIL, CC BY 3.0 au, https://commons.wikimedia.org/w/index.php?curid=16228320</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 3:</span>
-                        <span>By Hectonichus - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=40008798</span>
-                    </p>
-                </div>
-            </mat-expansion-panel>
-        </mat-accordion>
-    </div>
-    <!-- КРАЙ Автори на снимки -->
-</div>
-           
-                
-            
-                
+    
 <!--  -->
 <!-- <div class="aa-title" id=""></div>
 <div class="row" >
