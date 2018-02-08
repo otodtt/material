@@ -1,8 +1,8 @@
-<!-- <div class="row text-center" id="prz-loader" *ngIf="!isLoaded">
+<div class="row text-center" id="prz-loader" *ngIf="!isLoaded">
     <mat-spinner aria-label="Спинър до зареждането на страницата"></mat-spinner>
-</div> -->
-<!-- *ngIf="isLoaded" -->
-<div  id="wrap_lmenu_txt">
+</div>
+
+<div *ngIf="isLoaded" id="wrap_lmenu_txt">
     <div class="text-center name-header">
         <h2 class="customfont">ЗЕЛЕНЧУЦИ В КУЛТИВАЦИОННИ СЪОРАЖЕНИЯ</h2>
     </div>
@@ -309,7 +309,7 @@
     </div>
     <!-- КРАЙ Избор на Вредител -->
 
-    <!-- <div *ngFor="let practice of practices">
+    <div *ngFor="let practice of practices">
         <div class="aa-title" id="{{practice.linkId}}"></div>
         <div class="row" >
             <div class="pest-description-container text-indent" [innerHTML]="practice.text  | safeHtml"></div>
@@ -345,10 +345,44 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
+
+    <!-- Автори на снимки -->
+    <br><br>
+    <div class="row">
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Използвани са снимки от:
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="panel-body my_panel-body">
+                    <p>
+                        <span class="bold">Снимка 1:</span>
+                        <span>Public Domain, https://commons.wikimedia.org/w/index.php?curid=771997</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 2:</span>
+                        <span>By Dr. Janos Bodor - http://calphotos.berkeley.edu/cgi/img_query?enlarge=0000+0000+1010+1893, Public Domain, https://commons.wikimedia.org/w/index.php?curid=29088893</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 3:</span>
+                        <span>By James Lindsey at Ecology of Commanster, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=1971279</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 4:</span>
+                        <span>By Opuntia - Собствена творба, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=2619812</span>
+                    </p>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+    <!-- КРАЙ Автори на снимки -->
+</div>
 
     <!-- Болести по младите -->
-    <div class="aa-title" id="pythium"></div>
+    <!-- <div class="aa-title" id="pythium"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Болести по младите растения - <span class="latin_name">Pythium spp., Phytophthora spp., Rhizoctonia solani, Fusarium spp., Botrytis cinerea</span>.</h3>
@@ -397,11 +431,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ  -->   
 
     <!-- Сиво гниене -->
-    <div class="aa-title" id="botrytis-cinerea"></div>
+    <!-- <div class="aa-title" id="botrytis-cinerea"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Сиво гниене - <span class="latin_name">Botrytis cinerea</span></h3>
@@ -437,11 +471,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Сиво гниене -->
 
     <!-- Брашнести мани -->
-    <div class="aa-title" id="oidium"></div>
+    <!-- <div class="aa-title" id="oidium"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Брашнести мани - <span class="latin_name">Sphaerotheca pannosa, Oidium chrysanthemi</span></h3>
@@ -479,11 +513,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Брашнести мани --> 
 
     <!-- Склеротинийно гниене -->
-    <div class="aa-title" id="sclerotinia"></div>
+    <!-- <div class="aa-title" id="sclerotinia"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Склеротинийно гниене - <span class="latin_name">Sclerotinia sclerotiorum</span></h3>
@@ -511,11 +545,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Склеротинийно гниене -->   
 
     <!-- Мани -->
-    <div class="aa-title" id="pseudoperonospora"></div>
+    <!-- <div class="aa-title" id="pseudoperonospora"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Мани - <span class="latin_name">Pseudoperonospora sparsa, Peronospora grisea</span></h3>
@@ -542,17 +576,17 @@
                 За профилактични третирания: <span class="active-substance">хлороталонил, манкозеб, пропамокарб.</span>
             </p>
             <p class="as">
-                    С лекуващо действие: .<span class="active-substance">металаксил</span>
+                С лекуващо действие: .<span class="active-substance">металаксил</span>
             </p>
         </div>
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Мани -->   
 
     <!-- Ръжди -->
-    <div class="aa-title" id="uromyces-dianthi"></div>
+    <!-- <div class="aa-title" id="uromyces-dianthi"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Ръжди - <span class="latin_name">Uromyces dianthi, Puccinia horiana</span></h3>
@@ -579,11 +613,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Ръжди -->   
 
     <!-- Увяхвания -->
-    <div class="aa-title" id="verticillium-albo-atrum"></div>
+    <!-- <div class="aa-title" id="verticillium-albo-atrum"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Увяхвания - <span class="latin_name">Verticillium albo-atrum, V. dahliae, Fusarium oxysporum, Phytophthora spp., Rhizoctonia solani, Botrytis cinerea, Pythium spp</span>.</h3>
@@ -625,11 +659,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Увяхвания -->   
 
     <!-- Бактерийни болести -->
-    <div class="aa-title" id="bacterials"></div>
+    <!-- <div class="aa-title" id="bacterials"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Бактерийни болести</h3>
@@ -665,11 +699,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ  -->   
 
     <!-- Вирусни болести -->
-    <div class="aa-title" id="viruses"></div>
+    <!-- <div class="aa-title" id="viruses"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Вирусни болести</h3>
@@ -730,11 +764,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Бактерийни болести -->   
 
     <!-- Листни въшки -->
-    <div class="aa-title" id="aphidae"></div>
+    <!-- <div class="aa-title" id="aphidae"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Листни въшки</h3>
@@ -789,11 +823,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Листни въшки -->   
 
     <!-- Бeлoкpилки -->
-    <div class="aa-title" id="trialeurodes"></div>
+    <!-- <div class="aa-title" id="trialeurodes"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Бeлoкpилки - <span class="latin_name">Trialeurodes vaporariorum, Bemisia tabaci</span></h3>
@@ -871,11 +905,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Бeлoкpилки -->   
 
     <!-- Трипси -->
-    <div class="aa-title" id="thrips"></div>
+    <!-- <div class="aa-title" id="thrips"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Трипси - <span class="latin_name">Frankliniella occidentalis, Thrips tabaci</span></h3>
@@ -937,11 +971,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Трипси -->   
 
     <!-- Акари -->
-    <div class="aa-title" id="tetranychus"></div>
+    <!-- <div class="aa-title" id="tetranychus"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Акари - <span class="latin_name">Tetranychus urticae, Steneotarsonemus pallidus, Polyphagotarsonemus latus, Revipalpus obovatus</span></h3>
@@ -995,11 +1029,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Акари -->   
 
     <!-- Листоминиращи мухи -->
-    <div class="aa-title" id="liriomyza"></div>
+    <!-- <div class="aa-title" id="liriomyza"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Листоминиращи мухи от род <span class="latin_name">Liriomyza</span></h3>
@@ -1073,11 +1107,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Листоминиращи мухи -->   
 
     <!-- Лъжещиноносни и щитоносни въшки -->
-    <div class="aa-title" id="lice"></div>
+    <!-- <div class="aa-title" id="lice"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Лъжещиноносни и щитоносни въшки</h3>
@@ -1119,11 +1153,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Лъжещиноносни и щитоносни въшки -->   
 
     <!-- Листозавивачки -->
-    <div class="aa-title" id="tortricidae"></div>
+    <!-- <div class="aa-title" id="tortricidae"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Листозавивачки - <span class="latin_name">Tortricidae</span></h3>
@@ -1163,11 +1197,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Листозавивачки -->   
 
     <!-- Гъсеници -->
-    <div class="aa-title" id="leptidopera"></div>
+    <!-- <div class="aa-title" id="leptidopera"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Гъсеници</h3>
@@ -1199,11 +1233,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Гъсеници -->   
 
     <!-- Малка полска нощенка -->
-    <div class="aa-title" id="spodoptera"></div>
+    <!-- <div class="aa-title" id="spodoptera"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Малка полска нощенка - <span class="latin_name">Spodoptera exigua</span></h3>
@@ -1236,11 +1270,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Малка полска нощенка -->   
 
     <!-- Листни нематоди -->
-    <div class="aa-title" id="aphelenchoides"></div>
+    <!-- <div class="aa-title" id="aphelenchoides"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Листни нематоди - <span class="latin_name">Aphelenchoides ritzemabosi, Ditylenchus dipsaci</span></h3>
@@ -1273,11 +1307,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Листни нематоди -->   
 
     <!-- Галови нематоди -->
-    <div class="aa-title" id="meloidogyne"></div>
+    <!-- <div class="aa-title" id="meloidogyne"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Галови нематоди - <span class="latin_name">Meloidogyne spp.</span></h3>
@@ -1309,11 +1343,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Галови нематоди -->   
 
     <!-- Голи охлюви -->
-    <div class="aa-title" id="limacidae"></div>
+    <!-- <div class="aa-title" id="limacidae"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Голи охлюви</h3>
@@ -1341,11 +1375,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Голи охлюви -->  
 
     <!-- Сциаридни мухи -->
-    <div class="aa-title" id="sciaridae"></div>
+    <!-- <div class="aa-title" id="sciaridae"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Сциаридни мухи - <span class="latin_name">Sciaridae</span></h3>
@@ -1382,11 +1416,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Сциаридни мухи -->   
 
     <!-- Хоботници -->
-    <div class="aa-title" id="otiorhynchus"></div>
+    <!-- <div class="aa-title" id="otiorhynchus"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Хоботници - <span class="latin_name">Otiorhynchus spp.</span></h3>
@@ -1426,11 +1460,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Хоботници -->  
 
     <!-- Плевели -->
-    <div class="aa-title" id="weed"></div>
+    <!-- <div class="aa-title" id="weed"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Плевели</h3>
@@ -1476,11 +1510,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Плевели -->   
 
     <!-- Растежни регулатори -->
-    <div class="aa-title" id="regulathors"></div>
+    <!-- <div class="aa-title" id="regulathors"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Растежни регулатори</h3>
@@ -1544,42 +1578,10 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Растежни регулатори -->  
 
-    <!-- Автори на снимки -->
-    <br><br>
-    <div class="row">
-        <mat-accordion>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        Използвани са снимки от:
-                    </mat-panel-title>
-                </mat-expansion-panel-header>
-                <div class="panel-body my_panel-body">
-                    <p>
-                        <span class="bold">Снимка 1:</span>
-                        <span>Public Domain, https://commons.wikimedia.org/w/index.php?curid=771997</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 2:</span>
-                        <span>By Dr. Janos Bodor - http://calphotos.berkeley.edu/cgi/img_query?enlarge=0000+0000+1010+1893, Public Domain, https://commons.wikimedia.org/w/index.php?curid=29088893</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 3:</span>
-                        <span>By James Lindsey at Ecology of Commanster, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=1971279</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 4:</span>
-                        <span>By Opuntia - Собствена творба, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=2619812</span>
-                    </p>
-                </div>
-            </mat-expansion-panel>
-        </mat-accordion>
-    </div>
-    <!-- КРАЙ Автори на снимки -->
-</div>
+    
        
             
         

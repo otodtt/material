@@ -1,8 +1,8 @@
-<!-- <div class="row text-center" id="prz-loader" *ngIf="!isLoaded">
+<div class="row text-center" id="prz-loader" *ngIf="!isLoaded">
     <mat-spinner aria-label="Спинър до зареждането на страницата"></mat-spinner>
-</div> -->
-<!-- *ngIf="isLoaded" -->
-<div  id="wrap_lmenu_txt">
+</div>
+
+<div *ngIf="isLoaded" id="wrap_lmenu_txt">
     <div class="text-center name-header">
         <h2 class="customfont">ЗЕЛЕНЧУЦИ В КУЛТИВАЦИОННИ СЪОРАЖЕНИЯ</h2>
     </div>
@@ -346,7 +346,7 @@
     </div>
     <!-- КРАЙ Избор на Вредител -->
 
-    <!-- <div *ngFor="let practice of practices">
+    <div *ngFor="let practice of practices">
         <div class="aa-title" id="{{practice.linkId}}"></div>
         <div class="row" >
             <div class="pest-description-container text-indent" [innerHTML]="practice.text  | safeHtml"></div>
@@ -382,11 +382,56 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
+    <!-- Автори на снимки -->
+    <br><br>
+    <div class="row">
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Използвани са снимки от:
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="panel-body my_panel-body">
+                    <p>
+                        <span class="bold">Снимка 1:</span>
+                        <span>By Christian Hummert (Ixitixel) - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=4600566</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 2:</span>
+                        <span>By Jymm - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=7999438</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 3:</span>
+                        <span>By David B. Langston - This image is Image Number 5077012 at Forestry Images, a source for forest health, natural resources and silviculture images operated by The Bugwood Network at the University of Georgia and the USDA Forest Service., CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=6863955</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 4:</span>
+                        <span>CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=39889</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 5:</span>
+                        <span>By Frank Peairs, Colorado State University, Bugwood.org - This image is Image Number 5364132 at Invasive.org, a source for images of invasive and exotic species operated by The Bugwood Network at the University of Georgia and the USDA APHIS Plant Protection and Quarantine program., CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=11272182</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 6:</span>
+                        <span>By AfroBrazilian - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=27497326</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 7:</span>
+                        <span>CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=327301</span>
+                    </p>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+    <!-- КРАЙ Автори на снимки -->
+</div>
 
     <!-- Сечене -->
-    <div class="aa-title" id="pythium"></div>
+    <!-- <div class="aa-title" id="pythium"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Сечене, кореново гниене - <span class="latin_name">Pythium spp., Rhizoctonia solani, Phytophthora cryptogea</span></h3>
@@ -452,11 +497,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Сечене -->   
 
     <!-- Mана -->
-    <div class="aa-title" id="pseudoperonospora"></div>
+    <!-- <div class="aa-title" id="pseudoperonospora"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Mана - <span class="latin_name">Pseudoperonospora cubensis</span></h3>
@@ -498,11 +543,11 @@
                 </li>
             </ul> 
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Mана -->   
 
     <!-- Брашнеста мана -->
-    <div class="aa-title" id="podosphaera-xanthii"></div>
+    <!-- <div class="aa-title" id="podosphaera-xanthii"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Брашнеста мана - <span class="latin_name">Podosphaera xanthii, Erisyphe cichoracearum</span></h3>
@@ -554,11 +599,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Брашнеста мана -->   
 
     <!-- Фузарийно увяхване -->
-    <div class="aa-title" id="fusarium-oxysporum"></div>
+    <!-- <div class="aa-title" id="fusarium-oxysporum"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Фузарийно и вертицилийно увяхване - <span class="latin_name">Fusarium oxysporum u Vericillium spp.</span></h3>
@@ -625,11 +670,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Фузарийно увяхване -->   
 
     <!-- Бяло гниене -->
-    <div class="aa-title" id="sclerotinia"></div>
+    <!-- <div class="aa-title" id="sclerotinia"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Бяло гниене - <span class="latin_name">Sclerotinia sclerotiorum</span></h3>
@@ -671,11 +716,11 @@
                     </li>
                 </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Бяло гниене -->   
 
     <!-- Сиво гниене -->
-    <div class="aa-title" id="botrytis-cinerea"></div>
+    <!-- <div class="aa-title" id="botrytis-cinerea"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Сиво гниене - <span class="latin_name">Botryotinia fuckeliana (Botrytis cinerea)</span></h3>
@@ -716,11 +761,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Сиво гниене -->   
 
     <!-- Фомопсис -->
-    <div class="aa-title" id="phomopsis-sclerotioides"></div>
+    <!-- <div class="aa-title" id="phomopsis-sclerotioides"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Фомопсис - <span class="latin_name">Phomopsis sclerotioides</span></h3>
@@ -747,11 +792,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Фомопсис -->   
 
     <!-- Черно стъблено гниене -->
-    <div class="aa-title" id="didymella"></div>
+    <!-- <div class="aa-title" id="didymella"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Черно стъблено гниене - <span class="latin_name">Didymella bryonae</span></h3>
@@ -807,11 +852,11 @@
                 </li>
             </ul> 
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Черно стъблено гниене -->   
 
     <!-- Бактериоза -->
-    <div class="aa-title" id="pseudomonas-syringae"></div>
+    <!-- <div class="aa-title" id="pseudomonas-syringae"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Бактериоза (ъгловати петна) - <span class="latin_name">Pseudomonas syringae pv. Lachrymans</span></h3>
@@ -853,11 +898,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Бактериоза -->   
 
     <!-- Вирусни болести -->
-    <div class="aa-title" id="viruses"></div>
+    <!-- <div class="aa-title" id="viruses"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Вирусни болести - <span class="latin_name">Cucumber mosaic cucumovirus, Cucumber green mottle mosaic tobamovirus, Cucurbit yellow stunting disorder closterovirus, Melon necrotic spot carmovirus, Watermelon mosaic potyvirus, Zucchini yellow mosaic potyvirus</span>.</h3>
@@ -948,11 +993,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Вирусни болести -->   
 
     <!-- Белокрилки -->
-    <div class="aa-title" id="trialeurodes"></div>
+    <!-- <div class="aa-title" id="trialeurodes"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Белокрилки (оранжерийна, тютюнева) - <span class="latin_name">Trialeurodes vaporariorum, Bemisia tabaci</span></h3>
@@ -1064,11 +1109,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ  -->   
 
     <!-- Листни въшки -->
-    <div class="aa-title" id="aphidae"></div>
+    <!-- <div class="aa-title" id="aphidae"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Листни въшки - <span class="latin_name">Aphidae</span></h3>
@@ -1130,11 +1175,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Листни въшки -->   
 
     <!-- Трипс -->
-    <div class="aa-title" id="thrips"></div>
+    <!-- <div class="aa-title" id="thrips"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Трипс (тютюнев, калифорнийки) - <span class="latin_name">Thrips tabaci, Frankliniella occidentalis</span></h3>
@@ -1200,11 +1245,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Трипс -->   
 
     <!-- Акари -->
-    <div class="aa-title" id="acarina"></div>
+    <!-- <div class="aa-title" id="acarina"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Акари - <span class="latin_name">Acarina</span></h3>
@@ -1268,7 +1313,6 @@
                     дикофол, диоктил сулфовсукцинат, пиридабен, пропаргит, тебуфенпирад, фенпироксимат, 
                     фенпропатрин, флуфеноксурон, хекситиазокс.</span>
             </p>
-
             <h3 >Перфориращ акар - <span class="latin_name">Tyrophagus longior</span></h3>
             <h4 class="my_class_h4">Описание на неприятеля</h4>
             <p>
@@ -1308,11 +1352,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Акари -->   
 
     <!-- Листоминиращи мухи -->
-    <div class="aa-title" id="liriomyza"></div>
+    <!-- <div class="aa-title" id="liriomyza"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Листоминиращи мухи - <span class="latin_name">Liriomyza spp.</span></h3>
@@ -1392,11 +1436,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ  -->   
 
     <!-- Нематоди -->
-    <div class="aa-title" id="meloidogyne"></div>
+    <!-- <div class="aa-title" id="meloidogyne"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Нематоди - <span class="latin_name">Meloidogyne spp.</span></h3>
@@ -1448,7 +1492,7 @@
             </thead>
             <tbody>
                 <tr class="tr_name_pest">
-                    <td colspan="3" class="tr_latin">ОРАНЖЕРИЙНА БЕЛОКРИЛКА <span class="latin_name">Тrialeurodes vaporariorum</span></td>
+                    <td colspan="3" class="tr_latin">ГАЛООБРАЗУВАЩИ НЕМАТОДИ род <span class="latin_name">Мeloidogyne</span></td>
                 </tr>
                 <tr>
                     <td>преди разсаждане</td>
@@ -1462,11 +1506,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Нематоди -->   
 
     <!-- Нощенки -->
-    <div class="aa-title" id="leptidopera"></div>
+    <!-- <div class="aa-title" id="leptidopera"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Нощенки и други пеперуди - <span class="latin_name">Leptidopera</span></h3>
@@ -1569,11 +1613,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Нощенки -->  
 
     <!-- Плевели -->
-    <div class="aa-title" id="weed"></div>
+    <!-- <div class="aa-title" id="weed"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Плевели</h3>
@@ -1611,54 +1655,9 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Плевели -->  
 
-    <!-- Автори на снимки -->
-    <br><br>
-    <div class="row">
-        <mat-accordion>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        Използвани са снимки от:
-                    </mat-panel-title>
-                </mat-expansion-panel-header>
-                <div class="panel-body my_panel-body">
-                    <p>
-                        <span class="bold">Снимка 1:</span>
-                        <span>By Christian Hummert (Ixitixel) - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=4600566</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 2:</span>
-                        <span>By Jymm - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=7999438</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 3:</span>
-                        <span>By David B. Langston - This image is Image Number 5077012 at Forestry Images, a source for forest health, natural resources and silviculture images operated by The Bugwood Network at the University of Georgia and the USDA Forest Service., CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=6863955</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 4:</span>
-                        <span>CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=39889</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 5:</span>
-                        <span>By Frank Peairs, Colorado State University, Bugwood.org - This image is Image Number 5364132 at Invasive.org, a source for images of invasive and exotic species operated by The Bugwood Network at the University of Georgia and the USDA APHIS Plant Protection and Quarantine program., CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=11272182</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 6:</span>
-                        <span>By AfroBrazilian - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=27497326</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 7:</span>
-                        <span>CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=327301</span>
-                    </p>
-                </div>
-            </mat-expansion-panel>
-        </mat-accordion>
-    </div>
-    <!-- КРАЙ Автори на снимки -->
-</div>
    
         
     
