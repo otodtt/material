@@ -62,7 +62,12 @@ INSERT INTO `cultures` (`id`, `group_id`, `name`, `latin_name`, `created_at`, `u
 (20, 4, 'Лукови култури', 'onion', '2018-01-21 09:03:43', '2018-01-21 09:03:43'),
 (21, 4, 'Зелеви култури', 'cabbage', '2018-01-21 09:05:08', '2018-01-21 09:05:08'),
 (22, 4, 'Тиквови култури', 'pumpkin', '2018-01-21 09:06:20', '2018-01-21 09:06:20'),
-(23, 4, 'Листни зеленчуци', 'leafy', '2018-01-21 09:08:05', '2018-01-21 09:08:05');
+(23, 4, 'Листни зеленчуци', 'leafy', '2018-01-21 09:08:05', '2018-01-21 09:08:05'),
+(24, 5, 'Домати', 'solanum-lycopersicum', '2018-02-02 08:03:38', '2018-02-02 08:03:38'),
+(25, 5, 'Тиквови', 'cucurbitaceae', '2018-02-02 08:27:06', '2018-02-08 07:34:02'),
+(26, 5, 'Украсни', 'decorate', '2018-02-02 08:28:15', '2018-02-02 08:28:28'),
+(27, 5, 'Пипер', 'capsicum-annuum', '2018-02-02 08:29:10', '2018-02-02 08:29:10'),
+(28, 5, 'Листни зеленчуци', 'leafy-facilities', '2018-02-02 08:34:06', '2018-02-02 08:34:06');
 
 --
 -- Indexes for dumped tables
@@ -82,7 +87,7 @@ ALTER TABLE `cultures`
 -- AUTO_INCREMENT for table `cultures`
 --
 ALTER TABLE `cultures`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
