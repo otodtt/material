@@ -193,12 +193,12 @@ const pages = [
             {
                 id: 0,
                 subName: 'Семкови овощни видове',
-                link: '#'
+                link: 'seed-species'
             },
             {
                 id: 1,
                 subName: 'Костилкови овощни видове',
-                link: '#'
+                link: 'stone-species'
             }
         ],
     },
@@ -210,24 +210,24 @@ const pages = [
             {
                 id: 0,
                 subName: 'Ягода',
-                link: '#'
+                link: 'fragaria'
             },
             {
                 id: 1,
                 subName: 'Малина',
-                link: '#'
+                link: 'rubus-idaeus'
             },
             {
                 id: 2,
                 subName: 'Касис',
-                link: '#'
+                link: 'ribes-nigrum'
             }
         ],
     },
     {
         id: 8,
         name: 'лоза',
-        link: 'vine',
+        link: 'vitis-vinifera',
         subPage: null
     },
 ];

@@ -53,11 +53,16 @@ import { CucurbitaComponent } from './practices/pages/facilities/cucurbita/cucur
 import { DecorateComponent } from './practices/pages/facilities/decorate/decorate.component';
 import { CapsicumComponent } from './practices/pages/facilities/capsicum/capsicum.component';
 import { LeafyFacilitiesComponent } from './practices/pages/facilities/leafy-facilities/leafy-facilities.component';
+import { TableComponent } from './practices/shared/table/table.component';
+import { SeedComponent } from './practices/pages/fruits/seed/seed.component';
+import { StoneComponent } from './practices/pages/fruits/stone/stone.component';
+import { FragariaComponent } from './practices/pages/strawberry/fragaria/fragaria.component';
+import { RubusComponent } from './practices/pages/strawberry/rubus/rubus.component';
+import { NigrumComponent } from './practices/pages/strawberry/nigrum/nigrum.component';
+import { VitisComponent } from './practices/pages/vitis/vitis.component';
 
 // Management
 import { ManagementComponent } from './management/management/management.component';
-import { TableComponent } from './practices/shared/table/table.component';
-
 
 @NgModule({
     imports: [
@@ -104,6 +109,12 @@ import { TableComponent } from './practices/shared/table/table.component';
         DecorateComponent,
         CapsicumComponent,
         LeafyFacilitiesComponent,
+        SeedComponent,
+        StoneComponent,
+        FragariaComponent,
+        RubusComponent,
+        NigrumComponent,
+        VitisComponent,
     ],
     providers: [PracticesService],
     entryComponents: [SideMenuComponent, DialogComponent],

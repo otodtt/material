@@ -40,8 +40,18 @@ import { DecorateComponent } from './practices/pages/facilities/decorate/decorat
 import { CapsicumComponent } from './practices/pages/facilities/capsicum/capsicum.component';
 import { LeafyFacilitiesComponent } from './practices/pages/facilities/leafy-facilities/leafy-facilities.component';
 
+// Fruits
+import { SeedComponent } from './practices/pages/fruits/seed/seed.component';
+import { StoneComponent } from './practices/pages/fruits/stone/stone.component';
+
+// Strawberry
+import { FragariaComponent } from './practices/pages/strawberry/fragaria/fragaria.component';
+import { RubusComponent } from './practices/pages/strawberry/rubus/rubus.component';
+import { NigrumComponent } from './practices/pages/strawberry/nigrum/nigrum.component';
+
 // Management
 import { ManagementComponent } from './management/management/management.component';
+import { VitisComponent } from './practices/pages/vitis/vitis.component';
 
 export const routes: Routes = [
     { path: '', component: PracticesComponent, children: [
@@ -76,6 +86,12 @@ export const routes: Routes = [
         { path: 'decorate', component: DecorateComponent},
         { path: 'capsicum-annuum', component: CapsicumComponent},
         { path: 'leafy-facilities', component: LeafyFacilitiesComponent},
+        { path: 'seed-species', component: SeedComponent},
+        { path: 'stone-species', component: StoneComponent},
+        { path: 'fragaria', component: FragariaComponent},
+        { path: 'rubus-idaeus', component: RubusComponent},
+        { path: 'ribes-nigrum', component: NigrumComponent},
+        { path: 'vitis-vinifera', component: VitisComponent},
     ]},
     { path: 'management', component: ManagementComponent }
 ];
