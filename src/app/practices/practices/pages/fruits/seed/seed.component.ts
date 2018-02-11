@@ -11,4 +11,5 @@ export class SeedComponent implements OnInit {
     ngOnInit() {
     }
 
+    doScroll() {}
 }

@@ -56,6 +56,10 @@
         background-color: #f0ffff;
     }
 
+    .piv_table tbody tr .middle-first {
+        text-align: center;
+    }
+    
     @media (max-width: 480px){
         .piv_table th {
             .small-name-piv {

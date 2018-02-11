@@ -52,7 +52,6 @@ export class TriticumComponent implements OnInit, OnDestroy {
             .subscribe((practices: Practice[]) => {
                 this.practices = practices;
                 this.isLoaded = true;
-                // console.log(this.practices);
             });
     }
 
@@ -63,7 +62,6 @@ export class TriticumComponent implements OnInit, OnDestroy {
     }
 
     doScroll(): void {
-        // this.structure.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'start' });
         this.structure.nativeElement.scrollIntoView();
     }
 
