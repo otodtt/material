@@ -26,3 +26,9 @@
         display: initial
     }
 }
+
+@media (max-width: 320px) {
+    .mils_table {
+        font-size: 0.9em;
+    }
+}
