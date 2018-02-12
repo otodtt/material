@@ -21,7 +21,7 @@ export class OnionComponent implements OnInit, OnDestroy {
                             ' Борба с болести, неприятели и плевели при чесън, лук, праз.';
     private keywords = 'чесън, лук, праз, болести, неприятели, плевели, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Лукови култури';
+    breadcrumbName = 'Лукови';
 
     isLoaded = false;
     practices: Practice[] = [];

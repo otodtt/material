@@ -22,7 +22,7 @@ export class PumpkinComponent implements OnInit, OnDestroy {
                             ' Борба с болести, неприятели и плевели при краставици, тиквички, тикви, дини, пъпеши.';
     private keywords = 'краставици, тиквички, тикви, дини, пъпеши, болести, неприятели, плевели, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Тиквови култури';
+    breadcrumbName = 'Тиквови';
 
     isLoaded = false;
     practices: Practice[] = [];
