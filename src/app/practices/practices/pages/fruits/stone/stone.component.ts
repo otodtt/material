@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'prz-stone',
-  templateUrl: './stone.component.html',
-  styleUrls: ['./stone.component.scss']
+    templateUrl: './stone.component.html',
+    styleUrls: ['../../pages.scss']
 })
 export class StoneComponent implements OnInit {
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }
