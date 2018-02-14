@@ -21,11 +21,9 @@ export class ScrollButtonComponent implements OnInit {
     }
 
     scrollToTop() {
-        // animate({scrollTop : 0}, 800);
         this.el.nativeElement.getBoundingClientRect();
-        // console.log(this.el.nativeElement);
+        window.scrollTo({ left: 0, top: 0 });
         // window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
-        window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
     }
 
 }
