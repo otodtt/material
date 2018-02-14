@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'prz-fragaria',
-  templateUrl: './fragaria.component.html',
-  styleUrls: ['./fragaria.component.scss']
+    templateUrl: './fragaria.component.html',
+    styleUrls: ['../../pages.scss', '../../../shared/dialog/dialog.component.scss']
 })
 export class FragariaComponent implements OnInit {
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }
