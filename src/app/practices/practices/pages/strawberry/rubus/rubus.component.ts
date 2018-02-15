@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'prz-rubus',
-  templateUrl: './rubus.component.html',
-  styleUrls: ['./rubus.component.scss']
+    templateUrl: './rubus.component.html',
+    styleUrls: ['../../pages.scss', '../../../shared/dialog/dialog.component.scss']
 })
 export class RubusComponent implements OnInit {
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }

@@ -1,3 +1,1160 @@
-<p>
-  nigrum works!
-</p>
+<!-- <div class="row text-center" id="prz-loader" *ngIf="!isLoaded">
+    <mat-spinner aria-label="Спинър до зареждането на страницата"></mat-spinner>
+</div> -->
+<!-- *ngIf="isLoaded" -->
+<div  id="wrap_lmenu_txt">
+    <div class="text-center name-header">
+        <h2 class="customfont">ЯГОДОПЛОДНИ КУЛТУРИ</h2>
+    </div>
+    <div class="row-top">
+        <div class="text-center" id="content-logo">
+            <h4 id="forest">МИНИСТЕРСТВО НА ЗЕМЕДЕЛИЕТО И ГОРИТЕ</h4>
+            <h4 id="plant-protect">НАЦИОНАЛНА СЛУЖБА ЗА РАСТИТЕЛНА ЗАЩИТА</h4>
+        </div>
+    </div>
+    <div class="row text-right">
+        <img id="stamp" src="../../../../../assets/img/my_images/stamp_director.png" alt="печат и подпис на директор" />
+    </div>
+    <div class="row text-center">
+        <h1 >ДОБРА РАСТИТЕЛНОЗАЩИТНА ПРАКТИКА ПРИ КАСИС</h1>
+    </div>
+    <div class="row text-right">
+        <p class="number-eppo">№ на НСРЗ ДРЗП 2/093(1)</p>
+        <p class="number-eppo">№ на ЕРРО РР 2/26(1)</p>
+    </div>
+    <div class="row">
+        <div id="authors-wrap">
+            <p ><span class="bold authors">Авторски колектив :</span><br/>
+                ст.н.с.II ст. д-р Ньонка Велчева<br/>
+                ст.н.с.I ст. д.с.н. Никола Атанасов<br/>
+                ст.н.с.II ст. д-р Нонка Бакърджиева<br/>
+                ст.н.с.II ст. д-р Ганка Баева<br/>
+                н.с. д-р Елена Цолова<br/>
+                д-р Петър Николов - НСРЗ<br/>
+                Маргарита Ценова - НСРЗ
+            </p>
+        </div>
+    </div>
+    <div class="row text-center">
+        <span class="year bold">СОФИЯ 2006 г.</span>
+    </div>
+    <div class="row text-center">
+        <h2 >ДОБРА РАСТИТЕЛНОЗАЩИТНА ПРАКТИКА ПРИ КАСИС*</h2>
+    </div>
+        
+    <!--Специфична сфера на действие-->
+    <div class="row">
+        <div class="text-indent">
+            <h3 >Специфична сфера на действие</h3>
+            <p>Този стандарт очертава принципите на Добрата растителнозащитна практика при касис.</p>
+            <h3 >Специфично одобрение и поправка</h3>
+            <p >Първоначално одобрена през септември 2005 г. от НСРЗ</p>
+            <br/>
+            <p>
+                Основната цел на тази технология е да представи една добра растителнозащитна практика (ДРЗП) 
+                за опазване на касисовите насаждения от болести, неприятели и плевели.
+            </p>
+            <p>
+                ДРЗП включва всички възможни методи за борба с вредителите по касисовата култура. Целта им е 
+                намаляване или унищожаване на популациите неприятели, болести и плевели и получаване на 
+                високи добиви с добро качество.
+            </p>
+            <p>
+                Добрата растителнозащитна практика за касиса се основава на следните по-важни принципи:
+            </p>
+            <p>
+                - използване на сертифициран и свободен от вирусни и микоплазмени болести здрав посадъчен материал;
+            </p>
+            <p>
+                - засаждане на сортове, устойчиви към основните болести и неприятели;
+            </p>
+            <p>
+                - правилен избор на подходящи площи за нови насаждения;
+            </p>
+            <p>
+                - спазване на всички основни агротехнически мероприятия за отглеждане на културата (мястото 
+                за засаждане да е изцяло изложено на слънчева светлина и да осигурява добра въздушна 
+                циркулация, да е добре защитено от отрицателните температури през зимните месеци, почвата да 
+                е с добър въздушен дренаж);
+            </p>
+            <p>
+                От френските грозда у нас се отглеждат основно черен касис, следван от червен и бял касис.
+            </p>
+        </div>
+    </div>
+    <!--КРАЙ Специфична сфера на действие-->
+    
+    <!-- Изтегляне на Приложения -->
+    <div class="row">
+        <div class="my_addendum text-indent">
+            <span class="span_addendum">
+                <a  class="href_addendum" 
+                    rel="noopener noreferrer" target="_blank"
+                    href="../../../../../assets/practices/8-jagodoplodni-prilojenie.pdf"
+                >
+                    * Виж приложение 7
+                </a>
+            </span>
+        </div>
+    </div>
+    <!-- КРАЙ Изтегляне на Приложения -->
+        
+    <!-- Избор на Вредител -->
+    <div class="aa-title" id="pest_menu"></div>
+    <div class="row">
+        <div id="pest_menu_links">
+            <h3 >Основни вредители по касиса са:</h3>
+            <ul id="menu_a">
+                <li>
+                    <a class="back_link" przAnchorTo target="#sphaerotheca" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Американска брашнеста мана - <span class="latin_name">Sphaerotheca morsuvae</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#drepanopeziza" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Антракноза - <span class="latin_name">Drepanopeziza ribis</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#mycosphaerella" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Септориоза - <span class="latin_name">Mycosphaerella ribis</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#cronartium" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Ръжди - <span class="latin_name">Cronartium ribicola, Puccinia ribes</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#verticillum" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Вертицилийно увяхване - <span class="latin_name">Verticillum wilt</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#botryotinia" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Сиво гниене - <span class="latin_name">Botryotinia fuckeliana</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#synanthedon" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Касисова стъкленка - <span class="latin_name">Synanthedon tipuliformis</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#agrilus" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Касисов агрилус - <span class="latin_name">Agrilus ribesi</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#cecidophyopsis" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Касисов пъпков акар - <span class="latin_name">Cecidophyopsis ribis</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#dasyneura" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Касисова листна галица - <span class="latin_name">Dasyneura tetensi</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#abraxas" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Бодлива педомерка - <span class="latin_name">Abraxas grossulariata</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#operophtera" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Малка зимна педомерка - <span class="latin_name">Operophtera brumata</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#tetranychus" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Паяжинообразуващи акари
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#aphididae" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Листни въшки - <span class="latin_name">Aphididae</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#nematus" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Листни оси
+                    </a>
+                </li>
+                <li>
+                    <a class="back_link" przAnchorTo target="#weed" title="към текста">
+                        <mat-icon>chevron_right</mat-icon>
+                        Плевели
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- КРАЙ Избор на Вредител -->
+    
+    <!-- <div *ngFor="let practice of practices">
+        <div class="aa-title" id="{{practice.linkId}}"></div>
+        <div class="row" >
+            <div class="pest-description-container text-indent" [innerHTML]="practice.text  | safeHtml"></div>
+            <div class="pest-image-container" *ngIf="practice.images?.length > 0">
+                <ul class="products">
+                    <li *ngFor="let image of practice.images">
+                        <a data-lightbox="image" href="{{image.imgPath}}" 
+                            data-title="{{image.imgTitle}}">
+                            <img threshold="200" lazy-load="{{image.thumbPath}}" 
+                                alt="{{image.thumbAlt}}" title="{{image.thumbTitle}}"/>
+                                <span class="title_thumb">{{image.bgName}}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row-back">
+            <div class="col-md-6" *ngIf="practice.tablePiv !== null">
+                <div class="panel-success text-center" >
+                    <div class="panel-heading">
+                        <button mat-button class="piv-button" (click)="openDialog(practice.tablePiv)">
+                            <span class="full-piv">ПРАГ НА ИКОНОМИЧЕСКА ВРЕДНИОСТ</span>
+                            <span class="small-piv">ВИЖ ПИВ</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel-warning text-center">
+                    <div class="panel-heading ">
+                        <a mat-button class="back_link_bottom" przAnchorTo target="#pest_menu" title="към всички неприятели"> виж друг неприятел</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Американска брашнеста мана -->
+    <div class="aa-title" id="sphaerotheca"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Американска брашнеста мана - <span class="latin_name">Sphaerotheca morsuvae</span></h3>
+            <h4 class="my_class_h4">Описание на болестта</h4>
+            <p>
+                Американската брашнеста мана е икономически важна гъбна болест при тaзи култура. Тя напада 
+                растежния връх, младите леторасти, листните и плодни дръжки, листната петура, цветовете и 
+                плодовете. Върху тях се образува плътен бял налеп. Най-вредоносна е болестта по растежния 
+                връх. Болните връхчета преустановяват развитието си, изкривяват се, а листата по тях остават 
+                дребни, деформирани, изсъхват и опадат преждевременно. Листата на долните етажи остават малки, 
+                изпъстрени с хлоротични петна и уродливи.
+            </p>
+            <p>
+                Характерно за американската брашнеста мана е обилното и продължително образуване на спори от 
+                паразита и върху двете страни на листата. Оптималната температура за заразяване с болестта е 
+                около 15°С, което обяснява силното й развитие при по-прохладно време.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Всички отглеждани сортове са чувствителни към американската брашнеста мана. Сравнително 
+                по-слабо се нападат Виктория, Рисаже и Голиат. Средно чувствителен е Богатир.
+            </p>
+            <p>
+                Степента на нападение от болестта се контролира чрез третирания с фунгициди. Добри резултати 
+                се постигат при норма на разход 100 л на декар. Първото третиране се провежда преди цъфтежа, 
+                а второто след 10-14 дни, в зависимост от продължителността на действие на фунгицида. Едно 
+                или две третирания се провеждат след беритбата на плодовете.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                <span class="active-substance">Динокап, фенаримол, фенпропиморф, хексаконазол, миклобутанил, пенконазол, триадимефон.</span>
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-warning panel-back-link text-center">
+                <div class="panel-heading panel-heading-back-link">
+                    <a  class="back_link_bottom">
+                        виж друг неприятел
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- КРАЙ Американска брашнеста мана --> 
+
+    <!-- Антракноза -->
+    <div class="aa-title" id="drepanopeziza"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Антракноза - <span class="latin_name">Drepanopeziza ribis</span></h3>
+            <h4 class="my_class_h4">Описание на болестта</h4>
+            <p>
+                Антракнозата е една от най-широко разпространените болести по френските грозда. Може да се 
+                развие по всички надземни части на растението, обаче върху листата признаците на болестта са 
+                най-ясно изразени. Върху тях се образуват петна, които са дребни, тъмнокафяви, почти черни, 
+                точковидни, закръглени до ъгловати, рязко ограничени, най-често събрани на групи, поради 
+                което се оформят некротични участъци. За кратко време нападнатите листа пожълтяват, 
+                покафеняват, изсъхват и опадат. Силно нападнатите храсти се обезлистват още в средата на 
+                лятото. Насажденията имат вид на прегорели. Инфекцията продължава да се развива и по вторично 
+                образуваните листа. Поради твърде ранния листопад, който причинява, болестта изтощава 
+                храстите, намалява количеството и влошава качеството на добива. Причинителят на антракнозата 
+                зимува главно върху окапалите листа. Определящ фактор в развитието на болестта са валежите.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                За опазване на френските грозда от антракноза е необходимо да се засаждат устойчиви сортове. 
+                Към антракнозата по-слабо чувствителни са: Победа, Алтайская десертная, а силна чувствителност 
+                проявяват Болдуин, Бремптон блек, Силвергитерс шварце, Котсуълд крос. Необходими са 3-4 
+                вегетационни третирания, като първото е преди цъфтежа, а останалите след прибиране на реколтата.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                <span class="active-substance">Хлороталонил, дитианон, додин, манкоцеб.</span>
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-warning panel-back-link text-center">
+                <div class="panel-heading panel-heading-back-link">
+                    <a  class="back_link_bottom">
+                        виж друг неприятел
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- КРАЙ Антракноза --> 
+
+    <!-- Септориоза -->
+    <div class="aa-title" id="mycosphaerella"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Септориоза - <span class="latin_name">Mycosphaerella ribis</span></h3>
+            <h4 class="my_class_h4">Описание на болестта</h4>
+            <p>
+                Болестта е разпространена при всички видове френски грозда. Предизвиква петносване, прегаряне 
+                и окапване на листата, което се отразява негативно върху изхранването на плодовете през 
+                текущата и следващата година. За разлика от антракнозата тук се нападат само листата. Петната 
+                са по-едри (1-6 мм диаметър), ъгловати до неправилно закръглени, в средата бели до 
+                сиво-охрени, ограничени от тъмен червено-кафяв венец, който навън се разлива към околната 
+                зелена тъкан. Болестта се проявява на места толкова силно, че причинява преждевременен 
+                листопад. Силно чувствителни към септориозата са сортовете: Силвергитерс шварце и 
+                Котсуълд крос, а по-слабо чувствителен е Алтайская десертная.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Както при антракнозата.
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-warning panel-back-link text-center">
+                <div class="panel-heading panel-heading-back-link">
+                    <a  class="back_link_bottom">
+                        виж друг неприятел
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- КРАЙ Септориоза --> 
+
+    <!-- Ръжди -->
+    <div class="aa-title" id="cronartium"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Ръжди - <span class="latin_name">Cronartium ribicola, Puccinia ribes</span></h3>
+            <h4 class="my_class_h4">Описание на болестта</h4>
+            <p>
+                От ръждите <span class="latin_name">Cronartium rubicola</span> е най-важната болест по 
+                видовете от р. <span class="latin_name">Ribis</span>. Разпространена е най-много по касиса. 
+                Повредите се появяват по горната страна на листата като жълто-оранжеви петна. От долната 
+                страна на листата се образуват ръждивокафяви спори. Видовете от р. 
+                <span class="latin_name">Ribis</span> са гостоприемници на непълния цикъл на 
+                <span class="latin_name">Puccinia ribes</span> и допълнителни гостоприемници на 
+                <span class="latin_name">Puccinia-ribesicaricis</span>
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Да не се засаждат чувствителни на ръжда сортове при създаването на нови насаждения. За борба 
+                с болестта се прилагат фунгицидни третирания. Извършват се едно-две пръскания след цъфтежа 
+                на касиса и едно след прибирането на реколтата.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                Няма одобрени фунгициди, но могат да се използват: <span class="active-substance">манкоцеб и додин.</span>
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-warning panel-back-link text-center">
+                <div class="panel-heading panel-heading-back-link">
+                    <a  class="back_link_bottom">
+                        виж друг неприятел
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- КРАЙ Ръжди --> 
+
+    <!-- Вертицилийно увяхване -->
+    <div class="aa-title" id="verticillum"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Вертицилийно увяхване - <span class="latin_name">Verticillium dahliae и Verticillium albоatrum</span></h3>
+            <h4 class="my_class_h4">Описание на болестта</h4>
+            <p>
+                <span class="latin_name">Verticillium dahliae</span> и 
+                <span class="latin_name">Verticillium alboatrum</span> заразяват видовете от род 
+                <span class="latin_name">Ribis</span> и могат да причинят загиването на растенията. Паразитът 
+                прониква в проводящите съдове през механични повреди по корените, които запушва и с това 
+                причинява завяхването им.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Не е добра растителнозащитна практика да се засаждат тези видове след домати, пипер и овощни култури. 
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-warning panel-back-link text-center">
+                <div class="panel-heading panel-heading-back-link">
+                    <a  class="back_link_bottom">
+                        виж друг неприятел
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- КРАЙ Вертицилийно увяхване --> 
+
+    <!-- Сиво гниене -->
+    <div class="aa-title" id="botryotinia"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Сиво гниене - <span class="latin_name">Botryotinia fuckeliana</span></h3>
+            <h4 class="my_class_h4">Описание на болестта</h4>
+            <p>
+                Болестта причинява през някои благоприятни за развитието й години абортиране на цветовете и 
+                плодовете рано през пролетта и загниването на плодовете по време на узряването им. Спорите на 
+                гъбата се разнасят чрез част от застаряващите тъкани на заразените растения. Възможно е 
+                заразата в цветовете да остане в спящо състояние.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                Няма одобрени фунгициди, но могат да се използват - 
+                <span class="active-substance">пириметанил, ипродион, винклозолин</span>.
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-warning panel-back-link text-center">
+                <div class="panel-heading panel-heading-back-link">
+                    <a  class="back_link_bottom">
+                        виж друг неприятел
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- КРАЙ Сиво гниене --> 
+
+    <!-- Касисова стъкленка -->
+    <div class="aa-title" id="synanthedon"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Касисова стъкленка - <span class="latin_name">Synanthedon tipuliformis</span></h3>
+            <h4 class="my_class_h4">Описание на неприятеля</h4>
+            <p>
+                Касисовата стъкленка е основен неприятел по касиса и при силно нападение може да унищожи 
+                растенията. Среща се по касисовите растения едновременно с касисовия агрилус.
+            </p>
+            <p>
+                Възрастното насекомо е неголяма, черна пеперуда с прозрачни тесни крила, наподобяващи тези 
+                на оса. На тънкото, дълго коремче са разположени напречни жълти ивици. Неприятелят има едно 
+                поколение годишно и зимува като напълно развита гъсеница в повредените леторасти на касиса. 
+                Презимувалите гъсеници се активизират към края на март - началото на април, а какавидирането 
+                завършва в края на април. Летежът на пеперудите е доста продължителен - започва от средата 
+                на май и приключва в първата десетдневка на август. Женските снасят яйцата си по кората на 
+                леторастите около пъпките. Ембрионалното развитие продължава 6-20 дни. Излюпените гъсеници 
+                се вгризват през пъпките в стъблата. Хранят се като издълбават ходове с дължина 30-40 cм 
+                към основата на леторастите. Силно повредените растения не се развиват нормално, дават 
+                ниски добиви и изсъхват през пролетта или по време на зреенето на плодовете. Те се 
+                разпознават най-добре при започване на вегетацията или по време на цъфтежа, тъй като те не 
+                се развиват, а изсъхват.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Изрязване на повредените леторасти до основата, без да се оставят чепове през 
+                невегетационния период ноември-декември или ранна пролет февруари-март. Редовна обработка на 
+                междуредията и вътре в редовете, за да се унищожи плевелната растителност, която е 
+                гостоприемник на стъкленката. Първото третиране с инсектициди трябва да се извършва по 
+                сигнал на регионалните служби за растителна защита, когато 33-40% от младите гъсенички 
+                започват да се вгризват в стъблата. Второто третиране съвпада с фенофаза прошарване на 
+                зърната и трябва да приключи най-малко 15-20 дни преди първата беритба на касиса. Трето се 
+                провежда непосредствено след като се прибере реколтата.
+            </p>
+            <p>
+                Динамиката на имагиниране и летеж при този неприятел може да бъде проследен със синтетичен 
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                Няма регистрирани инсектициди за извеждане на борбата, но могат да се използват - 
+                <span class="active-substance">фазолон, фенитротион, хлорпирифосетил.</span>
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-warning panel-back-link text-center">
+                <div class="panel-heading panel-heading-back-link">
+                    <a  class="back_link_bottom">
+                        виж друг неприятел
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- КРАЙ  -->
+
+    <!-- Касисов агрилус -->
+    <div class="aa-title" id="agrilus"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Касисов агрилус - <span class="latin_name">Agrilus ribesi</span></h3>
+            <h4 class="my_class_h4">Описание на неприятеля</h4>
+            <p>
+                Касисовият агрилус е нов неприятел за нашата страна. Възрастното насекомо е дребен бръмбар, 
+                с меднозелен цвят, по-рядко зелен, дълъг 6,5-8 мм. Лети от началото на май до началото на 
+                август. Женската снася яйцата по кората на две-тригодишните издънки. При повишане на 
+                числеността се премества и по едногодишните леторасти и листните дръжки. Новоизлюпените 
+                ларви проникват през кората и ликото перпендикулярно на стъблата. Мястото, където се 
+                разполагат ларвите в сърцевината, достига размери 40-50 cм, следствие на което част от 
+                нападнатата издънка изсъхва. Неприятелят развива едно поколение годишно и зимува като ларви 
+                от различни възрасти в нападнатите леторасти. Възрастните насекоми изгризват при храненето 
+                си периферията на листата, но повредите нямат икономическо значение.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Използване на здрав посадъчен материал. Ниско изрязване и изгаряне на нападнатите растения. 
+                Третиране срещу възрастните насекоми една седмица след започване на летежа, преди 
+                яйцеснасянето по сигнал на регионалните служби за защита на растенията.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                Добри резултати са получени в Институт по земеделие, филиал ОСЯК, Костинброд, с 
+                <span class="active-substance">делтаметрин, лабда-цихалотрин, фенитротион, фозалон, хлорпирифос-етил, цеперметрин.</span>
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-warning panel-back-link text-center">
+                <div class="panel-heading panel-heading-back-link">
+                    <a  class="back_link_bottom">
+                        виж друг неприятел
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- КРАЙ Касисов агрилус -->
+
+    <!-- Касисова листна галица -->
+    <div class="aa-title" id="dasyneura"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Касисова листна галица - <span class="latin_name">Dasyneura tetensi</span></h3>
+            <h4 class="my_class_h4">Описание на неприятеля</h4>
+            <p>
+                Касисовaта листна галица е разпространена в цялата страна. Вреди основно по касиса, но 
+                напада още червеното и бялото френско грозде.
+            </p>
+            <p>
+                Възрастното насекомо е дребна муха с дълги антени и крака, която развива 3-4 поколения 
+                годишно и зимува като ларва в бял копринен пашкул на дълбочина 2-3 см в почвата около 
+                храстите. Какавидира рано през пролетта - в началото на април и какавидния стадий продължава 
+                15-16 дни. Насекомите снасят яйцата си, когато растенията са във фенофаза - начало на цъфтеж, 
+                най-често по младите листа, по няколко заедно. Растенията се повреждат от ларвите. Те 
+                нагризват горния епидермис на току-що отворените млади листа на касиса, които не нарастват и 
+                засъхват. Издънките се изкривяват по върховете, остават ниски и се угнетява развитието им. 
+                Силно нападнатите храсти изостават в развитието си и голяма част от леторастите им измръзват през зимата.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Първото поколение на касисовата листна галица лети по време на цъфтежа на ранните сортове 
+                касис. Третирането срещу нея се извършва след цъфтежа, тъй като съществува опасност от 
+                унищожаване на пчелите и други полезни насекоми. При късно цъфтящите сортове е най-добре 
+                третирането да се извършва преди цъфтежа на културата. Второ третиране срещу това поколение 
+                на листната галица се провежда при висока численост на популацията.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                Няма регистрирани ПРЗ.
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-warning panel-back-link text-center">
+                <div class="panel-heading panel-heading-back-link">
+                    <a  class="back_link_bottom">
+                        виж друг неприятел
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- КРАЙ Касисова листна галица -->
+
+    <!-- Касисов пъпков акар -->
+    <div class="aa-title" id="cecidophyopsis"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Касисов пъпков акар - <span class="latin_name">Cecidophyopsis ribis</span></h3>
+            <h4 class="my_class_h4">Описание на неприятеля</h4>
+            <p>
+                Той е много малък ериофиден акар, който се размножава и храни в пъпките на касиса. В резултат 
+                от повредата пъпките не се развиват до средата на зимата и изсъхват през следващото лято. 
+                <span class="latin_name">Cecidophyopsis ribis</span> заразява касиса през пролетното си 
+                предвижване от местата на зимуване. Движейки се по стъблото, акарите се установяват в 
+                основата на листната дръжка и навлизат в новообразувалите се пъпки. Проникналите в пъпките 
+                акари започват да се хранят и размножават интензивно до късна есен. През лятото пъпките, в 
+                които има акари не се различават от здравите. В края на зимата, т.е. в началото на 
+                вегетацията, те придобиват отначало кръгла форма, силно се уголемяват и стават 3-4 пъти 
+                по-дълги. По-късно пъпката покафенява и изсъхва. Много малко от заразените пъпки остават 
+                частично зелени и в редки случаи образуват малки деформирани листа. Този акар е вектор на 
+                много опасната вирусна болест риверсия, която намалява реколтата на голяма част от 
+                чувствителните касисови сортове.
+            </p>
+            <p>
+                Касисовият пъпков акар зимува в пъпките на касиса като оплодена женска и започва развитието 
+                си през пролетта, когато дневните температури достигат 10<sup>o</sup>С. Развива 5 поколения годишно.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Борбата с касисовия пъпков акар е трудна. Тя трябва да се проведе в периода на миграция през 
+                март и април, преди и след цъфтежа, като се извършат три третирания с интервал от 10-14 дни между тях.
+            </p>
+            <p>
+                При този акар не са установени устойчиви форми. Ефективни са всички използвани срещу 
+                паяжинообразуващите акари акарициди.
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-warning panel-back-link text-center">
+                <div class="panel-heading panel-heading-back-link">
+                    <a  class="back_link_bottom">
+                        виж друг неприятел
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- КРАЙ Касисов пъпков акар -->
+
+    <!-- Листни оси -->
+    <div class="aa-title" id="nematus"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Листни оси</h3>
+            <h4 class="my_class_h4">Описание на неприятеля</h4>
+            <p>
+                Ларвите на няколко вида листни оси <span class="latin_name">Nematus ribesi, Nematus 
+                olfaciens, Nematus consobrina, Pristiphora rufipes</span> се хранят с листата на видовете 
+                френски грозда и в години на висока популационна плътност могат да причинят обезлистването 
+                на храстите. За условията на България тези видове листни оси развиват три поколения и 
+                частично четвърто. Най-често срещан е видът <span class="latin_name">Nematus ribesi</span>. 
+                Възрастното насекомо е оса с черен цвят, бледожълти крака и дължина 4,5-5,5 cm. Летежът на 
+                осата се наблюдава от втората половина на май до началото на август. Вреди лъжегъсеницата, 
+                която нагризва и скелетира листата. При висока численост лъжегъсениците могат да обезлистят 
+                храстите. Плодовете на повредените растения остават дребни, недоразвити и опадат. 
+                <span class="latin_name">N. ribesi</span> развиива три поколения годишно, но най-големи щети 
+                нанася второто.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Третиранията трябва да са насочени срещу младите ларви на листните оси. Първото третиране 
+                съвпада с фенофазата „край на цъфтежа“ при френското грозде. Второто е 10-14 дни след него.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                Няма одобрени инсектициди, но могат да се използват: 
+                <span class="active-substance">ламбда-цихалотрин, делтаметрин, циперметрин.</span>
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-warning panel-back-link text-center">
+                <div class="panel-heading panel-heading-back-link">
+                    <a  class="back_link_bottom">
+                        виж друг неприятел
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- КРАЙ Листни оси -->
+
+    <!-- Бодлива педомерка -->
+    <div class="aa-title" id="abraxas"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Бодлива педомерка - <span class="latin_name">Abraxas grossulariata</span></h3>
+            <h4 class="my_class_h4">Описание на неприятеля</h4>
+            <p>
+                Среща се навсякъде в страната, където се отглежда касисът. Възрастното насекомо е пеперуда 
+                с размер при разперени крила 43 мм. Крилата на пеперудата са бяло-жълтеникави с черни точки 
+                и жълто коремче на черни петна. Напълно развитите гъсеници достигат дължина 3-4 cm, отгоре 
+                са сиво-бели, с големи четириъгълни петна, отстрани на тялото им има по една жълта линия. 
+                Гъсениците са с пет чифта крака. През пролетта те се хранят с пъпките и младите листа. 
+                По-късно изгризват листата. Силно нападнатите растения се обезлистват и някои от тях 
+                изсъхват. Неприятелят зимува като гъсеница от пета възраст под бучките пръст, почвените 
+                пукнатини, по листата на другите растителни остатъци в паяжовиден пашкул. През първата 
+                десетдневка на април гъсениците продължават храненето си. Летежът на пеперудите започва към 
+                края на юли. Женските снасят яйцата си по долната страна на листата. Бодливата педомерка 
+                развива едно поколение годишно. При висока плътност може да нанесе сериозни поражения.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Използват се същите инсектициди, които се прилагат срещу листните оси. За проследяване 
+                динамиката на летежа на неприятеля могат да се използват феромонови уловки.
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-warning panel-back-link text-center">
+                <div class="panel-heading panel-heading-back-link">
+                    <a  class="back_link_bottom">
+                        виж друг неприятел
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- КРАЙ Бодлива педомерка -->
+
+    <!-- Листни въшки -->
+    <div class="aa-title" id="aphididae"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Листни въшки - <span class="latin_name">сем. Aphididae</span></h3>
+            <h4 class="my_class_h4">Описание на неприятелите</h4>
+            <p>
+                Френските грозда се нападат от: <span class="latin_name">Aphis grossularia, Aphis sehneideri, 
+                Cryptomyzus ibis, Cryptomyzus galeopsis, Hyperomyzus lactucae, Hyperomyzus pallidus, 
+                Eriosoma ulmi, Eriosoma grossularia</span> и <span class="latin_name">Nasonovia ribinigri</span>. 
+                Тези неприятели понякога причиняват големи и много сериозни повреди при храненето си върху 
+                листата и стъблата.
+            </p>
+            <p>
+                <span class="latin_name">Eriosoma ulmi</span> се храни и върху корените, а някои въшки са 
+                вектори на вирусни болести и пренасят goosebery vein banding вирус и 
+                <span class="latin_name">Cucumber mosaic cucumovirus</span>.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                За борба с листните въшки по касиса се  използват инсектициди, когато плътността на 
+                популацията им е над икономическия праг на вредност.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                    Няма регистрирани ПРЗ.
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-warning panel-back-link text-center">
+                <div class="panel-heading panel-heading-back-link">
+                    <a  class="back_link_bottom">
+                        виж друг неприятел
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- КРАЙ  -->
+
+    <!-- Малка зимна педомерка -->
+    <div class="aa-title" id="operophtera"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Малка зимна педомерка - <span class="latin_name">Operophtera brumata</span></h3>
+            <h4 class="my_class_h4">Описание на неприятеля</h4>
+            <p>
+                Малката зимна педомерка е полифаг и напада редица горски и овощни култури. При висока 
+                численост гъсениците могат да причинят значително унищожаване на пъпките и обезлистване на 
+                храстите рано през пролетта.
+            </p>
+            <h4 class="my_class_h4 as">Стратегия за борба</h4>
+            <p class="as">
+                Няма одобрени продукти за растителна защита при касиса, но е регистриран 
+                <span class="active-substance">дифлубензурон</span> при други култури.
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-warning panel-back-link text-center">
+                <div class="panel-heading panel-heading-back-link">
+                    <a  class="back_link_bottom">
+                        виж друг неприятел
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- КРАЙ Малка зимна педомерка -->
+
+    <!-- Паяжинообразуващи тетранихови акари -->
+    <div class="aa-title" id="tetranychus"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Паяжинообразуващи тетранихови акари - <span class="latin_name">Tetranychus</span></h3>
+            <h4 class="my_class_h4">Описание на неприятеля</h4>
+            <p>
+                Паяжинообразуващите акари <span class="latin_name">Tetranychus urticae</span> 
+                и <span class="latin_name">Tetranychus turkestani</span> причиняват сериозни повреди по 
+                листата на касиса. Те имат близки морфологични белези и сходни биоекологични особености. 
+                Вредят, като пробиват епидермиса на листа и изсмукват част от клетъчния сок с хлорофилните 
+                зърна. На местата на убождането се появяват малки светли точковидни петна. Техният брой 
+                бързо нараства и листът придобива мраморен вид. По-късно петната стават кафяви, сливат се и 
+                обхващат целия лист. На мястото на обитаването си акарите изплитат паяжина. 
+                Паяжинообразуващите акари са дребни по размери, трудно забележими и обитават долната 
+                повърхност на листата. Оцветяването на тялото варира от бледожълто и зеленикаво до червено и 
+                кафяво и се променя в зависимост от пола, хранителното растение и сезоните. Зимуващите 
+                женски имат керемиденочервен цвят. От двете страни на гърба на 
+                <span class="latin_name">T. urticae</span> се наблюдават две по-тъмни петна, а при 
+                <span class="latin_name">T. turkestani</span> няколко.
+            </p>
+            <p>
+                Оптимални за развитието на паяжинообразуващите акари са температурите 25-28<sup>o</sup>С и 
+                относителна влажност 60-80%. Развива 10-12 поколения годишно в зависимост от климатичните условия.
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                Борбата с паяжинообразуващите акари е успешна, когато се проведе в началото на появата им 
+                или при икономически праг на вредност 2-3 акара средно на лист. За целта периодично се 
+                вземат листни проби и се отчита плътността на акарите, като едновременно се следи и за 
+                числеността на специализираните хищници - акарофагите. Решението за борба се взема въз 
+                основа на икономическия праг на вредност, съотношението им към акарофагите и климатичните 
+                условия. При наличност на 4-5 (акарофаги) на 100 акара не се извършват третирания с акарициди.
+            </p>
+            <p>
+                Паяжинообразуващите акари принадлежат към неприятелите, които имат много поколения годишно и 
+                бързо могат да формират устойчивост към прилаганите акарициди. За да се предотврати появата 
+                на резистентност у акарите, е задължително акарицидите да се редуват при използването им в 
+                зависимост от активното вещество. Най-добре е преди употребата им да се направи тест за устойчивост.
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                Срещу паяжинообразуващите акари по касиса няма регистрирани акарициди, но могат да се 
+                използват регистрираните акарициди за тези акари при други култури - 
+                <span class="active-substance">диметоат, тифентрин, абамектин.</span>
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-warning panel-back-link text-center">
+                <div class="panel-heading panel-heading-back-link">
+                    <a  class="back_link_bottom">
+                        виж друг неприятел
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- КРАЙ Паяжинообразуващи тетранихови акари -->
+
+    <!-- Плевели -->
+    <div class="aa-title" id="weed"></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 >Плевели</h3>
+            <p class="undeline bold" style="margin: 0; padding: 0">Едногодишни житни плевели</p>
+            <span>
+                - Зелена кощрява - <span class="latin_name">Setaria viridis</span><br/>
+                - Сива кощрява - <span class="latin_name">Setaria glauca</span><br/>
+                - Кокоше просо - <span class="latin_name">Echinochloa crus-galli</span><br/>
+                - Див овес - <span class="latin_name">Avena fatua</span><br/>
+            </span><br/>
+            <p class="undeline bold" style="margin: 0; padding: 0">Едногодишни широколистни плевели</p>
+            <span>
+                - Гладница - <span class="latin_name">Draba verna</span><br/>
+                - Бръшлянолистно великденче - <span class="latin_name">Veronica hederifolia</span><br/>
+                - Фасулче - <span class="latin_name">Polygonum convolvulus</span><br/>
+                - Бяла лобода - <span class="latin_name">Chenopodium album</span><br/>
+                - Обикновен щир - <span class="latin_name">Amaranthus retroflexus</span><br/>
+                - Лечебен росопас - <span class="latin_name">Fumaria officinalis</span><br/>
+                - Спореж - <span class="latin_name">Senecio vulgaris</span><br/>
+            </span><br/>
+            <p class="undeline bold" style="margin: 0; padding: 0">Многогодишни коренищни плевели</p>
+            <span>
+                - Пирей - <span class="latin_name">Agropyrum repens</span><br/>
+                - Троскот - <span class="latin_name">Cynodon dactylon</span><br/>
+            </span><br/>
+            <p class="undeline bold" style="margin: 0; padding: 0">Многогодишни кореновоиздънкови плевели</p>
+            <span>
+                - Паламида - <span class="latin_name">Cirsium arvense</span><br/>
+                - Поветица - <span class="latin_name">Convolvulus arvensis</span><br/>
+            </span>
+            <h4 class="my_class_h4">Общи сведения</h4>
+            <p>
+                За касиса трябва да се избират площи, които да са чисти от многогодишни плевели, като 
+                троскот, балур, повитица, паламида и др. Най-подходящи предшественици за касиса са 
+                естествените или изкуствените ливади и пасища, които е най-добре да бъдат разоравани в 
+                годината, предхождаща засаждането му.
+            </p>
+            
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                За изчистване на площите от многогодишни плевели преди създаване на касисови насаждения се 
+                използват хербициди на база глифозат.
+            </p>
+            <p>
+                През първата година от засаждането на касиса се препоръчват интензивни междуредови и 
+                вътрередови вегетационни обработки. Към третата-четвъртата година, когато растенията се 
+                развиват напълно, в зависимост от времето, първата обработка се извършва рано напролет 
+                (март-април). Следващите обработки са според степента на заплевеляване, валежите и поливките. 
+                Препоръчва се по-дълбока обработка (оран на 15-20 см) да се извършва веднъж на 3-4 години в 
+                междуредията на касисовите насаждения.
+            </p>
+            <p>
+                С употребата на хербициди се намаляват обработките и насаждението се поддържа чисто от 
+                плевели, особено в редовата ивица, която се обработва трудно.
+            </p>
+            <p>
+                От втората година в касисовите насаждения се допуска употребата на следните почвени хербициди:
+            </p>
+            <p>
+                - Срещу едногодишни житни и някои широколистни плевели рано на пролет преди вегетация се използва:
+            </p>
+            <p>
+                - <span class="active-substance">тербацил</span> (почвено).
+            </p>
+            <p>
+                - Срещу широк спектър от двусемеделни и житни, в т.ч. многогодишни плевели, в период на покой 
+                може да се използва <span class="active-substance">дихлобенил</span> (почвено).
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-warning panel-back-link text-center">
+                <div class="panel-heading panel-heading-back-link">
+                    <a  class="back_link_bottom">
+                        виж друг неприятел
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- КРАЙ Плевели -->
+
+            
+    <!-- Автори на снимки -->
+    <br><br>
+    <div class="row">
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Използвани са снимки от:
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="panel-body my_panel-body">
+                    <p>
+                        <span class="bold">Снимка 1:</span>
+                        <span>By Rasbak - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=1196322</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 2:</span>
+                        <span>By Caroline Harding, MAF - This image is found here at PaDIL, a source of images designed for Biosecurity and Biodiversity.This tag does not indicate the copyright status of the attached work. A normal copyright tag is still required. See Commons:Licensing for more information.PaDIL, CC BY 3.0 au, https://commons.wikimedia.org/w/index.php?curid=16228320</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 3:</span>
+                        <span>By Hectonichus - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=40008798</span>
+                    </p>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+    <!-- КРАЙ Автори на снимки -->
+</div>
+            
+            
+    <!--  -->
+    <!-- <div class="aa-title" id=""></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 > – <span class="latin_name"></span></h3>
+            <h4 class="my_class_h4">Описание на болестта</h4>
+            <p>
+                
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                
+            </p>
+            <p>
+                
+            </p>
+            <p>
+                
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                <span class="active-substance"></span>
+            </p>
+            <p>
+                
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-warning panel-back-link text-center">
+                <div class="panel-heading panel-heading-back-link">
+                    <a  class="back_link_bottom">
+                        виж друг неприятел
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- КРАЙ  --> 
+        
+    <!--  -->
+    <!-- <div class="aa-title" id=""></div>
+    <div class="row" >
+        <div class="pest-description-container text-indent">
+            <h3 > – <span class="latin_name"></span></h3>
+            <h4 class="my_class_h4">Описание на неприятеля</h4>
+            <p>
+                
+            </p>
+            <h4 class="my_class_h4">Стратегия за борба</h4>
+            <p>
+                
+            </p>
+            <p>
+                
+            </p>
+            <p>
+                
+            </p>
+            <h4 class="my_class_h4 as">Активни вещества</h4>
+            <p class="as">
+                <span class="active-substance">
+            </p>
+            <p>
+                
+            </p>
+        </div>
+        <div class="pest-image-container " >
+            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-warning panel-back-link text-center">
+                <div class="panel-heading panel-heading-back-link">
+                    <a  class="back_link_bottom">
+                        виж друг неприятел
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- КРАЙ  -->
+                        
+                            
+                        
+                            
+                        
+                        
+                        
+                            
+                    
+                
+                
+                
+                
+                
+        
+        
+    
