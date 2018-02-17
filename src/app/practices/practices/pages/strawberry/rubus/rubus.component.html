@@ -1,8 +1,8 @@
-<!-- <div class="row text-center" id="prz-loader" *ngIf="!isLoaded">
+<div class="row text-center" id="prz-loader" *ngIf="!isLoaded">
     <mat-spinner aria-label="Спинър до зареждането на страницата"></mat-spinner>
-</div> -->
-<!-- *ngIf="isLoaded" -->
-<div  id="wrap_lmenu_txt">
+</div>
+
+<div *ngIf="isLoaded" id="wrap_lmenu_txt">
     <div class="text-center name-header">
         <h2 class="customfont">ЯГОДОПЛОДНИ КУЛТУРИ</h2>
     </div>
@@ -229,7 +229,7 @@
     </div>
     <!-- КРАЙ Избор на Вредител -->
 
-    <!-- <div *ngFor="let practice of practices">
+    <div *ngFor="let practice of practices">
         <div class="aa-title" id="{{practice.linkId}}"></div>
         <div class="row" >
             <div class="pest-description-container text-indent" [innerHTML]="practice.text  | safeHtml"></div>
@@ -265,10 +265,60 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
+
+    <!-- Автори на снимки -->
+    <br><br>
+    <div class="row">
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Използвани са снимки от:
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="panel-body my_panel-body">
+                    <p>
+                        <span class="bold">Снимка 1:</span>
+                        <span>By Jerzy Opioła - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=60378215</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 2:</span>
+                        <span>By James Lindsey at Ecology of Commanster, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=3561704</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 3:</span>
+                        <span>By James Lindsey at Ecology of Commanster, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=7205639</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 4:</span>
+                        <span>http://agronomija.rs/2013/malinin-prstenar-agrilus-aurichalceus/</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 5:</span>
+                        <span>By ©entomart, Attribution, https://commons.wikimedia.org/w/index.php?curid=16371728</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 6:</span>
+                        <span>By Rasbak - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=998959</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 7:</span>
+                        <span>By No machine-readable author provided. Bogdan assumed (based on copyright claims). - No machine-readable source provided. Own work assumed (based on copyright claims)., CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=209764</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 8:</span>
+                        <span>CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=204430</span>
+                    </p>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+    <!-- КРАЙ Автори на снимки -->
+</div>
 
     <!-- Дидимела -->
-    <div class="aa-title" id="didimella"></div>
+    <!-- <div class="aa-title" id="didimella"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Петносване около пъпките на леторастите - <span class="latin_name">Didimella applanata</span></h3>
@@ -320,11 +370,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Дидимела -->
 
     <!-- Изсъхване на леторастите -->
-    <div class="aa-title" id="leptosphaeria"></div>
+    <!-- <div class="aa-title" id="leptosphaeria"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Изсъхване на леторастите - <span class="latin_name">Leptosphaeria coniothirium</span></h3>
@@ -350,11 +400,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Изсъхване на леторастите -->
 
     <!-- Антракноза -->
-    <div class="aa-title" id="gleosporium"></div>
+    <!-- <div class="aa-title" id="gleosporium"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Антракноза - <span class="latin_name">Gleosporium venetum</span></h3>
@@ -378,11 +428,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Антракноза -->
 
     <!-- Септориоза -->
-    <div class="aa-title" id="septoria"></div>
+    <!-- <div class="aa-title" id="septoria"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Септориоза - <span class="latin_name">Septoria rubi</span></h3>
@@ -413,11 +463,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Септориоза -->
 
     <!-- Сиво гниене -->
-    <div class="aa-title" id="botryotinia"></div>
+    <!-- <div class="aa-title" id="botryotinia"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Сиво гниене - <span class="latin_name">Botryotinia fuckeliana</span></h3>
@@ -451,11 +501,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Сиво гниене -->
 
     <!-- Ръжда -->
-    <div class="aa-title" id="phragmidium"></div>
+    <!-- <div class="aa-title" id="phragmidium"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Ръжда - <span class="latin_name">Phragmidium rubi-idaei</span></h3>
@@ -490,11 +540,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Ръжда -->
 
     <!-- Червено кореново гниене -->
-    <div class="aa-title" id="phytophthora-fragari"></div>
+    <!-- <div class="aa-title" id="phytophthora-fragari"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Червено кореново гниене - <span class="latin_name">Phytophthora fragariа var. rubi.</span></h3>
@@ -520,11 +570,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Червено кореново гниене -->
 
     <!-- Вертицилийно увяхване -->
-    <div class="aa-title" id="verticillium"></div>
+    <!-- <div class="aa-title" id="verticillium"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Вертицилийно увяхване - <span class="latin_name">Verticillium dahlie, Verticillium albo-atrum</span></h3>
@@ -544,11 +594,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Вертицилийно увяхване -->
 
     <!-- Малинов агрилус -->
-    <div class="aa-title" id="agrilus"></div>
+    <!-- <div class="aa-title" id="agrilus"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Малинов агрилус - <span class="latin_name">Agrilus aurichalceus</span></h3>
@@ -612,11 +662,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Малинов агрилус -->
 
     <!-- Малиново комарче -->
-    <div class="aa-title" id="thomassiniano"></div>
+    <!-- <div class="aa-title" id="thomassiniano"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Малиново комарче - <span class="latin_name">Thomassiniano theobaldi</span></h3>
@@ -655,11 +705,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Малиново комарче -->
 
     <!--Малинова стъблена галица  -->
-    <div class="aa-title" id="lasioptera-rubi"></div>
+    <!-- <div class="aa-title" id="lasioptera-rubi"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Малинова стъблена галица - <span class="latin_name">Lasioptera rubi</span></h3>
@@ -693,11 +743,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Малинова стъблена галица -->
 
     <!-- Обикновен малинов бръмбар -->
-    <div class="aa-title" id="byturus"></div>
+    <!-- <div class="aa-title" id="byturus"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Обикновен малинов бръмбар - <span class="latin_name">Byturus tomentosus</span></h3>
@@ -739,11 +789,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Обикновен малинов бръмбар -->
 
     <!-- Листни въшки -->
-    <div class="aa-title" id="aphis"></div>
+    <!-- <div class="aa-title" id="aphis"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Листни въшки</h3>
@@ -772,11 +822,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Листни въшки -->
 
     <!-- Паяжинообразуващи акари -->
-    <div class="aa-title" id="tetranychus"></div>
+    <!-- <div class="aa-title" id="tetranychus"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Паяжинообразуващи акари - <span class="latin_name">Tetranychus urticaе</span> и <span class="latin_name">Tetranychus turkestani</span></h3>
@@ -796,7 +846,6 @@
                 имат керемидено червен цвят. От двете страни на гърба на 
                 <span class="latin_name">T. urticae</span> се наблюдават две по-тъмни петна, а при 
                 <span class="latin_name">T. turkestani</span> те са няколко.
-                    
             </p>
             <p>
                  Оптимални за развитието на паяжинообразуващите акари са температурите 25-28<sup>o</sup>С и 
@@ -827,11 +876,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Паяжинообразуващи акари -->
 
     <!-- Малинов акар -->
-    <div class="aa-title" id="phyllocoptes-gracilis"></div>
+    <!-- <div class="aa-title" id="phyllocoptes-gracilis"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Малинов акар - <span class="latin_name">Phyllocoptes gracilis</span></h3>
@@ -864,11 +913,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Малинов акар -->
 
     <!-- Плевели -->
-    <div class="aa-title" id="weed"></div>
+    <!-- <div class="aa-title" id="weed"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Плевели</h3>
@@ -980,56 +1029,8 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Плевели -->
 
         
-    <!-- Автори на снимки -->
-    <br><br>
-    <div class="row">
-        <mat-accordion>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        Използвани са снимки от:
-                    </mat-panel-title>
-                </mat-expansion-panel-header>
-                <div class="panel-body my_panel-body">
-                    <p>
-                        <span class="bold">Снимка 1:</span>
-                        <span>By Jerzy Opioła - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=60378215</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 2:</span>
-                        <span>By James Lindsey at Ecology of Commanster, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=3561704</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 3:</span>
-                        <span>By James Lindsey at Ecology of Commanster, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=7205639</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 4:</span>
-                        <span>http://agronomija.rs/2013/malinin-prstenar-agrilus-aurichalceus/</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 5:</span>
-                        <span>By ©entomart, Attribution, https://commons.wikimedia.org/w/index.php?curid=16371728</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 6:</span>
-                        <span>By Rasbak - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=998959</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 7:</span>
-                        <span>By No machine-readable author provided. Bogdan assumed (based on copyright claims). - No machine-readable source provided. Own work assumed (based on copyright claims)., CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=209764</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 8:</span>
-                        <span>CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=204430</span>
-                    </p>
-                </div>
-            </mat-expansion-panel>
-        </mat-accordion>
-    </div>
-    <!-- КРАЙ Автори на снимки -->
-</div>
+    

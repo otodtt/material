@@ -1,8 +1,8 @@
-<!-- <div class="row text-center" id="prz-loader" *ngIf="!isLoaded">
+<div class="row text-center" id="prz-loader" *ngIf="!isLoaded">
     <mat-spinner aria-label="Спинър до зареждането на страницата"></mat-spinner>
-</div> -->
-<!-- *ngIf="isLoaded" -->
-<div  id="wrap_lmenu_txt">
+</div>
+
+<div *ngIf="isLoaded" id="wrap_lmenu_txt">
     <div class="text-center name-header">
         <h2 class="customfont">ЯГОДОПЛОДНИ КУЛТУРИ</h2>
     </div>
@@ -206,7 +206,7 @@
     </div>
     <!-- КРАЙ Избор на Вредител -->
     
-    <!-- <div *ngFor="let practice of practices">
+    <div *ngFor="let practice of practices">
         <div class="aa-title" id="{{practice.linkId}}"></div>
         <div class="row" >
             <div class="pest-description-container text-indent" [innerHTML]="practice.text  | safeHtml"></div>
@@ -242,10 +242,68 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
+
+    <!-- Автори на снимки -->
+    <br><br>
+    <div class="row">
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Използвани са снимки от:
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="panel-body my_panel-body">
+                    <p>
+                        <span class="bold">Снимка 1:</span>
+                        <span>By Jerzy Opioła - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=50748663</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 2:</span>
+                        <span>By Whitney Cranshaw, Colorado State University, Bugwood.org - This image is Image Number 5007013 at Insect Images, a source for entomological images operated by The Bugwood Network at the University of Georgia and the USDA Forest Service.(cropped), CC BY 3.0 us, https://commons.wikimedia.org/w/index.php?curid=6748279</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 3:</span>
+                        <span>By Gyorgy Csoka, Hungary Forest Research Institute, Bugwood.org - This image is Image Number 1231259 at Insect Images, a source for entomological images operated by The Bugwood Network at the University of Georgia and the USDA Forest Service.(cropped, rotated), CC BY 3.0 us, https://commons.wikimedia.org/w/index.php?curid=6748378</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 4:</span>
+                        <span>By AfroBrazilian - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=26873108</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 5:</span>
+                        <span>Av Notafly - Eget arbete, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=15032039</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 6:</span>
+                        <span>By Acélan - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=7113562</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 7:</span>
+                        <span>By Gilles San Martin - originally posted to Flickr as Tetranychus urticae with silk threads, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=11208762</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 8:</span>
+                        <span>By Rasbak - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=998959</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 9:</span>
+                        <span >By Stefan.lefnaer (Own work) [CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 10:</span>
+                        <span >By 4028mdk09 - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=11746444</span>
+                    </p>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+    <!-- КРАЙ Автори на снимки -->
+</div>
 
     <!-- Американска брашнеста мана -->
-    <div class="aa-title" id="sphaerotheca"></div>
+    <!-- <div class="aa-title" id="sphaerotheca"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Американска брашнеста мана - <span class="latin_name">Sphaerotheca morsuvae</span></h3>
@@ -282,11 +340,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Американска брашнеста мана --> 
 
     <!-- Антракноза -->
-    <div class="aa-title" id="drepanopeziza"></div>
+    <!-- <div class="aa-title" id="drepanopeziza"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Антракноза - <span class="latin_name">Drepanopeziza ribis</span></h3>
@@ -327,11 +385,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Антракноза --> 
 
     <!-- Септориоза -->
-    <div class="aa-title" id="mycosphaerella"></div>
+    <!-- <div class="aa-title" id="mycosphaerella"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Септориоза - <span class="latin_name">Mycosphaerella ribis</span></h3>
@@ -354,11 +412,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Септориоза --> 
 
     <!-- Ръжди -->
-    <div class="aa-title" id="cronartium"></div>
+    <!-- <div class="aa-title" id="cronartium"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Ръжди - <span class="latin_name">Cronartium ribicola, Puccinia ribes</span></h3>
@@ -386,11 +444,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Ръжди --> 
 
     <!-- Вертицилийно увяхване -->
-    <div class="aa-title" id="verticillum"></div>
+    <!-- <div class="aa-title" id="verticillum"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Вертицилийно увяхване - <span class="latin_name">Verticillium dahliae и Verticillium albоatrum</span></h3>
@@ -410,11 +468,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Вертицилийно увяхване --> 
 
     <!-- Сиво гниене -->
-    <div class="aa-title" id="botryotinia"></div>
+    <!-- <div class="aa-title" id="botryotinia"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Сиво гниене - <span class="latin_name">Botryotinia fuckeliana</span></h3>
@@ -434,11 +492,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Сиво гниене --> 
 
     <!-- Касисова стъкленка -->
-    <div class="aa-title" id="synanthedon"></div>
+    <!-- <div class="aa-title" id="synanthedon"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Касисова стъкленка - <span class="latin_name">Synanthedon tipuliformis</span></h3>
@@ -501,11 +559,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ  -->
 
     <!-- Касисов агрилус -->
-    <div class="aa-title" id="agrilus"></div>
+    <!-- <div class="aa-title" id="agrilus"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Касисов агрилус - <span class="latin_name">Agrilus ribesi</span></h3>
@@ -545,11 +603,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Касисов агрилус -->
 
     <!-- Касисова листна галица -->
-    <div class="aa-title" id="dasyneura"></div>
+    <!-- <div class="aa-title" id="dasyneura"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Касисова листна галица - <span class="latin_name">Dasyneura tetensi</span></h3>
@@ -584,11 +642,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Касисова листна галица -->
 
     <!-- Касисов пъпков акар -->
-    <div class="aa-title" id="cecidophyopsis"></div>
+    <!-- <div class="aa-title" id="cecidophyopsis"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Касисов пъпков акар - <span class="latin_name">Cecidophyopsis ribis</span></h3>
@@ -624,11 +682,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Касисов пъпков акар -->
 
     <!-- Листни оси -->
-    <div class="aa-title" id="nematus"></div>
+    <!-- <div class="aa-title" id="nematus"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Листни оси</h3>
@@ -669,11 +727,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Листни оси -->
 
     <!-- Бодлива педомерка -->
-    <div class="aa-title" id="abraxas"></div>
+    <!-- <div class="aa-title" id="abraxas"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Бодлива педомерка - <span class="latin_name">Abraxas grossulariata</span></h3>
@@ -709,11 +767,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Бодлива педомерка -->
 
     <!-- Листни въшки -->
-    <div class="aa-title" id="aphididae"></div>
+    <!-- <div class="aa-title" id="aphididae"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Листни въшки - <span class="latin_name">сем. Aphididae</span></h3>
@@ -737,17 +795,17 @@
             </p>
             <h4 class="my_class_h4 as">Активни вещества</h4>
             <p class="as">
-                    Няма регистрирани ПРЗ.
+                Няма регистрирани ПРЗ.
             </p>
         </div>
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ  -->
 
     <!-- Малка зимна педомерка -->
-    <div class="aa-title" id="operophtera"></div>
+    <!-- <div class="aa-title" id="operophtera"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Малка зимна педомерка - <span class="latin_name">Operophtera brumata</span></h3>
@@ -766,11 +824,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Малка зимна педомерка -->
 
     <!-- Паяжинообразуващи тетранихови акари -->
-    <div class="aa-title" id="tetranychus"></div>
+    <!-- <div class="aa-title" id="tetranychus"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Паяжинообразуващи тетранихови акари - <span class="latin_name">Tetranychus</span></h3>
@@ -828,11 +886,11 @@
                 </li>
             </ul> 
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Паяжинообразуващи тетранихови акари -->
 
     <!-- Плевели -->
-    <div class="aa-title" id="weed"></div>
+    <!-- <div class="aa-title" id="weed"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Плевели</h3>
@@ -870,7 +928,6 @@
                 естествените или изкуствените ливади и пасища, които е най-добре да бъдат разоравани в 
                 годината, предхождаща засаждането му.
             </p>
-            
             <h4 class="my_class_h4">Стратегия за борба</h4>
             <p>
                 За изчистване на площите от многогодишни плевели преди създаване на касисови насаждения се 
@@ -930,66 +987,9 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Плевели -->
-      
-    <!-- Автори на снимки -->
-    <br><br>
-    <div class="row">
-        <mat-accordion>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        Използвани са снимки от:
-                    </mat-panel-title>
-                </mat-expansion-panel-header>
-                <div class="panel-body my_panel-body">
-                    <p>
-                        <span class="bold">Снимка 1:</span>
-                        <span>By Jerzy Opioła - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=50748663</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 2:</span>
-                        <span>By Whitney Cranshaw, Colorado State University, Bugwood.org - This image is Image Number 5007013 at Insect Images, a source for entomological images operated by The Bugwood Network at the University of Georgia and the USDA Forest Service.(cropped), CC BY 3.0 us, https://commons.wikimedia.org/w/index.php?curid=6748279</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 3:</span>
-                        <span>By Gyorgy Csoka, Hungary Forest Research Institute, Bugwood.org - This image is Image Number 1231259 at Insect Images, a source for entomological images operated by The Bugwood Network at the University of Georgia and the USDA Forest Service.(cropped, rotated), CC BY 3.0 us, https://commons.wikimedia.org/w/index.php?curid=6748378</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 4:</span>
-                        <span>By AfroBrazilian - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=26873108</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 5:</span>
-                        <span>Av Notafly - Eget arbete, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=15032039</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 6:</span>
-                        <span>By Acélan - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=7113562</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 7:</span>
-                        <span>By Gilles San Martin - originally posted to Flickr as Tetranychus urticae with silk threads, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=11208762</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 8:</span>
-                        <span>By Rasbak - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=998959</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 9:</span>
-                        <span >By Stefan.lefnaer (Own work) [CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)], via Wikimedia Commons</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 10:</span>
-                        <span >By 4028mdk09 - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=11746444</span>
-                    </p>
-                </div>
-            </mat-expansion-panel>
-        </mat-accordion>
-    </div>
-    <!-- КРАЙ Автори на снимки -->
-</div>
+    
 
                             
                         

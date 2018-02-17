@@ -1,8 +1,8 @@
-<!-- <div class="row text-center" id="prz-loader" *ngIf="!isLoaded">
+<div class="row text-center" id="prz-loader" *ngIf="!isLoaded">
     <mat-spinner aria-label="Спинър до зареждането на страницата"></mat-spinner>
-</div> -->
-<!-- *ngIf="isLoaded" -->
-<div  id="wrap_lmenu_txt">
+</div>
+
+<div *ngIf="isLoaded" id="wrap_lmenu_txt">
     <div class="text-center name-header">
         <h2 class="customfont">ЯГОДОПЛОДНИ КУЛТУРИ</h2>
     </div>
@@ -241,7 +241,7 @@
     </div>
     <!-- КРАЙ Избор на Вредител -->
 
-    <!-- <div *ngFor="let practice of practices">
+    <div *ngFor="let practice of practices">
         <div class="aa-title" id="{{practice.linkId}}"></div>
         <div class="row" >
             <div class="pest-description-container text-indent" [innerHTML]="practice.text  | safeHtml"></div>
@@ -277,11 +277,65 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
+
+    <!-- Автори на снимки -->
+    <br><br>
+    <div class="row">
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Използвани са снимки от:
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="panel-body my_panel-body">
+                    <p>
+                        <span class="bold">Снимка 1:</span>
+                        <span>By Rasbak - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=192867</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 2:</span>
+                        <span>By Liberato, JR - http://dev.padil.gov.au/pests-and-diseases/Pest/Image/4738, CC BY 3.0, https://en.wikipedia.org/w/index.php?curid=37701124</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 3:</span>
+                        <span>By Michal Maňas (User:snek01) - Own work, CC BY 2.5, https://commons.wikimedia.org/w/index.php?curid=1799494</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 4:</span>
+                        <span>By James Lindsey at Ecology of Commanster, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=1671891</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 5:</span>
+                        <span>By Gilles San Martin - originally posted to Flickr as Tetranychus urticae with silk threads, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=11208762</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 6:</span>
+                        <span>By Kristian Peters -- Fabelfroh 15:18, 28 December 2005 (UTC) - Self-photographed, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=482651</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 7:</span>
+                        <span>By Rasbak - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=998959</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 8:</span>
+                        <span>By No machine-readable author provided. Bogdan assumed (based on copyright claims). - No machine-readable source provided. Own work assumed (based on copyright claims)., CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=209764</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 9:</span>
+                        <span>By John Tann from Sydney, Australia - Johnson Grass, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=38234408</span>
+                    </p>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+    <!-- КРАЙ Автори на снимки -->
+</div>
 
 
     <!-- Сиво гниене -->
-    <div class="aa-title" id="botrytis-cinerea"></div>
+    <!-- <div class="aa-title" id="botrytis-cinerea"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Сиво гниене - <span class="latin_name">Botrytis cinerea</span></h3>
@@ -339,11 +393,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Сиво гниене -->   
 
     <!-- Червено кореново гниене -->
-    <div class="aa-title" id="phytophtora"></div>
+    <!-- <div class="aa-title" id="phytophtora"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Червено кореново гниене - <span class="latin_name">Phytophthora fragariae var. fragariae</span></h3>
@@ -398,11 +452,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Червено кореново гниене -->   
 
     <!-- phytophthora-cactorum -->
-    <div class="aa-title" id="phytophthora-cactorum"></div>
+    <!-- <div class="aa-title" id="phytophthora-cactorum"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 ><span class="latin_name">Phytophthora cactorum</span></h3>
@@ -444,11 +498,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ phytophthora-cactorum --> 
     
     <!-- Вертицилийно увяхване -->
-    <div class="aa-title" id="verticillium"></div>
+    <!-- <div class="aa-title" id="verticillium"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Вертицилийно увяхване - <span class="latin_name">Verticillium spp.</span></h3>
@@ -479,11 +533,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Вертицилийно увяхване -->  
 
     <!-- Брашнеста мана -->
-    <div class="aa-title" id="sphaerotheca"></div>
+    <!-- <div class="aa-title" id="sphaerotheca"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Брашнеста мана - <span class="latin_name">Sphaerotheca macularis f. sp. fragarial</span></h3>
@@ -516,11 +570,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Брашнеста мана -->   
 
     <!-- Бели листни петна -->
-    <div class="aa-title" id="mycosphaerella"></div>
+    <!-- <div class="aa-title" id="mycosphaerella"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Бели листни петна - <span class="latin_name">Mycosphaerella fragariae</span></h3>
@@ -546,7 +600,6 @@
                 със симптоми червеникаво кафяви петна и 
                 <span class="latin_name">Alternaria alternata</span>, която е с широк кръг гостоприемници.
             </p>
-            <p></p>
             <h4 class="my_class_h4">Стратегия за борба</h4>
             <p>
                 Използването на здрав посадъчен материал и резистентни сортове са основен елемент на 
@@ -572,11 +625,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Бели листни петна -->   
 
     <!-- Антракноза -->
-    <div class="aa-title" id="colletotrichum"></div>
+    <!-- <div class="aa-title" id="colletotrichum"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Антракноза по ягодата - <span class="latin_name">Colletotrichum acutatum (fragariae)</span></h3>
@@ -608,11 +661,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Антракноза -->   
 
     <!-- Почвени гъби -->
-    <div class="aa-title" id="thanatephorus"></div>
+    <!-- <div class="aa-title" id="thanatephorus"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Почвени гъби</h3>
@@ -657,11 +710,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Почвени гъби -->   
 
     <!-- Вируси -->
-    <div class="aa-title" id="viruses"></div>
+    <!-- <div class="aa-title" id="viruses"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Вируси</h3>
@@ -763,7 +816,6 @@
                 образуват плодове, а когато образуват те са дребни и постепенно изсъхват.
             </p>
             <h4 class="my_class_h4">Стратегия за борба</h4>
-            <p></p>
             <p>
                 Борбата с вирусните болести е насочена срещу преносителите на вирусите - листни въшки и 
                 цикади. Използват се инсектициди със системно действие.
@@ -780,11 +832,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Вируси -->   
 
     <!-- Ягодово хоботниче -->
-    <div class="aa-title" id="anthonomus-rubi"></div>
+    <!-- <div class="aa-title" id="anthonomus-rubi"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Ягодово хоботниче - <span class="latin_name">Anthonomus rubi</span></h3>
@@ -871,11 +923,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Ягодово хоботниче -->   
 
     <!-- Ягодов акар -->
-    <div class="aa-title" id="tarsonemus-pallidus"></div>
+    <!-- <div class="aa-title" id="tarsonemus-pallidus"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Ягодов акар - <span class="latin_name">Tarsonemus pallidus</span></h3>
@@ -918,11 +970,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Ягодов акар -->   
 
     <!-- Паяжинообразуващи акари -->
-    <div class="aa-title" id="tetranychus"></div>
+    <!-- <div class="aa-title" id="tetranychus"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Паяжинообразуващи тетранихови акари - <span class="latin_name">Tetranychus urticae</span> и <span class="latin_name">Tetranychus turkestani</span></h3>
@@ -1017,11 +1069,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Паяжинообразуващи акари -->   
 
     <!-- Коренови хоботници -->
-    <div class="aa-title" id="otiorrhynchus"></div>
+    <!-- <div class="aa-title" id="otiorrhynchus"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Коренови хоботници</h3>
@@ -1088,11 +1140,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ  -->   
 
     <!-- Ягодов стъблен хоботник -->
-    <div class="aa-title" id="rhynchites"></div>
+    <!-- <div class="aa-title" id="rhynchites"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Ягодов стъблен хоботник - <span class="latin_name">Rhynchites (Coenorrhinus) germanicus</span></h3>
@@ -1155,11 +1207,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Ягодов стъблен хоботник -->   
 
     <!-- Листни въшки -->
-    <div class="aa-title" id="aphididae"></div>
+    <!-- <div class="aa-title" id="aphididae"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Листни въшки - <span class="latin_name">Aphididae</span></h3>
@@ -1193,11 +1245,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ  -->   
 
     <!-- Листогризещи гъсеници -->
-    <div class="aa-title" id="argyroploce"></div>
+    <!-- <div class="aa-title" id="argyroploce"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Листогризещи гъсеници</h3>
@@ -1219,18 +1271,15 @@
                 Необходимо е внимателно да се четат указанията за приложението на всеки отделен инсектицид 
                 и да се спазва карантинният срок.
             </p>
-            <p>
-                
-            </p>
         </div>
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Листогризещи гъсеници -->   
 
     <!-- Почвени насекоми -->
-    <div class="aa-title" id="melolontha"></div>
+    <!-- <div class="aa-title" id="melolontha"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Почвени насекоми</h3>
@@ -1250,11 +1299,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Почвени насекоми -->   
 
     <!-- Листни нематоди -->
-    <div class="aa-title" id="aphelenchoides"></div>
+    <!-- <div class="aa-title" id="aphelenchoides"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Листни нематоди - <span class="latin_name">Aphelenchoides fragarie, A.blasthophthorus u A.ritzemabos</span> и др.</h3>
@@ -1278,11 +1327,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ  -->   
 
     <!-- Коренови нематоди -->
-    <div class="aa-title" id="longidorus"></div>
+    <!-- <div class="aa-title" id="longidorus"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Коренови нематоди - <span class="latin_name">Longidorus elongatus, Xiphinema diversicaudatum u Pratylenchus penetrans</span></h3>
@@ -1308,11 +1357,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Коренови нематоди -->   
 
     <!-- Плевели -->
-    <div class="aa-title" id="weed"></div>
+    <!-- <div class="aa-title" id="weed"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Плевели</h3>
@@ -1345,7 +1394,6 @@
             <p class="undeline bold" style="margin: 0; padding: 0">Многогодишни кореновоиздънкови</p>
             <span>- повитица - <span class="latin_name">Convolvulus arvensis</span></span><br/>
             <span>- паламида - <span class="latin_name">Cirsium arvense</span></span><br/>
-            
             <h4 class="my_class_h4">Общи сведения</h4>
             <p>
                 При отглеждане на ягодоплодни култури проблем представляват различните видове плевели - 
@@ -1469,11 +1517,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Плевели --> 
 
     <!-- Растежни регулатори -->
-    <div class="aa-title" id="regulators"></div>
+    <!-- <div class="aa-title" id="regulators"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Растежни регулатори</h3>
@@ -1488,59 +1536,7 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Растежни регулатори --> 
         
-    <!-- Автори на снимки -->
-    <br><br>
-    <div class="row">
-        <mat-accordion>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        Използвани са снимки от:
-                    </mat-panel-title>
-                </mat-expansion-panel-header>
-                <div class="panel-body my_panel-body">
-                    <p>
-                        <span class="bold">Снимка 1:</span>
-                        <span>By Rasbak - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=192867</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 2:</span>
-                        <span>By Liberato, JR - http://dev.padil.gov.au/pests-and-diseases/Pest/Image/4738, CC BY 3.0, https://en.wikipedia.org/w/index.php?curid=37701124</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 3:</span>
-                        <span>By Michal Maňas (User:snek01) - Own work, CC BY 2.5, https://commons.wikimedia.org/w/index.php?curid=1799494</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 4:</span>
-                        <span>By James Lindsey at Ecology of Commanster, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=1671891</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 5:</span>
-                        <span>By Gilles San Martin - originally posted to Flickr as Tetranychus urticae with silk threads, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=11208762</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 6:</span>
-                        <span>By Kristian Peters -- Fabelfroh 15:18, 28 December 2005 (UTC) - Self-photographed, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=482651</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 7:</span>
-                        <span>By Rasbak - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=998959</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 8:</span>
-                        <span>By No machine-readable author provided. Bogdan assumed (based on copyright claims). - No machine-readable source provided. Own work assumed (based on copyright claims)., CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=209764</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 9:</span>
-                        <span>By John Tann from Sydney, Australia - Johnson Grass, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=38234408</span>
-                    </p>
-                </div>
-            </mat-expansion-panel>
-        </mat-accordion>
-    </div>
-    <!-- КРАЙ Автори на снимки -->
-</div>
+    

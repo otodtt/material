@@ -1,8 +1,8 @@
-<!-- <div class="row text-center" id="prz-loader" *ngIf="!isLoaded">
+<div class="row text-center" id="prz-loader" *ngIf="!isLoaded">
     <mat-spinner aria-label="Спинър до зареждането на страницата"></mat-spinner>
-</div> -->
-<!-- *ngIf="isLoaded" -->
-<div  id="wrap_lmenu_txt">
+</div>
+
+<div *ngIf="isLoaded" id="wrap_lmenu_txt">
     <div class="text-center name-header">
         <h2 class="customfont">ОВОЩНИ КУЛТУРИ</h2>
     </div>
@@ -602,8 +602,7 @@
     </div>
     <!-- КРАЙ Избор на Вредител -->
 
-    
-    <!-- <div *ngFor="let practice of practices">
+    <div *ngFor="let practice of practices">
         <div class="aa-title" id="{{practice.linkId}}"></div>
         <div class="row" >
             <div class="pest-description-container text-indent" [innerHTML]="practice.text  | safeHtml"></div>
@@ -639,11 +638,158 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
+
+    <!-- ФЕНОФАЗИ ПРИ КОСТИЛКОВИ -->
+    <div class="row text-indent" >
+        <h3 >ФЕНОФАЗИ ПРИ КОСТИЛКОВИ</h3>
+        <p>А - зимуваща (спяща) пъпка;</p>
+        <p>В - набъбване на пъпките;</p>
+        <p>С - розов бутон;</p>
+        <p>D - бял бутон;</p>
+        <p>Е - начало на цъфтеж;</p>
+        <p>F - масов цъфтеж;</p>
+        <p>G - опадване на венчелистчетата;</p>
+        <p>Н - образуване на завръзи;</p>
+        <p>I - малки плодчета.</p>
+    </div>
+    <!-- КРАЙ  -->   
+
+    <div class="row-back">
+        <div class="col-md-6" style="margin: 0 auto; padding-top: 50px;">
+            <div class="panel-warning text-center">
+                <div class="panel-heading ">
+                    <a mat-button class="back_link_bottom" przAnchorTo target="#pest_menu" title="към всички неприятели"> към всички неприятели</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Автори на снимки -->
+    <br><br>
+    <div class="row">
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Използвани са снимки от:
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="panel-body my_panel-body">
+                    <p>
+                        <span class="bold">Снимка 1:</span>
+                        <span>By myself (User:Piotrus) - Self-photographed, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=3412893</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 2:</span>
+                        <span>Av Mary Ann Hansen - http://www.forestryimages.org/browse/detail.cfm?imgnum=5335073, CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=10777284</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 3:</span>
+                        <span>Av kühler Grill - selbst fotografiert (20.06.2004), Public Domain, https://commons.wikimedia.org/w/index.php?curid=31080103</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 4:</span>
+                        <span>By Sandy Rae - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=45521165</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 5:</span>
+                        <span>De Toby Hudson - Trabajo propio, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=11755270</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 6:</span>
+                        <span>Av Fdcgoeul - Eget arbete, CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=5008774</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 7:</span>
+                        <span>Par Bernard DUPONT from FRANCE — Hairy Beetle (Tropinota hirta), CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=40741048</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 8:</span>
+                        <span>By Jafras - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=31894290</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 9:</span>
+                        <span>By Didier Descouens - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=27011413</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 10:</span>
+                        <span>By Donald Hobern from Canberra, Australia - Euproctis chrysorrhoeaUploaded by berichard, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=13557283</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 11:</span>
+                        <span>By H. Krisp - Own work, CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=19806408</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 12:</span>
+                        <span>By picture taken by Olaf Leillinger - Own work, CC BY-SA 2.5, https://commons.wikimedia.org/w/index.php?curid=1656670</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 13:</span>
+                        <span>By Hectonichus - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=58254954</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 14:</span>
+                        <span>By Gyorgy Csoka, Hungary Forest Research Institute, Bugwood.org - This image is Image Number 5410964 at Insect Images, a source for entomological images operated by The Bugwood Network at the University of Georgia and the USDA Forest Service., CC BY 3.0 us, https://commons.wikimedia.org/w/index.php?curid=11741182</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 15:</span>
+                        <span>By Gilles San Martin - originally posted to Flickr as Tetranychus urticae with silk threads, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=11208762</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 16:</span>
+                        <span>http://britishwildlife.wikia.com/wiki/File:Scale_Insect_-_Parthenolecanium_corni.JPG</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 17:</span>
+                        <span>By Fvlamoen - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=3198655</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 18:</span>
+                        <span>By Luis Fernández García - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=34604451</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 19:</span>
+                        <span>By Eclos - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=7314123</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 20:</span>
+                        <span>By ©entomart, Attribution, https://commons.wikimedia.org/w/index.php?curid=869680</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 21:</span>
+                        <span>By Siga - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=15907574</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 22:</span>
+                        <span>By AfroBrazilian - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=33680141</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 23:</span>
+                        <span>Por Donald Hobern, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=6388243</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 24:</span>
+                        <span>By Udo Schmidt from Deutschland - Phyllobius oblongus (Linné, 1758)Uploaded by Magnus Manske, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=22950996</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 25:</span>
+                        <span>Par ©entomart, Attribution, https://commons.wikimedia.org/w/index.php?curid=466680</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 26:</span>
+                        <span>By Giancarlo Dessì - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=4072350</span>
+                    </p>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+    <!-- КРАЙ Автори на снимки -->
+</div>
 
 
     <!-- Ранно кафяво гниене -->
-    <div class="aa-title" id="monilia-laxa"></div>
+    <!-- <div class="aa-title" id="monilia-laxa"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Ранно кафяво гниене - <span class="latin_name">Monilia laxa (Aderh. And Ruhl.) Honey.</span></h3>
@@ -685,8 +831,8 @@
             </p>
             <p class="as">
                 Вегетационни: <span class="active-substance">ипродион, миклобутанил, процимидон, 
-                    тебуконазол, тиофанат - метил, беномил, флузилазол и дитианон, хексаконазол, 
-                    хлороталонил, тирам. </span>
+                тебуконазол, тиофанат - метил, беномил, флузилазол и дитианон, хексаконазол, 
+                хлороталонил, тирам. </span>
             </p>
         </div>
         <div class="pest-image-container " >
@@ -701,11 +847,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Ранно кафяво гниене -->
 
     <!-- Късно кафяво гниене -->
-    <div class="aa-title" id="monilia-fructigena"></div>
+    <!-- <div class="aa-title" id="monilia-fructigena"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Късно кафяво гниене - <span class="latin_name">Monilia fructigena (Peroson) Shroter</span></h3>
@@ -751,11 +897,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Късно кафяво гниене -->
 
     <!-- Гъбна сачмянка -->
-    <div class="aa-title" id="stigmina"></div>
+    <!-- <div class="aa-title" id="stigmina"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Гъбна сачмянка по костилковите овощни видове - <span class="latin_name">Stigmina carpophila (Syn. Coryneum beyerinskii Oudem, Corineum carpophilum Fauch., Clasterosporium carpophilum</span></h3>
@@ -822,11 +968,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Гъбна сачмянка -->   
 
     <!-- Бактериен пригор -->
-    <div class="aa-title" id="pseudomonas"></div>
+    <!-- <div class="aa-title" id="pseudomonas"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Бактериен пригор - <span class="latin_name">Pseudomonas syringae p.v. syringae.</span></h3>
@@ -887,11 +1033,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Бактериен пригор -->   
 
     <!-- Бактериален рак -->
-    <div class="aa-title" id="rhizobium"></div>
+    <!-- <div class="aa-title" id="rhizobium"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Бактериален рак по овощните - <span class="latin_name">Rhizobium radiobacter syn. Agrobacterium tumefaciens.</span></h3>
@@ -971,11 +1117,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Бактериален рак -->   
 
     <!-- Листни въшки -->
-    <div class="aa-title" id="brachycaudus"></div>
+    <!-- <div class="aa-title" id="brachycaudus"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Листни въшки</h3>
@@ -1029,8 +1175,6 @@
                 дръвчетата изостават в развитието си. Масово размножаване на въшката започва през втората 
                 половина на май, а плътността е най-висока през юни.
             </p>
-
-
             <h4 class="my_class_h4">Стратегия за борба</h4>
             <p>
                 ДРЗП изисква борбата с листните въшки по костилковите овощни видове да се провежда конкретно, 
@@ -1108,11 +1252,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Листни въшки -->   
 
     <!-- Щитоносни въшки -->
-    <div class="aa-title" id="quadraspidiotus"></div>
+    <!-- <div class="aa-title" id="quadraspidiotus"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Щитоносни въшки</h3>
@@ -1218,11 +1362,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Щитоносни въшки -->   
 
    <!-- Калифорнийска щитоносна въшка -->
-   <div class="aa-title" id="quadraspidiotus-perniciosus"></div>
+   <!-- <div class="aa-title" id="quadraspidiotus-perniciosus"></div>
    <div class="row" >
        <div class="pest-description-container text-indent">
            <h3 >Калифорнийска щитоносна въшка - <span class="latin_name">Quadraspidiotus perniciosus</span></h3>
@@ -1356,11 +1500,11 @@
                 </tr>
             </tbody>
         </table>
-   </div>
+   </div> -->
    <!-- КРАЙ Калифорнийска щитоносна въшка -->
 
    <!-- Лъжекалифорнийска -->
-   <div class="aa-title" id="parlatoria-oleae"></div>
+   <!-- <div class="aa-title" id="parlatoria-oleae"></div>
    <div class="row" >
        <div class="pest-description-container text-indent">
            <h3 >Лъжекалифорнийска щитоносна въшка - <span class="latin_name">Quadraspidiotus ostraeformis</span></h3>
@@ -1412,7 +1556,6 @@
                клоните се покриват с кора от щитчета. Нормалното развитие на дърветата се затруднява и 
                отделни клони изсъхват.
            </p>
-
            <h4 class="my_class_h4">Стратегия за борба</h4>
            <p>
                През невегетационния период - срещу зимуващия стадий. През вегетацията срещу ларвите от 
@@ -1436,11 +1579,11 @@
             </li>
         </ul>
        </div>
-   </div>
+   </div> -->
    <!-- КРАЙ Лъжекалифорнийска -->  
 
     <!-- Корояди -->
-    <div class="aa-title" id="scolytus"></div>
+    <!-- <div class="aa-title" id="scolytus"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Корояди</h3>
@@ -1482,11 +1625,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Корояди -->   
 
     <!-- Нечифтен дървесинояд -->
-    <div class="aa-title" id="xileborus-dispar"></div>
+    <!-- <div class="aa-title" id="xileborus-dispar"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Нечифтен дървесинояд – <span class="latin_name">Xileborus dispar</span></h3>
@@ -1532,11 +1675,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Нечифтен дървесинояд -->   
 
     <!-- Мъхнат бръмбар -->
-    <div class="aa-title" id="epicometis-hirta"></div>
+    <!-- <div class="aa-title" id="epicometis-hirta"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Мъхнат бръмбар - <span class="latin_name">Epicometis hirta</span></h3>
@@ -1611,11 +1754,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Мъхнат бръмбар -->   
 
     <!-- Черна златка -->
-    <div class="aa-title" id="capnodis-tenebrionis"></div>
+    <!-- <div class="aa-title" id="capnodis-tenebrionis"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Черна златка - <span class="latin_name">Capnodis tenebrionis</span></h3>
@@ -1637,7 +1780,6 @@
                 екскременти и дървени стърготини. При разкъсване на корените падат кафяви стърготини. Една 
                 ларва е достатъчна младите дръвчета да загинат още първата година.
             </p>
-            <p></p>
             <h4 class="my_class_h4">Стратегия за борба</h4>
             <p>
                 ДРЗП налага използването на здрав посадъчен материал за създаване на нови насаждения, с 
@@ -1660,11 +1802,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Черна златка -->   
 
     <!-- Многоядни -->
-    <div class="aa-title" id="lepidoptera"></div>
+    <!-- <div class="aa-title" id="lepidoptera"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Многоядни листогризещи гъсеници от разред <span class="latin_name">Lepidoptera</span> (пеперуди)</h3>
@@ -1687,7 +1829,6 @@
                 преминават по развиващите се листа, като ги унищожават напълно, без да засягат главните 
                 жилки. При масово намножаване те обезлистват напълно дърветата.
             </p>
-
             <h3 >Златозадка - <span class="latin_name">Euproctis chrysorrhoea</span></h3>
             <h4 class="my_class_h4">Описание на неприятеля</h4>
             <p>
@@ -1711,7 +1852,6 @@
                 хранят до захлаждане на времето, достигат трета възраст и си приготвят зимни гнезда, 
                 където зимуват.
             </p>
-
             <h3 >Пръстенотворка - <span class="latin_name">Malacosoma neustria</span></h3>
             <h4 class="my_class_h4">Описание на неприятеля</h4>
             <p>
@@ -1730,7 +1870,6 @@
                 през юни - юли. Снасят яйцата си спираловидно разположени около тънките клони. Яйчната 
                 купчинка наподобява пръстенче.
             </p>
-
             <h3 >Малка зимна педомерка – <span class="latin_name">Operophtera brumata</span></h3>
             <h4 class="my_class_h4">Описание на неприятеля</h4>
             <p>
@@ -1757,7 +1896,6 @@
                 предпочитание имат към плодовете на черешата и сливата, по които нагризванията достигат до 
                 меката костилка.
             </p>
-            
             <h4 class="my_class_h4">Стратегия за борба</h4>
             <p>
                 ДРЗП налага да се извършват всички агротехнически мероприятия за поддържане на насажденията 
@@ -1772,8 +1910,6 @@
                 повредени пъпки или 8 - 12 гъсеници при стръскване на 100 клонки. Успешно могат да се 
                 използват бактериални продукти за растителна защита на база
                 <span class="latin_name">Bacillus thuringiensis</span>, които опазват полезната ентомофауна.
-            </p>
-            <p>
             </p>
             <h4 class="my_class_h4 as">Активни вещества</h4>
             <p class="as">
@@ -1881,11 +2017,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Многоядни -->   
 
     <!-- Листозавивачки -->
-    <div class="aa-title" id="tortricidae"></div>
+    <!-- <div class="aa-title" id="tortricidae"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Листозавивачки</h3>
@@ -1963,7 +2099,6 @@
                 Женските пеперуди снасят яйцата си наредени в купчинки по кората на ствола или скелетните 
                 клони на дърветата.
             </p>
-
             <h3 >Сива пъпкозавивачка - <span class="latin_name">Hedya nubiferana</span></h3>
             <h4 class="my_class_h4">Описание на неприятеля</h4>
             <p>
@@ -2009,7 +2144,6 @@
                 какавидират в завитите листа. Летежът на пеперудите се наблюдава от средата на юни до 
                 края на юли.
             </p>
-
             <h4 class="my_class_h4">ПИВ:</h4>
             <p>
                 - През фенофаза „зимен покой“ за листозавивачките зимуващи в стадий яйце - 3-5 
@@ -2192,11 +2326,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Листозавивачки -->   
 
     <!--  Листни оси -->
-    <div class="aa-title" id="neurotoma"></div>
+    <!-- <div class="aa-title" id="neurotoma"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Листни оси</h3>
@@ -2290,11 +2424,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Листни оси -->   
 
     <!-- Акари -->
-    <div class="aa-title" id="tetranychoidea"></div>
+    <!-- <div class="aa-title" id="tetranychoidea"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >АКАРИ</h3>
@@ -2498,11 +2632,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Акари -->   
 
     <!-- ВРЕДИТЕЛИ ПО СЛИВАТА -->
-    <div class="aa-title" id="parthenolecanium"></div>
+    <!-- <div class="aa-title" id="parthenolecanium"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3>ВРЕДИТЕЛИ ПО СЛИВАТА</h3>
@@ -2599,11 +2733,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ ВРЕДИТЕЛИ ПО СЛИВАТА -->   
 
     <!-- Сливов плодов червей -->
-    <div class="aa-title" id="grapholitha"></div>
+    <!-- <div class="aa-title" id="grapholitha"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Сливов плодов червей - <span class="latin_name">Grapholitha funebrana</span></h3>
@@ -2723,11 +2857,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Сливов плодов червей -->   
 
     <!-- Черна сливова плодова оса -->
-    <div class="aa-title" id="hoplocampa-minuta"></div>
+    <!-- <div class="aa-title" id="hoplocampa-minuta"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Черна сливова плодова оса - <span class="latin_name">Hoplocampa minuta</span></h3>
@@ -2814,11 +2948,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Черна сливова плодова оса -->   
 
     <!-- Жълт сливов акар -->
-    <div class="aa-title" id="schizotetranychus"></div>
+    <!-- <div class="aa-title" id="schizotetranychus"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Жълт сливов акар - <span class="latin_name">Schizotetranychus prunicola</span></h3>
@@ -2846,11 +2980,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Жълт сливов акар -->   
 
     <!-- Галообразуващ сливов акар -->
-    <div class="aa-title" id="aceria-phloeocoptes"></div>
+    <!-- <div class="aa-title" id="aceria-phloeocoptes"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Галообразуващ сливов акар - <span class="latin_name">Aceria phloeocoptes</span></h3>
@@ -2879,11 +3013,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Галообразуващ сливов акар -->   
 
     <!-- Червени листни петна -->
-    <div class="aa-title" id="polystigma-rubrum"></div>
+    <!-- <div class="aa-title" id="polystigma-rubrum"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Червени листни петна по сливата - <span class="latin_name">Polystigma rubrum</span></h3>
@@ -2906,8 +3040,6 @@
                 се създават при температура от 10 до 26°С и при наличие на влага, която е необходима не 
                 само за отделяне на аскоспорите, но и за покълнването им при попадане върху листата.
             </p>
-            <p></p>
-            <p></p>
             <h4 class="my_class_h4">Стратегия за борба</h4>
             <p>
                 Препоръчва се намаляване на зимуващата зараза чрез заораване на окапалите листа през 
@@ -2934,11 +3066,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Червени листни петна -->   
 
     <!-- Ръжда по сливата -->
-    <div class="aa-title" id="tranzschelia"></div>
+    <!-- <div class="aa-title" id="tranzschelia"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Ръжда по сливата - <span class="latin_name">Tranzschelia pruni - spinosae</span></h3>
@@ -2981,11 +3113,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Ръжда по сливата -->   
 
     <!-- Вирусни болести -->
-    <div class="aa-title" id="viruses-a"></div>
+    <!-- <div class="aa-title" id="viruses-a"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Вирусни болести</h3>
@@ -3014,11 +3146,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Вирусни болести -->   
 
     <!-- Плевели -->
-    <div class="aa-title" id="weed-a"></div>
+    <!-- <div class="aa-title" id="weed-a"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Плевели</h3>
@@ -3101,11 +3233,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Плевели -->   
 
     <!-- ВРЕДИТЕЛИ ПО ЧЕРЕША И ВИШНА -->
-    <div class="aa-title" id="myzus-cerasi"></div>
+    <!-- <div class="aa-title" id="myzus-cerasi"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >ВРЕДИТЕЛИ ПО ЧЕРЕША И ВИШНА</h3>
@@ -3133,7 +3265,6 @@
                 питомниците. Силно повредените листа са по-дребни, почерняват и окапват, а силно 
                 нападнатите леторасти се изкривяват.
             </p>
-            <p></p>
             <h4 class="my_class_h4">Стратегия за борба</h4>
             <p>
                 ДРЗП налага, преди да се вземе решение за химична борба, да се направи много точна 
@@ -3195,11 +3326,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ  -->   
 
     <!-- Черешова муха -->
-    <div class="aa-title" id="ragoletis"></div>
+    <!-- <div class="aa-title" id="ragoletis"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Черешова муха - <span class="latin_name">Ragoletis cerasi</span></h3>
@@ -3301,11 +3432,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Черешова муха -->   
 
     <!-- Вишнев хоботник -->
-    <div class="aa-title" id="rhynchites-auratus"></div>
+    <!-- <div class="aa-title" id="rhynchites-auratus"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Вишнев (черешов) хоботник - <span class="latin_name">Rhynchites auratus</span></h3>
@@ -3385,11 +3516,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Вишнев хоботник -->   
 
     <!-- Цилиндроспориоза -->
-    <div class="aa-title" id="blumeriella"></div>
+    <!-- <div class="aa-title" id="blumeriella"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Цилиндроспориоза - „Бяла ръжда“ по черешата и вишнята - <span class="latin_name">Blumeriella jaapii (syn. Coccomyces hiemalis)</span></h3>
@@ -3414,7 +3545,6 @@
                 след навлажняване. Отделянето на аскоспори започва обикновено през периода на цъфтежа на 
                 черешите и вишните и продължава около 6 седмици. Най-обилно аскоспори се отделят при 
                 температура от 15 до 27<sup>o</sup>С, а най-слабо при температура около 8<sup>o</sup>С.
-                    
             </p>
             <p>
                 По-рядко в презимувалите листа се образуват асервули. Инфекцията на листата става през 
@@ -3452,19 +3582,19 @@
             <ul class="products">
                 <li>
                     <a data-lightbox="image" href="../../../../../assets/fruits/Blumeriella_jaapii_01.jpg"
-                    data-title="Цилиндроспориоза - Rhynchites auratus">
+                    data-title="Цилиндроспориоза - Blumeriella jaapii ">
                         <img src="../../../../../assets/fruits/Blumeriella_jaapii_01_thumb.jpg" 
-                        alt="Blumeriella jaapii " title="Цилиндроспориоза"/>
+                        alt="Blumeriella jaapii" title="Цилиндроспориоза"/>
                         <span class="title_thumb">Цилиндроспориоза</span>
                     </a>
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Цилиндроспориоза -->  
 
     <!-- Вирусни болести -->
-    <div class="aa-title" id="viruses-b"></div>
+    <!-- <div class="aa-title" id="viruses-b"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Вирусни болести</h3>
@@ -3484,11 +3614,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Вирусни болести -->   
 
     <!-- ПЛЕВЕЛИ -->
-    <div class="aa-title" id="weed-b"></div>
+    <!-- <div class="aa-title" id="weed-b"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >ПЛЕВЕЛИ</h3>
@@ -3687,11 +3817,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ ПЛЕВЕЛИ -->   
 
     <!-- Прасковен молец -->
-    <div class="aa-title" id="anarsia-lineatella"></div>
+    <!-- <div class="aa-title" id="anarsia-lineatella"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >ВРЕДИТЕЛИ ПО ПРАСКОВАТА И КАЙСИЯТА</h3>
@@ -3783,11 +3913,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Прасковен молец -->   
 
     <!-- Източен плодов червей -->
-    <div class="aa-title" id="grapholitha-molesta"></div>
+    <!-- <div class="aa-title" id="grapholitha-molesta"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Източен плодов червей - <span class="latin_name">Grapholitha molesta</span></h3>
@@ -3888,11 +4018,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Източен плодов червей -->   
 
     <!-- Прасковена листна въшка -->
-    <div class="aa-title" id="myzodes-persicae"></div>
+    <!-- <div class="aa-title" id="myzodes-persicae"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Прасковена листна въшка - <span class="latin_name">Myzodes persicae</span></h3>
@@ -4009,8 +4139,8 @@
                     <td>индивиди на Hyalopterus spp</td>
                     <td>5% нападнати пъпки</td>
                 </tr>
-                <tr rowspan="2">
-                    <td>образуване на завръзи - нарастване на плодовете</td>
+                <tr>
+                    <td rowspan="2">образуване на завръзи - нарастване на плодовете</td>
                     <td>колонии на Myzus spp., Brachycaudus spp.</td>
                     <td>5% нападнати леторасти</td>
                 </tr>
@@ -4020,11 +4150,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Прасковена листна въшка -->   
 
     <!-- Черничева щитоносна въшка -->
-    <div class="aa-title" id="pseudaulacaspis"></div>
+    <!-- <div class="aa-title" id="pseudaulacaspis"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Черничева щитоносна въшка - <span class="latin_name">Pseudaulacaspis pentagona</span></h3>
@@ -4098,11 +4228,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Черничева щитоносна въшка -->  
 
     <!-- Зарзалова вълнарка -->
-    <div class="aa-title" id="orgyia-antiqua"></div>
+    <!-- <div class="aa-title" id="orgyia-antiqua"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Зарзалова вълнарка - <span class="latin_name">Orgyia antiqua</span></h3>
@@ -4127,11 +4257,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Зарзалова вълнарка -->   
 
     <!-- Пъпкови и плодови хоботници -->
-    <div class="aa-title" id="phyllobius"></div>
+    <!-- <div class="aa-title" id="phyllobius"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Пъпкови и плодови хоботници</h3>
@@ -4187,11 +4317,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Пъпкови и плодови хоботници -->   
 
     <!-- Плодови хоботници -->
-    <div class="aa-title" id="rhynchites-bacchus"></div>
+    <!-- <div class="aa-title" id="rhynchites-bacchus"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Плодови хоботници</h3>
@@ -4251,7 +4381,7 @@
             </p>
             <h4 class="my_class_h4 as">Активни вещества</h4>
             <p class="as">
-                    Няма регистрирани активни субстанции срещу хоботните бръмбари по кайсията.
+                Няма регистрирани активни субстанции срещу хоботните бръмбари по кайсията.
             </p>
         </div>
         <div class="pest-image-container " >
@@ -4266,19 +4396,19 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Плодови хоботници -->   
 
     <!-- Шарка вирус по прасковата -->
-    <div class="aa-title" id="viruses-praskova"></div>
+    <!-- <div class="aa-title" id="viruses-praskova"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Шарка вирус по прасковата</h3>
             <h4 class="my_class_h4">Описание на болестта</h4>
             <p>
-                Шарката по сливата е описана като нова за науката болест от Атанасов през 1932 г.
-                 Счита се за една от най-вредоносните вирусни болести. По кайсията и прасковата шарката 
-                 има по-малко икономическо значение.
+                Шарката по сливата е описана като нова за науката болест от Атанасов през 1932 г. 
+                Счита се за една от най-вредоносните вирусни болести. По кайсията и прасковата шарката 
+                има по-малко икономическо значение.
             </p>
             <p>
                 Шарката по прасковата предизвиква по листата неясно изразена мозаичност, хлоротично 
@@ -4326,11 +4456,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ  -->   
 
     <!-- Къдравост по прасковата -->
-    <div class="aa-title" id="taphrina-deformans"></div>
+    <!-- <div class="aa-title" id="taphrina-deformans"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Къдравост по прасковата - <span class="latin_name">Taphrina deformans</span></h3>
@@ -4403,11 +4533,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Къдравост по прасковата -->   
 
     <!-- Брашнеста мана -->
-    <div class="aa-title" id="sphaerotheca-pannosa"></div>
+    <!-- <div class="aa-title" id="sphaerotheca-pannosa"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Брашнеста мана по прасковата - <span class="latin_name">Sphaerotheca pannosa /Wallroth/Leveille var. persica</span></h3>
@@ -4478,11 +4608,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Брашнеста мана -->  
 
     <!-- Струпясване по прасковата -->
-    <div class="aa-title" id="fusicladium-amygdali"></div>
+    <!-- <div class="aa-title" id="fusicladium-amygdali"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Струпясване по прасковата - <span class="latin_name">Fusicladium amygdali</span></h3>
@@ -4526,11 +4656,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Струпясване по прасковата -->   
 
     <!-- Гномониоза по кайсията -->
-    <div class="aa-title" id="gnomonia-erythrostoma"></div>
+    <!-- <div class="aa-title" id="gnomonia-erythrostoma"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Гномониоза по кайсията - <span class="latin_name">Gnomonia erythrostoma</span></h3>
@@ -4577,11 +4707,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Гномониоза по кайсията -->   
 
     <!-- Алтернарийна болест по кайсията -->
-    <div class="aa-title" id="alternaria-tenuissima"></div>
+    <!-- <div class="aa-title" id="alternaria-tenuissima"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Алтернарийна болест по кайсията - <span class="latin_name">Alternaria tenuissima</span></h3>
@@ -4624,8 +4754,6 @@
                 Благоприятни условия за развитие на болестта се създават при продължителни валежи или 
                 мъгли по време на цъфтеж и наедряване на плодовете.
             </p>
-            <p></p>
-            <p></p>
             <h4 class="my_class_h4">Стратегия за борба</h4>
             <p>
                 Заораване на окапалите листа и предпазни пръскания в зависимост от климатичните условия. 
@@ -4640,11 +4768,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Алтернарийна болест по кайсията -->   
 
     <!-- Апоплексия -->
-    <div class="aa-title" id="apoplecsia"></div>
+    <!-- <div class="aa-title" id="apoplecsia"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Преждевременно загиване (Апоплексия)</h3>
@@ -4687,7 +4815,6 @@
                 неблагоприятните екологични и агротехнически фактори, физиологични смущения и 
                 фитопатогени, които се намират в неразривна връзка помежду си.
             </p>
-            <p></p>
             <h4 class="my_class_h4">Стратегия за борба</h4>
             <p>
                 За да се сведе до минимум преждевременното загиване за кайсиеви градини, трябва да се 
@@ -4712,11 +4839,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Апоплексия -->   
 
     <!-- Ръжда по кайсията -->
-    <div class="aa-title" id="tranzschelia-prunispinosae"></div>
+    <!-- <div class="aa-title" id="tranzschelia-prunispinosae"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Ръжда по кайсията - <span class="latin_name">Tranzschelia prunispinosae</span></h3>
@@ -4769,11 +4896,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ  -->   
 
     <!-- Плевели -->
-    <div class="aa-title" id="weed-praskova"></div>
+    <!-- <div class="aa-title" id="weed-praskova"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Плевели</h3>
@@ -4876,153 +5003,8 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ  -->  
 
-    <!-- ФЕНОФАЗИ ПРИ КОСТИЛКОВИ -->
-    <div class="row text-indent" >
-        <h3 >ФЕНОФАЗИ ПРИ КОСТИЛКОВИ</h3>
-        <p>А - зимуваща (спяща) пъпка;</p>
-        <p>В - набъбване на пъпките;</p>
-        <p>С - розов бутон;</p>
-        <p>D - бял бутон;</p>
-        <p>Е - начало на цъфтеж;</p>
-        <p>F - масов цъфтеж;</p>
-        <p>G - опадване на венчелистчетата;</p>
-        <p>Н - образуване на завръзи;</p>
-        <p>I - малки плодчета.</p>
-    </div>
-    <!-- КРАЙ  -->   
-
-    <div class="row-back">
-        <div class="col-md-6" style="margin: 0 auto; padding-top: 50px;">
-            <div class="panel-warning text-center">
-                <div class="panel-heading ">
-                    <a mat-button class="back_link_bottom" przAnchorTo target="#pest_menu" title="към всички неприятели"> към всички неприятели</a>
-                </div>
-            </div>
-        </div>
-    </div>
     
-    <!-- Автори на снимки -->
-    <br><br>
-    <div class="row">
-        <mat-accordion>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        Използвани са снимки от:
-                    </mat-panel-title>
-                </mat-expansion-panel-header>
-                <div class="panel-body my_panel-body">
-                    <p>
-                        <span class="bold">Снимка 1:</span>
-                        <span>By myself (User:Piotrus) - Self-photographed, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=3412893</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 2:</span>
-                        <span>Av Mary Ann Hansen - http://www.forestryimages.org/browse/detail.cfm?imgnum=5335073, CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=10777284</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 3:</span>
-                        <span>Av kühler Grill - selbst fotografiert (20.06.2004), Public Domain, https://commons.wikimedia.org/w/index.php?curid=31080103</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 4:</span>
-                        <span>By Sandy Rae - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=45521165</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 5:</span>
-                        <span>De Toby Hudson - Trabajo propio, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=11755270</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 6:</span>
-                        <span>Av Fdcgoeul - Eget arbete, CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=5008774</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 7:</span>
-                        <span>Par Bernard DUPONT from FRANCE — Hairy Beetle (Tropinota hirta), CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=40741048</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 8:</span>
-                        <span>By Jafras - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=31894290</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 9:</span>
-                        <span>By Didier Descouens - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=27011413</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 10:</span>
-                        <span>By Donald Hobern from Canberra, Australia - Euproctis chrysorrhoeaUploaded by berichard, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=13557283</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 11:</span>
-                        <span>By H. Krisp - Own work, CC BY 3.0, https://commons.wikimedia.org/w/index.php?curid=19806408</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 12:</span>
-                        <span>By picture taken by Olaf Leillinger - Own work, CC BY-SA 2.5, https://commons.wikimedia.org/w/index.php?curid=1656670</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 13:</span>
-                        <span>By Hectonichus - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=58254954</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 14:</span>
-                        <span>By Gyorgy Csoka, Hungary Forest Research Institute, Bugwood.org - This image is Image Number 5410964 at Insect Images, a source for entomological images operated by The Bugwood Network at the University of Georgia and the USDA Forest Service., CC BY 3.0 us, https://commons.wikimedia.org/w/index.php?curid=11741182</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 15:</span>
-                        <span>By Gilles San Martin - originally posted to Flickr as Tetranychus urticae with silk threads, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=11208762</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 16:</span>
-                        <span>http://britishwildlife.wikia.com/wiki/File:Scale_Insect_-_Parthenolecanium_corni.JPG</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 17:</span>
-                        <span>By Fvlamoen - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=3198655</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 18:</span>
-                        <span>By Luis Fernández García - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=34604451</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 19:</span>
-                        <span>By Eclos - Own work, Public Domain, https://commons.wikimedia.org/w/index.php?curid=7314123</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 20:</span>
-                        <span>By ©entomart, Attribution, https://commons.wikimedia.org/w/index.php?curid=869680</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 21:</span>
-                        <span>By Siga - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=15907574</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 22:</span>
-                        <span>By AfroBrazilian - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=33680141</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 23:</span>
-                        <span>Por Donald Hobern, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=6388243</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 24:</span>
-                        <span>By Udo Schmidt from Deutschland - Phyllobius oblongus (Linné, 1758)Uploaded by Magnus Manske, CC BY-SA 2.0, https://commons.wikimedia.org/w/index.php?curid=22950996</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 25:</span>
-                        <span>Par ©entomart, Attribution, https://commons.wikimedia.org/w/index.php?curid=466680</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 26:</span>
-                        <span>By Giancarlo Dessì - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=4072350</span>
-                    </p>
-                </div>
-            </mat-expansion-panel>
-        </mat-accordion>
-    </div>
-    <!-- КРАЙ Автори на снимки -->
-</div>
  
