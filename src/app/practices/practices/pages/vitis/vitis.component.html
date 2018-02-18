@@ -1,8 +1,8 @@
-<!-- <div class="row text-center" id="prz-loader" *ngIf="!isLoaded">
+<div class="row text-center" id="prz-loader" *ngIf="!isLoaded">
     <mat-spinner aria-label="Спинър до зареждането на страницата"></mat-spinner>
-</div> -->
-<!-- *ngIf="isLoaded" -->
-<div  id="wrap_lmenu_txt">
+</div>
+
+<div *ngIf="isLoaded" id="wrap_lmenu_txt">
     <div class="text-center name-header">
         <h2 class="customfont">ЛОЗА</h2>
     </div>
@@ -280,7 +280,7 @@
     </div>
     <!-- КРАЙ Избор на Вредител -->
         
-    <!-- <div *ngFor="let practice of practices">
+    <div *ngFor="let practice of practices">
         <div class="aa-title" id="{{practice.linkId}}"></div>
         <div class="row" >
             <div class="pest-description-container text-indent" [innerHTML]="practice.text  | safeHtml"></div>
@@ -316,11 +316,69 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
+
+    <!-- Автори на снимки -->
+    <br><br>
+    <div class="row">
+        <mat-accordion>
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Използвани са снимки от:
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div class="panel-body my_panel-body">
+                    <p>
+                        <span class="bold">Снимка 1:</span>
+                        <span>By Jerzy Opioła - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=50709586</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 2:</span>
+                        <span>http://www.cropscience.bayer.bg/BCSWeb/www/BCS_BG_Internet.nsf/id/BG_7L9DUW_Uncinula_necator</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 3:</span>
+                        <span>By Photographer: Tom Maack No machine-readable author provided. T.o.m.~commonswiki assumed (based on copyright claims). - No machine-readable source provided. Own work assumed (based on copyright claims)., CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=384797</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 4:</span>
+                        <span>Von Bauer Karl - Eigenes Werk, CC BY 3.0 at, https://commons.wikimedia.org/w/index.php?curid=17374399</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 5:</span>
+                        <span>Av Daniel Molitor - Daniel Molitor, CC BY 2.0 de, https://commons.wikimedia.org/w/index.php?curid=9549386</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 6:</span>
+                        <span>Par gailhampshire from Cradley, Malvern, U.K — European Vine Moth.Lobesia botrana?.Tortricidae, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=50016488</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 7:</span>
+                        <span>https://alchetron.com/Eupoecilia-ambiguella</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 8:</span>
+                        <span>De Donald Hobern from Canberra, Australia - Sparganothis pilleriana, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=4951630</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 9:</span>
+                        <span>By Joachim Schmid, Fachgebiet Rebenzüchtung und Rebenveredlung Forschungsanstalt Geisenheim, Von-Lade-Str. 1, D-65366 Geisenheim - Own work (Original text: eigenes Foto), CC BY 3.0 de, https://commons.wikimedia.org/w/index.php?curid=19349810</span>
+                    </p>
+                    <p>
+                        <span class="bold">Снимка 10:</span>
+                        <span>By Olivier Colas (http://olouf.fr) - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=49253859</span>
+                    </p>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </div>
+    <!-- КРАЙ Автори на снимки -->
+</div>
 
 
     <!-- Мана -->
-    <div class="aa-title" id="plasmopara-viticola"></div>
+    <!-- <div class="aa-title" id="plasmopara-viticola"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Мана по лозата - <span class="latin_name">Plasmopara viticola</span></h3>
@@ -449,11 +507,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Мана --> 
 
     <!-- Брашнеста мана -->
-    <div class="aa-title" id="oidium-tuckeri"></div>
+    <!-- <div class="aa-title" id="oidium-tuckeri"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Брашнеста мана по лозата  - <span class="latin_name">Oidium tuckeri</span></h3>
@@ -548,11 +606,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Брашнеста мана --> 
 
     <!-- Сиво гниене -->
-    <div class="aa-title" id="botrytis-cinerea"></div>
+    <!-- <div class="aa-title" id="botrytis-cinerea"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Сиво гниене - <span class="latin_name">Botrytis cinerea</span></h3>
@@ -620,11 +678,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Сиво гниене --> 
 
     <!-- Екскориоза -->
-    <div class="aa-title" id="phomopsis-viticola"></div>
+    <!-- <div class="aa-title" id="phomopsis-viticola"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Екскориоза по лозата - <span class="latin_name">Phomopsis viticola</span></h3>
@@ -672,17 +730,17 @@
             </p>
             <p class="as">
                 Системни: <span class="active-substance">алуминиев фозетил, алуминиев фозетил + фолпет, 
-                    алуминиев фозетил + фенамидон.</span>
+                алуминиев фозетил + фенамидон.</span>
             </p>
         </div>
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Екскориоза --> 
 
     <!-- Антракноза -->
-    <div class="aa-title" id="sphaceloma"></div>
+    <!-- <div class="aa-title" id="sphaceloma"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Антракноза - <span class="latin_name">Sphaceloma ampelinum</span></h3>
@@ -727,11 +785,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Антракноза --> 
 
     <!-- Еутипиоза -->
-    <div class="aa-title" id="eutypa"></div>
+    <!-- <div class="aa-title" id="eutypa"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Еутипиоза по лозата - <span class="latin_name">Eutypa lata</span></h3>
@@ -760,11 +818,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Еутипиоза --> 
 
     <!-- Еска -->
-    <div class="aa-title" id="esca"></div>
+    <!-- <div class="aa-title" id="esca"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Еска</h3>
@@ -818,11 +876,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Еска --> 
 
     <!-- Бяло гниене -->
-    <div class="aa-title" id="coniella"></div>
+    <!-- <div class="aa-title" id="coniella"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Бяло гниене - <span class="latin_name">Coniella diplodiella</span></h3>
@@ -851,11 +909,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Бяло гниене --> 
 
     <!-- Черно гниене -->
-    <div class="aa-title" id="phoma-uvicola"></div>
+    <!-- <div class="aa-title" id="phoma-uvicola"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Черно гниене - <span class="latin_name">Phoma uvicola</span></h3>
@@ -912,11 +970,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Черно гниене --> 
 
     <!-- Бактериален рак -->
-    <div class="aa-title" id="rhizobium"></div>
+    <!-- <div class="aa-title" id="rhizobium"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Бактериален рак по лозата - <span class="latin_name">Rhizobium vitis</span></h3>
@@ -946,11 +1004,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Бактериален рак --> 
 
     <!-- Вируси -->
-    <div class="aa-title" id="viruses"></div>
+    <!-- <div class="aa-title" id="viruses"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Вируси</h3>
@@ -1028,11 +1086,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Вируси --> 
 
     <!-- Шарен гроздов молец -->
-    <div class="aa-title" id="lobesia-botrana"></div>
+    <!-- <div class="aa-title" id="lobesia-botrana"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Неприятели</h3>
@@ -1172,11 +1230,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Шарен гроздов молец --> 
 
     <!-- Еднопоясен гроздов молец -->
-    <div class="aa-title" id="eupoecilia"></div>
+    <!-- <div class="aa-title" id="eupoecilia"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Еднопоясен гроздов молец - <span class="latin_name">Eupoecilia ambiguella Hb.</span></h3>
@@ -1295,11 +1353,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Еднопоясен гроздов молец --> 
 
     <!-- Лозова щитовка -->
-    <div class="aa-title" id="pulvinaria"></div>
+    <!-- <div class="aa-title" id="pulvinaria"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Лозова щитовка - <span class="latin_name">Pulvinaria vitis L.</span></h3>
@@ -1358,11 +1416,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Лозова щитовка --> 
 
     <!-- Лозова пъстрянка -->
-    <div class="aa-title" id="yno-ampelophaga"></div>
+    <!-- <div class="aa-title" id="yno-ampelophaga"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Лозова пъстрянка - <span class="latin_name">Yno (Procris) ampelophaga Bayle</span></h3>
@@ -1437,11 +1495,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Лозова пъстрянка --> 
 
     <!-- Лозова листозавивачка -->
-    <div class="aa-title" id="sparganothis"></div>
+    <!-- <div class="aa-title" id="sparganothis"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Лозова листозавивачка - <span class="latin_name">Sparganothis pilleriana</span></h3>
@@ -1484,9 +1542,6 @@
                 Неприятелят има много естествени врагове - ентомофаги, които го ограничават, когато 
                 биологичното равновесие в лозовите агроценози не е нарушено.
             </p>
-            <p>
-                
-            </p>
             <h4 class="my_class_h4 as">Активни вещества</h4>
             <p class="as">
                 Няма регистрирани инсектициди за борба срещу този неприятел, но регистрираните за борба с 
@@ -1506,11 +1561,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Лозова листозавивачка --> 
 
     <!-- Нощенки -->
-    <div class="aa-title" id="scotia"></div>
+    <!-- <div class="aa-title" id="scotia"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Нощенки</h3>
@@ -1566,11 +1621,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Нощенки --> 
 
     <!-- Лозова филоксера -->
-    <div class="aa-title" id="viteus"></div>
+    <!-- <div class="aa-title" id="viteus"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Лозова филоксера - <span class="latin_name">Viteus vitifolliae</span></h3>
@@ -1625,11 +1680,11 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Лозова филоксера --> 
 
     <!-- Акари -->
-    <div class="aa-title" id="schizotetranychus"></div>
+    <!-- <div class="aa-title" id="schizotetranychus"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Акари</h3>
@@ -1862,11 +1917,11 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> -->
     <!-- КРАЙ Акари --> 
 
     <!-- Нематоди -->
-    <div class="aa-title" id="meloidogyne"></div>
+    <!-- <div class="aa-title" id="meloidogyne"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Нематоди</h3>
@@ -1915,11 +1970,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Нематоди --> 
 
     <!-- Потенциални неприятели -->
-    <div class="aa-title" id="none"></div>
+    <!-- <div class="aa-title" id="none"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Потенциални неприятели</h3>
@@ -1936,11 +1991,11 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Потенциални неприятели --> 
 
     <!-- Плевели -->
-    <div class="aa-title" id="weed"></div>
+    <!-- <div class="aa-title" id="weed"></div>
     <div class="row" >
         <div class="pest-description-container text-indent">
             <h3 >Плевели</h3>
@@ -2045,63 +2100,6 @@
         <div class="pest-image-container " >
             
         </div>
-    </div>
+    </div> -->
     <!-- КРАЙ Плевели --> 
-            
-    <!-- Автори на снимки -->
-    <br><br>
-    <div class="row">
-        <mat-accordion>
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title>
-                        Използвани са снимки от:
-                    </mat-panel-title>
-                </mat-expansion-panel-header>
-                <div class="panel-body my_panel-body">
-                    <p>
-                        <span class="bold">Снимка 1:</span>
-                        <span>By Jerzy Opioła - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=50709586</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 2:</span>
-                        <span>http://www.cropscience.bayer.bg/BCSWeb/www/BCS_BG_Internet.nsf/id/BG_7L9DUW_Uncinula_necator</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 3:</span>
-                        <span>By Photographer: Tom Maack No machine-readable author provided. T.o.m.~commonswiki assumed (based on copyright claims). - No machine-readable source provided. Own work assumed (based on copyright claims)., CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=384797</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 4:</span>
-                        <span>Von Bauer Karl - Eigenes Werk, CC BY 3.0 at, https://commons.wikimedia.org/w/index.php?curid=17374399</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 5:</span>
-                        <span>Av Daniel Molitor - Daniel Molitor, CC BY 2.0 de, https://commons.wikimedia.org/w/index.php?curid=9549386</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 6:</span>
-                        <span>Par gailhampshire from Cradley, Malvern, U.K — European Vine Moth.Lobesia botrana?.Tortricidae, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=50016488</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 7:</span>
-                        <span>https://alchetron.com/Eupoecilia-ambiguella</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 8:</span>
-                        <span>De Donald Hobern from Canberra, Australia - Sparganothis pilleriana, CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=4951630</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 9:</span>
-                        <span>By Joachim Schmid, Fachgebiet Rebenzüchtung und Rebenveredlung Forschungsanstalt Geisenheim, Von-Lade-Str. 1, D-65366 Geisenheim - Own work (Original text: eigenes Foto), CC BY 3.0 de, https://commons.wikimedia.org/w/index.php?curid=19349810</span>
-                    </p>
-                    <p>
-                        <span class="bold">Снимка 10:</span>
-                        <span>By Olivier Colas (http://olouf.fr) - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=49253859</span>
-                    </p>
-                </div>
-            </mat-expansion-panel>
-        </mat-accordion>
-    </div>
-    <!-- КРАЙ Автори на снимки -->
-</div>
+
