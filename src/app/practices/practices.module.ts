@@ -11,7 +11,6 @@ import { PracticesService } from './practices/shared/services/practices.services
 
 // Directives and Pipes
 import { AnchorToDirective } from '../common/directives/AnchorToDirective';
-// import { SanitizeHtmlPipe } from './practices/shared/pipes/keep-html.pipe';
 
 // Header and Footer Module
 import { ShareComponentsModule } from '../common/share.components.module';
@@ -64,6 +63,7 @@ import { VitisComponent } from './practices/pages/vitis/vitis.component';
 // Management
 import { ManagementComponent } from './management/management/management.component';
 
+
 @NgModule({
     imports: [
     CommonModule,
@@ -114,7 +114,7 @@ import { ManagementComponent } from './management/management/management.componen
         FragariaComponent,
         RubusComponent,
         NigrumComponent,
-        VitisComponent,
+        VitisComponent
     ],
     providers: [PracticesService],
     entryComponents: [SideMenuComponent, DialogComponent],

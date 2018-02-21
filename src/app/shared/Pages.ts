@@ -23,14 +23,17 @@ const pages = [
         link: 'practices',
         subPage: [
             {
+                id: 0,
                 subName: 'добри растителнозащитни практики',
                 link: 'practices'
             },
             {
+                id: 1,
                 subName: 'интегрирано управление на вредители',
                 link: 'management'
             },
             {
+                id: 2,
                 subName: 'прагове на икономическа вредност',
                 link: 'thresholds'
             }

@@ -20,6 +20,7 @@ import { SeoService } from './common/services/SeoService';
 import { MaterialModule } from './common/material/material.module';
 import { ShareComponentsModule } from './common/share.components.module';
 import { PracticesModule } from './practices/practices.module';
+import { ThresholdsModule } from './thresholds/thresholds.module';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './shared/footer/footer.component';
@@ -56,7 +57,8 @@ import { ContactsComponent } from './contacts/contacts.component';
         BrowserAnimationsModule,
         ShareComponentsModule,
         AppRoutingModul,
-        PracticesModule
+        PracticesModule,
+        ThresholdsModule
     ],
     providers: [
         ChangeBreadcrumbService,

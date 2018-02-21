@@ -14,6 +14,7 @@ export const routes: Routes = [
     { path: 'products', component: ProductsComponent },
     { path: 'crops', component: CropsComponent },
     { path: 'practices', loadChildren: './practices/practices.module#PracticesModule'},
+    { path: 'thresholds', loadChildren: './thresholds/thresholds.module#ThresholdsModule'},
     { path: 'documents', component: DocumentsComponent },
     { path: 'contacts', component: ContactsComponent }
 ];
