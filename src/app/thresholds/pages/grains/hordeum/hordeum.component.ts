@@ -4,15 +4,15 @@ import { SeoService } from '../../../../common/services/SeoService';
 import { ChangeBreadcrumbService } from '../../../../common/services/changeBreadcrumb.service';
 
 @Component({
-    templateUrl: './triticum.component.html',
+    templateUrl: './hordeum.component.html',
     styleUrls: ['../../pages.scss']
 })
-export class TriticumComponent implements OnInit {
-    private title = 'ПИВ - Пшеница';
-    private description = 'Прагове на икономическа вредност за вредители по пшеница.';
-    private keywords = 'ПИВ, пшеница, болести, неприятели, плевели, ПРЗ';
+export class HordeumComponent implements OnInit {
+    private title = 'ПИВ - Ечемик';
+    private description = 'Прагове на икономическа вредност за вредители по ечемик.';
+    private keywords = 'ПИВ, ечемик, болести, неприятели, плевели, ПРЗ';
 
-    breadcrumbName = 'Пшеница';
+    breadcrumbName = 'Ечемик';
 
     constructor(
         private seoService: SeoService,
@@ -25,5 +25,4 @@ export class TriticumComponent implements OnInit {
     ngOnInit() {
         this.changeBreadcrumbService.emitName(this.breadcrumbName);
     }
-
 }

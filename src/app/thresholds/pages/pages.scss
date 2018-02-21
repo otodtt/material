@@ -15,11 +15,13 @@ h2, h3, h4 {
 }
 .latin_name {
     font-style: italic;
+    font-weight: normal !important;
 }
 
 .piv_table {
     border: 1px solid #8f9e82;
     width: 100%;
+    font-size: 1.1em;
     th {
         border: 1px solid #8f9e82;
     }
@@ -49,20 +51,22 @@ h2, h3, h4 {
 }
 .piv_table .tr_pest td {
     background-color: #f7f4d1;
-    text-align: center;
-    font-weight: bolder;
+    text-align: right;
+    font-weight: 700 !important;
 }
 .piv_table .tr_name td {
     text-align: center;
     // background-color: #f7f4d1;
-    font-weight: 300 !important;
+    // font-weight: 500 !important;
+    font-weight: bold;
     color: #028102;
 }
 .piv_table .tr_name_pest td {
     text-align: center;
     // background-color: #f7f4d1;
     color: #3366FF;
-    font-weight: 300 !important;
+    // font-weight: 500 !important;
+    font-weight: bold;
 }
 .tr_hordeum {
     font-weight: bolder;
@@ -92,15 +96,9 @@ h2, h3, h4 {
     .piv_table thead {
         font-size: 0.8em
     }
-    mat-dialog-content {
-        padding: 0 10px !important
-    }
 }
 @media (max-width: 360px){
     .piv_table tbody {
         font-size: 0.7em
-    }
-    mat-dialog-content {
-        padding: 0 5px !important
     }
 }

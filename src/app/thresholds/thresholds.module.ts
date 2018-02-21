@@ -13,6 +13,8 @@ import { SideMenuComponent } from './side-menu/side-menu.component';
 
 import { ThresholdsComponent } from './thresholds/thresholds.component';
 import { TriticumComponent } from './pages/grains/triticum/triticum.component';
+import { HordeumComponent } from './pages/grains/hordeum/hordeum.component';
+import { ZeaComponent } from './pages/grains/zea/zea.component';
 
 @NgModule({
     imports: [
@@ -24,7 +26,9 @@ import { TriticumComponent } from './pages/grains/triticum/triticum.component';
     declarations: [
         ThresholdsComponent,
         SideMenuComponent,
-        TriticumComponent
+        TriticumComponent,
+        HordeumComponent,
+        ZeaComponent
     ]
 })
 export class ThresholdsModule { }
