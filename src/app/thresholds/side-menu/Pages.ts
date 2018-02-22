@@ -123,7 +123,7 @@ const pages = [
                 link: ''
             },
             {
-                id: 3,
+                id: 2,
                 subName: 'Патладжан',
                 link: ''
             },
