@@ -39,7 +39,7 @@ const pages = [
             {
                 id: 2,
                 subName: 'Фий',
-                link: ''
+                link: 'vicia-villosa'
             },
             {
                 id: 3,
@@ -80,18 +80,13 @@ const pages = [
             },
             {
                 id: 5,
-                subName: 'Коноп',
-                link: ''
+                subName: 'Коноп и Лен',
+                link: 'cannabis-and-linum'
             },
             {
                 id: 6,
-                subName: 'Лен',
-                link: ''
-            },
-            {
-                id: 7,
                 subName: 'Хмел',
-                link: ''
+                link: 'humulus-lupulus'
             },
         ],
     },
@@ -102,18 +97,13 @@ const pages = [
         subPage: [
             {
                 id: 0,
-                subName: 'Мента',
-                link: ''
+                subName: 'Мента и Лавандула',
+                link: 'mentha-and-lavandula'
             },
             {
                 id: 1,
                 subName: 'Казанлъшка роза',
-                link: ''
-            },
-            {
-                id: 2,
-                subName: 'Лавандула',
-                link: ''
+                link: 'rosa-damascena'
             }
         ],
     },

@@ -4,15 +4,15 @@ import { SeoService } from '../../../../common/services/SeoService';
 import { ChangeBreadcrumbService } from '../../../../common/services/changeBreadcrumb.service';
 
 @Component({
-  templateUrl: './zea.component.html',
-  styleUrls: ['../../pages.scss']
+    templateUrl: './phaseolus.component.html',
+    styleUrls: ['../../pages.scss']
 })
-export class ZeaComponent implements OnInit {
-    private title = 'ПИВ - Царевица';
-    private description = 'Прагове на икономическа вредност за вредители по царевица.';
-    private keywords = 'ПИВ, царевица, болести, неприятели, плевели, ПРЗ';
+export class PhaseolusComponent implements OnInit {
+    private title = 'ПИВ - Фасул';
+    private description = 'Прагове на икономическа вредност за вредители по фасул.';
+    private keywords = 'ПИВ, фасул, болести, неприятели, плевели, ПРЗ';
 
-    breadcrumbName = 'Царевица';
+    breadcrumbName = 'Фасул';
 
     constructor(
         private seoService: SeoService,

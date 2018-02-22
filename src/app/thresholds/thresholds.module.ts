@@ -15,6 +15,19 @@ import { ThresholdsComponent } from './thresholds/thresholds.component';
 import { TriticumComponent } from './pages/grains/triticum/triticum.component';
 import { HordeumComponent } from './pages/grains/hordeum/hordeum.component';
 import { ZeaComponent } from './pages/grains/zea/zea.component';
+import { PhaseolusComponent } from './pages/beans/phaseolus/phaseolus.component';
+import { PisumComponent } from './pages/beans/pisum/pisum.component';
+import { ViciaComponent } from './pages/beans/vicia/vicia.component';
+import { MedicagoComponent } from './pages/beans/medicago/medicago.component';
+import { BrassicaComponent } from './pages/technical/brassica/brassica.component';
+import { HelianthusComponent } from './pages/technical/helianthus/helianthus.component';
+import { BetaComponent } from './pages/technical/beta/beta.component';
+import { NicotianaComponent } from './pages/technical/nicotiana/nicotiana.component';
+import { GossypiumComponent } from './pages/technical/gossypium/gossypium.component';
+import { CannabisComponent } from './pages/technical/cannabis/cannabis.component';
+import { HumulusComponent } from './pages/technical/humulus/humulus.component';
+import { MenthaComponent } from './pages/etheric/mentha/mentha.component';
+import { RosaComponent } from './pages/etheric/rosa/rosa.component';
 
 @NgModule({
     imports: [
@@ -28,7 +41,20 @@ import { ZeaComponent } from './pages/grains/zea/zea.component';
         SideMenuComponent,
         TriticumComponent,
         HordeumComponent,
-        ZeaComponent
+        ZeaComponent,
+        PhaseolusComponent,
+        PisumComponent,
+        ViciaComponent,
+        MedicagoComponent,
+        BrassicaComponent,
+        HelianthusComponent,
+        BetaComponent,
+        NicotianaComponent,
+        GossypiumComponent,
+        CannabisComponent,
+        HumulusComponent,
+        MenthaComponent,
+        RosaComponent
     ]
 })
 export class ThresholdsModule { }
