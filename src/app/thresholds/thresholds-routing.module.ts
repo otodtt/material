@@ -27,6 +27,17 @@ import { HumulusComponent } from './pages/technical/humulus/humulus.component';
 import { MenthaComponent } from './pages/etheric/mentha/mentha.component';
 import { RosaComponent } from './pages/etheric/rosa/rosa.component';
 
+// Vegetables
+import { LycopersicumComponent } from './pages/vegetables/lycopersicum/lycopersicum.component';
+import { CapsicumComponent } from './pages/vegetables/capsicum/capsicum.component';
+import { MelongenaComponent } from './pages/vegetables/melongena/melongena.component';
+import { CucumisComponent } from './pages/vegetables/cucumis/cucumis.component';
+import { CitrullusComponent } from './pages/vegetables/citrullus/citrullus.component';
+import { AlliumComponent } from './pages/vegetables/allium/allium.component';
+import { OleraceaComponent } from './pages/vegetables/oleracea/oleracea.component';
+import { DaucusComponent } from './pages/vegetables/daucus/daucus.component';
+import { SolanumComponent } from './pages/vegetables/solanum/solanum.component';
+
 
 // import {  } from './pages/technical';
 
@@ -49,6 +60,15 @@ export const routes: Routes = [
         { path: 'humulus-lupulus', component: HumulusComponent },
         { path: 'mentha-and-lavandula', component: MenthaComponent },
         { path: 'rosa-damascena', component: RosaComponent },
+        { path: 'solanum-lycopersicum', component: LycopersicumComponent },
+        { path: 'capsicum-annuum', component: CapsicumComponent },
+        { path: 'solanum-melongena', component: MelongenaComponent },
+        { path: 'cucumis-sativus', component: CucumisComponent },
+        { path: 'cucumis-and-citrullus', component: CitrullusComponent },
+        { path: 'allium', component: AlliumComponent },
+        { path: 'brassica-oleracea', component: OleraceaComponent },
+        { path: 'daucus-carota', component: DaucusComponent },
+        { path: 'solanum-tuberosum', component: SolanumComponent },
     ]}
 ];
 

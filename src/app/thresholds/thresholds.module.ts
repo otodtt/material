@@ -28,6 +28,15 @@ import { CannabisComponent } from './pages/technical/cannabis/cannabis.component
 import { HumulusComponent } from './pages/technical/humulus/humulus.component';
 import { MenthaComponent } from './pages/etheric/mentha/mentha.component';
 import { RosaComponent } from './pages/etheric/rosa/rosa.component';
+import { LycopersicumComponent } from './pages/vegetables/lycopersicum/lycopersicum.component';
+import { CapsicumComponent } from './pages/vegetables/capsicum/capsicum.component';
+import { MelongenaComponent } from './pages/vegetables/melongena/melongena.component';
+import { CucumisComponent } from './pages/vegetables/cucumis/cucumis.component';
+import { CitrullusComponent } from './pages/vegetables/citrullus/citrullus.component';
+import { AlliumComponent } from './pages/vegetables/allium/allium.component';
+import { OleraceaComponent } from './pages/vegetables/oleracea/oleracea.component';
+import { DaucusComponent } from './pages/vegetables/daucus/daucus.component';
+import { SolanumComponent } from './pages/vegetables/solanum/solanum.component';
 
 @NgModule({
     imports: [
@@ -54,7 +63,16 @@ import { RosaComponent } from './pages/etheric/rosa/rosa.component';
         CannabisComponent,
         HumulusComponent,
         MenthaComponent,
-        RosaComponent
+        RosaComponent,
+        LycopersicumComponent,
+        CapsicumComponent,
+        MelongenaComponent,
+        CucumisComponent,
+        CitrullusComponent,
+        AlliumComponent,
+        OleraceaComponent,
+        DaucusComponent,
+        SolanumComponent
     ]
 })
 export class ThresholdsModule { }

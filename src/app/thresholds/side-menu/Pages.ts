@@ -115,42 +115,42 @@ const pages = [
             {
                 id: 0,
                 subName: 'Домати',
-                link: ''
+                link: 'solanum-lycopersicum'
             },
             {
                 id: 1,
                 subName: 'Пипер',
-                link: ''
+                link: 'capsicum-annuum'
             },
             {
                 id: 2,
                 subName: 'Патладжан',
-                link: ''
+                link: 'solanum-melongena'
             },
             {
                 id: 3,
                 subName: 'Краставици',
-                link: ''
+                link: 'cucumis-sativus'
             },
             {
                 id: 4,
                 subName: 'Пъпеши и дини',
-                link: ''
+                link: 'cucumis-and-citrullus'
             },
             {
                 id: 5,
-                subName: 'Лук, чесън',
-                link: ''
+                subName: 'Лук и чесън',
+                link: 'allium'
             },
             {
                 id: 6,
                 subName: 'Зеле',
-                link: ''
+                link: 'brassica-oleracea'
             },
             {
                 id: 7,
                 subName: 'Моркови',
-                link: ''
+                link: 'daucus-carota'
             },
             {
                 id: 8,
