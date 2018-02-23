@@ -38,8 +38,15 @@ import { OleraceaComponent } from './pages/vegetables/oleracea/oleracea.componen
 import { DaucusComponent } from './pages/vegetables/daucus/daucus.component';
 import { SolanumComponent } from './pages/vegetables/solanum/solanum.component';
 
+// Fruits
+import { MalusComponent } from './pages/fruits/malus/malus.component';
+import { CerasusComponent } from './pages/fruits/cerasus/cerasus.component';
+import { PersicaComponent } from './pages/fruits/persica/persica.component';
+import { PrunusComponent } from './pages/fruits/prunus/prunus.component';
 
-// import {  } from './pages/technical';
+// Fragaria and Vitis
+import { FragariaComponent } from './pages/fragaria/fragaria.component';
+import { VitisComponent } from './pages/vitis/vitis.component';
 
 export const routes: Routes = [
     { path: '', component: ThresholdsComponent, children: [
@@ -69,6 +76,12 @@ export const routes: Routes = [
         { path: 'brassica-oleracea', component: OleraceaComponent },
         { path: 'daucus-carota', component: DaucusComponent },
         { path: 'solanum-tuberosum', component: SolanumComponent },
+        { path: 'malus-and-pyrus', component: MalusComponent },
+        { path: 'prunus-and-cerasus', component: CerasusComponent },
+        { path: 'prunus-persica', component: PersicaComponent },
+        { path: 'prunus-domestica', component: PrunusComponent },
+        { path: 'fragaria-and-rubus', component: FragariaComponent },
+        { path: 'vitis-vinifera', component: VitisComponent },
     ]}
 ];
 

@@ -166,28 +166,23 @@ const pages = [
         subPage: [
             {
                 id: 0,
-                subName: 'Ябълка',
-                link: ''
+                subName: 'Ябълка и Круша',
+                link: 'malus-and-pyrus'
             },
             {
                 id: 1,
-                subName: 'Круша',
-                link: ''
+                subName: 'Череша и Вишна',
+                link: 'prunus-and-cerasus'
             },
             {
                 id: 2,
-                subName: 'Череша и вишна',
-                link: ''
+                subName: 'Праскова',
+                link: 'prunus-persica'
             },
             {
                 id: 3,
-                subName: 'Праскова',
-                link: ''
-            },
-            {
-                id: 4,
                 subName: 'Слива',
-                link: ''
+                link: 'prunus-domestica'
             }
         ],
     },
@@ -198,13 +193,8 @@ const pages = [
         subPage: [
             {
                 id: 0,
-                subName: 'Ягода',
-                link: 'fragaria'
-            },
-            {
-                id: 1,
-                subName: 'Малина',
-                link: 'rubus-idaeus'
+                subName: 'Ягоди и Малини',
+                link: 'fragaria-and-rubus'
             }
         ],
     },

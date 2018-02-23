@@ -37,6 +37,12 @@ import { AlliumComponent } from './pages/vegetables/allium/allium.component';
 import { OleraceaComponent } from './pages/vegetables/oleracea/oleracea.component';
 import { DaucusComponent } from './pages/vegetables/daucus/daucus.component';
 import { SolanumComponent } from './pages/vegetables/solanum/solanum.component';
+import { MalusComponent } from './pages/fruits/malus/malus.component';
+import { CerasusComponent } from './pages/fruits/cerasus/cerasus.component';
+import { PersicaComponent } from './pages/fruits/persica/persica.component';
+import { PrunusComponent } from './pages/fruits/prunus/prunus.component';
+import { FragariaComponent } from './pages/fragaria/fragaria.component';
+import { VitisComponent } from './pages/vitis/vitis.component';
 
 @NgModule({
     imports: [
@@ -72,7 +78,13 @@ import { SolanumComponent } from './pages/vegetables/solanum/solanum.component';
         AlliumComponent,
         OleraceaComponent,
         DaucusComponent,
-        SolanumComponent
+        SolanumComponent,
+        MalusComponent,
+        CerasusComponent,
+        PersicaComponent,
+        PrunusComponent,
+        FragariaComponent,
+        VitisComponent
     ]
 })
 export class ThresholdsModule { }
