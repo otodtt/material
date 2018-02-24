@@ -77,6 +77,25 @@ h2, h3, h4 {
     text-align: center;
 }
 
+// .mat-tab-label {
+//     // color: rgba(0, 0, 0, 0.87) !important; 
+//     color: rgb(0, 0, 0) !important; 
+// }
+
+// .mat-tab-label, .mat-tab-link {
+//     color: red !important
+// }
+.ng-star-inserted {
+    color: #407502 !important
+}
+.mat-tab-label-active {
+    .ng-star-inserted {
+        color: #407502 !important
+    }
+    // font-weight: bold !important;
+    
+}
+
 @media (max-width: 480px){
     .piv_table th {
         .small-name-piv {
@@ -89,16 +108,30 @@ h2, h3, h4 {
 }
 @media (max-width: 460px){
     .piv_table {
-        font-size: 0.9em
+        font-size: 1em
+    }
+    .demo-tab-content {
+        padding-top: 16px !important;
+        padding-bottom: 16px !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 }
-@media (max-width: 400px){
+@media (max-width: 380px){
     .piv_table thead {
         font-size: 0.8em
     }
 }
-@media (max-width: 360px){
+@media (max-width: 366px){
     .piv_table tbody {
+        font-size: 0.9em
+    }
+}
+@media (max-width: 340px){
+    piv_table thead {
         font-size: 0.7em
+    }
+    .piv_table tbody {
+        font-size: 0.8em
     }
 }
