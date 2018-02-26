@@ -56,16 +56,12 @@ h2, h3, h4 {
 }
 .piv_table .tr_name td {
     text-align: center;
-    // background-color: #f7f4d1;
-    // font-weight: 500 !important;
     font-weight: bold;
     color: #028102;
 }
 .piv_table .tr_name_pest td {
     text-align: center;
-    // background-color: #f7f4d1;
     color: #3366FF;
-    // font-weight: 500 !important;
     font-weight: bold;
 }
 .tr_hordeum {
@@ -77,24 +73,14 @@ h2, h3, h4 {
     text-align: center;
 }
 
-// .mat-tab-label {
-//     // color: rgba(0, 0, 0, 0.87) !important; 
-//     color: rgb(0, 0, 0) !important; 
-// }
-
-// .mat-tab-label, .mat-tab-link {
-//     color: red !important
-// }
-// .ng-star-inserted {
-//     color: #407502 !important
-// }
-// .mat-tab-label-active {
-//     .ng-star-inserted {
-//         color: #407502 !important
-//     }
-//     // font-weight: bold !important;
-    
-// }
+.my-tab-label {
+    color: rgb(0, 0, 0) !important;
+    font-weight: 600 !important;
+}
+.dis {
+    color: rgb(0, 0, 0) !important;
+    font-weight: 500 !important;
+}
 
 @media (max-width: 480px){
     .piv_table th {

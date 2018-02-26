@@ -2,7 +2,7 @@
 <mat-tab-group class="demo-tab-group">
   <mat-tab >
     <ng-template mat-tab-label>
-        <em>ЗИМЕН</em>
+        <span class="my-tab-label">ЗИМЕН</span>
     </ng-template>
     <div class="demo-tab-content">
         <table class="piv_table">
@@ -360,7 +360,10 @@
         </table>
     </div>
   </mat-tab>
-  <mat-tab label="ПРОЛЕТЕН">
+  <mat-tab >
+    <ng-template mat-tab-label>
+        <span class="my-tab-label">ПРОЛЕТЕН</span>
+    </ng-template>
     <div class="demo-tab-content">
         <table class="piv_table">
             <thead>
