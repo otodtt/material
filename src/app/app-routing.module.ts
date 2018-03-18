@@ -11,7 +11,7 @@ import { NotFoundComponent } from './shared/not-found/not-found.component';
 export const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: '', redirectTo: '/home', pathMatch: 'full' },
-    { path: 'products', component: ProductsComponent },
+    { path: 'products', loadChildren: './products/products.module#ProductsModule' },
     { path: 'crops', component: CropsComponent },
     { path: 'practices', loadChildren: './practices/practices.module#PracticesModule'},
     { path: 'thresholds', loadChildren: './thresholds/thresholds.module#ThresholdsModule'},

@@ -66,11 +66,11 @@ import { ManagementComponent } from './management/management/management.componen
 
 @NgModule({
     imports: [
-    CommonModule,
-    PracticesRoutingModul,
-    ShareComponentsModule,
-    MaterialModule,
-    LazyLoadModule,
+        CommonModule,
+        PracticesRoutingModul,
+        ShareComponentsModule,
+        MaterialModule,
+        LazyLoadModule,
     ],
     declarations: [
         AnchorToDirective,

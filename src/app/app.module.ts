@@ -2,8 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
-import { HttpModule } from '@angular/http';
-
+// import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 // Router
 import { AppRoutingModul } from './app-routing.module';
@@ -21,6 +21,7 @@ import { MaterialModule } from './common/material/material.module';
 import { ShareComponentsModule } from './common/share.components.module';
 import { PracticesModule } from './practices/practices.module';
 import { ThresholdsModule } from './thresholds/thresholds.module';
+import { ProductsModule } from './products/products.module';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './shared/footer/footer.component';
@@ -53,12 +54,13 @@ import { ContactsComponent } from './contacts/contacts.component';
     imports: [
         BrowserModule,
         MaterialModule,
-        HttpModule,
+        HttpClientModule,
         BrowserAnimationsModule,
         ShareComponentsModule,
         AppRoutingModul,
         PracticesModule,
-        ThresholdsModule
+        ThresholdsModule,
+        ProductsModule
     ],
     providers: [
         ChangeBreadcrumbService,

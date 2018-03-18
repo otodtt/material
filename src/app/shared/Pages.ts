@@ -1,3 +1,5 @@
+import { NullTemplateVisitor } from "@angular/compiler";
+
 const pages = [
     {
         id: 0,
@@ -9,7 +11,18 @@ const pages = [
         id: 1,
         name: 'продукти',
         link: 'products',
-        subPage: null
+        subPage: [
+            {
+                id: 0,
+                subName: 'Акарициди',
+                link: 'acaricides'
+            },
+            {
+                id: 1,
+                subName: 'Инсектициди',
+                link: 'insecticides'
+            }
+        ]
     },
     {
         id: 2,

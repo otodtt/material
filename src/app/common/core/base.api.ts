@@ -1,7 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+
+// import { Injectable }   from '@angular/core';
+// import { HttpClient }   from '@angular/common/http';
+// import { Observable }   from 'rxjs/Observable';
+
 
 @Injectable()
 
@@ -9,7 +14,7 @@ export class BaseApi {
 
     private baseUrl = 'http://drzp.tmp/';
 
-    constructor(public http: Http) {}
+    constructor(public http: HttpClient) {}
 
     private getUrl(url: string = ''): string {
         return this.baseUrl + url;
@@ -17,7 +22,7 @@ export class BaseApi {
 
     public get(url: string = ''): Observable<any> {
         return this.http.get(this.getUrl(url))
-        .map((response: Response) => response.json());
+        // .map((response: Response) => response.json());
     }
 
     // public post(url: string = '', data: any = {}): Observable<any> {

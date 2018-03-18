@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
-import { Observable} from 'rxjs/Observable';
+import { Injectable }   from '@angular/core';
+import { HttpClient }   from '@angular/common/http';
+import { Observable }   from 'rxjs/Observable';
 
 
 
@@ -12,7 +12,7 @@ import { Practice } from '../models/practice.model';
 
 export class PracticesService extends BaseApi {
 
-    constructor(public http: Http) {
+    constructor(public http: HttpClient) {
         super(http);
     }
 
@@ -20,27 +20,5 @@ export class PracticesService extends BaseApi {
     getPractices(param: string): Observable<Practice[]> {
         return this.get(param);
     }
-
-
-
-    // addCategory(category: Practice): Observable<Practice> {
-    //     return this.post('categories', category);
-    // }
-
-    // getCategories(): Observable<Practice[]> {
-    //     return this.get('practices');
-    // }
-
-    // updateCategory(category: Practice): Observable<Practice> {
-    //     return this.put(`practices/${category.id}`, category);
-    // }
-
-    // getCategoryById(id: number): Observable<Practice> {
-    //     return this.get(`categories/${id}`);
-    // }
-
-    // getCategoryById(id: number): Observable<Practice> {
-    //     return this.get(`/${id}`);
-    // }
 }
 
