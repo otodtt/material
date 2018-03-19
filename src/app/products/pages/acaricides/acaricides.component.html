@@ -19,25 +19,7 @@
         <!--- Note that these columns can be defined in any order.
             The actual rendered columns are set as a property on the row definition" -->
 
-        <!-- Number Column -->
-        <ng-container matColumnDef="firmName">
-            <mat-header-cell *matHeaderCellDef>Фирма</mat-header-cell>
-            <mat-cell *matCellDef="let row">{{ row.firmName }}</mat-cell>
-        </ng-container>
-
-        <!-- Title Column -->
-        <ng-container matColumnDef="pesticide">
-            <mat-header-cell *matHeaderCellDef>Title</mat-header-cell>
-            <mat-cell *matCellDef="let row">{{ row.pesticide }}</mat-cell>
-        </ng-container>
-
-        <!-- State Column -->
-        <ng-container matColumnDef="substance">
-            <mat-header-cell *matHeaderCellDef>А В-во</mat-header-cell>
-            <mat-cell *matCellDef="let row">{{ row.substance }}</mat-cell>
-        </ng-container>
-
-        <!-- Created Column -->
+        <!-- NAME Column -->
         <ng-container matColumnDef="name">
             <mat-header-cell    *matHeaderCellDef
                                 mat-sort-header
@@ -50,46 +32,53 @@
             </mat-cell>
         </ng-container>
 
-        <!-- Expanded Content Column - The detail row is made up of this one column -->
-        <!-- <ng-container matColumnDef="expandedDetail">
-            <mat-cell *matCellDef="let detail"> 
-                <mat-cell *ngFor="let dose of detail.row.doses">
-                        {{dose.dose}} 
-                </mat-cell>
-            </mat-cell>
+        <!-- SUBSTANCE Column -->
+        <ng-container matColumnDef="substance">
+            <mat-header-cell *matHeaderCellDef>А В-во</mat-header-cell>
+            <mat-cell *matCellDef="let row">{{ row.substance }}</mat-cell>
+            <!-- <mat-cell *matCellDef="let row"><span class="dose_span">{{ row.substance }}</span></mat-cell> -->
         </ng-container>
-      
-        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-        <mat-row *matRowDef="let row; columns: displayedColumns;"
-                matRipple 
-                class="element-row" 
-                [class.expanded]="expandedElement == row"
-                (click)="expandedElement = row"></mat-row>
-        <mat-row *matRowDef="let row; columns: ['expandedDetail']; when: isExpansionDetailRow"
-                [@detailExpand]="row.element == expandedElement ? 'expanded' : 'collapsed'"
-                style="overflow: hidden"> 
-        </mat-row> -->
 
-
+        <!-- DOSE Column -->
         <ng-container matColumnDef="dose">
-            <mat-header-cell *matHeaderCellDef> ДОЗА </mat-header-cell>
+            <mat-header-cell *matHeaderCellDef> УПОТРЕБА </mat-header-cell>
             <mat-cell *matCellDef="let row">
-                <mat-cell [przMatchCellHeight]='book' *ngFor="let book of row.doses">
-                    {{book.dose}}<hr/>
-                </mat-cell>
+                <table style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <th>Доза</th>
+                            <th>Култура</th>
+                            <th>вредител</th>
+                        </tr>
+                    </thead>
+                    <!-- <mat-cell *ngFor="let book of row.doses"> -->
+                        
+                            <tr *ngFor="let book of row.doses">
+                                <td class="dose">{{book.dose}} {{book.measure}}</td>
+                                <td class="crops">{{book.crop}}</td>
+                                <td class="disease" [innerHTML]="book.disease | safeHtml"></td>
+                            </tr>
+                    
+                    <!-- </mat-cell> -->
+                </table>
             </mat-cell>
         </ng-container>
 
-        <ng-container matColumnDef="crops">
-            <mat-header-cell *matHeaderCellDef> КУЛТУРА </mat-header-cell>
+        <!-- Number Column -->
+        <ng-container matColumnDef="category" class="dispaly_category">
+            <mat-header-cell *matHeaderCellDef 
+                            mat-sort-header 
+                            disableClear="true">
+                <i class="material-icons">&#xE164;</i>&nbsp;Категория
+            </mat-header-cell>
             <mat-cell *matCellDef="let row">
-                <mat-cell [przMatchCellHeight]='book' *ngFor="let book of row.doses">
-                    {{book.crop}}<hr/>
-                </mat-cell>
+                <!-- <span *ngIf="row.category === '3'">Непрофесионална</span>
+                <span *ngIf="row.category === '2'">Втора</span>
+                <span *ngIf="row.category === '1'">Първа</span> -->
+                {{ row.category }}
             </mat-cell>
         </ng-container>
-
-
+        
         <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
         <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
     </mat-table>
@@ -100,3 +89,21 @@
                     [pageSizeOptions]="[5, 10, 20]">
     </mat-paginator>
 </div>
+
+<!-- <ng-container matColumnDef="dose">
+    <mat-header-cell *matHeaderCellDef> ДОЗА </mat-header-cell>
+    <mat-cell *matCellDef="let row">
+        <mat-cell [przMatchCellHeight]='book' *ngFor="let book of row.doses">
+            {{book.dose}}<hr/>
+        </mat-cell>
+    </mat-cell>
+</ng-container>
+
+<ng-container matColumnDef="crops">
+    <mat-header-cell *matHeaderCellDef> КУЛТУРА </mat-header-cell>
+    <mat-cell *matCellDef="let row">
+        <mat-cell [przMatchCellHeight]='book' *ngFor="let book of row.doses">
+            {{book.crop}}<hr/>
+        </mat-cell>
+    </mat-cell>
+</ng-container> -->

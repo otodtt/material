@@ -16,9 +16,6 @@ import { getBulgarianPaginatorIntl } from './shared/services/CustomPaginator';
 import { AcaricidesComponent } from './pages/acaricides/acaricides.component';
 import { InsecticidesComponent } from './pages/insecticides/insecticides.component';
 
-// TEST
-import { MatchCellHeightService } from './shared/test/cell-height.service';
-import { MatchCellHeightDirective } from './shared/test/cell-height.directive';
 
 @NgModule({
     imports: [
@@ -30,14 +27,12 @@ import { MatchCellHeightDirective } from './shared/test/cell-height.directive';
     ],
     declarations: [
         AcaricidesComponent,
-        InsecticidesComponent,
-        MatchCellHeightDirective
+        InsecticidesComponent
     ],
     providers: [
         ProductsRoutingModule,
         ProductsService,
-        { provide: MatPaginatorIntl, useValue: getBulgarianPaginatorIntl() },
-        MatchCellHeightService
+        { provide: MatPaginatorIntl, useValue: getBulgarianPaginatorIntl() }
     ],
 })
 export class ProductsModule { }

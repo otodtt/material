@@ -35,7 +35,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
     // ],
 })
 
-export class AcaricidesComponent implements OnInit, AfterViewInit  {
+export class AcaricidesComponent implements OnInit, AfterViewInit {
     private title = 'ПРЗ | Акарициди';
     private description =   'Продуки за растителна защита (инсектици, фунгициди, хербициди, ' +
                             'акарициди и други). ';
@@ -47,8 +47,9 @@ export class AcaricidesComponent implements OnInit, AfterViewInit  {
     // products: Product[] = [];
     // subscription: Subscription;
 
+    // expandedElement = '';
     // displayedColumns = ['name', 'substance', 'firmName', 'pesticide'];
-    displayedColumns = ['name', 'substance', 'dose', 'crops'];
+    displayedColumns = ['name', 'substance', 'dose', 'category'];
     exampleDatabase: ExampleHttpDao | null;
     dataSource = new MatTableDataSource();
 
@@ -127,13 +128,6 @@ export class AcaricidesComponent implements OnInit, AfterViewInit  {
 export class ExampleHttpDao {
     constructor(private productsService: ProductsService) { }
 
-    // connect(): Observable<Element[]> {
-    //     const rows = [];
-    //     data.forEach(element => rows.push(element, { detailRow: true, element }));
-    //     console.log(rows);
-    //     return Observable.of(rows);
-    //   }
-
     // getRepoIssues(sort: string, order: string, page: number): Observable<Product[]> {
     getRepoIssues(sort: string, order: string): Observable<Product[]> {
         // const href = 'https://api.github.com/search/issues';
@@ -148,15 +142,3 @@ export class ExampleHttpDao {
     }
     disconnect() {}
 }
-
-// export class ExampleDataSource extends DataSource<any> {
-//     /** Connect function called by the table to retrieve one stream containing the data to render. */
-//     connect(): Observable<Element[]> {
-//       const rows = [];
-//       data.forEach(element => rows.push(element, { detailRow: true, element }));
-//       console.log(rows);
-//       return Observable.of(rows);
-//     }
-
-//     disconnect() { }
-// }

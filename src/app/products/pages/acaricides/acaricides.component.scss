@@ -40,31 +40,67 @@
 }
   
 /* Column Widths */
-.mat-column-number,
-.mat-column-state {
-    max-width: 64px;
+.mat-column-name {
+   width: 15%;
+}
+.mat-column-substance {
+    width: 10%;
+    text-transform: lowercase;
 }
   
-.mat-column-created {
-    max-width: 124px;
-}
-  
-
-.mat-table {
-    border: 1px solid black;
+.mat-column-dose {
+    min-width: 70%;
     
-    .mat-cell {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-  
-      .mat-cell {
-        min-height: 60px;
-        border-bottom: 1px solid grey;
-  
-        &:last-child {
-          border-bottom: none;
+}
+.mat-column-category {
+    width: 5%;
+    // display: none;
+}
+// .dose_span {
+//     text-transform: lowercase;
+// }
+.mat-table {
+    .mat-row {
+        .mat-cell {
+            table {
+                tbody {
+                    tr {
+                        background-color: lightgreen;
+                        .disease {
+                            .latin_name {
+                                font-style: italic !important;
+                            }
+                        }
+                    }
+                }
+            }
         }
-      }
     }
-  }
+    
+    // table > tbody > tr > .disease > .latin_name {
+    //     font-style: italic !important;
+    // }
+    
+}
+table {
+    tr {
+        .dose {
+            width: 15%;
+        }
+        .crops {
+            width: 20%;
+        }
+        .disease {
+            width: 75%;
+            .latin_name {
+                font-style: italic !important;
+            }
+        }
+        td {
+            .latin_name {
+                font-style: italic !important;
+            }
+        }
+    }
+}
+
