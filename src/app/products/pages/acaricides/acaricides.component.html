@@ -42,12 +42,53 @@
             <mat-header-cell    *matHeaderCellDef
                                 mat-sort-header
                                 disableClear="true">
-                Име
+                <!-- <i class="material-icons">&#xE053;</i> Име -->
+                <i class="material-icons">&#xE164;</i>&nbsp; Продукт,<br/>Производител
             </mat-header-cell>
             <mat-cell *matCellDef="let row">
                     <a matLine [routerLink]="[row.id]">{{ row.name }}</a>
             </mat-cell>
         </ng-container>
+
+        <!-- Expanded Content Column - The detail row is made up of this one column -->
+        <!-- <ng-container matColumnDef="expandedDetail">
+            <mat-cell *matCellDef="let detail"> 
+                <mat-cell *ngFor="let dose of detail.row.doses">
+                        {{dose.dose}} 
+                </mat-cell>
+            </mat-cell>
+        </ng-container>
+      
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"
+                matRipple 
+                class="element-row" 
+                [class.expanded]="expandedElement == row"
+                (click)="expandedElement = row"></mat-row>
+        <mat-row *matRowDef="let row; columns: ['expandedDetail']; when: isExpansionDetailRow"
+                [@detailExpand]="row.element == expandedElement ? 'expanded' : 'collapsed'"
+                style="overflow: hidden"> 
+        </mat-row> -->
+
+
+        <ng-container matColumnDef="dose">
+            <mat-header-cell *matHeaderCellDef> ДОЗА </mat-header-cell>
+            <mat-cell *matCellDef="let row">
+                <mat-cell [przMatchCellHeight]='book' *ngFor="let book of row.doses">
+                    {{book.dose}}<hr/>
+                </mat-cell>
+            </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="crops">
+            <mat-header-cell *matHeaderCellDef> КУЛТУРА </mat-header-cell>
+            <mat-cell *matCellDef="let row">
+                <mat-cell [przMatchCellHeight]='book' *ngFor="let book of row.doses">
+                    {{book.crop}}<hr/>
+                </mat-cell>
+            </mat-cell>
+        </ng-container>
+
 
         <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
         <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>

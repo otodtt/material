@@ -21,7 +21,7 @@ export class BaseApi {
     }
 
     public get(url: string = ''): Observable<any> {
-        return this.http.get(this.getUrl(url))
+        return this.http.get(this.getUrl(url));
         // .map((response: Response) => response.json());
     }
 

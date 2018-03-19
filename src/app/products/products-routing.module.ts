@@ -12,7 +12,7 @@ export const routes: Routes = [
         { path: 'acaricides', component: AcaricidesComponent},
         { path: 'insecticides', component: InsecticidesComponent},
     ]}
-]
+];
 
 @NgModule({
     imports: [RouterModule.forChild(routes)],

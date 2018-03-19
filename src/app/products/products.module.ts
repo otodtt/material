@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-
 // Routing
 import { ProductsRoutingModule } from './products-routing.module';
 
 // Services
-import { ProductsService } from './shared/services/products.service'
+import { ProductsService } from './shared/services/products.service';
 
 // Header and Footer Module
 import { ShareComponentsModule } from '../common/share.components.module';
@@ -17,6 +16,9 @@ import { getBulgarianPaginatorIntl } from './shared/services/CustomPaginator';
 import { AcaricidesComponent } from './pages/acaricides/acaricides.component';
 import { InsecticidesComponent } from './pages/insecticides/insecticides.component';
 
+// TEST
+import { MatchCellHeightService } from './shared/test/cell-height.service';
+import { MatchCellHeightDirective } from './shared/test/cell-height.directive';
 
 @NgModule({
     imports: [
@@ -28,12 +30,14 @@ import { InsecticidesComponent } from './pages/insecticides/insecticides.compone
     ],
     declarations: [
         AcaricidesComponent,
-        InsecticidesComponent
+        InsecticidesComponent,
+        MatchCellHeightDirective
     ],
     providers: [
         ProductsRoutingModule,
         ProductsService,
-        { provide: MatPaginatorIntl, useValue: getBulgarianPaginatorIntl() }
+        { provide: MatPaginatorIntl, useValue: getBulgarianPaginatorIntl() },
+        MatchCellHeightService
     ],
 })
 export class ProductsModule { }

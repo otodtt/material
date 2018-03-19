@@ -26,7 +26,7 @@ export interface Product {
             quantityAfter?: string;
             pesticides_id?: number;
         }
-    ],
+    ];
     doses?: [
         {
             id: number;
@@ -45,5 +45,5 @@ export interface Product {
             isCalc?: number;
             isActive?: number;
         }
-    ]
+    ];
 }

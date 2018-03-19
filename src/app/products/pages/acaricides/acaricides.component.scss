@@ -49,3 +49,22 @@
     max-width: 124px;
 }
   
+
+.mat-table {
+    border: 1px solid black;
+    
+    .mat-cell {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  
+      .mat-cell {
+        min-height: 60px;
+        border-bottom: 1px solid grey;
+  
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
