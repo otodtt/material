@@ -101,8 +101,8 @@ export class AcaricidesComponent implements OnInit, AfterViewInit {
                 this.isLoadingResults = false;
                 this.isRateLimitReached = false;
                 this.resultsLength = data.length;
-                console.log(data);
-                console.log(this.resultsLength);
+                // console.log(data);
+                // console.log(this.resultsLength);
                 return data;
             }),
             catchError(() => {
@@ -112,6 +112,7 @@ export class AcaricidesComponent implements OnInit, AfterViewInit {
                 return observableOf([]);
             })
         ).subscribe(data => this.dataSource.data = data);
+        console.log(this.dataSource);
     }
 
     ngAfterViewInit() {
@@ -122,6 +123,7 @@ export class AcaricidesComponent implements OnInit, AfterViewInit {
         filterValue = filterValue.trim(); // Remove whitespace
         filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
         this.dataSource.filter = filterValue;
+        console.log(this.dataSource);
     }
 }
 

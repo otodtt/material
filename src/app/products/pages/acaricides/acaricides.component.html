@@ -1,109 +1,114 @@
-<div class="example-container mat-elevation-z8">
-    <div class="example-loading-shade"
-        *ngIf="isLoadingResults || isRateLimitReached">
-        <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
-        <div class="example-rate-limit-reached" *ngIf="isRateLimitReached">
-            GitHub's API rate limit has been reached. It will be reset in one minute.
+<section>
+    <div class="container">
+        <div class="row-header">
+            <h1>АКАРИЦИДИ</h1>
+        </div>
+        <div class="example-container mat-elevation-z8">
+            <div class="example-loading-shade"
+                *ngIf="isLoadingResults || isRateLimitReached">
+                <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+                <div class="example-rate-limit-reached" *ngIf="isRateLimitReached">
+                    GitHub's API rate limit has been reached. It will be reset in one minute.
+                </div>
+            </div>
+    
+            <div class="example-header">
+                <mat-form-field>
+                    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+                </mat-form-field>
+                <!-- <span class="example-spacer"></span>
+                <mat-paginator #paginator
+                            [pageSize]="10"
+                            [pageSizeOptions]="[5, 10, 20]">
+                </mat-paginator> -->
+            </div>
+            
+            <mat-table #table [dataSource]="dataSource" class="example-table"
+                        matSort matSortActive="created" matSortDisableClear matSortDirection="asc">
+    
+                <!--- Note that these columns can be defined in any order.
+                    The actual rendered columns are set as a property on the row definition" -->
+    
+                <!-- NAME Column -->
+                <ng-container matColumnDef="name">
+                    <mat-header-cell    *matHeaderCellDef
+                                        mat-sort-header
+                                        disableClear="true">
+                        <i class="material-icons">&#xE053;</i>&nbsp; Продукт
+                        <!-- <i class="material-icons">&#xE164;</i>&nbsp; Продукт,<br/>Производител -->
+                        <!-- <i class="material-icons">&#xE164;</i>&nbsp; Продукт -->
+                    </mat-header-cell>
+                    <mat-cell *matCellDef="let row">
+                            <a matLine [routerLink]="[row.id]">{{ row.name }}</a>
+                    </mat-cell>
+                </ng-container>
+    
+                <!-- SUBSTANCE Column -->
+                <ng-container matColumnDef="substance">
+                    <mat-header-cell *matHeaderCellDef>Активно<br/>вещество</mat-header-cell>
+                    <mat-cell *matCellDef="let row">{{ row.substance }}</mat-cell>
+                    <!-- <mat-cell *matCellDef="let row"><span class="dose_span">{{ row.substance }}</span></mat-cell> -->
+                </ng-container>
+    
+                <!-- DOSE Column -->
+                <ng-container matColumnDef="dose">
+                    <mat-header-cell *matHeaderCellDef> УПОТРЕБА </mat-header-cell>
+                    <mat-cell *matCellDef="let row">
+                        <table style="width: 100%;">
+                            <thead>
+                                <tr>
+                                    <th>култура</th>
+                                    <th>вредител</th>
+                                    <th>доза</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let dose of row.doses; let isOdd=odd; let isEven=even"
+                                    [class.odd]="isOdd" 
+                                    [class.even]="isEven" 
+                                >
+                                    
+                                    <td class="crops">{{dose.crop}}</td>
+                                    <td class="disease">
+                                        <span class="note" *ngIf="dose.note != null">{{dose.note}}<br/></span>
+                                        <span class="td_span" [innerHTML]="dose.disease | safeHtml"></span>
+                                        <span class="afterNote" *ngIf="dose.afterNote != null"><br/>{{dose.afterNote}}</span>
+                                    </td>
+                                    <td class="dose">
+                                        {{dose.dose}} {{dose.measure}}
+                                        <span class="afterNote" *ngIf="dose.doseNote != null"><br/>{{dose.doseNote}}</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </mat-cell>
+                </ng-container>
+    
+                <!-- Number Column -->
+                <ng-container matColumnDef="category" class="dispaly_category">
+                    <mat-header-cell *matHeaderCellDef 
+                                    mat-sort-header 
+                                    disableClear="true">
+                        <i class="material-icons">&#xE164;</i>&nbsp;Кат. на <br/>употреба
+                    </mat-header-cell>
+                    <mat-cell *matCellDef="let row">
+                        <!-- <span *ngIf="row.category === '3'">Непрофесионална</span>
+                        <span *ngIf="row.category === '2'">Втора</span>
+                        <span *ngIf="row.category === '1'">Първа</span> -->
+                        {{ row.category }}
+                    </mat-cell>
+                </ng-container>
+                
+                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+            </mat-table>
+    
+            <!-- <mat-paginator [length]="resultsLength" [pageSize]="[5, 10, 25, 100]"> -->
+            <mat-paginator #paginator
+                            [pageSize]="10"
+                            [pageSizeOptions]="[5, 10, 20]">
+            </mat-paginator>
         </div>
     </div>
+</section>
 
-    <div class="example-header">
-        <mat-form-field>
-            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-        </mat-form-field>
-    </div>
-    
-    <mat-table #table [dataSource]="dataSource" class="example-table"
-                matSort matSortActive="created" matSortDisableClear matSortDirection="asc">
-
-        <!--- Note that these columns can be defined in any order.
-            The actual rendered columns are set as a property on the row definition" -->
-
-        <!-- NAME Column -->
-        <ng-container matColumnDef="name">
-            <mat-header-cell    *matHeaderCellDef
-                                mat-sort-header
-                                disableClear="true">
-                <!-- <i class="material-icons">&#xE053;</i> Име -->
-                <i class="material-icons">&#xE164;</i>&nbsp; Продукт,<br/>Производител
-            </mat-header-cell>
-            <mat-cell *matCellDef="let row">
-                    <a matLine [routerLink]="[row.id]">{{ row.name }}</a>
-            </mat-cell>
-        </ng-container>
-
-        <!-- SUBSTANCE Column -->
-        <ng-container matColumnDef="substance">
-            <mat-header-cell *matHeaderCellDef>А В-во</mat-header-cell>
-            <mat-cell *matCellDef="let row">{{ row.substance }}</mat-cell>
-            <!-- <mat-cell *matCellDef="let row"><span class="dose_span">{{ row.substance }}</span></mat-cell> -->
-        </ng-container>
-
-        <!-- DOSE Column -->
-        <ng-container matColumnDef="dose">
-            <mat-header-cell *matHeaderCellDef> УПОТРЕБА </mat-header-cell>
-            <mat-cell *matCellDef="let row">
-                <table style="width: 100%;">
-                    <thead>
-                        <tr>
-                            <th>Доза</th>
-                            <th>Култура</th>
-                            <th>вредител</th>
-                        </tr>
-                    </thead>
-                    <!-- <mat-cell *ngFor="let book of row.doses"> -->
-                        
-                            <tr *ngFor="let book of row.doses">
-                                <td class="dose">{{book.dose}} {{book.measure}}</td>
-                                <td class="crops">{{book.crop}}</td>
-                                <td class="disease" [innerHTML]="book.disease | safeHtml"></td>
-                            </tr>
-                    
-                    <!-- </mat-cell> -->
-                </table>
-            </mat-cell>
-        </ng-container>
-
-        <!-- Number Column -->
-        <ng-container matColumnDef="category" class="dispaly_category">
-            <mat-header-cell *matHeaderCellDef 
-                            mat-sort-header 
-                            disableClear="true">
-                <i class="material-icons">&#xE164;</i>&nbsp;Категория
-            </mat-header-cell>
-            <mat-cell *matCellDef="let row">
-                <!-- <span *ngIf="row.category === '3'">Непрофесионална</span>
-                <span *ngIf="row.category === '2'">Втора</span>
-                <span *ngIf="row.category === '1'">Първа</span> -->
-                {{ row.category }}
-            </mat-cell>
-        </ng-container>
-        
-        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-    </mat-table>
-
-    <!-- <mat-paginator [length]="resultsLength" [pageSize]="[5, 10, 25, 100]"> -->
-    <mat-paginator #paginator
-                    [pageSize]="10"
-                    [pageSizeOptions]="[5, 10, 20]">
-    </mat-paginator>
-</div>
-
-<!-- <ng-container matColumnDef="dose">
-    <mat-header-cell *matHeaderCellDef> ДОЗА </mat-header-cell>
-    <mat-cell *matCellDef="let row">
-        <mat-cell [przMatchCellHeight]='book' *ngFor="let book of row.doses">
-            {{book.dose}}<hr/>
-        </mat-cell>
-    </mat-cell>
-</ng-container>
-
-<ng-container matColumnDef="crops">
-    <mat-header-cell *matHeaderCellDef> КУЛТУРА </mat-header-cell>
-    <mat-cell *matCellDef="let row">
-        <mat-cell [przMatchCellHeight]='book' *ngFor="let book of row.doses">
-            {{book.crop}}<hr/>
-        </mat-cell>
-    </mat-cell>
-</ng-container> -->

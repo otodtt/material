@@ -1,17 +1,39 @@
+.container {
+    width: 95%;
+    margin: 0 auto;
+
+    .row-header{
+        // margin-bottom: 40px;
+        h1 {
+            font-size: 2em;
+            color: #008000;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+}
+// .example-spacer {
+//     flex: 1 1 auto;
+// }
+
+
 /* Structure */
 .example-container {
     display: flex;
     flex-direction: column;
-    max-height: 500px;
+    max-height: 600px;
     min-width: 300px;
     position: relative;
+    margin-bottom: 20px;
 }
   
 .example-header {
     min-height: 64px;
     display: flex;
     align-items: center;
-    padding-left: 24px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 20px;
 }
   
@@ -38,51 +60,79 @@
     max-width: 360px;
     text-align: center;
 }
+
+
   
 /* Column Widths */
-.mat-column-name {
-   width: 15%;
+.mat-row {
+    padding: 0 10px;
 }
+
+.mat-header-cell{
+    text-transform: initial !important;
+    text-align: center;
+    border: none !important;
+    color: rgba(0, 0, 0, 0.54)  !important;
+}
+.mat-header-row {
+    padding: 0 10px;
+}
+.mat-column-name {
+    max-width: 12%;
+    border-right: 1px solid #FF9800;
+    align-self: stretch;
+ //    text-align: center;
+     padding: 10px 5px;
+ //    color: #980000;
+    a {
+        text-decoration: none;
+        font-weight: bolder;
+        color: #3E2723;
+    }
+ }
 .mat-column-substance {
-    width: 10%;
+    max-width: 10%;
     text-transform: lowercase;
+    align-self: stretch;
+    padding: 10px 5px;
+    color: #3E2723;
 }
   
 .mat-column-dose {
     min-width: 70%;
-    
 }
 .mat-column-category {
-    width: 5%;
-    // display: none;
+    max-width: 7%;
+    text-align: center;
+    color: #3E2723;
 }
-// .dose_span {
-//     text-transform: lowercase;
-// }
-.mat-table {
-    .mat-row {
-        .mat-cell {
-            table {
-                tbody {
-                    tr {
-                        background-color: lightgreen;
-                        .disease {
-                            .latin_name {
-                                font-style: italic !important;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    
-    // table > tbody > tr > .disease > .latin_name {
-    //     font-style: italic !important;
-    // }
-    
+
+.mat-row:nth-child(2n+1){
+    // background-color:#FFE0B2;
+    background-color: #FFB74D;
 }
+.mat-row:nth-child(2n){
+    // background-color:#FFCC80;
+    background-color: #FFA726;
+}
+
 table {
+    // color: #BF360C;
+    color: #3E2723;
+    thead {
+        background-color: #FFCC80;
+        font-size: 0.9em;
+        color: #EF6C00;
+    }
+    min-height: 46px;
+    .odd {
+        // background-color: #FFB74D;
+        background-color:#FFE0B2;
+    }
+    .even {
+        // background-color: #FFA726;
+        background-color:#FFCC80;
+    }
     tr {
         .dose {
             width: 15%;
@@ -91,14 +141,26 @@ table {
             width: 20%;
         }
         .disease {
-            width: 75%;
-            .latin_name {
-                font-style: italic !important;
-            }
+            width: 65%;
         }
         td {
-            .latin_name {
-                font-style: italic !important;
+            padding: 3px 5px 3px 5px;
+            padding: 5px;
+            span {
+                margin-top: 7px;
+                margin-bottom: 7px;
+            }
+            // .latin_name {
+            //     font-style: italic !important;
+            // }
+            .note {
+                font-weight: bold;
+                text-decoration: underline;
+            }
+            .afterNote {
+                font-weight: bold;
+                font-size: 0.9em;
+                margin: 0;
             }
         }
     }
