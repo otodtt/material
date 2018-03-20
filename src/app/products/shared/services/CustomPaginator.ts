@@ -22,6 +22,8 @@ export function getBulgarianPaginatorIntl() {
     paginatorIntl.itemsPerPageLabel = 'Бр. за страница:';
     paginatorIntl.nextPageLabel = 'Следваща';
     paginatorIntl.previousPageLabel = 'Предишна';
+    paginatorIntl.firstPageLabel = 'Първа';
+    paginatorIntl.lastPageLabel = 'Последна';
     paginatorIntl.getRangeLabel = bulgarianRangeLabel;
 
     return paginatorIntl;

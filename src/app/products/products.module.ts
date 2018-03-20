@@ -10,12 +10,13 @@ import { ProductsService } from './shared/services/products.service';
 // Header and Footer Module
 import { ShareComponentsModule } from '../common/share.components.module';
 import { MaterialModule } from '../common/material/material.module';
+
+import {MatTableModule} from '@angular/material/table';
 import { MatPaginatorModule, MatPaginatorIntl } from '@angular/material';
 import { getBulgarianPaginatorIntl } from './shared/services/CustomPaginator';
 
 import { AcaricidesComponent } from './pages/acaricides/acaricides.component';
 import { InsecticidesComponent } from './pages/insecticides/insecticides.component';
-
 
 @NgModule({
     imports: [
@@ -23,7 +24,8 @@ import { InsecticidesComponent } from './pages/insecticides/insecticides.compone
         ProductsRoutingModule,
         ShareComponentsModule,
         MaterialModule,
-        MatPaginatorModule
+        MatPaginatorModule,
+        MatTableModule
     ],
     declarations: [
         AcaricidesComponent,

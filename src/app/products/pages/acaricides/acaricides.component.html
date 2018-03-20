@@ -39,20 +39,20 @@
                         <!-- <i class="material-icons">&#xE164;</i>&nbsp; Продукт -->
                     </mat-header-cell>
                     <mat-cell *matCellDef="let row">
-                            <a matLine [routerLink]="[row.id]">{{ row.name }}</a>
+                            <a matLine [routerLink]="[row.id]"><p class="cell_in">{{ row.name }}</p></a>
                     </mat-cell>
                 </ng-container>
     
                 <!-- SUBSTANCE Column -->
                 <ng-container matColumnDef="substance">
                     <mat-header-cell *matHeaderCellDef>Активно<br/>вещество</mat-header-cell>
-                    <mat-cell *matCellDef="let row">{{ row.substance }}</mat-cell>
+                    <mat-cell *matCellDef="let row"><p class="cell_in">{{ row.substance }}</p></mat-cell>
                     <!-- <mat-cell *matCellDef="let row"><span class="dose_span">{{ row.substance }}</span></mat-cell> -->
                 </ng-container>
     
                 <!-- DOSE Column -->
                 <ng-container matColumnDef="dose">
-                    <mat-header-cell *matHeaderCellDef> УПОТРЕБА </mat-header-cell>
+                    <mat-header-cell *matHeaderCellDef><p class="header_dose">УПОТРЕБА</p></mat-header-cell>
                     <mat-cell *matCellDef="let row">
                         <table style="width: 100%;">
                             <thead>
@@ -105,8 +105,9 @@
     
             <!-- <mat-paginator [length]="resultsLength" [pageSize]="[5, 10, 25, 100]"> -->
             <mat-paginator #paginator
-                            [pageSize]="10"
-                            [pageSizeOptions]="[5, 10, 20]">
+                            [pageSize]="5"
+                            [pageSizeOptions]="[5, 10, 20]"
+                            [showFirstLastButtons]="true">
             </mat-paginator>
         </div>
     </div>

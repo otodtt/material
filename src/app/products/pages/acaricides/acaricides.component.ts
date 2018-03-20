@@ -25,14 +25,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
 @Component({
     selector: 'prz-acaricides',
     templateUrl: './acaricides.component.html',
-    styleUrls: ['./acaricides.component.scss'],
-    // animations: [
-    //     trigger('detailExpand', [
-    //       state('collapsed', style({height: '0px', minHeight: '0', visibility: 'hidden'})),
-    //       state('expanded', style({height: '*', visibility: 'visible'})),
-    //       transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
-    //     ]),
-    // ],
+    styleUrls: ['./acaricides.component.scss']
 })
 
 export class AcaricidesComponent implements OnInit, AfterViewInit {
@@ -47,8 +40,6 @@ export class AcaricidesComponent implements OnInit, AfterViewInit {
     // products: Product[] = [];
     // subscription: Subscription;
 
-    // expandedElement = '';
-    // displayedColumns = ['name', 'substance', 'firmName', 'pesticide'];
     displayedColumns = ['name', 'substance', 'dose', 'category'];
     exampleDatabase: ExampleHttpDao | null;
     dataSource = new MatTableDataSource();
@@ -59,9 +50,6 @@ export class AcaricidesComponent implements OnInit, AfterViewInit {
 
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
-
-    // isExpansionDetailRow = (index, row) => row.hasOwnProperty('detailRow');
-    // isExpansionDetailRow = (row: any) => row.hasOwnProperty('detailRow');
 
     constructor(
         private changeBreadcrumb: ChangeBreadcrumbService,
@@ -121,7 +109,7 @@ export class AcaricidesComponent implements OnInit, AfterViewInit {
 
     applyFilter(filterValue: string) {
         filterValue = filterValue.trim(); // Remove whitespace
-        filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
+        filterValue = filterValue.toLowerCase(); // Data source defaults to lowercase matches
         this.dataSource.filter = filterValue;
         console.log(this.dataSource);
     }

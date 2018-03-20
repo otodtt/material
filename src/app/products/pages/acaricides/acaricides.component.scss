@@ -22,7 +22,7 @@
 .example-container {
     display: flex;
     flex-direction: column;
-    max-height: 600px;
+    // max-height: 600px;
     min-width: 300px;
     position: relative;
     margin-bottom: 20px;
@@ -65,24 +65,33 @@
   
 /* Column Widths */
 .mat-row {
-    padding: 0 10px;
+    padding: 0;
 }
 
 .mat-header-cell{
     text-transform: initial !important;
     text-align: center;
     border: none !important;
-    color: rgba(0, 0, 0, 0.54)  !important;
+    background: rgb(110, 0, 35);
+    // color: rgba(0, 0, 0, 0.54)  !important;
+    color: rgb(255, 255, 255) !important;
+    align-self: stretch;
+    padding-top: 10px;
+    // padding: 10px 5px;
 }
 .mat-header-row {
-    padding: 0 10px;
+    // padding-top: 10px;
+    padding: 0;
 }
 .mat-column-name {
+    
     max-width: 12%;
-    border-right: 1px solid #FF9800;
+    // border-right: 1px solid #FF9800;
+    border-right: 1px solid rgb(255, 255, 255);
     align-self: stretch;
+    padding-top: 10px;
  //    text-align: center;
-     padding: 10px 5px;
+    // padding: 10px 5px;
  //    color: #980000;
     a {
         text-decoration: none;
@@ -94,44 +103,69 @@
     max-width: 10%;
     text-transform: lowercase;
     align-self: stretch;
-    padding: 10px 5px;
+    padding-top: 10px;
+    // padding: 10px 5px;
     color: #3E2723;
+    border-right: 1px solid rgb(255, 255, 255);
 }
   
-.mat-column-dose {
-    min-width: 70%;
-}
+// .mat-column-dose {
+//     // padding-top: 15px;
+//     // min-width: 70%;
+// }
+
 .mat-column-category {
     max-width: 7%;
     text-align: center;
     color: #3E2723;
+    // align-self: stretch;
 }
 
 .mat-row:nth-child(2n+1){
     // background-color:#FFE0B2;
-    background-color: #FFB74D;
+    // background-color: #00897B;
+    // background: #EF5350;
+    background: rgb(215, 215, 216);
 }
 .mat-row:nth-child(2n){
     // background-color:#FFCC80;
-    background-color: #FFA726;
+    // background-color: #00796B;
+    background-color: rgb(200, 200, 200);
+}
+
+.header_dose {
+    margin-top: 5px;
+}
+.cell_in {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.material-icons {
+    font-size: 20px;
+    margin-left: 5px
 }
 
 table {
+    min-height: 64px;
     // color: #BF360C;
     color: #3E2723;
+    border-right: 1px solid rgb(255, 255, 255);
     thead {
-        background-color: #FFCC80;
+        background-color: rgb(190, 190, 190);
         font-size: 0.9em;
-        color: #EF6C00;
+        color: rgb(255, 255, 255);
     }
-    min-height: 46px;
+    
     .odd {
         // background-color: #FFB74D;
-        background-color:#FFE0B2;
+        // background-color:#26A69A;
+        // background-color:rgb(253, 153, 163);
+        background-color:rgb(240, 240, 240);
     }
     .even {
         // background-color: #FFA726;
-        background-color:#FFCC80;
+        // background-color:#009688;
+        background-color:rgb(224, 224, 224);
     }
     tr {
         .dose {
