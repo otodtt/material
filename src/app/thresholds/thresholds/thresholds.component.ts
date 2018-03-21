@@ -1,9 +1,15 @@
 import { Component, OnInit, Output, EventEmitter, ChangeDetectorRef, OnDestroy, AfterViewInit } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 import { MediaMatcher } from '@angular/cdk/layout';
+import { MatDialog } from '@angular/material';
+// import { Component, OnInit, Inject } from '@angular/core';
+// import {MAT_DIALOG_DATA} from '@angular/material';
 
 import { ChangeBreadcrumbService } from '../../common/services/changeBreadcrumb.service';
 import { ResizeService } from '../../common/services/ResizeService';
+
+// import { ThresholdsDialogComponent } from './thresholds-dialog.component';
+
 
 @Component({
     templateUrl: './thresholds.component.html',
@@ -25,7 +31,8 @@ export class ThresholdsComponent implements OnInit, OnDestroy, AfterViewInit {
         private changeBreadcrumb: ChangeBreadcrumbService,
         private resizeService: ResizeService,
         changeDetectorRef: ChangeDetectorRef,
-        media: MediaMatcher
+        media: MediaMatcher,
+        public dialog: MatDialog,
     ) {
         this._mobileQueryListener = () => changeDetectorRef.detectChanges();
         this.openedQuery = media.matchMedia('(max-width: 850px)');
@@ -64,13 +71,21 @@ export class ThresholdsComponent implements OnInit, OnDestroy, AfterViewInit {
             }
         });
     }
+    openDialog() {
+        this.dialog.open(ThresholdsDialogComponent);
+    }
 
     ngOnDestroy() {
         this.openedQuery.removeListener(this._mobileQueryListener);
         this.mediumQuery.removeListener(this._mobileQueryListener);
         this.smallQuery.removeListener(this._mobileQueryListener);
         if (this.resizeSubscription) {
-          this.resizeSubscription.unsubscribe();
+            this.resizeSubscription.unsubscribe();
         }
     }
 }
+
+@Component({
+    templateUrl: './thresholds-dialog.component.html'
+})
+export class ThresholdsDialogComponent {}

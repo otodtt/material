@@ -10,8 +10,9 @@ import { MaterialModule } from '../common/material/material.module';
 
 // Shared
 import { SideMenuComponent } from './side-menu/side-menu.component';
+// import { ThresholdsDialogComponent } from './thresholds/thresholds-dialog.component';
 
-import { ThresholdsComponent } from './thresholds/thresholds.component';
+import { ThresholdsComponent, ThresholdsDialogComponent } from './thresholds/thresholds.component';
 import { TriticumComponent } from './pages/grains/triticum/triticum.component';
 import { HordeumComponent } from './pages/grains/hordeum/hordeum.component';
 import { ZeaComponent } from './pages/grains/zea/zea.component';
@@ -52,6 +53,7 @@ import { VitisComponent } from './pages/vitis/vitis.component';
         MaterialModule
     ],
     declarations: [
+        ThresholdsDialogComponent,
         ThresholdsComponent,
         SideMenuComponent,
         TriticumComponent,
@@ -85,6 +87,7 @@ import { VitisComponent } from './pages/vitis/vitis.component';
         PrunusComponent,
         FragariaComponent,
         VitisComponent
-    ]
+    ],
+    entryComponents: [ThresholdsDialogComponent],
 })
 export class ThresholdsModule { }
