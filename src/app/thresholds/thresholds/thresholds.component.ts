@@ -2,14 +2,9 @@ import { Component, OnInit, Output, EventEmitter, ChangeDetectorRef, OnDestroy, 
 import { Subscription } from 'rxjs/Subscription';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { MatDialog } from '@angular/material';
-// import { Component, OnInit, Inject } from '@angular/core';
-// import {MAT_DIALOG_DATA} from '@angular/material';
 
 import { ChangeBreadcrumbService } from '../../common/services/changeBreadcrumb.service';
 import { ResizeService } from '../../common/services/ResizeService';
-
-// import { ThresholdsDialogComponent } from './thresholds-dialog.component';
-
 
 @Component({
     templateUrl: './thresholds.component.html',
