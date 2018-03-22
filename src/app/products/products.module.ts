@@ -17,6 +17,7 @@ import { getBulgarianPaginatorIntl } from './shared/services/CustomPaginator';
 
 import { AcaricidesComponent } from './pages/acaricides/acaricides.component';
 import { InsecticidesComponent } from './pages/insecticides/insecticides.component';
+import { MoreInfoDialogComponent } from './shared/more-info-dialog/more-info-dialog.component';
 
 @NgModule({
     imports: [
@@ -29,12 +30,14 @@ import { InsecticidesComponent } from './pages/insecticides/insecticides.compone
     ],
     declarations: [
         AcaricidesComponent,
-        InsecticidesComponent
+        InsecticidesComponent,
+        MoreInfoDialogComponent
     ],
     providers: [
         ProductsRoutingModule,
         ProductsService,
         { provide: MatPaginatorIntl, useValue: getBulgarianPaginatorIntl() }
     ],
+    entryComponents: [MoreInfoDialogComponent],
 })
 export class ProductsModule { }

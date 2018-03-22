@@ -169,13 +169,21 @@ table {
     }
     tr {
         .dose {
-            width: 15%;
+            width: 12%;
         }
         .crops {
             width: 20%;
         }
-        .disease {
-            width: 65%;
+        // .disease {
+        //     // width: 60%;
+        // }
+        .more_info {
+            width: 7%;
+            font-size: 0.8em;
+            .mat-button {
+                min-width: 0;
+                line-height: 0;
+            }
         }
         td {
             padding: 3px 5px 3px 5px;

@@ -1,14 +1,3 @@
-// import { Component, OnInit } from '@angular/core';
-// import { Subscription } from 'rxjs/Subscription';
-// import { MatTableDataSource } from '@angular/material';
-
-import { ChangeBreadcrumbService } from '../../../common/services/changeBreadcrumb.service';
-import { SeoService } from '../../../common/services/SeoService';
-
-import { Product } from '../../shared/models/product.model';
-import { ProductsService } from '../../shared/services/products.service';
-
-
 import {Component, OnInit, ViewChild, AfterViewInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
@@ -20,6 +9,16 @@ import {map} from 'rxjs/operators/map';
 import {startWith} from 'rxjs/operators/startWith';
 import {switchMap} from 'rxjs/operators/switchMap';
 import {animate, state, style, transition, trigger} from '@angular/animations';
+
+import { MatDialog } from '@angular/material';
+import { MoreInfoDialogComponent } from '../../shared/more-info-dialog/more-info-dialog.component';
+
+import { ChangeBreadcrumbService } from '../../../common/services/changeBreadcrumb.service';
+import { SeoService } from '../../../common/services/SeoService';
+
+import { Product } from '../../shared/models/product.model';
+import { ProductsService } from '../../shared/services/products.service';
+
 
 
 @Component({
@@ -55,7 +54,8 @@ export class AcaricidesComponent implements OnInit, AfterViewInit {
         private changeBreadcrumb: ChangeBreadcrumbService,
         private seoService: SeoService,
         private productsService: ProductsService,
-        private http: HttpClient
+        private http: HttpClient,
+        public dialog: MatDialog,
     ) {
         this.seoService.addTitle(this.title);
         this.seoService.setMeta(this.description, this.keywords);
@@ -112,6 +112,14 @@ export class AcaricidesComponent implements OnInit, AfterViewInit {
         filterValue = filterValue.toLowerCase(); // Data source defaults to lowercase matches
         this.dataSource.filter = filterValue;
         console.log(this.dataSource);
+    }
+
+    openDialog(name: string, info: any) {
+        this.dialog.open(MoreInfoDialogComponent, {
+            position: {right: 'right'},
+            data: { title: name, data: info},
+            width: '40%'
+        });
     }
 }
 

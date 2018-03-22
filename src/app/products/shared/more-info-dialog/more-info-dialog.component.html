@@ -1,0 +1,27 @@
+<div class="dialog-header" >
+    <h2 mat-dialog-title>{{ data.title }}</h2>
+</div>
+
+<mat-dialog-content>
+    <p class="bold">{{ data.data.crop }}</p>
+    <span class="bold note afterNote" *ngIf="data.data.note !== null">{{ data.data.note }}</span>
+    <p class="td_span" [innerHTML]="data.data.disease | safeHtml"></p>
+    <span class="bold afterNote" *ngIf="data.data.afterNote !== null">{{ data.data.afterNote }}</span>
+    <hr/>
+    <p class="p_dose">
+        <span class="bold">В доза:</span> 
+        {{ data.data.dose }} {{ data.data.measure }} {{data.datasecondDose}}
+        <span class="bold" *ngIf="data.data.doseNote !== null">{{ data.data.doseNote }}</span>
+    </p>
+    <hr>
+    <p><span class="bold">Карантинен период (дни):</span> {{ data.data.quarantine }}</p>
+
+    <hr *ngIf="data.data.application !== null"/>
+    <p *ngIf="data.data.application !== null">
+        <span class="bold">Употреба:</span> {{ data.data.application }}
+    </p>
+    
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button mat-dialog-close>Затвори</button>
+</mat-dialog-actions>

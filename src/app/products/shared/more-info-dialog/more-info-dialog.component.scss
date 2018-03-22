@@ -1,0 +1,39 @@
+.bold {
+    font-weight: bolder;
+}
+.note {
+    text-decoration: underline;
+}
+.afterNote {
+    font-size: 0.9em;
+}
+p {
+    -webkit-margin-before: .3em;
+    -webkit-margin-after: .8em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+// .td_span {
+//     -webkit-margin-before: .3em;
+//     -webkit-margin-after: .3em;
+//     -webkit-margin-start: 0px;
+//     -webkit-margin-end: 0px;
+// }
+// .p_dose {
+//     -webkit-margin-before: .8em;
+//     -webkit-margin-after: .8em;
+//     -webkit-margin-start: 0px;
+//     -webkit-margin-end: 0px;
+// }
+
+.dialog-header {
+    background: #638b34;
+    color: rgb(255, 255, 255);
+    padding: 12px 0;
+    display: flex;
+    flex-wrap: wrap;
+        padding: 12px 0;
+    h2 {
+        margin: 0 auto;
+    }
+}

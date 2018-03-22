@@ -60,14 +60,14 @@
                                     <th>култура</th>
                                     <th>вредител</th>
                                     <th>доза</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr *ngFor="let dose of row.doses; let isOdd=odd; let isEven=even"
                                     [class.odd]="isOdd" 
                                     [class.even]="isEven" 
-                                >
-                                    
+                                > 
                                     <td class="crops">{{dose.crop}}</td>
                                     <td class="disease">
                                         <span class="note" *ngIf="dose.note != null">{{dose.note}}<br/></span>
@@ -77,6 +77,9 @@
                                     <td class="dose">
                                         {{dose.dose}} {{dose.measure}}
                                         <span class="afterNote" *ngIf="dose.doseNote != null"><br/>{{dose.doseNote}}</span>
+                                    </td>
+                                    <td class="more_info">
+                                        <a mat-button color="primary" (click)="openDialog(row.name, dose)">още...>></a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -92,9 +95,6 @@
                         <i class="material-icons">&#xE164;</i>&nbsp;Кат. на <br/>употреба
                     </mat-header-cell>
                     <mat-cell *matCellDef="let row">
-                        <!-- <span *ngIf="row.category === '3'">Непрофесионална</span>
-                        <span *ngIf="row.category === '2'">Втора</span>
-                        <span *ngIf="row.category === '1'">Първа</span> -->
                         {{ row.category }}
                     </mat-cell>
                 </ng-container>
