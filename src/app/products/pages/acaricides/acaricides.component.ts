@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild, AfterViewInit} from '@angular/core';
+import {Component, OnInit, ViewChild, AfterViewInit, AnimationKeyframesSequenceMetadata} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 import {Observable} from 'rxjs/Observable';
@@ -19,6 +19,19 @@ import { SeoService } from '../../../common/services/SeoService';
 import { Product } from '../../shared/models/product.model';
 import { ProductsService } from '../../shared/services/products.service';
 
+
+export class ExampleHttpDao {
+    constructor(private productsService: ProductsService) { }
+
+    getRepoIssues(sort: string, order: string): Observable<Product[]> {
+
+        // console.log(`products/acaricides&sort=${sort}&order=${order}&page=${page + 1}`);
+        console.log(`products/acaricides?sort=${sort}&order=${order}`);
+        // return this.productsService.getProducts(`products/acaricides?sort=${sort}&order=${order}&page=${page + 1}`);
+        return this.productsService.getProducts(`products/acaricides?sort=${sort}&order=${order}`);
+    }
+    disconnect() {}
+}
 
 
 @Component({
@@ -114,29 +127,11 @@ export class AcaricidesComponent implements OnInit, AfterViewInit {
         console.log(this.dataSource);
     }
 
-    openDialog(name: string, info: any) {
+    openDialog(name: any, info: any) {
         this.dialog.open(MoreInfoDialogComponent, {
             position: {right: 'right'},
             data: { title: name, data: info},
             width: '40%'
         });
     }
-}
-
-export class ExampleHttpDao {
-    constructor(private productsService: ProductsService) { }
-
-    // getRepoIssues(sort: string, order: string, page: number): Observable<Product[]> {
-    getRepoIssues(sort: string, order: string): Observable<Product[]> {
-        // const href = 'https://api.github.com/search/issues';
-        // const requestUrl =
-            // `${href}?q=repo:angular/material2&sort=${sort}&order=${order}&page=${page + 1}`;
-
-        // return this.http.get<GithubApi>(requestUrl);
-        // console.log(`products/acaricides&sort=${sort}&order=${order}&page=${page + 1}`);
-        console.log(`products/acaricides?sort=${sort}&order=${order}`);
-        // return this.productsService.getProducts(`products/acaricides?sort=${sort}&order=${order}&page=${page + 1}`);
-        return this.productsService.getProducts(`products/acaricides?sort=${sort}&order=${order}`);
-    }
-    disconnect() {}
 }

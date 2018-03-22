@@ -7,6 +7,11 @@ import { ChangeBreadcrumbService } from '../../common/services/changeBreadcrumb.
 import { ResizeService } from '../../common/services/ResizeService';
 
 @Component({
+    templateUrl: './thresholds-dialog.component.html'
+})
+export class ThresholdsDialogComponent {}
+
+@Component({
     templateUrl: './thresholds.component.html',
     styleUrls: ['./thresholds.component.scss']
 })
@@ -80,7 +85,4 @@ export class ThresholdsComponent implements OnInit, OnDestroy, AfterViewInit {
     }
 }
 
-@Component({
-    templateUrl: './thresholds-dialog.component.html'
-})
-export class ThresholdsDialogComponent {}
+

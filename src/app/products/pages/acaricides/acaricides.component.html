@@ -8,13 +8,13 @@
                 *ngIf="isLoadingResults || isRateLimitReached">
                 <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
                 <div class="example-rate-limit-reached" *ngIf="isRateLimitReached">
-                    GitHub's API rate limit has been reached. It will be reset in one minute.
+                    Моля, презаредете страницата отново!
                 </div>
             </div>
     
             <div class="example-header">
                 <mat-form-field>
-                    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+                    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Филтър">
                 </mat-form-field>
                 <!-- <span class="example-spacer"></span>
                 <mat-paginator #paginator
@@ -79,7 +79,7 @@
                                         <span class="afterNote" *ngIf="dose.doseNote != null"><br/>{{dose.doseNote}}</span>
                                     </td>
                                     <td class="more_info">
-                                        <a mat-button color="primary" (click)="openDialog(row.name, dose)">още...>></a>
+                                        <a mat-button (click)="openDialog(row, dose)">още...</a>
                                     </td>
                                 </tr>
                             </tbody>
