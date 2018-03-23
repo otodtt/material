@@ -39,7 +39,8 @@
                         <!-- <i class="material-icons">&#xE164;</i>&nbsp; Продукт -->
                     </mat-header-cell>
                     <mat-cell *matCellDef="let row">
-                            <a matLine [routerLink]="[row.id]"><p class="cell_in">{{ row.name }}</p></a>
+                            <a matLine [routerLink]="[row.id]" matTooltip="Подробно за продукта"><p class="cell_in">{{ row.name }}</p></a>
+                            <p class="firm-name">{{ row.firmName }}</p>
                     </mat-cell>
                 </ng-container>
     

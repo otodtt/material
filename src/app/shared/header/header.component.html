@@ -35,7 +35,9 @@
                         <button mat-icon-button *ngIf="page.subPage !== null">
                             <mat-icon class="btn-active">expand_more</mat-icon>
                         </button>
-                        <div *ngIf="page.subPage !== null" class="nav-dropdown">
+                        <!-- Решение ако се скрива дропдаун менюто в ляво Виж хтмл -а! -->
+                        <!-- <div *ngIf="page.subPage !== null" class="nav-dropdown" [ngClass]="page.link"> -->
+                        <div *ngIf="page.subPage !== null" class="nav-dropdown" >
                             <mat-list-item class="sub-menu" *ngFor="let sp of page.subPage">
                                 <a matLine
                                     [routerLink]="sp.link"

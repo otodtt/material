@@ -47,6 +47,11 @@ const pages = [
                 id: 2,
                 subName: 'прагове на икономическа вредност',
                 link: 'thresholds'
+            },
+            {
+                id: 3,
+                subName: 'Формулации',
+                link: 'formulations'
             }
         ],
     },

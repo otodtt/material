@@ -35,6 +35,7 @@ import { ProductsComponent } from './products/products.component';
 import { CropsComponent } from './crops/crops.component';
 import { DocumentsComponent } from './documents/documents.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { FormulationsComponent } from './formulations/formulations.component';
 
 
 
@@ -50,6 +51,7 @@ import { ContactsComponent } from './contacts/contacts.component';
         DocumentsComponent,
         ContactsComponent,
         NotFoundComponent,
+        FormulationsComponent,
     ],
     imports: [
         BrowserModule,
