@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import {MAT_DIALOG_DATA} from '@angular/material';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 
 @Component({
     selector: 'prz-more-info-dialog',
@@ -8,7 +8,14 @@ import {MAT_DIALOG_DATA} from '@angular/material';
 })
 export class MoreInfoDialogComponent {
 
-    constructor(@Inject(MAT_DIALOG_DATA) public data: any) {
+    constructor(
+        public dialogRef: MatDialogRef<MoreInfoDialogComponent>,
+        @Inject(MAT_DIALOG_DATA) public data: any
+    ) {
         console.log(this.data);
+    }
+
+    onNoClick(): void {
+        this.dialogRef.close();
     }
 }

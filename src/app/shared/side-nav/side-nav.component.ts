@@ -20,6 +20,7 @@ export class SideNavComponent implements AfterViewInit {
     public stateSub = 'default-sub';
     public isClicked = false;
     public isActiveClass = false;
+    public pageId: number;
 
     @Output() navClose = new EventEmitter<boolean>();
     constructor(private changeBreadcrumb: ChangeBreadcrumbService) { }
@@ -48,8 +49,9 @@ export class SideNavComponent implements AfterViewInit {
         this.stateSub = (this.stateSub === 'default-sub' ? 'shown' : 'default-sub');
         this.isClicked = false;
     }
-    addClass() {
+    addClass(id: number) {
         this.isActiveClass = true;
+        this.pageId = id;
     }
     removeClass() {
         this.isActiveClass = false;

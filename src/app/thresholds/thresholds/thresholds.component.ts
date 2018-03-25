@@ -7,7 +7,8 @@ import { ChangeBreadcrumbService } from '../../common/services/changeBreadcrumb.
 import { ResizeService } from '../../common/services/ResizeService';
 
 @Component({
-    templateUrl: './thresholds-dialog.component.html'
+    templateUrl: './thresholds-dialog.component.html',
+    styleUrls: ['./thresholds.component.scss']
 })
 export class ThresholdsDialogComponent {}
 

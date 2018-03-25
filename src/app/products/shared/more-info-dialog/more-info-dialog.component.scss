@@ -13,6 +13,10 @@ p {
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
 }
+.against {
+    text-decoration: underline;
+    font-size: 0.9em;
+}
 hr {
     border-color: rgba(0, 0, 0, 0.1);
 }
@@ -32,11 +36,24 @@ hr {
 .dialog-header {
     background: #638b34;
     color: rgb(255, 255, 255);
-    padding: 12px 0;
+    padding: 5px 0;
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 8px;
+    // margin-right: 15px;
     h2 {
         margin: 0 auto;
     }
 }
+
+.example-card {
+    // margin: 0 auto;
+    margin-bottom: 10px;
+    background: rgba(133, 133, 133, 0.1);
+}
+.example-spacer {
+    flex: 1 1 auto;
+}
+// .card-top {
+//     margin-bottom: 10px;
+// }

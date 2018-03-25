@@ -12,11 +12,13 @@ const pages = [
         subPage: [
             {
                 id: 0,
+                pageId: 1,
                 subName: 'Акарициди',
                 link: 'acaricides'
             },
             {
                 id: 1,
+                pageId: 1,
                 subName: 'Инсектициди',
                 link: 'insecticides'
             }
@@ -35,21 +37,25 @@ const pages = [
         subPage: [
             {
                 id: 0,
+                pageId: 3,
                 subName: 'добри растителнозащитни практики',
                 link: 'practices'
             },
             {
                 id: 1,
+                pageId: 3,
                 subName: 'интегрирано управление на вредители',
                 link: 'management'
             },
             {
                 id: 2,
+                pageId: 3,
                 subName: 'прагове на икономическа вредност',
                 link: 'thresholds'
             },
             {
                 id: 3,
+                pageId: 3,
                 subName: 'Формулации',
                 link: 'formulations'
             }

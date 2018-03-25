@@ -16,30 +16,23 @@
                 <mat-form-field>
                     <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Филтър">
                 </mat-form-field>
-                <!-- <span class="example-spacer"></span>
-                <mat-paginator #paginator
-                            [pageSize]="10"
-                            [pageSizeOptions]="[5, 10, 20]">
-                </mat-paginator> -->
             </div>
             
             <mat-table #table [dataSource]="dataSource" class="example-table"
                         matSort matSortActive="created" matSortDisableClear matSortDirection="asc">
     
-                <!--- Note that these columns can be defined in any order.
-                    The actual rendered columns are set as a property on the row definition" -->
-    
                 <!-- NAME Column -->
                 <ng-container matColumnDef="name">
-                    <mat-header-cell    *matHeaderCellDef
-                                        mat-sort-header
-                                        disableClear="true">
-                        <i class="material-icons">&#xE053;</i>&nbsp; Продукт
-                        <!-- <i class="material-icons">&#xE164;</i>&nbsp; Продукт,<br/>Производител -->
-                        <!-- <i class="material-icons">&#xE164;</i>&nbsp; Продукт -->
+                    <mat-header-cell *matHeaderCellDef
+                                    mat-sort-header
+                                    disableClear="true">
+                        <i class="material-icons name-sort-icon">&#xE053;</i>&nbsp;
+                        <span>Продукт</span>
                     </mat-header-cell>
                     <mat-cell *matCellDef="let row">
-                            <a matLine [routerLink]="[row.id]" matTooltip="Подробно за продукта"><p class="cell_in">{{ row.name }}</p></a>
+                            <a matLine [routerLink]="[row.id]" matTooltip="Подробно за продукта">
+                                <p class="cell_in">{{ row.name }}</p>
+                            </a>
                             <p class="firm-name">{{ row.firmName }}</p>
                     </mat-cell>
                 </ng-container>
@@ -48,20 +41,19 @@
                 <ng-container matColumnDef="substance">
                     <mat-header-cell *matHeaderCellDef>Активно<br/>вещество</mat-header-cell>
                     <mat-cell *matCellDef="let row"><p class="cell_in">{{ row.substance }}</p></mat-cell>
-                    <!-- <mat-cell *matCellDef="let row"><span class="dose_span">{{ row.substance }}</span></mat-cell> -->
                 </ng-container>
     
                 <!-- DOSE Column -->
                 <ng-container matColumnDef="dose">
                     <mat-header-cell *matHeaderCellDef><p class="header_dose">УПОТРЕБА</p></mat-header-cell>
                     <mat-cell *matCellDef="let row">
-                        <table style="width: 100%;">
+                        <table >
                             <thead>
                                 <tr>
-                                    <th>култура</th>
-                                    <th>вредител</th>
-                                    <th>доза</th>
-                                    <th></th>
+                                    <th class="crops">култура</th>
+                                    <th class="disease">вредител</th>
+                                    <th class="dose">доза</th>
+                                    <th class="more_info"></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -93,7 +85,8 @@
                     <mat-header-cell *matHeaderCellDef 
                                     mat-sort-header 
                                     disableClear="true">
-                        <i class="material-icons">&#xE164;</i>&nbsp;Кат. на <br/>употреба
+                        <i class="material-icons my-material-icons">&#xE164;</i>&nbsp;
+                        <span class="category-span">Кат. на<br/>употреба</span>
                     </mat-header-cell>
                     <mat-cell *matCellDef="let row">
                         {{ row.category }}

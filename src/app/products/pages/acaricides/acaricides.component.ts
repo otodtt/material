@@ -77,7 +77,7 @@ export class AcaricidesComponent implements OnInit, AfterViewInit {
         //       this.products = products;
         //       this.dataSource = new MatTableDataSource(products);
         //   });
-        console.log(this.dataSource);
+        // console.log(this.dataSource);
     }
 
     ngOnInit() {
@@ -113,7 +113,7 @@ export class AcaricidesComponent implements OnInit, AfterViewInit {
                 return observableOf([]);
             })
         ).subscribe(data => this.dataSource.data = data);
-        console.log(this.dataSource);
+        // console.log(this.dataSource);
     }
 
     ngAfterViewInit() {
@@ -121,17 +121,21 @@ export class AcaricidesComponent implements OnInit, AfterViewInit {
     }
 
     applyFilter(filterValue: string) {
-        filterValue = filterValue.trim(); // Remove whitespace
-        filterValue = filterValue.toLowerCase(); // Data source defaults to lowercase matches
+        filterValue = filterValue.trim();
+        filterValue = filterValue.toLowerCase();
         this.dataSource.filter = filterValue;
-        console.log(this.dataSource);
     }
 
     openDialog(name: any, info: any) {
-        this.dialog.open(MoreInfoDialogComponent, {
-            position: {right: 'right'},
-            data: { title: name, data: info},
-            width: '40%'
+        let dialogRef = this.dialog.open(MoreInfoDialogComponent, {
+            // position: {right: ''},
+            data: { product: name, data: info},
+            // width: '60%'
+        });
+
+        dialogRef.afterClosed().subscribe(result => {
+            console.log('The dialog was closed');
+            console.log(result);
         });
     }
 }

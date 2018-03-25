@@ -1,0 +1,117 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    // max-height: 500px;
+    min-width: 300px;
+    // width: 85%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+// .example-header {
+//     // min-height: 64px;
+//     padding: 8px 24px 0;
+// }
+  
+// .mat-form-field {
+//     font-size: 14px;
+//     width: 100%;
+// }
+
+// .mat-table {
+//     overflow: auto;
+//     // margin-bottom: 20px;
+//     // max-height: 500px;
+// }
+// .mat-header-row {
+//     min-height: 0;
+// }
+
+// // .mat-column-position {
+// //     max-width: 5%;
+// // }
+// .mat-column-symbol, .mat-column-latin {
+//     max-width: 15%;
+//     min-width: 15%;
+// }
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+    .row-header{
+        margin-bottom: 40px;
+        h1 {
+            font-size: 1.5em;
+            color: #008000;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+table {
+    tr {
+        .position {
+            text-align: right;
+        }
+        td {
+            padding: 8px 5px;
+            color: #33691E;
+        }
+    }
+    .odd {
+        background-color:#C5E1A5;
+    }
+    .even {
+        background-color:#DCEDC8;
+    }
+}
+// .mat-row:nth-child(2n+1){
+//     background: #DCEDC8;
+// }
+// .mat-row:nth-child(2n){
+//     background-color: #C5E1A5
+// }
+
+/* ##Device = Desktops ##Screen = 1281px to higher resolution desktops */
+@media (min-width: 1281px) {}
+
+/* ##Device = Laptops, Desktops ##Screen = B/w 1025px to 1280px*/
+@media (min-width: 1025px) and (max-width: 1280px) {}
+
+/* ##Device = Tablets, Ipads (portrait) ##Screen = B/w 768px to 1024px*/
+@media (min-width: 768px) and (max-width: 1024px) {}
+
+/* ##Device = Tablets, Ipads (landscape) ##Screen = B/w 768px to 1024px*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}
+
+/* ##Device = Low Resolution Tablets, Mobiles (Landscape) ##Screen = B/w 481px to 767px*/
+@media (min-width: 481px) and (max-width: 767px) {
+    .container {
+        width: 100%;
+    }
+}
+
+/* ##Device = Most of the Smartphones Mobiles (Portrait) ##Screen = B/w 320px to 479px*/
+@media (min-width: 320px) and (max-width: 480px) {
+    .container {
+        width: 100%;
+        table {
+            .position {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 320px){
+    .container {
+        width: 100%;
+        table {
+            .latin {
+                display: none;
+            }
+        }
+    }
+}

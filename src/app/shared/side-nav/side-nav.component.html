@@ -6,7 +6,6 @@
     <span color="primary" class="bold">МЕНЮ</span>
 </mat-toolbar>
 <mat-nav-list>
-    
     <nav>
         <div id="menu-wrap" >
             <div id="menu-shown" [@rotatedState]='state' >
@@ -14,15 +13,16 @@
                     <li *ngFor="let page of pages; let i = index" >
                         <a mat-button 
                             *ngIf="page.subPage !== null"
-                            [ngClass]="isActiveClass ? 'active': '' "
+                            
+                            [class.active]="isActiveClass && page.id == pageId"
                             (click)="rotate(i)">
                             <i class="material-icons">chevron_right</i>
                             {{ page.name | uppercase}}
                         </a>
                         <a mat-button 
+                            *ngIf="page.subPage === null"
                             routerLink="/{{page.link}}"
                             routerLinkActive="active"
-                            *ngIf="page.subPage === null"
                             (click)="onCloseMenu()"
                             (click)="removeClass()">
                             {{ page.name | uppercase}}
@@ -41,7 +41,7 @@
                             routerLink="/{{psp.link}}"
                             routerLinkActive="active"
                             (click)="onCloseMenu()"
-                            (click)="addClass()">
+                            (click)="addClass(psp.pageId)">
                             {{psp.subName | uppercase}}
                         </a>
                     </li>
@@ -50,3 +50,5 @@
         </div>
     </nav>
 </mat-nav-list>
+
+<!-- [ngClass]="(isActiveClass && page.id == i) ? 'active' : ''" -->

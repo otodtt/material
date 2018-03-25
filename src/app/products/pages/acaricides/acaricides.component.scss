@@ -15,7 +15,10 @@
 // .example-spacer {
 //     flex: 1 1 auto;
 // }
-
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
 
 /* Structure */
 .example-container {
@@ -101,17 +104,21 @@
         // margin-left: 5px;
         // margin-right: 5px;
         padding: 0 5px;
+        margin: 0;
     }
- }
+}
 .mat-column-substance {
-    max-width: 10%;
-    text-transform: lowercase;
+    max-width: 9%;
+    // text-transform: lowercase;
     align-self: stretch;
     padding-top: 10px;
     // padding: 10px 5px;
     // color: #3E2723;
     border-right: 1px solid rgb(255, 255, 255);
 }
+// .mat-cell {
+//     border: 1px solid rgba(0, 0, 0, 0.321);
+// }
   
 // .mat-column-dose {
 //     // padding-top: 15px;
@@ -126,16 +133,14 @@
 }
 
 .mat-row:nth-child(2n+1){
-    // background-color:#FFE0B2;
-    // background-color: #00897B;
-    // background: #EF5350;
-    // background: rgb(215, 215, 216);
-    background: hsla(240, 1%, 85%, 0.478);
+    // background: rgba(216, 216, 217, 0.478);
+    // background: #DCEDC8;
+    background: #A5D6A7;
 }
 .mat-row:nth-child(2n){
-    // background-color:#FFCC80;
-    // background-color: #00796B;
-    background-color: rgb(200, 200, 200);
+    // background-color: rgb(200, 200, 200);
+    // background-color: #C5E1A5;
+    background-color: #81C784;
 }
 
 .header_dose {
@@ -151,25 +156,22 @@
 }
 
 table {
+    width: 100%;
     min-height: 64px;
-    // color: #BF360C;
-    // color: #3E2723;
     border-right: 1px solid rgb(255, 255, 255);
     thead {
-        background-color: rgb(190, 190, 190);
+        // background-color: rgb(190, 190, 190);
+        background-color: #AED581;
         font-size: 0.9em;
         color: rgb(255, 255, 255);
     }
     .odd {
-        // background-color: #FFB74D;
-        // background-color:#26A69A;
-        // background-color:rgb(253, 153, 163);
-        background-color:rgb(240, 240, 240);
+        // background-color:rgb(240, 240, 240);
+        background-color:#F1F8E9;
     }
     .even {
-        // background-color: #FFA726;
-        // background-color:#009688;
-        background-color:rgb(224, 224, 224);
+        // background-color:rgb(224, 224, 224);
+        background-color:#DCEDC8;
     }
     tr {
         .dose {
@@ -182,7 +184,7 @@ table {
         //     // width: 60%;
         // }
         .more_info {
-            width: 7%;
+            width: 3%;
             font-size: 0.8em;
             padding: 0;
             .mat-button {
@@ -195,6 +197,7 @@ table {
             }
         }
         td {
+            border: 1px solid hsla(0, 0%, 0%, 0.2);
             padding: 3px 5px 3px 5px;
             padding: 5px;
             span {
@@ -214,3 +217,192 @@ table {
     }
 }
 
+
+/* ##Device = Desktops ##Screen = 1281px to higher resolution desktops */
+@media (min-width: 1201px) {}
+
+/* ##Device = Laptops, Desktops ##Screen = B/w 1025px to 1280px*/
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .my-material-icons {
+        display: none;
+    }
+    .category-span {
+        margin-left: 5px;
+    }
+}
+
+/* ##Device = Tablets, Ipads (portrait) ##Screen = B/w 768px to 1024px*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    .my-material-icons {
+        display: none;
+    }
+    .mat-column-substance {
+        display: none;
+    }
+    .mat-column-category {
+        max-width: 9%;
+        text-align: center;
+    }
+}
+
+/* ##Device = Tablets, Ipads (landscape) ##Screen = B/w 768px to 1024px*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .my-material-icons {
+        display: none;
+    }
+    .mat-column-substance {
+        display: none;
+    }
+    .mat-column-category {
+        max-width: 9%;
+        text-align: center;
+    }
+}
+
+/* ##Device = Low Resolution Tablets, Mobiles (Landscape) ##Screen = B/w 481px to 767px*/
+@media (min-width: 501px) and (max-width: 767px) {
+    .my-material-icons {
+        display: none;
+    }
+    .mat-column-substance {
+        display: none;
+    }
+    .mat-column-category {
+        display: none;
+    }
+    .mat-column-name {
+        min-width: 20%;
+    }
+    table {
+        tr {
+            .dose {
+                display: none;
+            }
+            .crops {
+                width: 30%;
+            }
+            .more_info {
+                width: initial;
+            }
+        }
+    }
+}
+/* ##Device = Most of the Smartphones Mobiles (Portrait) ##Screen = B/w 320px to 479px*/
+@media  (min-width: 325px) and (max-width: 500px) {
+    .mat-button {
+        min-width: 50px;
+    }
+    .my-material-icons {
+        display: none;
+    }
+    .mat-column-substance {
+        display: none;
+    }
+    .mat-column-category {
+        display: none;
+    }
+    .mat-column-name {
+        min-width: 30%;
+    }
+    table {
+        tr {
+            .dose {
+                display: none;
+            }
+            .crops {
+                width: 70%;
+            }
+            .disease {
+                display: none;
+            }
+            .more_info {
+                width: initial;
+            }
+        }
+    }
+}
+
+@media (min-width: 317px) and  (max-width: 324px){
+    .mat-row {
+        width: 99%;
+    }
+    .mat-button {
+        min-width: 30px;
+    }
+    .my-material-icons {
+        display: none;
+    }
+    .mat-column-substance {
+        display: none;
+    }
+    .mat-column-category {
+        display: none;
+    }
+    .mat-column-name {
+        min-width: 35%;
+    }
+    // .mat-column-dose {
+    //     max-width: 67%;
+    // }
+    .firm-name {
+        display: none;
+    }
+    table {
+        // width: 98%;
+        tr {
+            .dose {
+                display: none;
+            }
+            .crops {
+                width: 60%;
+            }
+            .disease {
+                display: none;
+            }
+            .more_info {
+                width: initial;
+            }
+        }
+    }
+} 
+
+@media (max-width: 316px){
+    .mat-row {
+        width: 94%;
+    }
+    .mat-button {
+        min-width: 30px;
+    }
+    .my-material-icons {
+        display: none;
+    }
+    .mat-column-substance {
+        display: none;
+    }
+    .mat-column-category {
+        display: none;
+    }
+    .mat-column-name {
+        min-width: 35%;
+    }
+    .firm-name {
+        display: none;
+    }
+    table {
+        // width: 80%;
+        tr {
+            .dose {
+                display: none;
+            }
+            .crops {
+                width: 60%;
+            }
+            .disease {
+                display: none;
+            }
+            .more_info {
+                width: initial;
+            }
+        }
+    }
+}
