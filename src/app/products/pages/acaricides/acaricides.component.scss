@@ -2,7 +2,6 @@
     width: 95%;
     margin: 0 auto;
     .row-header{
-        // margin-bottom: 40px;
         h1 {
             font-size: 2em;
             color: #008000;
@@ -79,6 +78,7 @@
     padding-top: 10px;
     // padding: 10px 5px;
 }
+
 .mat-header-row {
     // padding-top: 10px;
     padding: 0;
@@ -90,9 +90,6 @@
     border-right: 1px solid rgb(255, 255, 255);
     align-self: stretch;
     padding-top: 10px;
- //    text-align: center;
-    // padding: 10px 5px;
- //    color: #980000;
     a {
         text-decoration: none;
         font-weight: bolder;
@@ -101,29 +98,19 @@
     }
     .firm-name {
         font-size: 0.9em;
-        // margin-left: 5px;
-        // margin-right: 5px;
         padding: 0 5px;
         margin: 0;
     }
 }
+
 .mat-column-substance {
     max-width: 9%;
-    // text-transform: lowercase;
     align-self: stretch;
     padding-top: 10px;
     // padding: 10px 5px;
     // color: #3E2723;
     border-right: 1px solid rgb(255, 255, 255);
 }
-// .mat-cell {
-//     border: 1px solid rgba(0, 0, 0, 0.321);
-// }
-  
-// .mat-column-dose {
-//     // padding-top: 15px;
-//     // min-width: 70%;
-// }
 
 .mat-column-category {
     max-width: 7%;
@@ -180,15 +167,11 @@ table {
         .crops {
             width: 20%;
         }
-        // .disease {
-        //     // width: 60%;
-        // }
         .more_info {
             width: 3%;
             font-size: 0.8em;
             padding: 0;
             .mat-button {
-                // min-width: 0;
                 line-height: 30px;
                 padding: 0;
                 margin: 0;
@@ -216,7 +199,6 @@ table {
         }
     }
 }
-
 
 /* ##Device = Desktops ##Screen = 1281px to higher resolution desktops */
 @media (min-width: 1201px) {}
@@ -281,9 +263,9 @@ table {
             .crops {
                 width: 30%;
             }
-            .more_info {
-                width: initial;
-            }
+            // .more_info {
+            //     width: initial;
+            // }
         }
     }
 }
@@ -341,14 +323,10 @@ table {
     .mat-column-name {
         min-width: 35%;
     }
-    // .mat-column-dose {
-    //     max-width: 67%;
-    // }
     .firm-name {
         display: none;
     }
     table {
-        // width: 98%;
         tr {
             .dose {
                 display: none;
@@ -383,13 +361,12 @@ table {
         display: none;
     }
     .mat-column-name {
-        min-width: 35%;
+        min-width: 36%;
     }
     .firm-name {
         display: none;
     }
     table {
-        // width: 80%;
         tr {
             .dose {
                 display: none;

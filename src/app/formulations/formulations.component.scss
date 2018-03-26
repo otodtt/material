@@ -51,6 +51,7 @@
 }
 
 table {
+    width: 100%;
     tr {
         .position {
             text-align: right;
@@ -109,6 +110,9 @@ table {
     .container {
         width: 100%;
         table {
+            .position {
+                display: none;
+            }
             .latin {
                 display: none;
             }

@@ -1,4 +1,6 @@
-import {Component, OnInit, ViewChild, AfterViewInit, AnimationKeyframesSequenceMetadata} from '@angular/core';
+import {Component, OnInit, ViewChild, AfterViewInit, ChangeDetectorRef, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs/Subscription';
+import { MediaMatcher } from '@angular/cdk/layout';
 import {HttpClient} from '@angular/common/http';
 import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 import {Observable} from 'rxjs/Observable';
@@ -15,6 +17,7 @@ import { MoreInfoDialogComponent } from '../../shared/more-info-dialog/more-info
 
 import { ChangeBreadcrumbService } from '../../../common/services/changeBreadcrumb.service';
 import { SeoService } from '../../../common/services/SeoService';
+import { ResizeService } from '../../../common/services/ResizeService';
 
 import { Product } from '../../shared/models/product.model';
 import { ProductsService } from '../../shared/services/products.service';
@@ -40,7 +43,7 @@ export class ExampleHttpDao {
     styleUrls: ['./acaricides.component.scss']
 })
 
-export class AcaricidesComponent implements OnInit, AfterViewInit {
+export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
     private title = 'ПРЗ | Акарициди';
     private description =   'Акарициди. Продуки за растителна защита за борба срещу вредни акари (Жълт лозов акар,  Обикновен ' +
                             'паяжинообразуващ акар, Доматен акар, Лозова краста, Червен овощен акар и други). ';
@@ -48,9 +51,13 @@ export class AcaricidesComponent implements OnInit, AfterViewInit {
 
     breadcrumbName = 'Акарициди';
 
-    // isLoaded = false;
-    // products: Product[] = [];
-    // subscription: Subscription;
+    mode = 'side';
+    bigQuery: MediaQueryList;
+    mediumQuery: MediaQueryList;
+    smallQuery: MediaQueryList;
+
+    private resizeSubscription: Subscription;
+    private _mobileQueryListener: () => void;
 
     displayedColumns = ['name', 'substance', 'dose', 'category'];
     exampleDatabase: ExampleHttpDao | null;
@@ -69,15 +76,44 @@ export class AcaricidesComponent implements OnInit, AfterViewInit {
         private productsService: ProductsService,
         private http: HttpClient,
         public dialog: MatDialog,
+        private resizeService: ResizeService,
+        changeDetectorRef: ChangeDetectorRef,
+        media: MediaMatcher,
     ) {
         this.seoService.addTitle(this.title);
         this.seoService.setMeta(this.description, this.keywords);
-        // this.subscription = this.productsService.getProducts('products/acaricides')
-        //   .subscribe((products: Product[]) => {
-        //       this.products = products;
-        //       this.dataSource = new MatTableDataSource(products);
-        //   });
-        // console.log(this.dataSource);
+        this._mobileQueryListener = () => changeDetectorRef.detectChanges();
+        this.bigQuery = media.matchMedia('(max-width: 850px)');
+        this.bigQuery.addListener(this._mobileQueryListener);
+
+        this.mediumQuery = media.matchMedia('(max-width: 768px)');
+        this.mediumQuery.addListener(this._mobileQueryListener);
+
+        this.smallQuery = media.matchMedia('(max-width: 481px)');
+        this.smallQuery.addListener(this._mobileQueryListener);
+
+        if (
+            this.bigQuery.matches === true &&
+            this.mediumQuery.matches === false &&
+            this.smallQuery.matches === false
+        ) {
+            this.mode = '60%';
+        }
+        if (
+            this.bigQuery.matches === true &&
+            this.mediumQuery.matches === true &&
+            this.smallQuery.matches === false
+        ) {
+            this.mode = '80%';
+        }
+        if (
+            this.bigQuery.matches === true &&
+            this.mediumQuery.matches === true &&
+            this.smallQuery.matches === true
+        ) {
+            this.mode = '';
+        }
+        console.log(this.mode);
     }
 
     ngOnInit() {
@@ -102,8 +138,7 @@ export class AcaricidesComponent implements OnInit, AfterViewInit {
                 this.isLoadingResults = false;
                 this.isRateLimitReached = false;
                 this.resultsLength = data.length;
-                // console.log(data);
-                // console.log(this.resultsLength);
+
                 return data;
             }),
             catchError(() => {
@@ -113,11 +148,23 @@ export class AcaricidesComponent implements OnInit, AfterViewInit {
                 return observableOf([]);
             })
         ).subscribe(data => this.dataSource.data = data);
-        // console.log(this.dataSource);
     }
 
     ngAfterViewInit() {
         this.dataSource.paginator = this.paginator;
+        this.resizeSubscription = this.resizeService.onResize$
+        .subscribe(size => {
+            if (size.innerWidth > 768) {
+                this.mode = '60%';
+            }
+            if (size.innerWidth < 768) {
+                this.mode = '80%';
+            }
+            if (size.innerWidth < 481) {
+                this.mode = '';
+            }
+        });
+        console.log(this.mode);
     }
 
     applyFilter(filterValue: string) {
@@ -127,15 +174,23 @@ export class AcaricidesComponent implements OnInit, AfterViewInit {
     }
 
     openDialog(name: any, info: any) {
-        let dialogRef = this.dialog.open(MoreInfoDialogComponent, {
-            // position: {right: ''},
+        const dialogRef = this.dialog.open(MoreInfoDialogComponent, {
             data: { product: name, data: info},
-            // width: '60%'
+            width: this.mode
         });
 
         dialogRef.afterClosed().subscribe(result => {
             console.log('The dialog was closed');
-            console.log(result);
+            console.log(this.mode);
         });
+    }
+
+    ngOnDestroy() {
+        this.bigQuery.removeListener(this._mobileQueryListener);
+        this.mediumQuery.removeListener(this._mobileQueryListener);
+        this.smallQuery.removeListener(this._mobileQueryListener);
+        if (this.resizeSubscription) {
+            this.resizeSubscription.unsubscribe();
+        }
     }
 }

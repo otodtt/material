@@ -20,18 +20,6 @@ p {
 hr {
     border-color: rgba(0, 0, 0, 0.1);
 }
-// .td_span {
-//     -webkit-margin-before: .3em;
-//     -webkit-margin-after: .3em;
-//     -webkit-margin-start: 0px;
-//     -webkit-margin-end: 0px;
-// }
-// .p_dose {
-//     -webkit-margin-before: .8em;
-//     -webkit-margin-after: .8em;
-//     -webkit-margin-start: 0px;
-//     -webkit-margin-end: 0px;
-// }
 
 .dialog-header {
     background: #638b34;
@@ -40,20 +28,27 @@ hr {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 8px;
-    // margin-right: 15px;
+    text-align: center; 
     h2 {
-        margin: 0 auto;
+        margin: 0;
+        width: 100%;
+        font-size: 1em;
+    }
+    .firm-name {
+        margin: 0;
+        font-size: 0.8em;
+        color: rgba(0, 0, 0, 0.7);
+        width: 100%;
     }
 }
 
 .example-card {
-    // margin: 0 auto;
     margin-bottom: 10px;
     background: rgba(133, 133, 133, 0.1);
 }
 .example-spacer {
     flex: 1 1 auto;
 }
-// .card-top {
-//     margin-bottom: 10px;
-// }
+.mat-raised-button {
+    margin-bottom: 10px;
+}

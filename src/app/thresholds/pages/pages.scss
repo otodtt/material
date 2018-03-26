@@ -72,6 +72,9 @@ h2, h3, h4 {
 .piv_table tbody tr .middle-first {
     text-align: center;
 }
+.hide {
+    display: none;
+}
 
 .my-tab-label {
     color: rgb(0, 0, 0) !important;
@@ -119,6 +122,12 @@ h2, h3, h4 {
     }
     .piv_table tbody {
         font-size: 0.8em
+    }
+    .hide {
+        display: inline-block;
+    }
+    .show {
+        display: none;
     }
 }
 

@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter, ChangeDetectorRef, OnDestroy, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, OnDestroy, AfterViewInit } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { MatDialog } from '@angular/material';
@@ -85,5 +85,3 @@ export class ThresholdsComponent implements OnInit, OnDestroy, AfterViewInit {
         }
     }
 }
-
-
