@@ -23,19 +23,13 @@ import { Product } from '../../shared/models/product.model';
 import { ProductsService } from '../../shared/services/products.service';
 
 
-export class ExampleHttpDao {
+export class TableFromDatabase {
     constructor(private productsService: ProductsService) { }
-
-    getRepoIssues(sort: string, order: string): Observable<Product[]> {
-
-        // console.log(`products/acaricides&sort=${sort}&order=${order}&page=${page + 1}`);
-        console.log(`products/acaricides?sort=${sort}&order=${order}`);
-        // return this.productsService.getProducts(`products/acaricides?sort=${sort}&order=${order}&page=${page + 1}`);
-        return this.productsService.getProducts(`products/acaricides?sort=${sort}&order=${order}`);
+    getRepoIssues(): Observable<Product[]> {
+        return this.productsService.getProducts(`products/acaricides`);
     }
     disconnect() {}
 }
-
 
 @Component({
     selector: 'prz-acaricides',
@@ -60,7 +54,7 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
     private _mobileQueryListener: () => void;
 
     displayedColumns = ['name', 'substance', 'dose', 'category'];
-    exampleDatabase: ExampleHttpDao | null;
+    exampleDatabase: TableFromDatabase | null;
     dataSource = new MatTableDataSource();
 
     resultsLength = 0;
@@ -113,25 +107,19 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
         ) {
             this.mode = '';
         }
-        console.log(this.mode);
     }
 
     ngOnInit() {
         this.changeBreadcrumb.emitName(this.breadcrumbName);
 
-        this.exampleDatabase = new ExampleHttpDao(this.productsService);
+        this.exampleDatabase = new TableFromDatabase(this.productsService);
 
-        // If the user changes the sort order, reset back to the first page.
-        this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
-
-        merge(this.sort.sortChange, this.paginator.page)
+        merge()
         .pipe(
             startWith({}),
             switchMap(() => {
             this.isLoadingResults = true;
-            return this.exampleDatabase.getRepoIssues(
-                // this.sort.active, this.sort.direction, this.paginator.pageIndex);
-                this.sort.active, this.sort.direction);
+            return this.exampleDatabase.getRepoIssues();
             }),
             map(data => {
                 // Flip flag to show that loading has finished.
@@ -143,7 +131,6 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
             }),
             catchError(() => {
                 this.isLoadingResults = false;
-                // Catch if the GitHub API has reached its rate limit. Return empty data.
                 this.isRateLimitReached = true;
                 return observableOf([]);
             })
@@ -152,6 +139,8 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
 
     ngAfterViewInit() {
         this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
+
         this.resizeSubscription = this.resizeService.onResize$
         .subscribe(size => {
             if (size.innerWidth > 768) {

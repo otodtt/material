@@ -19,15 +19,15 @@
             </div>
             
             <mat-table #table [dataSource]="dataSource" class="example-table"
-                        matSort matSortActive="created" matSortDisableClear matSortDirection="asc">
+                        matSort matSortActive="name" matSortDisableClear matSortDirection="asc">
     
                 <!-- NAME Column -->
                 <ng-container matColumnDef="name">
                     <mat-header-cell *matHeaderCellDef
                                     mat-sort-header
                                     disableClear="true">
-                        <i class="material-icons name-sort-icon">&#xE053;</i>&nbsp;
-                        <span>Продукт</span>
+                        <!-- <i class="material-icons name-sort-icon">&#xE053;</i>&nbsp; -->
+                        <span class="product-span">Продукт</span>
                     </mat-header-cell>
                     <mat-cell *matCellDef="let row">
                             <a matLine [routerLink]="[row.id]" matTooltip="Подробно за продукта">
