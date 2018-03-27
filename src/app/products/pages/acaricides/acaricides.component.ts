@@ -10,7 +10,6 @@ import {catchError} from 'rxjs/operators/catchError';
 import {map} from 'rxjs/operators/map';
 import {startWith} from 'rxjs/operators/startWith';
 import {switchMap} from 'rxjs/operators/switchMap';
-import {animate, state, style, transition, trigger} from '@angular/animations';
 
 import { MatDialog } from '@angular/material';
 import { MoreInfoDialogComponent } from '../../shared/more-info-dialog/more-info-dialog.component';
