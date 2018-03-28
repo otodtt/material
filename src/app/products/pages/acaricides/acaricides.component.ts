@@ -33,7 +33,6 @@ export class TableFromDatabase {
 }
 
 @Component({
-    // selector: 'prz-acaricides',
     templateUrl: './acaricides.component.html',
     styleUrls: ['./acaricides.component.scss']
 })
@@ -128,8 +127,8 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
         .pipe(
             startWith({}),
             switchMap(() => {
-            this.isLoadingResults = true;
-            return this.exampleDatabase.getRepoIssues();
+                this.isLoadingResults = true;
+                return this.exampleDatabase.getRepoIssues();
             }),
             map(data => {
                 // Flip flag to show that loading has finished.

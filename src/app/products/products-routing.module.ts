@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+
 import { ProductsComponent } from './products.component';
 import { AcaricidesComponent } from './pages/acaricides/acaricides.component';
 import { AcaricideDetailComponent } from './pages/acaricides/acaricide-detail/acaricide-detail.component';

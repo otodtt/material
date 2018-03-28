@@ -13,8 +13,6 @@ import { Product } from '../models/product.model';
 
 export class ProductsService extends BaseApi {
 
-    // private serviceUrl = 'http://drzp.tmp/products/acaricides';
-
     constructor(public http: HttpClient) {
         super(http);
     }
@@ -24,9 +22,9 @@ export class ProductsService extends BaseApi {
         return this.get(param);
     }
 
-    // getUser(): Observable<Product[]> {
-    //     return this.http.get<Product[]>(this.serviceUrl);
-    // }
+    findProductById(url: string, id: string): Observable<Product> {
+        return this.getById(url, id);
+    }
 
 }
 
