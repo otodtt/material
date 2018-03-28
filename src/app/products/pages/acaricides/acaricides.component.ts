@@ -10,6 +10,8 @@ import {catchError} from 'rxjs/operators/catchError';
 import {map} from 'rxjs/operators/map';
 import {startWith} from 'rxjs/operators/startWith';
 import {switchMap} from 'rxjs/operators/switchMap';
+import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 import { MatDialog } from '@angular/material';
 import { MoreInfoDialogComponent } from '../../shared/more-info-dialog/more-info-dialog.component';
@@ -31,7 +33,7 @@ export class TableFromDatabase {
 }
 
 @Component({
-    selector: 'prz-acaricides',
+    // selector: 'prz-acaricides',
     templateUrl: './acaricides.component.html',
     styleUrls: ['./acaricides.component.scss']
 })
@@ -72,6 +74,8 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
         private resizeService: ResizeService,
         changeDetectorRef: ChangeDetectorRef,
         media: MediaMatcher,
+        private route: ActivatedRoute,
+        private router: Router
     ) {
         this.seoService.addTitle(this.title);
         this.seoService.setMeta(this.description, this.keywords);
@@ -159,7 +163,6 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
                 this.mode = '';
             }
         });
-        console.log(this.mode);
     }
 
     applyFilter(filterValue: string) {
@@ -175,8 +178,7 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
         });
 
         dialogRef.afterClosed().subscribe(result => {
-            console.log('The dialog was closed');
-            console.log(this.mode);
+            this.router.navigate(['acaricides/' + result]);
         });
     }
 

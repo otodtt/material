@@ -18,6 +18,7 @@ import { getBulgarianPaginatorIntl } from './shared/services/CustomPaginator';
 import { AcaricidesComponent } from './pages/acaricides/acaricides.component';
 import { InsecticidesComponent } from './pages/insecticides/insecticides.component';
 import { MoreInfoDialogComponent } from './shared/more-info-dialog/more-info-dialog.component';
+import { AcaricideDetailComponent } from './pages/acaricides/acaricide-detail/acaricide-detail.component';
 
 @NgModule({
     imports: [
@@ -31,7 +32,8 @@ import { MoreInfoDialogComponent } from './shared/more-info-dialog/more-info-dia
     declarations: [
         AcaricidesComponent,
         InsecticidesComponent,
-        MoreInfoDialogComponent
+        MoreInfoDialogComponent,
+        AcaricideDetailComponent
     ],
     providers: [
         ProductsRoutingModule,

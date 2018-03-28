@@ -11,9 +11,7 @@ export class MoreInfoDialogComponent {
     constructor(
         public dialogRef: MatDialogRef<MoreInfoDialogComponent>,
         @Inject(MAT_DIALOG_DATA) public data: any
-    ) {
-        console.log(this.data);
-    }
+    ) {}
 
     onNoClick(): void {
         this.dialogRef.close();
