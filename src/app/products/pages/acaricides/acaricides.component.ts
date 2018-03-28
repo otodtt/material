@@ -44,7 +44,7 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
 
     breadcrumbName = 'Акарициди';
 
-    mode = 'side';
+    mode = '';
     bigQuery: MediaQueryList;
     mediumQuery: MediaQueryList;
     smallQuery: MediaQueryList;
@@ -85,6 +85,13 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
         this.smallQuery = media.matchMedia('(max-width: 481px)');
         this.smallQuery.addListener(this._mobileQueryListener);
 
+        if (
+            this.bigQuery.matches === false &&
+            this.mediumQuery.matches === false &&
+            this.smallQuery.matches === false
+        ) {
+            this.mode = '60%';
+        }
         if (
             this.bigQuery.matches === true &&
             this.mediumQuery.matches === false &&
