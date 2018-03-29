@@ -10,8 +10,6 @@ import {catchError} from 'rxjs/operators/catchError';
 import {map} from 'rxjs/operators/map';
 import {startWith} from 'rxjs/operators/startWith';
 import {switchMap} from 'rxjs/operators/switchMap';
-import { ActivatedRoute } from '@angular/router';
-import { Router } from '@angular/router';
 
 import { MatDialog } from '@angular/material';
 import { MoreInfoDialogComponent } from '../../shared/more-info-dialog/more-info-dialog.component';
@@ -72,12 +70,11 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
         public dialog: MatDialog,
         private resizeService: ResizeService,
         changeDetectorRef: ChangeDetectorRef,
-        media: MediaMatcher,
-        private route: ActivatedRoute,
-        private router: Router
+        media: MediaMatcher
     ) {
         this.seoService.addTitle(this.title);
         this.seoService.setMeta(this.description, this.keywords);
+
         this._mobileQueryListener = () => changeDetectorRef.detectChanges();
         this.bigQuery = media.matchMedia('(max-width: 850px)');
         this.bigQuery.addListener(this._mobileQueryListener);
@@ -174,10 +171,6 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
         const dialogRef = this.dialog.open(MoreInfoDialogComponent, {
             data: { product: name, data: info},
             width: this.mode
-        });
-
-        dialogRef.afterClosed().subscribe(result => {
-            this.router.navigate(['acaricides/' + result]);
         });
     }
 

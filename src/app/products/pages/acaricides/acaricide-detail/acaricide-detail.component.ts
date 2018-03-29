@@ -1,16 +1,12 @@
 import { catchError } from 'rxjs/operators/catchError';
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute} from "@angular/router";
+import { ActivatedRoute, Router} from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 
-// import {of as observableOf} from 'rxjs/observable/of';
-// import {merge} from 'rxjs/observable/merge';
-// import {map} from 'rxjs/operators/map';
-// import {startWith} from 'rxjs/operators/startWith';
-// import {switchMap} from 'rxjs/operators/switchMap';
+import { ChangeBreadcrumbService } from '../../../../common/services/changeBreadcrumb.service';
+import { SeoService } from '../../../../common/services/SeoService';
+import { ResizeService } from '../../../../common/services/ResizeService';
 
-
-// import { Product } from '../../../shared/models/product.model';
 import { Product } from '../../../shared/models/product.model';
 import { ProductsService } from '../../../shared/services/products.service';
 
@@ -20,15 +16,21 @@ import { ProductsService } from '../../../shared/services/products.service';
 })
 export class AcaricideDetailComponent implements OnInit, OnDestroy {
 
+    private keywords = 'акарициди, продуки, растителна, защита, култури, растителнозащитни, пракатики';
+
     product: Product;
     subscription: Subscription;
 
-    isLoadingResults = true;
-    isRateLimitReached = false;
+    isLoadingResults = false;
+
+    step = 0;
 
     constructor(
+        private changeBreadcrumb: ChangeBreadcrumbService,
+        private seoService: SeoService,
+        private productsService: ProductsService,
         private activatedRoute: ActivatedRoute,
-        private productsService: ProductsService
+        private router: Router
     ) {}
 
     ngOnInit() {
@@ -36,9 +38,29 @@ export class AcaricideDetailComponent implements OnInit, OnDestroy {
 
         this.subscription = this.productsService.findProductById('products/acaricides', id)
         .subscribe((product: Product) => {
-            this.product = product;
-            console.log(this.product);
+            this.product = product[0];
+            if (product[0].length === 0) {
+                this.router.navigate(['acaricides']);
+            } else {
+                this.seoService.addTitle('ПРЗ | ' + product[0].name + ' - ' + product[0].pesticide);
+                this.seoService.setMeta(product[0].pestDescription, this.keywords);
+                this.changeBreadcrumb.emitName(product[0].name);
+                this.isLoadingResults = true;
+                console.log(product);
+            }
         });
+    }
+
+    setStep(index: number) {
+        this.step = index;
+    }
+
+    nextStep() {
+        this.step++;
+    }
+
+    prevStep() {
+        this.step--;
     }
 
     ngOnDestroy() {

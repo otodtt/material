@@ -52,6 +52,6 @@
     <button mat-raised-button 
         color="primary"
         matTooltip="Подробно за Продукта!"
-        [mat-dialog-close]="data.product.id" cdkFocusInitial>>> {{ data.product.name }}
+        (click)="onClickNavigate(data.product.id)">{{ data.product.name }}
     </button>
 </mat-dialog-actions>
