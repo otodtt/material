@@ -62,31 +62,39 @@
                         <mat-card-title>РАЗРЕШЕН ЗА УПОТРЕБА ПРИ:</mat-card-title>
                     </mat-card-header>
                     <mat-accordion class="example-headers-align">
-                        <mat-expansion-panel 
-                            *ngFor="let dose of product.doses; let i = index"
-                            [expanded]="step === i" 
-                            hideToggle="false"
-                            role="button"
-                            (opened)="setStep(i)">
-                            <mat-expansion-panel-header>
-                                <mat-panel-title>{{ dose.crop }}</mat-panel-title>
-                                <mat-panel-description>
-                                    <span *ngIf="dose.crop === null">подробно</span>
-                                </mat-panel-description>
-                            </mat-expansion-panel-header>
-                            <mat-form-field>
-                                <input matInput placeholder="First name">
-                            </mat-form-field>
-                            
-                            <mat-form-field>
-                                <input matInput placeholder="Age">
-                            </mat-form-field>
-                            <mat-action-row>
-                                <button mat-button *ngIf="i !== 0" color="warn" (click)="prevStep()">Предишна</button>
-                                <button *ngIf="product.doses?.length !== i+1" mat-button color="primary" (click)="nextStep()">Следваща</button>
-                                <button *ngIf="product.doses?.length == i+1" mat-button color="primary" (click)="nextStep()">Край</button>
-                            </mat-action-row>
-                        </mat-expansion-panel>
+                        <div class="wrap-expansion"
+                            *ngFor="let dose of product.doses; let i = index; let isOdd=odd; let isEven=even" 
+                            [class.odd]="isOdd" 
+                            [class.even]="isEven" 
+                        >
+                            <p>{{ dose.crop }}</p>
+                            <mat-expansion-panel 
+                                [expanded]="step === i" 
+                                hideToggle="false"
+                                role="button"
+                                (opened)="setStep(i)">
+                                <mat-expansion-panel-header>
+                                    <!-- <mat-panel-title>{{ dose.crop }}</mat-panel-title> -->
+                                    <mat-panel-title>подробно</mat-panel-title>
+                                    <!-- <mat-panel-description>
+                                        <span *ngIf="dose.crop === null">подробно</span>
+                                    </mat-panel-description> -->
+                                </mat-expansion-panel-header>
+                                <mat-form-field>
+                                    <input matInput placeholder="First name">
+                                </mat-form-field>
+                                
+                                <mat-form-field>
+                                    <input matInput placeholder="Age">
+                                </mat-form-field>
+                                <mat-action-row>
+                                    <button mat-button *ngIf="i !== 0" color="warn" (click)="prevStep()">Предишна</button>
+                                    <button *ngIf="product.doses?.length !== i+1" mat-button color="primary" (click)="nextStep()">Следваща</button>
+                                    <button *ngIf="product.doses?.length == i+1" mat-button color="primary" (click)="nextStep()">Край</button>
+                                </mat-action-row>
+                            </mat-expansion-panel>
+                        </div>
+                        
 
                         <!-- <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle="true">
                             <mat-expansion-panel-header>
