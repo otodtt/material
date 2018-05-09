@@ -10,8 +10,8 @@
                     <h1 *ngIf="product.moreNames !== null">{{ product.name }} / {{ product.moreNames }}</h1>
                     <mat-card class="example-card">
                         <mat-card-content>
-                            <div id="table">
-                                <div class="tr">
+                            <!-- <div id="table"> -->
+                                <!-- <div class="tr"> -->
                                     <div class="td">
                                         <ul>
                                             <li>
@@ -23,8 +23,7 @@
                                             <li><strong>Валидно до:</strong> {{ product.valid }}</li>
                                             <li *ngIf="product.period !== null"><strong>Забележка:</strong> {{ product.period }}</li>
                                         </ul>
-                                    </div>
-                                    <div class="td">
+                                        <hr>
                                         <ul>
                                             <li>
                                                 <table>
@@ -49,8 +48,33 @@
                                             <li><strong>LD:</strong> {{ product.lethal }}</li>
                                         </ul>
                                     </div>
-                                </div>
-                            </div>
+                                    <!-- <div class="td">
+                                        <ul>
+                                            <li>
+                                                <table>
+                                                    <tr>
+                                                        <td><strong>Активно вещество:</strong></td>
+                                                        <td>
+                                                            <ul>
+                                                                <li *ngFor="let substance of product.pestsubstanse">
+                                                                    <a href="" >
+                                                                        {{ substance.quantity }} {{ substance.name }} {{ substance.quantityAfter }} 
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </li>
+                                            <li><strong>Формулация:</strong> {{ product.type }}</li>
+                                            <li *ngIf="product.category == 1"><strong>Категория на употреба:</strong> Първа професионална</li>
+                                            <li *ngIf="product.category == 2"><strong>Категория на употреба:</strong> Втора професионална</li>
+                                            <li *ngIf="product.category == 3"><strong>Категория на употреба:</strong> Непрофесионална</li>
+                                            <li><strong>LD:</strong> {{ product.lethal }}</li>
+                                        </ul>
+                                    </div> -->
+                                <!-- </div> -->
+                            <!-- </div> -->
                         </mat-card-content>
                     </mat-card>
                 </div>
