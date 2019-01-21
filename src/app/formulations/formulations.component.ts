@@ -13,20 +13,12 @@ export class FormulationsComponent implements OnInit {
 
     private title = 'ПРЗ | Формулации';
     private description = 'Формулации. Списък на означения за използваните в Република Българя формулации';
-    // private keywords = 'формулации, продуки, растителна, защита, култури, растителнозащитни, пракатики';
     private keywords = '';
 
-
-
-    // breadcrumbTitle = 'ФОРМУЛАЦИИ';
     breadcrumbName = 'Формулации';
     table = [];
 
-    // displayedColumns = ['position', 'symbol', 'latin', 'name' ];
-    // displayedColumns = ['symbol', 'latin', 'name' ];
-    // dataSource = new MatTableDataSource(ELEMENT_DATA);
-
-    constructor( 
+    constructor(
         private changeBreadcrumb: ChangeBreadcrumbService,
         private seoService: SeoService,
     ) {
@@ -36,24 +28,10 @@ export class FormulationsComponent implements OnInit {
     }
 
     ngOnInit() {
-        // this.changeBreadcrumb.emitTitle(this.breadcrumbTitle);
         this.changeBreadcrumb.emitName(this.breadcrumbName);
         this.changeBreadcrumb.emitId(this.headerId);
     }
-
-    // applyFilter(filterValue: string) {
-    //     filterValue = filterValue.trim();
-    //     filterValue = filterValue.toLowerCase();
-    //     this.dataSource.filter = filterValue;
-    // }
 }
-
-// export interface Element {
-//     // position: number;
-//     symbol: string;
-//     latin: string;
-//     name: string;
-// }
 
 // const ELEMENT_DATA: Element[] = [
 const tableData = [
