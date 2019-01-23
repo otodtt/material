@@ -26,9 +26,13 @@ $gray: rgb(100, 100, 100);
     color: $white;
     font-size: 14px;
 }
+.mat-list-base .mat-list-item {
+    width: initial !important;
+}
 .nav-list {
     float: left;
     position: relative;
+    
     .mat-icon-button {
         width: 20px;
         flex-shrink: initial;
