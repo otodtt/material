@@ -1,39 +1,10 @@
 .example-container {
     display: flex;
     flex-direction: column;
-    // max-height: 500px;
     min-width: 300px;
-    // width: 85%;
     margin: 0 auto;
     margin-bottom: 20px;
 }
-
-// .example-header {
-//     // min-height: 64px;
-//     padding: 8px 24px 0;
-// }
-  
-// .mat-form-field {
-//     font-size: 14px;
-//     width: 100%;
-// }
-
-// .mat-table {
-//     overflow: auto;
-//     // margin-bottom: 20px;
-//     // max-height: 500px;
-// }
-// .mat-header-row {
-//     min-height: 0;
-// }
-
-// // .mat-column-position {
-// //     max-width: 5%;
-// // }
-// .mat-column-symbol, .mat-column-latin {
-//     max-width: 15%;
-//     min-width: 15%;
-// }
 
 .container {
     width: 95%;
@@ -68,12 +39,6 @@ table {
         background-color:#DCEDC8;
     }
 }
-// .mat-row:nth-child(2n+1){
-//     background: #DCEDC8;
-// }
-// .mat-row:nth-child(2n){
-//     background-color: #C5E1A5
-// }
 
 /* ##Device = Desktops ##Screen = 1281px to higher resolution desktops */
 @media (min-width: 1281px) {}

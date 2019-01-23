@@ -1,6 +1,6 @@
 import { Component, Output, EventEmitter, AfterViewInit } from '@angular/core';
 
-// Services
+/** Services */
 import { ChangeBreadcrumbService } from '../../common/services/changeBreadcrumb.service';
 
 import pages from '../Pages';

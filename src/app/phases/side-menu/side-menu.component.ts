@@ -37,13 +37,14 @@ export class SideMenuComponent implements OnInit, AfterViewInit, OnDestroy  {
         private resizeService: ResizeService,
         changeDetectorRef: ChangeDetectorRef,
         media: MediaMatcher,
-        private router: Router, private activatedRoute: ActivatedRoute
+        private activatedRoute: ActivatedRoute
     ) {
         this._mobileQueryListener = () => changeDetectorRef.detectChanges();
         this.openedQuery = media.matchMedia('(max-width: 850px)');
         this.openedQuery.addListener(this._mobileQueryListener);
 
         const pathUrl = this.activatedRoute.snapshot.firstChild.url[0].path;
+        console.log(pathUrl);
 
         this.pages.forEach( item => {
             if (item.link === pathUrl) {
@@ -110,4 +111,3 @@ export class SideMenuComponent implements OnInit, AfterViewInit, OnDestroy  {
         }
     }
 }
-

@@ -23,7 +23,6 @@ export class ScrollButtonComponent implements OnInit {
     scrollToTop() {
         this.el.nativeElement.getBoundingClientRect();
         window.scrollTo({ left: 0, top: 0 });
-        // window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
     }
 
 }

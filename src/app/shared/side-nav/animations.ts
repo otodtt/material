@@ -1,14 +1,5 @@
 import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
 
-
-// export const MenuButtonAnimation = trigger('menuState', [
-//     state('hide', style({ transform: 'rotate(0)' })),
-//     state('show', style({ transform: 'rotate(-180deg)' })),
-//     transition('hide => show', [style({transform: 'rotate(-360deg)'}), animate('350ms ease-out')]),
-//     transition('show => hide', animate('350ms ease-in'))
-// ]);
-
-
 export const MenuButtonAnimation = trigger('rotatedState', [
     state('default', style({
         transform: 'translateX(0)',
@@ -18,7 +9,6 @@ export const MenuButtonAnimation = trigger('rotatedState', [
     state('hidden', style({
         transform: 'translateX(-120%)',
         opacity: 0,
-        // position: 'absolute',
         display: 'none'
     })),
     // ==========
@@ -78,7 +68,6 @@ export const MenuButtonAnimation = trigger('rotatedState', [
             opacity: 1,
         }),
     ]))),
-
 
     /*
         RETURN DEFAULT

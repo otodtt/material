@@ -5,7 +5,7 @@ import { Subscription } from 'rxjs/Subscription';
 
 import { ChangeBreadcrumbService } from '../../../../common/services/changeBreadcrumb.service';
 import { SeoService } from '../../../../common/services/SeoService';
-import { ResizeService } from '../../../../common/services/ResizeService';
+// import { ResizeService } from '../../../../common/services/ResizeService';
 
 import { Product } from '../../../shared/models/product.model';
 import { ProductsService } from '../../../shared/services/products.service';
@@ -46,7 +46,7 @@ export class AcaricideDetailComponent implements OnInit, OnDestroy {
                 this.seoService.setMeta(product[0].pestDescription, this.keywords);
                 this.changeBreadcrumb.emitName(product[0].name);
                 this.isLoadingResults = true;
-                console.log(product);
+                // console.log(product);
             }
         });
     }

@@ -3,23 +3,23 @@ import { CommonModule } from '@angular/common';
 import { LazyLoadModule } from '@greg-md/ng-lazy-load';
 
 
-// Routing
+/** Routing */
 import { PracticesRoutingModul } from './practices-routing.module';
 
-// Services
+/** Services */
 import { PracticesService } from './practices/shared/services/practices.services';
 
-// Directives and Pipes
+/** Directives and Pipes */
 import { AnchorToDirective } from '../common/directives/AnchorToDirective';
 
-// Header and Footer Module
+/** Header and Footer Module */
 import { ShareComponentsModule } from '../common/share.components.module';
 import { MaterialModule } from '../common/material/material.module';
 
-// Shared
+/** Shared */
 import { DialogComponent } from './practices/shared/dialog/dialog.component';
 
-// Practices
+/** Practices */
 import { PracticesComponent } from './practices/practices.component';
 import { SideMenuComponent } from './practices/side-menu/side-menu.component';
 import { IntroductionComponent } from './practices/introduction/introduction.component';
@@ -60,9 +60,6 @@ import { RubusComponent } from './practices/pages/strawberry/rubus/rubus.compone
 import { NigrumComponent } from './practices/pages/strawberry/nigrum/nigrum.component';
 import { VitisComponent } from './practices/pages/vitis/vitis.component';
 
-// Management
-import { ManagementComponent } from './management/management/management.component';
-
 
 @NgModule({
     imports: [
@@ -78,7 +75,6 @@ import { ManagementComponent } from './management/management/management.componen
         PracticesComponent,
         IntroductionComponent,
         SideMenuComponent,
-        ManagementComponent,
         TriticumComponent,
         HordeumComponent,
         AvenaComponent,

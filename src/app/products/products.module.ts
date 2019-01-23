@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-// Routing
+/** Routing */
 import { ProductsRoutingModule } from './products-routing.module';
 
-// Services
+/** Services */
 import { ProductsService } from './shared/services/products.service';
 
-// Header and Footer Module
+/** Header and Footer Module */
 import { ShareComponentsModule } from '../common/share.components.module';
 import { MaterialModule } from '../common/material/material.module';
 

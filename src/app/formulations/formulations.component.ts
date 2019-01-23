@@ -1,39 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {MatTableDataSource} from '@angular/material';
 
 import { ChangeBreadcrumbService } from '../common/services/changeBreadcrumb.service';
 import { SeoService } from '../common/services/SeoService';
 
-@Component({
-      templateUrl: './formulations.component.html',
-      styleUrls: ['./formulations.component.scss']
-})
-export class FormulationsComponent implements OnInit {
-    headerId = 'aa-documents';
-
-    private title = 'ПРЗ | Формулации';
-    private description = 'Формулации. Списък на означения за използваните в Република Българя формулации';
-    private keywords = '';
-
-    breadcrumbName = 'Формулации';
-    table = [];
-
-    constructor(
-        private changeBreadcrumb: ChangeBreadcrumbService,
-        private seoService: SeoService,
-    ) {
-        this.seoService.addTitle(this.title);
-        this.seoService.setMeta(this.description, this.keywords);
-        this.table = tableData;
-    }
-
-    ngOnInit() {
-        this.changeBreadcrumb.emitName(this.breadcrumbName);
-        this.changeBreadcrumb.emitId(this.headerId);
-    }
-}
-
-// const ELEMENT_DATA: Element[] = [
 const tableData = [
     {position: 1, symbol: 'АБ', latin: 'AB', name: '- примамка - зърна'},
     {position: 2, symbol: 'АЕ', latin: 'AE', name: '- аерозол разпръскващ'},
@@ -120,3 +89,32 @@ const tableData = [
     {position: 83, symbol: 'ФУ', latin: 'FU', name: '- генератор за фумигация'},
     {position: 84, symbol: 'ХН', latin: 'HN', name: '- концентрат, отделящ мъгла при нагряване'}
 ];
+
+@Component({
+      templateUrl: './formulations.component.html',
+      styleUrls: ['./formulations.component.scss']
+})
+export class FormulationsComponent implements OnInit {
+    headerId = 'aa-documents';
+
+    private title = 'ПРЗ | Формулации';
+    private description = 'Формулации. Списък на означения за използваните в Република Българя формулации';
+    private keywords = '';
+
+    breadcrumbName = 'Формулации';
+    table = [];
+
+    constructor(
+        private changeBreadcrumb: ChangeBreadcrumbService,
+        private seoService: SeoService,
+    ) {
+        this.seoService.addTitle(this.title);
+        this.seoService.setMeta(this.description, this.keywords);
+        this.table = tableData;
+    }
+
+    ngOnInit() {
+        this.changeBreadcrumb.emitName(this.breadcrumbName);
+        this.changeBreadcrumb.emitId(this.headerId);
+    }
+}

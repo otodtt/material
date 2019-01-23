@@ -2,16 +2,17 @@ import { Component, OnInit, ChangeDetectorRef, OnDestroy, AfterViewInit } from '
 import { Subscription } from 'rxjs/Subscription';
 import {MediaMatcher} from '@angular/cdk/layout';
 
-import { ChangeBreadcrumbService } from '../../common/services/changeBreadcrumb.service';
-import { ResizeService } from '../../common/services/ResizeService';
+
+import { ChangeBreadcrumbService } from '../common/services/changeBreadcrumb.service';
+import { ResizeService } from '../common/services/ResizeService';
 
 @Component({
-  templateUrl: './practices.component.html',
-  styleUrls: ['./practices.component.scss']
+  templateUrl: './phases.component.html',
+  styleUrls: ['./phases.component.scss']
 })
-export class PracticesComponent implements OnInit, OnDestroy, AfterViewInit {
-    headerId = 'aa-practices';
-    breadcrumbTitle = 'ДРЗП';
+export class PhasesComponent implements OnInit, OnDestroy, AfterViewInit {
+    headerId = 'aa-management';
+    breadcrumbTitle = 'BBCH';
 
     mode = 'side';
     openedQuery: MediaQueryList;

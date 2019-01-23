@@ -20,6 +20,7 @@ import { SeoService } from './common/services/SeoService';
 import { MaterialModule } from './common/material/material.module';
 import { ShareComponentsModule } from './common/share.components.module';
 import { PracticesModule } from './practices/practices.module';
+import { PhasesModule } from './phases/phases.module';
 import { ThresholdsModule } from './thresholds/thresholds.module';
 import { ProductsModule } from './products/products.module';
 
@@ -61,6 +62,7 @@ import { FormulationsComponent } from './formulations/formulations.component';
         ShareComponentsModule,
         AppRoutingModul,
         PracticesModule,
+        PhasesModule,
         ThresholdsModule,
         ProductsModule
     ],

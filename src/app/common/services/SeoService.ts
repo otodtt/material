@@ -20,6 +20,14 @@ export class SeoService {
         ]);
     }
 
+    setNoKeywordsMeta(description: string) {
+        const attributeSelectorDescription = 'name="description"';
+        this.meta.removeTag(attributeSelectorDescription);
+        this.meta.addTags([
+            { name: 'description', content: description }
+        ]);
+    }
+
     addTitle (title: string) {
         this.title.setTitle(title);
     }

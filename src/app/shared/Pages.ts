@@ -44,8 +44,8 @@ const pages = [
             {
                 id: 1,
                 pageId: 3,
-                subName: 'интегрирано управление на вредители',
-                link: 'management'
+                subName: 'BBCH - стадии на растеж',
+                link: 'phases'
             },
             {
                 id: 2,

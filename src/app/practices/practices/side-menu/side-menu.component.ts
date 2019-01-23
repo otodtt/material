@@ -2,7 +2,6 @@ import { Component, Output, EventEmitter, OnInit, ChangeDetectorRef, AfterViewIn
 import { Subscription } from 'rxjs/Subscription';
 import {MediaMatcher} from '@angular/cdk/layout';
 import { Router, ActivatedRoute } from '@angular/router';
-import { forEach } from '@angular/router/src/utils/collection';
 
 import pages from './Pages';
 import { ChangeBreadcrumbService } from '../../../common/services/changeBreadcrumb.service';
