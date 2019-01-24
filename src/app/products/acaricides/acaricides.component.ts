@@ -44,6 +44,7 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
     breadcrumbName = 'Акарициди';
 
     mode = '';
+    private link = 'acaricides/acaricides';
     bigQuery: MediaQueryList;
     mediumQuery: MediaQueryList;
     smallQuery: MediaQueryList;
@@ -169,7 +170,7 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
 
     openDialog(name: any, info: any) {
         const dialogRef = this.dialog.open(MoreInfoDialogComponent, {
-            data: { product: name, data: info},
+            data: { product: name, data: info, link: this.link},
             width: this.mode
         });
     }

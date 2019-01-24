@@ -39,17 +39,21 @@ export class AcaricideDetailComponent implements OnInit, OnDestroy {
         this.subscription = this.productsService.findProductById('products/acaricides', id)
         .subscribe((product: Product) => {
             this.product = product[0];
-            console.log(this.product);
-            if (product[0].length === 0 || this.product[0] === 'undefined' ) {
-                // this.router.navigate(['products/acaricides']);
-                console.log(product[0].length);
+            if (product[0] === undefined ) {
+              this.router.navigate(['acaricides/acaricides']);
+                // console.log('udef');
             } else {
-                this.seoService.addTitle('ПРЗ | ' + product[0].name + ' - ' + product[0].pesticide);
-                this.seoService.setMeta(product[0].pestDescription, this.keywords);
-                this.changeBreadcrumb.emitName(product[0].name);
-                this.isLoadingResults = true;
-                console.log(product);
-                console.log(product[0].length);
+                if (product[0].length === 0 || +product[0].id !== +id) {
+                  this.router.navigate(['acaricides/acaricides']);
+                    // console.log('eleif');
+                    // console.log(product[0].length + '-->' + +id);
+                } else {
+                    this.seoService.addTitle('ПРЗ | ' + product[0].name + ' - ' + product[0].pesticide);
+                    this.seoService.setMeta(product[0].pestDescription, this.keywords);
+                    this.changeBreadcrumb.emitName(product[0].name);
+                    this.isLoadingResults = true;
+                    // console.log('yes');
+                }
             }
         });
     }

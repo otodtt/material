@@ -19,6 +19,7 @@ import { ProductsComponent } from './products.component';
 import { AcaricidesComponent } from './acaricides/acaricides.component';
 import { MoreInfoDialogComponent } from './shared/more-info-dialog/more-info-dialog.component';
 import { AcaricideDetailComponent } from './acaricides/acaricide-detail/acaricide-detail.component';
+import { InsecticidesComponent } from './insecticides/insecticides.component';
 
 @NgModule({
     imports: [
@@ -33,7 +34,8 @@ import { AcaricideDetailComponent } from './acaricides/acaricide-detail/acaricid
         AcaricidesComponent,
         ProductsComponent,
         MoreInfoDialogComponent,
-        AcaricideDetailComponent
+        AcaricideDetailComponent,
+        InsecticidesComponent
     ],
     providers: [
         ProductsService,

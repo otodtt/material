@@ -19,8 +19,8 @@ export class MoreInfoDialogComponent {
         this.dialogRef.close();
     }
 
-    onClickNavigate(id: string) {
+  onClickNavigate(id: string, link: string) {
         this.dialogRef.close();
-        this.router.navigate(['acaricides/' + id]);
+        this.router.navigate([link + '/' + id]);
     }
 }

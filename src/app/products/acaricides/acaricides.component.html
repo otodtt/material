@@ -11,16 +11,16 @@
                     Моля, презаредете страницата отново!
                 </div>
             </div>
-    
+
             <div class="example-header">
                 <mat-form-field>
                     <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Филтър">
                 </mat-form-field>
             </div>
-            
+
             <mat-table #table [dataSource]="dataSource" class="example-table"
                         matSort matSortActive="name" matSortDisableClear matSortDirection="asc">
-    
+
                 <!-- NAME Column -->
                 <ng-container matColumnDef="name">
                     <mat-header-cell *matHeaderCellDef
@@ -37,13 +37,13 @@
                             <p class="firm-name">{{ row.firmName }}</p>
                     </mat-cell>
                 </ng-container>
-    
+
                 <!-- SUBSTANCE Column -->
                 <ng-container matColumnDef="substance">
                     <mat-header-cell *matHeaderCellDef>Активно<br/>вещество</mat-header-cell>
                     <mat-cell *matCellDef="let row"><p class="cell_in">{{ row.substance | lowercase }}</p></mat-cell>
                 </ng-container>
-    
+
                 <!-- DOSE Column -->
                 <ng-container matColumnDef="dose">
                     <mat-header-cell *matHeaderCellDef><p class="header_dose">УПОТРЕБА</p></mat-header-cell>
@@ -59,9 +59,9 @@
                             </thead>
                             <tbody>
                                 <tr *ngFor="let dose of row.doses; let isOdd=odd; let isEven=even"
-                                    [class.odd]="isOdd" 
-                                    [class.even]="isEven" 
-                                > 
+                                    [class.odd]="isOdd"
+                                    [class.even]="isEven"
+                                >
                                     <td class="crops">{{dose.crop}}</td>
                                     <td class="disease">
                                         <span class="note" *ngIf="dose.note != null">{{dose.note}}<br/></span>
@@ -80,11 +80,11 @@
                         </table>
                     </mat-cell>
                 </ng-container>
-    
+
                 <!-- Number Column -->
                 <ng-container matColumnDef="category" class="dispaly_category">
-                    <mat-header-cell *matHeaderCellDef 
-                                    mat-sort-header 
+                    <mat-header-cell *matHeaderCellDef
+                                    mat-sort-header
                                     disableClear="true">
                         <i class="material-icons my-material-icons">&#xE164;</i>&nbsp;
                         <span class="category-span">Кат. на<br/>употреба</span>
@@ -93,11 +93,11 @@
                         {{ row.category }}
                     </mat-cell>
                 </ng-container>
-                
+
                 <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
                 <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
             </mat-table>
-            
+
             <mat-paginator #paginator
                             [pageSize]="5"
                             [pageSizeOptions]="[5, 10, 20]"
