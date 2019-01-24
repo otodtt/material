@@ -12,14 +12,14 @@ import {startWith} from 'rxjs/operators/startWith';
 import {switchMap} from 'rxjs/operators/switchMap';
 
 import { MatDialog } from '@angular/material';
-import { MoreInfoDialogComponent } from '../../shared/more-info-dialog/more-info-dialog.component';
+import { MoreInfoDialogComponent } from '../shared/more-info-dialog/more-info-dialog.component';
 
-import { ChangeBreadcrumbService } from '../../../common/services/changeBreadcrumb.service';
-import { SeoService } from '../../../common/services/SeoService';
-import { ResizeService } from '../../../common/services/ResizeService';
+import { ChangeBreadcrumbService } from '../../common/services/changeBreadcrumb.service';
+import { SeoService } from '../../common/services/SeoService';
+import { ResizeService } from '../../common/services/ResizeService';
 
-import { Product } from '../../shared/models/product.model';
-import { ProductsService } from '../../shared/services/products.service';
+import { Product } from '../shared/models/product.model';
+import { ProductsService } from '../shared/services/products.service';
 
 
 export class TableFromDatabase {

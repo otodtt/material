@@ -52,7 +52,6 @@ export class TriticumComponent implements OnInit, OnDestroy {
             .subscribe((practices: Practice[]) => {
                 this.practices = practices;
                 this.isLoaded = true;
-                console.log(practices);
             });
     }
 

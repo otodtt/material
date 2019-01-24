@@ -14,13 +14,13 @@ const pages = [
                 id: 0,
                 pageId: 1,
                 subName: 'Акарициди',
-                link: 'acaricides'
+                link: 'products/acaricides'
             },
             {
                 id: 1,
                 pageId: 1,
                 subName: 'Инсектициди',
-                link: 'insecticides'
+                link: 'products/insecticides'
             }
         ]
     },

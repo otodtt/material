@@ -11,14 +11,14 @@ import { ProductsService } from './shared/services/products.service';
 import { ShareComponentsModule } from '../common/share.components.module';
 import { MaterialModule } from '../common/material/material.module';
 
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule, MatPaginatorIntl } from '@angular/material';
 import { getBulgarianPaginatorIntl } from './shared/services/CustomPaginator';
 
-import { AcaricidesComponent } from './pages/acaricides/acaricides.component';
-import { InsecticidesComponent } from './pages/insecticides/insecticides.component';
+import { ProductsComponent } from './products.component';
+import { AcaricidesComponent } from './acaricides/acaricides.component';
 import { MoreInfoDialogComponent } from './shared/more-info-dialog/more-info-dialog.component';
-import { AcaricideDetailComponent } from './pages/acaricides/acaricide-detail/acaricide-detail.component';
+import { AcaricideDetailComponent } from './acaricides/acaricide-detail/acaricide-detail.component';
 
 @NgModule({
     imports: [
@@ -31,12 +31,11 @@ import { AcaricideDetailComponent } from './pages/acaricides/acaricide-detail/ac
     ],
     declarations: [
         AcaricidesComponent,
-        InsecticidesComponent,
+        ProductsComponent,
         MoreInfoDialogComponent,
         AcaricideDetailComponent
     ],
     providers: [
-        ProductsRoutingModule,
         ProductsService,
         { provide: MatPaginatorIntl, useValue: getBulgarianPaginatorIntl() }
     ],

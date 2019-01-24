@@ -3,12 +3,12 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router} from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 
-import { ChangeBreadcrumbService } from '../../../../common/services/changeBreadcrumb.service';
-import { SeoService } from '../../../../common/services/SeoService';
+import { ChangeBreadcrumbService } from '../../../common/services/changeBreadcrumb.service';
+import { SeoService } from '../../../common/services/SeoService';
 // import { ResizeService } from '../../../../common/services/ResizeService';
 
-import { Product } from '../../../shared/models/product.model';
-import { ProductsService } from '../../../shared/services/products.service';
+import { Product } from '../../shared/models/product.model';
+import { ProductsService } from '../../shared/services/products.service';
 
 @Component({
     templateUrl: './acaricide-detail.component.html',
@@ -39,14 +39,17 @@ export class AcaricideDetailComponent implements OnInit, OnDestroy {
         this.subscription = this.productsService.findProductById('products/acaricides', id)
         .subscribe((product: Product) => {
             this.product = product[0];
-            if (product[0].length === 0) {
-                this.router.navigate(['acaricides']);
+            console.log(this.product);
+            if (product[0].length === 0 || this.product[0] === 'undefined' ) {
+                // this.router.navigate(['products/acaricides']);
+                console.log(product[0].length);
             } else {
                 this.seoService.addTitle('ПРЗ | ' + product[0].name + ' - ' + product[0].pesticide);
                 this.seoService.setMeta(product[0].pestDescription, this.keywords);
                 this.changeBreadcrumb.emitName(product[0].name);
                 this.isLoadingResults = true;
-                // console.log(product);
+                console.log(product);
+                console.log(product[0].length);
             }
         });
     }

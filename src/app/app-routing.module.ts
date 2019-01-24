@@ -16,28 +16,24 @@ import { NotFoundComponent } from './shared/not-found/not-found.component';
 export const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: '', redirectTo: '/home', pathMatch: 'full' },
-    { path: 'products', loadChildren: () => ProductsModule },
+    { path: 'products', loadChildren: './products/products.module#ProductsModule' },
     { path: 'crops', component: CropsComponent },
-    { path: 'practices', loadChildren: () => PracticesModule },
-    { path: 'phases', loadChildren: () => PhasesModule },
-    { path: 'thresholds', loadChildren: () => ThresholdsModule },
+    { path: 'practices', loadChildren: './practices/practices.module#PracticesModule'},
+    { path: 'phases', loadChildren: './phases/phases.module#PhasesModule'},
+    { path: 'thresholds', loadChildren: './thresholds/thresholds.module#ThresholdsModule'},
     { path: 'formulations', component: FormulationsComponent },
     { path: 'documents', component: DocumentsComponent },
-    { path: 'contacts', component: ContactsComponent }
+    { path: 'contacts', component: ContactsComponent },
+    { path: '**', component: NotFoundComponent }
 ];
 
 
 @NgModule({
-    imports: [ RouterModule.forRoot(routes, {
-        preloadingStrategy: PreloadAllModules
-    }) ],
+    // imports: [ RouterModule.forRoot(routes, {
+    //     preloadingStrategy: PreloadAllModules
+    // }) ],
+    imports: [ RouterModule.forRoot(routes) ],
     exports: [RouterModule]
 })
 
 export class AppRoutingModul {}
-// { path: '**', component: NotFoundComponent }
-
-// { path: 'practices', loadChildren: 'src/app/practices/practices.module#PracticesModule'},
-// { path: 'phases', loadChildren: './phases/phases.module#PhasesModule'},
-// { path: 'thresholds', loadChildren: 'src/app/thresholds/thresholds.module#ThresholdsModule'},
-// { path: 'products', loadChildren: 'src/app/products/products.module#ProductsModule' },
