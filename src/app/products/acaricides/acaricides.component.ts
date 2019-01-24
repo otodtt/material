@@ -44,7 +44,7 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
     breadcrumbName = 'Акарициди';
 
     mode = '';
-    private link = 'acaricides/acaricides';
+  private link = 'products/acaricides';
     bigQuery: MediaQueryList;
     mediumQuery: MediaQueryList;
     smallQuery: MediaQueryList;
