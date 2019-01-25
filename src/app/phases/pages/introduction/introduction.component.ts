@@ -4,14 +4,14 @@ import { ChangeBreadcrumbService } from '../../../common/services/changeBreadcru
 import { SeoService } from '../../../common/services/SeoService';
 
 @Component({
-    selector: 'prz-introduction',
     templateUrl: './introduction.component.html',
     styleUrls: ['./introduction.component.scss']
 })
 export class IntroductionComponent implements OnInit {
 
     private title = 'Въведение в BBCH';
-    private description = 'Въведение в BBCH скалта. Фенофази на развитие. BBCH кодове за всички култури.';
+    private description = 'Системата BBCH за кодиране на фенологичните етапи на растеж на растенията. ' +
+                        'Въведение в BBCH скалта. Фенофази на развитие. BBCH кодове за всички култури.';
     breadcrumbName = 'Въведение';
 
     constructor(
