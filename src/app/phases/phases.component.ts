@@ -11,7 +11,7 @@ import { ResizeService } from '../common/services/ResizeService';
   styleUrls: ['./phases.component.scss']
 })
 export class PhasesComponent implements OnInit, OnDestroy, AfterViewInit {
-    headerId = 'aa-management';
+    headerId = 'aa-phases';
     breadcrumbTitle = 'BBCH';
 
     mode = 'side';

@@ -8,7 +8,7 @@
     vertical-align: initial;
 }
 /*================================
-    NAVIGATION 
+    NAVIGATION
 =================================*/
 $green-transparent: rgba(140, 195, 74, 0.25);
 $green: rgb(17, 200, 0);
@@ -32,7 +32,7 @@ $gray: rgb(100, 100, 100);
 .nav-list {
     float: left;
     position: relative;
-    
+
     .mat-icon-button {
         width: 20px;
         flex-shrink: initial;
@@ -99,7 +99,7 @@ $gray: rgb(100, 100, 100);
     background: #33691E !important;
     color: $white;
 }
-/*----------- ФИКСИРАНА НАВИГАЦИЯ ------------*/ 
+/*----------- ФИКСИРАНА НАВИГАЦИЯ ------------*/
 .navbar-fixed-top {
     position: fixed;
     z-index: 9;
@@ -120,7 +120,7 @@ $gray: rgb(100, 100, 100);
     }
 }
 /*================================
-    КРАЙ NAVIGATION 
+    КРАЙ NAVIGATION
 =================================*/
 
 /*================================
@@ -130,7 +130,7 @@ $gray: rgb(100, 100, 100);
     display: inline;
     color: rgb(255, 255, 255)
 }
-#aa-practices, #aa-documents, #aa-products, #aa-crops, #aa-contacts, #aa-management  {
+#aa-practices, #aa-documents, #aa-products, #aa-crops, #aa-contacts, #aa-management, #aa-phases  {
     height: 200px;
     background-size: cover;
     padding-bottom: 0 !important;
@@ -194,6 +194,9 @@ $gray: rgb(100, 100, 100);
     #aa-management {
         background-image: url('../../../assets/img/header-bg/management-bg.jpg');
     }
+    #aa-phases {
+        background-image: url('../../../assets/img/header-bg/phases-bg.jpg');
+    }
 }
 @media (max-width: 890px) {
     #navigation-top {
@@ -216,6 +219,9 @@ $gray: rgb(100, 100, 100);
     }
     #aa-management {
         background-image: url('../../../assets/img/header-bg/management-bg-955px.jpg');
+    }
+    #aa-phases {
+        background-image: url('../../../assets/img/header-bg/phases-bg-955px.jpg');
     }
 }
 /*-------------------------------
@@ -247,6 +253,9 @@ $gray: rgb(100, 100, 100);
     #aa-management {
         background-image: url('../../../assets/img/header-bg/management-bg-768px.jpg');
     }
+    #aa-phases {
+        background-image: url('../../../assets/img/header-bg/phases-bg-768px.jpg');
+    }
 }
 
 /* ##Device = Tablets, Ipads (landscape) ##Screen = B/w 768px to 1024px*/
@@ -269,6 +278,9 @@ $gray: rgb(100, 100, 100);
     #aa-management {
         background-image: url('../../../assets/img/header-bg/management-bg-768px.jpg');
     }
+    #aa-phases {
+        background-image: url('../../../assets/img/header-bg/phases-bg-768px.jpg');
+    }
 }
 
 /* ##Device = Low Resolution Tablets, Mobiles (Landscape) ##Screen = B/w 481px to 767px*/
@@ -290,6 +302,9 @@ $gray: rgb(100, 100, 100);
     }
     #aa-management {
         background-image: url('../../../assets/img/header-bg/management-bg-481px.jpg');
+    }
+    #aa-phases {
+        background-image: url('../../../assets/img/header-bg/phases-bg-481px.jpg');
     }
 }
 
@@ -318,6 +333,9 @@ $gray: rgb(100, 100, 100);
     #aa-management {
         background-image: url('../../../assets/img/header-bg/management-bg-320px.jpg');
         height: 170px;
+    }
+    #aa-phases {
+        background-image: url('../../../assets/img/header-bg/phases-bg-320px.jpg');
     }
     #header-email {
         display: none;
@@ -352,6 +370,9 @@ $gray: rgb(100, 100, 100);
         background-image: url('../../../assets/img/header-bg/management-bg-320px.jpg');
         height: 170px;
     }
+    #aa-phases {
+        background-image: url('../../../assets/img/header-bg/phases-bg-320px.jpg');
+    }
     #header-email {
         display: none;
     }
@@ -385,6 +406,9 @@ $gray: rgb(100, 100, 100);
     #aa-management {
         background-image: url('../../../assets/img/header-bg/management-bg-481px.jpg');
         height: 150px;
+    }
+    #aa-phases {
+        background-image: url('../../../assets/img/header-bg/phases-bg-481px.jpg');
     }
     #header-email {
         display: none;

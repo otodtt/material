@@ -58,13 +58,19 @@ const pages = [
                 pageId: 3,
                 subName: 'Формулации',
                 link: 'formulations'
+            },
+            {
+                id: 4,
+                pageId: 3,
+                subName: 'документи',
+                link: 'documents'
             }
         ],
     },
     {
         id: 4,
-        name: 'документи',
-        link: 'documents',
+        name: 'фирми',
+        link: 'firms',
         subPage: null
     },
     {
