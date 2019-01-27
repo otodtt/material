@@ -95,7 +95,7 @@ const tableData = [
       styleUrls: ['./formulations.component.scss']
 })
 export class FormulationsComponent implements OnInit {
-    headerId = 'aa-documents';
+    headerId = 'aa-formulations';
 
     private title = 'ПРЗ | Формулации';
     private description = 'Формулации. Списък на означения за използваните в Република Българя формулации';

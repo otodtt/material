@@ -130,7 +130,8 @@ $gray: rgb(100, 100, 100);
     display: inline;
     color: rgb(255, 255, 255)
 }
-#aa-practices, #aa-documents, #aa-products, #aa-crops, #aa-contacts, #aa-management, #aa-phases  {
+#aa-practices, #aa-documents, #aa-products, #aa-crops, #aa-contacts, 
+#aa-management, #aa-phases, #aa-formulations  {
     height: 200px;
     background-size: cover;
     padding-bottom: 0 !important;
@@ -197,6 +198,9 @@ $gray: rgb(100, 100, 100);
     #aa-phases {
         background-image: url('../../../assets/img/header-bg/phases-bg.jpg');
     }
+    #aa-formulations {
+        background-image: url('../../../assets/img/header-bg/formulations-bg.jpg');
+    }
 }
 @media (max-width: 890px) {
     #navigation-top {
@@ -222,6 +226,9 @@ $gray: rgb(100, 100, 100);
     }
     #aa-phases {
         background-image: url('../../../assets/img/header-bg/phases-bg-955px.jpg');
+    }
+    #aa-formulations {
+        background-image: url('../../../assets/img/header-bg/formulations-bg-955px.jpg');
     }
 }
 /*-------------------------------
@@ -256,6 +263,9 @@ $gray: rgb(100, 100, 100);
     #aa-phases {
         background-image: url('../../../assets/img/header-bg/phases-bg-768px.jpg');
     }
+    #aa-formulations {
+        background-image: url('../../../assets/img/header-bg/formulations-bg-768px.jpg');
+    }
 }
 
 /* ##Device = Tablets, Ipads (landscape) ##Screen = B/w 768px to 1024px*/
@@ -281,6 +291,10 @@ $gray: rgb(100, 100, 100);
     #aa-phases {
         background-image: url('../../../assets/img/header-bg/phases-bg-768px.jpg');
     }
+    #aa-formulations {
+        background-image: url('../../../assets/img/header-bg/formulations-bg-768px.jpg');
+    }
+    
 }
 
 /* ##Device = Low Resolution Tablets, Mobiles (Landscape) ##Screen = B/w 481px to 767px*/
@@ -305,6 +319,9 @@ $gray: rgb(100, 100, 100);
     }
     #aa-phases {
         background-image: url('../../../assets/img/header-bg/phases-bg-481px.jpg');
+    }
+    #aa-formulations {
+        background-image: url('../../../assets/img/header-bg/formulations-bg-481px.jpg');
     }
 }
 
@@ -343,6 +360,9 @@ $gray: rgb(100, 100, 100);
     .p-in-header {
         font-size: .9em;
     }
+    #aa-formulations {
+        background-image: url('../../../assets/img/header-bg/formulations-bg-320px.jpg');
+    }
 }
 
 @media (max-width: 320px){
@@ -372,6 +392,9 @@ $gray: rgb(100, 100, 100);
     }
     #aa-phases {
         background-image: url('../../../assets/img/header-bg/phases-bg-320px.jpg');
+    }
+    #aa-formulations {
+        background-image: url('../../../assets/img/header-bg/formulations-bg-320px.jpg');
     }
     #header-email {
         display: none;
@@ -409,6 +432,9 @@ $gray: rgb(100, 100, 100);
     }
     #aa-phases {
         background-image: url('../../../assets/img/header-bg/phases-bg-481px.jpg');
+    }
+    #aa-formulations {
+        background-image: url('../../../assets/img/header-bg/formulations-bg-481px.jpg');
     }
     #header-email {
         display: none;
