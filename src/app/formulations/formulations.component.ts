@@ -99,7 +99,6 @@ export class FormulationsComponent implements OnInit {
 
     private title = 'ПРЗ | Формулации';
     private description = 'Формулации. Списък на означения за използваните в Република Българя формулации';
-    private keywords = '';
 
     breadcrumbName = 'Формулации';
     table = [];
@@ -109,7 +108,7 @@ export class FormulationsComponent implements OnInit {
         private seoService: SeoService,
     ) {
         this.seoService.addTitle(this.title);
-        this.seoService.setMeta(this.description, this.keywords);
+        this.seoService.setNoKeywordsMeta(this.description);
         this.table = tableData;
     }
 
