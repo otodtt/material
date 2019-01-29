@@ -12,34 +12,19 @@ const pages = [
         subPage: [
             {
                 id: 0,
-                subName: 'Пшеница',
-                link: 'triticum-spp'
+                subName: 'Житни',
+                link: 'grains'
             },
             {
                 id: 1,
-                subName: 'Ечемик',
-                link: 'hordeum-vulgare'
-            },
-            {
-                id: 2,
-                subName: 'Овес',
-                link: 'avena-sativa'
-            },
-            {
-                id: 3,
-                subName: 'Ръж',
-                link: 'secale-cereale'
-            },
-            {
-                id: 4,
                 subName: 'Царевица',
                 link: 'zea-mays'
             },
             {
-                id: 5,
-                subName: 'Борба с гризачи',
-                link: 'rodentia'
-            },
+                id: 2,
+                subName: 'Ориз',
+                link: 'oryza-sativa'
+            }
         ],
     },
     {
@@ -54,8 +39,8 @@ const pages = [
             },
             {
                 id: 1,
-                subName: 'Соя',
-                link: 'glycine-max'
+                subName: 'Бакла',
+                link: 'vicia-faba'
             },
             {
                 id: 2,
@@ -64,19 +49,9 @@ const pages = [
             },
             {
                 id: 3,
-                subName: 'Леща',
-                link: 'lens-culinaris'
-            },
-            {
-                id: 4,
-                subName: 'Нахут',
-                link: 'cicer-arietinum'
-            },
-            {
-                id: 5,
-                subName: 'Люцерна',
-                link: 'medicago-sativa'
-            },
+                subName: 'Соя',
+                link: 'glycine-max'
+            }
         ],
     },
     {

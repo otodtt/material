@@ -3,61 +3,39 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { PhasesComponent } from './phases.component';
 
-// Grains
+/** Grains */
 import { IntroductionComponent } from './pages/introduction/introduction.component';
-// import { HordeumComponent } from './pages/grains/hordeum/hordeum.component';
-// import { ZeaComponent } from './pages/grains/zea/zea.component';
+import { GrainsComponent } from './pages/grains/grains/grains.component';
+import { ZeaComponent } from './pages/grains/zea/zea.component';
+import { OryzaComponent } from './pages/grains/oryza/oryza.component';
 
-// // Beans
-// import { PhaseolusComponent } from './pages/beans/phaseolus/phaseolus.component';
-// import { PisumComponent } from './pages/beans/pisum/pisum.component';
-// import { ViciaComponent } from './pages/beans/vicia/vicia.component';
-// import { MedicagoComponent } from './pages/beans/medicago/medicago.component';
+/** Beans */
+import { PhaseolusComponent } from './pages/beans/phaseolus/phaseolus.component';
+import { ViciaComponent } from './pages/beans/vicia/vicia.component';
+import { PisumComponent } from './pages/beans/pisum/pisum.component';
+import { GlycineComponent } from './pages/beans/glycine/glycine.component';
 
 // // Technical
-// import { BrassicaComponent } from './pages/technical/brassica/brassica.component';
-// import { HelianthusComponent } from './pages/technical/helianthus/helianthus.component';
-// import { BetaComponent } from './pages/technical/beta/beta.component';
-// import { NicotianaComponent } from './pages/technical/nicotiana/nicotiana.component';
-// import { GossypiumComponent } from './pages/technical/gossypium/gossypium.component';
-// import { CannabisComponent } from './pages/technical/cannabis/cannabis.component';
-// import { HumulusComponent } from './pages/technical/humulus/humulus.component';
 
 // // Etheric
-// import { MenthaComponent } from './pages/etheric/mentha/mentha.component';
-// import { RosaComponent } from './pages/etheric/rosa/rosa.component';
 
 // // Vegetables
-// import { LycopersicumComponent } from './pages/vegetables/lycopersicum/lycopersicum.component';
-// import { CapsicumComponent } from './pages/vegetables/capsicum/capsicum.component';
-// import { MelongenaComponent } from './pages/vegetables/melongena/melongena.component';
-// import { CucumisComponent } from './pages/vegetables/cucumis/cucumis.component';
-// import { CitrullusComponent } from './pages/vegetables/citrullus/citrullus.component';
-// import { AlliumComponent } from './pages/vegetables/allium/allium.component';
-// import { OleraceaComponent } from './pages/vegetables/oleracea/oleracea.component';
-// import { DaucusComponent } from './pages/vegetables/daucus/daucus.component';
-// import { SolanumComponent } from './pages/vegetables/solanum/solanum.component';
 
 // // Fruits
-// import { MalusComponent } from './pages/fruits/malus/malus.component';
-// import { CerasusComponent } from './pages/fruits/cerasus/cerasus.component';
-// import { PersicaComponent } from './pages/fruits/persica/persica.component';
-// import { PrunusComponent } from './pages/fruits/prunus/prunus.component';
 
 // // Fragaria and Vitis
-// import { FragariaComponent } from './pages/fragaria/fragaria.component';
-// import { VitisComponent } from './pages/vitis/vitis.component';
 
 export const routes: Routes = [
     { path: '', component: PhasesComponent, children: [
         { path: '', redirectTo: '/phases/introduction', pathMatch: 'full' },
         { path: 'introduction', component: IntroductionComponent },
-        // { path: 'hordeum-vulgare', component: HordeumComponent},
-        // { path: 'zea-mays', component: ZeaComponent },
-        // { path: 'phaseolus-vulgaris', component: PhaseolusComponent },
-        // { path: 'pisum-sativum', component: PisumComponent },
-        // { path: 'vicia-villosa', component: ViciaComponent },
-        // { path: 'medicago-sativa', component: MedicagoComponent },
+        { path: 'grains', component: GrainsComponent},
+        { path: 'zea-mays', component: ZeaComponent },
+        { path: 'oryza-sativa', component: OryzaComponent },
+        { path: 'phaseolus-vulgaris', component: PhaseolusComponent },
+        { path: 'vicia-faba', component: ViciaComponent },
+        { path: 'pisum-sativum', component: PisumComponent },
+        { path: 'glycine-max', component: GlycineComponent },
         // { path: 'brassica-napus', component: BrassicaComponent },
         // { path: 'helianthus-annuus', component: HelianthusComponent },
         // { path: 'beta-vulgaris', component: BetaComponent },

@@ -15,6 +15,13 @@ import { PhasesComponent } from './phases.component';
 
 /**  Pages */
 import { IntroductionComponent } from './pages/introduction/introduction.component';
+import { GrainsComponent } from './pages/grains/grains/grains.component';
+import { ZeaComponent } from './pages/grains/zea/zea.component';
+import { OryzaComponent } from './pages/grains/oryza/oryza.component';
+import { PhaseolusComponent } from './pages/beans/phaseolus/phaseolus.component';
+import { ViciaComponent } from './pages/beans/vicia/vicia.component';
+import { PisumComponent } from './pages/beans/pisum/pisum.component';
+import { GlycineComponent } from './pages/beans/glycine/glycine.component';
 
 
 @NgModule({
@@ -27,7 +34,14 @@ import { IntroductionComponent } from './pages/introduction/introduction.compone
     declarations: [
         PhasesComponent,
         SideMenuComponent,
-        IntroductionComponent
+        IntroductionComponent,
+        GrainsComponent,
+        ZeaComponent,
+        OryzaComponent,
+        PhaseolusComponent,
+        ViciaComponent,
+        PisumComponent,
+        GlycineComponent
     ]
 })
 export class PhasesModule { }

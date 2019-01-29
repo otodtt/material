@@ -5,7 +5,7 @@ import { SeoService } from '../../../common/services/SeoService';
 
 @Component({
     templateUrl: './introduction.component.html',
-    styleUrls: ['./introduction.component.scss']
+    styleUrls: ['./introduction.component.scss', '../pages.scss']
 })
 export class IntroductionComponent implements OnInit {
 

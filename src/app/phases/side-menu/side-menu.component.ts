@@ -44,7 +44,6 @@ export class SideMenuComponent implements OnInit, AfterViewInit, OnDestroy  {
         this.openedQuery.addListener(this._mobileQueryListener);
 
         const pathUrl = this.activatedRoute.snapshot.firstChild.url[0].path;
-        console.log(pathUrl);
 
         this.pages.forEach( item => {
             if (item.link === pathUrl) {
