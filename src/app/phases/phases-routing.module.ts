@@ -14,8 +14,18 @@ import { PhaseolusComponent } from './pages/beans/phaseolus/phaseolus.component'
 import { ViciaComponent } from './pages/beans/vicia/vicia.component';
 import { PisumComponent } from './pages/beans/pisum/pisum.component';
 import { GlycineComponent } from './pages/beans/glycine/glycine.component';
+/**
+    Няма я таблицата за фъстъци. Ако се намери ще я сложа
+    import { ArachisComponent } from './pages/technical/arachis/arachis.component';
+    { path: 'peanut', component: ArachisComponent },
+*/
 
-// // Technical
+/** Technical */
+import { HelianthusComponent } from './pages/technical/helianthus/helianthus.component';
+import { BrassicaComponent } from './pages/technical/brassica/brassica.component';
+import { BetaComponent } from './pages/technical/beta/beta.component';
+import { HumulusComponent } from './pages/technical/humulus/humulus.component';
+import { GossypiumComponent } from './pages/technical/gossypium/gossypium.component';
 
 // // Etheric
 
@@ -29,18 +39,19 @@ export const routes: Routes = [
     { path: '', component: PhasesComponent, children: [
         { path: '', redirectTo: '/phases/introduction', pathMatch: 'full' },
         { path: 'introduction', component: IntroductionComponent },
-        { path: 'grains', component: GrainsComponent},
-        { path: 'zea-mays', component: ZeaComponent },
-        { path: 'oryza-sativa', component: OryzaComponent },
-        { path: 'phaseolus-vulgaris', component: PhaseolusComponent },
-        { path: 'vicia-faba', component: ViciaComponent },
-        { path: 'pisum-sativum', component: PisumComponent },
-        { path: 'glycine-max', component: GlycineComponent },
-        // { path: 'brassica-napus', component: BrassicaComponent },
-        // { path: 'helianthus-annuus', component: HelianthusComponent },
-        // { path: 'beta-vulgaris', component: BetaComponent },
-        // { path: 'nicotiana-tabacum', component: NicotianaComponent },
-        // { path: 'gossypium', component: GossypiumComponent },
+        { path: 'cereals', component: GrainsComponent},
+        { path: 'maize', component: ZeaComponent },
+        { path: 'rice', component: OryzaComponent },
+        { path: 'bean', component: PhaseolusComponent },
+        { path: 'faba-bean', component: ViciaComponent },
+        { path: 'pea', component: PisumComponent },
+        { path: 'soybean', component: GlycineComponent },
+        { path: 'sunflower', component: HelianthusComponent },
+        { path: 'oilseed-rape', component: BrassicaComponent },
+        { path: 'beet', component: BetaComponent },
+        { path: 'hop', component: HumulusComponent },
+        { path: 'cotton', component: GossypiumComponent },
+
         // { path: 'cannabis-and-linum', component: CannabisComponent },
         // { path: 'humulus-lupulus', component: HumulusComponent },
         // { path: 'mentha-and-lavandula', component: MenthaComponent },

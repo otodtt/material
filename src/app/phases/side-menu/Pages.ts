@@ -13,17 +13,17 @@ const pages = [
             {
                 id: 0,
                 subName: 'Житни',
-                link: 'grains'
+                link: 'cereals'
             },
             {
                 id: 1,
                 subName: 'Царевица',
-                link: 'zea-mays'
+                link: 'maize'
             },
             {
                 id: 2,
                 subName: 'Ориз',
-                link: 'oryza-sativa'
+                link: 'rice'
             }
         ],
     },
@@ -35,25 +35,26 @@ const pages = [
             {
                 id: 0,
                 subName: 'Фасул',
-                link: 'phaseolus-vulgaris'
+                link: 'bean'
             },
             {
                 id: 1,
                 subName: 'Бакла',
-                link: 'vicia-faba'
+                link: 'faba-bean'
             },
             {
                 id: 2,
                 subName: 'Грах',
-                link: 'pisum-sativum'
+                link: 'pea'
             },
             {
                 id: 3,
                 subName: 'Соя',
-                link: 'glycine-max'
+                link: 'soybean'
             }
         ],
     },
+    /** Няма я таблицата за фъстъци. Ако се намери ще я сложа */
     {
         id: 3,
         name: 'технически култури',
@@ -61,33 +62,28 @@ const pages = [
         subPage: [
             {
                 id: 0,
-                subName: 'Тютюн',
-                link: 'nicotiana-tabacum'
+                subName: 'Слънчоглед',
+                link: 'sunflower'
             },
             {
                 id: 1,
-                subName: 'Цвекло',
-                link: 'beta-vulgaris'
+                subName: 'Рапица',
+                link: 'oilseed-rape'
             },
             {
                 id: 2,
-                subName: 'Памук',
-                link: 'gossypium'
+                subName: 'Цвекло',
+                link: 'beet'
             },
             {
                 id: 3,
-                subName: 'Слънчоглед',
-                link: 'helianthus-annuus'
+                subName: 'Хмел',
+                link: 'hop'
             },
             {
                 id: 4,
-                subName: 'Рапица',
-                link: 'brassica-napus'
-            },
-            {
-                id: 5,
-                subName: 'Фъстъци',
-                link: 'arachis-hypogaea'
+                subName: 'Памук',
+                link: 'cotton'
             },
         ],
     },

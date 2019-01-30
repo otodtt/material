@@ -4,14 +4,14 @@ import { ChangeBreadcrumbService } from '../../../../common/services/changeBread
 import { SeoService } from '../../../../common/services/SeoService';
 
 @Component({
-      templateUrl: './pisum.component.html',
-      styleUrls: ['./pisum.component.scss', '../../pages.scss']
+    templateUrl: './arachis.component.html',
+    styleUrls: ['./arachis.component.scss', '../../pages.scss']
 })
-export class PisumComponent implements OnInit {
+export class ArachisComponent implements OnInit {
 
-    private title = 'BBCH - Грах';
-    private description = 'Фенологични фази на растеж и BBCH-ключове за тяхната идентификация при грах.';
-    breadcrumbName = 'Грах';
+    private title = 'BBCH - Фъстъци';
+    private description = 'Фенологични фази на растеж и BBCH-ключове за тяхната идентификация при фъстъци.';
+    breadcrumbName = 'Фъстъци';
 
     constructor(
         private seoService: SeoService,

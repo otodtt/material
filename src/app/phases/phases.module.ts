@@ -21,8 +21,13 @@ import { OryzaComponent } from './pages/grains/oryza/oryza.component';
 import { PhaseolusComponent } from './pages/beans/phaseolus/phaseolus.component';
 import { ViciaComponent } from './pages/beans/vicia/vicia.component';
 import { PisumComponent } from './pages/beans/pisum/pisum.component';
+import { ArachisComponent } from './pages/beans/arachis/arachis.component';
 import { GlycineComponent } from './pages/beans/glycine/glycine.component';
-
+import { HelianthusComponent } from './pages/technical/helianthus/helianthus.component';
+import { BrassicaComponent } from './pages/technical/brassica/brassica.component';
+import { BetaComponent } from './pages/technical/beta/beta.component';
+import { GossypiumComponent } from './pages/technical/gossypium/gossypium.component';
+import { HumulusComponent } from './pages/technical/humulus/humulus.component';
 
 @NgModule({
     imports: [
@@ -41,7 +46,13 @@ import { GlycineComponent } from './pages/beans/glycine/glycine.component';
         PhaseolusComponent,
         ViciaComponent,
         PisumComponent,
-        GlycineComponent
+        GlycineComponent,
+        HelianthusComponent,
+        BrassicaComponent,
+        ArachisComponent,
+        BetaComponent,
+        GossypiumComponent,
+        HumulusComponent
     ]
 })
 export class PhasesModule { }
