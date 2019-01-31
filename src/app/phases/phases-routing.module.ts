@@ -14,22 +14,28 @@ import { PhaseolusComponent } from './pages/beans/phaseolus/phaseolus.component'
 import { ViciaComponent } from './pages/beans/vicia/vicia.component';
 import { PisumComponent } from './pages/beans/pisum/pisum.component';
 import { GlycineComponent } from './pages/beans/glycine/glycine.component';
+
+/** Technical */
+import { HelianthusComponent } from './pages/technical/helianthus/helianthus.component';
+import { BrassicaNapusComponent } from './pages/technical/brassica/brassica-napus.component';
+import { BetaComponent } from './pages/technical/beta/beta.component';
+import { HumulusComponent } from './pages/technical/humulus/humulus.component';
+import { GossypiumComponent } from './pages/technical/gossypium/gossypium.component';
 /**
     Няма я таблицата за фъстъци. Ако се намери ще я сложа
     import { ArachisComponent } from './pages/technical/arachis/arachis.component';
     { path: 'peanut', component: ArachisComponent },
 */
 
-/** Technical */
-import { HelianthusComponent } from './pages/technical/helianthus/helianthus.component';
-import { BrassicaComponent } from './pages/technical/brassica/brassica.component';
-import { BetaComponent } from './pages/technical/beta/beta.component';
-import { HumulusComponent } from './pages/technical/humulus/humulus.component';
-import { GossypiumComponent } from './pages/technical/gossypium/gossypium.component';
-
-// // Etheric
-
 // // Vegetables
+import { SolanumComponent } from './pages/vegetables/solanum/solanum.component';
+import { SolanaceousComponent } from './pages/vegetables/solanaceous/solanaceous.component';
+import { CucurbitsComponent } from './pages/vegetables/cucurbits/cucurbits.component';
+import { BrassicaComponent } from './pages/vegetables/brassica/brassica.component';
+import { LeafComponent } from './pages/vegetables/leaf/leaf.component';
+import { OtherBrassicaComponent } from './pages/vegetables/other-brassica/other-brassica.component';
+import { RootComponent } from './pages/vegetables/root/root.component';
+import { BulbComponent } from './pages/vegetables/bulb/bulb.component';
 
 // // Fruits
 
@@ -47,24 +53,28 @@ export const routes: Routes = [
         { path: 'pea', component: PisumComponent },
         { path: 'soybean', component: GlycineComponent },
         { path: 'sunflower', component: HelianthusComponent },
-        { path: 'oilseed-rape', component: BrassicaComponent },
+        { path: 'oilseed-rape', component: BrassicaNapusComponent },
         { path: 'beet', component: BetaComponent },
         { path: 'hop', component: HumulusComponent },
         { path: 'cotton', component: GossypiumComponent },
+        { path: 'potato', component: SolanumComponent },
+        { path: 'solanaceous-fruits', component: SolanaceousComponent },
+        { path: 'cucurbits', component: CucurbitsComponent },
+        { path: 'brassica', component: BrassicaComponent },
+        { path: 'leaf-vegetables', component: LeafComponent },
+        { path: 'other-brassica', component: OtherBrassicaComponent },
+        { path: 'root-and-stem', component: RootComponent },
+        { path: 'bulb-vegetables', component: BulbComponent },
 
-        // { path: 'cannabis-and-linum', component: CannabisComponent },
-        // { path: 'humulus-lupulus', component: HumulusComponent },
-        // { path: 'mentha-and-lavandula', component: MenthaComponent },
+
         // { path: 'rosa-damascena', component: RosaComponent },
         // { path: 'solanum-lycopersicum', component: LycopersicumComponent },
         // { path: 'capsicum-annuum', component: CapsicumComponent },
-        // { path: 'solanum-melongena', component: MelongenaComponent },
         // { path: 'cucumis-sativus', component: CucumisComponent },
         // { path: 'cucumis-and-citrullus', component: CitrullusComponent },
         // { path: 'allium', component: AlliumComponent },
         // { path: 'brassica-oleracea', component: OleraceaComponent },
         // { path: 'daucus-carota', component: DaucusComponent },
-        // { path: 'solanum-tuberosum', component: SolanumComponent },
         // { path: 'malus-and-pyrus', component: MalusComponent },
         // { path: 'prunus-and-cerasus', component: CerasusComponent },
         // { path: 'prunus-persica', component: PersicaComponent },

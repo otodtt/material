@@ -94,70 +94,80 @@ const pages = [
         subPage: [
             {
                 id: 0,
-                subName: 'Домати, пипер, патладжан',
-                link: 'vegetables'
+                subName: 'Картофи',
+                link: 'potato'
             },
             {
                 id: 1,
-                subName: 'Картофи',
-                link: 'solanum-tuberosum'
+                subName: 'Домати, патладжан, пипер',
+                link: 'solanaceous-fruits'
             },
             {
                 id: 2,
-                subName: 'Лукви култури',
-                link: 'onion-crops'
+                subName: 'Тиквови култури',
+                link: 'cucurbits'
             },
             {
                 id: 3,
                 subName: 'Зелеви култури',
-                link: 'cabbage-crops'
+                link: 'brassica'
             },
             {
                 id: 4,
-                subName: 'Тиквови култури',
-                link: 'pumpkin-crops'
+                subName: 'Листни зеленчуци',
+                link: 'leaf-vegetables'
             },
             {
                 id: 5,
-                subName: 'Листни зеленчуци',
-                link: 'leafy-vegetables'
-            },
-        ],
-    },
-    {
-        id: 5,
-        name: 'зеленчуци в съоражения',
-        link: null,
-        subPage: [
-            {
-                id: 0,
-                subName: 'Домати в съоражения',
-                link: 'solanum-lycopersicum'
+                subName: 'Други Зелеви',
+                link: 'other-brassica'
             },
             {
-                id: 1,
-                subName: 'Тиквови култури',
-                link: 'cucurbitaceae'
+                id: 6,
+                subName: 'Коренови и стъблени',
+                link: 'root-and-stem'
             },
             {
-                id: 2,
-                subName: 'Украсни култури',
-                link: 'decorate'
-            },
-            {
-                id: 3,
-                subName: 'Пипер в съоражения',
-                link: 'capsicum-annuum'
-            },
-            {
-                id: 4,
-                subName: 'Листни зеленчуци',
-                link: 'leafy-facilities'
+                id: 7,
+                subName: 'Лукови култури',
+                link: 'bulb-vegetables'
             }
         ],
     },
+    // {
+    //     id: 5,
+    //     name: 'зеленчуци в съоражения',
+    //     link: null,
+    //     subPage: [
+    //         {
+    //             id: 0,
+    //             subName: 'Домати в съоражения',
+    //             link: 'solanum-lycopersicum'
+    //         },
+    //         {
+    //             id: 1,
+    //             subName: 'Тиквови култури',
+    //             link: 'cucurbitaceae'
+    //         },
+    //         {
+    //             id: 2,
+    //             subName: 'Украсни култури',
+    //             link: 'decorate'
+    //         },
+    //         {
+    //             id: 3,
+    //             subName: 'Пипер в съоражения',
+    //             link: 'capsicum-annuum'
+    //         },
+    //         {
+    //             id: 4,
+    //             subName: 'Листни зеленчуци',
+    //             link: 'leafy-facilities'
+    //         }
+    //     ],
+    // },
     {
-        id: 6,
+        id: 5,
         name: 'овощни култури',
         link: null,
         subPage: [
@@ -174,7 +184,7 @@ const pages = [
         ],
     },
     {
-        id: 7,
+        id: 6,
         name: 'ягодоплодни',
         link: null,
         subPage: [
@@ -196,7 +206,7 @@ const pages = [
         ],
     },
     {
-        id: 8,
+        id: 7,
         name: 'лоза',
         link: 'vitis-vinifera',
         subPage: null

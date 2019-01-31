@@ -4,10 +4,10 @@ import { ChangeBreadcrumbService } from '../../../../common/services/changeBread
 import { SeoService } from '../../../../common/services/SeoService';
 
 @Component({
-    templateUrl: './brassica.component.html',
-    styleUrls: ['./brassica.component.scss', '../../pages.scss']
+    templateUrl: './brassica-napus.component.html',
+    styleUrls: ['./brassica-napus.component.scss', '../../pages.scss']
 })
-export class BrassicaComponent implements OnInit {
+export class BrassicaNapusComponent implements OnInit {
 
     private title = 'BBCH - Рапица';
     private description = 'Фенологични фази на растеж и BBCH-ключове за тяхната идентификация при рапица.';

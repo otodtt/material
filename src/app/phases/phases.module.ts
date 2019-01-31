@@ -24,10 +24,18 @@ import { PisumComponent } from './pages/beans/pisum/pisum.component';
 import { ArachisComponent } from './pages/beans/arachis/arachis.component';
 import { GlycineComponent } from './pages/beans/glycine/glycine.component';
 import { HelianthusComponent } from './pages/technical/helianthus/helianthus.component';
-import { BrassicaComponent } from './pages/technical/brassica/brassica.component';
+import { BrassicaNapusComponent } from './pages/technical/brassica/brassica-napus.component';
 import { BetaComponent } from './pages/technical/beta/beta.component';
 import { GossypiumComponent } from './pages/technical/gossypium/gossypium.component';
 import { HumulusComponent } from './pages/technical/humulus/humulus.component';
+import { SolanumComponent } from './pages/vegetables/solanum/solanum.component';
+import { SolanaceousComponent } from './pages/vegetables/solanaceous/solanaceous.component';
+import { CucurbitsComponent } from './pages/vegetables/cucurbits/cucurbits.component';
+import { BrassicaComponent } from './pages/vegetables/brassica/brassica.component';
+import { OtherBrassicaComponent } from './pages/vegetables/other-brassica/other-brassica.component';
+import { LeafComponent } from './pages/vegetables/leaf/leaf.component';
+import { RootComponent } from './pages/vegetables/root/root.component';
+import { BulbComponent } from './pages/vegetables/bulb/bulb.component';
 
 @NgModule({
     imports: [
@@ -48,11 +56,19 @@ import { HumulusComponent } from './pages/technical/humulus/humulus.component';
         PisumComponent,
         GlycineComponent,
         HelianthusComponent,
+        BrassicaNapusComponent,
         BrassicaComponent,
         ArachisComponent,
         BetaComponent,
         GossypiumComponent,
-        HumulusComponent
+        HumulusComponent,
+        SolanumComponent,
+        SolanaceousComponent,
+        CucurbitsComponent,
+        OtherBrassicaComponent,
+        LeafComponent,
+        RootComponent,
+        BulbComponent
     ]
 })
 export class PhasesModule { }
