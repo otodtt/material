@@ -21,7 +21,7 @@ import { OryzaComponent } from './pages/grains/oryza/oryza.component';
 import { PhaseolusComponent } from './pages/beans/phaseolus/phaseolus.component';
 import { ViciaComponent } from './pages/beans/vicia/vicia.component';
 import { PisumComponent } from './pages/beans/pisum/pisum.component';
-import { ArachisComponent } from './pages/beans/arachis/arachis.component';
+import { ArachisComponent } from './pages/technical/arachis/arachis.component';
 import { GlycineComponent } from './pages/beans/glycine/glycine.component';
 import { HelianthusComponent } from './pages/technical/helianthus/helianthus.component';
 import { BrassicaNapusComponent } from './pages/technical/brassica/brassica-napus.component';
@@ -36,6 +36,13 @@ import { OtherBrassicaComponent } from './pages/vegetables/other-brassica/other-
 import { LeafComponent } from './pages/vegetables/leaf/leaf.component';
 import { RootComponent } from './pages/vegetables/root/root.component';
 import { BulbComponent } from './pages/vegetables/bulb/bulb.component';
+import { PomeComponent } from './pages/fruits/pome/pome.component';
+import { StoneComponent } from './pages/fruits/stone/stone.component';
+import { StrawberryComponent } from './pages/strawberry/strawberry/strawberry.component';
+import { RibesComponent } from './pages/strawberry/ribes/ribes.component';
+import { VitisComponent } from './pages/vitis/vitis.component';
+import { WeedComponent } from './pages/weed/weed.component';
+import { CitrusComponent } from './pages/citrus/citrus.component';
 
 @NgModule({
     imports: [
@@ -58,7 +65,7 @@ import { BulbComponent } from './pages/vegetables/bulb/bulb.component';
         HelianthusComponent,
         BrassicaNapusComponent,
         BrassicaComponent,
-        ArachisComponent,
+        // ArachisComponent,
         BetaComponent,
         GossypiumComponent,
         HumulusComponent,
@@ -68,7 +75,14 @@ import { BulbComponent } from './pages/vegetables/bulb/bulb.component';
         OtherBrassicaComponent,
         LeafComponent,
         RootComponent,
-        BulbComponent
+        BulbComponent,
+        PomeComponent,
+        StoneComponent,
+        StrawberryComponent,
+        RibesComponent,
+        VitisComponent,
+        WeedComponent,
+        CitrusComponent
     ]
 })
 export class PhasesModule { }

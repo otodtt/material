@@ -37,9 +37,17 @@ import { OtherBrassicaComponent } from './pages/vegetables/other-brassica/other-
 import { RootComponent } from './pages/vegetables/root/root.component';
 import { BulbComponent } from './pages/vegetables/bulb/bulb.component';
 
-// // Fruits
+/** Fruits */
+import { PomeComponent } from './pages/fruits/pome/pome.component';
+import { StoneComponent } from './pages/fruits/stone/stone.component';
 
-// // Fragaria and Vitis
+
+/** Fragaria and Vitis */
+import { StrawberryComponent } from './pages/strawberry/strawberry/strawberry.component';
+import { RibesComponent } from './pages/strawberry/ribes/ribes.component';
+import { VitisComponent } from './pages/vitis/vitis.component';
+import { CitrusComponent } from './pages/citrus/citrus.component';
+import { WeedComponent } from './pages/weed/weed.component';
 
 export const routes: Routes = [
     { path: '', component: PhasesComponent, children: [
@@ -65,22 +73,13 @@ export const routes: Routes = [
         { path: 'other-brassica', component: OtherBrassicaComponent },
         { path: 'root-and-stem', component: RootComponent },
         { path: 'bulb-vegetables', component: BulbComponent },
-
-
-        // { path: 'rosa-damascena', component: RosaComponent },
-        // { path: 'solanum-lycopersicum', component: LycopersicumComponent },
-        // { path: 'capsicum-annuum', component: CapsicumComponent },
-        // { path: 'cucumis-sativus', component: CucumisComponent },
-        // { path: 'cucumis-and-citrullus', component: CitrullusComponent },
-        // { path: 'allium', component: AlliumComponent },
-        // { path: 'brassica-oleracea', component: OleraceaComponent },
-        // { path: 'daucus-carota', component: DaucusComponent },
-        // { path: 'malus-and-pyrus', component: MalusComponent },
-        // { path: 'prunus-and-cerasus', component: CerasusComponent },
-        // { path: 'prunus-persica', component: PersicaComponent },
-        // { path: 'prunus-domestica', component: PrunusComponent },
-        // { path: 'fragaria-and-rubus', component: FragariaComponent },
-        // { path: 'vitis-vinifera', component: VitisComponent },
+        { path: 'pome-fruit', component: PomeComponent },
+        { path: 'stone-fruit', component: StoneComponent },
+        { path: 'strawberry', component: StrawberryComponent },
+        { path: 'currants', component: RibesComponent },
+        { path: 'grapevine', component: VitisComponent },
+        { path: 'citrus', component: CitrusComponent },
+        { path: 'weed-species', component: WeedComponent }
     ]}
 ];
 

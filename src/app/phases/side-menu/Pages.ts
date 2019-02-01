@@ -134,38 +134,6 @@ const pages = [
             }
         ],
     },
-    // {
-    //     id: 5,
-    //     name: 'зеленчуци в съоражения',
-    //     link: null,
-    //     subPage: [
-    //         {
-    //             id: 0,
-    //             subName: 'Домати в съоражения',
-    //             link: 'solanum-lycopersicum'
-    //         },
-    //         {
-    //             id: 1,
-    //             subName: 'Тиквови култури',
-    //             link: 'cucurbitaceae'
-    //         },
-    //         {
-    //             id: 2,
-    //             subName: 'Украсни култури',
-    //             link: 'decorate'
-    //         },
-    //         {
-    //             id: 3,
-    //             subName: 'Пипер в съоражения',
-    //             link: 'capsicum-annuum'
-    //         },
-    //         {
-    //             id: 4,
-    //             subName: 'Листни зеленчуци',
-    //             link: 'leafy-facilities'
-    //         }
-    //     ],
-    // },
     {
         id: 5,
         name: 'овощни култури',
@@ -174,12 +142,12 @@ const pages = [
             {
                 id: 0,
                 subName: 'Семкови овощни видове',
-                link: 'seed-species'
+                link: 'pome-fruit'
             },
             {
                 id: 1,
                 subName: 'Костилкови овощни видове',
-                link: 'stone-species'
+                link: 'stone-fruit'
             }
         ],
     },
@@ -191,24 +159,31 @@ const pages = [
             {
                 id: 0,
                 subName: 'Ягода',
-                link: 'fragaria'
+                link: 'strawberry'
             },
             {
                 id: 1,
-                subName: 'Малина',
-                link: 'rubus-idaeus'
-            },
-            {
-                id: 2,
                 subName: 'Касис',
-                link: 'ribes-nigrum'
+                link: 'currants'
             }
         ],
     },
     {
         id: 7,
         name: 'лоза',
-        link: 'vitis-vinifera',
+        link: 'grapevine',
+        subPage: null
+    },
+    {
+        id: 8,
+        name: 'цитруси',
+        link: 'citrus',
+        subPage: null
+    },
+    {
+        id: 9,
+        name: 'плевели',
+        link: 'weed-species',
         subPage: null
     },
 ];
