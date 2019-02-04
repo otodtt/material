@@ -5,7 +5,7 @@ import { SeoService } from '../../../../common/services/SeoService';
 
 @Component({
     templateUrl: './other-brassica.component.html',
-    styleUrls: ['./other-brassica.component.scss', '../../pages.scss']
+    styleUrls: ['../../pages.scss']
 })
 export class OtherBrassicaComponent implements OnInit {
 

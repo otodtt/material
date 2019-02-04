@@ -82,3 +82,15 @@ p {
   margin: 0 auto;
   border: 2px solid rgb(170, 170, 170);
 }
+
+@media (max-width: 320px) {
+    .image_general {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+    .image_general {
+        max-width: 100%;
+    }
+}
