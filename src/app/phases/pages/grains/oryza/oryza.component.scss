@@ -22,3 +22,12 @@
         content:url('../../../../../assets/phases/grains/oryza_2_481px.jpg');
     }
 }
+
+@media (min-width: 481px) and (max-width: 768px){
+    .image-content-1 {
+        content:url('../../../../../assets/phases/grains/oryza_1_768px.jpg');
+    }
+    .image-content-2 {
+        content:url('../../../../../assets/phases/grains/oryza_2_768px.jpg');
+    }
+}
