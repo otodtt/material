@@ -25,7 +25,7 @@ import { ProductsService } from '../shared/services/products.service';
 export class TableFromDatabase {
     constructor(private productsService: ProductsService) { }
     getRepoIssues(): Observable<Product[]> {
-        return this.productsService.getProducts(`products/acaricides`);
+        return this.productsService.getProducts(`assets/db/products/acaricide.json`);
     }
     disconnect() {}
 }

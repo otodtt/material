@@ -1,12 +1,13 @@
 <section>
     <div class="container">
         <article >
-            <div class="example-loading-shade" *ngIf="!isLoadingResults">
+            <div class="example-loading-shade" *ngIf="!product">
                 <mat-spinner aria-label="Спинър до зареждането на страницата"></mat-spinner>
             </div>
-            <div class="row" *ngIf="isLoadingResults">
+            <div class="row" *ngIf="product">
+            <!-- <div class="row" > -->
                 <div class="row-header">
-                    <h1 *ngIf="product.moreNames == null">{{ product.name }}</h1>
+                    <h1 *ngIf="product.moreNames === null">{{ product.name }}</h1>
                     <h1 *ngIf="product.moreNames !== null">{{ product.name }} / {{ product.moreNames }}</h1>
                     <mat-card class="example-card">
                         <mat-card-content>
@@ -15,7 +16,7 @@
                                     <div class="td">
                                         <ul>
                                             <li>
-                                                <strong>Фирма:</strong> 
+                                                <strong>Фирма:</strong>
                                                 <a href="">{{ product.firmName }} - {{ product.manufacturersId }}</a>
                                             </li>
                                             <li><strong>{{ product.permission }}</strong> </li>
@@ -33,7 +34,7 @@
                                                             <ul>
                                                                 <li *ngFor="let substance of product.pestsubstanse">
                                                                     <a href="" >
-                                                                        {{ substance.quantity }} {{ substance.name }} {{ substance.quantityAfter }} 
+                                                                        {{ substance.quantity }} {{ substance.name }} {{ substance.quantityAfter }}
                                                                     </a>
                                                                 </li>
                                                             </ul>
@@ -58,7 +59,7 @@
                                                             <ul>
                                                                 <li *ngFor="let substance of product.pestsubstanse">
                                                                     <a href="" >
-                                                                        {{ substance.quantity }} {{ substance.name }} {{ substance.quantityAfter }} 
+                                                                        {{ substance.quantity }} {{ substance.name }} {{ substance.quantityAfter }}
                                                                     </a>
                                                                 </li>
                                                             </ul>
@@ -79,7 +80,7 @@
                     </mat-card>
                 </div>
 
-                
+
                 <mat-card class="example-card second-card">
                     <mat-card-header>
                         <div mat-card-avatar class="example-header"></div>
@@ -87,13 +88,13 @@
                     </mat-card-header>
                     <mat-accordion class="example-headers-align">
                         <div class="wrap-expansion"
-                            *ngFor="let dose of product.doses; let i = index; let isOdd=odd; let isEven=even" 
-                            [class.odd]="isOdd" 
-                            [class.even]="isEven" 
+                            *ngFor="let dose of product.doses; let i = index; let isOdd=odd; let isEven=even"
+                            [class.odd]="isOdd"
+                            [class.even]="isEven"
                         >
                             <p>{{ dose.crop }}</p>
-                            <mat-expansion-panel 
-                                [expanded]="step === i" 
+                            <mat-expansion-panel
+                                [expanded]="step === i"
                                 hideToggle="false"
                                 role="button"
                                 (opened)="setStep(i)">
@@ -107,7 +108,7 @@
                                 <mat-form-field>
                                     <input matInput placeholder="First name">
                                 </mat-form-field>
-                                
+
                                 <mat-form-field>
                                     <input matInput placeholder="Age">
                                 </mat-form-field>
@@ -118,7 +119,7 @@
                                 </mat-action-row>
                             </mat-expansion-panel>
                         </div>
-                        
+
 
                         <!-- <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle="true">
                             <mat-expansion-panel-header>
@@ -130,12 +131,12 @@
                                     <mat-icon>account_circle</mat-icon>
                                 </mat-panel-description>
                             </mat-expansion-panel-header>
-                        
+
                             <mat-action-row>
                                 <button mat-button color="primary" (click)="nextStep()">Next</button>
                             </mat-action-row>
                         </mat-expansion-panel> -->
-                        
+
                         <!-- <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle="true">
                             <mat-expansion-panel-header>
                             <mat-panel-title>
@@ -146,13 +147,13 @@
                                 <mat-icon>map</mat-icon>
                             </mat-panel-description>
                             </mat-expansion-panel-header>
-                        
+
                             <mat-action-row>
                             <button mat-button color="warn" (click)="prevStep()">Previous</button>
                             <button mat-button color="primary" (click)="nextStep()">Next</button>
                             </mat-action-row>
                         </mat-expansion-panel> -->
-                        
+
                         <!-- <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle="true">
                             <mat-expansion-panel-header>
                             <mat-panel-title>
@@ -163,13 +164,13 @@
                                 <mat-icon>date_range</mat-icon>
                             </mat-panel-description>
                             </mat-expansion-panel-header>
-                        
+
                             <mat-action-row>
                             <button mat-button color="warn" (click)="prevStep()">Previous</button>
                             <button mat-button color="primary" (click)="nextStep()">End</button>
                             </mat-action-row>
                         </mat-expansion-panel> -->
-                        
+
                     </mat-accordion>
                 </mat-card>
             </div>

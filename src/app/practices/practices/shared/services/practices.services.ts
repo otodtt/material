@@ -19,5 +19,10 @@ export class PracticesService extends BaseApi {
     getPractices(param: string): Observable<Practice[]> {
         return this.get(param);
     }
+
+    // READ FROM FILE
+    // getPractices(param: string): Observable<Practice[]> {
+    //     return this.http.get<any>('assets/db/db_json/vitis/vitis.json');
+    // }
 }
 
