@@ -134,7 +134,7 @@ const pages = [
             {
                 id: 2,
                 subName: 'Лукви култури',
-                link: 'onion-crops'
+                link: 'bulb-crops'
             },
             {
                 id: 3,
@@ -149,7 +149,7 @@ const pages = [
             {
                 id: 5,
                 subName: 'Листни зеленчуци',
-                link: 'leafy-vegetables'
+                link: 'leaf-vegetables'
             },
         ],
     },
@@ -181,7 +181,7 @@ const pages = [
             {
                 id: 4,
                 subName: 'Листни зеленчуци',
-                link: 'leafy-facilities'
+                link: 'leaf-facilities'
             }
         ],
     },
@@ -193,12 +193,12 @@ const pages = [
             {
                 id: 0,
                 subName: 'Семкови овощни видове',
-                link: 'seed-species'
+                link: 'pome-fruit'
             },
             {
                 id: 1,
                 subName: 'Костилкови овощни видове',
-                link: 'stone-species'
+                link: 'stone-fruit'
             }
         ],
     },

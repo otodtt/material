@@ -17,7 +17,7 @@ import { ProductsService } from '../../shared/services/products.service';
     styleUrls: ['./acaricide-detail.component.scss']
 })
 export class AcaricideDetailComponent implements OnInit, OnDestroy {
-    private _jsonURL = 'assets/db/products/acaricide.json';
+    private _dbURL = 'products/acaricides';
 
     product: Product;
     subscription: Subscription;
@@ -29,24 +29,44 @@ export class AcaricideDetailComponent implements OnInit, OnDestroy {
         private productsService: ProductsService,
         private activatedRoute: ActivatedRoute,
         private router: Router,
-        private http: HttpClient
+        // private http: HttpClient
     ) {}
 
     ngOnInit() {
       const id = this.activatedRoute.snapshot.params['id'];
 
-      this.subscription = this.productsService.getJSON(this._jsonURL).subscribe(data => {
-        this.product = data.find((x: any) => +x.id === +id);
+        this.subscription = this.productsService.findProductById(this._dbURL, id)
+        .subscribe((product: Product) => {
+            this.product = product[0];
+            if (product[0] === undefined ) {
+              this.router.navigate(['products/acaricides']);
+                // console.log('udef');
+            } else {
+                if (product[0].length === 0 || +product[0].id !== +id) {
+                  this.router.navigate(['products/acaricides']);
+                    // console.log('eleif');
+                    // console.log(product[0].length + '-->' + +id);
+                } else {
+                    this.seoService.addTitle('ПРЗ | ' + product[0].name + ' - ' + product[0].pesticide);
+                    this.seoService.setNoKeywordsMeta(product[0].pestDescription);
+                    this.changeBreadcrumb.emitName(product[0].name);
+                    // console.log('yes');
+                }
+            }
+        });
 
-        if ( this.product === undefined) {
-          this.router.navigate(['products/acaricides']);
-        } else {
-          this.seoService.addTitle('ПРЗ | ' + this.product.name + ' - ' + this.product.pesticide);
-          this.seoService.setNoKeywordsMeta(this.product.pestDescription);
-          this.changeBreadcrumb.emitName(this.product.name);
-          console.log(this.product);
-        }
-      });
+      // this.subscription = this.productsService.getProducts(this._jsonURL).subscribe(data => {
+      //   this.product = data.find((x: any) => +x.id === +id);
+
+      //   if ( this.product === undefined) {
+      //     this.router.navigate(['products/acaricides']);
+      //   } else {
+      //     this.seoService.addTitle('ПРЗ | ' + this.product.name + ' - ' + this.product.pesticide);
+      //     this.seoService.setNoKeywordsMeta(this.product.pestDescription);
+      //     this.changeBreadcrumb.emitName(this.product.name);
+      //     console.log(this.product);
+      //   }
+      // });
     }
 
     // public getJSON(): Observable<any> {
