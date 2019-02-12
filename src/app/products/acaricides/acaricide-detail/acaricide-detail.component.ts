@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router} from '@angular/router';
-import { Subscription } from 'rxjs/Subscription';
-import { Observable } from 'rxjs/Observable';
+import { Subscription } from 'rxjs';
+import { Observable } from 'rxjs';
 
 import { ChangeBreadcrumbService } from '../../../common/services/changeBreadcrumb.service';
 import { SeoService } from '../../../common/services/SeoService';

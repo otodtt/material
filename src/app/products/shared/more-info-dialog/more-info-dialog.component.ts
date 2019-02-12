@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 import { Router } from '@angular/router';
 
 @Component({
@@ -22,5 +22,9 @@ export class MoreInfoDialogComponent {
   onClickNavigate(id: string, link: string) {
         this.dialogRef.close();
         this.router.navigate([link + '/' + id]);
+
+        this.dialogRef.afterClosed().subscribe(result => {
+            window.scrollTo(0, 0);
+        });
     }
 }
