@@ -118,6 +118,15 @@ $gray: rgb(100, 100, 100);
         background-color: #8bc34a !important;
         color: #000000;
     }
+    .nav-list-active .active {
+        color: $green;
+    }
+    .nav-list-active {
+        background: $white;
+        .active-non-link, .btn-active {
+            color: $green
+        }
+    }
 }
 /*================================
     КРАЙ NAVIGATION
@@ -130,7 +139,7 @@ $gray: rgb(100, 100, 100);
     display: inline;
     color: rgb(255, 255, 255)
 }
-#aa-practices, #aa-documents, #aa-products, #aa-crops, #aa-contacts, 
+#aa-practices, #aa-documents, #aa-products, #aa-crops, #aa-contacts,
 #aa-management, #aa-phases, #aa-formulations  {
     height: 200px;
     background-size: cover;
@@ -294,7 +303,7 @@ $gray: rgb(100, 100, 100);
     #aa-formulations {
         background-image: url('../../../assets/img/header-bg/formulations-bg-768px.jpg');
     }
-    
+
 }
 
 /* ##Device = Low Resolution Tablets, Mobiles (Landscape) ##Screen = B/w 481px to 767px*/

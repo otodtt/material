@@ -13,15 +13,75 @@ const pages = [
             {
                 id: 0,
                 pageId: 1,
-                subName: 'Акарициди',
-                link: 'products/acaricides'
+                subName: 'Фунгициди',
+                link: 'products/fungicides'
             },
             {
                 id: 1,
                 pageId: 1,
                 subName: 'Инсектициди',
                 link: 'products/insecticides'
-            }
+            },
+            {
+                id: 2,
+                pageId: 1,
+                subName: 'Акарициди',
+                link: 'products/acaricides'
+            },
+            {
+                id: 3,
+                pageId: 1,
+                subName: 'Нематоциди',
+                link: 'products/nematocides'
+            },
+            {
+                id: 4,
+                pageId: 1,
+                subName: 'Родентициди',
+                link: 'products/rodenticides'
+            },
+            {
+                id: 5,
+                pageId: 1,
+                subName: 'Лимациди',
+                link: 'products/limatsides'
+            },
+            {
+                id: 6,
+                pageId: 1,
+                subName: 'Репеленти',
+                link: 'products/repellents'
+            },
+            {
+                id: 7,
+                pageId: 1,
+                subName: 'Феромони',
+                link: 'products/pheromones'
+            },
+            {
+                id: 8,
+                pageId: 1,
+                subName: 'Хербициди',
+                link: 'products/herbicides'
+            },
+            {
+                id: 9,
+                pageId: 1,
+                subName: 'Десиканти',
+                link: 'products/desiccants'
+            },
+            {
+                id: 10,
+                pageId: 1,
+                subName: 'Растежни регулатори',
+                link: 'products/regulators'
+            },
+            {
+                id: 11,
+                pageId: 1,
+                subName: 'Паралелна търговия',
+                link: 'products/parallel-trade'
+            },
         ]
     },
     {
