@@ -6,6 +6,7 @@ import { ProductsComponent } from './products.component';
 import { AcaricidesComponent } from './acaricides/acaricides.component';
 import { AcaricideDetailComponent } from './acaricides/acaricide-detail/acaricide-detail.component';
 import { InsecticidesComponent } from './insecticides/insecticides.component';
+import { ParallelComponent } from './parallel/parallel.component';
 
 
 export const routes: Routes = [
@@ -14,6 +15,7 @@ export const routes: Routes = [
     { path: 'acaricides', component: AcaricidesComponent},
     { path: 'acaricides/:id', component: AcaricideDetailComponent},
     { path: 'insecticides', component: InsecticidesComponent },
+    { path: 'parallel-trade', component: ParallelComponent },
   ]}
 ];
 

@@ -19,10 +19,6 @@ import { SeoService } from './common/services/SeoService';
 /** Modules */
 import { MaterialModule } from './common/material/material.module';
 import { ShareComponentsModule } from './common/share.components.module';
-// import { PracticesModule } from './practices/practices.module';
-// import { PhasesModule } from './phases/phases.module';
-// import { ThresholdsModule } from './thresholds/thresholds.module';
-// import { ProductsModule } from './products/products.module';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './shared/footer/footer.component';
@@ -32,13 +28,10 @@ import { ScrollButtonComponent } from './shared/scroll-button/scroll-button.comp
 
 /** Pages */
 import { HomeComponent } from './home/home.component';
-// import { ProductsComponent } from './products/products.component';
 import { CropsComponent } from './crops/crops.component';
 import { DocumentsComponent } from './documents/documents.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { FormulationsComponent } from './formulations/formulations.component';
-
-
 
 @NgModule({
     declarations: [
@@ -47,7 +40,6 @@ import { FormulationsComponent } from './formulations/formulations.component';
         SideNavComponent,
         ScrollButtonComponent,
         HomeComponent,
-        // ProductsComponent,
         CropsComponent,
         DocumentsComponent,
         ContactsComponent,
@@ -61,10 +53,6 @@ import { FormulationsComponent } from './formulations/formulations.component';
         BrowserAnimationsModule,
         ShareComponentsModule,
         AppRoutingModul,
-        // PracticesModule,
-        // PhasesModule,
-        // ThresholdsModule,
-        // ProductsModule
     ],
     providers: [
         ChangeBreadcrumbService,

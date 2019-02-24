@@ -1,18 +1,16 @@
-import { Component, OnInit, ViewChild, AfterViewInit, ChangeDetectorRef, OnDestroy } from '@angular/core';
+import {Component, OnInit, ViewChild, AfterViewInit, ChangeDetectorRef, OnDestroy } from '@angular/core';
 import { Subscription, Observable, merge } from 'rxjs';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { HttpClient } from '@angular/common/http';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
-// import { Observable, merge} from 'rxjs';
-// import { merge} from 'rxjs';
-import { of as observableOf } from 'rxjs';
-import { catchError } from 'rxjs/operators';
-import { map } from 'rxjs/operators';
-import { startWith } from 'rxjs/operators';
-import { switchMap } from 'rxjs/operators';
+import {of as observableOf} from 'rxjs';
+import {catchError} from 'rxjs/operators';
+import {map} from 'rxjs/operators';
+import {startWith} from 'rxjs/operators';
+import {switchMap} from 'rxjs/operators';
 
 import { MatDialog } from '@angular/material';
-import { MoreInfoDialogComponent } from '../shared/more-info-dialog/more-info-dialog.component';
+import { MoreDialogComponent } from './more-dialog/more-dialog.component';
 
 import { ChangeBreadcrumbService } from '../../common/services/changeBreadcrumb.service';
 import { SeoService } from '../../common/services/SeoService';
@@ -25,26 +23,24 @@ import { ProductsService } from '../shared/services/products.service';
 export class TableFromDatabase {
     constructor(private productsService: ProductsService) { }
     getRepoIssues(): Observable<Product[]> {
-        return this.productsService.getProducts(`products/acaricides`);
+      return this.productsService.getProducts(`products/parallel`);
     }
     disconnect() {}
 }
 
 @Component({
-    templateUrl: './acaricides.component.html',
-    styleUrls: ['./acaricides.component.scss']
+    templateUrl: './parallel.component.html',
+    styleUrls: ['./parallel.component.scss'],
 })
+export class ParallelComponent implements OnInit, AfterViewInit, OnDestroy {
+    private title = 'ПРЗ | Паралелна търговия';
+    private description =   'Продукти за Растителна защита, разрешени за паралелна търговия в България';
 
-export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
-    private title = 'ПРЗ | Акарициди';
-    private description =   'Акарициди. Продуки за растителна защита за борба срещу вредни акари (Жълт лозов акар,  Обикновен ' +
-                            'паяжинообразуващ акар, Доматен акар, Лозова краста, Червен овощен акар и други). ';
-    private keywords = 'акарициди, продуки, растителна, защита, култури, растителнозащитни, пракатики';
-
-    breadcrumbName = 'Акарициди';
+    breadcrumbName = 'Паралелна търговия';
 
     mode = '';
-    private link = 'products/acaricides';
+
+    // private link = 'products/parallel-trade';
     bigQuery: MediaQueryList;
     mediumQuery: MediaQueryList;
     smallQuery: MediaQueryList;
@@ -52,7 +48,7 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
     private resizeSubscription: Subscription;
     private _mobileQueryListener: () => void;
 
-    displayedColumns = ['name', 'substance', 'dose', 'category'];
+    displayedColumns = ['owner', 'product', 'substances', 'referenceProduct', 'manufacturer', 'moreDetails'];
     exampleDatabase: TableFromDatabase | null;
     dataSource = new MatTableDataSource();
 
@@ -74,7 +70,7 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
         media: MediaMatcher
     ) {
         this.seoService.addTitle(this.title);
-        this.seoService.setMeta(this.description, this.keywords);
+        this.seoService.setNoKeywordsMeta(this.description);
 
         this._mobileQueryListener = () => changeDetectorRef.detectChanges();
         this.bigQuery = media.matchMedia('(max-width: 850px)');
@@ -168,9 +164,9 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
         this.dataSource.filter = filterValue;
     }
 
-    openDialog(name: any, info: any) {
-        const dialogRef = this.dialog.open(MoreInfoDialogComponent, {
-            data: { product: name, data: info, link: this.link},
+    openDialog(info: any) {
+        const dialogRef = this.dialog.open(MoreDialogComponent, {
+            data: { data: info },
             width: this.mode
         });
     }
@@ -183,4 +179,5 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
             this.resizeSubscription.unsubscribe();
         }
     }
+
 }

@@ -38,13 +38,13 @@ export class AcaricideDetailComponent implements OnInit, OnDestroy {
         this.subscription = this.productsService.findProductById(this._dbURL, id)
         .subscribe((product: Product) => {
             this.product = product[0];
+          console.log(product[0]);
             if (product[0] === undefined ) {
-              this.router.navigate(['products/acaricides']);
-                // console.log('udef');
+              // this.router.navigate(['products/acaricides']);
+              // console.log(product[0]);
             } else {
                 if (product[0].length === 0 || +product[0].id !== +id) {
                   this.router.navigate(['products/acaricides']);
-                    // console.log('eleif');
                     // console.log(product[0].length + '-->' + +id);
                 } else {
                     this.seoService.addTitle('ПРЗ | ' + product[0].name + ' - ' + product[0].pesticide);
@@ -54,19 +54,6 @@ export class AcaricideDetailComponent implements OnInit, OnDestroy {
                 }
             }
         });
-
-      // this.subscription = this.productsService.getProducts(this._jsonURL).subscribe(data => {
-      //   this.product = data.find((x: any) => +x.id === +id);
-
-      //   if ( this.product === undefined) {
-      //     this.router.navigate(['products/acaricides']);
-      //   } else {
-      //     this.seoService.addTitle('ПРЗ | ' + this.product.name + ' - ' + this.product.pesticide);
-      //     this.seoService.setNoKeywordsMeta(this.product.pestDescription);
-      //     this.changeBreadcrumb.emitName(this.product.name);
-      //     console.log(this.product);
-      //   }
-      // });
     }
 
     // public getJSON(): Observable<any> {

@@ -20,6 +20,8 @@ import { AcaricidesComponent } from './acaricides/acaricides.component';
 import { MoreInfoDialogComponent } from './shared/more-info-dialog/more-info-dialog.component';
 import { AcaricideDetailComponent } from './acaricides/acaricide-detail/acaricide-detail.component';
 import { InsecticidesComponent } from './insecticides/insecticides.component';
+import { ParallelComponent } from './parallel/parallel.component';
+import { MoreDialogComponent } from './parallel/more-dialog/more-dialog.component';
 
 @NgModule({
     imports: [
@@ -35,12 +37,14 @@ import { InsecticidesComponent } from './insecticides/insecticides.component';
         ProductsComponent,
         MoreInfoDialogComponent,
         AcaricideDetailComponent,
-        InsecticidesComponent
+        InsecticidesComponent,
+        ParallelComponent,
+        MoreDialogComponent
     ],
     providers: [
         ProductsService,
         { provide: MatPaginatorIntl, useValue: getBulgarianPaginatorIntl() }
     ],
-    entryComponents: [MoreInfoDialogComponent],
+    entryComponents: [MoreInfoDialogComponent, MoreDialogComponent],
 })
 export class ProductsModule { }

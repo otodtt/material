@@ -62,7 +62,9 @@
 .mat-row {
     padding: 0;
 }
-
+::ng-deep .mat-sort-header-arrow {
+  color: white !important;
+}
 .mat-header-cell{
     text-transform: initial !important;
     text-align: center;
