@@ -1,4 +1,4 @@
-<mat-dialog-content>
+<mat-dialog-content class="my-dialog-content">
     <div class="dialog-header" >
         <h2 *ngIf="data.product.moreNames === null">{{ data.product.name }}</h2>
         <h2 *ngIf="data.product.moreNames !== null">{{ data.product.name }} / {{ data.product.moreNames }}</h2>
@@ -29,7 +29,7 @@
                 <span class="bold note afterNote" *ngIf="data.data.note !== null">{{ data.data.note }}</span>
                 <p class="against">Срещу: </p>
                 <span class="td_span" [innerHTML]="data.data.disease | safeHtml"></span><br/>
-                <span class="bold afterNote" *ngIf="data.data.afterNote !== null">{{ data.data.afterNote }}</span>
+                <span class="bold afterNote" *ngIf="data.data.afterNote !== null" [innerHTML]="data.data.afterNote | safeHtml"></span>
                 <hr>
                 <p class="p_dose">
                     <span class="bold">Доза:</span>
@@ -45,6 +45,14 @@
                 </p>
         </mat-card-content>
     </mat-card>
+
+    <mat-card class="example-card" *ngIf="data.product.totalNoteAfterDose !== null">
+        <mat-card-content>
+               <p class="bold">Забележка: </p>
+               <span [innerHTML]="data.product.totalNoteAfterDose | safeHtml" ></span>
+        </mat-card-content>
+    </mat-card>
+
 </mat-dialog-content>
 <mat-dialog-actions>
     <button mat-raised-button (click)="onNoClick()">Затвори</button>

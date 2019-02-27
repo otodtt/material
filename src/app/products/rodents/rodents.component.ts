@@ -1,50 +1,66 @@
 import { Component, OnInit, ViewChild, AfterViewInit, ChangeDetectorRef, OnDestroy } from '@angular/core';
-import { Subscription, Observable, merge } from 'rxjs';
 import { MediaMatcher } from '@angular/cdk/layout';
-import { HttpClient } from '@angular/common/http';
-import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
-// import { Observable, merge} from 'rxjs';
-// import { merge} from 'rxjs';
-import { of as observableOf } from 'rxjs';
-import { catchError } from 'rxjs/operators';
-import { map } from 'rxjs/operators';
-import { startWith } from 'rxjs/operators';
-import { switchMap } from 'rxjs/operators';
+import { Subscription } from 'rxjs';
 
-import { MatDialog } from '@angular/material';
-import { MoreInfoDialogComponent } from '../shared/more-info-dialog/more-info-dialog.component';
+import { MatPaginator, MatSort, MatTableDataSource, MatDialog } from '@angular/material';
 
 import { ChangeBreadcrumbService } from '../../common/services/changeBreadcrumb.service';
 import { SeoService } from '../../common/services/SeoService';
 import { ResizeService } from '../../common/services/ResizeService';
 
-import { Product } from '../shared/models/product.model';
-import { ProductsService } from '../shared/services/products.service';
+import { RodentsDialogComponent } from './rodents-dialog/rodents-dialog.component';
 
 
-export class TableFromDatabase {
-    constructor(private productsService: ProductsService) { }
-    getRepoIssues(): Observable<Product[]> {
-        return this.productsService.getProducts(`products/acaricides`);
-    }
-    disconnect() {}
+export interface Rodent {
+    name: string;
+    firmName: string;
+    permission: string;
+    valid?: string;
+    substance: string;
+    dose: string;
+    measure: string;
+    disease: string;
+    period: string;
+    category: number;
 }
+const ELEMENT_DATA: Rodent[] = [
+    {
+        name: 'ФОСТОКСИН пелети',
+        firmName: 'Деция Дегеш',
+        permission: 'Удостоверение N 203/21.01.2005 г.*',
+        substance: '56 % алуминиев фосфид',
+        dose: '2-5',
+        measure: 'пелети/ обитаем ход',
+        disease: '-срещу сляпо куче, къртица, полевка',
+        period: '-',
+        category: 1
+    },
+    {
+        name: 'ФОСТОКСИН таблетки',
+        firmName: 'Деция Дегеш',
+        permission: 'Удостоверение N 160/16.03.2004г*',
+        substance: '56 % алуминиев фосфид',
+        dose: '20',
+        measure: 'табл./100 м 2',
+        disease: '-срещу сляпо куче',
+        period: '-',
+        category: 1
+    }
+];
 
 @Component({
-    templateUrl: './acaricides.component.html',
-    styleUrls: [ '../shared/pages.scss', './acaricides.component.scss']
+    templateUrl: './rodents.component.html',
+    styleUrls: ['./rodents.component.scss']
 })
+export class RodentsComponent implements OnInit, AfterViewInit, OnDestroy {
 
-export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
-    private title = 'ПРЗ | Акарициди';
-    private description =   'Акарициди. Продуки за растителна защита за борба срещу вредни акари (Жълт лозов акар,  Обикновен ' +
-                            'паяжинообразуващ акар, Доматен акар, Лозова краста, Червен овощен акар и други). ';
-    private keywords = 'акарициди, продуки, растителна, защита, култури, растителнозащитни, пракатики';
+    private title = 'ПРЗ | Родентициди';
+    private description = 'Продукти за борба с гризачи (Родентициди) и други гръбначни неприятели (Сляпо куче и Къртица).';
 
-    breadcrumbName = 'Акарициди';
+    breadcrumbName = 'Родентициди';
 
     mode = '';
-    private link = 'products/acaricides';
+
     bigQuery: MediaQueryList;
     mediumQuery: MediaQueryList;
     smallQuery: MediaQueryList;
@@ -52,13 +68,8 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
     private resizeSubscription: Subscription;
     private _mobileQueryListener: () => void;
 
-    displayedColumns = ['name', 'substance', 'dose', 'category'];
-    exampleDatabase: TableFromDatabase | null;
-    dataSource = new MatTableDataSource();
-
-    resultsLength = 0;
-    isLoadingResults = true;
-    isRateLimitReached = false;
+    displayedColumns: string[] = ['name', 'substances', 'dose', 'disease', 'period', 'category', 'moreDetails'];
+    dataSource = new MatTableDataSource(ELEMENT_DATA);
 
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
@@ -66,15 +77,13 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
     constructor(
         private changeBreadcrumb: ChangeBreadcrumbService,
         private seoService: SeoService,
-        private productsService: ProductsService,
-        private http: HttpClient,
         public dialog: MatDialog,
         private resizeService: ResizeService,
         changeDetectorRef: ChangeDetectorRef,
         media: MediaMatcher
     ) {
         this.seoService.addTitle(this.title);
-        this.seoService.setMeta(this.description, this.keywords);
+        this.seoService.setNoKeywordsMeta(this.description);
 
         this._mobileQueryListener = () => changeDetectorRef.detectChanges();
         this.bigQuery = media.matchMedia('(max-width: 850px)');
@@ -118,30 +127,6 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
 
     ngOnInit() {
         this.changeBreadcrumb.emitName(this.breadcrumbName);
-
-        this.exampleDatabase = new TableFromDatabase(this.productsService);
-
-        merge()
-        .pipe(
-            startWith({}),
-            switchMap(() => {
-                this.isLoadingResults = true;
-                return this.exampleDatabase.getRepoIssues();
-            }),
-            map(data => {
-                // Flip flag to show that loading has finished.
-                this.isLoadingResults = false;
-                this.isRateLimitReached = false;
-                this.resultsLength = data.length;
-
-                return data;
-            }),
-            catchError(() => {
-                this.isLoadingResults = false;
-                this.isRateLimitReached = true;
-                return observableOf([]);
-            })
-        ).subscribe(data => this.dataSource.data = data);
     }
 
     ngAfterViewInit() {
@@ -168,9 +153,9 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
         this.dataSource.filter = filterValue;
     }
 
-    openDialog(name: any, info: any) {
-        const dialogRef = this.dialog.open(MoreInfoDialogComponent, {
-            data: { product: name, data: info, link: this.link},
+    openDialog(info: any) {
+        const dialogRef = this.dialog.open(RodentsDialogComponent, {
+            data: { data: info },
             width: this.mode
         });
     }
@@ -183,4 +168,5 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
             this.resizeSubscription.unsubscribe();
         }
     }
+
 }

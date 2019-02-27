@@ -16,12 +16,17 @@ import { MatPaginatorModule, MatPaginatorIntl } from '@angular/material';
 import { getBulgarianPaginatorIntl } from './shared/services/CustomPaginator';
 
 import { ProductsComponent } from './products.component';
-import { AcaricidesComponent } from './acaricides/acaricides.component';
 import { MoreInfoDialogComponent } from './shared/more-info-dialog/more-info-dialog.component';
-import { AcaricideDetailComponent } from './acaricides/acaricide-detail/acaricide-detail.component';
-import { InsecticidesComponent } from './insecticides/insecticides.component';
-import { ParallelComponent } from './parallel/parallel.component';
 import { MoreDialogComponent } from './parallel/more-dialog/more-dialog.component';
+import { InsecticidesComponent } from './insecticides/insecticides.component';
+import { AcaricidesComponent } from './acaricides/acaricides.component';
+import { AcaricideDetailComponent } from './acaricides/acaricide-detail/acaricide-detail.component';
+import { NematocidesComponent } from './nematocides/nematocides.component';
+import { NematocideDetailComponent } from './nematocides/nematocide-detail/nematocide-detail.component';
+import { RodentsComponent } from './rodents/rodents.component';
+import { RodentsDialogComponent } from './rodents/rodents-dialog/rodents-dialog.component';
+import { RepellentsComponent } from './repellents/repellents.component';
+import { ParallelComponent } from './parallel/parallel.component';
 
 @NgModule({
     imports: [
@@ -33,18 +38,23 @@ import { MoreDialogComponent } from './parallel/more-dialog/more-dialog.componen
         MatTableModule
     ],
     declarations: [
-        AcaricidesComponent,
         ProductsComponent,
         MoreInfoDialogComponent,
-        AcaricideDetailComponent,
+        MoreDialogComponent,
+        RodentsDialogComponent,
         InsecticidesComponent,
+        AcaricidesComponent,
+        AcaricideDetailComponent,
+        NematocidesComponent,
+        NematocideDetailComponent,
+        RodentsComponent,
+        RepellentsComponent,
         ParallelComponent,
-        MoreDialogComponent
     ],
     providers: [
         ProductsService,
         { provide: MatPaginatorIntl, useValue: getBulgarianPaginatorIntl() }
     ],
-    entryComponents: [MoreInfoDialogComponent, MoreDialogComponent],
+    entryComponents: [MoreInfoDialogComponent, MoreDialogComponent, RodentsDialogComponent],
 })
 export class ProductsModule { }

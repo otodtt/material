@@ -1,15 +1,14 @@
-import { Component, OnInit, ViewChild, AfterViewInit, ChangeDetectorRef, OnDestroy } from '@angular/core';
+import {Component, OnInit, ViewChild, AfterViewInit, ChangeDetectorRef, OnDestroy } from '@angular/core';
 import { Subscription, Observable, merge } from 'rxjs';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { HttpClient } from '@angular/common/http';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
-// import { Observable, merge} from 'rxjs';
-// import { merge} from 'rxjs';
-import { of as observableOf } from 'rxjs';
-import { catchError } from 'rxjs/operators';
-import { map } from 'rxjs/operators';
-import { startWith } from 'rxjs/operators';
-import { switchMap } from 'rxjs/operators';
+
+import {of as observableOf} from 'rxjs';
+import {catchError} from 'rxjs/operators';
+import {map} from 'rxjs/operators';
+import {startWith} from 'rxjs/operators';
+import {switchMap} from 'rxjs/operators';
 
 import { MatDialog } from '@angular/material';
 import { MoreInfoDialogComponent } from '../shared/more-info-dialog/more-info-dialog.component';
@@ -25,26 +24,27 @@ import { ProductsService } from '../shared/services/products.service';
 export class TableFromDatabase {
     constructor(private productsService: ProductsService) { }
     getRepoIssues(): Observable<Product[]> {
-        return this.productsService.getProducts(`products/acaricides`);
+        return this.productsService.getProducts(`products/nematocides`);
     }
     disconnect() {}
 }
 
 @Component({
-    templateUrl: './acaricides.component.html',
-    styleUrls: [ '../shared/pages.scss', './acaricides.component.scss']
+    templateUrl: './nematocides.component.html',
+    styleUrls: [ '../shared/pages.scss', './nematocides.component.scss' ]
 })
+export class NematocidesComponent implements OnInit, AfterViewInit, OnDestroy {
 
-export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
-    private title = 'ПРЗ | Акарициди';
-    private description =   'Акарициди. Продуки за растителна защита за борба срещу вредни акари (Жълт лозов акар,  Обикновен ' +
-                            'паяжинообразуващ акар, Доматен акар, Лозова краста, Червен овощен акар и други). ';
-    private keywords = 'акарициди, продуки, растителна, защита, култури, растителнозащитни, пракатики';
+    private title = 'ПРЗ | Нематоциди';
+    private description =   'Нематоциди. Продуки за растителна защита за борба срещу нематоди от рода Meloidogyne spp, ' +
+                            'срещу галови и цистообразуващи нематоди.';
+    private keywords = 'нематоциди, продуки, растителна, защита, култури, растителнозащитни, пракатики';
 
-    breadcrumbName = 'Акарициди';
+    breadcrumbName = 'Нематоциди';
 
     mode = '';
-    private link = 'products/acaricides';
+
+    private link = 'products/nematocides';
     bigQuery: MediaQueryList;
     mediumQuery: MediaQueryList;
     smallQuery: MediaQueryList;
@@ -148,7 +148,7 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
 
-        this.resizeSubscription = this.resizeService.onResize$
+      this.resizeSubscription = this.resizeService.onResize$
         .subscribe(size => {
             if (size.innerWidth > 768) {
                 this.mode = '60%';
@@ -173,6 +173,14 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
             data: { product: name, data: info, link: this.link},
             width: this.mode
         });
+
+        // this.dialog.open(MoreInfoDialogComponent, {
+        //     data: { product: name, data: info, link: this.link },
+        //     width: this.mode
+        // });
+
+        // console.log(this.dialog.open);
+        // console.log(this.mode);
     }
 
     ngOnDestroy() {
@@ -183,4 +191,5 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
             this.resizeSubscription.unsubscribe();
         }
     }
+
 }

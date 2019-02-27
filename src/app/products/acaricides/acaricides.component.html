@@ -32,6 +32,7 @@
                     </mat-header-cell>
                     <mat-cell *matCellDef="let row">
                             <a matLine [routerLink]="[row.id]" matTooltip="Подробно за продукта">
+                            <!-- <a matLine routerLink="../acaricide/{{row.id}}" matTooltip="Подробно за продукта"> -->
                                 <p class="cell_in">{{ row.name }}</p>
                             </a>
                             <p class="firm-name">{{ row.firmName }}</p>
@@ -86,8 +87,8 @@
                     <mat-header-cell *matHeaderCellDef
                                     mat-sort-header
                                     disableClear="true">
-                        <i class="material-icons my-material-icons">&#xE164;</i>&nbsp;
-                        <span class="category-span">Кат. на<br/>употреба</span>
+                        <!-- <i class="material-icons my-material-icons">&#xE164;</i>&nbsp; -->
+                        <span class="category-span" > &nbsp; Кат. на<br/>употреба</span>
                     </mat-header-cell>
                     <mat-cell *matCellDef="let row" class="category-collum">
                         {{ row.category }}
