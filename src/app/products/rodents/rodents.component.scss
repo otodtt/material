@@ -1,6 +1,7 @@
 .container {
     width: 95%;
     margin: 0 auto;
+    min-height: 800px;
     .row-header{
         h1 {
             font-size: 2em;
@@ -97,7 +98,7 @@
   .mat-column-period {
     display: none;
   }
-  
+
   .mat-column-moreDetails {
     max-width: 15%;
   }
@@ -111,7 +112,7 @@
   .mat-column-period {
     display: none;
   }
-  
+
   .mat-column-moreDetails {
     max-width: 15%;
   }
@@ -128,7 +129,7 @@
   .mat-column-disease {
     display: none;
   }
-  
+
   .mat-column-moreDetails {
     max-width: 15%;
   }
@@ -192,5 +193,5 @@
   .mat-column-moreDetails {
     max-width: 35%;
   }
-    
+
 }
