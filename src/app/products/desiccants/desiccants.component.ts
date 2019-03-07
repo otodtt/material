@@ -30,12 +30,12 @@ export class TableFromDatabase {
 }
 
 @Component({
-  templateUrl: './desiccants.component.html',
-  styleUrls: [ '../shared/pages.scss', './desiccants.component.scss']
+    templateUrl: './desiccants.component.html',
+    styleUrls: [ '../shared/pages.scss', './desiccants.component.scss']
 })
 export class DesiccantsComponent implements OnInit, AfterViewInit, OnDestroy {
 
-  private title = 'ПРЗ | Десиканти и Дефолианти';
+    private title = 'ПРЗ | Десиканти и Дефолианти';
     private description = 'Десиканти и Дефолианти. Продуки за растителна защита за отстраняване (десикация) на филизи,  ' +
                           'широколистни плевели, Коренови издънки и други, при картофи, лозя, пшеница, ечемик и други.';
     private keywords = 'десиканти, дефолианти, продуки, растителна, защита, култури, растителнозащитни, пракатики';
