@@ -25,36 +25,48 @@ import { NematocidesComponent } from './nematocides/nematocides.component';
 import { NematocideDetailComponent } from './nematocides/nematocide-detail/nematocide-detail.component';
 import { RodentsComponent } from './rodents/rodents.component';
 import { RodentsDialogComponent } from './rodents/rodents-dialog/rodents-dialog.component';
+import { LimatsidesComponent } from './limatsides/limatsides.component';
+import { LimatsideDetailComponent } from './limatsides/limatside-detail/limatside-detail.component';
 import { RepellentsComponent } from './repellents/repellents.component';
+import { PheromonesComponent } from './pheromones/pheromones.component';
+import { PheromonesDetailComponent } from './pheromones/pheromones-detail/pheromones-detail.component';
+import { DesiccantsComponent } from './desiccants/desiccants.component';
 import { ParallelComponent } from './parallel/parallel.component';
+import { DesiccantsDetailComponent } from './desiccants/desiccants-detail/desiccants-detail.component';
 
 @NgModule({
-    imports: [
-        CommonModule,
-        ProductsRoutingModule,
-        ShareComponentsModule,
-        MaterialModule,
-        MatPaginatorModule,
-        MatTableModule
-    ],
-    declarations: [
-        ProductsComponent,
-        MoreInfoDialogComponent,
-        MoreDialogComponent,
-        RodentsDialogComponent,
-        InsecticidesComponent,
-        AcaricidesComponent,
-        AcaricideDetailComponent,
-        NematocidesComponent,
-        NematocideDetailComponent,
-        RodentsComponent,
-        RepellentsComponent,
-        ParallelComponent,
-    ],
-    providers: [
-        ProductsService,
-        { provide: MatPaginatorIntl, useValue: getBulgarianPaginatorIntl() }
-    ],
-    entryComponents: [MoreInfoDialogComponent, MoreDialogComponent, RodentsDialogComponent],
+  imports: [
+    CommonModule,
+    ProductsRoutingModule,
+    ShareComponentsModule,
+    MaterialModule,
+    MatPaginatorModule,
+    MatTableModule
+  ],
+  declarations: [
+    ProductsComponent,
+    MoreInfoDialogComponent,
+    MoreDialogComponent,
+    RodentsDialogComponent,
+    InsecticidesComponent,
+    AcaricidesComponent,
+    AcaricideDetailComponent,
+    NematocidesComponent,
+    NematocideDetailComponent,
+    RodentsComponent,
+    LimatsidesComponent,
+    LimatsideDetailComponent,
+    RepellentsComponent,
+    PheromonesComponent,
+    PheromonesDetailComponent,
+    DesiccantsComponent,
+    ParallelComponent,
+    DesiccantsDetailComponent,
+  ],
+  providers: [
+    ProductsService,
+    { provide: MatPaginatorIntl, useValue: getBulgarianPaginatorIntl() }
+  ],
+  entryComponents: [MoreInfoDialogComponent, MoreDialogComponent, RodentsDialogComponent],
 })
 export class ProductsModule { }
