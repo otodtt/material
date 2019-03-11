@@ -32,6 +32,8 @@ import { PheromonesComponent } from './pheromones/pheromones.component';
 import { PheromonesDetailComponent } from './pheromones/pheromones-detail/pheromones-detail.component';
 import { DesiccantsComponent } from './desiccants/desiccants.component';
 import { DesiccantsDetailComponent } from './desiccants/desiccants-detail/desiccants-detail.component';
+import { RegulatorsComponent } from './regulators/regulators.component';
+import { RegulatorDetailComponent } from './regulators/regulator-detail/regulator-detail.component';
 import { ParallelComponent } from './parallel/parallel.component';
 
 @NgModule({
@@ -60,8 +62,10 @@ import { ParallelComponent } from './parallel/parallel.component';
     PheromonesComponent,
     PheromonesDetailComponent,
     DesiccantsComponent,
-    ParallelComponent,
     DesiccantsDetailComponent,
+    RegulatorsComponent,
+    RegulatorDetailComponent,
+    ParallelComponent,
   ],
   providers: [
     ProductsService,

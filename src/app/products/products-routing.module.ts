@@ -16,6 +16,8 @@ import { PheromonesComponent } from './pheromones/pheromones.component';
 import { PheromonesDetailComponent } from './pheromones/pheromones-detail/pheromones-detail.component';
 import { DesiccantsComponent } from './desiccants/desiccants.component';
 import { DesiccantsDetailComponent } from './desiccants/desiccants-detail/desiccants-detail.component';
+import { RegulatorsComponent } from './regulators/regulators.component';
+import { RegulatorDetailComponent } from './regulators/regulator-detail/regulator-detail.component';
 import { ParallelComponent } from './parallel/parallel.component';
 
 export const routes: Routes = [
@@ -35,6 +37,8 @@ export const routes: Routes = [
       { path: 'pheromones/:id', component: PheromonesDetailComponent },
       { path: 'desiccants', component: DesiccantsComponent },
       { path: 'desiccants/:id', component: DesiccantsDetailComponent },
+      { path: 'regulators', component: RegulatorsComponent },
+      { path: 'regulators/:id', component: RegulatorDetailComponent },
       { path: 'parallel-trade', component: ParallelComponent },
     ]
   }

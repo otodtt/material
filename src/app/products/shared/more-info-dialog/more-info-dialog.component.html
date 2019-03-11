@@ -41,7 +41,7 @@
 
                 <hr *ngIf="data.data.application !== null">
                 <p *ngIf="data.data.application !== null">
-                    <span class="bold">Употреба:</span> {{ data.data.application }}
+                    <span class="bold">Употреба: </span> <span [innerHTML]="data.data.application | safeHtml" >Употреба:</span>
                 </p>
         </mat-card-content>
     </mat-card>

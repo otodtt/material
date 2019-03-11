@@ -189,6 +189,4 @@ export class DesiccantsComponent implements OnInit, AfterViewInit, OnDestroy {
             this.resizeSubscription.unsubscribe();
         }
     }
-
-
 }
