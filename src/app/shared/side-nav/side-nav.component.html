@@ -13,7 +13,6 @@
                     <li *ngFor="let page of pages; let i = index" >
                         <a mat-button 
                             *ngIf="page.subPage !== null"
-                            
                             [class.active]="isActiveClass && page.id == pageId"
                             (click)="rotate(i)">
                             <i class="material-icons">chevron_right</i>

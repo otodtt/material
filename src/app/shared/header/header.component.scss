@@ -25,10 +25,20 @@ $gray: rgb(100, 100, 100);
 .a-top {
     color: $white;
     font-size: 14px;
+    
 }
 .mat-list-base .mat-list-item {
     width: initial !important;
 }
+
+
+::ng-deep .my-home-icon {
+    margin-top: 10px;
+}
+
+// i .my-home-icon {
+//     margin-top: 10px;
+// }
 .nav-list {
     float: left;
     position: relative;
@@ -48,6 +58,7 @@ $gray: rgb(100, 100, 100);
         background: #fafafa;
         border-top: 1px solid rgb(190, 190, 190);
         border-bottom: 2px solid rgb(190, 190, 190);
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         .sub-menu {
             height: 40px;
             border-bottom: 1px solid rgb(190, 190, 190);
@@ -67,10 +78,10 @@ $gray: rgb(100, 100, 100);
         }
     }
     // Решение ако се скрива дропдаун менюто в ляво
-    // В цомпонента се добавя клас в зависимост от избора Виж цомпонента!
-    // .practices {
-    //     left: -80px;
-    // }
+    // В компонента се добавя клас в зависимост от избора Виж компонента!
+    .practices {
+        left: -80px;
+    }
 }
 .nav-list:hover {
     background: $white;
@@ -140,7 +151,7 @@ $gray: rgb(100, 100, 100);
     color: rgb(255, 255, 255)
 }
 #aa-practices, #aa-documents, #aa-products, #aa-crops, #aa-contacts,
-#aa-management, #aa-phases, #aa-formulations  {
+#aa-management, #aa-phases, #aa-formulations, #aa-registers  {
     height: 200px;
     background-size: cover;
     padding-bottom: 0 !important;
@@ -182,7 +193,7 @@ $gray: rgb(100, 100, 100);
 /*-------------------------------
     Shift NAV BAR SMALL BUTTIN
  -------------------------------*/
-@media (min-width: 891px) {
+ @media (min-width: 891px) {
     #navigation-button {
         display: none;
     }
@@ -209,6 +220,10 @@ $gray: rgb(100, 100, 100);
     }
     #aa-formulations {
         background-image: url('../../../assets/img/header-bg/formulations-bg.jpg');
+    }
+
+    #aa-registers {
+        background-image: url('../../../assets/img/header-bg/registers-bg.jpg');
     }
 }
 @media (max-width: 890px) {
@@ -238,6 +253,9 @@ $gray: rgb(100, 100, 100);
     }
     #aa-formulations {
         background-image: url('../../../assets/img/header-bg/formulations-bg-955px.jpg');
+    }
+    #aa-registers {
+        background-image: url('../../../assets/img/header-bg/registers-bg-955px.jpg');
     }
 }
 /*-------------------------------
@@ -275,6 +293,9 @@ $gray: rgb(100, 100, 100);
     #aa-formulations {
         background-image: url('../../../assets/img/header-bg/formulations-bg-768px.jpg');
     }
+    #aa-registers {
+        background-image: url('../../../assets/img/header-bg/registers-bg-768px.jpg');
+    }
 }
 
 /* ##Device = Tablets, Ipads (landscape) ##Screen = B/w 768px to 1024px*/
@@ -303,7 +324,10 @@ $gray: rgb(100, 100, 100);
     #aa-formulations {
         background-image: url('../../../assets/img/header-bg/formulations-bg-768px.jpg');
     }
-
+    #aa-registers {
+        background-image: url('../../../assets/img/header-bg/registers-bg-768px.jpg');
+    }
+    
 }
 
 /* ##Device = Low Resolution Tablets, Mobiles (Landscape) ##Screen = B/w 481px to 767px*/
@@ -331,6 +355,9 @@ $gray: rgb(100, 100, 100);
     }
     #aa-formulations {
         background-image: url('../../../assets/img/header-bg/formulations-bg-481px.jpg');
+    }
+    #aa-registers {
+        background-image: url('../../../assets/img/header-bg/registers-bg-481px.jpg');
     }
 }
 
@@ -363,14 +390,17 @@ $gray: rgb(100, 100, 100);
     #aa-phases {
         background-image: url('../../../assets/img/header-bg/phases-bg-320px.jpg');
     }
+    #aa-formulations {
+        background-image: url('../../../assets/img/header-bg/formulations-bg-320px.jpg');
+    }
+    #aa-registers {
+        background-image: url('../../../assets/img/header-bg/registers-bg-320px.jpg');
+    }
     #header-email {
         display: none;
     }
     .p-in-header {
         font-size: .9em;
-    }
-    #aa-formulations {
-        background-image: url('../../../assets/img/header-bg/formulations-bg-320px.jpg');
     }
 }
 
@@ -404,6 +434,9 @@ $gray: rgb(100, 100, 100);
     }
     #aa-formulations {
         background-image: url('../../../assets/img/header-bg/formulations-bg-320px.jpg');
+    }
+    #aa-registers {
+        background-image: url('../../../assets/img/header-bg/registers-bg-320px.jpg');
     }
     #header-email {
         display: none;
@@ -444,6 +477,9 @@ $gray: rgb(100, 100, 100);
     }
     #aa-formulations {
         background-image: url('../../../assets/img/header-bg/formulations-bg-481px.jpg');
+    }
+    #aa-registers {
+        background-image: url('../../../assets/img/header-bg/registers-bg-481px.jpg');
     }
     #header-email {
         display: none;

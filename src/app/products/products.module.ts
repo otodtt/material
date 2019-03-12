@@ -17,7 +17,6 @@ import { getBulgarianPaginatorIntl } from './shared/services/CustomPaginator';
 
 import { ProductsComponent } from './products.component';
 import { MoreInfoDialogComponent } from './shared/more-info-dialog/more-info-dialog.component';
-import { MoreDialogComponent } from './parallel/more-dialog/more-dialog.component';
 import { InsecticidesComponent } from './insecticides/insecticides.component';
 import { AcaricidesComponent } from './acaricides/acaricides.component';
 import { AcaricideDetailComponent } from './acaricides/acaricide-detail/acaricide-detail.component';
@@ -34,7 +33,6 @@ import { DesiccantsComponent } from './desiccants/desiccants.component';
 import { DesiccantsDetailComponent } from './desiccants/desiccants-detail/desiccants-detail.component';
 import { RegulatorsComponent } from './regulators/regulators.component';
 import { RegulatorDetailComponent } from './regulators/regulator-detail/regulator-detail.component';
-import { ParallelComponent } from './parallel/parallel.component';
 
 @NgModule({
   imports: [
@@ -48,7 +46,6 @@ import { ParallelComponent } from './parallel/parallel.component';
   declarations: [
     ProductsComponent,
     MoreInfoDialogComponent,
-    MoreDialogComponent,
     RodentsDialogComponent,
     InsecticidesComponent,
     AcaricidesComponent,
@@ -65,12 +62,11 @@ import { ParallelComponent } from './parallel/parallel.component';
     DesiccantsDetailComponent,
     RegulatorsComponent,
     RegulatorDetailComponent,
-    ParallelComponent,
   ],
   providers: [
     ProductsService,
     { provide: MatPaginatorIntl, useValue: getBulgarianPaginatorIntl() }
   ],
-  entryComponents: [MoreInfoDialogComponent, MoreDialogComponent, RodentsDialogComponent],
+  entryComponents: [MoreInfoDialogComponent, RodentsDialogComponent],
 })
 export class ProductsModule { }

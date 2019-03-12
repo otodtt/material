@@ -7,6 +7,7 @@ import pages from '../Pages';
 @Component({
     selector: 'prz-header',
     templateUrl: './header.component.html',
+    // templateUrl: './header-test.component.html',
     styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {

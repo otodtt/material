@@ -17,6 +17,7 @@ export const routes: Routes = [
     { path: 'practices', loadChildren: './practices/practices.module#PracticesModule'},
     { path: 'phases', loadChildren: './phases/phases.module#PhasesModule'},
     { path: 'thresholds', loadChildren: './thresholds/thresholds.module#ThresholdsModule'},
+    { path: 'registers', loadChildren: './registers/registers.module#RegistersModule'},
     { path: 'formulations', component: FormulationsComponent },
     { path: 'documents', component: DocumentsComponent },
     { path: 'contacts', component: ContactsComponent },

@@ -31,7 +31,7 @@ const ELEMENT_DATA: Rodent[] = [
         substance: '56 % алуминиев фосфид',
         dose: '2-5',
         measure: 'пелети/ обитаем ход',
-        disease: '-срещу сляпо куче, къртица, полевка',
+        disease: 'Срещу сляпо куче, къртица, полевка',
         period: '-',
         category: 1
     },
@@ -42,7 +42,7 @@ const ELEMENT_DATA: Rodent[] = [
         substance: '56 % алуминиев фосфид',
         dose: '20',
         measure: 'табл./100 м 2',
-        disease: '-срещу сляпо куче',
+        disease: 'Срещу сляпо куче',
         period: '-',
         category: 1
     }

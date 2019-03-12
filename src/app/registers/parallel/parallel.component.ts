@@ -16,13 +16,13 @@ import { ChangeBreadcrumbService } from '../../common/services/changeBreadcrumb.
 import { SeoService } from '../../common/services/SeoService';
 import { ResizeService } from '../../common/services/ResizeService';
 
-import { Product } from '../shared/models/product.model';
-import { ProductsService } from '../shared/services/products.service';
+import { Registers } from './../models/registers.model';
+import { ProductsService } from '../shared/products.service';
 
 
 export class TableFromDatabase {
     constructor(private productsService: ProductsService) { }
-    getRepoIssues(): Observable<Product[]> {
+    getRepoIssues(): Observable<Registers[]> {
       return this.productsService.getProducts(`products/parallel`);
     }
     disconnect() {}

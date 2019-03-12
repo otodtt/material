@@ -20,7 +20,17 @@
 
                 <mat-nav-list id="navigation-top" >
                     <mat-list-item *ngFor="let page of pages" class="nav-list" routerLinkActive="nav-list-active">
-                        <a matLine 
+                        <a matLine [innerHTML]="page.nameIcon | safeHtml"
+                            *ngIf="page.subPage === null"
+                            [routerLink]="page.link"
+                            routerLinkActive="active"
+                            class="a-top">
+                        </a>
+                        <a matLine [innerHTML]="page.nameIcon | safeHtml"
+                            *ngIf="page.subPage !== null"
+                            class="a-top active-non-link">
+                        </a>
+                        <!-- <a matLine 
                             *ngIf="page.subPage === null"
                             [routerLink]="page.link"
                             routerLinkActive="active"
@@ -31,13 +41,13 @@
                             *ngIf="page.subPage !== null"
                             class="a-top active-non-link">
                             {{ page.name | uppercase }}
-                        </a>
+                        </a> -->
                         <button mat-icon-button *ngIf="page.subPage !== null">
                             <mat-icon class="btn-active">expand_more</mat-icon>
                         </button>
                         <!-- Решение ако се скрива дропдаун менюто в ляво Виж хтмл -а! -->
-                        <!-- <div *ngIf="page.subPage !== null" class="nav-dropdown" [ngClass]="page.link"> -->
-                        <div *ngIf="page.subPage !== null" class="nav-dropdown" >
+                        <div *ngIf="page.subPage !== null" class="nav-dropdown" [ngClass]="page.link">
+                        <!-- <div *ngIf="page.subPage !== null" class="nav-dropdown" > -->
                             <mat-list-item class="sub-menu" *ngFor="let sp of page.subPage">
                                 <a matLine
                                     [routerLink]="sp.link"
@@ -60,5 +70,4 @@
             <a class="bredacrumb-link" [routerLink]="['/home']" (click)="removeClass()">НАЧАЛО</a> / {{newBreadcrumbName}}
         </span>
     </div>
-    
 </div>
