@@ -3,14 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { RegistersComponent } from './registers.component';
 import { ParallelComponent } from './parallel/parallel.component';
+import { AdjuvantsComponent } from './adjuvants/adjuvants.component';
 
 export const routes: Routes = [
     {
       path: '', component: RegistersComponent, children: [
         { path: '', redirectTo: '/firms', pathMatch: 'full' },
         { path: 'parallel-trade', component: ParallelComponent },
-        // { path: 'acaricides', component: AcaricidesComponent },
-        // { path: 'acaricides/:id', component: AcaricideDetailComponent },
+        { path: 'adjuvants', component: AdjuvantsComponent },
         // { path: 'nematocides', component: NematocidesComponent },
         // { path: 'nematocides/:id', component: NematocideDetailComponent },
         // { path: 'rodenticides', component: RodentsComponent },

@@ -18,6 +18,8 @@ import { MoreDialogComponent } from './parallel/more-dialog/more-dialog.componen
 
 import { RegistersComponent } from './registers.component';
 import { ParallelComponent } from './parallel/parallel.component';
+import { AdjuvantsComponent } from './adjuvants/adjuvants.component';
+import { DialogAdjuvantsComponent } from './adjuvants/dialog-adjuvants/dialog-adjuvants.component';
 
 @NgModule({
   imports: [
@@ -32,11 +34,13 @@ import { ParallelComponent } from './parallel/parallel.component';
     RegistersComponent,
     MoreDialogComponent,
     ParallelComponent,
+    AdjuvantsComponent,
+    DialogAdjuvantsComponent,
   ],
   providers: [
     ProductsService,
     { provide: MatPaginatorIntl, useValue: getBulgarianPaginatorIntl() }
   ],
-  entryComponents: [ MoreDialogComponent ],
+  entryComponents: [ MoreDialogComponent, DialogAdjuvantsComponent ],
 })
 export class RegistersModule { }

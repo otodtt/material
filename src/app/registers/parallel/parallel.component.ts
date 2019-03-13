@@ -40,7 +40,6 @@ export class ParallelComponent implements OnInit, AfterViewInit, OnDestroy {
 
     mode = '';
 
-    // private link = 'products/parallel-trade';
     bigQuery: MediaQueryList;
     mediumQuery: MediaQueryList;
     smallQuery: MediaQueryList;
