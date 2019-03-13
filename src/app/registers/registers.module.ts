@@ -20,6 +20,7 @@ import { RegistersComponent } from './registers.component';
 import { ParallelComponent } from './parallel/parallel.component';
 import { AdjuvantsComponent } from './adjuvants/adjuvants.component';
 import { DialogAdjuvantsComponent } from './adjuvants/dialog-adjuvants/dialog-adjuvants.component';
+import { SubstancesComponent } from './substances/substances.component';
 
 @NgModule({
   imports: [
@@ -36,6 +37,7 @@ import { DialogAdjuvantsComponent } from './adjuvants/dialog-adjuvants/dialog-ad
     ParallelComponent,
     AdjuvantsComponent,
     DialogAdjuvantsComponent,
+    SubstancesComponent,
   ],
   providers: [
     ProductsService,

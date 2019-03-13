@@ -1,0 +1,44 @@
+<mat-card class="example-card second-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header"></div>
+    <mat-card-title>РАЗРЕШЕН ЗА УПОТРЕБА ПРИ:</mat-card-title>
+  </mat-card-header>
+  <mat-accordion class="example-headers-align">
+    <div class="wrap-expansion" *ngFor="let dose of substances; let i = index; let isOdd=odd; let isEven=even"
+      [class.odd]="isOdd" [class.even]="isEven">
+      <!-- <p>{{ dose.name }}</p> -->
+      <mat-expansion-panel [expanded]="step === i" hideToggle="false" role="button" (opened)="setStep(i)">
+        <mat-expansion-panel-header>
+          <!-- <mat-panel-title>{{ dose.crop }}</mat-panel-title> -->
+          <mat-panel-title>{{ dose.name }}</mat-panel-title>
+          <!-- <mat-panel-description>
+                                        <span *ngIf="dose.crop === null">подробно</span>
+                                    </mat-panel-description> -->
+        </mat-expansion-panel-header>
+
+        <ol>
+          <li *ngFor="let prod of dose.products">{{prod.pesticide_name}}</li>
+        </ol>
+        <!-- <mat-form-field>
+          <input matInput placeholder="First name">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="Age">
+        </mat-form-field> -->
+
+        <!-- <mat-action-row>
+          <button mat-button color="warn" (click)="prevStep()">Previous</button>
+          <button mat-button color="primary" (click)="nextStep()">End</button>
+        </mat-action-row> -->
+        <mat-action-row>
+          <button mat-button *ngIf="i !== 0" color="warn" (click)="prevStep()">Предишна</button>
+          <button *ngIf="substances?.length !== i+1" mat-button color="primary"
+            (click)="nextStep()">Следваща</button>
+          <button *ngIf="substances?.length === i+1" mat-button color="primary" (click)="nextStep()">Край</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+    </div>
+
+  </mat-accordion>
+</mat-card>

@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { RegistersComponent } from './registers.component';
 import { ParallelComponent } from './parallel/parallel.component';
 import { AdjuvantsComponent } from './adjuvants/adjuvants.component';
+import { SubstancesComponent } from './substances/substances.component';
 
 export const routes: Routes = [
     {
@@ -11,8 +12,7 @@ export const routes: Routes = [
         { path: '', redirectTo: '/firms', pathMatch: 'full' },
         { path: 'parallel-trade', component: ParallelComponent },
         { path: 'adjuvants', component: AdjuvantsComponent },
-        // { path: 'nematocides', component: NematocidesComponent },
-        // { path: 'nematocides/:id', component: NematocideDetailComponent },
+        { path: 'substances', component: SubstancesComponent },
         // { path: 'rodenticides', component: RodentsComponent },
         // { path: 'limatsides', component: LimatsidesComponent },
         // { path: 'limatsides/:id', component: LimatsideDetailComponent },

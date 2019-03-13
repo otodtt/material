@@ -78,24 +78,6 @@ const pages = [
                 subName: 'Растежни регулатори',
                 link: 'products/regulators'
             },
-            // {
-            //     id: 11,
-            //     pageId: 1,
-            //     subName: 'Паралелна търговия',
-            //     link: 'products/parallel-trade'
-            // },
-            // {
-            //     id: 12,
-            //     pageId: 1,
-            //     subName: 'Адюванти',
-            //     link: 'products/adjuvants'
-            // },
-            // {
-            //     id: 13,
-            //     pageId: 1,
-            //     subName: 'А. Вещества',
-            //     link: 'products/substances'
-            // },
         ]
     },
     {
