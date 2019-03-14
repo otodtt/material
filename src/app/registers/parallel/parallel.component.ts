@@ -73,12 +73,15 @@ export class ParallelComponent implements OnInit, AfterViewInit, OnDestroy {
 
         this._mobileQueryListener = () => changeDetectorRef.detectChanges();
         this.bigQuery = media.matchMedia('(max-width: 850px)');
+        // tslint:disable-next-line: deprecation
         this.bigQuery.addListener(this._mobileQueryListener);
 
         this.mediumQuery = media.matchMedia('(max-width: 768px)');
+        // tslint:disable-next-line: deprecation
         this.mediumQuery.addListener(this._mobileQueryListener);
 
         this.smallQuery = media.matchMedia('(max-width: 481px)');
+        // tslint:disable-next-line: deprecation
         this.smallQuery.addListener(this._mobileQueryListener);
 
         if (
@@ -171,12 +174,15 @@ export class ParallelComponent implements OnInit, AfterViewInit, OnDestroy {
     }
 
     ngOnDestroy() {
-        this.bigQuery.removeListener(this._mobileQueryListener);
-        this.mediumQuery.removeListener(this._mobileQueryListener);
-        this.smallQuery.removeListener(this._mobileQueryListener);
-        if (this.resizeSubscription) {
-            this.resizeSubscription.unsubscribe();
-        }
+      // tslint:disable-next-line: deprecation
+      this.bigQuery.removeListener(this._mobileQueryListener);
+      // tslint:disable-next-line: deprecation
+      this.mediumQuery.removeListener(this._mobileQueryListener);
+      // tslint:disable-next-line: deprecation
+      this.smallQuery.removeListener(this._mobileQueryListener);
+      if (this.resizeSubscription) {
+        this.resizeSubscription.unsubscribe();
+      }
     }
 
 }
