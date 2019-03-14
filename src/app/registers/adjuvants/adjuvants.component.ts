@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, AfterViewInit, ChangeDetectorRef, OnDestroy } from '@angular/core';
 import { Subscription, Observable, merge } from 'rxjs';
 import { MediaMatcher } from '@angular/cdk/layout';
-import { HttpClient } from '@angular/common/http';
+// import { HttpClient } from '@angular/common/http';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 import {of as observableOf} from 'rxjs';
 import {catchError} from 'rxjs/operators';
@@ -27,7 +27,6 @@ export class TableFromDatabase {
     }
     disconnect() {}
 }
-
 
 @Component({
   templateUrl: './adjuvants.component.html',
@@ -63,7 +62,7 @@ export class AdjuvantsComponent implements OnInit, AfterViewInit, OnDestroy {
     private changeBreadcrumb: ChangeBreadcrumbService,
     private seoService: SeoService,
     private productsService: ProductsService,
-    private http: HttpClient,
+    // private http: HttpClient,
     public dialog: MatDialog,
     private resizeService: ResizeService,
     changeDetectorRef: ChangeDetectorRef,

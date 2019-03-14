@@ -1,44 +1,82 @@
-<mat-card class="example-card second-card">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header"></div>
-    <mat-card-title>РАЗРЕШЕН ЗА УПОТРЕБА ПРИ:</mat-card-title>
-  </mat-card-header>
-  <mat-accordion class="example-headers-align">
-    <div class="wrap-expansion" *ngFor="let dose of substances; let i = index; let isOdd=odd; let isEven=even"
-      [class.odd]="isOdd" [class.even]="isEven">
-      <!-- <p>{{ dose.name }}</p> -->
-      <mat-expansion-panel [expanded]="step === i" hideToggle="false" role="button" (opened)="setStep(i)">
-        <mat-expansion-panel-header>
-          <!-- <mat-panel-title>{{ dose.crop }}</mat-panel-title> -->
-          <mat-panel-title>{{ dose.name }}</mat-panel-title>
-          <!-- <mat-panel-description>
-                                        <span *ngIf="dose.crop === null">подробно</span>
-                                    </mat-panel-description> -->
-        </mat-expansion-panel-header>
+<section>
+    <div class="container">
+        <div class="row-header">
+            <h1>ПРОДУКТИ ЗА РАСТИТЕЛНА ЗАЩИТА, РАЗРЕШЕНИ ЗА ПАРАЛЕЛНА ТЪРГОВИЯ В БЪЛГАРИЯ</h1>
+        </div>
+        <div class="example-container mat-elevation-z8">
+            <div class="example-loading-shade"
+                *ngIf="isLoadingResults || isRateLimitReached">
+                <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+                <div class="example-rate-limit-reached" *ngIf="isRateLimitReached">
+                    Моля, презаредете страницата отново!
+                </div>
+            </div>
+    
+            <div class="example-header">
+                <mat-form-field>
+                    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Филтър">
+                </mat-form-field>
+            </div>
 
-        <ol>
-          <li *ngFor="let prod of dose.products">{{prod.pesticide_name}}</li>
-        </ol>
-        <!-- <mat-form-field>
-          <input matInput placeholder="First name">
-        </mat-form-field>
-
-        <mat-form-field>
-          <input matInput placeholder="Age">
-        </mat-form-field> -->
-
-        <!-- <mat-action-row>
-          <button mat-button color="warn" (click)="prevStep()">Previous</button>
-          <button mat-button color="primary" (click)="nextStep()">End</button>
-        </mat-action-row> -->
-        <mat-action-row>
-          <button mat-button *ngIf="i !== 0" color="warn" (click)="prevStep()">Предишна</button>
-          <button *ngIf="substances?.length !== i+1" mat-button color="primary"
-            (click)="nextStep()">Следваща</button>
-          <button *ngIf="substances?.length === i+1" mat-button color="primary" (click)="nextStep()">Край</button>
-        </mat-action-row>
-      </mat-expansion-panel>
+            <table mat-table 
+                    matSort matSortActive="name" matSortDisableClear matSortDirection="asc"
+                    [dataSource]="dataSource" multiTemplateDataRows class="example-table">
+                        
+                <ng-container matColumnDef="{{column}}" *ngFor="let column of columnsToDisplay">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                        <mat-icon>sort</mat-icon>
+                    </th>
+                    <td mat-cell *matCellDef="let element; let isOdd=odd; let isEven=even"
+                        [class.odd]="isOdd" [class.even]="isEven"> {{element[column]}} </td>
+                </ng-container>
+                            
+                <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->
+                <ng-container matColumnDef="expandedDetail">
+                    <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplay.length">
+                        <div class="example-element-detail"
+                            [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
+                            <div class="example-element-diagram">
+                                <div class="example-element-position"> tets</div>
+                            
+                            </div>
+                        </div>
+                    </td>
+                </ng-container>
+    
+                <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+                <tr mat-row *matRowDef="let element; columns: columnsToDisplay"
+                    class="example-element-row my-row"
+                    [class.example-expanded-row]="expandedElement === element"
+                    (click)="expandedElement = expandedElement === element ? null : element">
+                </tr>
+                <tr mat-row *matRowDef="let row; columns: ['expandedDetail']"class="example-detail-row"></tr>
+            </table>
+    
+            <mat-paginator #paginator
+                            [pageSize]="10"
+                            [pageSizeOptions]="[20, 50, 100]"
+                            [showFirstLastButtons]="true">
+            </mat-paginator>
+        </div>
     </div>
-
-  </mat-accordion>
-</mat-card>
+</section>
+      
+<!-- <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef
+                    mat-sort-header
+                    disableClear="true"
+                    class="header-name">
+        <span class="product-span">IME</span>
+    </mat-header-cell>
+    <mat-cell *matCellDef="let row">
+        
+        <p class="firm-name" style="display: inline-block; width: 100%;">
+            {{ row.name }}
+            <mat-icon style="float: right">home</mat-icon>
+        </p>
+        <br/>
+        <ol>
+            <li *ngFor="let prod of row.products">{{ prod.pesticide_name }}</li>
+        </ol>
+    </mat-cell>
+</ng-container> -->
