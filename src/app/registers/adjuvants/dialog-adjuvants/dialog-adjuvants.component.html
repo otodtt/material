@@ -33,6 +33,9 @@
             <hr *ngIf="data.data.application !== null">
             <p class="bold" *ngIf="data.data.application !== null" >Употреба с други ПРЗ:</p>
             <p [innerHTML]="data.data.application | safeHtml" *ngIf="data.data.application !== null"></p>
+
+            <p class="bold" *ngIf="data.data.noteApplication !== null" >Забележка:</p>
+            <p class="noteApplication" [innerHTML]="data.data.noteApplication | safeHtml" *ngIf="data.data.noteApplication !== null"></p>
       </mat-card-content>
     </mat-card>
   </mat-dialog-content>
