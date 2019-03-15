@@ -21,6 +21,7 @@ import { ParallelComponent } from './parallel/parallel.component';
 import { AdjuvantsComponent } from './adjuvants/adjuvants.component';
 import { DialogAdjuvantsComponent } from './adjuvants/dialog-adjuvants/dialog-adjuvants.component';
 import { SubstancesComponent } from './substances/substances.component';
+import { DialogSubstancesComponent } from './substances/dialog-substances/dialog-substances.component';
 
 @NgModule({
   imports: [
@@ -38,11 +39,12 @@ import { SubstancesComponent } from './substances/substances.component';
     AdjuvantsComponent,
     DialogAdjuvantsComponent,
     SubstancesComponent,
+    DialogSubstancesComponent,
   ],
   providers: [
     ProductsService,
     { provide: MatPaginatorIntl, useValue: getBulgarianPaginatorIntl() }
   ],
-  entryComponents: [ MoreDialogComponent, DialogAdjuvantsComponent ],
+  entryComponents: [ MoreDialogComponent, DialogAdjuvantsComponent, DialogSubstancesComponent ],
 })
 export class RegistersModule { }

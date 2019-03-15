@@ -3,7 +3,6 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 import { Router } from '@angular/router';
 
 @Component({
-    selector: 'prz-more-info-dialog',
     templateUrl: './more-info-dialog.component.html',
     styleUrls: ['./more-info-dialog.component.scss']
 })

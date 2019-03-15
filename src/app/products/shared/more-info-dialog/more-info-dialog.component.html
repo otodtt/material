@@ -1,5 +1,5 @@
 <mat-dialog-content class="my-dialog-content">
-    <div class="dialog-header" >
+    <div class="dialog-header">
         <h2 *ngIf="data.product.moreNames === null">{{ data.product.name }}</h2>
         <h2 *ngIf="data.product.moreNames !== null">{{ data.product.name }} / {{ data.product.moreNames }}</h2>
         <br>
@@ -7,49 +7,51 @@
     </div>
     <mat-card class="example-card card-top">
         <mat-card-content>
-                <p>
-                    <span class="bold">Активно Вещество:</span> {{ data.product.substance }}
-                </p>
-                <p *ngIf="data.product.category === '1'" >
-                    <span class="bold">Категория на Употреба:</span> Първа Професионална
-                </p>
+            <p>
+                <span class="bold">Активно Вещество:</span> {{ data.product.substance }}
+            </p>
+            <p *ngIf="data.product.category === '1'">
+                <span class="bold">Категория на Употреба:</span> Първа Професионална
+            </p>
 
-                <p *ngIf="data.product.category === '2'" >
-                    <span class="bold">Категория на Употреба:</span> Втора Професионална
-                </p>
-                <p *ngIf="data.product.category === '3'" >
-                    <span class="bold">Категория на Употреба:</span> Непрофесионална
-                </p>
+            <p *ngIf="data.product.category === '2'">
+                <span class="bold">Категория на Употреба:</span> Втора Професионална
+            </p>
+            <p *ngIf="data.product.category === '3'">
+                <span class="bold">Категория на Употреба:</span> Непрофесионална
+            </p>
         </mat-card-content>
     </mat-card>
 
     <mat-card class="example-card">
         <mat-card-content>
-                <p class="bold">{{ data.data.crop }}</p>
-                <span class="bold note afterNote" *ngIf="data.data.note !== null">{{ data.data.note }}</span>
-                <p class="against">Срещу: </p>
-                <span class="td_span" [innerHTML]="data.data.disease | safeHtml"></span><br/>
-                <span class="bold afterNote" *ngIf="data.data.afterNote !== null" [innerHTML]="data.data.afterNote | safeHtml"></span>
-                <hr>
-                <p class="p_dose">
-                    <span class="bold">Доза:</span>
-                    {{ data.data.dose }} {{ data.data.measure }} {{data.data.secondDose}}
-                    <span class="bold" *ngIf="data.data.doseNote !== null">{{ data.data.doseNote }}</span>
-                </p>
-                <hr>
-                <p><span class="bold">Карантинен период (дни):</span> {{ data.data.quarantine }}</p>
+            <p class="bold">{{ data.data.crop }}</p>
+            <span class="bold note afterNote" *ngIf="data.data.note !== null">{{ data.data.note }}</span>
+            <p class="against">Срещу: </p>
+            <span class="td_span" [innerHTML]="data.data.disease | safeHtml"></span><br />
+            <span class="bold afterNote" *ngIf="data.data.afterNote !== null"
+                [innerHTML]="data.data.afterNote | safeHtml"></span>
+            <hr>
+            <p class="p_dose">
+                <span class="bold">Доза:</span>
+                {{ data.data.dose }} {{ data.data.measure }} {{data.data.secondDose}}
+                <span class="bold" *ngIf="data.data.doseNote !== null">{{ data.data.doseNote }}</span>
+            </p>
+            <hr>
+            <p><span class="bold">Карантинен период (дни):</span> {{ data.data.quarantine }}</p>
 
-                <hr *ngIf="data.data.application !== null">
-                <p *ngIf="data.data.application !== null">
-                    <span class="bold">Употреба: </span> <span [innerHTML]="data.data.application | safeHtml" >Употреба:</span>
-                </p>
+            <hr *ngIf="data.data.application !== null">
+            <p *ngIf="data.data.application !== null">
+                <span class="bold">Употреба: </span> <span
+                    [innerHTML]="data.data.application | safeHtml">Употреба:</span>
+            </p>
         </mat-card-content>
     </mat-card>
 
     <mat-card class="example-card" *ngIf="data.product.totalNoteAfterDose !== null">
         <mat-card-content>
-               <p class="bold">Забележка: </p>
-               <span [innerHTML]="data.product.totalNoteAfterDose | safeHtml" ></span>
+            <p class="bold">Забележка: </p>
+            <span [innerHTML]="data.product.totalNoteAfterDose | safeHtml"></span>
         </mat-card-content>
     </mat-card>
 
@@ -57,9 +59,7 @@
 <mat-dialog-actions>
     <button mat-raised-button (click)="onNoClick()">Затвори</button>
     <span class="example-spacer"></span>
-    <button mat-raised-button
-        color="primary"
-        matTooltip="Подробно за Продукта!"
+    <button mat-raised-button color="primary" matTooltip="Подробно за Продукта!"
         (click)="onClickNavigate(data.product.id, data.link)">{{ data.product.name }}
     </button>
 </mat-dialog-actions>

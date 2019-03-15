@@ -2,54 +2,6 @@ table {
   width: 100%;
 }
 
-// tr.example-detail-row {
-//   height: 0;
-// }
-
-// tr.example-element-row:not(.example-expanded-row):hover {
-//   background: #f5f5f5;
-// }
-
-// tr.example-element-row:not(.example-expanded-row):active {
-//   background: #efefef;
-// }
-
-// .example-element-row td {
-//   border-bottom-width: 0;
-// }
-
-// .example-element-detail {
-//   overflow: hidden;
-//   display: flex;
-// }
-
-// .example-element-diagram {
-//   // min-width: 80px;
-//   border: 2px solid black;
-//   padding: 8px;
-//   font-weight: lighter;
-//   margin: 8px 0;
-//   height: 104px;
-// }
-
-// .example-element-symbol {
-//   font-weight: bold;
-//   font-size: 40px;
-//   line-height: normal;
-// }
-
-// .example-element-description {
-//   padding: 16px;
-// }
-
-// .example-element-description-attribution {
-//   opacity: 0.5;
-// }
-
-// .mat-header-row {
-//   width: 100%
-// }
-
 .container {
     width: 95%;
     margin: 0 auto;
@@ -69,8 +21,7 @@ table {
 .example-container {
     display: flex;
     flex-direction: column;
-    // min-width: 300px;
-    min-height: 300px;
+    min-width: 300px;
     position: relative;
     margin-bottom: 20px;
 }
@@ -88,7 +39,7 @@ table {
 
 .example-table {
     overflow: auto;
-    // min-height: 300px;
+    min-height: 300px;
 }
 
 .example-loading-shade {
@@ -110,31 +61,16 @@ table {
     max-width: 360px;
     text-align: center;
 }
-// .mat-header-row {
-//   min-height: 30px;
-// }
+
 .my-header-row > * {
   // justify-content: center;
   background-color:gray;
   color: white !important;
 }
-.mat-column-name {
-  max-width: 20%
-}
-// .header-products {
-//   justify-content: center;
-// }
-.mat-column-products {
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-}
+
 #my-in-table {
-  // display: table;
   width: 100%;
-  // min-height: 64px;
   min-height: 60px;
-  // background: #fafafa;
   .pesticide_type {
     width: 10%;
   }
@@ -149,9 +85,6 @@ table {
     }
   }
 }
-// #my-table-row-show {
-//   display: table-row;
-// }
 
 .mat-row:nth-child(2n+1){
   background: #f1f8e9;
@@ -159,10 +92,6 @@ table {
 .mat-row:nth-child(2n){
   background-color: #dcedc8;
 }
-
-
-// tr:nth-child(2n+1) {background: #CCC}
-// tr:nth-child(2n) {background: #FFF}
 
 .odd{
   // background-color: #dcedc8;
@@ -173,123 +102,132 @@ table {
   background-color: #dcedc8;
 }
 
-// .mat-header-cell > .mat-sort-header-container > .mat-sort-header-arrow {
-//   color: initial;
-// }
-
-
-
-
-// .mat-header-cell:first-of-type {
-//   padding-left: 0;
-// }
-
 ::ng-deep .mat-sort-header-arrow {
    color: white;
 }
 
-// .moreDetails {
-//     max-width: 5%;
-//     justify-content: center;
-//     .more-info-button {
-//       background-color: white;
-//       .material-icons {
-//         color: #7CB342;
-//       }
-//     }
-// }
-// .owner-column {
-//     max-width: 10%;
-// }
+.moreDetails {
+  justify-content: center;
+  .more-info-button {
+    margin-top: 3px;
+    background-color: white;
+    .material-icons {
+      color: #7CB342;
+    }
+  }
+}
+.mat-column-name {
+  max-width: 20%;
+  padding-right: 10px;
+}
 
 
-// .mat-cell {
-//   padding-left: 5px;
-//   padding-right: 5px;
-//   border-left: 1px solid white;
-// }
-
-// .mat-cell:first-of-type {
-//     border-left: none;
-// }
-
-// .product-name {
-//   font-weight: 550;
-//   color: #4a4a4a;
-// }
 
 
-// @media (min-width: 1201px) {}
+@media (min-width: 1201px) {}
 
-// /* ##Device = Laptops, Desktops ##Screen = B/w 1025px to 1280px*/
-// @media (min-width: 1025px) and (max-width: 1200px) {}
+/* ##Device = Laptops, Desktops ##Screen = B/w 1025px to 1280px*/
+@media (min-width: 1025px) and (max-width: 1200px) {}
 
-// /* ##Device = Tablets, Ipads (portrait) ##Screen = B/w 768px to 1024px*/
-// @media (min-width: 768px) and (max-width: 1024px) {}
+/* ##Device = Tablets, Ipads (portrait) ##Screen = B/w 768px to 1024px*/
+@media (min-width: 768px) and (max-width: 1024px) {}
 
-// /* ##Device = Tablets, Ipads (landscape) ##Screen = B/w 768px to 1024px*/
-// @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}
+/* ##Device = Tablets, Ipads (landscape) ##Screen = B/w 768px to 1024px*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {}
 
-// /* ##Device = Low Resolution Tablets, Mobiles (Landscape) ##Screen = B/w 481px to 767px*/
-// @media (min-width: 501px) and (max-width: 767px) {
-//     .mat-column-substances {
-//       display: none;
-//     }
-//     .mat-column-moreDetails {
-//       max-width: 8%;
-//     }
-// }
-// /* ##Device = Most of the Smartphones Mobiles (Portrait) ##Screen = B/w 320px to 479px*/
-// @media  (min-width: 325px) and (max-width: 500px) {
-//     .mat-column-substances {
-//       display: none;
-//     }
-//     .mat-column-referenceProduct {
-//       display: none;
-//     }
-//     .mat-column-manufacturer {
-//       display: none;
-//     }
-//     .mat-column-moreDetails {
-//       max-width: 10%;
-//     }
-//     .mat-column-owner {
-//       max-width: 35%;
-//     }
-// }
+@media (min-width: 767px) {
+  .mat-column-moreDetails {
+    display: none;
+  }
 
-// @media (min-width: 317px) and  (max-width: 324px){
-//    .mat-column-substances {
-//       display: none;
-//     }
-//     .mat-column-referenceProduct {
-//       display: none;
-//     }
-//     .mat-column-manufacturer {
-//       display: none;
-//     }
-//     .mat-column-moreDetails {
-//       max-width: 30%;
-//     }
-//     .mat-column-owner{
-//        display: none;
-//     }
-// }
+  #small-h1 {
+    display: none;
+  }
+}
 
-// @media (max-width: 316px){
-//   .mat-column-substances {
-//       display: none;
-//     }
-//     .mat-column-referenceProduct {
-//       display: none;
-//     }
-//     .mat-column-manufacturer {
-//       display: none;
-//     }
-//     .mat-column-moreDetails {
-//       max-width: 30%;
-//     }
-//     .mat-column-owner{
-//        display: none;
-//     }
-// }
+/* ##Device = Low Resolution Tablets, Mobiles (Landscape) ##Screen = B/w 481px to 767px*/
+@media (min-width: 451px) and (max-width: 767px) {
+  .mat-column-moreDetails {
+    display: none;
+  }
+
+  .mat-column-products {
+    display: inline-flex;
+    .pesticide_type {
+      display: none;
+    }
+  }
+
+  .mat-column-name {
+    max-width: 25%;
+    padding-right: 10px;
+  }
+
+  #small-h1 {
+    display: none;
+  }
+}
+/* ##Device = Most of the Smartphones Mobiles (Portrait) ##Screen = B/w 320px to 479px*/
+@media  (min-width: 325px) and (max-width: 450px) {
+  .mat-column-moreDetails {
+    display: block;
+    max-width: 20%;
+    text-align: center;
+    padding-right: 10px;
+  }
+
+  .mat-column-products {
+    display: none;
+  }
+
+  .mat-column-name {
+    max-width: initial;
+    padding-right: 10px;
+  }
+
+  #big-h1 {
+    display: none;
+  }
+}
+
+@media (min-width: 317px) and  (max-width: 324px){
+  .mat-column-moreDetails {
+    display: block;
+    max-width: 20%;
+    text-align: center;
+    padding-right: 10px;
+  }
+
+  .mat-column-products {
+    display: none;
+  }
+
+  .mat-column-name {
+    max-width: initial;
+    padding-right: 10px;
+  }
+  #big-h1 {
+    display: none;
+  }
+}
+
+@media (max-width: 316px){
+  .mat-column-moreDetails {
+    display: block;
+    max-width: 20%;
+    text-align: center;
+    padding-right: 10px;
+  }
+
+  .mat-column-products {
+    display: none;
+  }
+
+  .mat-column-name {
+    max-width: initial;
+    padding-right: 10px;
+  }
+  #big-h1 {
+    display: none;
+  }
+}
