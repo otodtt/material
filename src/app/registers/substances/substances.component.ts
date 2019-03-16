@@ -1,6 +1,5 @@
 import { AfterViewInit, ChangeDetectorRef, Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
-// import { HttpClient } from '@angular/common/http';
 import { merge, Observable, of as observableOf, Subscription } from 'rxjs';
 import { catchError, map, startWith, switchMap } from 'rxjs/operators';
 
@@ -61,7 +60,6 @@ export class SubstancesComponent implements OnInit, AfterViewInit, OnDestroy {
         private changeBreadcrumb: ChangeBreadcrumbService,
         private seoService: SeoService,
         private productsService: ProductsService,
-        // private http: HttpClient,
         public dialog: MatDialog,
         private resizeService: ResizeService,
         changeDetectorRef: ChangeDetectorRef,

@@ -23,7 +23,7 @@ import { ProductsService } from '../shared/products.service';
 export class TableFromDatabase {
     constructor(private productsService: ProductsService) { }
     getRepoIssues(): Observable<Registers[]> {
-      return this.productsService.getProducts(`products/parallel`);
+      return this.productsService.getProducts(`registers/parallel`);
     }
     disconnect() {}
 }
@@ -62,7 +62,6 @@ export class ParallelComponent implements OnInit, AfterViewInit, OnDestroy {
         private changeBreadcrumb: ChangeBreadcrumbService,
         private seoService: SeoService,
         private productsService: ProductsService,
-        private http: HttpClient,
         public dialog: MatDialog,
         private resizeService: ResizeService,
         changeDetectorRef: ChangeDetectorRef,
