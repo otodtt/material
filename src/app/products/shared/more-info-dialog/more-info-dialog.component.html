@@ -41,10 +41,8 @@
             <p><span class="bold">Карантинен период (дни):</span> {{ data.data.quarantine }}</p>
 
             <hr *ngIf="data.data.application !== null">
-            <p *ngIf="data.data.application !== null">
-                <span class="bold">Употреба: </span> <span
-                    [innerHTML]="data.data.application | safeHtml">Употреба:</span>
-            </p>
+            <span *ngIf="data.data.application !== null" class="bold">Употреба: </span>
+            <p *ngIf="data.data.application !== null" [innerHTML]="data.data.application | safeHtml"></p>
         </mat-card-content>
     </mat-card>
 
