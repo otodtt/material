@@ -39,7 +39,7 @@
             <span class="product-span">ПРОДУКТИ</span>
           </mat-header-cell>
           <mat-cell *matCellDef="let row; let isOdd=odd; let isEven=even">
-            <table id="my-in-table" [class.odd]="isOdd" [class.even]="isEven">
+            <table class="my-in-table" [class.odd]="isOdd" [class.even]="isEven">
               <tr *ngFor="let prod of row.products">
                 <td class="pesticide_type">
                   <span *ngIf="prod.pesticide_type == 'fungicides'">Фунгицид</span>

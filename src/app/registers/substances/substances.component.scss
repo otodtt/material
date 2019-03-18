@@ -64,11 +64,11 @@ table {
 
 .my-header-row > * {
   // justify-content: center;
-  background-color:gray;
+  background-color: rgb(110, 110, 110);
   color: white !important;
 }
 
-#my-in-table {
+.my-in-table {
   width: 100%;
   min-height: 60px;
   .pesticide_type {
@@ -112,7 +112,7 @@ table {
     margin-top: 3px;
     background-color: white;
     .material-icons {
-      color: #7CB342;
+      color: #315807;
     }
   }
 }
