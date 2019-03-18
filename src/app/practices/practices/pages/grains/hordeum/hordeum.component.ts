@@ -11,8 +11,8 @@ import { Practice } from '../../../shared/models/practice.model';
 import { PracticesService } from '../../../shared/services/practices.services';
 
 @Component({
-  templateUrl: './hordeum.component.html',
-  styleUrls: ['../../pages.scss']
+    templateUrl: './hordeum.component.html',
+    styleUrls: ['../../pages.scss']
 })
 export class HordeumComponent implements OnInit, OnDestroy {
     private title = 'ДРЗП - Ечемик';
@@ -30,6 +30,7 @@ export class HordeumComponent implements OnInit, OnDestroy {
 
     @HostListener('click', ['$event'])
     onClick($event: MouseEvent) {
+        // tslint:disable-next-line: deprecation
         if (event.srcElement.getAttribute('target') === '#table_bbch') {
             this.doScroll();
         }
@@ -56,7 +57,7 @@ export class HordeumComponent implements OnInit, OnDestroy {
 
     openDialog(table: string) {
         this.dialog.open(DialogComponent, {
-            data: { table: table}
+            data: { table: table }
         });
     }
 
@@ -64,9 +65,9 @@ export class HordeumComponent implements OnInit, OnDestroy {
         this.structure.nativeElement.scrollIntoView();
     }
 
-      ngOnDestroy() {
-          if (this.subscription) {
+    ngOnDestroy() {
+        if (this.subscription) {
             this.subscription.unsubscribe();
-          }
-      }
+        }
+    }
 }

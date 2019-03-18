@@ -37,12 +37,15 @@ export class ThresholdsComponent implements OnInit, OnDestroy, AfterViewInit {
     ) {
         this._mobileQueryListener = () => changeDetectorRef.detectChanges();
         this.openedQuery = media.matchMedia('(max-width: 850px)');
+// tslint:disable-next-line: deprecation
         this.openedQuery.addListener(this._mobileQueryListener);
 
         this.mediumQuery = media.matchMedia('(max-width: 768px)');
+        // tslint:disable-next-line: deprecation
         this.mediumQuery.addListener(this._mobileQueryListener);
 
         this.smallQuery = media.matchMedia('(max-width: 481px)');
+        // tslint:disable-next-line: deprecation
         this.smallQuery.addListener(this._mobileQueryListener);
 
         if (this.mediumQuery.matches === true && this.smallQuery.matches === false) {
@@ -77,8 +80,11 @@ export class ThresholdsComponent implements OnInit, OnDestroy, AfterViewInit {
     }
 
     ngOnDestroy() {
+        // tslint:disable-next-line: deprecation
         this.openedQuery.removeListener(this._mobileQueryListener);
+        // tslint:disable-next-line: deprecation
         this.mediumQuery.removeListener(this._mobileQueryListener);
+        // tslint:disable-next-line: deprecation
         this.smallQuery.removeListener(this._mobileQueryListener);
         if (this.resizeSubscription) {
             this.resizeSubscription.unsubscribe();

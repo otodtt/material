@@ -30,6 +30,7 @@ export class SecaleComponent implements OnInit, OnDestroy {
 
     @HostListener('click', ['$event'])
     onClick($event: MouseEvent) {
+        // tslint:disable-next-line: deprecation
         if (event.srcElement.getAttribute('target') === '#table_bbch') {
             this.doScroll();
         }
@@ -56,7 +57,7 @@ export class SecaleComponent implements OnInit, OnDestroy {
 
     openDialog(table: string) {
         this.dialog.open(DialogComponent, {
-            data: { table: table}
+            data: { table: table }
         });
     }
 
@@ -66,7 +67,7 @@ export class SecaleComponent implements OnInit, OnDestroy {
 
     ngOnDestroy() {
         if (this.subscription) {
-          this.subscription.unsubscribe();
+            this.subscription.unsubscribe();
         }
     }
 }

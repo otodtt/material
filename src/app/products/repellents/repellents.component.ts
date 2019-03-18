@@ -77,12 +77,15 @@ export class RepellentsComponent implements OnInit, AfterViewInit, OnDestroy {
 
         this._mobileQueryListener = () => changeDetectorRef.detectChanges();
         this.bigQuery = media.matchMedia('(max-width: 850px)');
+        // tslint:disable-next-line: deprecation
         this.bigQuery.addListener(this._mobileQueryListener);
 
         this.mediumQuery = media.matchMedia('(max-width: 768px)');
+        // tslint:disable-next-line: deprecation
         this.mediumQuery.addListener(this._mobileQueryListener);
 
         this.smallQuery = media.matchMedia('(max-width: 481px)');
+        // tslint:disable-next-line: deprecation
         this.smallQuery.addListener(this._mobileQueryListener);
 
         if (
@@ -124,17 +127,17 @@ export class RepellentsComponent implements OnInit, AfterViewInit, OnDestroy {
         this.dataSource.sort = this.sort;
 
         this.resizeSubscription = this.resizeService.onResize$
-        .subscribe(size => {
-            if (size.innerWidth > 768) {
-                this.mode = '60%';
-            }
-            if (size.innerWidth < 768) {
-                this.mode = '80%';
-            }
-            if (size.innerWidth < 481) {
-                this.mode = '';
-            }
-        });
+            .subscribe(size => {
+                if (size.innerWidth > 768) {
+                    this.mode = '60%';
+                }
+                if (size.innerWidth < 768) {
+                    this.mode = '80%';
+                }
+                if (size.innerWidth < 481) {
+                    this.mode = '';
+                }
+            });
     }
 
     applyFilter(filterValue: string) {
@@ -151,8 +154,11 @@ export class RepellentsComponent implements OnInit, AfterViewInit, OnDestroy {
     }
 
     ngOnDestroy() {
+        // tslint:disable-next-line: deprecation
         this.bigQuery.removeListener(this._mobileQueryListener);
+        // tslint:disable-next-line: deprecation
         this.mediumQuery.removeListener(this._mobileQueryListener);
+        // tslint:disable-next-line: deprecation
         this.smallQuery.removeListener(this._mobileQueryListener);
         if (this.resizeSubscription) {
             this.resizeSubscription.unsubscribe();

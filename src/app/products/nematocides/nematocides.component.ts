@@ -1,14 +1,14 @@
-import {Component, OnInit, ViewChild, AfterViewInit, ChangeDetectorRef, OnDestroy } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit, ChangeDetectorRef, OnDestroy } from '@angular/core';
 import { Subscription, Observable, merge } from 'rxjs';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { HttpClient } from '@angular/common/http';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 
-import {of as observableOf} from 'rxjs';
-import {catchError} from 'rxjs/operators';
-import {map} from 'rxjs/operators';
-import {startWith} from 'rxjs/operators';
-import {switchMap} from 'rxjs/operators';
+import { of as observableOf } from 'rxjs';
+import { catchError } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
+import { startWith } from 'rxjs/operators';
+import { switchMap } from 'rxjs/operators';
 
 import { MatDialog } from '@angular/material';
 import { MoreInfoDialogComponent } from '../shared/more-info-dialog/more-info-dialog.component';
@@ -26,18 +26,18 @@ export class TableFromDatabase {
     getRepoIssues(): Observable<Product[]> {
         return this.productsService.getProducts(`products/nematocides`);
     }
-    disconnect() {}
+    disconnect() { }
 }
 
 @Component({
     templateUrl: './nematocides.component.html',
-    styleUrls: [ '../shared/pages.scss', './nematocides.component.scss' ]
+    styleUrls: ['../shared/pages.scss', './nematocides.component.scss']
 })
 export class NematocidesComponent implements OnInit, AfterViewInit, OnDestroy {
 
     private title = 'ПРЗ | Нематоциди';
-    private description =   'Нематоциди. Продуки за растителна защита за борба срещу нематоди от рода Meloidogyne spp, ' +
-                            'срещу галови и цистообразуващи нематоди.';
+    private description = 'Нематоциди. Продуки за растителна защита за борба срещу нематоди от рода Meloidogyne spp, ' +
+        'срещу галови и цистообразуващи нематоди.';
     private keywords = 'нематоциди, продуки, растителна, защита, култури, растителнозащитни, пракатики';
 
     breadcrumbName = 'Нематоциди';
@@ -78,12 +78,16 @@ export class NematocidesComponent implements OnInit, AfterViewInit, OnDestroy {
 
         this._mobileQueryListener = () => changeDetectorRef.detectChanges();
         this.bigQuery = media.matchMedia('(max-width: 850px)');
+        // tslint:disable-next-line: deprecation
         this.bigQuery.addListener(this._mobileQueryListener);
 
+        // tslint:disable-next-line: deprecation
         this.mediumQuery = media.matchMedia('(max-width: 768px)');
+        // tslint:disable-next-line: deprecation
         this.mediumQuery.addListener(this._mobileQueryListener);
 
         this.smallQuery = media.matchMedia('(max-width: 481px)');
+        // tslint:disable-next-line: deprecation
         this.smallQuery.addListener(this._mobileQueryListener);
 
         if (
@@ -122,44 +126,44 @@ export class NematocidesComponent implements OnInit, AfterViewInit, OnDestroy {
         this.exampleDatabase = new TableFromDatabase(this.productsService);
 
         merge()
-        .pipe(
-            startWith({}),
-            switchMap(() => {
-                this.isLoadingResults = true;
-                return this.exampleDatabase.getRepoIssues();
-            }),
-            map(data => {
-                // Flip flag to show that loading has finished.
-                this.isLoadingResults = false;
-                this.isRateLimitReached = false;
-                this.resultsLength = data.length;
+            .pipe(
+                startWith({}),
+                switchMap(() => {
+                    this.isLoadingResults = true;
+                    return this.exampleDatabase.getRepoIssues();
+                }),
+                map(data => {
+                    // Flip flag to show that loading has finished.
+                    this.isLoadingResults = false;
+                    this.isRateLimitReached = false;
+                    this.resultsLength = data.length;
 
-                return data;
-            }),
-            catchError(() => {
-                this.isLoadingResults = false;
-                this.isRateLimitReached = true;
-                return observableOf([]);
-            })
-        ).subscribe(data => this.dataSource.data = data);
+                    return data;
+                }),
+                catchError(() => {
+                    this.isLoadingResults = false;
+                    this.isRateLimitReached = true;
+                    return observableOf([]);
+                })
+            ).subscribe(data => this.dataSource.data = data);
     }
 
     ngAfterViewInit() {
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
 
-      this.resizeSubscription = this.resizeService.onResize$
-        .subscribe(size => {
-            if (size.innerWidth > 768) {
-                this.mode = '60%';
-            }
-            if (size.innerWidth < 768) {
-                this.mode = '80%';
-            }
-            if (size.innerWidth < 481) {
-                this.mode = '';
-            }
-        });
+        this.resizeSubscription = this.resizeService.onResize$
+            .subscribe(size => {
+                if (size.innerWidth > 768) {
+                    this.mode = '60%';
+                }
+                if (size.innerWidth < 768) {
+                    this.mode = '80%';
+                }
+                if (size.innerWidth < 481) {
+                    this.mode = '';
+                }
+            });
     }
 
     applyFilter(filterValue: string) {
@@ -170,22 +174,17 @@ export class NematocidesComponent implements OnInit, AfterViewInit, OnDestroy {
 
     openDialog(name: any, info: any) {
         const dialogRef = this.dialog.open(MoreInfoDialogComponent, {
-            data: { product: name, data: info, link: this.link},
+            data: { product: name, data: info, link: this.link },
             width: this.mode
         });
-
-        // this.dialog.open(MoreInfoDialogComponent, {
-        //     data: { product: name, data: info, link: this.link },
-        //     width: this.mode
-        // });
-
-        // console.log(this.dialog.open);
-        // console.log(this.mode);
     }
 
     ngOnDestroy() {
+        // tslint:disable-next-line: deprecation
         this.bigQuery.removeListener(this._mobileQueryListener);
+        // tslint:disable-next-line: deprecation
         this.mediumQuery.removeListener(this._mobileQueryListener);
+        // tslint:disable-next-line: deprecation
         this.smallQuery.removeListener(this._mobileQueryListener);
         if (this.resizeSubscription) {
             this.resizeSubscription.unsubscribe();

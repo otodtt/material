@@ -1,6 +1,6 @@
 import { Component, Output, EventEmitter, OnInit, ChangeDetectorRef, AfterViewInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
-import {MediaMatcher} from '@angular/cdk/layout';
+import { MediaMatcher } from '@angular/cdk/layout';
 import { Router, ActivatedRoute } from '@angular/router';
 
 import pages from './Pages';
@@ -13,7 +13,7 @@ import { ResizeService } from '../../../common/services/ResizeService';
     templateUrl: './side-menu.component.html',
     styleUrls: ['./side-menu.component.scss']
 })
-export class SideMenuComponent implements OnInit, AfterViewInit, OnDestroy  {
+export class SideMenuComponent implements OnInit, AfterViewInit, OnDestroy {
     public pages = pages;
     public isOpenPanel = false;
     public isActiveClass = true;
@@ -41,11 +41,12 @@ export class SideMenuComponent implements OnInit, AfterViewInit, OnDestroy  {
     ) {
         this._mobileQueryListener = () => changeDetectorRef.detectChanges();
         this.openedQuery = media.matchMedia('(max-width: 850px)');
+        // tslint:disable-next-line: deprecation
         this.openedQuery.addListener(this._mobileQueryListener);
 
         const pathUrl = this.activatedRoute.snapshot.firstChild.url[0].path;
 
-        this.pages.forEach( item => {
+        this.pages.forEach(item => {
             if (item.link === pathUrl) {
                 this.addRemoveClass(item.id);
             }
@@ -70,11 +71,11 @@ export class SideMenuComponent implements OnInit, AfterViewInit, OnDestroy  {
     }
     ngAfterViewInit() {
         this.resizeSubscription = this.resizeService.onResize$
-        .subscribe(size => {
-            if (size.innerWidth < 850) {
-                this.mode = true;
-            }
-        });
+            .subscribe(size => {
+                if (size.innerWidth < 850) {
+                    this.mode = true;
+                }
+            });
     }
 
     onCloseSideMenu() {
@@ -104,9 +105,10 @@ export class SideMenuComponent implements OnInit, AfterViewInit, OnDestroy  {
     }
 
     ngOnDestroy() {
+        // tslint:disable-next-line: deprecation
         this.openedQuery.removeListener(this._mobileQueryListener);
         if (this.resizeSubscription) {
-          this.resizeSubscription.unsubscribe();
+            this.resizeSubscription.unsubscribe();
         }
     }
 }

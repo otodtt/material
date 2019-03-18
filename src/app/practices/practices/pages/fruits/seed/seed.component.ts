@@ -17,9 +17,9 @@ import { PracticesService } from '../../../shared/services/practices.services';
 export class SeedComponent implements OnInit, OnDestroy {
 
     private title = 'ДРЗП - Семкови овощни видове';
-    private description =   'Добра Растителнозащитна Пракатика при ябълка, круша и дюля. ' +
-                            'Добра Растителнозащитна Пракатика при Семкови овощни видове. ' +
-                            ' Борба с болести, неприятели и плевели при ябълка, круша и дюля.';
+    private description = 'Добра Растителнозащитна Пракатика при ябълка, круша и дюля. ' +
+        'Добра Растителнозащитна Пракатика при Семкови овощни видове. ' +
+        ' Борба с болести, неприятели и плевели при ябълка, круша и дюля.';
     private keywords = 'ябълка, круша, дюля, болести, неприятели, плевели, ПРЗ, ПИВ';
 
     breadcrumbName = 'Семкови';
@@ -32,6 +32,7 @@ export class SeedComponent implements OnInit, OnDestroy {
 
     @HostListener('click', ['$event'])
     onClick($event: MouseEvent) {
+        // tslint:disable-next-line: deprecation
         if (event.srcElement.getAttribute('target') === '#table_mils') {
             this.doScroll();
         }
@@ -58,7 +59,7 @@ export class SeedComponent implements OnInit, OnDestroy {
 
     openDialog(table: string) {
         this.dialog.open(DialogComponent, {
-            data: { table: table}
+            data: { table: table }
         });
     }
 
@@ -68,7 +69,7 @@ export class SeedComponent implements OnInit, OnDestroy {
 
     ngOnDestroy() {
         if (this.subscription) {
-          this.subscription.unsubscribe();
+            this.subscription.unsubscribe();
         }
     }
 }
