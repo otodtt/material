@@ -1,6 +1,6 @@
 <mat-dialog-content>
   <div class="dialog-header">
-    <h2>{{ data.data.name }}</h2>
+    <h2 [innerHTML]="data.data.name | safeHtml"></h2>
   </div>
   <mat-card class="example-card card-top">
     <mat-card-content>
