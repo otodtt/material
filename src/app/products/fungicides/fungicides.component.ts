@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild, AfterViewInit, ChangeDetectorRef, OnDestroy } from '@angular/core';
 import { Subscription, Observable, merge } from 'rxjs';
 import { MediaMatcher } from '@angular/cdk/layout';
-// import { HttpClient } from '@angular/common/http';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 import { of as observableOf } from 'rxjs';
 import { catchError } from 'rxjs/operators';
@@ -22,24 +21,25 @@ import { ProductsService } from '../shared/services/products.service';
 
 export class TableFromDatabase {
   constructor(private productsService: ProductsService) { }
-  getRepoIssues(): Observable<Product[]> {
-      return this.productsService.getProducts(`products/acaricides`);
-  }
-  disconnect() {}
+  // getRepoIssues(): Observable<Product[]> {
+  //     return this.productsService.getProducts(`products/fungicides`);
+  // }
+  disconnect() { }
 }
 
+
 @Component({
-  templateUrl: './acaricides.component.html',
-  styleUrls: [ '../shared/pages.scss', './acaricides.component.scss']
+  templateUrl: './fungicides.component.html',
+  styleUrls: ['../shared/pages.scss', './fungicides.component.scss']
 })
+export class FungicidesComponent implements OnInit, AfterViewInit, OnDestroy {
 
-export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
-  private title = 'ПРЗ | Акарициди';
-  private description =   'Акарициди. Продуки за растителна защита за борба срещу вредни акари (Жълт лозов акар,  Обикновен ' +
-                          'паяжинообразуващ акар, Доматен акар, Лозова краста, Червен овощен акар и други). ';
-  private keywords = 'акарициди, продуки, растителна, защита, култури, растителнозащитни, пракатики';
+  private title = 'ПРЗ | Фунгициди';
+  private description = 'Фунгициди. Продукти за растителна защита, предназначени за борба с причинителите на болест по растенията,  ' +
+    'както и за третиране на семена.';
+  private keywords = 'фунгициди, продуки, растителна, защита, култури, растителнозащитни, пракатики';
 
-  breadcrumbName = 'Акарициди';
+  breadcrumbName = 'Фунгициди';
 
   mode = '';
   private link = 'products/acaricides';
@@ -65,7 +65,6 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
     private changeBreadcrumb: ChangeBreadcrumbService,
     private seoService: SeoService,
     private productsService: ProductsService,
-    // private http: HttpClient,
     public dialog: MatDialog,
     private resizeService: ResizeService,
     changeDetectorRef: ChangeDetectorRef,
@@ -88,32 +87,32 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
     this.smallQuery.addListener(this._mobileQueryListener);
 
     if (
-        this.bigQuery.matches === false &&
-        this.mediumQuery.matches === false &&
-        this.smallQuery.matches === false
+      this.bigQuery.matches === false &&
+      this.mediumQuery.matches === false &&
+      this.smallQuery.matches === false
     ) {
-        this.mode = '60%';
+      this.mode = '60%';
     }
     if (
-        this.bigQuery.matches === true &&
-        this.mediumQuery.matches === false &&
-        this.smallQuery.matches === false
+      this.bigQuery.matches === true &&
+      this.mediumQuery.matches === false &&
+      this.smallQuery.matches === false
     ) {
-        this.mode = '60%';
+      this.mode = '60%';
     }
     if (
-        this.bigQuery.matches === true &&
-        this.mediumQuery.matches === true &&
-        this.smallQuery.matches === false
+      this.bigQuery.matches === true &&
+      this.mediumQuery.matches === true &&
+      this.smallQuery.matches === false
     ) {
-        this.mode = '80%';
+      this.mode = '80%';
     }
     if (
-        this.bigQuery.matches === true &&
-        this.mediumQuery.matches === true &&
-        this.smallQuery.matches === true
+      this.bigQuery.matches === true &&
+      this.mediumQuery.matches === true &&
+      this.smallQuery.matches === true
     ) {
-        this.mode = '';
+      this.mode = '';
     }
   }
 
@@ -121,27 +120,27 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
     this.changeBreadcrumb.emitName(this.breadcrumbName);
     this.exampleDatabase = new TableFromDatabase(this.productsService);
 
-    merge()
-    .pipe(
-      startWith({}),
-      switchMap(() => {
-          this.isLoadingResults = true;
-          return this.exampleDatabase.getRepoIssues();
-      }),
-      map(data => {
-          // Flip flag to show that loading has finished.
-          this.isLoadingResults = false;
-          this.isRateLimitReached = false;
-          this.resultsLength = data.length;
+    // merge()
+    // .pipe(
+    //   startWith({}),
+    //   switchMap(() => {
+    //       this.isLoadingResults = true;
+    //       return this.exampleDatabase.getRepoIssues();
+    //   }),
+    //   map(data => {
+    //       // Flip flag to show that loading has finished.
+    //       this.isLoadingResults = false;
+    //       this.isRateLimitReached = false;
+    //       this.resultsLength = data.length;
 
-          return data;
-      }),
-      catchError(() => {
-          this.isLoadingResults = false;
-          this.isRateLimitReached = true;
-          return observableOf([]);
-      })
-    ).subscribe(data => this.dataSource.data = data);
+    //       return data;
+    //   }),
+    //   catchError(() => {
+    //       this.isLoadingResults = false;
+    //       this.isRateLimitReached = true;
+    //       return observableOf([]);
+    //   })
+    // ).subscribe(data => this.dataSource.data = data);
   }
 
   ngAfterViewInit() {
@@ -149,17 +148,17 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
     this.dataSource.sort = this.sort;
 
     this.resizeSubscription = this.resizeService.onResize$
-    .subscribe(size => {
-      if (size.innerWidth > 768) {
+      .subscribe(size => {
+        if (size.innerWidth > 768) {
           this.mode = '60%';
-      }
-      if (size.innerWidth < 768) {
+        }
+        if (size.innerWidth < 768) {
           this.mode = '80%';
-      }
-      if (size.innerWidth < 481) {
+        }
+        if (size.innerWidth < 481) {
           this.mode = '';
-      }
-    });
+        }
+      });
   }
 
   applyFilter(filterValue: string) {
@@ -170,8 +169,8 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
 
   openDialog(name: any, info: any) {
     const dialogRef = this.dialog.open(MoreInfoDialogComponent, {
-        data: { product: name, data: info, link: this.link},
-        width: this.mode
+      data: { product: name, data: info, link: this.link },
+      width: this.mode
     });
   }
 
@@ -183,7 +182,8 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
     // tslint:disable-next-line: deprecation
     this.smallQuery.removeListener(this._mobileQueryListener);
     if (this.resizeSubscription) {
-        this.resizeSubscription.unsubscribe();
+      this.resizeSubscription.unsubscribe();
     }
   }
+
 }

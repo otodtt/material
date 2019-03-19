@@ -21,7 +21,6 @@ import { OryzaComponent } from './pages/grains/oryza/oryza.component';
 import { PhaseolusComponent } from './pages/beans/phaseolus/phaseolus.component';
 import { ViciaComponent } from './pages/beans/vicia/vicia.component';
 import { PisumComponent } from './pages/beans/pisum/pisum.component';
-import { ArachisComponent } from './pages/technical/arachis/arachis.component';
 import { GlycineComponent } from './pages/beans/glycine/glycine.component';
 import { HelianthusComponent } from './pages/technical/helianthus/helianthus.component';
 import { BrassicaNapusComponent } from './pages/technical/brassica/brassica-napus.component';

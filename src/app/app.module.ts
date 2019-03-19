@@ -29,7 +29,6 @@ import { ScrollButtonComponent } from './shared/scroll-button/scroll-button.comp
 
 /** Pages */
 import { HomeComponent } from './home/home.component';
-import { CropsComponent } from './crops/crops.component';
 import { DocumentsComponent } from './documents/documents.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { FormulationsComponent } from './formulations/formulations.component';
@@ -41,7 +40,6 @@ import { FormulationsComponent } from './formulations/formulations.component';
         SideNavComponent,
         ScrollButtonComponent,
         HomeComponent,
-        CropsComponent,
         DocumentsComponent,
         ContactsComponent,
         NotFoundComponent,

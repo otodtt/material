@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
-import { CropsComponent } from './crops/crops.component';
 import { DocumentsComponent } from './documents/documents.component';
 import { FormulationsComponent } from './formulations/formulations.component';
 import { ContactsComponent } from './contacts/contacts.component';
@@ -12,8 +11,7 @@ export const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'products', loadChildren: './products/products.module#ProductsModule' },
-    // { path: 'acaricides', loadChildren: './products/acaricides/acaricides.module#AcaricidesModule' },
-    { path: 'crops', component: CropsComponent },
+    { path: 'crops', loadChildren: './crops/crops.module#CropsModule' },
     { path: 'practices', loadChildren: './practices/practices.module#PracticesModule'},
     { path: 'phases', loadChildren: './phases/phases.module#PhasesModule'},
     { path: 'thresholds', loadChildren: './thresholds/thresholds.module#ThresholdsModule'},
