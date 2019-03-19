@@ -12,36 +12,43 @@ const pages = [
         subPage: [
             {
                 id: 0,
+                pageId: 1,
                 subName: 'Пшеница',
                 link: 'show/1'
             },
             {
                 id: 1,
+                pageId: 1,
                 subName: 'Ечемик',
                 link: 'show/2'
             },
             {
                 id: 2,
+                pageId: 1,
                 subName: 'Овес',
                 link: 'show/3'
             },
             {
-                id: 2,
+                id: 3,
+                pageId: 1,
                 subName: 'Ръж',
                 link: 'show/4'
             },
             {
-                id: 2,
+                id: 4,
+                pageId: 1,
                 subName: 'Царевица',
                 link: 'show/5'
             },
             {
-                id: 2,
+                id: 5,
+                pageId: 1,
                 subName: 'Ориз',
                 link: 'show/61'
             },
             {
-                id: 2,
+                id: 6,
+                pageId: 1,
                 subName: 'Зърнено-житни',
                 link: 'show/59'
             }
