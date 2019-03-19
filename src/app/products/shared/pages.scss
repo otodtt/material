@@ -291,9 +291,6 @@ table {
             .crops {
                 width: 30%;
             }
-            // .more_info {
-            //     width: initial;
-            // }
         }
     }
 }
@@ -360,7 +357,8 @@ table {
                 display: none;
             }
             .crops {
-                width: 60%;
+                width: 70%;
+                // word-break: break-all;
             }
             .disease {
                 display: none;
@@ -400,7 +398,8 @@ table {
                 display: none;
             }
             .crops {
-                width: 60%;
+                width: 70%;
+                word-break: break-all;
             }
             .disease {
                 display: none;
