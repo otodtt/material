@@ -74,6 +74,9 @@
 ::ng-deep .latin_name {
     font-style: italic !important;
 }
+::ng-deep .underline {
+    text-decoration: underline;
+}
 
 .mat-header-cell{
     text-transform: initial !important;

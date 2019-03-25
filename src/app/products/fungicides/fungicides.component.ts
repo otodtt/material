@@ -21,9 +21,9 @@ import { ProductsService } from '../shared/services/products.service';
 
 export class TableFromDatabase {
   constructor(private productsService: ProductsService) { }
-  // getRepoIssues(): Observable<Product[]> {
-  //     return this.productsService.getProducts(`products/fungicides`);
-  // }
+  getRepoIssues(): Observable<Product[]> {
+      return this.productsService.getProducts(`products/fungicides`);
+  }
   disconnect() { }
 }
 
@@ -42,7 +42,7 @@ export class FungicidesComponent implements OnInit, AfterViewInit, OnDestroy {
   breadcrumbName = 'Фунгициди';
 
   mode = '';
-  private link = 'products/acaricides';
+  private link = 'products/fungicides';
   bigQuery: MediaQueryList;
   mediumQuery: MediaQueryList;
   smallQuery: MediaQueryList;
@@ -120,27 +120,27 @@ export class FungicidesComponent implements OnInit, AfterViewInit, OnDestroy {
     this.changeBreadcrumb.emitName(this.breadcrumbName);
     this.exampleDatabase = new TableFromDatabase(this.productsService);
 
-    // merge()
-    // .pipe(
-    //   startWith({}),
-    //   switchMap(() => {
-    //       this.isLoadingResults = true;
-    //       return this.exampleDatabase.getRepoIssues();
-    //   }),
-    //   map(data => {
-    //       // Flip flag to show that loading has finished.
-    //       this.isLoadingResults = false;
-    //       this.isRateLimitReached = false;
-    //       this.resultsLength = data.length;
+    merge()
+    .pipe(
+      startWith({}),
+      switchMap(() => {
+          this.isLoadingResults = true;
+          return this.exampleDatabase.getRepoIssues();
+      }),
+      map(data => {
+          // Flip flag to show that loading has finished.
+          this.isLoadingResults = false;
+          this.isRateLimitReached = false;
+          this.resultsLength = data.length;
 
-    //       return data;
-    //   }),
-    //   catchError(() => {
-    //       this.isLoadingResults = false;
-    //       this.isRateLimitReached = true;
-    //       return observableOf([]);
-    //   })
-    // ).subscribe(data => this.dataSource.data = data);
+          return data;
+      }),
+      catchError(() => {
+          this.isLoadingResults = false;
+          this.isRateLimitReached = true;
+          return observableOf([]);
+      })
+    ).subscribe(data => this.dataSource.data = data);
   }
 
   ngAfterViewInit() {
