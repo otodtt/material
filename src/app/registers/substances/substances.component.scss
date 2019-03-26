@@ -79,6 +79,18 @@ table {
       text-align: left;
       padding: 5px 0 5px 5px;
       border: 1px solid rgb(175, 175, 175);
+      .fungicides {
+        color: blueviolet;
+      }
+      .insecticides {
+        color: red;
+      }
+      .herbicides {
+        color: green;
+      }
+      .other {
+        color: brown;
+      }
       a {
         text-decoration: none;
       }

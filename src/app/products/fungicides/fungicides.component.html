@@ -67,7 +67,7 @@
                     <span class="afterNote" *ngIf="dose.afterNote != null" [innerHTML]="dose.afterNote | safeHtml"><br /></span>
                   </td>
                   <td class="dose">
-                    {{dose.dose}} {{dose.measure}}
+                    <span>{{dose.dose}} </span><span *ngIf="dose.measureId != 6" >{{dose.measure}}</span>
                     <span class="afterNote" *ngIf="dose.doseNote != null"><br />{{dose.doseNote}}</span>
                   </td>
                   <td class="more_info">

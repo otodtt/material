@@ -42,12 +42,12 @@
             <table class="my-in-table" [class.odd]="isOdd" [class.even]="isEven">
               <tr *ngFor="let prod of row.products">
                 <td class="pesticide_type">
-                  <span *ngIf="prod.pesticide_type == 'fungicides'">Фунгицид</span>
-                  <span *ngIf="prod.pesticide_type == 'insecticides'">Инсектицид</span>
-                  <span *ngIf="prod.pesticide_type == 'acaricides'">Акарицид</span>
-                  <span *ngIf="prod.pesticide_type == 'nematocides'">Нематоцид</span>
-                  <span *ngIf="prod.pesticide_type == 'limatsides'">Лимацид</span>
-                  <span *ngIf="prod.pesticide_type == 'herbicides'">Хербицид</span>
+                  <span *ngIf="prod.pesticide_type == 'fungicides'" class="fungicides">Фунгицид</span>
+                  <span *ngIf="prod.pesticide_type == 'insecticides'" class="insecticides">Инсектицид</span>
+                  <span *ngIf="prod.pesticide_type == 'acaricides'" class="other">Акарицид</span>
+                  <span *ngIf="prod.pesticide_type == 'nematocides'" class="other">Нематоцид</span>
+                  <span *ngIf="prod.pesticide_type == 'limatsides'" class="other">Лимацид</span>
+                  <span *ngIf="prod.pesticide_type == 'herbicides'" class="herbicides">Хербицид</span>
                 </td>
                 <td class="pesticides_firms">
                   <a matLine [routerLink]="[ '/products/' + prod.pesticide_type + '/' + prod.pesticides_id ]"
