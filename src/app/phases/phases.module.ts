@@ -64,7 +64,6 @@ import { CitrusComponent } from './pages/citrus/citrus.component';
         HelianthusComponent,
         BrassicaNapusComponent,
         BrassicaComponent,
-        // ArachisComponent,
         BetaComponent,
         GossypiumComponent,
         HumulusComponent,
