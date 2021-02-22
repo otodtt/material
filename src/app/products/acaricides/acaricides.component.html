@@ -67,7 +67,8 @@
                                     <td class="disease">
                                         <span class="note" *ngIf="dose.note != null">{{dose.note}}<br/></span>
                                         <span class="td_span" [innerHTML]="dose.disease | safeHtml"></span>
-                                        <span class="afterNote" *ngIf="dose.afterNote != null"><br/>{{dose.afterNote}}</span>
+                                        <!-- <span class="afterNote" *ngIf="dose.afterNote != null"><br/>{{dose.afterNote}}</span> -->
+                                        <span class="afterNote" *ngIf="dose.afterNote != null" [innerHTML]="dose.afterNote | safeHtml"><br/>{{dose.afterNote}}</span>
                                     </td>
                                     <td class="dose">
                                         {{dose.dose}} {{dose.measure}}
