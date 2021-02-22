@@ -27,7 +27,7 @@ export const routes: Routes = [
     // imports: [ RouterModule.forRoot(routes, {
     //     preloadingStrategy: PreloadAllModules
     // }) ],
-    imports: [ RouterModule.forRoot(routes) ],
+    imports: [ RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }) ],
     exports: [RouterModule]
 })
 
