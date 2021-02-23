@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-// import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+
 
 /** Routing */
 import { ProductsRoutingModule } from './products-routing.module';
 
 /** Services */
 import { ProductsService } from './shared/services/products.service';
+import { ResizeService } from '../common/services/ResizeService';
 
 /** Header and Footer Module */
 import { ShareComponentsModule } from '../common/share.components.module';
@@ -41,11 +43,12 @@ import { HerbicidesComponent } from './herbicides/herbicides.component';
 @NgModule({
   imports: [
     CommonModule,
+    HttpClientModule,
     ProductsRoutingModule,
     ShareComponentsModule,
     MaterialModule,
     MatPaginatorModule,
-    MatTableModule,
+    MatTableModule
   ],
   declarations: [
     ProductsComponent,
@@ -71,6 +74,7 @@ import { HerbicidesComponent } from './herbicides/herbicides.component';
   ],
   providers: [
     ProductsService,
+    ResizeService,
     { provide: MatPaginatorIntl, useValue: getBulgarianPaginatorIntl() }
   ],
   entryComponents: [MoreInfoDialogComponent, RodentsDialogComponent],

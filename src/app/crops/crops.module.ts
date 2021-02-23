@@ -6,14 +6,16 @@ import { CropsRoutingModul } from './crops-routing.module';
 
 /** Header and Footer Module */
 import { ShareComponentsModule } from '../common/share.components.module';
+import { ResizeService } from '../common/services/ResizeService';
 
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
-import { MatTabsModule } from '@angular/material/tabs';
-import { MatExpansionModule } from '@angular/material/expansion';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 /**  Shared */
 import { SideMenuComponent } from './side-menu/side-menu.component';
@@ -29,17 +31,22 @@ import { CropsPageComponent } from './pages/crops-page/crops-page.component';
         CommonModule,
         ShareComponentsModule,
         CropsRoutingModul,
-        MatCardModule,
+        MatSidenavModule,
         MatIconModule,
         MatToolbarModule,
-        MatSidenavModule
+        MatListModule,
+        MatCardModule,
+        MatDialogModule,
+        MatButtonModule,
+        MatExpansionModule
     ],
     declarations: [
         CropsComponent,
         SideMenuComponent,
         CropDetailComponent,
         CropsPageComponent,
-    ]
+    ],
+    providers: [ ResizeService ]
 })
 export class CropsModule { }
 

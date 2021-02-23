@@ -1,21 +1,29 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-// import { LazyLoadModule } from '@greg-md/ng-lazy-load';
-
 
 /** Routing */
 import { PracticesRoutingModul } from './practices-routing.module';
 
 /** Services */
 import { PracticesService } from './practices/shared/services/practices.services';
+import { ResizeService } from '../common/services/ResizeService';
 
 /** Directives and Pipes */
 import { AnchorToDirective } from '../common/directives/AnchorToDirective';
 import { LazyImgDirective } from '../common/directives/LazyImgDirective';
+import { ScriptService } from './script.service';
 
 /** Header and Footer Module */
 import { ShareComponentsModule } from '../common/share.components.module';
-import { MaterialModule } from '../common/material/material.module';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 /** Shared */
 import { DialogComponent } from './practices/shared/dialog/dialog.component';
@@ -67,7 +75,15 @@ import { VitisComponent } from './practices/pages/vitis/vitis.component';
         CommonModule,
         PracticesRoutingModul,
         ShareComponentsModule,
-        MaterialModule,
+        MatSidenavModule,
+        MatIconModule,
+        MatToolbarModule,
+        MatListModule,
+        MatCardModule,
+        MatDialogModule,
+        MatButtonModule,
+        MatExpansionModule,
+        MatProgressSpinnerModule,
     ],
     declarations: [
         AnchorToDirective,
@@ -113,7 +129,7 @@ import { VitisComponent } from './practices/pages/vitis/vitis.component';
         NigrumComponent,
         VitisComponent
     ],
-    providers: [PracticesService],
+    providers: [PracticesService, ResizeService, ScriptService],
     entryComponents: [SideMenuComponent, DialogComponent],
 })
 export class PracticesModule { }

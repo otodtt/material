@@ -13,6 +13,7 @@ import { RegistersRoutingModule } from './registers-routing.module';
 
 /** Services */
 import { ProductsService } from './shared/products.service';
+import { ResizeService } from '../common/services/ResizeService';
 
 import { MoreDialogComponent } from './parallel/more-dialog/more-dialog.component';
 
@@ -43,6 +44,7 @@ import { DialogSubstancesComponent } from './substances/dialog-substances/dialog
   ],
   providers: [
     ProductsService,
+    ResizeService,
     { provide: MatPaginatorIntl, useValue: getBulgarianPaginatorIntl() }
   ],
   entryComponents: [ MoreDialogComponent, DialogAdjuvantsComponent, DialogSubstancesComponent ],

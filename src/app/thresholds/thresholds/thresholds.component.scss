@@ -33,6 +33,10 @@ h3 {
 .panel-body {
     padding: 0 20px;
 }
+.btn_primary {
+  background-color: #8bc34a,
+}
+
 .button-wrap {
     padding-bottom: 40px;
     .mat-button {
@@ -56,9 +60,6 @@ h3 {
     font-weight: bolder
 }
 @media (max-width: 481px) {
-    // .mat-card {
-    //     padding: 24px 5px;
-    // }
     .mat-drawer {
         width: initial;
         padding-right: 8px;

@@ -1,16 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { ResizeService } from '../common/services/ResizeService';
+
 // Routing
 import { ThresholdsRoutingModul } from './thresholds-routing.module';
 
-// Header and Footer Module
+/** Header and Footer Module */
 import { ShareComponentsModule } from '../common/share.components.module';
-import { MaterialModule } from '../common/material/material.module';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
 
 // Shared
 import { SideMenuComponent } from './side-menu/side-menu.component';
-// import { ThresholdsDialogComponent } from './thresholds/thresholds-dialog.component';
 
 import { ThresholdsComponent, ThresholdsDialogComponent } from './thresholds/thresholds.component';
 import { TriticumComponent } from './pages/grains/triticum/triticum.component';
@@ -50,7 +58,14 @@ import { VitisComponent } from './pages/vitis/vitis.component';
         CommonModule,
         ThresholdsRoutingModul,
         ShareComponentsModule,
-        MaterialModule
+        MatSidenavModule,
+        MatIconModule,
+        MatToolbarModule,
+        MatListModule,
+        MatTabsModule,
+        MatCardModule,
+        MatDialogModule,
+        MatButtonModule
     ],
     declarations: [
         ThresholdsDialogComponent,
@@ -88,6 +103,7 @@ import { VitisComponent } from './pages/vitis/vitis.component';
         FragariaComponent,
         VitisComponent
     ],
+    providers: [ResizeService],
     entryComponents: [ThresholdsDialogComponent],
 })
 export class ThresholdsModule { }

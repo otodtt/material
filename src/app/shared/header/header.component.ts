@@ -7,8 +7,7 @@ import pages from '../Pages';
 @Component({
     selector: 'prz-header',
     templateUrl: './header.component.html',
-    // templateUrl: './header-test.component.html',
-    styleUrls: ['./header.component.scss']
+    styleUrls: ['./header.component.scss', './media.scss', './media-more.scss']
 })
 export class HeaderComponent implements OnInit {
     public pages = pages;
@@ -24,7 +23,7 @@ export class HeaderComponent implements OnInit {
     @Output() navToggle = new EventEmitter<boolean>();
 
     @HostListener('window:scroll', [])
-    onWindowScroll() {
+    onWindowScroll(): void {
         this.onScroll();
     }
 
@@ -33,7 +32,7 @@ export class HeaderComponent implements OnInit {
         private changeBreadcrumb: ChangeBreadcrumbService
     ) {}
 
-    ngOnInit() {
+    ngOnInit(): any {
         this.changeBreadcrumb.changeTitle$.subscribe(
             text => {
                 this.newBreadcrumbTitle = text;
@@ -51,16 +50,16 @@ export class HeaderComponent implements OnInit {
         );
     }
 
-    navOpen() {
+    navOpen(): void {
         this.navToggle.emit(true);
     }
-    closeDrawerMenu() {
+    closeDrawerMenu(): void {
         this.changeBreadcrumb.emitCloseDrawer(this.isCloseDrawer);
     }
-    onScroll() {
+    onScroll(): void {
         this.isScrollTop = this.el.nativeElement.getBoundingClientRect().top * -1;
     }
-    removeClass() {
+    removeClass(): void {
         this.changeBreadcrumb.emitClass(this.isActiveClass);
     }
 

@@ -125,35 +125,47 @@ const pages = [
         nameIcon: 'ПОЛЕЗНО',
         link: 'practices',
         subPage: [
-            {
+              {
                 id: 0,
+                pageId: 4,
+                subName: 'законодателство',
+                link: 'legislation'
+            },
+            {
+                id: 1,
                 pageId: 4,
                 subName: 'добри растителнозащитни практики',
                 link: 'practices'
             },
             {
-                id: 1,
+                id: 2,
                 pageId: 4,
                 subName: 'BBCH - стадии на растеж',
                 link: 'phases'
             },
             {
-                id: 2,
+                id: 3,
                 pageId: 4,
                 subName: 'прагове на икономическа вредност',
                 link: 'thresholds'
             },
             {
-                id: 3,
+                id: 4,
                 pageId: 4,
                 subName: 'Формулации',
                 link: 'formulations'
             },
             {
-                id: 4,
+                id: 5,
                 pageId: 4,
                 subName: 'документи',
                 link: 'documents'
+            },
+            {
+                id: 6,
+                pageId: 4,
+                subName: 'калкулатор',
+                link: 'calculator'
             }
         ],
     },
@@ -161,7 +173,7 @@ const pages = [
         id: 5,
         name: 'КОНТАКТИ',
         nameIcon: 'КОНТАКТИ',
-        link: 'contacts',
+        link: 'contact',
         subPage: null
     }
 ];

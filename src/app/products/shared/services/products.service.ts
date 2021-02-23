@@ -1,17 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-// import 'rxjs/add/operator/map';
-
-
 
 import { BaseApi } from '../../../common/core/base.api';
 
 import { Product } from '../models/product.model';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 
 export class ProductsService extends BaseApi {
+
 
     constructor(public http: HttpClient) {
         super(http);

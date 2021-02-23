@@ -3,7 +3,9 @@
         color: rgb(110, 0, 35);
     }
 }
-
+::ng-deep .mat-progress-spinner circle {
+  stroke: #8bc34a;
+}
 .container {
     width: 95%;
     margin: 0 auto;
@@ -73,9 +75,6 @@
 }
 ::ng-deep .latin_name {
     font-style: italic !important;
-}
-::ng-deep .underline {
-    text-decoration: underline;
 }
 
 .mat-header-cell{
@@ -212,18 +211,13 @@ table {
                 font-size: 0.9em;
                 margin: 0;
             }
-            // .latin_name {
-            //     font-style: italic !important;
-            // }
         }
     }
 }
 .category-span {
     padding-left: 10px
 }
-// .product-span {
-//     margin-left: 20px;
-// }
+
 /* ##Device = Desktops ##Screen = 1281px to higher resolution desktops */
 @media (min-width: 1201px) {}
 

@@ -14,7 +14,7 @@
             "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "tsConfig": "src/tsconfig.app.json",
+            "tsConfig": "tsconfig.app.json",
             "polyfills": "src/polyfills.ts",
             "assets": [
               "src/assets",
@@ -22,13 +22,9 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/theme.scss",
-              "node_modules/lightbox2/dist/css/lightbox.min.css"
+              "src/assets/css/lightbox.min.css"
             ],
-            "scripts": [
-              "node_modules/jquery/dist/jquery.js",
-              "node_modules/lightbox2/dist/js/lightbox.min.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
