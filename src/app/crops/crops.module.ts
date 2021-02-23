@@ -6,7 +6,14 @@ import { CropsRoutingModul } from './crops-routing.module';
 
 /** Header and Footer Module */
 import { ShareComponentsModule } from '../common/share.components.module';
-import { MaterialModule } from '../common/material/material.module';
+
+import { MatIconModule } from '@angular/material/icon';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 /**  Shared */
 import { SideMenuComponent } from './side-menu/side-menu.component';
@@ -21,8 +28,11 @@ import { CropsPageComponent } from './pages/crops-page/crops-page.component';
     imports: [
         CommonModule,
         ShareComponentsModule,
-        MaterialModule,
         CropsRoutingModul,
+        MatCardModule,
+        MatIconModule,
+        MatToolbarModule,
+        MatSidenavModule
     ],
     declarations: [
         CropsComponent,

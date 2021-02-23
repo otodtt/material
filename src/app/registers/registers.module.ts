@@ -6,7 +6,7 @@ import { ShareComponentsModule } from '../common/share.components.module';
 import { MaterialModule } from '../common/material/material.module';
 
 import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule, MatPaginatorIntl } from '@angular/material';
+import { MatPaginatorModule, MatPaginatorIntl } from '@angular/material/paginator';
 import { getBulgarianPaginatorIntl } from '../products/shared/services/CustomPaginator';
 
 import { RegistersRoutingModule } from './registers-routing.module';

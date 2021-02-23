@@ -1,14 +1,16 @@
 import { Component, OnInit, ViewChild, AfterViewInit, ChangeDetectorRef, OnDestroy } from '@angular/core';
 import { Subscription, Observable, merge } from 'rxjs';
 import { MediaMatcher } from '@angular/cdk/layout';
-import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 import {of as observableOf} from 'rxjs';
 import {catchError} from 'rxjs/operators';
 import {map} from 'rxjs/operators';
 import {startWith} from 'rxjs/operators';
 import {switchMap} from 'rxjs/operators';
 
-import { MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 import { DialogAdjuvantsComponent } from './dialog-adjuvants/dialog-adjuvants.component';
 
 import { ChangeBreadcrumbService } from '../../common/services/changeBreadcrumb.service';

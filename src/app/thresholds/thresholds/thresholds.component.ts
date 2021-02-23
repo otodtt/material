@@ -1,7 +1,7 @@
 import { Component, OnInit, ChangeDetectorRef, OnDestroy, AfterViewInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { MediaMatcher } from '@angular/cdk/layout';
-import { MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 
 import { ChangeBreadcrumbService } from '../../common/services/changeBreadcrumb.service';
 import { ResizeService } from '../../common/services/ResizeService';

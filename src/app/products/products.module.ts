@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+// import { HttpClientModule } from '@angular/common/http';
 
 /** Routing */
 import { ProductsRoutingModule } from './products-routing.module';
@@ -12,7 +13,8 @@ import { ShareComponentsModule } from '../common/share.components.module';
 import { MaterialModule } from '../common/material/material.module';
 
 import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule, MatPaginatorIntl } from '@angular/material';
+import { MatPaginatorModule, MatPaginatorIntl } from '@angular/material/paginator';
+
 import { getBulgarianPaginatorIntl } from './shared/services/CustomPaginator';
 
 import { ProductsComponent } from './products.component';
@@ -43,7 +45,7 @@ import { HerbicidesComponent } from './herbicides/herbicides.component';
     ShareComponentsModule,
     MaterialModule,
     MatPaginatorModule,
-    MatTableModule
+    MatTableModule,
   ],
   declarations: [
     ProductsComponent,
