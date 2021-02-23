@@ -31,9 +31,9 @@ export class TriticumComponent implements OnInit, OnDestroy {
 
     @HostListener('click', ['$event'])
     onClick($event: MouseEvent) {
-        // tslint:disable-next-line: deprecation
-        if (event.srcElement.getAttribute('target') === '#table_bbch') {
-            this.doScroll();
+        const el = $event.target as HTMLInputElement;
+        if (el.getAttribute('target') === '#table_bbch') {
+          this.doScroll();
         }
     }
 

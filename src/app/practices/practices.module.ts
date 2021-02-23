@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LazyLoadModule } from '@greg-md/ng-lazy-load';
+// import { LazyLoadModule } from '@greg-md/ng-lazy-load';
 
 
 /** Routing */
@@ -11,6 +11,7 @@ import { PracticesService } from './practices/shared/services/practices.services
 
 /** Directives and Pipes */
 import { AnchorToDirective } from '../common/directives/AnchorToDirective';
+import { LazyImgDirective } from '../common/directives/LazyImgDirective';
 
 /** Header and Footer Module */
 import { ShareComponentsModule } from '../common/share.components.module';
@@ -67,10 +68,10 @@ import { VitisComponent } from './practices/pages/vitis/vitis.component';
         PracticesRoutingModul,
         ShareComponentsModule,
         MaterialModule,
-        LazyLoadModule,
     ],
     declarations: [
         AnchorToDirective,
+        LazyImgDirective,
         DialogComponent,
         PracticesComponent,
         IntroductionComponent,

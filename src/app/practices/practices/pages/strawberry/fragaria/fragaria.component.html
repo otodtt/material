@@ -250,7 +250,7 @@
                     <li *ngFor="let image of practice.images">
                         <a data-lightbox="image" href="{{image.imgPath}}" 
                             data-title="{{image.imgTitle}}">
-                            <img threshold="200" lazy-load="{{image.thumbPath}}" 
+                            <img threshold="200" loading="lazy" src="{{image.thumbPath}}" 
                                 alt="{{image.thumbAlt}}" title="{{image.thumbTitle}}"/>
                                 <span class="title_thumb">{{image.bgName}}</span>
                         </a>
