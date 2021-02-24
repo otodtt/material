@@ -11,7 +11,7 @@ export class HumulusComponent implements OnInit {
 
     private title = 'BBCH - Хмел';
     private description = 'Фенологични фази на растеж и BBCH-ключове за тяхната идентификация при хмел.';
-    breadcrumbName = 'Хмел';
+    private breadcrumbName = 'Хмел';
 
     constructor(
         private seoService: SeoService,

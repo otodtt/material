@@ -12,7 +12,7 @@ export class GossypiumComponent implements OnInit {
     private description = 'Прагове на икономическа вредност за вредители по памук.';
     private keywords = 'ПИВ, памук, болести, неприятели, плевели, ПРЗ';
 
-    breadcrumbName = 'Памук';
+    private breadcrumbName = 'Памук';
 
     constructor(
         private seoService: SeoService,

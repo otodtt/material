@@ -41,7 +41,7 @@ export class FungicidesComponent implements OnInit, AfterViewInit, OnDestroy {
     'както и за третиране на семена.';
   private keywords = 'фунгициди, продуки, растителна, защита, култури, растителнозащитни, пракатики';
 
-  breadcrumbName = 'Фунгициди';
+  private breadcrumbName = 'Фунгициди';
 
   mode = '';
   private link = 'products/fungicides';
@@ -50,7 +50,7 @@ export class FungicidesComponent implements OnInit, AfterViewInit, OnDestroy {
   smallQuery: MediaQueryList;
 
   private resizeSubscription: Subscription;
-  private _mobileQueryListener: () => void;
+  private mobileQueryListener: () => void;
 
   displayedColumns = ['name', 'substance', 'dose', 'category'];
   exampleDatabase: TableFromDatabase | null;
@@ -75,18 +75,18 @@ export class FungicidesComponent implements OnInit, AfterViewInit, OnDestroy {
     this.seoService.addTitle(this.title);
     this.seoService.setMeta(this.description, this.keywords);
 
-    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
+    this.seoService.addTitle(this.title);
+    this.seoService.setMeta(this.description, this.keywords);
+
+    this.mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.bigQuery = media.matchMedia('(max-width: 850px)');
-    // tslint:disable-next-line: deprecation
-    this.bigQuery.addListener(this._mobileQueryListener);
+    this.bigQuery.addEventListener('change', this.mobileQueryListener);
 
     this.mediumQuery = media.matchMedia('(max-width: 768px)');
-    // tslint:disable-next-line: deprecation
-    this.mediumQuery.addListener(this._mobileQueryListener);
+    this.mediumQuery.addEventListener('change', this.mobileQueryListener);
 
     this.smallQuery = media.matchMedia('(max-width: 481px)');
-    // tslint:disable-next-line: deprecation
-    this.smallQuery.addListener(this._mobileQueryListener);
+    this.smallQuery.addEventListener('change', this.mobileQueryListener);
 
     if (
       this.bigQuery.matches === false &&
@@ -177,12 +177,9 @@ export class FungicidesComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    // tslint:disable-next-line: deprecation
-    this.bigQuery.removeListener(this._mobileQueryListener);
-    // tslint:disable-next-line: deprecation
-    this.mediumQuery.removeListener(this._mobileQueryListener);
-    // tslint:disable-next-line: deprecation
-    this.smallQuery.removeListener(this._mobileQueryListener);
+    this.bigQuery.removeEventListener('change', this.mobileQueryListener);
+    this.mediumQuery.removeEventListener('change', this.mobileQueryListener);
+    this.smallQuery.removeEventListener('change', this.mobileQueryListener);
     if (this.resizeSubscription) {
       this.resizeSubscription.unsubscribe();
     }

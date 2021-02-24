@@ -19,7 +19,7 @@ export class NicotianaComponent implements OnInit, OnDestroy {
     private description = 'Добра Растителнозащитна Пракатика при тютюн. Борба с болести, неприятели и плевели при тютюн.';
     private keywords = 'тютюн, болести, неприятели, плевели, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Тютюн';
+    private breadcrumbName = 'Тютюн';
 
     isLoaded = false;
     practices: Practice[] = [];

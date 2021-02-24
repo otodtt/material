@@ -19,7 +19,7 @@ export class GossypiumComponent implements OnInit, OnDestroy {
     private description = 'Добра Растителнозащитна Пракатика при памук. Борба с болести, неприятели и плевели при памук.';
     private keywords = 'памук, болести, неприятели, плевели, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Памук';
+    private breadcrumbName = 'Памук';
 
     isLoaded = false;
     practices: Practice[] = [];

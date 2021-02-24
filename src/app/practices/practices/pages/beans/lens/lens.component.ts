@@ -19,7 +19,7 @@ export class LensComponent implements OnInit, OnDestroy {
     private description = 'Добра Растителнозащитна Пракатика при леща. Борба с болести, неприятели и плевели при леща.';
     private keywords = 'леща, болести, неприятели, плевели, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Леща';
+    private breadcrumbName = 'Леща';
 
     isLoaded = false;
     practices: Practice[] = [];

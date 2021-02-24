@@ -102,7 +102,7 @@ export class FormulationsComponent implements OnInit {
   private description = 'Формулации. Списък на означения за използваните в Република Българя формулации';
 
   breadcrumbTitle = 'ОЗНАЧЕНИЯ';
-  breadcrumbName = 'Означения';
+  private breadcrumbName = 'Означения';
   table = [];
 
   constructor(

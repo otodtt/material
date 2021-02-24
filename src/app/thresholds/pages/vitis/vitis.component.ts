@@ -12,7 +12,7 @@ export class VitisComponent implements OnInit {
     private description = 'Прагове на икономическа вредност за вредители по лоза.';
     private keywords = 'ПИВ, лоза, болести, неприятели, плевели, ПРЗ';
 
-    breadcrumbName = 'Лоза';
+    private breadcrumbName = 'Лоза';
 
     constructor(
         private seoService: SeoService,

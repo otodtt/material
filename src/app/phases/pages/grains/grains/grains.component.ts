@@ -12,7 +12,7 @@ export class GrainsComponent implements OnInit {
     private title = 'BBCH - Житни';
     private description = 'Фенологични фази на растеж и BBCH-ключове за тяхната идентификация ' +
                         'при житните култури със слята повърхност пшеница, ечемик, овес и ръж.';
-    breadcrumbName = 'Житни';
+    private breadcrumbName = 'Житни';
 
     constructor(
         private seoService: SeoService,

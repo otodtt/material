@@ -22,7 +22,7 @@ export class VegetablesComponent implements OnInit, OnDestroy {
                             ' Борба с болести, неприятели и плевели при домати, пипер и патладжан.';
     private keywords = 'домати, пипер, патладжан, болести, неприятели, плевели, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Зеленчуци';
+    private breadcrumbName = 'Зеленчуци';
 
     isLoaded = false;
     practices: Practice[] = [];

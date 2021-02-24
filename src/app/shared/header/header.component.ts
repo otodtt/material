@@ -10,6 +10,8 @@ import pages from '../Pages';
     styleUrls: ['./header.component.scss', './media.scss', './media-more.scss']
 })
 export class HeaderComponent implements OnInit {
+
+    @Output() navToggle = new EventEmitter<boolean>();
     public pages = pages;
 
     changeId: string;
@@ -20,17 +22,15 @@ export class HeaderComponent implements OnInit {
 
     public isScrollTop: number;
 
-    @Output() navToggle = new EventEmitter<boolean>();
+    constructor(
+        private el: ElementRef,
+        private changeBreadcrumb: ChangeBreadcrumbService
+    ) {}
 
     @HostListener('window:scroll', [])
     onWindowScroll(): void {
         this.onScroll();
     }
-
-    constructor(
-        private el: ElementRef,
-        private changeBreadcrumb: ChangeBreadcrumbService
-    ) {}
 
     ngOnInit(): any {
         this.changeBreadcrumb.changeTitle$.subscribe(

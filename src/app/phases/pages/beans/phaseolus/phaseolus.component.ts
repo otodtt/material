@@ -11,7 +11,7 @@ export class PhaseolusComponent implements OnInit {
 
     private title = 'BBCH - Фасул';
     private description = 'Фенологични фази на растеж и BBCH-ключове за тяхната идентификация при фасул.';
-    breadcrumbName = 'Фасул';
+    private breadcrumbName = 'Фасул';
 
     constructor(
         private seoService: SeoService,

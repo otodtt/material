@@ -11,7 +11,7 @@ export class OryzaComponent implements OnInit {
 
     private title = 'BBCH - Ориз';
     private description = 'Фенологични фази на растеж и BBCH-ключове за тяхната идентификация при ориз.';
-    breadcrumbName = 'Ориз';
+    private breadcrumbName = 'Ориз';
 
     constructor(
         private seoService: SeoService,

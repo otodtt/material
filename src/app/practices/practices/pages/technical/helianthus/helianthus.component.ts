@@ -19,7 +19,7 @@ export class HelianthusComponent implements OnInit, OnDestroy {
     private description = 'Добра Растителнозащитна Пракатика при слънчоглед. Борба с болести, неприятели и плевели при слънчогледа.';
     private keywords = 'слънчоглед, болести, неприятели, плевели, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Слънчоглед';
+    private breadcrumbName = 'Слънчоглед';
 
     isLoaded = false;
     practices: Practice[] = [];

@@ -12,7 +12,7 @@ export class BetaComponent implements OnInit {
     private description = 'Прагове на икономическа вредност за вредители по захарно цвекло.';
     private keywords = 'ПИВ, захарно цвекло, болести, неприятели, плевели, ПРЗ';
 
-    breadcrumbName = 'Цвекло';
+    private breadcrumbName = 'Цвекло';
 
     constructor(
         private seoService: SeoService,

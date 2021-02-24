@@ -12,7 +12,7 @@ export class SolanaceousComponent implements OnInit {
     private title = 'BBCH - Домати, патладжан, пипер';
     private description = 'Фенологични фази на растеж и BBCH-ключове за тяхната идентификация' +
                             'при домати, патладжан, пипер.';
-    breadcrumbName = 'Домати, патладжан, пипер';
+    private breadcrumbName = 'Домати, патладжан, пипер';
 
     constructor(
         private seoService: SeoService,

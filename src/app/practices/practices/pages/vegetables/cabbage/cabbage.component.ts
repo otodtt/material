@@ -22,7 +22,7 @@ export class CabbageComponent implements OnInit, OnDestroy {
                             ' Борба с болести, неприятели и плевели при главесто зеле, карфиол, алабаш, ряпа.';
     private keywords = 'главесто зеле, карфиол, алабаш, ряпа, болести, неприятели, плевели, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Зелеви';
+    private breadcrumbName = 'Зелеви';
 
     isLoaded = false;
     practices: Practice[] = [];

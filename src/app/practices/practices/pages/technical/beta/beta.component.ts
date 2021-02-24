@@ -19,7 +19,7 @@ export class BetaComponent implements OnInit, OnDestroy {
     private description = 'Добра Растителнозащитна Пракатика при цвекло. Борба с болести, неприятели и плевели при цвекло.';
     private keywords = 'цвекло, болести, неприятели, плевели, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Цвекло';
+    private breadcrumbName = 'Цвекло';
 
     isLoaded = false;
     practices: Practice[] = [];

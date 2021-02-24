@@ -12,7 +12,7 @@ export class CitrullusComponent implements OnInit {
     private description = 'Прагове на икономическа вредност за вредители по пъпеши и дини.';
     private keywords = 'ПИВ, пъпеши, дини, болести, неприятели, плевели, ПРЗ';
 
-    breadcrumbName = 'Пъпеши и Дини';
+    private breadcrumbName = 'Пъпеши и Дини';
 
     constructor(
         private seoService: SeoService,

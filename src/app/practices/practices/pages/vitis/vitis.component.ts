@@ -21,7 +21,7 @@ export class VitisComponent implements OnInit, OnDestroy {
                             'Борба с болести, неприятели и плевели при лозата.';
     private keywords = 'лоза, болести, неприятели, плевели, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Лоза';
+    private breadcrumbName = 'Лоза';
 
     isLoaded = false;
     practices: Practice[] = [];

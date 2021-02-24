@@ -19,7 +19,7 @@ export class CicerComponent implements OnInit, OnDestroy {
     private description = 'Добра Растителнозащитна Пракатика при нахут. Борба с болести, неприятели и плевели при нахута.';
     private keywords = 'нахут, болести, неприятели, плевели, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Нахут';
+    private breadcrumbName = 'Нахут';
 
     isLoaded = false;
     practices: Practice[] = [];

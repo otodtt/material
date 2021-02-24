@@ -12,7 +12,7 @@ export class DaucusComponent implements OnInit {
     private description = 'Прагове на икономическа вредност за вредители по моркови.';
     private keywords = 'ПИВ, моркови, болести, неприятели, плевели, ПРЗ';
 
-    breadcrumbName = 'Моркови';
+    private breadcrumbName = 'Моркови';
 
     constructor(
         private seoService: SeoService,

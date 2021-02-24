@@ -11,7 +11,7 @@ export class BetaComponent implements OnInit {
 
     private title = 'BBCH - Цвекло';
     private description = 'Фенологични фази на растеж и BBCH-ключове за тяхната идентификация при цвекло.';
-    breadcrumbName = 'Цвекло';
+    private breadcrumbName = 'Цвекло';
 
     constructor(
         private seoService: SeoService,

@@ -8,11 +8,10 @@ import { ChangeBreadcrumbService } from '../../../common/services/changeBreadcru
     styleUrls: ['../pages.scss']
 })
 export class FragariaComponent implements OnInit {
+    private breadcrumbName = 'Ягоди и Малини';
     private title = 'ПИВ - Ягоди и Малини';
     private description = 'Прагове на икономическа вредност за вредители по ягоди и малини.';
     private keywords = 'ПИВ, ягоди, малини, болести, неприятели, плевели, ПРЗ';
-
-    breadcrumbName = 'Ягоди и Малини';
 
     constructor(
         private seoService: SeoService,

@@ -8,11 +8,10 @@ import { ChangeBreadcrumbService } from '../../../../common/services/changeBread
     styleUrls: ['../../pages.scss']
 })
 export class MenthaComponent implements OnInit {
+    private breadcrumbName = 'Мента и Лавандула';
     private title = 'ПИВ - Мента и Лавандула';
     private description = 'Прагове на икономическа вредност за вредители по мента и лавандула.';
     private keywords = 'ПИВ, мента, лавандула, болести, неприятели, плевели, ПРЗ';
-
-    breadcrumbName = 'Мента и Лавандула';
 
     constructor(
         private seoService: SeoService,

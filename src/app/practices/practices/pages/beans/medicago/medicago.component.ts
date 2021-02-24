@@ -19,7 +19,7 @@ export class MedicagoComponent implements OnInit, OnDestroy  {
     private description = 'Добра Растителнозащитна Пракатика при люцерна. Борба с болести, неприятели и плевели при люцерната.';
     private keywords = 'люцерна, болести, неприятели, плевели, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Люцерна';
+    private breadcrumbName = 'Люцерна';
 
     isLoaded = false;
     practices: Practice[] = [];

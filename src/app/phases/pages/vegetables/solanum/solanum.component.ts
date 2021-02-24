@@ -11,7 +11,7 @@ export class SolanumComponent implements OnInit {
 
     private title = 'BBCH - Картофи';
     private description = 'Фенологични фази на растеж и BBCH-ключове за тяхната идентификация при картофи.';
-    breadcrumbName = 'Картофи';
+    private breadcrumbName = 'Картофи';
 
     constructor(
         private seoService: SeoService,

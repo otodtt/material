@@ -8,11 +8,10 @@ import { ChangeBreadcrumbService } from '../../../../common/services/changeBread
     styleUrls: ['../../pages.scss']
 })
 export class PisumComponent implements OnInit {
+    private breadcrumbName = 'Грах';
     private title = 'ПИВ - Грах';
     private description = 'Прагове на икономическа вредност за вредители по грах.';
     private keywords = 'ПИВ, грах, болести, неприятели, плевели, ПРЗ';
-
-    breadcrumbName = 'Грах';
 
     constructor(
         private seoService: SeoService,

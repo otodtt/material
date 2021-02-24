@@ -12,7 +12,7 @@ export class CucurbitsComponent implements OnInit {
     private title = 'BBCH - краставица, диня, пъпеш';
     private description = 'Фенологични фази на растеж и BBCH-ключове за (тяхната) индефикация ' +
                             'при краставица, пъпеш, тиква, тиквичка, кратуна и диня';
-    breadcrumbName = 'Тиквови култури';
+    private breadcrumbName = 'Тиквови култури';
 
     constructor(
         private seoService: SeoService,

@@ -36,7 +36,7 @@ export class SubstancesComponent implements OnInit, AfterViewInit, OnDestroy {
     private description = 'Регистър на използваните активни вещества и разрешените за пускане ' +
         'на пазара и употреба ПРЗ в Република България';
 
-    breadcrumbName = 'Активни Вещества';
+    private breadcrumbName = 'Активни Вещества';
 
     mode = '';
 
@@ -45,7 +45,7 @@ export class SubstancesComponent implements OnInit, AfterViewInit, OnDestroy {
     smallQuery: MediaQueryList;
 
     private resizeSubscription: Subscription;
-    private _mobileQueryListener: () => void;
+    private mobileQueryListener: () => void;
 
     columnsToDisplay = ['name', 'products', 'moreDetails'];
     exampleDatabase: TableFromDatabase | null;
@@ -71,18 +71,15 @@ export class SubstancesComponent implements OnInit, AfterViewInit, OnDestroy {
         this.seoService.addTitle(this.title);
         this.seoService.setNoKeywordsMeta(this.description);
 
-        this._mobileQueryListener = () => changeDetectorRef.detectChanges();
+        this.mobileQueryListener = () => changeDetectorRef.detectChanges();
         this.bigQuery = media.matchMedia('(max-width: 850px)');
-        // tslint:disable-next-line: deprecation
-        this.bigQuery.addListener(this._mobileQueryListener);
+        this.bigQuery.addEventListener('change', this.mobileQueryListener);
 
         this.mediumQuery = media.matchMedia('(max-width: 768px)');
-        // tslint:disable-next-line: deprecation
-        this.mediumQuery.addListener(this._mobileQueryListener);
+        this.mediumQuery.addEventListener('change', this.mobileQueryListener);
 
         this.smallQuery = media.matchMedia('(max-width: 481px)');
-        // tslint:disable-next-line: deprecation
-        this.smallQuery.addListener(this._mobileQueryListener);
+        this.smallQuery.addEventListener('change', this.mobileQueryListener);
 
         if (
             this.bigQuery.matches === false &&
@@ -174,13 +171,9 @@ export class SubstancesComponent implements OnInit, AfterViewInit, OnDestroy {
     }
 
     ngOnDestroy() {
-        // tslint:disable-next-line: deprecation
-        this.bigQuery.removeListener(this._mobileQueryListener);
-        // tslint:disable-next-line: deprecation
-        this.mediumQuery.removeListener(this._mobileQueryListener);
-        // tslint:disable-next-line: deprecation
-        this.smallQuery.removeListener(this._mobileQueryListener);
-        // tslint:disable-next-line: deprecation
+        this.bigQuery.removeEventListener('change', this.mobileQueryListener);
+        this.mediumQuery.removeEventListener('change', this.mobileQueryListener);
+        this.smallQuery.removeEventListener('change', this.mobileQueryListener);
         if (this.resizeSubscription) {
             this.resizeSubscription.unsubscribe();
         }

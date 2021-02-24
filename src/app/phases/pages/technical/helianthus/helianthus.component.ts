@@ -11,7 +11,7 @@ export class HelianthusComponent implements OnInit {
 
     private title = 'BBCH - Слънчоглед';
     private description = 'Фенологични фази на растеж и BBCH-ключове за тяхната идентификация при слънчоглед.';
-    breadcrumbName = 'Слънчоглед';
+    private breadcrumbName = 'Слънчоглед';
 
     constructor(
         private seoService: SeoService,

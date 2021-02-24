@@ -8,11 +8,10 @@ import { ChangeBreadcrumbService } from '../../../../common/services/changeBread
     styleUrls: ['../../pages.scss']
 })
 export class TriticumComponent implements OnInit {
+    private breadcrumbName = 'Пшеница';
     private title = 'ПИВ - Пшеница';
     private description = 'Прагове на икономическа вредност за вредители по пшеница.';
     private keywords = 'ПИВ, пшеница, болести, неприятели, плевели, ПРЗ';
-
-    breadcrumbName = 'Пшеница';
 
     constructor(
         private seoService: SeoService,

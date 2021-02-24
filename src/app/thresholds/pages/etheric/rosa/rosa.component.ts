@@ -8,11 +8,11 @@ import { ChangeBreadcrumbService } from '../../../../common/services/changeBread
     styleUrls: ['../../pages.scss']
 })
 export class RosaComponent implements OnInit {
+    private breadcrumbName = 'Роза';
     private title = 'ПИВ - Казанлъшка роза';
     private description = 'Прагове на икономическа вредност за вредители по казанлъшка роза.';
     private keywords = 'ПИВ, роза, болести, неприятели, плевели, ПРЗ';
 
-    breadcrumbName = 'Роза';
 
     constructor(
         private seoService: SeoService,

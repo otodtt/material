@@ -18,7 +18,7 @@ export class CropsComponent implements OnInit, OnDestroy, AfterViewInit {
 
     headerId = 'aa-crops';
     breadcrumbTitle = 'КУЛТУРИ';
-    breadcrumbName = 'Култури';
+    private breadcrumbName = 'Култури';
 
     // constructor(
     //     private changeBreadcrumb: ChangeBreadcrumbService,
@@ -40,7 +40,7 @@ export class CropsComponent implements OnInit, OnDestroy, AfterViewInit {
     smallQuery: MediaQueryList;
 
     private resizeSubscription: Subscription;
-    private _mobileQueryListener: () => void;
+    private mobileQueryListener: () => void;
 
     constructor(
         private changeBreadcrumb: ChangeBreadcrumbService,
@@ -52,18 +52,15 @@ export class CropsComponent implements OnInit, OnDestroy, AfterViewInit {
         this.seoService.addTitle(this.title);
         this.seoService.setMeta(this.description, this.keywords);
 
-        this._mobileQueryListener = () => changeDetectorRef.detectChanges();
+        this.mobileQueryListener = () => changeDetectorRef.detectChanges();
         this.openedQuery = media.matchMedia('(max-width: 850px)');
-        // tslint:disable-next-line: deprecation
-        this.openedQuery.addListener(this._mobileQueryListener);
+        this.openedQuery.addEventListener('change', this.mobileQueryListener);
 
         this.mediumQuery = media.matchMedia('(max-width: 768px)');
-        // tslint:disable-next-line: deprecation
-        this.mediumQuery.addListener(this._mobileQueryListener);
+        this.mediumQuery.addEventListener('change', this.mobileQueryListener);
 
         this.smallQuery = media.matchMedia('(max-width: 481px)');
-        // tslint:disable-next-line: deprecation
-        this.smallQuery.addListener(this._mobileQueryListener);
+        this.smallQuery.addEventListener('change', this.mobileQueryListener);
 
         if (this.mediumQuery.matches === true && this.smallQuery.matches === false) {
             this.mode = 'push';
@@ -95,12 +92,9 @@ export class CropsComponent implements OnInit, OnDestroy, AfterViewInit {
     }
 
     ngOnDestroy() {
-        // tslint:disable-next-line: deprecation
-        this.openedQuery.removeListener(this._mobileQueryListener);
-        // tslint:disable-next-line: deprecation
-        this.mediumQuery.removeListener(this._mobileQueryListener);
-        // tslint:disable-next-line: deprecation
-        this.smallQuery.removeListener(this._mobileQueryListener);
+        this.openedQuery.removeEventListener('change', this.mobileQueryListener);
+        this.mediumQuery.removeEventListener('change', this.mobileQueryListener);
+        this.smallQuery.removeEventListener('change', this.mobileQueryListener);
         if (this.resizeSubscription) {
             this.resizeSubscription.unsubscribe();
         }

@@ -50,7 +50,7 @@
                   <span *ngIf="prod.pesticide_type == 'herbicides'" class="herbicides">Хербицид</span>
                 </td>
                 <td class="pesticides_firms">
-                  <a matLine [routerLink]="[ '/products/' + prod.pesticide_type + '/' + prod.pesticides_id ]"
+                  <a matLine [routerLink]="[ '/products/' + prod.pesticide_type + '/' + prod.pesticide_id ]"
                     matTooltip="Подробно за продукта">
                     {{ prod.pesticide_name }}
                   </a>

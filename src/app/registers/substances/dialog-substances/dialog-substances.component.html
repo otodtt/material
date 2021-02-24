@@ -9,7 +9,7 @@
       <ol>
         <li *ngFor="let item of data.data.products">
           <span>
-            <a matLine [routerLink]="[ '/products/' + item.pesticide_type + '/' + item.pesticides_id ]"
+            <a matLine [routerLink]="[ '/products/' + item.pesticide_type + '/' + item.pesticide_id ]"
               (click)="onClickNavigate()" matTooltip="Подробно за продукта">
               {{item.pesticide_name}}
             </a>

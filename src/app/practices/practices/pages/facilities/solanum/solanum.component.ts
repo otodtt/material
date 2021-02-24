@@ -21,7 +21,7 @@ export class SolanumComponent implements OnInit, OnDestroy {
                             'Борба с болести, неприятели и плевели при домати в оранжерии.';
     private keywords = 'домати, болести, неприятели, плевели, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Домати';
+    private breadcrumbName = 'Домати';
 
     isLoaded = false;
     practices: Practice[] = [];

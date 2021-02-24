@@ -12,7 +12,7 @@ export class RodentiaComponent implements OnInit {
     private description = 'Добра Растителнозащитна Пракатика при борба с гризачи.';
     private keywords = 'гризач, гризачи, мишка, мишки, полевка, полевки, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Гризачи';
+    private breadcrumbName = 'Гризачи';
 
     isLoaded = false;
     constructor(

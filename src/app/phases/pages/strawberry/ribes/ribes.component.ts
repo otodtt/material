@@ -12,7 +12,7 @@ export class RibesComponent implements OnInit {
     private title = 'BBCH - Касис';
     private description = 'Фенологични фази на растеж и BBCH-ключове за тяхната идентификация ' +
                             'при черно френско грозде и червено френско грозде' ;
-    breadcrumbName = 'Касис';
+    private breadcrumbName = 'Касис';
 
     constructor(
         private seoService: SeoService,

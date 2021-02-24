@@ -21,7 +21,7 @@ export class FragariaComponent implements OnInit, OnDestroy {
                             'Борба с болести, неприятели и плевели при ягода.';
     private keywords = 'ягода, болести, неприятели, плевели, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Ягода';
+    private breadcrumbName = 'Ягода';
 
     isLoaded = false;
     practices: Practice[] = [];

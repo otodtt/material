@@ -12,7 +12,7 @@ export class LeafComponent implements OnInit {
     private title = 'BBCH - Листни зеленчуци';
     private description = 'Фенологични  фази на растеж и ВВСН-ключове за тяхната идентификация ' +
                             'при листни зеленчуци неформиращи глави: спанак, безглавеста салата  и  зеле-кале';
-    breadcrumbName = 'Листни зеленчуци';
+    private breadcrumbName = 'Листни зеленчуци';
 
     constructor(
         private seoService: SeoService,

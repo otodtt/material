@@ -13,7 +13,7 @@ export class RootComponent implements OnInit {
     private description = 'Фенологични фази на растеж и ВВСН-ключове за тяхната идентификация ' +
                             'при коренови и стъблени зеленчуци: морков, целина, алабаш, ' +
                             'цихория, ряпа, шведско цвекло-swede и scorzonera';
-    breadcrumbName = 'Коренови и стъблени';
+    private breadcrumbName = 'Коренови и стъблени';
 
     constructor(
         private seoService: SeoService,

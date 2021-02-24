@@ -11,7 +11,7 @@ export class VitisComponent implements OnInit {
 
     private title = 'BBCH - Лоза';
     private description = 'Фенологични фази на растеж и BBCH-ключове за тяхната идентификация при лоза' ;
-    breadcrumbName = 'Лоза';
+    private breadcrumbName = 'Лоза';
 
     constructor(
         private seoService: SeoService,

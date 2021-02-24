@@ -12,7 +12,7 @@ export class IntroductionComponent implements OnInit {
     private title = 'Правила и Принципи на ДРЗП';
     private description = 'Правила и Принципи за Добри Растителнозащитни Пракатики в земеделието.';
     private keywords = 'култура, култури, растителнозащитни, пракатики, ДРЗП';
-    breadcrumbName = 'Правила';
+    private breadcrumbName = 'Правила';
 
     constructor(
         private seoService: SeoService,

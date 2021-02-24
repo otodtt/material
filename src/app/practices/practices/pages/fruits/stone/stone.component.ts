@@ -22,7 +22,7 @@ export class StoneComponent implements OnInit, OnDestroy {
                             ' Борба с болести, неприятели и плевели при слива, череша, вишна, праскова и кайсия.';
     private keywords = 'слива, череша, вишна, праскова и кайсия, болести, неприятели, плевели, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Костилкови';
+    private breadcrumbName = 'Костилкови';
 
     isLoaded = false;
     practices: Practice[] = [];

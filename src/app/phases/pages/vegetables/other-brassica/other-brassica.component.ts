@@ -12,7 +12,7 @@ export class OtherBrassicaComponent implements OnInit {
     private title = 'BBCH - Карфиол, брюкселско зеле и броколи';
     private description = 'Фенологични  фази на растеж и ВВСН-ключове за тяхната идентификация ' +
                             'при други зелеви култури: брюкселско зеле, цветно зеле - карфиол и броколи';
-    breadcrumbName = 'Други Зелеви';
+    private breadcrumbName = 'Други Зелеви';
 
     constructor(
         private seoService: SeoService,

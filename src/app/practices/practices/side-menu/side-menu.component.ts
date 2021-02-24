@@ -25,7 +25,7 @@ export class SideMenuComponent implements OnInit, AfterViewInit, OnDestroy {
     openedQuery: MediaQueryList;
 
     private resizeSubscription: Subscription;
-    private _mobileQueryListener: () => void;
+    private mobileQueryListener: () => void;
 
 
     public href: any;
@@ -39,10 +39,9 @@ export class SideMenuComponent implements OnInit, AfterViewInit, OnDestroy {
         media: MediaMatcher,
         private router: Router, private activatedRoute: ActivatedRoute
     ) {
-        this._mobileQueryListener = () => changeDetectorRef.detectChanges();
+        this.mobileQueryListener = () => changeDetectorRef.detectChanges();
         this.openedQuery = media.matchMedia('(max-width: 850px)');
-        // tslint:disable-next-line: deprecation
-        this.openedQuery.addListener(this._mobileQueryListener);
+        this.openedQuery.addEventListener('change', this.mobileQueryListener);
 
         const pathUrl = this.activatedRoute.snapshot.firstChild.url[0].path;
 
@@ -105,8 +104,7 @@ export class SideMenuComponent implements OnInit, AfterViewInit, OnDestroy {
     }
 
     ngOnDestroy() {
-        // tslint:disable-next-line: deprecation
-        this.openedQuery.removeListener(this._mobileQueryListener);
+        this.openedQuery.removeEventListener('change', this.mobileQueryListener);
         if (this.resizeSubscription) {
             this.resizeSubscription.unsubscribe();
         }

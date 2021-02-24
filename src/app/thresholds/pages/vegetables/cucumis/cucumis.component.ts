@@ -12,7 +12,7 @@ export class CucumisComponent implements OnInit {
     private description = 'Прагове на икономическа вредност за вредители по краставици.';
     private keywords = 'ПИВ, краставици, болести, неприятели, плевели, ПРЗ';
 
-    breadcrumbName = 'Краставици';
+    private breadcrumbName = 'Краставици';
 
     constructor(
         private seoService: SeoService,

@@ -8,11 +8,10 @@ import { ChangeBreadcrumbService } from '../../../../common/services/changeBread
     styleUrls: ['../../pages.scss']
 })
 export class PrunusComponent implements OnInit {
+    private breadcrumbName = 'Слива';
     private title = 'ПИВ - Слива';
     private description = 'Прагове на икономическа вредност за вредители по слива.';
     private keywords = 'ПИВ, слива, болести, неприятели, плевели, ПРЗ';
-
-    breadcrumbName = 'Слива';
 
     constructor(
         private seoService: SeoService,

@@ -8,11 +8,11 @@ import { ChangeBreadcrumbService } from '../../../../common/services/changeBread
     styleUrls: ['../../pages.scss']
 })
 export class MedicagoComponent implements OnInit {
+    private breadcrumbName = 'Люцерна';
+
     private title = 'ПИВ - Люцерна';
     private description = 'Прагове на икономическа вредност за вредители по люцерна.';
     private keywords = 'ПИВ, люцерна, болести, неприятели, плевели, ПРЗ';
-
-    breadcrumbName = 'Люцерна';
 
     constructor(
         private seoService: SeoService,

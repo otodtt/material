@@ -11,7 +11,7 @@ export class ViciaComponent implements OnInit {
 
     private title = 'BBCH - Бакла';
     private description = 'Фенологични фази на растеж и BBCH-ключове за тяхната идентификация при бакла.';
-    breadcrumbName = 'Бакла';
+    private breadcrumbName = 'Бакла';
 
     constructor(
         private seoService: SeoService,

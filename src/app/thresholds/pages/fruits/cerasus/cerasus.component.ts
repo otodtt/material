@@ -8,11 +8,10 @@ import { ChangeBreadcrumbService } from '../../../../common/services/changeBread
     styleUrls: ['../../pages.scss']
 })
 export class CerasusComponent implements OnInit {
+    private breadcrumbName = 'Череша и Вишня';
     private title = 'ПИВ - Череша и Вишня';
     private description = 'Прагове на икономическа вредност за вредители по череша и вишня.';
     private keywords = 'ПИВ, череша, вишня, болести, неприятели, плевели, ПРЗ';
-
-    breadcrumbName = 'Череша и Вишня';
 
     constructor(
         private seoService: SeoService,

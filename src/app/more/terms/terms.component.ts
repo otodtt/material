@@ -11,7 +11,7 @@ export class TermsComponent implements OnInit {
 
   headerId = 'aa-site';
   // breadcrumbTitle = 'SITEMAP';
-  // breadcrumbName = 'Карта на сайта';
+  // private breadcrumbName = 'Карта на сайта';
 
   private title = 'ПРЗ | Условия за ползване на сайта';
   private description = 'Условия за ползване на сайта. Продукти за растителна защита. ПРЗ';

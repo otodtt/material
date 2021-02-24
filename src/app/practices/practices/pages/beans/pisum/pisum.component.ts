@@ -19,7 +19,7 @@ export class PisumComponent implements OnInit, OnDestroy {
     private description = 'Добра Растителнозащитна Пракатика при грах. Борба с болести, неприятели и плевели при граха.';
     private keywords = 'грах, болести, неприятели, плевели, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Грах';
+    private breadcrumbName = 'Грах';
 
     isLoaded = false;
     practices: Practice[] = [];

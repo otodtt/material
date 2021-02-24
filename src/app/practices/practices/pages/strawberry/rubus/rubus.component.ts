@@ -21,7 +21,7 @@ export class RubusComponent implements OnInit, OnDestroy {
                             'Борба с болести, неприятели и плевели при малина.';
     private keywords = 'малина, болести, неприятели, плевели, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Малина';
+    private breadcrumbName = 'Малина';
 
     isLoaded = false;
     practices: Practice[] = [];

@@ -21,7 +21,7 @@ export class CapsicumComponent implements OnInit, OnDestroy {
                             'Борба с болести, неприятели и плевели при пипер в оранжерии.';
     private keywords = 'пипер, болести, неприятели, плевели, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Пипер';
+    private breadcrumbName = 'Пипер';
 
     isLoaded = false;
     practices: Practice[] = [];

@@ -19,7 +19,7 @@ export class ZeaComponent implements OnInit, OnDestroy {
     private description = 'Добра Растителнозащитна Пракатика при царевица. Борба с болести, неприятели и плевели при царевицата.';
     private keywords = 'царевица, болести, неприятели, плевели, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Царевица';
+    private breadcrumbName = 'Царевица';
 
     isLoaded = false;
     practices: Practice[] = [];

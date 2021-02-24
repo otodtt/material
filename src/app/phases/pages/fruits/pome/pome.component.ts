@@ -11,7 +11,7 @@ export class PomeComponent implements OnInit {
 
     private title = 'BBCH - Ябълка и круша';
     private description = 'Фенологични фази на растеж и ключове за тяхната идентификация при семковите овощни видове: ябълка и круша' ;
-    breadcrumbName = 'Ябълка и круша';
+    private breadcrumbName = 'Ябълка и круша';
 
     constructor(
         private seoService: SeoService,

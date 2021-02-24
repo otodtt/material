@@ -13,7 +13,7 @@ export class NotFoundComponent implements OnInit {
   private title = 'ПРЗ | 404';
   private description = 'Страница 404. Страницата не е намерена';
 
-  breadcrumbName = '404';
+  private breadcrumbName = '404';
 
   constructor(
       private changeBreadcrumb: ChangeBreadcrumbService,

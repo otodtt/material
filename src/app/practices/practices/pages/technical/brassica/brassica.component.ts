@@ -19,7 +19,7 @@ export class BrassicaComponent implements OnInit, OnDestroy {
     private description = 'Добра Растителнозащитна Пракатика при рапица. Борба с болести, неприятели и плевели при рапицата.';
     private keywords = 'рапица, болести, неприятели, плевели, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Рапица';
+    private breadcrumbName = 'Рапица';
 
     isLoaded = false;
     practices: Practice[] = [];

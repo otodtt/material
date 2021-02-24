@@ -19,7 +19,7 @@ export class AvenaComponent implements OnInit, OnDestroy {
     private description = 'Добра Растителнозащитна Пракатика при овес. Борба с болести, неприятели и плевели при овеса.';
     private keywords = 'овес, болести, неприятели, плевели, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Овес';
+    private breadcrumbName = 'Овес';
 
     isLoaded = false;
     practices: Practice[] = [];

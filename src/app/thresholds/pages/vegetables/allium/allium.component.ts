@@ -12,7 +12,7 @@ export class AlliumComponent implements OnInit {
     private description = 'Прагове на икономическа вредност за вредители по лук и чесън.';
     private keywords = 'ПИВ, лук, чесън, болести, неприятели, плевели, ПРЗ';
 
-    breadcrumbName = 'Лук и Чесън';
+    private breadcrumbName = 'Лук и Чесън';
 
     constructor(
         private seoService: SeoService,

@@ -20,7 +20,7 @@ export class ArachisComponent implements OnInit, OnDestroy {
     private description = 'Добра Растителнозащитна Пракатика при фъстъци. Борба с болести, неприятели и плевели при фъстъците.';
     private keywords = 'фъстъци, болести, неприятели, плевели, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Фъстъци';
+    private breadcrumbName = 'Фъстъци';
 
     isLoaded = false;
     practices: Practice[] = [];

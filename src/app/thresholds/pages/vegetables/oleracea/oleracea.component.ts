@@ -12,7 +12,7 @@ export class OleraceaComponent implements OnInit {
     private description = 'Прагове на икономическа вредност за вредители по зеле.';
     private keywords = 'ПИВ, зеле, болести, неприятели, плевели, ПРЗ';
 
-    breadcrumbName = 'Зеле';
+    private breadcrumbName = 'Зеле';
 
     constructor(
         private seoService: SeoService,

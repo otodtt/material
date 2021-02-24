@@ -19,7 +19,7 @@ export class GlycineComponent implements OnInit, OnDestroy {
     private description = 'Добра Растителнозащитна Пракатика при соя. Борба с болести, неприятели и плевели при соята.';
     private keywords = 'соя, болести, неприятели, плевели, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Соя';
+    private breadcrumbName = 'Соя';
 
     isLoaded = false;
     practices: Practice[] = [];

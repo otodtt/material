@@ -8,11 +8,12 @@ import { ChangeBreadcrumbService } from '../../../../common/services/changeBread
     styleUrls: ['../../pages.scss']
 })
 export class PhaseolusComponent implements OnInit {
+    private breadcrumbName = 'Фасул';
+
     private title = 'ПИВ - Фасул';
     private description = 'Прагове на икономическа вредност за вредители по фасул.';
     private keywords = 'ПИВ, фасул, болести, неприятели, плевели, ПРЗ';
 
-    breadcrumbName = 'Фасул';
 
     constructor(
         private seoService: SeoService,

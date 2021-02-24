@@ -12,7 +12,7 @@ export class BulbComponent implements OnInit {
     private title = 'BBCH - Лук, праз, чесън и лук-шалот';
     private description = 'Фенологични  фази на растеж и ВВСН-ключове за тяхната идентификация ' +
                             'при културите: лук, праз, чесън и лук-шалот';
-    breadcrumbName = 'Лукови култури';
+    private breadcrumbName = 'Лукови култури';
 
     constructor(
         private seoService: SeoService,

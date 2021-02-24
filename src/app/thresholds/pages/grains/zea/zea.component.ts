@@ -12,7 +12,7 @@ export class ZeaComponent implements OnInit {
     private description = 'Прагове на икономическа вредност за вредители по царевица.';
     private keywords = 'ПИВ, царевица, болести, неприятели, плевели, ПРЗ';
 
-    breadcrumbName = 'Царевица';
+    private breadcrumbName = 'Царевица';
 
     constructor(
         private seoService: SeoService,

@@ -16,16 +16,15 @@ import { PracticesService } from '../../../shared/services/practices.services';
     styleUrls: ['../../pages.scss']
 })
 export class TriticumComponent implements OnInit, OnDestroy {
-    private title = 'ДРЗП - Пшеница';
-    private description = 'Добра Растителнозащитна Пракатика при пшеница. Борба с болести, неприятели и плевели при пшеницата.';
-    private keywords = 'пшеница, болести, неприятели, плевели, ПРЗ, ПИВ';
-
-    breadcrumbName = 'Пшеница';
+    private breadcrumbName = 'Пшеница';
 
     isLoaded = false;
     practices: Practice[] = [];
     subscription: Subscription;
 
+    private title = 'ДРЗП - Пшеница';
+    private description = 'Добра Растителнозащитна Пракатика при пшеница. Борба с болести, неприятели и плевели при пшеницата.';
+    private keywords = 'пшеница, болести, неприятели, плевели, ПРЗ, ПИВ';
 
     @ViewChild('structure') public structure: ElementRef;
 

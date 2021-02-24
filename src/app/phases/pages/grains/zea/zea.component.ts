@@ -11,7 +11,7 @@ export class ZeaComponent implements OnInit {
 
     private title = 'BBCH - Царевица';
     private description = 'Фенологични фази на растеж и BBCH-ключове за тяхната идентификация при царевица.';
-    breadcrumbName = 'Царевица';
+    private breadcrumbName = 'Царевица';
 
     constructor(
         private seoService: SeoService,

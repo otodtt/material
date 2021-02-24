@@ -13,6 +13,8 @@ import { MenuButtonAnimation } from './animations';
     animations: [ MenuButtonAnimation ]
 })
 export class SideNavComponent implements AfterViewInit {
+
+    @Output() navClose = new EventEmitter<boolean>();
     public pages = pages;
     public subPages: any;
 
@@ -22,7 +24,6 @@ export class SideNavComponent implements AfterViewInit {
     public isActiveClass = false;
     public pageId: number;
 
-    @Output() navClose = new EventEmitter<boolean>();
     constructor(private changeBreadcrumb: ChangeBreadcrumbService) { }
 
     ngAfterViewInit() {

@@ -21,7 +21,7 @@ export class NigrumComponent implements OnInit, OnDestroy {
                             'Борба с болести, неприятели и плевели при касис.';
     private keywords = 'касис, болести, неприятели, плевели, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Касис';
+    private breadcrumbName = 'Касис';
 
     isLoaded = false;
     practices: Practice[] = [];

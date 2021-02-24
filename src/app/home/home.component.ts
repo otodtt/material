@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
                           'Интегрирано управление на вредители. Прагове на Икономическа Вредност.';
   private keywords = 'продуки, растителна, защита, култури, растителнозащитни, пракатики';
   breadcrumbTitle = 'НАЧАЛО';
-  breadcrumbName = 'Начало';
+  private breadcrumbName = 'Начало';
   headerId = 'aa-home';
 
   constructor(

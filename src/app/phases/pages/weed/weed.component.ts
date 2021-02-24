@@ -11,7 +11,7 @@ export class WeedComponent implements OnInit {
 
     private title = 'BBCH - Плевели';
     private description = 'Фенологични фази на растеж и BBCH- ключове за тяхната идентификация при плевелни видове';
-    breadcrumbName = 'Плевели';
+    private breadcrumbName = 'Плевели';
 
     constructor(
         private seoService: SeoService,

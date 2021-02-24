@@ -11,7 +11,7 @@ export class GlycineComponent implements OnInit {
 
     private title = 'BBCH - Соя';
     private description = 'Фенологични фази на растеж и BBCH-ключове за тяхната идентификация при соя.';
-    breadcrumbName = 'Соя';
+    private breadcrumbName = 'Соя';
 
     constructor(
         private seoService: SeoService,

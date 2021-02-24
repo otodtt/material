@@ -12,7 +12,7 @@ export class SolanumComponent implements OnInit {
     private description = 'Прагове на икономическа вредност за вредители по картофи.';
     private keywords = 'ПИВ, картофи, болести, неприятели, плевели, ПРЗ';
 
-    breadcrumbName = 'Картофи';
+    private breadcrumbName = 'Картофи';
 
     constructor(
         private seoService: SeoService,

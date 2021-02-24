@@ -11,7 +11,7 @@ export class PisumComponent implements OnInit {
 
     private title = 'BBCH - Грах';
     private description = 'Фенологични фази на растеж и BBCH-ключове за тяхната идентификация при грах.';
-    breadcrumbName = 'Грах';
+    private breadcrumbName = 'Грах';
 
     constructor(
         private seoService: SeoService,

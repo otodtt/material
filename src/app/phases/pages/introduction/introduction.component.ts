@@ -12,7 +12,7 @@ export class IntroductionComponent implements OnInit {
     private title = 'Въведение в BBCH';
     private description = 'Системата BBCH за кодиране на фенологичните етапи на растеж на растенията. ' +
                         'Въведение в BBCH скалта. Фенофази на развитие. BBCH кодове за всички култури.';
-    breadcrumbName = 'Въведение';
+    private breadcrumbName = 'Въведение';
 
     constructor(
         private seoService: SeoService,

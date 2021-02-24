@@ -12,7 +12,7 @@ export class BrassicaComponent implements OnInit {
     private description = 'Прагове на икономическа вредност за вредители по рапица.';
     private keywords = 'ПИВ, рапица, болести, неприятели, плевели, ПРЗ';
 
-    breadcrumbName = 'Рапица';
+    private breadcrumbName = 'Рапица';
 
     constructor(
         private seoService: SeoService,

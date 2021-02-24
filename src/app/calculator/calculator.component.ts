@@ -15,7 +15,7 @@ export class CalculatorComponent implements OnInit {
 
   headerId = 'aa-documents';
   breadcrumbTitle = 'КАЛКУЛАТОР';
-  breadcrumbName = 'Калкулатор';
+  private breadcrumbName = 'Калкулатор';
 
   private title = 'ПРЗ | Калкулатор';
   private description = 'Калкулатор за изчисляване на необходимото количество от Продукт за Растителна Защита за единица площ.';

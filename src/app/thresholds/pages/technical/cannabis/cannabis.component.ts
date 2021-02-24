@@ -12,7 +12,7 @@ export class CannabisComponent implements OnInit {
     private description = 'Прагове на икономическа вредност за вредители по коноп и лен.';
     private keywords = 'ПИВ, коноп, лен, болести, неприятели, плевели, ПРЗ';
 
-    breadcrumbName = 'Коноп и Лен';
+    private breadcrumbName = 'Коноп и Лен';
 
     constructor(
         private seoService: SeoService,

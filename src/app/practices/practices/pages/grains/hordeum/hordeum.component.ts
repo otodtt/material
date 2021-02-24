@@ -19,7 +19,7 @@ export class HordeumComponent implements OnInit, OnDestroy {
     private description = 'Добра Растителнозащитна Пракатика при ечемик. Борба с болести, неприятели и плевели при ечемика.';
     private keywords = 'ечемик, болести, неприятели, плевели, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Ечемик';
+    private breadcrumbName = 'Ечемик';
 
     isLoaded = false;
     practices: Practice[] = [];

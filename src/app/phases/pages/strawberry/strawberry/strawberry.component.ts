@@ -11,7 +11,7 @@ export class StrawberryComponent implements OnInit {
 
     private title = 'BBCH - Ягода';
     private description = 'Фенологични фази на растеж и BBCH-ключове за тяхната идентификация при ягодата' ;
-    breadcrumbName = 'Ягода';
+    private breadcrumbName = 'Ягода';
 
     constructor(
         private seoService: SeoService,

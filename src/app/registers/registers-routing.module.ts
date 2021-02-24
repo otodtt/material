@@ -5,6 +5,7 @@ import { RegistersComponent } from './registers.component';
 import { ParallelComponent } from './parallel/parallel.component';
 import { AdjuvantsComponent } from './adjuvants/adjuvants.component';
 import { SubstancesComponent } from './substances/substances.component';
+import { FirmsComponent } from './firms/firms.component';
 
 export const routes: Routes = [
     {
@@ -13,17 +14,7 @@ export const routes: Routes = [
         { path: 'parallel-trade', component: ParallelComponent },
         { path: 'adjuvants', component: AdjuvantsComponent },
         { path: 'substances', component: SubstancesComponent },
-        // { path: 'rodenticides', component: RodentsComponent },
-        // { path: 'limatsides', component: LimatsidesComponent },
-        // { path: 'limatsides/:id', component: LimatsideDetailComponent },
-        // { path: 'repellents', component: RepellentsComponent },
-        // { path: 'pheromones', component: PheromonesComponent },
-        // { path: 'pheromones/:id', component: PheromonesDetailComponent },
-        // { path: 'desiccants', component: DesiccantsComponent },
-        // { path: 'desiccants/:id', component: DesiccantsDetailComponent },
-        // { path: 'regulators', component: RegulatorsComponent },
-        // { path: 'regulators/:id', component: RegulatorDetailComponent },
-        // { path: 'parallel-trade', component: ParallelComponent },
+        { path: 'firms', component: FirmsComponent },
       ]
     }
 ];

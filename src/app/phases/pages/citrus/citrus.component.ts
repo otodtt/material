@@ -11,7 +11,7 @@ export class CitrusComponent implements OnInit {
 
     private title = 'BBCH - Цитруси';
     private description = 'Фенологични фази на растеж и BBCH-ключове за тяхната идентификация при цитрусовите култури' ;
-    breadcrumbName = 'Цитруси';
+    private breadcrumbName = 'Цитруси';
 
     constructor(
         private seoService: SeoService,

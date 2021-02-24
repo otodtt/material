@@ -8,11 +8,10 @@ import { ChangeBreadcrumbService } from '../../../../common/services/changeBread
     styleUrls: ['../../pages.scss']
 })
 export class MalusComponent implements OnInit {
+    private breadcrumbName = 'Ябълка и Круша';
     private title = 'ПИВ - Ябълка и Круша';
     private description = 'Прагове на икономическа вредност за вредители по ябълка и круша.';
     private keywords = 'ПИВ, ябълка, круша, болести, неприятели, плевели, ПРЗ';
-
-    breadcrumbName = 'Ябълка и Круша';
 
     constructor(
         private seoService: SeoService,

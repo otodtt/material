@@ -22,7 +22,7 @@ export class SeedComponent implements OnInit, OnDestroy {
         ' Борба с болести, неприятели и плевели при ябълка, круша и дюля.';
     private keywords = 'ябълка, круша, дюля, болести, неприятели, плевели, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Семкови';
+    private breadcrumbName = 'Семкови';
 
     isLoaded = false;
     practices: Practice[] = [];

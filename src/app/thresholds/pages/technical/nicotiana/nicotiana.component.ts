@@ -12,7 +12,7 @@ export class NicotianaComponent implements OnInit {
     private description = 'Прагове на икономическа вредност за вредители по тютюн.';
     private keywords = 'ПИВ, тютюн, болести, неприятели, плевели, ПРЗ';
 
-    breadcrumbName = 'Тютюн';
+    private breadcrumbName = 'Тютюн';
 
     constructor(
         private seoService: SeoService,

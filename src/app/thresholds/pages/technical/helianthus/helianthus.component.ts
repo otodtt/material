@@ -12,7 +12,7 @@ export class HelianthusComponent implements OnInit {
     private description = 'Прагове на икономическа вредност за вредители по слънчоглед.';
     private keywords = 'ПИВ, слънчоглед, болести, неприятели, плевели, ПРЗ';
 
-    breadcrumbName = 'Слънчоглед';
+    private breadcrumbName = 'Слънчоглед';
 
     constructor(
         private seoService: SeoService,

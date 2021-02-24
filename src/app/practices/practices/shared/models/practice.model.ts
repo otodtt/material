@@ -7,12 +7,12 @@ export interface Practice {
     fullName: string;
     images?: [
         {
-            imgPath: string,
-            imgTitle: string,
-            thumbPath: string
-            thumbTitle: string
-            thumbAlt: string
-            bgName: string
+            imgPath: string;
+            imgTitle: string;
+            thumbPath: string;
+            thumbTitle: string;
+            thumbAlt: string;
+            bgName: string;
         }
     ];
     tablePiv?: string;

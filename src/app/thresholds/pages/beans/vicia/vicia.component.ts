@@ -8,11 +8,11 @@ import { ChangeBreadcrumbService } from '../../../../common/services/changeBread
     styleUrls: ['../../pages.scss']
 })
 export class ViciaComponent implements OnInit {
+    private breadcrumbName = 'Фий';
     private title = 'ПИВ - Фий';
     private description = 'Прагове на икономическа вредност за вредители по фий.';
     private keywords = 'ПИВ, фий, болести, неприятели, плевели, ПРЗ';
 
-    breadcrumbName = 'Фий';
 
     constructor(
         private seoService: SeoService,

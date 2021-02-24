@@ -24,13 +24,13 @@ export interface Product {
             substanceId?: number;
             quantity?: string;
             quantityAfter?: string;
-            pesticides_id?: number;
+            pesticide_id?: number;
         }
     ];
     doses?: [
         {
             id: number;
-            pesticides_id?: number;
+            pesticide_id?: number;
             dose?: number;
             doseNote?: string;
             secondDose?: string;

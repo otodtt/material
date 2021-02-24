@@ -12,7 +12,7 @@ import { SeoService } from '../common/services/SeoService';
 export class DocumentsComponent implements OnInit {
   headerId = 'aa-documents';
   breadcrumbTitle = 'ДОКУМЕНТИ';
-  breadcrumbName = 'Документи';
+  private breadcrumbName = 'Документи';
 
   private title = 'ПРЗ | Документи';
   private description = 'По-важни документи, заявления, формуляри и др., свързани с работата на земеделски стопани и търговци на ПРЗ.';

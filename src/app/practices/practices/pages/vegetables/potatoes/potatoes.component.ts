@@ -20,7 +20,7 @@ export class PotatoesComponent implements OnInit, OnDestroy {
     private description =   'Добра Растителнозащитна Пракатика при картофи. Борба с болести, неприятели и плевели при картофите.';
     private keywords = 'картофи болести, неприятели, плевели, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Картофи';
+    private breadcrumbName = 'Картофи';
 
     isLoaded = false;
     practices: Practice[] = [];

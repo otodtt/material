@@ -11,7 +11,7 @@ export class GossypiumComponent implements OnInit {
 
     private title = 'BBCH - Памук';
     private description = 'Фенологични фази на растеж и BBCH-ключове за тяхната идентификация при памук.';
-    breadcrumbName = 'Памук';
+    private breadcrumbName = 'Памук';
 
     constructor(
         private seoService: SeoService,

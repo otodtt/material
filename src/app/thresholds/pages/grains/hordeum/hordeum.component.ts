@@ -8,11 +8,11 @@ import { ChangeBreadcrumbService } from '../../../../common/services/changeBread
     styleUrls: ['../../pages.scss']
 })
 export class HordeumComponent implements OnInit {
+    private breadcrumbName = 'Ечемик';
     private title = 'ПИВ - Ечемик';
     private description = 'Прагове на икономическа вредност за вредители по ечемик.';
     private keywords = 'ПИВ, ечемик, болести, неприятели, плевели, ПРЗ';
 
-    breadcrumbName = 'Ечемик';
 
     constructor(
         private seoService: SeoService,

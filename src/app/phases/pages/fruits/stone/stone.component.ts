@@ -12,7 +12,7 @@ export class StoneComponent implements OnInit {
     private title = 'BBCH - Костилкови овощни видове';
     private description = 'Фенологични фази на растеж и ВВСН-ключове за тяхната идентификация ' +
                             'при костилкови овощни видове: череша, слива, праскова и кайсия';
-    breadcrumbName = 'Костилкови';
+    private breadcrumbName = 'Костилкови';
 
     constructor(
         private seoService: SeoService,

@@ -7,10 +7,10 @@ export interface Substance {
     {
       id: number;
       name: string;
-      substance_id: number;
+      substanceId: number;
       quantity?: string;
       quantityAfter?: string;
-      pesticides_id: number;
+      pesticide_id: number;
       pesticide_name: string;
       pesticide_type: string;
       firmName: string;

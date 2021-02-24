@@ -12,7 +12,7 @@ export class CapsicumComponent implements OnInit {
     private description = 'Прагове на икономическа вредност за вредители по пипер.';
     private keywords = 'ПИВ, пипер, болести, неприятели, плевели, ПРЗ';
 
-    breadcrumbName = 'Пипер';
+    private breadcrumbName = 'Пипер';
 
     constructor(
         private seoService: SeoService,

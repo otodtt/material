@@ -19,7 +19,7 @@ export class PhaseolusComponent implements OnInit, OnDestroy {
     private description = 'Добра Растителнозащитна Пракатика при фасул. Борба с болести, неприятели и плевели при фасул.';
     private keywords = 'фасул, болести, неприятели, плевели, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Фасул';
+    private breadcrumbName = 'Фасул';
 
     isLoaded = false;
     practices: Practice[] = [];

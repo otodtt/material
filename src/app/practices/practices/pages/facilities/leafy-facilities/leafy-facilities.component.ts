@@ -21,7 +21,7 @@ export class LeafyFacilitiesComponent implements OnInit, OnDestroy {
                             'Борба с болести, неприятели и плевели при салата, маруля и спанак в оранжерии.';
     private keywords = 'салата, маруля, спанак, болести, неприятели, плевели, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Листни';
+    private breadcrumbName = 'Листни';
 
     isLoaded = false;
     practices: Practice[] = [];

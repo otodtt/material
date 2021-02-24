@@ -9,7 +9,7 @@ import { ChangeBreadcrumbService } from '../common/services/changeBreadcrumb.ser
 export class ContactsComponent implements OnInit {
     headerId = 'aa-contacts';
     breadcrumbTitle = 'КОНТАКТИ';
-    breadcrumbName = 'Контакти';
+    private breadcrumbName = 'Контакти';
 
     constructor( private changeBreadcrumb: ChangeBreadcrumbService) { }
 

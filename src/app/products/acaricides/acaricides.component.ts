@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild, AfterViewInit, ChangeDetectorRef, OnDestroy } from '@angular/core';
 import { Subscription, Observable, merge } from 'rxjs';
 import { MediaMatcher } from '@angular/cdk/layout';
-// import { HttpClient } from '@angular/common/http';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -41,7 +40,7 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
                           'паяжинообразуващ акар, Доматен акар, Лозова краста, Червен овощен акар и други). ';
   private keywords = 'акарициди, продуки, растителна, защита, култури, растителнозащитни, пракатики';
 
-  breadcrumbName = 'Акарициди';
+  private breadcrumbName = 'Акарициди';
 
   mode = '';
   private link = 'products/acaricides';
@@ -50,7 +49,7 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
   smallQuery: MediaQueryList;
 
   private resizeSubscription: Subscription;
-  private _mobileQueryListener: () => void;
+  private mobileQueryListener: () => void;
 
   displayedColumns = ['name', 'substance', 'dose', 'category'];
   exampleDatabase: TableFromDatabase | null;
@@ -67,7 +66,6 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
     private changeBreadcrumb: ChangeBreadcrumbService,
     private seoService: SeoService,
     private productsService: ProductsService,
-    // private http: HttpClient,
     public dialog: MatDialog,
     private resizeService: ResizeService,
     changeDetectorRef: ChangeDetectorRef,
@@ -76,18 +74,15 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
     this.seoService.addTitle(this.title);
     this.seoService.setMeta(this.description, this.keywords);
 
-    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
+    this.mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.bigQuery = media.matchMedia('(max-width: 850px)');
-    // tslint:disable-next-line: deprecation
-    this.bigQuery.addListener(this._mobileQueryListener);
+    this.bigQuery.addEventListener('change', this.mobileQueryListener);
 
     this.mediumQuery = media.matchMedia('(max-width: 768px)');
-    // tslint:disable-next-line: deprecation
-    this.mediumQuery.addListener(this._mobileQueryListener);
+    this.mediumQuery.addEventListener('change', this.mobileQueryListener);
 
     this.smallQuery = media.matchMedia('(max-width: 481px)');
-    // tslint:disable-next-line: deprecation
-    this.smallQuery.addListener(this._mobileQueryListener);
+    this.smallQuery.addEventListener('change', this.mobileQueryListener);
 
     if (
         this.bigQuery.matches === false &&
@@ -178,12 +173,9 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    // tslint:disable-next-line: deprecation
-    this.bigQuery.removeListener(this._mobileQueryListener);
-    // tslint:disable-next-line: deprecation
-    this.mediumQuery.removeListener(this._mobileQueryListener);
-    // tslint:disable-next-line: deprecation
-    this.smallQuery.removeListener(this._mobileQueryListener);
+    this.bigQuery.removeEventListener('change', this.mobileQueryListener);
+    this.mediumQuery.removeEventListener('change', this.mobileQueryListener);
+    this.smallQuery.removeEventListener('change', this.mobileQueryListener);
     if (this.resizeSubscription) {
         this.resizeSubscription.unsubscribe();
     }

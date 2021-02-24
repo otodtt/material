@@ -12,7 +12,7 @@ export class MelongenaComponent implements OnInit {
     private description = 'Прагове на икономическа вредност за вредители по патладжан.';
     private keywords = 'ПИВ, патладжан, болести, неприятели, плевели, ПРЗ';
 
-    breadcrumbName = 'Патладжан';
+    private breadcrumbName = 'Патладжан';
 
     constructor(
         private seoService: SeoService,

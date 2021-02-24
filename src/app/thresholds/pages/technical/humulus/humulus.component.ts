@@ -12,7 +12,7 @@ export class HumulusComponent implements OnInit {
     private description = 'Прагове на икономическа вредност за вредители по хмел.';
     private keywords = 'ПИВ, хмел, болести, неприятели, плевели, ПРЗ';
 
-    breadcrumbName = 'Хмел';
+    private breadcrumbName = 'Хмел';
 
     constructor(
         private seoService: SeoService,

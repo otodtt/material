@@ -15,16 +15,15 @@ import { PracticesService } from '../../../shared/services/practices.services';
     styleUrls: ['../../pages.scss']
 })
 export class SecaleComponent implements OnInit, OnDestroy {
-    private title = 'ДРЗП - Ръж';
-    private description = 'Добра Растителнозащитна Пракатика при ръж. Борба с болести, неприятели и плевели при ръж.';
-    private keywords = 'ръж, болести, неприятели, плевели, ПРЗ, ПИВ';
-
-    breadcrumbName = 'Ръж';
+    private breadcrumbName = 'Ръж';
 
     isLoaded = false;
     practices: Practice[] = [];
     subscription: Subscription;
 
+    private title = 'ДРЗП - Ръж';
+    private description = 'Добра Растителнозащитна Пракатика при ръж. Борба с болести, неприятели и плевели при ръж.';
+    private keywords = 'ръж, болести, неприятели, плевели, ПРЗ, ПИВ';
 
     @ViewChild('structure') public structure: ElementRef;
 

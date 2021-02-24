@@ -8,11 +8,10 @@ import { ChangeBreadcrumbService } from '../../../../common/services/changeBread
     styleUrls: ['../../pages.scss']
 })
 export class PersicaComponent implements OnInit {
+    private breadcrumbName = 'Праскова';
     private title = 'ПИВ - Праскова';
     private description = 'Прагове на икономическа вредност за вредители по праскова.';
     private keywords = 'ПИВ, праскова, болести, неприятели, плевели, ПРЗ';
-
-    breadcrumbName = 'Праскова';
 
     constructor(
         private seoService: SeoService,

@@ -24,171 +24,164 @@ import { ProductsService } from '../shared/services/products.service';
 
 
 export class TableFromDatabase {
-    constructor(private productsService: ProductsService) { }
-    getRepoIssues(): Observable<Product[]> {
-        return this.productsService.getProducts(`products/desiccants`);
-    }
-    disconnect() { }
+  constructor(private productsService: ProductsService) { }
+  getRepoIssues(): Observable<Product[]> {
+      return this.productsService.getProducts(`products/desiccants`);
+  }
+  disconnect() { }
 }
 
 @Component({
-    templateUrl: './desiccants.component.html',
-    styleUrls: [ '../shared/pages.scss', './desiccants.component.scss']
+  templateUrl: './desiccants.component.html',
+  styleUrls: [ '../shared/pages.scss', './desiccants.component.scss']
 })
 export class DesiccantsComponent implements OnInit, AfterViewInit, OnDestroy {
 
-    private title = 'ПРЗ | Десиканти и Дефолианти';
-    private description = 'Десиканти и Дефолианти. Продуки за растителна защита за отстраняване (десикация) на филизи,  ' +
-                          'широколистни плевели, Коренови издънки и други, при картофи, лозя, пшеница, ечемик и други.';
-    private keywords = 'десиканти, дефолианти, продуки, растителна, защита, култури, растителнозащитни, пракатики';
+  private title = 'ПРЗ | Десиканти и Дефолианти';
+  private description = 'Десиканти и Дефолианти. Продуки за растителна защита за отстраняване (десикация) на филизи,  ' +
+                        'широколистни плевели, Коренови издънки и други, при картофи, лозя, пшеница, ечемик и други.';
+  private keywords = 'десиканти, дефолианти, продуки, растителна, защита, култури, растителнозащитни, пракатики';
 
-    breadcrumbName = 'Десиканти';
+  private breadcrumbName = 'Десиканти';
 
-    mode = '';
+  mode = '';
 
-    private link = 'products/desiccants';
-    bigQuery: MediaQueryList;
-    mediumQuery: MediaQueryList;
-    smallQuery: MediaQueryList;
+  private link = 'products/desiccants';
+  bigQuery: MediaQueryList;
+  mediumQuery: MediaQueryList;
+  smallQuery: MediaQueryList;
 
-    private resizeSubscription: Subscription;
-    private _mobileQueryListener: () => void;
+  private resizeSubscription: Subscription;
+  private mobileQueryListener: () => void;
 
-    displayedColumns = ['name', 'substance', 'dose', 'category'];
-    exampleDatabase: TableFromDatabase | null;
-    dataSource = new MatTableDataSource();
+  displayedColumns = ['name', 'substance', 'dose', 'category'];
+  exampleDatabase: TableFromDatabase | null;
+  dataSource = new MatTableDataSource();
 
-    resultsLength = 0;
-    isLoadingResults = true;
-    isRateLimitReached = false;
+  resultsLength = 0;
+  isLoadingResults = true;
+  isRateLimitReached = false;
 
-    @ViewChild(MatPaginator) paginator: MatPaginator;
-    @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
 
-    constructor(
-        private changeBreadcrumb: ChangeBreadcrumbService,
-        private seoService: SeoService,
-        private productsService: ProductsService,
-        private http: HttpClient,
-        public dialog: MatDialog,
-        private resizeService: ResizeService,
-        changeDetectorRef: ChangeDetectorRef,
-        media: MediaMatcher
+  constructor(
+    private changeBreadcrumb: ChangeBreadcrumbService,
+    private seoService: SeoService,
+    private productsService: ProductsService,
+    private http: HttpClient,
+    public dialog: MatDialog,
+    private resizeService: ResizeService,
+    changeDetectorRef: ChangeDetectorRef,
+    media: MediaMatcher
+  ) {
+    this.seoService.addTitle(this.title);
+    this.seoService.setMeta(this.description, this.keywords);
+
+    this.mobileQueryListener = () => changeDetectorRef.detectChanges();
+    this.bigQuery = media.matchMedia('(max-width: 850px)');
+    this.bigQuery.addEventListener('change', this.mobileQueryListener);
+
+    this.mediumQuery = media.matchMedia('(max-width: 768px)');
+    this.mediumQuery.addEventListener('change', this.mobileQueryListener);
+
+    this.smallQuery = media.matchMedia('(max-width: 481px)');
+    this.smallQuery.addEventListener('change', this.mobileQueryListener);
+
+    if (
+        this.bigQuery.matches === false &&
+        this.mediumQuery.matches === false &&
+        this.smallQuery.matches === false
     ) {
-        this.seoService.addTitle(this.title);
-        this.seoService.setMeta(this.description, this.keywords);
-
-        this._mobileQueryListener = () => changeDetectorRef.detectChanges();
-        this.bigQuery = media.matchMedia('(max-width: 850px)');
-        // tslint:disable-next-line: deprecation
-        this.bigQuery.addListener(this._mobileQueryListener);
-
-        this.mediumQuery = media.matchMedia('(max-width: 768px)');
-        // tslint:disable-next-line: deprecation
-        this.mediumQuery.addListener(this._mobileQueryListener);
-
-        this.smallQuery = media.matchMedia('(max-width: 481px)');
-        // tslint:disable-next-line: deprecation
-        this.smallQuery.addListener(this._mobileQueryListener);
-
-        if (
-            this.bigQuery.matches === false &&
-            this.mediumQuery.matches === false &&
-            this.smallQuery.matches === false
-        ) {
-            this.mode = '60%';
-        }
-        if (
-            this.bigQuery.matches === true &&
-            this.mediumQuery.matches === false &&
-            this.smallQuery.matches === false
-        ) {
-            this.mode = '60%';
-        }
-        if (
-            this.bigQuery.matches === true &&
-            this.mediumQuery.matches === true &&
-            this.smallQuery.matches === false
-        ) {
-            this.mode = '80%';
-        }
-        if (
-            this.bigQuery.matches === true &&
-            this.mediumQuery.matches === true &&
-            this.smallQuery.matches === true
-        ) {
-            this.mode = '';
-        }
+        this.mode = '60%';
     }
-
-    ngOnInit() {
-        this.changeBreadcrumb.emitName(this.breadcrumbName);
-
-        this.exampleDatabase = new TableFromDatabase(this.productsService);
-
-        merge()
-            .pipe(
-                startWith({}),
-                switchMap(() => {
-                    this.isLoadingResults = true;
-                    return this.exampleDatabase.getRepoIssues();
-                }),
-                map(data => {
-                    // Flip flag to show that loading has finished.
-                    this.isLoadingResults = false;
-                    this.isRateLimitReached = false;
-                    this.resultsLength = data.length;
-
-                    return data;
-                }),
-                catchError(() => {
-                    this.isLoadingResults = false;
-                    this.isRateLimitReached = true;
-                    return observableOf([]);
-                })
-            ).subscribe(data => this.dataSource.data = data);
+    if (
+        this.bigQuery.matches === true &&
+        this.mediumQuery.matches === false &&
+        this.smallQuery.matches === false
+    ) {
+        this.mode = '60%';
     }
-
-    ngAfterViewInit() {
-        this.dataSource.paginator = this.paginator;
-        this.dataSource.sort = this.sort;
-
-        this.resizeSubscription = this.resizeService.onResize$
-            .subscribe(size => {
-                if (size.innerWidth > 768) {
-                    this.mode = '60%';
-                }
-                if (size.innerWidth < 768) {
-                    this.mode = '80%';
-                }
-                if (size.innerWidth < 481) {
-                    this.mode = '';
-                }
-            });
+    if (
+        this.bigQuery.matches === true &&
+        this.mediumQuery.matches === true &&
+        this.smallQuery.matches === false
+    ) {
+        this.mode = '80%';
     }
-
-    applyFilter(filterValue: string) {
-        filterValue = filterValue.trim();
-        filterValue = filterValue.toLowerCase();
-        this.dataSource.filter = filterValue;
+    if (
+        this.bigQuery.matches === true &&
+        this.mediumQuery.matches === true &&
+        this.smallQuery.matches === true
+    ) {
+        this.mode = '';
     }
+  }
 
-    openDialog(name: any, info: any) {
-        const dialogRef = this.dialog.open(MoreInfoDialogComponent, {
-            data: { product: name, data: info, link: this.link },
-            width: this.mode
-        });
-    }
+  ngOnInit() {
+    this.changeBreadcrumb.emitName(this.breadcrumbName);
+    this.exampleDatabase = new TableFromDatabase(this.productsService);
 
-    ngOnDestroy() {
-        // tslint:disable-next-line: deprecation
-        this.bigQuery.removeListener(this._mobileQueryListener);
-        // tslint:disable-next-line: deprecation
-        this.mediumQuery.removeListener(this._mobileQueryListener);
-        // tslint:disable-next-line: deprecation
-        this.smallQuery.removeListener(this._mobileQueryListener);
-        if (this.resizeSubscription) {
-            this.resizeSubscription.unsubscribe();
-        }
-    }
+    merge()
+      .pipe(
+          startWith({}),
+          switchMap(() => {
+              this.isLoadingResults = true;
+              return this.exampleDatabase.getRepoIssues();
+          }),
+          map(data => {
+              // Flip flag to show that loading has finished.
+              this.isLoadingResults = false;
+              this.isRateLimitReached = false;
+              this.resultsLength = data.length;
+
+              return data;
+          }),
+          catchError(() => {
+              this.isLoadingResults = false;
+              this.isRateLimitReached = true;
+              return observableOf([]);
+          })
+    ).subscribe(data => this.dataSource.data = data);
+  }
+
+  ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
+
+    this.resizeSubscription = this.resizeService.onResize$
+      .subscribe(size => {
+          if (size.innerWidth > 768) {
+              this.mode = '60%';
+          }
+          if (size.innerWidth < 768) {
+              this.mode = '80%';
+          }
+          if (size.innerWidth < 481) {
+              this.mode = '';
+          }
+      });
+  }
+
+  applyFilter(filterValue: string) {
+    filterValue = filterValue.trim();
+    filterValue = filterValue.toLowerCase();
+    this.dataSource.filter = filterValue;
+  }
+
+  openDialog(name: any, info: any) {
+    const dialogRef = this.dialog.open(MoreInfoDialogComponent, {
+      data: { product: name, data: info, link: this.link },
+      width: this.mode
+    });
+  }
+
+  ngOnDestroy() {
+    this.bigQuery.removeEventListener('change', this.mobileQueryListener);
+    this.mediumQuery.removeEventListener('change', this.mobileQueryListener);
+    this.smallQuery.removeEventListener('change', this.mobileQueryListener);
+      if (this.resizeSubscription) {
+          this.resizeSubscription.unsubscribe();
+      }
+  }
 }

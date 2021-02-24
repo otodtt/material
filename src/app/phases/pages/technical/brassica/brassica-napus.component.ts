@@ -11,7 +11,7 @@ export class BrassicaNapusComponent implements OnInit {
 
     private title = 'BBCH - Рапица';
     private description = 'Фенологични фази на растеж и BBCH-ключове за тяхната идентификация при рапица.';
-    breadcrumbName = 'Рапица';
+    private breadcrumbName = 'Рапица';
 
     constructor(
         private seoService: SeoService,

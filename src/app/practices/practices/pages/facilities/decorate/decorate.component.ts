@@ -21,7 +21,7 @@ export class DecorateComponent implements OnInit, OnDestroy {
                             'Борба с болести, неприятели и плевели при украсни култури в оранжерии.';
     private keywords = 'украсни култури, болести, неприятели, плевели, ПРЗ, ПИВ';
 
-    breadcrumbName = 'Украсни';
+    private breadcrumbName = 'Украсни';
 
     isLoaded = false;
     practices: Practice[] = [];

@@ -12,7 +12,7 @@ export class LegislationComponent implements OnInit {
   headerId = 'aa-legislation';
 
   breadcrumbTitle = 'ЗАКОНИ';
-  breadcrumbName = 'Закони';
+  private breadcrumbName = 'Закони';
 
   private title = 'ПРЗ | Законодателство';
   private description = 'Законодателство. Списък на основни закони, наредби и нормативни ' +

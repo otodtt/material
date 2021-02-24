@@ -12,7 +12,7 @@ export class LycopersicumComponent implements OnInit {
     private description = 'Прагове на икономическа вредност за вредители по домати.';
     private keywords = 'ПИВ, домати, болести, неприятели, плевели, ПРЗ';
 
-    breadcrumbName = 'Домати';
+    private breadcrumbName = 'Домати';
 
     constructor(
         private seoService: SeoService,
