@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {ScriptStore} from './script.store';
+import {scriptStore} from './script.store';
 
 declare var document: any;
 
@@ -9,7 +9,7 @@ export class ScriptService {
   private scripts: any = {};
 
   constructor() {
-    ScriptStore.forEach((script: any) => {
+    scriptStore.forEach((script: any) => {
       this.scripts[script.name] = {
         loaded: false,
         src: script.src

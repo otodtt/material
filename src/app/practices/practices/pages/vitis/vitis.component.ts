@@ -15,6 +15,9 @@ import { PracticesService } from '../../shared/services/practices.services';
     styleUrls: ['../pages.scss']
 })
 export class VitisComponent implements OnInit, OnDestroy {
+    isLoaded = false;
+    practices: Practice[] = [];
+    subscription: Subscription;
 
     private title = 'ДРЗП - Лоза';
     private description =   'Добра Растителнозащитна Пракатика при лоза. ' +
@@ -22,10 +25,6 @@ export class VitisComponent implements OnInit, OnDestroy {
     private keywords = 'лоза, болести, неприятели, плевели, ПРЗ, ПИВ';
 
     private breadcrumbName = 'Лоза';
-
-    isLoaded = false;
-    practices: Practice[] = [];
-    subscription: Subscription;
 
     constructor(
         private seoService: SeoService,

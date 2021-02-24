@@ -36,23 +36,13 @@ export class TableFromDatabase {
   styleUrls: [ '../shared/pages.scss', './desiccants.component.scss']
 })
 export class DesiccantsComponent implements OnInit, AfterViewInit, OnDestroy {
-
-  private title = 'ПРЗ | Десиканти и Дефолианти';
-  private description = 'Десиканти и Дефолианти. Продуки за растителна защита за отстраняване (десикация) на филизи,  ' +
-                        'широколистни плевели, Коренови издънки и други, при картофи, лозя, пшеница, ечемик и други.';
-  private keywords = 'десиканти, дефолианти, продуки, растителна, защита, култури, растителнозащитни, пракатики';
-
-  private breadcrumbName = 'Десиканти';
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
 
   mode = '';
-
-  private link = 'products/desiccants';
   bigQuery: MediaQueryList;
   mediumQuery: MediaQueryList;
   smallQuery: MediaQueryList;
-
-  private resizeSubscription: Subscription;
-  private mobileQueryListener: () => void;
 
   displayedColumns = ['name', 'substance', 'dose', 'category'];
   exampleDatabase: TableFromDatabase | null;
@@ -62,8 +52,17 @@ export class DesiccantsComponent implements OnInit, AfterViewInit, OnDestroy {
   isLoadingResults = true;
   isRateLimitReached = false;
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
+  private link = 'products/desiccants';
+
+  private title = 'ПРЗ | Десиканти и Дефолианти';
+  private description = 'Десиканти и Дефолианти. Продуки за растителна защита за отстраняване (десикация) на филизи,  ' +
+                        'широколистни плевели, Коренови издънки и други, при картофи, лозя, пшеница, ечемик и други.';
+  private keywords = 'десиканти, дефолианти, продуки, растителна, защита, култури, растителнозащитни, пракатики';
+
+  private breadcrumbName = 'Десиканти';
+
+  private resizeSubscription: Subscription;
+  private mobileQueryListener: () => void;
 
   constructor(
     private changeBreadcrumb: ChangeBreadcrumbService,

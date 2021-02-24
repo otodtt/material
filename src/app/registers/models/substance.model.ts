@@ -10,9 +10,9 @@ export interface Substance {
       substanceId: number;
       quantity?: string;
       quantityAfter?: string;
-      pesticide_id: number;
-      pesticide_name: string;
-      pesticide_type: string;
+      pesticideId: number;
+      pesticideName: string;
+      pesticideType: string;
       firmName: string;
       manufacturersId: number;
       isActive: number;

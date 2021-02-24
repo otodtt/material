@@ -37,22 +37,13 @@ export class TableFromDatabase {
 })
 export class RegulatorsComponent implements OnInit, AfterViewInit, OnDestroy {
 
-  private title = 'ПРЗ | Растежни регулатори';
-  private description = 'Растежни регулатори. Продукти за регулиране (стимулиране или задържане) на физиологичните процеси в растенията. ' +
-                        'Използват се при пшеница, ечемик, зеленчуци, овощни култури и други.';
-  private keywords = 'растежни регулатори, продуки, растителна, защита, култури, растителнозащитни, пракатики';
-
-  private breadcrumbName = 'Регулатори';
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
 
   mode = '';
-
-  private link = 'products/regulators';
   bigQuery: MediaQueryList;
   mediumQuery: MediaQueryList;
   smallQuery: MediaQueryList;
-
-  private resizeSubscription: Subscription;
-  private mobileQueryListener: () => void;
 
   displayedColumns = ['name', 'substance', 'dose', 'category'];
   exampleDatabase: TableFromDatabase | null;
@@ -62,8 +53,18 @@ export class RegulatorsComponent implements OnInit, AfterViewInit, OnDestroy {
   isLoadingResults = true;
   isRateLimitReached = false;
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
+  private link = 'products/regulators';
+
+  private title = 'ПРЗ | Растежни регулатори';
+  private description = 'Растежни регулатори. Продукти за регулиране (стимулиране или задържане) на физиологичните процеси в растенията. ' +
+                        'Използват се при пшеница, ечемик, зеленчуци, овощни култури и други.';
+  private keywords = 'растежни регулатори, продуки, растителна, защита, култури, растителнозащитни, пракатики';
+
+  private breadcrumbName = 'Регулатори';
+
+  private resizeSubscription: Subscription;
+  private mobileQueryListener: () => void;
+
 
   constructor(
     private changeBreadcrumb: ChangeBreadcrumbService,

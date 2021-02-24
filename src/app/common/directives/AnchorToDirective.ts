@@ -4,8 +4,12 @@ import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 export class AnchorToDirective {
     @Input() target: string;
 
-    constructor(el: ElementRef) { el.nativeElement.style.cursor = 'pointer'; }
+    constructor(el: ElementRef) {
+        el.nativeElement.style.cursor = 'pointer';
+    }
 
     @HostListener('click', ['$event'])
-    onClick() { document.querySelector(this.target).scrollIntoView(); }
+    onClick() {
+        document.querySelector(this.target).scrollIntoView();
+    }
 }

@@ -12,15 +12,15 @@ import { Product } from '../../shared/models/product.model';
 import { ProductsService } from '../../shared/services/products.service';
 
 @Component({
-    // template: '<p>TEST</p>',
     templateUrl: './acaricide-detail.component.html',
     styleUrls: ['./acaricide-detail.component.scss']
 })
 export class AcaricideDetailComponent implements OnInit, OnDestroy {
-    private _dbURL = 'products/acaricides';
-
     product: Product;
     subscription: Subscription;
+
+    private dbURL = 'products/acaricides';
+
 
     step = 0;
     constructor(
@@ -29,13 +29,12 @@ export class AcaricideDetailComponent implements OnInit, OnDestroy {
         private productsService: ProductsService,
         private activatedRoute: ActivatedRoute,
         private router: Router,
-        // private http: HttpClient
     ) {}
 
     ngOnInit() {
       const id = this.activatedRoute.snapshot.params['id'];
 
-        this.subscription = this.productsService.findProductById(this._dbURL, id)
+        this.subscription = this.productsService.findProductById(this.dbURL, id)
         .subscribe((product: Product) => {
             this.product = product[0];
           console.log(product[0]);

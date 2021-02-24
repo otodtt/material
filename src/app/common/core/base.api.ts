@@ -10,10 +10,6 @@ export class BaseApi {
 
     constructor(public http: HttpClient) {}
 
-    private getUrl(url: string = ''): string {
-        return this.baseUrl + url;
-    }
-
     public get(url: string = ''): Observable<any> {
         return this.http.get(this.getUrl(url));
         // .map((response: Response) => response.json());
@@ -23,6 +19,11 @@ export class BaseApi {
         return this.http.get(this.getUrl(url) + '/' + id);
         // .map((response: Response) => response.json());
     }
+
+    private getUrl(url: string = ''): string {
+        return this.baseUrl + url;
+    }
+
     // public post(url: string = '', data: any = {}): Observable<any> {
     //     return this.http.post(this.getUrl(url), data)
     //     .map((response: Response) => response.json());

@@ -14,6 +14,8 @@ import { ResizeService } from '../../../common/services/ResizeService';
     styleUrls: ['./side-menu.component.scss']
 })
 export class SideMenuComponent implements OnInit, AfterViewInit, OnDestroy {
+    @Output() navClose = new EventEmitter<boolean>();
+
     public pages = pages;
     public isOpenPanel = false;
     public isActiveClass = true;
@@ -24,13 +26,10 @@ export class SideMenuComponent implements OnInit, AfterViewInit, OnDestroy {
     mode = false;
     openedQuery: MediaQueryList;
 
-    private resizeSubscription: Subscription;
-    private mobileQueryListener: () => void;
-
-
     public href: any;
 
-    @Output() navClose = new EventEmitter<boolean>();
+    private resizeSubscription: Subscription;
+    private mobileQueryListener: () => void;
 
     constructor(
         private changeBreadcrumb: ChangeBreadcrumbService,

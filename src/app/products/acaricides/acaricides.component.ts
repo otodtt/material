@@ -35,21 +35,14 @@ export class TableFromDatabase {
 })
 
 export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
-  private title = 'ПРЗ | Акарициди';
-  private description =   'Акарициди. Продуки за растителна защита за борба срещу вредни акари (Жълт лозов акар,  Обикновен ' +
-                          'паяжинообразуващ акар, Доматен акар, Лозова краста, Червен овощен акар и други). ';
-  private keywords = 'акарициди, продуки, растителна, защита, култури, растителнозащитни, пракатики';
 
-  private breadcrumbName = 'Акарициди';
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
 
   mode = '';
-  private link = 'products/acaricides';
   bigQuery: MediaQueryList;
   mediumQuery: MediaQueryList;
   smallQuery: MediaQueryList;
-
-  private resizeSubscription: Subscription;
-  private mobileQueryListener: () => void;
 
   displayedColumns = ['name', 'substance', 'dose', 'category'];
   exampleDatabase: TableFromDatabase | null;
@@ -59,8 +52,17 @@ export class AcaricidesComponent implements OnInit, AfterViewInit, OnDestroy {
   isLoadingResults = true;
   isRateLimitReached = false;
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
+  private link = 'products/acaricides';
+
+  private title = 'ПРЗ | Акарициди';
+  private description =   'Акарициди. Продуки за растителна защита за борба срещу вредни акари (Жълт лозов акар,  Обикновен ' +
+                          'паяжинообразуващ акар, Доматен акар, Лозова краста, Червен овощен акар и други). ';
+  private keywords = 'акарициди, продуки, растителна, защита, култури, растителнозащитни, пракатики';
+
+  private breadcrumbName = 'Акарициди';
+
+  private resizeSubscription: Subscription;
+  private mobileQueryListener: () => void;
 
   constructor(
     private changeBreadcrumb: ChangeBreadcrumbService,

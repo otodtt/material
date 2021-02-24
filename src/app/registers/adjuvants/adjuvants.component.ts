@@ -34,19 +34,13 @@ export class TableFromDatabase {
   styleUrls: ['./adjuvants.component.scss']
 })
 export class AdjuvantsComponent implements OnInit, AfterViewInit, OnDestroy {
-  private title = 'ПРЗ | Адюванти';
-  private description =   'Регистър на използваните адюванти в Република България';
-
-  private breadcrumbName = 'Адюванти';
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
 
   mode = '';
-
   bigQuery: MediaQueryList;
   mediumQuery: MediaQueryList;
   smallQuery: MediaQueryList;
-
-  private resizeSubscription: Subscription;
-  private mobileQueryListener: () => void;
 
   displayedColumns = ['name', 'owner', 'action', 'crops', 'moreDetails'];
   exampleDatabase: TableFromDatabase | null;
@@ -56,8 +50,13 @@ export class AdjuvantsComponent implements OnInit, AfterViewInit, OnDestroy {
   isLoadingResults = true;
   isRateLimitReached = false;
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
+  private title = 'ПРЗ | Адюванти';
+  private description =   'Регистър на използваните адюванти в Република България';
+
+  private breadcrumbName = 'Адюванти';
+
+  private resizeSubscription: Subscription;
+  private mobileQueryListener: () => void;
 
   constructor(
     private changeBreadcrumb: ChangeBreadcrumbService,

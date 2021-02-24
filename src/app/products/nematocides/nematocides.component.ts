@@ -37,22 +37,14 @@ export class TableFromDatabase {
 })
 export class NematocidesComponent implements OnInit, AfterViewInit, OnDestroy {
 
-    private title = 'ПРЗ | Нематоциди';
-    private description = 'Нематоциди. Продуки за растителна защита за борба срещу нематоди от рода Meloidogyne spp, ' +
-        'срещу галови и цистообразуващи нематоди.';
-    private keywords = 'нематоциди, продуки, растителна, защита, култури, растителнозащитни, пракатики';
-
-    private breadcrumbName = 'Нематоциди';
+    @ViewChild(MatPaginator) paginator: MatPaginator;
+    @ViewChild(MatSort) sort: MatSort;
 
     mode = '';
 
-    private link = 'products/nematocides';
     bigQuery: MediaQueryList;
     mediumQuery: MediaQueryList;
     smallQuery: MediaQueryList;
-
-    private resizeSubscription: Subscription;
-    private mobileQueryListener: () => void;
 
     displayedColumns = ['name', 'substance', 'dose', 'category'];
     exampleDatabase: TableFromDatabase | null;
@@ -62,8 +54,17 @@ export class NematocidesComponent implements OnInit, AfterViewInit, OnDestroy {
     isLoadingResults = true;
     isRateLimitReached = false;
 
-    @ViewChild(MatPaginator) paginator: MatPaginator;
-    @ViewChild(MatSort) sort: MatSort;
+    private link = 'products/nematocides';
+
+    private title = 'ПРЗ | Нематоциди';
+    private description = 'Нематоциди. Продуки за растителна защита за борба срещу нематоди от рода Meloidogyne spp, ' +
+        'срещу галови и цистообразуващи нематоди.';
+    private keywords = 'нематоциди, продуки, растителна, защита, култури, растителнозащитни, пракатики';
+
+    private breadcrumbName = 'Нематоциди';
+
+    private resizeSubscription: Subscription;
+    private mobileQueryListener: () => void;
 
     constructor(
         private changeBreadcrumb: ChangeBreadcrumbService,

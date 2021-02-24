@@ -46,26 +46,24 @@ const ELEMENT_DATA: Repellent[] = [
     styleUrls: ['./repellents.component.scss']
 })
 export class RepellentsComponent implements OnInit, AfterViewInit, OnDestroy {
+    @ViewChild(MatPaginator) paginator: MatPaginator;
+    @ViewChild(MatSort) sort: MatSort;
+
+    mode = '';
+    bigQuery: MediaQueryList;
+    mediumQuery: MediaQueryList;
+    smallQuery: MediaQueryList;
+
+    displayedColumns: string[] = ['name', 'substances', 'dose', 'disease', 'period', 'category', 'moreDetails'];
+    dataSource = new MatTableDataSource(ELEMENT_DATA);
 
     private title = 'ПРЗ | Репеленти';
     private description = 'Репелент срещу сърни, зайци и елени по липа и червен дъб';
 
     private breadcrumbName = 'Репеленти';
 
-    mode = '';
-
-    bigQuery: MediaQueryList;
-    mediumQuery: MediaQueryList;
-    smallQuery: MediaQueryList;
-
     private resizeSubscription: Subscription;
     private mobileQueryListener: () => void;
-
-    displayedColumns: string[] = ['name', 'substances', 'dose', 'disease', 'period', 'category', 'moreDetails'];
-    dataSource = new MatTableDataSource(ELEMENT_DATA);
-
-    @ViewChild(MatPaginator) paginator: MatPaginator;
-    @ViewChild(MatSort) sort: MatSort;
 
     constructor(
         private changeBreadcrumb: ChangeBreadcrumbService,

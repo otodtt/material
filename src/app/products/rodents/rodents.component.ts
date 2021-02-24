@@ -56,11 +56,16 @@ const ELEMENT_DATA: Rodent[] = [
     styleUrls: ['./rodents.component.scss']
 })
 export class RodentsComponent implements OnInit, AfterViewInit, OnDestroy {
-    mode = '';
+    @ViewChild(MatPaginator) paginator: MatPaginator;
+    @ViewChild(MatSort) sort: MatSort;
 
+    mode = '';
     bigQuery: MediaQueryList;
     mediumQuery: MediaQueryList;
     smallQuery: MediaQueryList;
+
+    displayedColumns: string[] = ['name', 'substances', 'dose', 'disease', 'period', 'category', 'moreDetails'];
+    dataSource = new MatTableDataSource(ELEMENT_DATA);
 
     private breadcrumbName = 'Родентициди';
 
@@ -69,12 +74,6 @@ export class RodentsComponent implements OnInit, AfterViewInit, OnDestroy {
 
     private resizeSubscription: Subscription;
     private mobileQueryListener: () => void;
-
-    displayedColumns: string[] = ['name', 'substances', 'dose', 'disease', 'period', 'category', 'moreDetails'];
-    dataSource = new MatTableDataSource(ELEMENT_DATA);
-
-    @ViewChild(MatPaginator) paginator: MatPaginator;
-    @ViewChild(MatSort) sort: MatSort;
 
     constructor(
         private changeBreadcrumb: ChangeBreadcrumbService,

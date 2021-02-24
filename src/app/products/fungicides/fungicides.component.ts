@@ -36,21 +36,13 @@ export class TableFromDatabase {
 })
 export class FungicidesComponent implements OnInit, AfterViewInit, OnDestroy {
 
-  private title = 'ПРЗ | Фунгициди';
-  private description = 'Фунгициди. Продукти за растителна защита, предназначени за борба с причинителите на болест по растенията,  ' +
-    'както и за третиране на семена.';
-  private keywords = 'фунгициди, продуки, растителна, защита, култури, растителнозащитни, пракатики';
-
-  private breadcrumbName = 'Фунгициди';
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
 
   mode = '';
-  private link = 'products/fungicides';
   bigQuery: MediaQueryList;
   mediumQuery: MediaQueryList;
   smallQuery: MediaQueryList;
-
-  private resizeSubscription: Subscription;
-  private mobileQueryListener: () => void;
 
   displayedColumns = ['name', 'substance', 'dose', 'category'];
   exampleDatabase: TableFromDatabase | null;
@@ -60,8 +52,17 @@ export class FungicidesComponent implements OnInit, AfterViewInit, OnDestroy {
   isLoadingResults = true;
   isRateLimitReached = false;
 
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-  @ViewChild(MatSort) sort: MatSort;
+  private link = 'products/fungicides';
+
+  private title = 'ПРЗ | Фунгициди';
+  private description = 'Фунгициди. Продукти за растителна защита, предназначени за борба с причинителите на болест по растенията,  ' +
+    'както и за третиране на семена.';
+  private keywords = 'фунгициди, продуки, растителна, защита, култури, растителнозащитни, пракатики';
+
+  private breadcrumbName = 'Фунгициди';
+
+  private resizeSubscription: Subscription;
+  private mobileQueryListener: () => void;
 
   constructor(
     private changeBreadcrumb: ChangeBreadcrumbService,

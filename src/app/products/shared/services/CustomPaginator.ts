@@ -1,7 +1,9 @@
 import { MatPaginatorIntl } from '@angular/material/paginator';
 
 const bulgarianRangeLabel = (page: number, pageSize: number, length: number) => {
-    if (length === 0 || pageSize === 0) { return `0 от ${length}`; }
+    if (length === 0 || pageSize === 0) {
+        return `0 от ${length}`;
+    }
 
     length = Math.max(length, 0);
 
@@ -14,7 +16,6 @@ const bulgarianRangeLabel = (page: number, pageSize: number, length: number) => 
 
     return `${startIndex + 1} - ${endIndex} от ${length}`;
 };
-
 
 export function getBulgarianPaginatorIntl() {
     const paginatorIntl = new MatPaginatorIntl();

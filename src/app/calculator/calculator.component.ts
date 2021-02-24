@@ -11,7 +11,6 @@ import { SeoService } from '../common/services/SeoService';
   styleUrls: ['./calculator.component.scss']
 })
 export class CalculatorComponent implements OnInit {
-  // @ViewChild(FormGroupDirective, { static: true }) formGroupDirective: FormGroupDirective;
 
   headerId = 'aa-documents';
   breadcrumbTitle = 'КАЛКУЛАТОР';

@@ -37,22 +37,13 @@ export class TableFromDatabase {
 })
 export class PheromonesComponent implements OnInit, AfterViewInit, OnDestroy {
 
-    private title = 'ПРЗ | Феромони';
-    private description = 'Феромони. Продуки за растителна защита за борба срещу ябълков плодов червей, източен плодов червей ' +
-                          'сливов плодов червей и листозавивачки и други.';
-    private keywords = 'феромони, продуки, растителна, защита, култури, растителнозащитни, пракатики';
-
-    private breadcrumbName = 'Феромони';
+    @ViewChild(MatPaginator) paginator: MatPaginator;
+    @ViewChild(MatSort) sort: MatSort;
 
     mode = '';
-
-    private link = 'products/pheromones';
     bigQuery: MediaQueryList;
     mediumQuery: MediaQueryList;
     smallQuery: MediaQueryList;
-
-    private resizeSubscription: Subscription;
-    private mobileQueryListener: () => void;
 
     displayedColumns = ['name', 'dose', 'category'];
     exampleDatabase: TableFromDatabase | null;
@@ -62,8 +53,17 @@ export class PheromonesComponent implements OnInit, AfterViewInit, OnDestroy {
     isLoadingResults = true;
     isRateLimitReached = false;
 
-    @ViewChild(MatPaginator) paginator: MatPaginator;
-    @ViewChild(MatSort) sort: MatSort;
+    private link = 'products/pheromones';
+
+    private title = 'ПРЗ | Феромони';
+    private description = 'Феромони. Продуки за растителна защита за борба срещу ябълков плодов червей, източен плодов червей ' +
+                          'сливов плодов червей и листозавивачки и други.';
+    private keywords = 'феромони, продуки, растителна, защита, култури, растителнозащитни, пракатики';
+
+    private breadcrumbName = 'Феромони';
+
+    private resizeSubscription: Subscription;
+    private mobileQueryListener: () => void;
 
     constructor(
         private changeBreadcrumb: ChangeBreadcrumbService,

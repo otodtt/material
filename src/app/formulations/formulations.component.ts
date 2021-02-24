@@ -97,13 +97,14 @@ const tableData = [
 })
 export class FormulationsComponent implements OnInit {
   headerId = 'aa-formulations';
+  breadcrumbTitle = 'ОЗНАЧЕНИЯ';
+
+  table = [];
 
   private title = 'ПРЗ | Формулации';
   private description = 'Формулации. Списък на означения за използваните в Република Българя формулации';
 
-  breadcrumbTitle = 'ОЗНАЧЕНИЯ';
   private breadcrumbName = 'Означения';
-  table = [];
 
   constructor(
     private changeBreadcrumb: ChangeBreadcrumbService,

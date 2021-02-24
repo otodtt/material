@@ -37,22 +37,13 @@ export class TableFromDatabase {
 })
 export class LimatsidesComponent implements OnInit, AfterViewInit, OnDestroy {
 
-    private title = 'ПРЗ | Лимациди';
-    private description = 'Лимациди (Молюскоциди). Продуки за растителна защита за борба срещу голи охлюви (Сем. Limacidae) ' +
-                        'и градински охлюви.';
-    private keywords = 'лимациди, молюскоциди, продуки, растителна, защита, култури, растителнозащитни, пракатики';
-
-    private breadcrumbName = 'Лимациди';
+    @ViewChild(MatPaginator) paginator: MatPaginator;
+    @ViewChild(MatSort) sort: MatSort;
 
     mode = '';
-
-    private link = 'products/limatsides';
     bigQuery: MediaQueryList;
     mediumQuery: MediaQueryList;
     smallQuery: MediaQueryList;
-
-    private resizeSubscription: Subscription;
-      private mobileQueryListener: () => void;
 
     displayedColumns = ['name', 'substance', 'dose', 'category'];
     exampleDatabase: TableFromDatabase | null;
@@ -62,8 +53,17 @@ export class LimatsidesComponent implements OnInit, AfterViewInit, OnDestroy {
     isLoadingResults = true;
     isRateLimitReached = false;
 
-    @ViewChild(MatPaginator) paginator: MatPaginator;
-    @ViewChild(MatSort) sort: MatSort;
+    private link = 'products/limatsides';
+
+    private title = 'ПРЗ | Лимациди';
+    private description = 'Лимациди (Молюскоциди). Продуки за растителна защита за борба срещу голи охлюви (Сем. Limacidae) ' +
+                        'и градински охлюви.';
+    private keywords = 'лимациди, молюскоциди, продуки, растителна, защита, култури, растителнозащитни, пракатики';
+
+    private breadcrumbName = 'Лимациди';
+
+    private resizeSubscription: Subscription;
+    private mobileQueryListener: () => void;
 
     constructor(
         private changeBreadcrumb: ChangeBreadcrumbService,

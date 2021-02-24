@@ -4,13 +4,13 @@ import { Component, Output, EventEmitter, AfterViewInit } from '@angular/core';
 import { ChangeBreadcrumbService } from '../../common/services/changeBreadcrumb.service';
 
 import pages from '../Pages';
-import { MenuButtonAnimation } from './animations';
+import { menuButtonAnimation } from './animations';
 
 @Component({
     selector: 'prz-side-nav',
     templateUrl: './side-nav.component.html',
     styleUrls: ['./side-nav.component.scss'],
-    animations: [ MenuButtonAnimation ]
+    animations: [ menuButtonAnimation ]
 })
 export class SideNavComponent implements AfterViewInit {
 

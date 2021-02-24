@@ -32,20 +32,14 @@ export class TableFromDatabase {
     styleUrls: ['./substances.component.scss'],
 })
 export class SubstancesComponent implements OnInit, AfterViewInit, OnDestroy {
-    private title = 'ПРЗ | Активни Вещества';
-    private description = 'Регистър на използваните активни вещества и разрешените за пускане ' +
-        'на пазара и употреба ПРЗ в Република България';
 
-    private breadcrumbName = 'Активни Вещества';
+    @ViewChild(MatPaginator) paginator: MatPaginator;
+    @ViewChild(MatSort) sort: MatSort;
 
     mode = '';
-
     bigQuery: MediaQueryList;
     mediumQuery: MediaQueryList;
     smallQuery: MediaQueryList;
-
-    private resizeSubscription: Subscription;
-    private mobileQueryListener: () => void;
 
     columnsToDisplay = ['name', 'products', 'moreDetails'];
     exampleDatabase: TableFromDatabase | null;
@@ -56,8 +50,14 @@ export class SubstancesComponent implements OnInit, AfterViewInit, OnDestroy {
     isLoadingResults = true;
     isRateLimitReached = false;
 
-    @ViewChild(MatPaginator) paginator: MatPaginator;
-    @ViewChild(MatSort) sort: MatSort;
+    private title = 'ПРЗ | Активни Вещества';
+    private description = 'Регистър на използваните активни вещества и разрешените за пускане ' +
+        'на пазара и употреба ПРЗ в Република България';
+
+    private breadcrumbName = 'Активни Вещества';
+
+    private resizeSubscription: Subscription;
+    private mobileQueryListener: () => void;
 
     constructor(
         private changeBreadcrumb: ChangeBreadcrumbService,

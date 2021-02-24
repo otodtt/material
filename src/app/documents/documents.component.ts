@@ -10,16 +10,16 @@ import { SeoService } from '../common/services/SeoService';
     styleUrls: ['./documents.component.scss']
 })
 export class DocumentsComponent implements OnInit {
+  @ViewChild(MatAccordion) accordion: MatAccordion;
+
+  step = 0;
+
   headerId = 'aa-documents';
   breadcrumbTitle = 'ДОКУМЕНТИ';
   private breadcrumbName = 'Документи';
 
   private title = 'ПРЗ | Документи';
   private description = 'По-важни документи, заявления, формуляри и др., свързани с работата на земеделски стопани и търговци на ПРЗ.';
-
-  step = 0;
-
-  @ViewChild(MatAccordion) accordion: MatAccordion;
 
   constructor(
     private changeBreadcrumb: ChangeBreadcrumbService,

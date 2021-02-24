@@ -29,15 +29,16 @@ function showSlides(): any {
   styleUrls: ['./home.component.scss', './home.scss', './media.scss']
 })
 export class HomeComponent implements OnInit, AfterViewInit {
+  headerId = 'aa-home';
+
   private title = 'ПРЗ | Продуки за растителна защита. Добри Растителнозащитни Пракатики. Интегрирано Управление на Вредители и ПИВ.';
   private description =   'Продуки за растителна защита (инсектици, фунгициди, хербициди, ' +
                           'акарициди и други). Продуки за растителна защита по култури, ' +
                           'Добри растителнозащитни пракатики в земеделието. ' +
                           'Интегрирано управление на вредители. Прагове на Икономическа Вредност.';
   private keywords = 'продуки, растителна, защита, култури, растителнозащитни, пракатики';
-  breadcrumbTitle = 'НАЧАЛО';
   private breadcrumbName = 'Начало';
-  headerId = 'aa-home';
+  private breadcrumbTitle = 'НАЧАЛО';
 
   constructor(
     private changeBreadcrumb: ChangeBreadcrumbService,
@@ -45,7 +46,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
   ) {
     this.seoService.addTitle(this.title);
     this.seoService.setMeta(this.description, this.keywords);
-
   }
 
   ngOnInit(): any {

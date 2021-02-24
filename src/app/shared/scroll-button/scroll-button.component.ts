@@ -8,11 +8,12 @@ import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
 export class ScrollButtonComponent implements OnInit {
     public isScrollTop: number;
 
+    constructor(private el: ElementRef) { }
+
     @HostListener('window:scroll', [])
     onWindowScroll() {
         this.onScroll();
     }
-    constructor(private el: ElementRef) { }
 
     ngOnInit() {}
 

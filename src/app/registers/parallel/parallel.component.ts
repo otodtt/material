@@ -35,19 +35,14 @@ export class TableFromDatabase {
     styleUrls: ['./parallel.component.scss'],
 })
 export class ParallelComponent implements OnInit, AfterViewInit, OnDestroy {
-    private title = 'ПРЗ | Паралелна търговия';
-    private description =   'Продукти за Растителна защита, разрешени за паралелна търговия в България';
 
-    private breadcrumbName = 'Паралелна търговия';
+    @ViewChild(MatPaginator) paginator: MatPaginator;
+    @ViewChild(MatSort) sort: MatSort;
 
     mode = '';
-
     bigQuery: MediaQueryList;
     mediumQuery: MediaQueryList;
     smallQuery: MediaQueryList;
-
-    private resizeSubscription: Subscription;
-    private mobileQueryListener: () => void;
 
     displayedColumns = ['owner', 'product', 'substances', 'referenceProduct', 'manufacturer', 'moreDetails'];
     exampleDatabase: TableFromDatabase | null;
@@ -57,8 +52,14 @@ export class ParallelComponent implements OnInit, AfterViewInit, OnDestroy {
     isLoadingResults = true;
     isRateLimitReached = false;
 
-    @ViewChild(MatPaginator) paginator: MatPaginator;
-    @ViewChild(MatSort) sort: MatSort;
+
+    private title = 'ПРЗ | Паралелна търговия';
+    private description =   'Продукти за Растителна защита, разрешени за паралелна търговия в България';
+
+    private breadcrumbName = 'Паралелна търговия';
+
+    private resizeSubscription: Subscription;
+    private mobileQueryListener: () => void;
 
     constructor(
         private changeBreadcrumb: ChangeBreadcrumbService,
